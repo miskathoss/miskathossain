@@ -44,7 +44,7 @@ export function Footer() {
               <a href="#work" className="hover:text-rose transition-colors">
                 Work
               </a>
-              <a href="#about-miskat" className="hover:text-rose transition-colors">
+              <a href="#about" className="hover:text-rose transition-colors">
                 About
               </a>
               <a href="#services" className="hover:text-rose transition-colors">

@@ -25,26 +25,26 @@ export default function Home() {
       {/* 3. Section 01 / The Thinking */}
       <IntroStatement />
 
-      {/* 4. What I Do — Disciplines & Craft */}
+      {/* 4. About Miskat with Authentic Photo */}
+      <AboutSection />
+
+      {/* 5. What I Do — Disciplines & Craft */}
       <WhatIDo />
 
-      {/* 5. Design Philosophy Progressive Typography */}
+      {/* 6. Design Philosophy Progressive Typography */}
       <Philosophy />
 
-      {/* 6. Subtle 3D Visual System Grid Object */}
+      {/* 7. Subtle 3D Visual System Grid Object */}
       <VisualSystemObject />
 
-      {/* 7. Section 02 / Selected Work — Scene-based storytelling */}
+      {/* 8. Section 02 / Selected Work — Scene-based storytelling */}
       <SelectedWork />
 
-      {/* 8. Section 03 / Process — From Idea To Experience */}
+      {/* 9. Section 03 / Process — From Idea To Experience */}
       <Process />
 
-      {/* 9. Commercial Services & Signature Brand + Website Tier */}
+      {/* 10. Commercial Services & Signature Brand + Website Tier */}
       <ServicesOfferings />
-
-      {/* 10. About Miskat with Authentic Photo */}
-      <AboutSection />
 
       {/* 11. Social Proof & Selected Client Roster */}
       <SocialProof />

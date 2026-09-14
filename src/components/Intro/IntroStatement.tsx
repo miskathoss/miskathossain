@@ -60,7 +60,7 @@ export function IntroStatement() {
   return (
     <section
       ref={sectionRef}
-      id="about"
+      id="thinking"
       className="relative w-full min-h-[90vh] bg-dark text-cream flex flex-col justify-center px-6 sm:px-12 lg:px-24 py-24 sm:py-36 overflow-hidden border-t border-white/[0.06]"
     >
       {/* Background ambient lighting */}

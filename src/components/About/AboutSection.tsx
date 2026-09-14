@@ -42,7 +42,7 @@ export function AboutSection() {
   return (
     <section
       ref={containerRef}
-      id="about-miskat"
+      id="about"
       className="relative w-full bg-dark text-cream py-32 sm:py-48 px-6 sm:px-12 lg:px-24 border-t border-white/[0.06] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full">
