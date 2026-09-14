@@ -94,7 +94,7 @@ export function SelectedWork() {
               Every project is an end-to-end bespoke partnership.
             </p>
             <div className="text-xs uppercase tracking-[0.18em] text-cream/40 font-mono">
-              FEATURED CLIENT ARCHIVE &bull; 2024–2025
+              FEATURED CLIENT ARCHIVE &bull; 2022–2026
             </div>
           </div>
         </div>

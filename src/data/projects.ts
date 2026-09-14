@@ -40,7 +40,7 @@ export const projects: Project[] = [
     image: "/assets/projects/carolyn-greiner.png",
     fullImage: "/assets/projects/carolyn-greiner-full.png",
     tags: ["Web Design", "Brand Identity", "L&D Consulting", "UI/UX"],
-    year: "2025",
+    year: "2026",
     caseStudy: {
       challenge:
         "Senior corporate learning executives needed clear proof of institutional capability and measurable business ROI. Carolyn Greiner brings over 15 years of elite expertise designing workforce learning frameworks, but her previous presence lacked the executive gravitas needed to command multi-stage enterprise advisory contracts.",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
       "A tender, deeply meaningful brand identity and emblem crafted for a non-profit foundation dedicated to pregnancy loss awareness, emotional healing, and maternal support.",
     image: "/assets/projects/samsara.jpg",
     tags: ["Brand Identity", "Emblem Design", "Non-Profit", "Visual System"],
-    year: "2025",
+    year: "2022",
     caseStudy: {
       challenge:
         "Pregnancy loss and abortion awareness require the utmost delicacy, empathy, and emotional sensitivity. Samsara needed a brand identity that avoids clinical detachment or grim melancholy, conveying instead sacred tenderness, dignity, and profound maternal compassion.",
@@ -224,7 +224,7 @@ export const projects: Project[] = [
     image: "/assets/projects/semla-ai.png",
     fullImage: "/assets/projects/semla-ai-full.jpg",
     tags: ["Web Platform", "AI Experience", "Brand Identity", "Visual System"],
-    year: "2025",
+    year: "2024",
     caseStudy: {
       challenge:
         "Artificial intelligence platforms frequently suffer from cold, generic tech templates full of meaningless particle animations. Semla AI needed a brand that felt sophisticated, intelligent, and commercially actionable for enterprise executives seeking concrete data transformation.",
