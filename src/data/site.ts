@@ -6,6 +6,7 @@ export const siteConfig = {
   location: "Based in Bangladesh — Working Globally",
   status: "Available for selected projects",
   email: "hi.miskaat@gmail.com",
+  calendly: "https://calendly.com/miskathossain/reserve-your-discovery-session",
   socials: {
     linkedin: "https://www.linkedin.com/in/miskathossain",
     dribbble: "https://dribbble.com/miskathossain",
