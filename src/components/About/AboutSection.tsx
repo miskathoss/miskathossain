@@ -5,7 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { siteConfig } from "@/data/site";
-import { ArrowUpRight, MapPin, Globe } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export function AboutSection() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -83,7 +83,7 @@ export function AboutSection() {
             </h2>
 
             {/* Exactly specified copy */}
-            <div className="space-y-6 text-base sm:text-xl font-light text-cream/80 leading-relaxed max-w-2xl mb-10 sm:mb-12">
+            <div className="space-y-6 text-base sm:text-xl font-light text-cream/80 leading-relaxed max-w-2xl mb-8 sm:mb-10">
               <p>
                 I&apos;m a designer focused on brand identity, web design and
                 digital experiences.
@@ -96,19 +96,6 @@ export function AboutSection() {
                 I work with people and businesses who care about how they show up
                 in the world.
               </p>
-            </div>
-
-            {/* Location & Global Delivery Status */}
-            <div className="flex flex-wrap items-center gap-6 sm:gap-8 border-y border-white/[0.08] py-6 mb-10 text-xs sm:text-sm">
-              <div className="flex items-center gap-2 text-cream/90 font-medium tracking-wider uppercase">
-                <MapPin className="w-4 h-4 text-rose" />
-                <span>BASED IN BANGLADESH</span>
-              </div>
-              <span className="w-1.5 h-1.5 rounded-full bg-white/20 hidden sm:inline-block" />
-              <div className="flex items-center gap-2 text-cream/90 font-medium tracking-wider uppercase">
-                <Globe className="w-4 h-4 text-rose" />
-                <span>WORKING GLOBALLY</span>
-              </div>
             </div>
 
             {/* Social Channels */}
