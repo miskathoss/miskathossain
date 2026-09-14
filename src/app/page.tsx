@@ -9,7 +9,7 @@ import { SelectedWork } from "@/components/SelectedWork/SelectedWork";
 import { Process } from "@/components/Process/Process";
 import { ServicesOfferings } from "@/components/Services/ServicesOfferings";
 import { AboutSection } from "@/components/About/AboutSection";
-import { SocialProof } from "@/components/SocialProof/SocialProof";
+import { Testimonials } from "@/components/Testimonials/Testimonials";
 import { FinalCTA } from "@/components/FinalCTA/FinalCTA";
 import { Footer } from "@/components/Footer/Footer";
 
@@ -46,8 +46,8 @@ export default function Home() {
       {/* 10. Commercial Services & Signature Brand + Website Tier */}
       <ServicesOfferings />
 
-      {/* 11. Social Proof & Selected Client Roster */}
-      <SocialProof />
+      {/* 11. Testimonials & Client Endorsements */}
+      <Testimonials />
 
       {/* 12. Final Cinematic CTA & Glass Inquiry Card */}
       <FinalCTA />
