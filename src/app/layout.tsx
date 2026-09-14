@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { SmoothScrollProvider } from "@/components/Common/SmoothScrollProvider";
 import { CustomCursor } from "@/components/Common/CustomCursor";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -78,6 +79,7 @@ export default function RootLayout({
           <CustomCursor />
           {children}
         </SmoothScrollProvider>
+        <Analytics />
       </body>
     </html>
   );
