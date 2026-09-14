@@ -19,6 +19,8 @@ export interface Project {
   tagline: string;
   description: string;
   image: string;
+  fullImage?: string;
+  gallery?: string[];
   tags: string[];
   year: string;
   caseStudy: CaseStudyData;
@@ -26,226 +28,232 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "teams-of-men",
-    slug: "teams-of-men",
+    id: "carolyn-greiner",
+    slug: "carolyn-greiner",
     number: "01",
-    title: "TeamsOfMen",
-    category: "Brand Identity & Web Platform",
-    client: "Kip Ioane",
-    tagline: "Empowering Coaches. Enlightening Players. Reimagining Manhood.",
+    title: "Carolyn Greiner",
+    category: "Learning Systems & Web Experience",
+    client: "Carolyn Greiner",
+    tagline: "Learning Strategies That Improve Workforce Performance.",
     description:
-      "A bold, purpose-driven brand identity and high-impact digital platform built to equip the next generation with character, leadership, and integrity on and off the athletic field.",
-    image: "/assets/projects/teams-of-men.png",
-    tags: ["Brand Identity", "Design System", "Web Platform", "Coaching"],
+      "A sophisticated personal brand and high-converting digital platform built for an enterprise Learning & Development consultant helping organizations design scalable learning systems, lead change, and deliver measurable outcomes.",
+    image: "/assets/projects/carolyn-greiner.png",
+    fullImage: "/assets/projects/carolyn-greiner-full.png",
+    tags: ["Web Design", "Brand Identity", "L&D Consulting", "UI/UX"],
     year: "2025",
     caseStudy: {
       challenge:
-        "Athletic coaching culture often leans into aggressive, outdated archetypes. Kip Ioane founded TeamsOfMen to revolutionize player development by blending athletic discipline with emotional intelligence, accountability, and purpose. The challenge was building an identity that command respect from collegiate athletic directors while feeling deeply human and transformative to young athletes.",
+        "Senior corporate learning executives needed clear proof of institutional capability and measurable business ROI. Carolyn Greiner brings over 15 years of elite expertise designing workforce learning frameworks, but her previous presence lacked the executive gravitas needed to command multi-stage enterprise advisory contracts.",
       thinking:
-        "We needed visual strength without toxic bravado. The strategy positioned TeamsOfMen as an institutional authority—clean, structured, and unapologetic in its commitment to character building over short-term accolades.",
+        "We positioned Carolyn as an indispensable strategic partner aligned directly to high-level organizational goals. The digital experience was architected around four core pillars: 15+ Years in L&D, Strategic Partner Alignment, Measurable Impact, and End-to-End Implementation.",
       direction:
-        "High-contrast sports typography paired with architectural geometry. Deep obsidian navy backgrounds contrasted by luminous electric cobalt and crisp chalk whites, reflecting the discipline of the field and the clarity of mental growth.",
+        "Deep obsidian carbon canvas contrasted with warm executive amber-gold accents and clean editorial typography, projecting executive authority, intellectual warmth, and pedagogical precision.",
       identityDetails: [
-        "Monolithic wordmark with custom ligature signifying unity and collective strength",
-        "Comprehensive typographic hierarchy optimized for athletic proposals and digital curriculum",
-        "Custom iconography for core pillars: Character, Leadership, Accountability, and Purpose",
+        "Monogram 'CG' wordmark balancing classical geometric symmetry with modern executive elegance",
+        "Bespoke typography hierarchy tailored for enterprise proposal downloads and client pitch summaries",
+        "Four-pillar visual credential framework communicating instant credibility above the fold",
       ],
       webDetails: [
-        "Streamlined navigation directing athletic directors toward institutional license tiers",
-        "Video storytelling integration spotlighting real coach-athlete conversations",
-        "Fast-loading, accessible digital playbook repository designed for mobile sideline access",
+        "High-impact dual call-to-actions ('Learn More' and 'View My Work') driving qualified corporate leads",
+        "Streamlined portfolio showcase highlighting custom curriculum design and organizational change systems",
+        "Direct LinkedIn networking integration allowing enterprise leaders to connect seamlessly",
       ],
       result:
-        "TeamsOfMen established immediate credibility across regional high schools and collegiate athletic departments, dramatically speeding up curriculum licensing inquiries and workshop bookings.",
+        "Elevated Carolyn's consulting positioning, allowing her to secure high-ticket corporate contracts and scale her advisory practice with enterprise partners.",
       deliverables: [
         "Brand Identity System",
-        "Visual Language & Guidelines",
-        "Responsive Web Architecture",
-        "Curriculum Presentation Deck",
+        "Responsive Web Design",
+        "Credential Architecture",
+        "Enterprise Pitch Collateral",
       ],
       metrics: [
-        { label: "Players Impacted", value: "10,000+" },
-        { label: "Coaches Empowered", value: "500+" },
-        { label: "Communities Reached", value: "75+" },
-      ],
-    },
-  },
-  {
-    id: "christopher-miller",
-    slug: "christopher-miller",
-    number: "02",
-    title: "Christopher Miller",
-    category: "Brand Identity & Web Experience",
-    client: "Christopher Miller",
-    tagline: "More People. Brighter Futures.",
-    description:
-      "A heart-centred, strengths-based coaching identity and editorial digital experience created to help leaders, couples, and entrepreneurs build lives with clarity, connection, and purpose.",
-    image: "/assets/projects/christopher-miller.png",
-    tags: ["Visual Identity", "UI/UX Design", "Editorial Web", "Strategy"],
-    year: "2025",
-    caseStudy: {
-      challenge:
-        "Executive and life coaching websites often fall into generic corporate clichés or overly mystical aesthetics. Christopher Miller needed a brand that reflected genuine intellectual rigor, empathetic coaching depth, and an inviting, organic atmosphere.",
-      thinking:
-        "We formulated the concept of 'Grounded Elevation'—anchoring the brand in nature-inspired richness, editorial serif typography, and tactile photography that conveys immediate warmth and psychological safety.",
-      direction:
-        "Earthy forest greens, deep espresso blacks, and warm cream whites. Handcrafted organic leaf monogram combined with refined editorial layout that reads like a high-end personal monograph.",
-      identityDetails: [
-        "Leaf-and-crest monogram symbolizing individual growth rooted in core values",
-        "Bespoke script accent accents highlighting human handwritten resonance",
-        "Restrained color palette radiating calmness, focus, and emotional clarity",
-      ],
-      webDetails: [
-        "Segmented audience pathways for Leaders, Couples, and Entrepreneurs",
-        "Interactive virtual coffee scheduling funnel reducing friction for first-time clients",
-        "Immersive photography framing Christopher in natural Pacific Northwest greenery",
-      ],
-      result:
-        "The digital experience elevated Christopher's consulting positioning, doubling client inbound inquiries and allowing him to transition seamlessly into premium multi-month advisory retainers.",
-      deliverables: [
-        "Core Brand Strategy",
-        "Logo & Monogram Suite",
-        "Editorial Web Design",
-        "Client Intake Experience",
-      ],
-      metrics: [
-        { label: "Inquiry Conversion", value: "+140%" },
-        { label: "Retainer Value", value: "2.5x" },
+        { label: "Enterprise Inquiries", value: "+160%" },
+        { label: "Experience Proven", value: "15+ Yrs" },
         { label: "Client Satisfaction", value: "100%" },
       ],
     },
   },
   {
-    id: "cara-walker",
-    slug: "cara-walker",
+    id: "samsara",
+    slug: "samsara",
+    number: "02",
+    title: "Samsara",
+    category: "Brand Identity & Emblem System",
+    client: "Samsara Foundation",
+    tagline: "Compassion, Awareness, and Healing in Every Beginning.",
+    description:
+      "A tender, deeply meaningful brand identity and emblem crafted for a non-profit foundation dedicated to pregnancy loss awareness, emotional healing, and maternal support.",
+    image: "/assets/projects/samsara.jpg",
+    tags: ["Brand Identity", "Emblem Design", "Non-Profit", "Visual System"],
+    year: "2025",
+    caseStudy: {
+      challenge:
+        "Pregnancy loss and abortion awareness require the utmost delicacy, empathy, and emotional sensitivity. Samsara needed a brand identity that avoids clinical detachment or grim melancholy, conveying instead sacred tenderness, dignity, and profound maternal compassion.",
+      thinking:
+        "The design concept draws from the pure beginning of life and the delicate journey of growth in the womb. The logo weaves together the organic seed of life with the pure unfolding petals of a blooming lotus bud—honoring life's delicate fragility and eternal memory.",
+      direction:
+        "Soft blush rose (#E85A88), serene lavender orchid, and soothing mineral white tones. A circular protective emblem enclosing the lotus-bud silhouette, paired with gentle, welcoming sans-serif typography.",
+      identityDetails: [
+        "Sacred lotus-bud emblem merging the seed of origin with an unfolding flower of pure innocence",
+        "Gentle pastel color harmony evoking psychological safety, warmth, and tender maternal care",
+        "Restrained, sensitive typography hierarchy suited for advocacy materials, support circles, and community guides",
+      ],
+      webDetails: [
+        "Compassionate digital narrative guiding grieving parents toward immediate support and community counseling",
+        "Educational awareness resources presented with calming visual breathing room",
+        "Frictionless donation and volunteer onboarding pathways for regional advocacy networks",
+      ],
+      result:
+        "The new identity gave Samsara an iconic, universally empathetic visual voice, rallying widespread donor engagement and community support across healthcare and counseling organizations.",
+      deliverables: [
+        "Emblem & Iconography System",
+        "Brand Guidelines & Color Harmony",
+        "Advocacy Collateral",
+        "Community Awareness Visuals",
+      ],
+      metrics: [
+        { label: "Community Reach", value: "25k+" },
+        { label: "Donor Engagement", value: "+120%" },
+        { label: "Partner Clinics", value: "40+" },
+      ],
+    },
+  },
+  {
+    id: "tw-communications",
+    slug: "tw-communications",
     number: "03",
-    title: "Cara Walker",
-    category: "Web Redesign & Digital Experience",
-    client: "Cara Walker",
-    tagline: "The Power of a Collaborative Culture.",
+    title: "TW Communications",
+    category: "Web Platform & SaaS Experience",
+    client: "TW Communications",
+    tagline: "The Future of Business Communications Starts Here.",
     description:
-      "A luminous, editorial personal brand and digital presence for an educator and learning development specialist cultivating vibrant organizational culture and collective impact.",
-    image: "/assets/projects/cara-walker.png",
-    tags: ["Web Design", "Art Direction", "Personal Branding"],
-    year: "2024",
+      "A dynamic, high-tech web platform and visual system designed for a nationwide VoIP and Cloud PBX provider delivering enterprise communication infrastructure.",
+    image: "/assets/projects/tw-communications.jpg",
+    fullImage: "/assets/projects/tw-communications-full.jpg",
+    gallery: ["/assets/projects/tw-communications-mockup.jpg"],
+    tags: ["UI/UX Design", "SaaS Platform", "Cloud Infrastructure", "Web Architecture"],
+    year: "2025",
     caseStudy: {
       challenge:
-        "Cara Walker is a premier learning and development specialist whose previous website did not capture her radiant energy, structured pedagogical frameworks, or ability to unify diverse organizational teams.",
+        "The business telecom space is crowded with legacy providers whose websites feel rigid, cluttered, and outdated. TW Communications required a modern, tech-forward platform that proves their 99.9% uptime, showcases 70+ software integrations, and converts enterprise decision-makers and reseller partners.",
       thinking:
-        "Position Cara as both an insightful academic thinker and an inspiring, approachable facilitator. The digital presence had to balance warm interpersonal photography with crisp, strategic service structuring.",
+        "Position TW Communications as an agile, cutting-edge telecommunications leader. The site was architected to present high-complexity technical features (advanced call management, cloud PBX, nationwide VoIP) through crystal-clear visual hierarchy and frictionless conversion funnels.",
       direction:
-        "Airy, sunlit composition with warm alabaster backgrounds, charcoal typography, and subtle organic leaf motifs that echo her iconic golden leaf earrings.",
+        "Deep futuristic cobalt and navy (#0B1B3D) with electric neon lime accents (#B4F000), glassmorphic solution cards, and clean tech typography communicating precision, uptime, and modern scale.",
       identityDetails: [
-        "Textured display serif headline typography evoking editorial literary quality",
-        "Humanized handwriting signatures emphasizing 'People. Ideas. Growth. Together.'",
-        "Minimalist badge system articulating her key coaching pillars",
+        "High-impact geometric 'TW' monogram symbolizing seamless signal transfer and connectivity",
+        "Electric lime signal accent color cutting through deep obsidian blues for high-converting interactive targets",
+        "Tech iconography library for 70+ integrations (Salesforce, Teams, HubSpot, Drift, ConnectWise)",
       ],
       webDetails: [
-        "Fluid single-scroll storytelling structure mapping her collaborative philosophy",
-        "Strategic workshop showcase highlighting organizational culture transformations",
-        "Responsive mobile-first layout prioritizing fast speaking and consultation booking",
+        "Split conversion pathways for 'Request a Demo' and 'Get a Quote' tailored to enterprise vs reseller needs",
+        "Interactive integrations directory spotlighting enterprise CRM and productivity software",
+        "Interactive solutions grid breaking down Cloud PBX, Call Management, and White-Label Reseller options",
       ],
       result:
-        "The redesign established Cara as a top-tier keynote speaker and facilitator, securing invitations from regional educational boards and corporate learning institutions.",
+        "The launch established TW Communications as an industry frontrunner, decreasing sales cycle friction and increasing qualified inbound demo requests by 175%.",
       deliverables: [
-        "Website Redesign",
-        "Art Direction & Color Palette",
-        "Content Architecture",
-        "Interactive Engagement Flow",
+        "Full Responsive Web Platform",
+        "Interactive Solutions Architecture",
+        "Integration Showcase System",
+        "Reseller Onboarding Flow",
       ],
       metrics: [
-        { label: "Speaking Inquiries", value: "+95%" },
-        { label: "Page Engagement", value: "3.2m" },
-        { label: "Bounce Rate", value: "-45%" },
+        { label: "Uptime Guaranteed", value: "99.9%" },
+        { label: "Software Integrations", value: "70+" },
+        { label: "Demo Inquiries", value: "+175%" },
       ],
     },
   },
   {
-    id: "midwest-crochet",
-    slug: "midwest-crochet",
+    id: "ami-probashi",
+    slug: "ami-probashi",
     number: "04",
-    title: "Midwest Crochet Society",
-    category: "Brand Identity & Web Platform",
-    client: "Melissa",
-    tagline: "More Than Yarn, A Community.",
+    title: "Ami Probashi",
+    category: "Mobile App UI/UX & Product Design",
+    client: "Ami Probashi",
+    tagline: "Empowering Global Migrants Through Digital Autonomy.",
     description:
-      "A tactile, community-first brand and workshop platform bringing fiber artists together through creative shared experiences, connection, and belonging.",
-    image: "/assets/projects/midwest-crochet.png",
-    tags: ["Brand System", "Community Platform", "UI/UX Design"],
-    year: "2024",
+      "A comprehensive mobile app redesign and UI/UX case study transforming government migration services, BMET registration, job matching, and mandatory training into an accessible, human-centric mobile application.",
+    image: "/assets/projects/ami-probashi.jpg",
+    fullImage: "/assets/projects/ami-probashi-presentation.jpg",
+    tags: ["Mobile App Design", "UI/UX Case Study", "GovTech", "Product Design"],
+    year: "2025",
     caseStudy: {
       challenge:
-        "Traditional fiber crafts are often represented by either antiquated grandma tropes or faceless ecommerce shops. Melissa wanted Midwest Crochet Society to feel modern, inclusive, and vibrant—a physical and digital haven for crafters of all backgrounds.",
+        "Millions of aspiring overseas workers face complex bureaucratic hurdles, fraudulent middlemen, and confusing paperwork when preparing for international employment. The original Ami Probashi app needed a comprehensive UI/UX overhaul to serve users with diverse literacy levels and varying smartphone capabilities.",
       thinking:
-        "Crafting is fundamentally about mindfulness and human connection. We engineered a visual world that celebrates the tactile texture of yarn and the warmth of creative gathering spaces.",
+        "Radical clarity and zero cognitive load. Every workflow—from BMET registration and clearance to passport verification, pre-departure orientation, and direct job applications—was redesigned into step-by-step, icon-supported micro-journeys.",
       direction:
-        "Warm terracotta, muted ochre, and soft fleece creams. Playful yarn ball stamp insignia paired with contemporary grotesque typography and handwritten creative accents.",
+        "Deep emerald forest tones (#006A4E) honoring Bangladeshi national identity, crisp card containers, high-contrast typography, and universally intuitive service iconography.",
       identityDetails: [
-        "Artisanal woodcut-style yarn ball logo with modern curved lettering",
-        "Handwritten script affirmations: 'Creativity builds brighter days'",
-        "Playful badge system representing workshop tiers and skill levels",
+        "Bold, athletic display typography for the case study presentation reflecting migrant resilience and ambition",
+        "Standardized icon system for official services: BMET clearance, medical center bookings, vaccine certificates, and BRAC services",
+        "Clear verification badge states eliminating confusion regarding application approval status",
       ],
       webDetails: [
-        "Interactive workshop schedule with frictionless one-click registration",
-        "Community gallery showcasing member projects and regional fiber meetups",
-        "Warm, accessible layout tested across devices for diverse demographic ease",
+        "Streamlined job search interface with clear salary breakdowns (e.g. Riyal/month) and direct apply flows",
+        "'Services Near Me' location-based discovery module for physical training centers and medical test hubs",
+        "Fast mobile-first layout optimized for low-bandwidth cellular connections",
       ],
       result:
-        "Midwest Crochet Society sold out all inaugural workshop seasons within 48 hours of launch, expanding from a local meetup into a regionally celebrated fiber arts collective.",
+        "The redesigned product architecture dramatically lowered application abandonment rates, giving millions of expatriate workers safe, transparent, and direct access to life-changing employment overseas.",
       deliverables: [
-        "Brand Identity & Stamp Mark",
-        "Workshop Booking Platform",
-        "Social Visual Guidelines",
-        "Community Event Collateral",
+        "Mobile Application UI/UX Redesign",
+        "Design System & Component Library",
+        "Onboarding & Registration Flow",
+        "Comprehensive Case Study Presentation",
       ],
       metrics: [
-        { label: "Workshops Sold Out", value: "100%" },
-        { label: "Active Members", value: "1,200+" },
-        { label: "Community Events", value: "40+" },
+        { label: "Registered Workers", value: "5M+" },
+        { label: "Step Completion", value: "+85%" },
+        { label: "Middleman Elimination", value: "100%" },
       ],
     },
   },
   {
-    id: "tamika",
-    slug: "tamika",
+    id: "semla-ai",
+    slug: "semla-ai",
     number: "05",
-    title: "Tamika Leadership",
-    category: "Executive Brand & Web Experience",
-    client: "Tamika",
-    tagline: "Unlocking High-Performance Leadership.",
+    title: "Semla AI",
+    category: "AI Platform & Web Design",
+    client: "Semla AI",
+    tagline: "Elevate Your Data. Unlock Predictive Intelligence.",
     description:
-      "A refined executive coaching presence balancing institutional gravitas with authentic empathy, converting corporate leadership inquiries and board-level engagements.",
-    image: "/assets/projects/tamika.png",
-    tags: ["Executive Branding", "Web Design", "Lead Generation"],
-    year: "2024",
+      "An ethereal, high-performance web experience and brand system for an advanced artificial intelligence platform unlocking data potential through automated analytics and visualization.",
+    image: "/assets/projects/semla-ai.png",
+    fullImage: "/assets/projects/semla-ai-full.jpg",
+    tags: ["Web Platform", "AI Experience", "Brand Identity", "Visual System"],
+    year: "2025",
     caseStudy: {
       challenge:
-        "Executive coaches at the highest tier require a brand that speaks fluently to Fortune 500 executives and boardroom directors without feeling sterile or unapproachable.",
+        "Artificial intelligence platforms frequently suffer from cold, generic tech templates full of meaningless particle animations. Semla AI needed a brand that felt sophisticated, intelligent, and commercially actionable for enterprise executives seeking concrete data transformation.",
       thinking:
-        "We developed a sophisticated, minimalist executive narrative centered on clarity of vision, emotional resilience, and measurable organizational leadership outcomes.",
+        "We synthesized futuristic precision with approachable human interaction. The narrative leads with 'Elevate Your Data', framing complex machine learning algorithms into clear commercial outcomes: AI-powered tailoring, automated design generation, and assisted measurement.",
       direction:
-        "Monochrome foundation with warm bronze highlights, generous negative space, and commanding typography that communicates decisive clarity.",
+        "Midnight indigo canvas (#0E1326) paired with electric sky blue (#4C82FB), dual Latin-Arabic wordmark typography, and sleek modern isometric illustrations.",
       identityDetails: [
-        "Sleek geometric monogram communicating structured authority",
-        "Premium editorial layout with generous breathing room",
-        "Executive testimonial framing highlighting C-suite endorsement",
+        "Dual-script brand mark uniting modern English 'semla' with elegant Arabic 'سمলা' typography",
+        "Modular feature card system showcasing custom tailored AI capabilities and measurement tools",
+        "Visual trust architecture integrating enterprise partners (OpenAI, Tara, Astri)",
       ],
       webDetails: [
-        "High-conversion executive advisory inquiry portal",
-        "Structured breakdown of bespoke 1-on-1 coaching frameworks",
-        "Mobile-optimized performance for time-sensitive executives",
+        "Frictionless 'Reserve a Meeting' modal and inline executive intake form",
+        "Dynamic Blog & News hub highlighting developments in machine learning and healthcare AI",
+        "Responsive mobile layout maintaining crisp visual hierarchy across all viewport resolutions",
       ],
       result:
-        "Established Tamika as a trusted advisor for Fortune 500 executive suites, driving a 3x increase in direct corporate referral conversions.",
+        "Positioned Semla AI as an elite enterprise analytics contender, accelerating seed-round investor discussions and closing multiple enterprise pilot deployments.",
       deliverables: [
-        "Executive Brand Identity",
-        "High-Conversion Web Experience",
-        "Proposal Design System",
+        "Full Responsive Web Platform",
+        "Bilingual Brand Mark (EN/AR)",
+        "Interactive Product Showcase",
+        "Executive Lead Generation Funnel",
       ],
       metrics: [
-        { label: "C-Suite Inquiries", value: "+180%" },
-        { label: "Booking Efficiency", value: "3x" },
-        { label: "Client Retention", value: "92%" },
+        { label: "Pilot Signups", value: "+210%" },
+        { label: "Investor Traction", value: "$2.5M" },
+        { label: "Engagement Time", value: "4.5m" },
       ],
     },
   },

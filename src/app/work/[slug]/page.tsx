@@ -257,7 +257,51 @@ export default function CaseStudyPage({ params }: Props) {
         </div>
       </section>
 
-      {/* 8. NEXT PROJECT */}
+      {/* 8. COMPLETE DESIGN SHOWCASE */}
+      {(project.fullImage || (project.gallery && project.gallery.length > 0)) && (
+        <section className="py-14 sm:py-20 px-6 sm:px-12 lg:px-24 border-b border-white/[0.08]">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex items-center gap-3 text-xs font-semibold tracking-[0.24em] uppercase text-rose mb-4">
+              <span className="w-8 h-[1px] bg-rose" />
+              <span>07 / DESIGN SHOWCASE</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-light text-white tracking-tight mb-8">
+              FULL SYSTEM PRESENTATION.
+            </h2>
+            {project.fullImage && (
+              <div className="relative w-full rounded-[24px] sm:rounded-[36px] overflow-hidden border border-white/[0.12] bg-dark-surface shadow-[0_30px_80px_rgba(0,0,0,0.8)]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={project.fullImage}
+                  alt={`${project.title} Full Showcase`}
+                  className="w-full h-auto object-contain block"
+                  loading="lazy"
+                />
+              </div>
+            )}
+            {project.gallery && project.gallery.length > 0 && (
+              <div className="mt-8 space-y-8">
+                {project.gallery.map((gImg, idx) => (
+                  <div
+                    key={idx}
+                    className="relative w-full rounded-[24px] sm:rounded-[36px] overflow-hidden border border-white/[0.12] bg-dark-surface shadow-[0_30px_80px_rgba(0,0,0,0.8)]"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={gImg}
+                      alt={`${project.title} Detail ${idx + 1}`}
+                      className="w-full h-auto object-contain block"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* 9. NEXT PROJECT */}
       <section className="py-16 sm:py-24 px-6 sm:px-12 lg:px-24 overflow-hidden">
         <div className="max-w-5xl mx-auto text-center">
           <div className="text-xs uppercase tracking-[0.24em] text-cream/40 font-mono mb-4">
