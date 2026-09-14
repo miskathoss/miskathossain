@@ -98,8 +98,8 @@ export function AboutSection() {
               </p>
             </div>
 
-            {/* Social Channels */}
-            <div className="flex items-center gap-6 text-xs sm:text-sm font-semibold tracking-[0.16em] uppercase">
+            {/* Social Channels with divider line */}
+            <div className="pt-6 sm:pt-8 border-t border-white/[0.08] flex items-center gap-6 text-xs sm:text-sm font-semibold tracking-[0.16em] uppercase">
               <a
                 href={siteConfig.socials.linkedin}
                 target="_blank"
