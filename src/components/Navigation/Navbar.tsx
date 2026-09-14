@@ -106,13 +106,39 @@ export function Navbar() {
       {/* Clean Fullscreen Mobile Menu Overlay */}
       <div
         className={cn(
-          "fixed inset-0 bg-dark-pure/95 backdrop-blur-2xl z-40 md:hidden flex flex-col justify-between px-8 py-12 transition-all duration-500 ease-in-out pointer-events-auto",
+          "fixed inset-0 bg-dark-pure/98 backdrop-blur-3xl z-[100] md:hidden flex flex-col justify-between px-6 sm:px-8 pt-6 pb-12 transition-all duration-500 ease-in-out pointer-events-auto",
           mobileMenuOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-full pointer-events-none"
         )}
       >
-        <div className="pt-16 flex flex-col gap-6">
+        {/* Mobile Menu Top Header with prominent Close Button */}
+        <div className="flex items-center justify-between w-full pb-5 border-b border-white/[0.08]">
+          <div className="flex items-center gap-2">
+            <Image
+              src="/assets/images/miskat-logo.png"
+              alt="Miskat Hossain Logo"
+              width={28}
+              height={18}
+              className="object-contain w-auto h-4"
+            />
+            <span className="font-semibold tracking-[0.18em] text-cream text-xs uppercase">
+              MISKAT
+            </span>
+            <span className="w-1.5 h-1.5 rounded-full bg-rose inline-block" />
+          </div>
+
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Close navigation menu"
+            className="flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/[0.2] bg-white/[0.08] hover:bg-rose hover:border-rose text-cream hover:text-white text-xs font-semibold tracking-[0.18em] uppercase transition-all duration-300 backdrop-blur-md shadow-md active:scale-95"
+          >
+            <span>CLOSE</span>
+            <X className="w-3.5 h-3.5" />
+          </button>
+        </div>
+
+        <div className="pt-8 flex flex-col gap-6">
           <div className="text-[10px] uppercase tracking-[0.2em] text-cream/40 font-medium">
             Menu Navigation
           </div>
