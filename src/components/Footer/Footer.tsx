@@ -20,16 +20,16 @@ export function Footer() {
             <div>
               <Link
                 href="/"
-                className="group flex items-center gap-3 mb-4 inline-flex"
+                className="group flex flex-col items-start gap-4 mb-5 inline-flex"
                 data-cursor-text="HOME"
               >
-                <div className="relative w-10 h-6 sm:w-12 sm:h-7.5 shrink-0 transition-transform duration-300 group-hover:scale-105 flex items-center">
+                <div className="relative shrink-0 transition-transform duration-300 group-hover:scale-105">
                   <Image
                     src="/assets/images/miskat-logo.png"
                     alt="Miskat Hossain Logo"
-                    width={48}
-                    height={30}
-                    className="object-contain w-auto h-6 sm:h-7.5"
+                    width={56}
+                    height={36}
+                    className="object-contain w-auto h-8 sm:h-9"
                   />
                 </div>
                 <span className="text-2xl sm:text-3xl font-light tracking-[-0.02em] text-white group-hover:text-rose transition-colors">
