@@ -16,7 +16,6 @@ export const siteConfig = {
     { label: "WORK", href: "#work" },
     { label: "ABOUT", href: "#about" },
     { label: "SERVICES", href: "#services" },
-    { label: "TESTIMONIALS", href: "#testimonials" },
     { label: "LET'S TALK", href: "#contact", isCta: true },
   ],
 };
