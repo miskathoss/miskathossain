@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, Menu, X } from "lucide-react";
@@ -41,9 +42,19 @@ export function Navbar() {
         {/* Left Brand Identifier */}
         <Link
           href="/"
-          className="group flex items-center gap-2 text-cream font-medium tracking-[0.14em] text-xs sm:text-sm uppercase transition-colors"
+          className="group flex items-center gap-2.5 text-cream font-medium tracking-[0.14em] text-xs sm:text-sm uppercase transition-colors"
           data-cursor-text="HOME"
         >
+          <div className="relative w-6 h-4 sm:w-7 sm:h-4.5 shrink-0 transition-transform duration-300 group-hover:scale-105 flex items-center">
+            <Image
+              src="/assets/images/miskat-logo.png"
+              alt="Miskat Hossain Logo"
+              width={28}
+              height={18}
+              className="object-contain w-auto h-3.5 sm:h-4"
+              priority
+            />
+          </div>
           <span className="hidden sm:inline-block font-semibold tracking-[0.18em] text-cream group-hover:text-rose transition-colors duration-300">
             MISKAT HOSSAIN
           </span>

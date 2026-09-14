@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/data/site";
 import { ArrowUp, ArrowUpRight } from "lucide-react";
 
@@ -19,9 +20,21 @@ export function Footer() {
             <div>
               <Link
                 href="/"
-                className="text-2xl sm:text-3xl font-light tracking-[-0.02em] text-white hover:text-rose transition-colors mb-4 inline-block"
+                className="group flex items-center gap-3 mb-4 inline-flex"
+                data-cursor-text="HOME"
               >
-                MISKAT <span className="font-semibold">HOSSAIN</span>
+                <div className="relative w-8 h-5 sm:w-9 sm:h-5.5 shrink-0 transition-transform duration-300 group-hover:scale-105 flex items-center">
+                  <Image
+                    src="/assets/images/miskat-logo.png"
+                    alt="Miskat Hossain Logo"
+                    width={36}
+                    height={22}
+                    className="object-contain w-auto h-5 sm:h-6"
+                  />
+                </div>
+                <span className="text-2xl sm:text-3xl font-light tracking-[-0.02em] text-white group-hover:text-rose transition-colors">
+                  MISKAT <span className="font-semibold">HOSSAIN</span>
+                </span>
               </Link>
               <div className="flex flex-col gap-1 text-sm text-cream/70 font-light mt-2">
                 <span>Brand Designer</span>
