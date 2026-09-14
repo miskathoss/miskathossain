@@ -149,7 +149,7 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative w-full bg-dark-pure text-cream py-24 sm:py-36 px-4 sm:px-8 lg:px-16 border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full bg-dark-pure text-cream py-16 sm:py-24 px-4 sm:px-8 lg:px-16 border-t border-white/[0.06] overflow-hidden"
     >
       {/* Ambient background glows */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[750px] h-[360px] bg-rose/[0.04] rounded-full blur-[150px] pointer-events-none" />
@@ -157,7 +157,7 @@ export function Testimonials() {
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
           <div>
             <div className="inline-flex items-center gap-2.5 text-xs font-semibold tracking-[0.24em] uppercase text-rose mb-4">
               <span className="w-8 h-[1px] bg-rose" />
@@ -182,7 +182,7 @@ export function Testimonials() {
 
         {/* Center-Focused Carousel Stage */}
         <div
-          className="relative w-full py-6 sm:py-10"
+          className="relative w-full py-2 sm:py-4"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           onTouchStart={handleTouchStart}
@@ -313,7 +313,7 @@ export function Testimonials() {
           </div>
 
           {/* Navigation Controls: Arrows & Dot Indicators */}
-          <div className="flex items-center justify-center gap-6 mt-8 sm:mt-10">
+          <div className="flex items-center justify-center gap-6 mt-6 sm:mt-8">
             {/* Prev Button */}
             <button
               onClick={handlePrev}
@@ -355,7 +355,7 @@ export function Testimonials() {
         </div>
 
         {/* Bottom Banner with direct link to LinkedIn */}
-        <div className="mt-8 sm:mt-12 text-center">
+        <div className="mt-6 sm:mt-8 text-center">
           <p className="text-xs sm:text-sm text-cream/50 tracking-wide">
             Want to see more client reviews?{" "}
             <a

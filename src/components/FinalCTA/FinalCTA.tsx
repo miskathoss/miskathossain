@@ -17,7 +17,7 @@ export function FinalCTA() {
   return (
     <section
       id="contact"
-      className="relative w-full bg-dark text-cream py-32 sm:py-48 px-6 sm:px-12 lg:px-24 border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full bg-dark text-cream py-16 sm:py-24 px-6 sm:px-12 lg:px-24 border-t border-white/[0.06] overflow-hidden"
     >
       {/* Background cinematic radial atmosphere */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-rose/10 rounded-full blur-[220px] pointer-events-none" />
@@ -25,23 +25,23 @@ export function FinalCTA() {
 
       <div className="max-w-5xl mx-auto w-full relative z-10 flex flex-col items-center text-center">
         {/* Top small label */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/[0.14] text-[11px] font-semibold tracking-[0.2em] uppercase text-rose mb-8 sm:mb-10 backdrop-blur-md">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/[0.14] text-[11px] font-semibold tracking-[0.2em] uppercase text-rose mb-6 sm:mb-8 backdrop-blur-md">
           <span className="w-1.5 h-1.5 rounded-full bg-rose" />
           <span>START A CONVERSATION</span>
         </div>
 
         {/* Headlines */}
-        <p className="text-xl sm:text-2xl font-light text-cream/70 tracking-tight mb-4">
+        <p className="text-xl sm:text-2xl font-light text-cream/70 tracking-tight mb-3">
           HAVE AN IDEA WORTH BUILDING?
         </p>
 
-        <h2 className="text-5xl sm:text-7xl md:text-8xl font-extralight tracking-[-0.04em] leading-[1.02] text-cream mb-12 sm:mb-16">
+        <h2 className="text-5xl sm:text-7xl md:text-8xl font-extralight tracking-[-0.04em] leading-[1.02] text-cream mb-8 sm:mb-10">
           LET&apos;S <br />
           <span className="font-semibold text-white">MAKE IT REAL.</span>
         </h2>
 
         {/* Glassmorphic Action Card */}
-        <GlassCard className="w-full max-w-xl p-8 sm:p-12 mb-12">
+        <GlassCard className="w-full max-w-xl p-6 sm:p-10 mb-6 sm:mb-8">
           <p className="text-sm sm:text-base text-cream/80 font-light leading-relaxed mb-8 max-w-md mx-auto">
             Ready to build a distinctive brand and digital experience? Inquire
             about availability or schedule an introductory creative alignment call.

@@ -61,7 +61,7 @@ export function IntroStatement() {
     <section
       ref={sectionRef}
       id="thinking"
-      className="relative w-full min-h-[90vh] bg-dark text-cream flex flex-col justify-center px-6 sm:px-12 lg:px-24 py-24 sm:py-36 overflow-hidden border-t border-white/[0.06]"
+      className="relative w-full bg-dark text-cream flex flex-col justify-center px-6 sm:px-12 lg:px-24 py-16 sm:py-24 overflow-hidden border-t border-white/[0.06]"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-rose/5 rounded-full blur-[140px] pointer-events-none" />
@@ -70,7 +70,7 @@ export function IntroStatement() {
         {/* Section Label: 01 / THE THINKING */}
         <div
           ref={labelRef}
-          className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-[0.24em] uppercase text-rose mb-10 sm:mb-16"
+          className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-[0.24em] uppercase text-rose mb-6 sm:mb-10"
         >
           <span className="w-8 h-[1px] bg-rose" />
           <span>01 / THE THINKING</span>

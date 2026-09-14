@@ -46,7 +46,7 @@ export default function CaseStudyPage({ params }: Props) {
       <Navbar />
 
       {/* 1. HERO */}
-      <section className="pt-36 sm:pt-48 pb-16 px-6 sm:px-12 lg:px-24 border-b border-white/[0.08]">
+      <section className="pt-28 sm:pt-36 pb-12 px-6 sm:px-12 lg:px-24 border-b border-white/[0.08]">
         <div className="max-w-7xl mx-auto">
           <Link
             href="/#work"
@@ -108,7 +108,7 @@ export default function CaseStudyPage({ params }: Props) {
       </section>
 
       {/* 2. THE CHALLENGE */}
-      <section className="py-24 sm:py-36 px-6 sm:px-12 lg:px-24 border-b border-white/[0.08]">
+      <section className="py-14 sm:py-20 px-6 sm:px-12 lg:px-24 border-b border-white/[0.08]">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
           <div className="md:col-span-4">
             <div className="flex items-center gap-3 text-xs font-semibold tracking-[0.24em] uppercase text-rose mb-3">
@@ -128,7 +128,7 @@ export default function CaseStudyPage({ params }: Props) {
       </section>
 
       {/* 3. THE THINKING */}
-      <section className="py-24 sm:py-36 px-6 sm:px-12 lg:px-24 bg-dark-pure border-b border-white/[0.08]">
+      <section className="py-14 sm:py-20 px-6 sm:px-12 lg:px-24 bg-dark-pure border-b border-white/[0.08]">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
           <div className="md:col-span-4">
             <div className="flex items-center gap-3 text-xs font-semibold tracking-[0.24em] uppercase text-rose mb-3">
@@ -148,7 +148,7 @@ export default function CaseStudyPage({ params }: Props) {
       </section>
 
       {/* 4. THE DIRECTION */}
-      <section className="py-24 sm:py-36 px-6 sm:px-12 lg:px-24 border-b border-white/[0.08]">
+      <section className="py-14 sm:py-20 px-6 sm:px-12 lg:px-24 border-b border-white/[0.08]">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
           <div className="md:col-span-4">
             <div className="flex items-center gap-3 text-xs font-semibold tracking-[0.24em] uppercase text-rose mb-3">
@@ -168,7 +168,7 @@ export default function CaseStudyPage({ params }: Props) {
       </section>
 
       {/* 5. THE IDENTITY */}
-      <section className="py-24 sm:py-36 px-6 sm:px-12 lg:px-24 bg-dark-pure border-b border-white/[0.08]">
+      <section className="py-14 sm:py-20 px-6 sm:px-12 lg:px-24 bg-dark-pure border-b border-white/[0.08]">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 text-xs font-semibold tracking-[0.24em] uppercase text-rose mb-4">
             <span className="w-6 h-[1px] bg-rose" />
@@ -194,20 +194,18 @@ export default function CaseStudyPage({ params }: Props) {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* 6. THE WEBSITE / DIGITAL EXPERIENCE */}
-      <section className="py-24 sm:py-36 px-6 sm:px-12 lg:px-24 border-b border-white/[0.08]">
+      </section>      {/* 6. THE WEBSITE / DIGITAL EXPERIENCE */}
+      <section className="py-14 sm:py-20 px-6 sm:px-12 lg:px-24 border-b border-white/[0.08]">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 text-xs font-semibold tracking-[0.24em] uppercase text-rose mb-4">
-            <span className="w-6 h-[1px] bg-rose" />
+            <span className="w-8 h-[1px] bg-rose" />
             <span>05 / DIGITAL EXPERIENCE</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-light text-white tracking-tight mb-12">
+          <h2 className="text-3xl sm:text-5xl font-light text-white tracking-tight mb-8 sm:mb-10">
             THE WEBSITE &amp; INTERACTION.
           </h2>
 
-          <div className="space-y-4 mb-16">
+          <div className="space-y-4 mb-10 sm:mb-12">
             {cs.webDetails.map((item, idx) => (
               <div
                 key={idx}
@@ -224,23 +222,23 @@ export default function CaseStudyPage({ params }: Props) {
       </section>
 
       {/* 7. THE RESULT */}
-      <section className="py-24 sm:py-36 px-6 sm:px-12 lg:px-24 bg-dark-pure border-b border-white/[0.08]">
+      <section className="py-14 sm:py-20 px-6 sm:px-12 lg:px-24 bg-dark-pure border-b border-white/[0.08]">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 text-xs font-semibold tracking-[0.24em] uppercase text-rose mb-4">
-            <span className="w-6 h-[1px] bg-rose" />
+            <span className="w-8 h-[1px] bg-rose" />
             <span>06 / COMMERCIAL IMPACT</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-light text-white tracking-tight mb-8">
+          <h2 className="text-3xl sm:text-5xl font-light text-white tracking-tight mb-6">
             THE RESULT.
           </h2>
 
-          <p className="text-lg sm:text-2xl font-light text-cream/90 leading-relaxed mb-16 max-w-3xl">
+          <p className="text-lg sm:text-2xl font-light text-cream/90 leading-relaxed mb-10 sm:mb-12 max-w-3xl">
             {cs.result}
           </p>
 
           {/* Metrics highlights */}
           {cs.metrics && cs.metrics.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-white/[0.08]">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-white/[0.08]">
               {cs.metrics.map((m) => (
                 <div
                   key={m.label}
@@ -260,7 +258,7 @@ export default function CaseStudyPage({ params }: Props) {
       </section>
 
       {/* 8. NEXT PROJECT */}
-      <section className="py-32 sm:py-48 px-6 sm:px-12 lg:px-24 overflow-hidden">
+      <section className="py-16 sm:py-24 px-6 sm:px-12 lg:px-24 overflow-hidden">
         <div className="max-w-5xl mx-auto text-center">
           <div className="text-xs uppercase tracking-[0.24em] text-cream/40 font-mono mb-4">
             NEXT CASE STUDY

@@ -150,13 +150,13 @@ export function VisualSystemObject() {
   }, []);
 
   return (
-    <div className="relative w-full h-[280px] sm:h-[360px] flex items-center justify-center pointer-events-none select-none my-12">
+    <div className="relative w-full h-[200px] sm:h-[260px] flex items-center justify-center pointer-events-none select-none my-4 sm:my-6">
       <canvas
         ref={canvasRef}
         className="w-full h-full max-w-[500px]"
         style={{ width: "100%", height: "100%" }}
       />
-      <div className="absolute bottom-4 flex items-center gap-2 text-[10px] tracking-[0.24em] uppercase text-cream/40 font-mono">
+      <div className="absolute bottom-2 flex items-center gap-2 text-[10px] tracking-[0.24em] uppercase text-cream/40 font-mono">
         <span className="w-1.5 h-1.5 rounded-full bg-rose inline-block" />
         <span>Systemic Grid &bull; Spatial Identity</span>
       </div>

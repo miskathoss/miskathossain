@@ -18,17 +18,17 @@ export default function WorkIndexPage() {
     <main className="relative bg-dark min-h-screen text-cream">
       <Navbar />
 
-      <section className="pt-36 sm:pt-48 pb-20 px-6 sm:px-12 lg:px-24">
+      <section className="pt-28 sm:pt-36 pb-12 sm:pb-16 px-6 sm:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-[0.24em] uppercase text-rose mb-6">
+          <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-[0.24em] uppercase text-rose mb-4 sm:mb-6">
             <span className="w-8 h-[1px] bg-rose" />
             <span>ARCHIVE &bull; SELECTED WORK</span>
           </div>
-          <h1 className="text-4xl sm:text-7xl lg:text-8xl font-light tracking-[-0.04em] text-cream mb-8">
+          <h1 className="text-4xl sm:text-7xl lg:text-8xl font-light tracking-[-0.04em] text-cream mb-6 sm:mb-8">
             ALL <span className="font-semibold text-white">PROJECTS.</span>
           </h1>
-          <p className="max-w-xl text-base sm:text-lg text-cream/70 font-light leading-relaxed mb-20">
+          <p className="max-w-xl text-base sm:text-lg text-cream/70 font-light leading-relaxed mb-12 sm:mb-14">
             A curated collection of commercial identities, responsive web platforms,
             and bespoke digital experiences built for ambitious leaders and coaches.
           </p>

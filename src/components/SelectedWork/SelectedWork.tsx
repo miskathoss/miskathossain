@@ -73,13 +73,13 @@ export function SelectedWork() {
     <section
       ref={containerRef}
       id="work"
-      className="relative w-full bg-dark text-cream py-32 sm:py-48 px-6 sm:px-12 lg:px-24 border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full bg-dark text-cream py-16 sm:py-24 px-6 sm:px-12 lg:px-24 border-t border-white/[0.06] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 sm:mb-36 gap-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-8">
           <div>
-            <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-[0.24em] uppercase text-rose mb-4">
+            <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-[0.24em] uppercase text-rose mb-3">
               <span className="w-8 h-[1px] bg-rose" />
               <span>02 / SELECTED WORK</span>
             </div>
@@ -89,7 +89,7 @@ export function SelectedWork() {
             </h2>
           </div>
           <div className="max-w-md">
-            <p className="text-sm sm:text-base text-cream/70 font-light leading-relaxed mb-4">
+            <p className="text-sm sm:text-base text-cream/70 font-light leading-relaxed mb-3">
               Real commercial results for coaches, leaders, and ambitious platforms.
               Every project is an end-to-end bespoke partnership.
             </p>
@@ -100,11 +100,11 @@ export function SelectedWork() {
         </div>
 
         {/* Scene-Based Projects Presentation (Top 5 Featured) */}
-        <div className="space-y-32 sm:space-y-48">
+        <div className="space-y-16 sm:space-y-24">
           {projects.slice(0, 5).map((project, idx) => (
             <article
               key={project.id}
-              className="project-scene relative flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 border-b border-white/[0.08] pb-24 sm:pb-36 last:border-b-0"
+              className="project-scene relative flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 border-b border-white/[0.08] pb-16 sm:pb-24 last:border-b-0"
             >
               {/* Scene Details */}
               <div
@@ -201,7 +201,7 @@ export function SelectedWork() {
         </div>
 
         {/* View ALL PROJECTS CTA Button */}
-        <div className="mt-20 sm:mt-28 flex flex-col items-center justify-center text-center">
+        <div className="mt-12 sm:mt-16 flex flex-col items-center justify-center text-center">
           <Link
             href="/work"
             data-cursor-text="ALL WORK"

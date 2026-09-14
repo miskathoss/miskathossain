@@ -84,13 +84,13 @@ export function WhatIDo() {
     <section
       ref={containerRef}
       id="services-overview"
-      className="relative w-full bg-dark text-cream py-24 sm:py-36 px-6 sm:px-12 lg:px-24 border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full bg-dark text-cream py-16 sm:py-24 px-6 sm:px-12 lg:px-24 border-t border-white/[0.06] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Section header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-24 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 gap-6">
           <div>
-            <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-[0.24em] uppercase text-rose mb-4">
+            <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-[0.24em] uppercase text-rose mb-3">
               <span className="w-8 h-[1px] bg-rose" />
               <span>CORE DISCIPLINES</span>
             </div>

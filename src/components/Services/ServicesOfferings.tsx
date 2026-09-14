@@ -62,13 +62,13 @@ export function ServicesOfferings() {
     <section
       ref={containerRef}
       id="services"
-      className="relative w-full bg-dark-pure text-cream py-32 sm:py-48 px-6 sm:px-12 lg:px-24 border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full bg-dark-pure text-cream py-16 sm:py-24 px-6 sm:px-12 lg:px-24 border-t border-white/[0.06] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 sm:mb-32 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>
-            <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-[0.24em] uppercase text-rose mb-4">
+            <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-[0.24em] uppercase text-rose mb-3">
               <span className="w-8 h-[1px] bg-rose" />
               <span>SERVICES &amp; PACKAGES</span>
             </div>

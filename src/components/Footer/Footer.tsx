@@ -12,9 +12,9 @@ export function Footer() {
   };
 
   return (
-    <footer className="w-full bg-dark-pure text-cream border-t border-white/[0.08] px-6 sm:px-12 lg:px-24 py-16 sm:py-24 select-none">
+    <footer className="w-full bg-dark-pure text-cream border-t border-white/[0.08] px-6 sm:px-12 lg:px-24 py-12 sm:py-16 select-none">
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 sm:gap-16 mb-16 sm:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-12 mb-10 sm:mb-12">
           {/* Col 1: Identity & Roles */}
           <div className="md:col-span-6 flex flex-col justify-between">
             <div>
