@@ -5,7 +5,7 @@ export const siteConfig = {
   tagline: "I help coaches and ambitious businesses turn their expertise into distinctive brands and digital experiences.",
   location: "Based in Bangladesh — Working Globally",
   status: "Available for selected projects",
-  email: "miskathossain.design@gmail.com", // clearly marked editable email
+  email: "hi.miskaat@gmail.com",
   socials: {
     linkedin: "https://www.linkedin.com/in/miskathossain",
     dribbble: "https://dribbble.com/miskathossain",
