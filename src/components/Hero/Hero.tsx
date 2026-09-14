@@ -29,23 +29,28 @@ export function Hero() {
 
     if (!container || !pinTarget) return;
 
-    // Pin hero for 300vh of scroll distance to allow cinematic pacing
+    const isMobile = window.innerWidth < 768;
+    // Mobile uses shorter track and faster scrub so 3D effect responds quickly to thumb swipes
+    const scrollDistance = isMobile ? "+=1400" : "+=2800";
+    const scrubSpeed = isMobile ? 0.5 : 1.2;
+    const lerpDuration = isMobile ? 0.12 : 0.3;
+
+    // Pin hero for scroll distance
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: container,
           start: "top top",
-          end: "+=3000",
+          end: scrollDistance,
           pin: pinTarget,
-          scrub: 1.2, // Smooth interpolation matching Lenis
+          scrub: scrubSpeed, // Responsive scrub speed for mobile vs desktop
           anticipatePin: 1,
           onUpdate: (self) => {
             // self.progress is 0 to 1
-            // Smoothly updates frameObj and triggers state re-render
             const targetFrame = self.progress * 239;
             gsap.to(frameObj.current, {
               frame: targetFrame,
-              duration: 0.3,
+              duration: lerpDuration,
               ease: "power1.out",
               onUpdate: () => {
                 setFrameIndex(Math.round(frameObj.current.frame));
@@ -124,8 +129,7 @@ export function Hero() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full bg-dark"
-      style={{ height: "400vh" }} // Provides scroll track for pinned sequence
+      className="relative w-full bg-dark h-[220vh] md:h-[380vh]"
     >
       {/* Pinned Viewport Container */}
       <div
