@@ -9,7 +9,12 @@ import {
   Linkedin,
   Sparkles,
   Quote,
+  Pause,
+  Play,
+  LayoutGrid,
+  Scroll,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface Testimonial {
   id: string;
@@ -88,8 +93,98 @@ const testimonials: Testimonial[] = [
   },
 ];
 
+// Column splits for desktop 2-column vertical stream
+const col1 = [testimonials[0], testimonials[1]]; // Carolyn, Roy
+const col2 = [testimonials[2], testimonials[3]]; // Linette, Laine
+
+function TestimonialCard({
+  item,
+  onViewProof,
+}: {
+  item: Testimonial;
+  onViewProof: (item: Testimonial) => void;
+}) {
+  return (
+    <div className="relative flex flex-col justify-between rounded-[26px] sm:rounded-[30px] border border-white/[0.08] bg-[#121316]/90 hover:bg-[#16181D] hover:border-white/[0.18] p-7 sm:p-8 transition-all duration-300 backdrop-blur-md group shadow-[0_8px_30px_rgba(0,0,0,0.35)] shrink-0 select-none">
+      {/* Subtle top-right decorative quote */}
+      <div className="absolute top-6 right-6 text-white/[0.05] group-hover:text-rose/20 transition-colors pointer-events-none">
+        <Quote className="w-8 h-8 stroke-[1.5]" />
+      </div>
+
+      <div>
+        {/* Header info */}
+        <div className="flex items-start gap-3.5 mb-5">
+          {/* Avatar */}
+          <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden border border-white/[0.16] bg-dark-surface shrink-0 shadow-md ring-2 ring-white/[0.04]">
+            <Image
+              src={item.avatar}
+              alt={item.name}
+              fill
+              className="object-cover"
+              sizes="56px"
+            />
+          </div>
+
+          {/* Client name & position */}
+          <div className="min-w-0 pr-6">
+            <div className="flex items-center gap-2 flex-wrap">
+              <h3 className="text-base sm:text-lg font-medium text-white tracking-tight">
+                {item.name}
+              </h3>
+              <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-[#0A66C2]/15 text-[#70B5F9] text-[10px] font-medium tracking-wider uppercase border border-[#0A66C2]/30">
+                <Linkedin className="w-2.5 h-2.5" /> 1st
+              </span>
+            </div>
+
+            <p className="text-xs text-cream/70 mt-1 font-light leading-snug">
+              <span className="text-white/90 font-normal">{item.role}</span>{" "}
+              <span className="text-rose font-medium">@ {item.company}</span>
+            </p>
+
+            <div className="flex items-center gap-2 mt-1.5 text-[11px] font-mono text-cream/40">
+              <span>{item.relationship}</span>
+              <span>•</span>
+              <span>{item.date}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Project Tag */}
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-medium text-cream/80 mb-4">
+          <Sparkles className="w-3 h-3 text-rose" />
+          <span>Scope: {item.tag}</span>
+        </div>
+
+        {/* Recommendation Quote */}
+        <blockquote className="text-cream/90 text-xs sm:text-sm leading-relaxed font-light mb-6">
+          &ldquo;{item.quote}&rdquo;
+        </blockquote>
+      </div>
+
+      {/* Card Footer: Verified Proof Button */}
+      <div className="pt-4 border-t border-white/[0.06] flex items-center justify-between gap-3">
+        <div className="flex items-center gap-1.5 text-[11px] font-medium text-emerald-400">
+          <CheckCircle2 className="w-3.5 h-3.5" />
+          <span className="tracking-wide">Verified Endorsement</span>
+        </div>
+
+        <button
+          onClick={() => onViewProof(item)}
+          type="button"
+          className="inline-flex items-center gap-1.5 text-[11px] font-medium text-cream/75 hover:text-white px-3 py-1.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.09] border border-white/[0.08] hover:border-white/[0.2] transition-all cursor-pointer"
+        >
+          <span>View Proof</span>
+          <ExternalLink className="w-3 h-3 text-rose" />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export function Testimonials() {
   const [activeProof, setActiveProof] = useState<Testimonial | null>(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const [viewMode, setViewMode] = useState<"stream" | "grid">("stream");
 
   // Close lightbox on Escape key
   useEffect(() => {
@@ -111,7 +206,7 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative w-full bg-dark-pure text-cream py-28 sm:py-40 px-6 sm:px-12 lg:px-24 border-t border-white/[0.06] overflow-hidden"
+      className="relative w-full bg-dark-pure text-cream py-24 sm:py-36 px-6 sm:px-12 lg:px-24 border-t border-white/[0.06] overflow-hidden"
     >
       {/* Subtle background ambient glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-rose/[0.04] rounded-full blur-[140px] pointer-events-none" />
@@ -119,7 +214,7 @@ export function Testimonials() {
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 sm:mb-24">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12 sm:mb-16">
           <div>
             <div className="inline-flex items-center gap-2.5 text-xs font-semibold tracking-[0.24em] uppercase text-rose mb-4">
               <span className="w-8 h-[1px] bg-rose" />
@@ -133,110 +228,204 @@ export function Testimonials() {
             </h2>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-md text-xs tracking-wide text-cream/80">
-              <Linkedin className="w-4 h-4 text-[#0A66C2]" />
-              <span className="font-medium text-white">Verified LinkedIn Recommendations</span>
+          {/* Controls & Badges */}
+          <div className="flex flex-wrap items-center gap-3">
+            {/* Verified LinkedIn Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-md text-xs tracking-wide text-cream/80">
+              <Linkedin className="w-3.5 h-3.5 text-[#0A66C2]" />
+              <span className="font-medium text-white">Verified Recommendations</span>
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             </div>
+
+            {/* Stream View: Pause / Play Toggle Button */}
+            {viewMode === "stream" && (
+              <button
+                type="button"
+                onClick={() => setIsPaused(!isPaused)}
+                aria-label={isPaused ? "Resume vertical scroll" : "Pause vertical scroll"}
+                className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-white/[0.2] text-xs font-medium text-cream/80 transition-all cursor-pointer"
+              >
+                {isPaused ? (
+                  <>
+                    <Play className="w-3 h-3 text-rose fill-rose" />
+                    <span>Resume Scroll</span>
+                  </>
+                ) : (
+                  <>
+                    <Pause className="w-3 h-3 text-rose" />
+                    <span>Pause Scroll</span>
+                  </>
+                )}
+              </button>
+            )}
+
+            {/* Layout Mode Toggle (Vertical Stream / Grid) */}
+            <button
+              type="button"
+              onClick={() => setViewMode(viewMode === "stream" ? "grid" : "stream")}
+              aria-label="Toggle layout view"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-white/[0.2] text-xs font-medium text-cream/80 transition-all cursor-pointer"
+            >
+              {viewMode === "stream" ? (
+                <>
+                  <LayoutGrid className="w-3 h-3 text-cream/70" />
+                  <span className="hidden sm:inline">Grid View</span>
+                </>
+              ) : (
+                <>
+                  <Scroll className="w-3 h-3 text-rose" />
+                  <span className="hidden sm:inline">Vertical Stream</span>
+                </>
+              )}
+            </button>
           </div>
         </div>
 
-        {/* 2x2 Grid of Testimonial Glass Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {testimonials.map((item) => (
-            <div
-              key={item.id}
-              className="relative flex flex-col justify-between rounded-[28px] sm:rounded-[32px] border border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/[0.16] p-8 sm:p-10 transition-all duration-500 backdrop-blur-sm group shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
-            >
-              {/* Subtle top-right accent */}
-              <div className="absolute top-8 right-8 text-white/[0.06] group-hover:text-rose/20 transition-colors pointer-events-none">
-                <Quote className="w-10 h-10 stroke-[1.5]" />
-              </div>
+        {/* ======================================================== */}
+        {/* VERTICAL SCROLLING STREAM MODE (Default)                  */}
+        {/* ======================================================== */}
+        {viewMode === "stream" && (
+          <div
+            className="relative w-full h-[580px] sm:h-[660px] overflow-hidden group"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
+          >
+            {/* Top Fade Vignette */}
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-28 sm:h-36 bg-gradient-to-b from-dark-pure via-dark-pure/90 to-transparent z-20" />
 
-              <div>
-                {/* Header info */}
-                <div className="flex items-start gap-4 mb-6">
-                  {/* Avatar */}
-                  <div className="relative w-14 h-14 rounded-full overflow-hidden border border-white/[0.15] bg-dark-surface shrink-0 shadow-md">
-                    <Image
-                      src={item.avatar}
-                      alt={item.name}
-                      fill
-                      className="object-cover"
-                      sizes="56px"
-                    />
-                  </div>
+            {/* Bottom Fade Vignette */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 sm:h-36 bg-gradient-to-t from-dark-pure via-dark-pure/90 to-transparent z-20" />
 
-                  {/* Client name & position */}
-                  <div className="min-w-0 pr-8">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h3 className="text-lg sm:text-xl font-medium text-white tracking-tight">
-                        {item.name}
-                      </h3>
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-[#0A66C2]/15 text-[#70B5F9] text-[10px] font-medium tracking-wider uppercase border border-[#0A66C2]/30">
-                        <Linkedin className="w-2.5 h-2.5" /> 1st
-                      </span>
-                    </div>
-
-                    <p className="text-xs sm:text-sm text-cream/70 mt-1 font-light leading-snug">
-                      <span className="text-white/90 font-normal">{item.role}</span>{" "}
-                      <span className="text-rose font-medium">@ {item.company}</span>
-                    </p>
-
-                    <div className="flex items-center gap-3 mt-2 text-[11px] font-mono text-cream/40">
-                      <span>{item.relationship}</span>
-                      <span>•</span>
-                      <span>{item.date}</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Project Tag */}
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[11px] font-medium text-cream/80 mb-6">
-                  <Sparkles className="w-3 h-3 text-rose" />
-                  <span>Scope: {item.tag}</span>
-                </div>
-
-                {/* Recommendation Quote */}
-                <blockquote className="text-cream/90 text-sm sm:text-base leading-relaxed font-light mb-8">
-                  &ldquo;{item.quote}&rdquo;
-                </blockquote>
-              </div>
-
-              {/* Card Footer: Verified Proof Button */}
-              <div className="pt-6 border-t border-white/[0.06] flex items-center justify-between gap-4">
-                <div className="flex items-center gap-2 text-xs font-medium text-emerald-400">
-                  <CheckCircle2 className="w-4 h-4" />
-                  <span className="tracking-wide">Verified Recommendation</span>
-                </div>
-
-                <button
-                  onClick={() => setActiveProof(item)}
-                  type="button"
-                  className="inline-flex items-center gap-1.5 text-xs font-medium text-cream/70 hover:text-white px-3.5 py-2 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-white/[0.2] transition-all cursor-pointer"
+            {/* Desktop: 2 Parallel Vertical Scrolling Tracks */}
+            <div className="hidden md:grid grid-cols-2 gap-6 h-full">
+              {/* Column 1 Track (Carolyn & Roy) */}
+              <div className="relative overflow-hidden flex flex-col gap-6">
+                <div
+                  className="flex flex-col gap-6 shrink-0 animate-marquee-vertical"
+                  style={{ animationPlayState: isPaused ? "paused" : "running" }}
                 >
-                  <span>View Proof</span>
-                  <ExternalLink className="w-3.5 h-3.5 text-rose" />
-                </button>
+                  {col1.map((item) => (
+                    <TestimonialCard
+                      key={`col1-a-${item.id}`}
+                      item={item}
+                      onViewProof={setActiveProof}
+                    />
+                  ))}
+                </div>
+                <div
+                  aria-hidden="true"
+                  className="flex flex-col gap-6 shrink-0 animate-marquee-vertical"
+                  style={{ animationPlayState: isPaused ? "paused" : "running" }}
+                >
+                  {col1.map((item) => (
+                    <TestimonialCard
+                      key={`col1-b-${item.id}`}
+                      item={item}
+                      onViewProof={setActiveProof}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Column 2 Track (Linette & Laine, delayed phase for organic motion) */}
+              <div className="relative overflow-hidden flex flex-col gap-6">
+                <div
+                  className="flex flex-col gap-6 shrink-0 animate-marquee-vertical-delayed"
+                  style={{ animationPlayState: isPaused ? "paused" : "running" }}
+                >
+                  {col2.map((item) => (
+                    <TestimonialCard
+                      key={`col2-a-${item.id}`}
+                      item={item}
+                      onViewProof={setActiveProof}
+                    />
+                  ))}
+                </div>
+                <div
+                  aria-hidden="true"
+                  className="flex flex-col gap-6 shrink-0 animate-marquee-vertical-delayed"
+                  style={{ animationPlayState: isPaused ? "paused" : "running" }}
+                >
+                  {col2.map((item) => (
+                    <TestimonialCard
+                      key={`col2-b-${item.id}`}
+                      item={item}
+                      onViewProof={setActiveProof}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
-          ))}
-        </div>
 
-        {/* Bottom Banner with direct link to LinkedIn */}
-        <div className="mt-16 text-center">
-          <p className="text-xs sm:text-sm text-cream/50 tracking-wide">
-            Want to see more client reviews?{" "}
-            <a
-              href="https://www.linkedin.com/in/miskathossain/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-cream hover:text-rose underline underline-offset-4 transition-colors font-medium ml-1"
-            >
-              View Miskat&apos;s full LinkedIn profile ↗
-            </a>
-          </p>
+            {/* Mobile: 1 Seamless Vertical Scrolling Column (All 4 Testimonials) */}
+            <div className="md:hidden relative overflow-hidden flex flex-col gap-6 h-full">
+              <div
+                className="flex flex-col gap-6 shrink-0 animate-marquee-vertical-mobile"
+                style={{ animationPlayState: isPaused ? "paused" : "running" }}
+              >
+                {testimonials.map((item) => (
+                  <TestimonialCard
+                    key={`mob-a-${item.id}`}
+                    item={item}
+                    onViewProof={setActiveProof}
+                  />
+                ))}
+              </div>
+              <div
+                aria-hidden="true"
+                className="flex flex-col gap-6 shrink-0 animate-marquee-vertical-mobile"
+                style={{ animationPlayState: isPaused ? "paused" : "running" }}
+              >
+                {testimonials.map((item) => (
+                  <TestimonialCard
+                    key={`mob-b-${item.id}`}
+                    item={item}
+                    onViewProof={setActiveProof}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ======================================================== */}
+        {/* STATIC GRID MODE (Accessible via toggle)                 */}
+        {/* ======================================================== */}
+        {viewMode === "grid" && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-in fade-in duration-300">
+            {testimonials.map((item) => (
+              <TestimonialCard
+                key={`grid-${item.id}`}
+                item={item}
+                onViewProof={setActiveProof}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Stream Hint & LinkedIn Profile Link */}
+        <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/50">
+          <span className="flex items-center gap-2">
+            <span className={cn(
+              "w-2 h-2 rounded-full",
+              isPaused ? "bg-amber-400" : "bg-emerald-400 animate-pulse"
+            )} />
+            {isPaused
+              ? "Scrolling paused — hover off or tap Resume to resume"
+              : "Continuous vertical stream — hover or touch any card to pause"}
+          </span>
+
+          <a
+            href="https://www.linkedin.com/in/miskathossain/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cream hover:text-rose underline underline-offset-4 transition-colors font-medium flex items-center gap-1"
+          >
+            <span>View all reviews on LinkedIn</span>
+            <ExternalLink className="w-3 h-3" />
+          </a>
         </div>
       </div>
 

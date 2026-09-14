@@ -77,3 +77,30 @@ html.lenis, html.lenis body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Vertical Scrolling Marquee Animations */
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - 1.5rem));
+  }
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical 24s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-vertical-delayed {
+  animation: marquee-vertical 30s linear infinite;
+  animation-delay: -10s;
+  will-change: transform;
+}
+
+.animate-marquee-vertical-mobile {
+  animation: marquee-vertical 42s linear infinite;
+  will-change: transform;
+}
+
