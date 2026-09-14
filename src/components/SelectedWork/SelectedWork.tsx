@@ -99,9 +99,9 @@ export function SelectedWork() {
           </div>
         </div>
 
-        {/* Scene-Based Projects Presentation */}
+        {/* Scene-Based Projects Presentation (Top 5 Featured) */}
         <div className="space-y-32 sm:space-y-48">
-          {projects.map((project, idx) => (
+          {projects.slice(0, 5).map((project, idx) => (
             <article
               key={project.id}
               className="project-scene relative flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 border-b border-white/[0.08] pb-24 sm:pb-36 last:border-b-0"
@@ -198,6 +198,20 @@ export function SelectedWork() {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* View ALL PROJECTS CTA Button */}
+        <div className="mt-20 sm:mt-28 flex flex-col items-center justify-center text-center">
+          <Link
+            href="/work"
+            data-cursor-text="ALL WORK"
+            className="group relative inline-flex items-center gap-3.5 px-8 sm:px-12 py-4.5 sm:py-5 rounded-full border border-white/[0.18] bg-white/[0.04] hover:bg-rose hover:border-rose text-white text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase transition-all duration-300 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_15px_40px_rgba(224,40,79,0.35)] active:scale-95"
+          >
+            <span>View ALL PROJECTS</span>
+            <span className="w-8 h-8 rounded-full bg-white/[0.08] group-hover:bg-white/20 flex items-center justify-center transition-colors">
+              <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </span>
+          </Link>
         </div>
       </div>
     </section>
