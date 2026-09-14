@@ -45,13 +45,13 @@ export function Navbar() {
           className="group flex items-center gap-2.5 text-cream font-medium tracking-[0.14em] text-xs sm:text-sm uppercase transition-colors"
           data-cursor-text="HOME"
         >
-          <div className="relative w-6 h-4 sm:w-7 sm:h-4.5 shrink-0 transition-transform duration-300 group-hover:scale-105 flex items-center">
+          <div className="relative w-7 h-5 sm:w-8 sm:h-6 shrink-0 transition-transform duration-300 group-hover:scale-105 flex items-center">
             <Image
               src="/assets/images/miskat-logo.png"
               alt="Miskat Hossain Logo"
-              width={28}
-              height={18}
-              className="object-contain w-auto h-3.5 sm:h-4"
+              width={36}
+              height={24}
+              className="object-contain w-auto h-5 sm:h-5.5"
               priority
             />
           </div>
