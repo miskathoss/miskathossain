@@ -89,13 +89,10 @@ export function SelectedWork() {
             </h2>
           </div>
           <div className="max-w-md">
-            <p className="text-sm sm:text-base text-cream/70 font-light leading-relaxed mb-3">
+            <p className="text-sm sm:text-base text-cream/70 font-light leading-relaxed">
               Real commercial results for coaches, leaders, and ambitious platforms.
               Every project is an end-to-end bespoke partnership.
             </p>
-            <div className="text-xs uppercase tracking-[0.18em] text-cream/40 font-mono">
-              FEATURED CLIENT ARCHIVE &bull; 2022–2026
-            </div>
           </div>
         </div>
 
