@@ -73,6 +73,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/frames/ezgif-frame-001.jpg"
+          type="image/jpeg"
+          // @ts-expect-error fetchpriority attribute
+          fetchpriority="high"
+        />
+      </head>
       <body className="bg-dark text-cream min-h-screen antialiased selection:bg-rose selection:text-white">
         <SmoothScrollProvider>
           <CustomCursor />

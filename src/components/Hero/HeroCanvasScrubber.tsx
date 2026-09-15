@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useRef, useCallback, useState } from "react";
 
 interface HeroCanvasScrubberProps {
   totalFrames?: number;
@@ -12,9 +12,12 @@ export const HeroCanvasScrubber = React.forwardRef<
   HeroCanvasScrubberProps
 >(({ totalFrames = 240, onLoaded }, ref) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const initialImgRef = useRef<HTMLImageElement | null>(null);
   const imagesRef = useRef<HTMLImageElement[]>([]);
   const isLoadedCalledRef = useRef(false);
   const lastDrawnFrame = useRef(-1);
+  const lastRequestedFrame = useRef(0);
+  const [isCanvasActive, setIsCanvasActive] = useState(false);
 
   // Helper to format frame filename: ezgif-frame-001.jpg
   const getFrameUrl = (index: number) => {
@@ -22,19 +25,40 @@ export const HeroCanvasScrubber = React.forwardRef<
     return `/assets/frames/ezgif-frame-${frameNum}.jpg`;
   };
 
+  // Helper to request a frame on-demand if not already initiated
+  const requestFrame = useCallback((index: number) => {
+    if (index < 0 || index >= totalFrames) return;
+    if (imagesRef.current[index]) return; // Already requested or loaded
+
+    const img = new Image();
+    img.src = getFrameUrl(index);
+    img.onload = () => {
+      imagesRef.current[index] = img;
+    };
+    imagesRef.current[index] = img;
+  }, [totalFrames]);
+
   // Function to render frame onto canvas maintaining cover aspect ratio
   const drawFrame = useCallback(
     (frameIndex: number) => {
       const clamped = Math.max(0, Math.min(totalFrames - 1, Math.round(frameIndex)));
-      // Skip redundant draws — but only if the frame was actually painted
+      lastRequestedFrame.current = clamped;
+
+      // JIT on-demand preload for nearby frames ahead of scroll
+      requestFrame(clamped);
+      requestFrame(clamped + 1);
+      requestFrame(clamped + 2);
+      requestFrame(clamped + 3);
+
+      // Skip redundant canvas redraws if the same frame is already visible
       if (clamped === lastDrawnFrame.current) return;
 
       const canvas = canvasRef.current;
       if (!canvas) return;
-      const ctx = canvas.getContext("2d", { alpha: false });
+      const ctx = canvas.getContext("2d");
       if (!ctx) return;
 
-      // Find closest loaded frame if current frame is not ready
+      // Find closest loaded frame if current frame is not fully ready
       let img = imagesRef.current[clamped];
       if (!img || !img.complete || img.naturalWidth === 0) {
         for (let offset = 1; offset < totalFrames; offset++) {
@@ -51,13 +75,15 @@ export const HeroCanvasScrubber = React.forwardRef<
         }
       }
 
-      // If no image is ready yet, DON'T mark as drawn so rAF retries
+      // If no image is ready yet, don't mark as drawn so rAF can retry
       if (!img || !img.complete || img.naturalWidth === 0) return;
 
       const cw = canvas.width;
       const ch = canvas.height;
       const iw = img.naturalWidth;
       const ih = img.naturalHeight;
+
+      if (cw === 0 || ch === 0 || iw === 0 || ih === 0) return;
 
       // Calculate cover scale
       const scale = Math.max(cw / iw, ch / ih);
@@ -69,10 +95,13 @@ export const HeroCanvasScrubber = React.forwardRef<
       const offsetY = (ch - nh) * 0.5;
 
       ctx.drawImage(img, offsetX, offsetY, nw, nh);
-      // Only mark as drawn after a successful paint
       lastDrawnFrame.current = clamped;
+
+      if (!isCanvasActive) {
+        setIsCanvasActive(true);
+      }
     },
-    [totalFrames]
+    [totalFrames, isCanvasActive, requestFrame]
   );
 
   // Expose drawFrame via imperative handle
@@ -84,62 +113,99 @@ export const HeroCanvasScrubber = React.forwardRef<
     [drawFrame]
   );
 
-  // Preload frames progressively
+  // Preload frames progressively without saturating network
   useEffect(() => {
     const images: HTMLImageElement[] = new Array(totalFrames);
-    let loaded = 0;
+    imagesRef.current = images;
 
-    // First load frame 0 immediately for initial paint
-    const firstImg = new Image();
-    firstImg.src = getFrameUrl(0);
-    firstImg.onload = () => {
-      images[0] = firstImg;
-      loaded++;
+    // 1. Immediately hook into the static DOM image (frame 0)
+    const domImg = initialImgRef.current;
+    if (domImg && domImg.complete && domImg.naturalWidth > 0) {
+      images[0] = domImg;
       drawFrame(0);
-    };
+    } else if (domImg) {
+      domImg.onload = () => {
+        images[0] = domImg;
+        drawFrame(0);
+      };
+    } else {
+      const firstImg = new Image();
+      firstImg.src = getFrameUrl(0);
+      firstImg.onload = () => {
+        images[0] = firstImg;
+        drawFrame(0);
+      };
+    }
 
-    // Load frames in batches
-    const preloadBatch = (start: number, end: number, callback?: () => void) => {
-      let batchLoaded = 0;
-      const count = end - start;
-      if (count <= 0) {
-        if (callback) callback();
+    let isCancelled = false;
+
+    // Helper to load a contiguous batch of frames
+    const loadBatch = (start: number, end: number, onComplete?: () => void) => {
+      let remaining = end - start;
+      if (remaining <= 0) {
+        if (onComplete) onComplete();
         return;
       }
+
       for (let i = start; i < end; i++) {
-        const img = new Image();
+        if (isCancelled) return;
+        if (images[i] && images[i].complete) {
+          remaining--;
+          if (remaining === 0 && onComplete) onComplete();
+          continue;
+        }
+
+        const img = images[i] || new Image();
         img.src = getFrameUrl(i);
         img.onload = () => {
           images[i] = img;
-          loaded++;
-          batchLoaded++;
-          if (batchLoaded >= count && callback) {
-            callback();
+          remaining--;
+          if (remaining === 0 && onComplete && !isCancelled) {
+            onComplete();
           }
         };
         img.onerror = () => {
-          batchLoaded++;
-          if (batchLoaded >= count && callback) {
-            callback();
+          remaining--;
+          if (remaining === 0 && onComplete && !isCancelled) {
+            onComplete();
           }
         };
+        images[i] = img;
       }
     };
 
-    // Priority batch 1: frames 1 to 40
-    preloadBatch(1, Math.min(40, totalFrames), () => {
+    // 2. High-priority buffer: frames 1 to 15 (fast initial scrub buffer)
+    loadBatch(1, Math.min(16, totalFrames), () => {
       if (!isLoadedCalledRef.current) {
         isLoadedCalledRef.current = true;
         if (onLoaded) onLoaded();
       }
-      // Then load remaining frames in background
-      preloadBatch(40, totalFrames);
+
+      // 3. Progressive chunked background loader for remaining frames
+      // Loads 12 frames per chunk and yields to browser idle time between chunks
+      const CHUNK_SIZE = 12;
+      const loadChunksProgressively = (currIndex: number) => {
+        if (isCancelled || currIndex >= totalFrames) return;
+        const nextEnd = Math.min(currIndex + CHUNK_SIZE, totalFrames);
+
+        loadBatch(currIndex, nextEnd, () => {
+          if (isCancelled) return;
+          if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+            (window as any).requestIdleCallback(
+              () => loadChunksProgressively(nextEnd),
+              { timeout: 350 }
+            );
+          } else {
+            setTimeout(() => loadChunksProgressively(nextEnd), 50);
+          }
+        });
+      };
+
+      loadChunksProgressively(16);
     });
 
-    imagesRef.current = images;
-
     return () => {
-      imagesRef.current = [];
+      isCancelled = true;
     };
   }, [totalFrames, drawFrame, onLoaded]);
 
@@ -150,11 +216,12 @@ export const HeroCanvasScrubber = React.forwardRef<
       if (!canvas) return;
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
       const rect = canvas.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) return;
       canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
-      // Force redraw
+      // Redraw the current frame rather than resetting to 0
       lastDrawnFrame.current = -1;
-      drawFrame(lastDrawnFrame.current === -1 ? 0 : lastDrawnFrame.current);
+      drawFrame(lastRequestedFrame.current);
     };
 
     handleResize();
@@ -164,14 +231,30 @@ export const HeroCanvasScrubber = React.forwardRef<
 
   return (
     <div className="absolute inset-0 w-full h-full pointer-events-none select-none">
+      {/* 
+        Instant First-Paint 3D Visual:
+        Directly rendered into HTML so the browser renders Miskat's 3D image
+        at First Contentful Paint without waiting for JavaScript execution.
+      */}
+      <img
+        ref={initialImgRef}
+        src="/assets/frames/ezgif-frame-001.jpg"
+        alt="Miskat Hossain — Creative Direction & Brand Experience"
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none md:object-[48%_50%] object-center"
+      />
+
+      {/* High-performance hardware-accelerated interactive canvas */}
       <canvas
         ref={canvasRef}
-        className="w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
         style={{ width: "100%", height: "100%" }}
       />
-      {/* Subtle atmospheric vignette and cinematic film gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-black/30 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-r from-dark/60 via-transparent to-dark/30 pointer-events-none hidden md:block" />
+
+      {/* Atmospheric vignette and cinematic film gradient overlays */}
+      <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-black/30 pointer-events-none z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-dark/60 via-transparent to-dark/30 pointer-events-none hidden md:block z-10" />
     </div>
   );
 });
