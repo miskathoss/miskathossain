@@ -1,28 +1,86 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 
 interface HeroCanvasScrubberProps {
-  currentFrame: number; // 0 to 239
   totalFrames?: number;
   onLoaded?: () => void;
 }
 
-export const HeroCanvasScrubber: React.FC<HeroCanvasScrubberProps> = ({
-  currentFrame,
-  totalFrames = 240,
-  onLoaded,
-}) => {
+export const HeroCanvasScrubber = React.forwardRef<
+  { drawFrame: (frame: number) => void },
+  HeroCanvasScrubberProps
+>(({ totalFrames = 240, onLoaded }, ref) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const imagesRef = useRef<HTMLImageElement[]>([]);
-  const [loadedCount, setLoadedCount] = useState(0);
   const isLoadedCalledRef = useRef(false);
+  const lastDrawnFrame = useRef(-1);
 
   // Helper to format frame filename: ezgif-frame-001.jpg
   const getFrameUrl = (index: number) => {
     const frameNum = String(index + 1).padStart(3, "0");
     return `/assets/frames/ezgif-frame-${frameNum}.jpg`;
   };
+
+  // Function to render frame onto canvas maintaining cover aspect ratio
+  const drawFrame = useCallback(
+    (frameIndex: number) => {
+      const clamped = Math.max(0, Math.min(totalFrames - 1, Math.round(frameIndex)));
+      // Skip redundant draws
+      if (clamped === lastDrawnFrame.current) return;
+      lastDrawnFrame.current = clamped;
+
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d", { alpha: false });
+      if (!ctx) return;
+
+      // Find closest loaded frame if current frame is not ready
+      let img = imagesRef.current[clamped];
+      if (!img || !img.complete || img.naturalWidth === 0) {
+        for (let offset = 1; offset < totalFrames; offset++) {
+          const prev = imagesRef.current[clamped - offset];
+          if (prev && prev.complete && prev.naturalWidth > 0) {
+            img = prev;
+            break;
+          }
+          const next = imagesRef.current[clamped + offset];
+          if (next && next.complete && next.naturalWidth > 0) {
+            img = next;
+            break;
+          }
+        }
+      }
+
+      if (!img || !img.complete || img.naturalWidth === 0) return;
+
+      const cw = canvas.width;
+      const ch = canvas.height;
+      const iw = img.naturalWidth;
+      const ih = img.naturalHeight;
+
+      // Calculate cover scale
+      const scale = Math.max(cw / iw, ch / ih);
+      const nw = iw * scale;
+      const nh = ih * scale;
+
+      const isMobile = window.innerWidth < 768;
+      const offsetX = isMobile ? (cw - nw) * 0.5 : (cw - nw) * 0.48;
+      const offsetY = (ch - nh) * 0.5;
+
+      ctx.drawImage(img, offsetX, offsetY, nw, nh);
+    },
+    [totalFrames]
+  );
+
+  // Expose drawFrame via imperative handle
+  React.useImperativeHandle(
+    ref,
+    () => ({
+      drawFrame,
+    }),
+    [drawFrame]
+  );
 
   // Preload frames progressively
   useEffect(() => {
@@ -35,11 +93,10 @@ export const HeroCanvasScrubber: React.FC<HeroCanvasScrubberProps> = ({
     firstImg.onload = () => {
       images[0] = firstImg;
       loaded++;
-      setLoadedCount(loaded);
       drawFrame(0);
     };
 
-    // Load first 30 frames with high priority
+    // Load frames in batches
     const preloadBatch = (start: number, end: number, callback?: () => void) => {
       let batchLoaded = 0;
       const count = end - start;
@@ -54,7 +111,6 @@ export const HeroCanvasScrubber: React.FC<HeroCanvasScrubberProps> = ({
           images[i] = img;
           loaded++;
           batchLoaded++;
-          setLoadedCount(loaded);
           if (batchLoaded >= count && callback) {
             callback();
           }
@@ -81,83 +137,28 @@ export const HeroCanvasScrubber: React.FC<HeroCanvasScrubberProps> = ({
     imagesRef.current = images;
 
     return () => {
-      // clean up references
       imagesRef.current = [];
     };
-  }, [totalFrames]);
-
-  // Function to render frame onto canvas maintaining cover aspect ratio
-  const drawFrame = (frameIndex: number) => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d", { alpha: false });
-    if (!ctx) return;
-
-    // Find closest loaded frame if current frame is not ready
-    let img = imagesRef.current[frameIndex];
-    if (!img || !img.complete || img.naturalWidth === 0) {
-      // Find nearest loaded frame
-      for (let offset = 1; offset < totalFrames; offset++) {
-        const prev = imagesRef.current[frameIndex - offset];
-        if (prev && prev.complete && prev.naturalWidth > 0) {
-          img = prev;
-          break;
-        }
-        const next = imagesRef.current[frameIndex + offset];
-        if (next && next.complete && next.naturalWidth > 0) {
-          img = next;
-          break;
-        }
-      }
-    }
-
-    if (!img || !img.complete || img.naturalWidth === 0) return;
-
-    const cw = canvas.width;
-    const ch = canvas.height;
-    const iw = img.naturalWidth;
-    const ih = img.naturalHeight;
-
-    // Calculate cover scale
-    const scale = Math.max(cw / iw, ch / ih);
-    const nw = iw * scale;
-    const nh = ih * scale;
-
-    // Positioning: Center vertically, and on desktop adjust slightly so Miskat (who is right-center)
-    // is well balanced while leaving generous space for the glassmorphic card on the left
-    const isMobile = window.innerWidth < 768;
-    // On mobile, center horizontally or nudge slightly right so face is centered
-    // On desktop, center or slight offset (e.g. 52% from left)
-    const offsetX = isMobile ? (cw - nw) * 0.5 : (cw - nw) * 0.48;
-    const offsetY = (ch - nh) * 0.5;
-
-    ctx.clearRect(0, 0, cw, ch);
-    ctx.drawImage(img, offsetX, offsetY, nw, nh);
-  };
-
-  // Redraw whenever currentFrame changes
-  useEffect(() => {
-    const clamped = Math.max(0, Math.min(totalFrames - 1, Math.round(currentFrame)));
-    drawFrame(clamped);
-  }, [currentFrame]);
+  }, [totalFrames, drawFrame, onLoaded]);
 
   // Handle resize and devicePixelRatio
   useEffect(() => {
     const handleResize = () => {
       const canvas = canvasRef.current;
       if (!canvas) return;
-      const dpr = Math.min(window.devicePixelRatio || 1, 2); // Cap at 2 for performance
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
       const rect = canvas.getBoundingClientRect();
       canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
-      const clamped = Math.max(0, Math.min(totalFrames - 1, Math.round(currentFrame)));
-      drawFrame(clamped);
+      // Force redraw
+      lastDrawnFrame.current = -1;
+      drawFrame(lastDrawnFrame.current === -1 ? 0 : lastDrawnFrame.current);
     };
 
     handleResize();
     window.addEventListener("resize", handleResize, { passive: true });
     return () => window.removeEventListener("resize", handleResize);
-  }, [currentFrame]);
+  }, [drawFrame]);
 
   return (
     <div className="absolute inset-0 w-full h-full pointer-events-none select-none">
@@ -171,4 +172,6 @@ export const HeroCanvasScrubber: React.FC<HeroCanvasScrubberProps> = ({
       <div className="absolute inset-0 bg-gradient-to-r from-dark/60 via-transparent to-dark/30 pointer-events-none hidden md:block" />
     </div>
   );
-};
+});
+
+HeroCanvasScrubber.displayName = "HeroCanvasScrubber";

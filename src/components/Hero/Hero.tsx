@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HeroCanvasScrubber } from "./HeroCanvasScrubber";
 import { HeroGlassCard } from "./HeroGlassCard";
-import { ChevronDown } from "lucide-react";
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -14,9 +13,12 @@ export function Hero() {
   const scrollIndicatorRef = useRef<HTMLDivElement | null>(null);
   const miniBadgeRef = useRef<HTMLDivElement | null>(null);
 
-  // Frame progress state for canvas rendering: 0 to 239
-  const [frameIndex, setFrameIndex] = useState(0);
-  const frameObj = useRef({ frame: 0 });
+  // Imperative ref to canvas scrubber — call drawFrame() directly, no React state
+  const scrubberRef = useRef<{ drawFrame: (frame: number) => void }>(null);
+
+  // Mutable frame tracker — no React re-renders
+  const currentFrameRef = useRef(0);
+  const rafIdRef = useRef(0);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -30,10 +32,23 @@ export function Hero() {
     if (!container || !pinTarget) return;
 
     const isMobile = window.innerWidth < 768;
-    // Mobile uses shorter track and faster scrub so 3D effect responds quickly to thumb swipes
-    const scrollDistance = isMobile ? "+=1400" : "+=2800";
-    const scrubSpeed = isMobile ? 0.5 : 1.2;
-    const lerpDuration = isMobile ? 0.12 : 0.3;
+
+    // ── Tuning ──────────────────────────────────────────
+    // Desktop: generous scroll track, silky scrub
+    // Mobile:  shorter scroll track so thumb swipes feel instant
+    const scrollDistance = isMobile ? "+=1000" : "+=2400";
+    // scrub value is the interpolation time in seconds.
+    // Lower = tighter / more responsive. 0 = instant (1:1 with scroll).
+    const scrubSpeed = isMobile ? 0.3 : 0.6;
+
+    // Render loop: draw the current frame at display refresh rate
+    const renderLoop = () => {
+      if (scrubberRef.current) {
+        scrubberRef.current.drawFrame(currentFrameRef.current);
+      }
+      rafIdRef.current = requestAnimationFrame(renderLoop);
+    };
+    rafIdRef.current = requestAnimationFrame(renderLoop);
 
     // Pin hero for scroll distance
     const ctx = gsap.context(() => {
@@ -43,24 +58,16 @@ export function Hero() {
           start: "top top",
           end: scrollDistance,
           pin: pinTarget,
-          scrub: scrubSpeed, // Responsive scrub speed for mobile vs desktop
+          scrub: scrubSpeed,
           anticipatePin: 1,
           onUpdate: (self) => {
-            // self.progress is 0 to 1
-            const targetFrame = self.progress * 239;
-            gsap.to(frameObj.current, {
-              frame: targetFrame,
-              duration: lerpDuration,
-              ease: "power1.out",
-              onUpdate: () => {
-                setFrameIndex(Math.round(frameObj.current.frame));
-              },
-            });
+            // Directly write to mutable ref — zero React overhead
+            currentFrameRef.current = self.progress * 239;
           },
         },
       });
 
-      // Timeline stages matching the spec:
+      // Timeline stages:
       // 0% - 20%: Wide composition, glass card fully visible
       // 20% - 40%: Camera moves closer, glass card subtly scales down
       // 40% - 60%: Camera approaches character, glass card moves/fades toward edge
@@ -123,13 +130,16 @@ export function Hero() {
       }
     }, container);
 
-    return () => ctx.revert();
+    return () => {
+      cancelAnimationFrame(rafIdRef.current);
+      ctx.revert();
+    };
   }, []);
 
   return (
     <div
       ref={containerRef}
-      className="relative w-full bg-dark h-[220vh] md:h-[380vh]"
+      className="relative w-full bg-dark h-[180vh] md:h-[340vh]"
     >
       {/* Pinned Viewport Container */}
       <div
@@ -137,7 +147,7 @@ export function Hero() {
         className="relative w-full h-screen overflow-hidden flex flex-col justify-between"
       >
         {/* Cinematic Canvas Video Scrubber */}
-        <HeroCanvasScrubber currentFrame={frameIndex} totalFrames={240} />
+        <HeroCanvasScrubber ref={scrubberRef} totalFrames={240} />
 
         {/* Floating Hero UI Layer */}
         <div className="relative z-10 w-full h-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 flex flex-col justify-end pb-12 sm:pb-16 lg:pb-20 pointer-events-none">
