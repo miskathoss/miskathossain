@@ -26,9 +26,8 @@ export const HeroCanvasScrubber = React.forwardRef<
   const drawFrame = useCallback(
     (frameIndex: number) => {
       const clamped = Math.max(0, Math.min(totalFrames - 1, Math.round(frameIndex)));
-      // Skip redundant draws
+      // Skip redundant draws — but only if the frame was actually painted
       if (clamped === lastDrawnFrame.current) return;
-      lastDrawnFrame.current = clamped;
 
       const canvas = canvasRef.current;
       if (!canvas) return;
@@ -52,6 +51,7 @@ export const HeroCanvasScrubber = React.forwardRef<
         }
       }
 
+      // If no image is ready yet, DON'T mark as drawn so rAF retries
       if (!img || !img.complete || img.naturalWidth === 0) return;
 
       const cw = canvas.width;
@@ -69,6 +69,8 @@ export const HeroCanvasScrubber = React.forwardRef<
       const offsetY = (ch - nh) * 0.5;
 
       ctx.drawImage(img, offsetX, offsetY, nw, nh);
+      // Only mark as drawn after a successful paint
+      lastDrawnFrame.current = clamped;
     },
     [totalFrames]
   );
