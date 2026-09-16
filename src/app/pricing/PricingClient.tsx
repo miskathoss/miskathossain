@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Navbar } from "@/components/Navigation/Navbar";
 import { Footer } from "@/components/Footer/Footer";
+import { IntakeModal } from "@/components/Common/IntakeModal";
 import { siteConfig } from "@/data/site";
 import {
   Check,
@@ -37,13 +38,13 @@ const pricingTiers: PricingTier[] = [
     tierNumber: "TIER 01",
     title: "AUTHORITY ESSENTIALS",
     price: "Starting at $1,099 USD",
-    subtitle: "FOUNDATIONAL BRAND IDENTITY & SINGLE-PAGE WEBPAGE",
+    subtitle: "FOUNDATIONAL BRAND IDENTITY & SINGLE-PAGE WEB SYSTEM",
     description:
-      "Designed for emerging executive coaches who need a high-trust digital presence to validate their offer and start booking 5-figure corporate clients immediately.",
+      "Designed for emerging coaches who need a sleek, high-trust digital footprint to validate their offer and start booking clients immediately.",
     deliverables: [
-      { text: "Executive Brand Strategy & Positioning Narrative" },
-      { text: "Core Logo System, Typography & Color Palette" },
-      { text: "Custom 1-Page High-Converting Executive Landing Page (Design & Development)" },
+      { text: "Core Brand Strategy & Messaging Narrative" },
+      { text: "Logo System, Typography & Color Palette" },
+      { text: "Custom 1-Page High-Converting Landing Page" },
       { text: "Integrated Intake & Discovery Call Booking Funnel" },
       { text: "Complete Web Launch & Basic SEO Setup" },
     ],
@@ -53,39 +54,39 @@ const pricingTiers: PricingTier[] = [
   {
     tierNumber: "TIER 02",
     badge: "SIGNATURE OFFERING",
-    title: "EXECUTIVE SUITE",
+    title: "COACHING SUITE",
     price: "Starting at $1,999 USD",
     subtitle: "COMPLETE BRAND IDENTITY & MULTI-PAGE CONVERSION SYSTEM",
     description:
-      "The definitive transformation for established coaches ready to position themselves as category leaders and command premium corporate retainers.",
+      "The definitive transformation for established coaches ready to replace an amateur site, elevate their positioning, and consistently attract ideal clients.",
     isPopular: true,
     deliverables: [
-      { text: "Everything in Authority Essentials", isHighlight: true },
-      { text: "Full Custom 4–5 Page Executive Website (Home, About, Services, Case Studies, Booking)" },
-      { text: "Comprehensive Executive Brand Guidelines & Digital Asset Suite" },
-      { text: "High-Converting Lead Magnet / PDF Workbook Layout Design" },
+      { text: "Everything in Authority Essentials, plus:", isHighlight: true },
+      { text: "Custom 4–5 Page Website (Home, About/Bio, Coaching Offers, Client Stories, Booking)" },
+      { text: "Comprehensive Brand Guidelines & Social Media Graphic Templates" },
+      { text: "High-Converting Lead Magnet / PDF Guide Layout Design" },
       { text: "Mobile-First Conversion Architecture & Speed Optimization" },
-      { text: "CMS Handover Training + 30-Day Post-Launch Advisory" },
+      { text: "CMS Handover Training + 30-Day Post-Launch Support" },
     ],
-    ctaText: "RESERVE EXECUTIVE SUITE",
+    ctaText: "DISCUSS YOUR PROJECT",
     ctaHref: siteConfig.calendly,
   },
   {
     tierNumber: "TIER 03",
     title: "VIP TRANSFORMATION",
     price: "Starting at $3,999 USD",
-    subtitle: "END-TO-END BRAND, WEB & LEAD GENERATION SYSTEM",
+    subtitle: "END-TO-END BRAND, WEB & GROWTH PARTNER",
     description:
-      "Maximum support for top-tier executive mentors, keynote speakers, and corporate advisory firms seeking total market domination and hands-on strategic guidance.",
+      "Maximum support for top-tier coaches, masterminds, and keynote speakers seeking total market authority, custom copywriting, and ongoing strategic design support.",
     deliverables: [
-      { text: "Everything in Executive Suite", isHighlight: true },
-      { text: "Strategic Positioning & Copywriting Refinement for Corporate Pitching" },
-      { text: "Custom LinkedIn Profile Authority Suite (Banner, Post & Carousel Templates)" },
+      { text: "Everything in Coaching Suite, plus:", isHighlight: true },
+      { text: "Strategic Messaging & Copywriting Refinement for Sales Funnels" },
+      { text: "Complete LinkedIn Authority Suite (Banner, Post & Carousel Templates)" },
       { text: "Priority 14-Day Rapid Deployment & Direct Slack Access" },
-      { text: "60-Day Post-Launch Conversion Optimization & Advisory" },
-      { text: "Dedicated Design Sprint for Custom Corporate Decks & Lead Assets" },
+      { text: "60-Day Post-Launch Conversion Optimization & A/B Support" },
+      { text: "Dedicated Design Sprint for Mastermind Decks & Sales Collateral" },
     ],
-    ctaText: "DISCUSS VIP PARTNERSHIP",
+    ctaText: "APPLY FOR VIP PARTNER",
     ctaHref: siteConfig.calendly,
   },
 ];
@@ -291,10 +292,21 @@ export function PricingClient() {
 
                 {/* Card Bottom CTA */}
                 <div className="pt-6 border-t border-white/[0.08] mt-4">
-                  <a
-                    href={tier.ctaHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => {
+                      if (typeof window !== "undefined") {
+                        const tierKey = tier.title.includes("ESSENTIALS")
+                          ? "Essentials"
+                          : tier.title.includes("COACHING")
+                          ? "Coaching Suite"
+                          : "VIP";
+                        window.dispatchEvent(
+                          new CustomEvent("open-intake-modal", {
+                            detail: { tier: tierKey },
+                          })
+                        );
+                      }
+                    }}
                     data-cursor-text="BOOK"
                     className={`w-full inline-flex items-center justify-center gap-2 py-4 px-6 rounded-full text-xs sm:text-sm font-semibold tracking-[0.16em] uppercase transition-all duration-300 ${
                       tier.isPopular
@@ -304,7 +316,7 @@ export function PricingClient() {
                   >
                     <span>{tier.ctaText}</span>
                     <ArrowUpRight className="w-4 h-4" />
-                  </a>
+                  </button>
                 </div>
               </div>
             ))}
@@ -431,17 +443,19 @@ export function PricingClient() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href={siteConfig.calendly}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-cursor-text="CALENDLY"
+            <button
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.dispatchEvent(new CustomEvent("open-intake-modal"));
+                }
+              }}
+              data-cursor-text="BOOK"
               className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-rose hover:bg-rose/90 text-white text-xs sm:text-sm font-semibold tracking-[0.16em] uppercase transition-all duration-300 shadow-[0_4px_24px_rgba(224,40,79,0.4)] hover:shadow-[0_6px_32px_rgba(224,40,79,0.55)] active:scale-[0.98]"
             >
               <Calendar className="w-4 h-4" />
               <span>RESERVE DISCOVERY SESSION</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
+            </button>
 
             <a
               href={`mailto:${siteConfig.email}?subject=Inquiry: Partnership Scope & Availability`}
@@ -460,6 +474,7 @@ export function PricingClient() {
       </section>
 
       <Footer />
+      <IntakeModal />
     </main>
   );
 }

@@ -71,7 +71,7 @@ export function AboutSection() {
                   <span className="w-2 h-2 rounded-full bg-rose" />
                   <span className="font-medium tracking-wide">Miskat Hossain</span>
                 </div>
-                <span className="text-cream/60 font-mono text-[11px]">Designer</span>
+                <span className="text-cream/60 font-mono text-[11px]">Brand &amp; Web Strategist</span>
               </div>
             </div>
           </div>
@@ -85,16 +85,13 @@ export function AboutSection() {
             {/* Exactly specified copy */}
             <div className="space-y-6 text-base sm:text-xl font-light text-cream/80 leading-relaxed max-w-2xl mb-8 sm:mb-10">
               <p>
-                I&apos;m a designer focused on brand identity, web design and
-                digital experiences.
+                I specialize in brand strategy and web systems for coaches, consultants,
+                and mentors.
               </p>
               <p>
-                I enjoy taking complicated ideas and turning them into something
-                clear, distinctive and useful.
-              </p>
-              <p className="text-white font-normal">
-                I work with people and businesses who care about how they show up
-                in the world.
+                Whether you&apos;re a business coach, executive mentor, life coach, or career
+                strategist—I help you eliminate outdated branding, clarify your offer, and
+                launch a digital platform that converts casual visitors into committed clients.
               </p>
             </div>
 

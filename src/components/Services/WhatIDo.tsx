@@ -15,35 +15,35 @@ interface Discipline {
 const disciplines: Discipline[] = [
   {
     number: "01",
-    title: "BRAND IDENTITY",
-    tagline: "Distinction begins with clarity of identity and purpose.",
+    title: "BRAND AUTHORITY",
+    tagline: "High-trust positioning that commands premium corporate retainers.",
     items: [
-      "Logo systems & iconography",
-      "Comprehensive visual identity",
-      "Brand guidelines & design systems",
-      "Creative direction & art direction",
+      "Executive positioning & messaging narrative",
+      "High-trust logo system & visual marks",
+      "Comprehensive brand guidelines",
+      "Category-defining authority art direction",
     ],
   },
   {
     number: "02",
-    title: "WEB DESIGN",
-    tagline: "Digital environments engineered to communicate and convert.",
+    title: "CONVERSION WEBSITES",
+    tagline: "Digital platforms engineered to convert visitors into booked discovery calls.",
     items: [
-      "UX structure & user journeys",
-      "Bespoke UI design & typography",
-      "Responsive, high-performance websites",
-      "Conversion-focused landing pages",
+      "High-converting landing pages & multi-page architecture",
+      "Strategic offer storytelling & authority hierarchy",
+      "Seamless intake & booking funnel integrations",
+      "Ultra-fast mobile performance & SEO launch",
     ],
   },
   {
     number: "03",
-    title: "DIGITAL EXPERIENCE",
-    tagline: "Immersive touchpoints that make people remember your brand.",
+    title: "CLIENT ACQUISITION ASSETS",
+    tagline: "Lead-generating collateral that turns social traffic into program members.",
     items: [
-      "Interactive digital experiences",
-      "Campaign visual language",
-      "Social visuals & brand collateral",
-      "Micro-interactions & animation",
+      "High-converting lead magnet & workbook designs",
+      "Complete LinkedIn profile authority templates",
+      "Corporate pitch & mastermind deck layouts",
+      "Post-launch conversion advisory & optimization",
     ],
   },
 ];
@@ -80,6 +80,12 @@ export function WhatIDo() {
     return () => ctx.revert();
   }, []);
 
+  const openIntakeModal = () => {
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("open-intake-modal"));
+    }
+  };
+
   return (
     <section
       ref={containerRef}
@@ -92,15 +98,15 @@ export function WhatIDo() {
           <div>
             <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-[0.24em] uppercase text-rose mb-3">
               <span className="w-8 h-[1px] bg-rose" />
-              <span>CORE DISCIPLINES</span>
+              <span>CONVERSION CAPABILITIES</span>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-light tracking-[-0.03em] text-cream">
-              DISCIPLINES <span className="font-semibold text-white">&amp; CRAFT.</span>
+              BUILT TO <span className="font-semibold text-white">ENROLL CLIENTS.</span>
             </h2>
           </div>
           <p className="max-w-md text-sm sm:text-base text-cream/70 font-light leading-relaxed">
-            Every business has a voice. I translate your core expertise into a visual
-            and digital presence that commands attention.
+            Eliminating outdated branding, clarifying your signature offer, and launching
+            an automated digital platform that turns casual visitors into committed coaching clients.
           </p>
         </div>
 
@@ -109,8 +115,9 @@ export function WhatIDo() {
           {disciplines.map((item) => (
             <div
               key={item.number}
-              className="discipline-card group relative flex flex-col justify-between p-8 sm:p-10 rounded-[28px] border border-white/[0.1] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.22] transition-all duration-500 backdrop-blur-md"
-              data-cursor-text="DISCOVER"
+              onClick={openIntakeModal}
+              className="discipline-card group relative flex flex-col justify-between p-8 sm:p-10 rounded-[28px] border border-white/[0.1] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.22] transition-all duration-500 backdrop-blur-md cursor-pointer"
+              data-cursor-text="EXPLORE"
             >
               {/* Card top row */}
               <div>

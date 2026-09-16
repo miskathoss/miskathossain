@@ -76,26 +76,34 @@ export function IntroStatement() {
           <span>01 / THE THINKING</span>
         </div>
 
-        {/* Large Editorial Statement: GOOD DESIGN ISN'T DECORATION. */}
+        {/* Large Editorial Statement: IDEAL CLIENTS DON'T BUY DESIGN. THEY BUY AUTHORITY. */}
         <h2
           ref={headlineRef}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extralight tracking-[-0.04em] leading-[1.05] text-cream mb-12 sm:mb-16"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extralight tracking-[-0.04em] leading-[1.05] text-cream mb-10 sm:mb-14"
         >
-          <span className="block text-white">GOOD DESIGN</span>
-          <span className="block font-medium text-cream">
-            ISN&apos;T DECORATION.
+          <span className="block text-white">IDEAL CLIENTS</span>
+          <span className="block font-light text-cream/90">
+            DON&apos;T BUY DESIGN.
+          </span>
+          <span className="block font-semibold text-white">
+            THEY BUY <span className="text-rose">AUTHORITY.</span>
           </span>
         </h2>
 
         {/* Supporting Copy */}
         <div
           ref={copyRef}
-          className="max-w-2xl space-y-4 text-lg sm:text-2xl font-light text-cream/75 leading-relaxed tracking-[-0.01em]"
+          className="max-w-3xl space-y-5 text-lg sm:text-2xl font-light text-cream/80 leading-relaxed tracking-[-0.01em]"
         >
-          <p>It&apos;s how people understand an idea.</p>
-          <p>It&apos;s how they feel about a business.</p>
-          <p className="text-white font-normal">
-            And ultimately, it&apos;s what they remember.
+          <p>
+            Your website isn&apos;t just a portfolio; it&apos;s your 24/7 sales engine.
+          </p>
+          <p>
+            When a potential client lands on your site, they decide your value in 5 seconds
+            based on how you present your expertise.
+          </p>
+          <p className="text-sm sm:text-base text-rose font-mono uppercase tracking-[0.16em] pt-4 border-t border-white/[0.08]">
+            High-trust branding removes hesitation and positions your coaching as the obvious choice.
           </p>
         </div>
       </div>

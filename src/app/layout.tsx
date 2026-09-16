@@ -12,17 +12,19 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://miskathossain.net"),
-  title: "Miskat Hossain | Brand & Web Designer",
+  title: "Miskat Hossain | Brand & Web Strategist for Coaches",
   description:
-    "Miskat Hossain is a brand and web designer helping coaches and ambitious businesses build distinctive brands and digital experiences.",
+    "I build high-authority brand systems and conversion websites for coaches and mentors looking to stand out and attract ideal clients.",
   keywords: [
     "Miskat Hossain",
-    "Brand Designer",
-    "Web Designer",
-    "UI/UX Designer",
-    "Creative Director",
-    "Coaching Brands",
-    "Digital Experiences",
+    "Brand Strategist for Coaches",
+    "Web Designer for Coaches",
+    "Executive Coach Website",
+    "Business Coach Branding",
+    "Life Coach Website",
+    "Conversion Websites",
+    "Coaching Funnels",
+    "High-Ticket Coaching Websites",
   ],
   authors: [{ name: "Miskat Hossain", url: "https://miskathossain.net" }],
   creator: "Miskat Hossain",
@@ -33,24 +35,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://miskathossain.net",
-    title: "Miskat Hossain | Brand & Web Designer",
+    title: "Miskat Hossain | Brand & Web Strategist for Coaches",
     description:
-      "Helping coaches and ambitious businesses turn their expertise into distinctive brands and digital experiences.",
+      "I build high-authority brand systems and conversion websites for coaches and mentors looking to stand out and attract ideal clients.",
     siteName: "Miskat Hossain Portfolio",
     images: [
       {
         url: "/assets/images/miskat-portrait.jpg",
         width: 1200,
         height: 630,
-        alt: "Miskat Hossain — Brand & Web Designer",
+        alt: "Miskat Hossain — Brand & Web Strategist for Coaches",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Miskat Hossain | Brand & Web Designer",
+    title: "Miskat Hossain | Brand & Web Strategist for Coaches",
     description:
-      "Helping coaches and ambitious businesses turn their expertise into distinctive brands and digital experiences.",
+      "I build high-authority brand systems and conversion websites for coaches and mentors looking to stand out and attract ideal clients.",
     images: ["/assets/images/miskat-portrait.jpg"],
   },
   robots: {

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/Navigation/Navbar";
 import { Footer } from "@/components/Footer/Footer";
+import { IntakeModal } from "@/components/Common/IntakeModal";
 import { projects } from "@/data/projects";
 import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
@@ -96,6 +97,7 @@ export default function WorkIndexPage() {
       </section>
 
       <Footer />
+      <IntakeModal />
     </main>
   );
 }

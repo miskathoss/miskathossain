@@ -27,37 +27,39 @@ export function FinalCTA() {
         {/* Top small label */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/[0.14] text-[11px] font-semibold tracking-[0.2em] uppercase text-rose mb-6 sm:mb-8 backdrop-blur-md">
           <span className="w-1.5 h-1.5 rounded-full bg-rose" />
-          <span>START A CONVERSATION</span>
+          <span>AVAILABLE FOR SELECTED COACHES &amp; MENTORS</span>
         </div>
 
         {/* Headlines */}
         <p className="text-xl sm:text-2xl font-light text-cream/70 tracking-tight mb-3">
-          HAVE AN IDEA WORTH BUILDING?
+          READY TO COMMAND AUTHORITY IN YOUR NICHE?
         </p>
 
         <h2 className="text-5xl sm:text-7xl md:text-8xl font-extralight tracking-[-0.04em] leading-[1.02] text-cream mb-8 sm:mb-10">
-          LET&apos;S <br />
-          <span className="font-semibold text-white">MAKE IT REAL.</span>
+          LET&apos;S BUILD YOUR <br />
+          <span className="font-semibold text-white">24/7 SALES ENGINE.</span>
         </h2>
 
         {/* Glassmorphic Action Card */}
         <GlassCard className="w-full max-w-xl p-6 sm:p-10 mb-6 sm:mb-8">
           <p className="text-sm sm:text-base text-cream/80 font-light leading-relaxed mb-8 max-w-md mx-auto">
-            Ready to build a distinctive brand and digital experience? Inquire
-            about availability or schedule an introductory creative alignment call.
+            Ready to turn your coaching expertise into a high-converting brand identity
+            and digital platform? Schedule a complimentary strategy alignment call.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href={siteConfig.calendly}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-cursor-text="MEETING"
+            <button
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.dispatchEvent(new CustomEvent("open-intake-modal"));
+                }
+              }}
+              data-cursor-text="BOOK"
               className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-rose hover:bg-rose/90 text-white text-xs sm:text-sm font-semibold tracking-[0.16em] uppercase transition-all duration-300 shadow-[0_4px_24px_rgba(224,40,79,0.4)] hover:shadow-[0_6px_32px_rgba(224,40,79,0.55)] active:scale-[0.98]"
             >
-              <span>BOOK A MEETING</span>
+              <span>BOOK STRATEGY CALL</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
+            </button>
 
             <button
               onClick={copyEmail}
@@ -87,7 +89,7 @@ export function FinalCTA() {
         {/* Availability footnote */}
         <div className="flex items-center gap-2 text-xs font-medium tracking-widest text-cream/50 uppercase">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span>Currently accepting Q3/Q4 commercial partnerships</span>
+          <span>Currently accepting coaching &amp; mentor collaborations</span>
         </div>
       </div>
     </section>

@@ -179,7 +179,7 @@ export function Hero() {
         >
           <div className="px-4 py-2 rounded-full backdrop-blur-xl bg-dark/70 border border-white/[0.14] text-[11px] tracking-[0.18em] uppercase text-cream/90 flex items-center gap-2 shadow-xl">
             <span className="w-2 h-2 rounded-full bg-rose" />
-            <span>Miskat Hossain — Creative Direction</span>
+            <span>Miskat Hossain — Brand &amp; Web Strategy</span>
           </div>
         </div>
       </div>

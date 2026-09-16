@@ -7,11 +7,13 @@ import { Philosophy } from "@/components/Philosophy/Philosophy";
 import { VisualSystemObject } from "@/components/Three/VisualSystemObject";
 import { SelectedWork } from "@/components/SelectedWork/SelectedWork";
 import { Process } from "@/components/Process/Process";
+import { WhoWeHelp } from "@/components/WhoWeHelp/WhoWeHelp";
 import { ServicesOfferings } from "@/components/Services/ServicesOfferings";
 import { AboutSection } from "@/components/About/AboutSection";
 import { Testimonials } from "@/components/Testimonials/Testimonials";
 import { FinalCTA } from "@/components/FinalCTA/FinalCTA";
 import { Footer } from "@/components/Footer/Footer";
+import { IntakeModal } from "@/components/Common/IntakeModal";
 
 export default function Home() {
   return (
@@ -28,7 +30,7 @@ export default function Home() {
       {/* 4. About Miskat with Authentic Photo */}
       <AboutSection />
 
-      {/* 5. What I Do — Disciplines & Craft */}
+      {/* 5. What I Do — Conversion Capabilities */}
       <WhatIDo />
 
       {/* 6. Design Philosophy Progressive Typography */}
@@ -43,17 +45,23 @@ export default function Home() {
       {/* 9. Section 03 / Process — From Idea To Experience */}
       <Process />
 
-      {/* 10. Commercial Services & Signature Brand + Website Tier */}
+      {/* 10. Target Coach Categories — Who We Help */}
+      <WhoWeHelp />
+
+      {/* 11. Commercial Services & Signature Brand + Website Tier */}
       <ServicesOfferings />
 
-      {/* 11. Testimonials & Client Endorsements */}
+      {/* 12. Testimonials & Client Endorsements */}
       <Testimonials />
 
-      {/* 12. Final Cinematic CTA & Glass Inquiry Card */}
+      {/* 13. Final Cinematic CTA & Glass Inquiry Card */}
       <FinalCTA />
 
-      {/* 13. Studio Colophon & Footer */}
+      {/* 14. Studio Colophon & Footer */}
       <Footer />
+
+      {/* Interactive 3-Question Strategy Intake Modal */}
+      <IntakeModal />
     </main>
   );
 }

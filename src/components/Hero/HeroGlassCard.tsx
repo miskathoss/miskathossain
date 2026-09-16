@@ -29,13 +29,13 @@ export const HeroGlassCard = forwardRef<HTMLDivElement, HeroGlassCardProps>(
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-rose" />
               </span>
-              <span>AVAILABLE FOR SELECTED PROJECTS</span>
+              <span>AVAILABLE FOR SELECTED COACHES &amp; MENTORS</span>
             </div>
           </div>
 
           {/* Small Category Label */}
           <div className="text-[11px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-rose mb-2 sm:mb-3">
-            BRAND &amp; WEB DESIGNER
+            BRAND &amp; WEB STRATEGIST FOR COACHES
           </div>
 
           {/* Main Name Heading */}
@@ -44,9 +44,9 @@ export const HeroGlassCard = forwardRef<HTMLDivElement, HeroGlassCardProps>(
           </h1>
 
           {/* Supporting Copy */}
-          <p className="text-sm sm:text-base text-cream/75 leading-relaxed font-normal mb-6 sm:mb-8 max-w-[420px]">
-            I help coaches and ambitious businesses turn their expertise into
-            distinctive brands and digital experiences.
+          <p className="text-sm sm:text-base text-cream/75 leading-relaxed font-normal mb-6 sm:mb-8 max-w-[440px]">
+            I build high-authority brand systems and conversion websites for coaches
+            and mentors looking to stand out and attract ideal clients.
           </p>
 
           {/* Action CTAs */}
@@ -61,14 +61,18 @@ export const HeroGlassCard = forwardRef<HTMLDivElement, HeroGlassCardProps>(
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
 
-            <a
-              href="#contact"
-              onClick={onTalkClick}
-              data-cursor-text="TALK"
+            <button
+              onClick={() => {
+                if (onTalkClick) onTalkClick();
+                if (typeof window !== "undefined") {
+                  window.dispatchEvent(new CustomEvent("open-intake-modal"));
+                }
+              }}
+              data-cursor-text="BOOK"
               className="inline-flex items-center px-5 sm:px-6 py-3 rounded-full text-cream hover:text-white text-xs sm:text-sm font-medium tracking-[0.14em] uppercase border border-white/[0.22] hover:border-white/[0.45] bg-white/[0.04] hover:bg-white/[0.1] transition-all duration-300 backdrop-blur-md active:scale-[0.98]"
             >
-              LET&apos;S TALK
-            </a>
+              BOOK STRATEGY CALL
+            </button>
           </div>
         </div>
       </div>
