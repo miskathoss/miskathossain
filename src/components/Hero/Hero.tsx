@@ -51,8 +51,8 @@ export function Hero() {
 
     // ── Tuning ──────────────────────────────────────────
     // Generous scroll track for cinematic pacing on both mobile and desktop
-    const scrollDistance = isMobile ? "+=2200" : "+=2800";
-    const scrubSpeed = isMobile ? 0.4 : 0.6;
+    const scrollDistance = isMobile ? "+=2600" : "+=3400";
+    const scrubSpeed = isMobile ? 0.35 : 0.6;
 
     // Render loop: draw the current frame at display refresh rate
     const renderLoop = () => {
@@ -79,9 +79,9 @@ export function Hero() {
 
             // Update chapter indicator text bi-directionally
             if (indicatorText) {
-              if (self.progress < 0.26) {
+              if (self.progress < 0.24) {
                 indicatorText.textContent = "01 // OVERVIEW";
-              } else if (self.progress < 0.62) {
+              } else if (self.progress < 0.54) {
                 indicatorText.textContent = "02 // AUTHORITY";
               } else {
                 indicatorText.textContent = "03 // CONVERSION";
@@ -105,27 +105,27 @@ export function Hero() {
         );
       }
 
-      // ── Stage 1: Glass Card smooth exit (0.16 to 0.28) ───────────────
+      // ── Stage 1: Glass Card smooth exit (0.12 to 0.22) ───────────────
       if (glassCard) {
         tl.to(
           glassCard,
           {
             scale: 0.95,
             y: -10,
-            duration: 0.1,
+            duration: 0.08,
             ease: "none",
           },
-          0.14
+          0.1
         );
 
         tl.to(
           glassCard,
           {
             x: isMobile ? 0 : -60,
-            y: isMobile ? 30 : -10,
+            y: isMobile ? 25 : -10,
             opacity: 0,
             scale: 0.9,
-            duration: 0.12,
+            duration: 0.10,
             ease: "power2.inOut",
             onComplete: () => {
               if (glassCard) glassCard.style.pointerEvents = "none";
@@ -134,39 +134,39 @@ export function Hero() {
               if (glassCard) glassCard.style.pointerEvents = "auto";
             },
           },
-          0.2
+          0.14
         );
       }
 
-      // ── Chapter Step HUD Indicator (0.04 to 0.94) ───────────────────
+      // ── Chapter Step HUD Indicator (0.04 to 0.92) ───────────────────
       if (chapterIndicator) {
         tl.fromTo(
           chapterIndicator,
           { opacity: 0, y: -10 },
-          { opacity: 1, y: 0, duration: 0.08, ease: "power2.out" },
+          { opacity: 1, y: 0, duration: 0.06, ease: "power2.out" },
           0.04
         ).to(
           chapterIndicator,
           { opacity: 0, y: -10, duration: 0.06, ease: "power2.in" },
-          0.94
+          0.90
         );
       }
 
-      // ── Stage 2: Ghost Word 1 — AUTHORITY (0.20 to 0.56) ────────────
+      // ── Stage 2: Ghost Word 1 — AUTHORITY (0.18 to 0.50) ────────────
       if (ghost1) {
         tl.fromTo(
           ghost1,
           { opacity: 0, scale: 0.9, xPercent: -6 },
-          { opacity: 0.9, scale: 1, xPercent: 4, duration: 0.15, ease: "power1.out" },
-          0.20
+          { opacity: 0.9, scale: 1, xPercent: 4, duration: 0.12, ease: "power1.out" },
+          0.18
         ).to(
           ghost1,
-          { opacity: 0, scale: 1.06, xPercent: 12, duration: 0.14, ease: "power1.in" },
-          0.48
+          { opacity: 0, scale: 1.06, xPercent: 12, duration: 0.12, ease: "power1.in" },
+          0.44
         );
       }
 
-      // ── Stage 2: Chapter 1 Card — THE AUTHORITY STANDARD (0.26 to 0.62)
+      // ── Stage 2: Chapter 1 Card — THE AUTHORITY STANDARD (0.22 to 0.54)
       if (chapter1) {
         tl.fromTo(
           chapter1,
@@ -175,20 +175,20 @@ export function Hero() {
             opacity: 1,
             y: 0,
             scale: 1,
-            duration: 0.10,
+            duration: 0.08,
             ease: "power2.out",
             onStart: () => {
               if (chapter1) chapter1.style.pointerEvents = "auto";
             },
           },
-          0.26
+          0.22
         ).to(
           chapter1,
           {
             opacity: 0,
             y: -25,
             scale: 0.95,
-            duration: 0.10,
+            duration: 0.08,
             ease: "power2.in",
             onComplete: () => {
               if (chapter1) chapter1.style.pointerEvents = "none";
@@ -197,25 +197,26 @@ export function Hero() {
               if (chapter1) chapter1.style.pointerEvents = "auto";
             },
           },
-          0.56
+          0.48
         );
       }
 
-      // ── Stage 3: Ghost Word 2 — CONVERSION (0.56 to 0.88) ───────────
+      // ── Stage 3: Ghost Word 2 — CONVERSION (0.50 to 0.86) ───────────
       if (ghost2) {
         tl.fromTo(
           ghost2,
           { opacity: 0, scale: 0.9, xPercent: 6 },
-          { opacity: 0.9, scale: 1, xPercent: -4, duration: 0.15, ease: "power1.out" },
-          0.56
+          { opacity: 0.9, scale: 1, xPercent: -4, duration: 0.12, ease: "power1.out" },
+          0.50
         ).to(
           ghost2,
-          { opacity: 0, scale: 1.06, xPercent: -12, duration: 0.14, ease: "power1.in" },
-          0.82
+          { opacity: 0, scale: 1.06, xPercent: -12, duration: 0.12, ease: "power1.in" },
+          0.78
         );
       }
 
-      // ── Stage 3: Chapter 2 Card — THE CONVERSION ENGINE (0.62 to 0.94)
+      // ── Stage 3: Chapter 2 Card — THE CONVERSION ENGINE (0.54 to 0.92)
+      // Generous reading window from 0.60 to 0.86, then cleanly fades out before unpinning
       if (chapter2) {
         tl.fromTo(
           chapter2,
@@ -224,13 +225,13 @@ export function Hero() {
             opacity: 1,
             y: 0,
             scale: 1,
-            duration: 0.10,
+            duration: 0.08,
             ease: "power2.out",
             onStart: () => {
               if (chapter2) chapter2.style.pointerEvents = "auto";
             },
           },
-          0.62
+          0.54
         ).to(
           chapter2,
           {
@@ -246,21 +247,21 @@ export function Hero() {
               if (chapter2) chapter2.style.pointerEvents = "auto";
             },
           },
-          0.90
+          0.84
         );
       }
 
-      // ── Stage 4: Ghost Word 3 — SCALE (0.86 to 0.98) ────────────────
+      // ── Stage 4: Ghost Word 3 — SCALE (0.84 to 0.96) ────────────────
       if (ghost3) {
         tl.fromTo(
           ghost3,
           { opacity: 0, scale: 0.92, xPercent: -4 },
-          { opacity: 0.75, scale: 1, xPercent: 4, duration: 0.08, ease: "power1.out" },
-          0.86
+          { opacity: 0.75, scale: 1, xPercent: 4, duration: 0.06, ease: "power1.out" },
+          0.84
         ).to(
           ghost3,
           { opacity: 0, scale: 1.04, xPercent: 10, duration: 0.06, ease: "power1.in" },
-          0.96
+          0.94
         );
       }
     }, container);
@@ -274,7 +275,7 @@ export function Hero() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full bg-dark h-[260vh] md:h-[350vh]"
+      className="relative w-full bg-dark h-[300vh] md:h-[380vh]"
     >
       {/* Pinned Viewport Container */}
       <div
