@@ -112,39 +112,54 @@ export function WhatIDo() {
         </div>
 
         {/* 3 Major Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {disciplines.map((item) => (
             <div
               key={item.number}
               onClick={openCalendly}
-              className="discipline-card group relative flex flex-col justify-between p-8 sm:p-10 rounded-[28px] border border-white/[0.1] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.22] transition-all duration-500 backdrop-blur-md cursor-pointer"
+              className="discipline-card group relative flex flex-col justify-between h-full p-8 sm:p-10 rounded-[28px] border border-white/[0.1] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.22] transition-all duration-500 backdrop-blur-md cursor-pointer"
               data-cursor-text="EXPLORE"
             >
               {/* Card top row */}
               <div>
-                <div className="flex items-center justify-between text-xs font-semibold tracking-[0.2em] text-rose mb-8">
+                <div className="flex items-center justify-between text-xs font-semibold tracking-[0.2em] text-rose mb-6 sm:mb-8">
                   <span>{item.number}</span>
                   <ArrowUpRight className="w-4 h-4 text-cream/40 transition-transform duration-300 group-hover:text-rose group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-semibold tracking-[-0.02em] text-white mb-4">
-                  {item.title}
+                <h3 className="text-2xl sm:text-3xl font-semibold tracking-[-0.02em] text-white mb-3 sm:mb-4 min-h-[4rem] sm:min-h-[4.5rem] lg:min-h-[5rem] flex items-start leading-[1.15]">
+                  {item.number === "01" ? (
+                    <>
+                      BRAND <br />
+                      AUTHORITY
+                    </>
+                  ) : item.number === "02" ? (
+                    <>
+                      CONVERSION <br />
+                      WEBSITES
+                    </>
+                  ) : (
+                    <>
+                      CLIENT ACQUISITION <br />
+                      ASSETS
+                    </>
+                  )}
                 </h3>
 
-                <p className="text-sm text-cream/65 leading-relaxed mb-8">
+                <p className="text-sm text-cream/65 leading-relaxed mb-6 sm:mb-8 min-h-[2.5rem] sm:min-h-[3rem] flex items-start">
                   {item.tagline}
                 </p>
               </div>
 
               {/* Deliverables list */}
-              <div className="border-t border-white/[0.08] pt-6 space-y-3">
+              <div className="border-t border-white/[0.08] pt-6 space-y-3 sm:space-y-3.5">
                 {item.items.map((subItem) => (
                   <div
                     key={subItem}
-                    className="flex items-center gap-2.5 text-xs sm:text-sm text-cream/80 font-normal group-hover:text-cream transition-colors"
+                    className="flex items-start gap-2.5 text-xs sm:text-sm text-cream/80 font-normal group-hover:text-cream transition-colors min-h-[2rem] sm:min-h-[2.5rem]"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-rose/60 group-hover:bg-rose transition-colors" />
-                    <span>{subItem}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-rose/60 group-hover:bg-rose transition-colors shrink-0 mt-1.5" />
+                    <span className="leading-snug">{subItem}</span>
                   </div>
                 ))}
               </div>
