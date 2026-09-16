@@ -3,13 +3,22 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
 export function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const getHref = (href: string) => {
+    if (pathname && pathname !== "/" && href.startsWith("#")) {
+      return `/${href}`;
+    }
+    return href;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,7 +79,7 @@ export function Navbar() {
             item.isCta ? (
               <a
                 key={item.label}
-                href={item.href}
+                href={getHref(item.href)}
                 data-cursor-text="TALK"
                 className="group relative inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-cream text-xs font-semibold tracking-[0.14em] uppercase overflow-hidden border border-white/[0.18] bg-white/[0.06] hover:bg-rose/90 hover:border-rose transition-all duration-300 backdrop-blur-md shadow-sm"
               >
@@ -80,7 +89,7 @@ export function Navbar() {
             ) : (
               <a
                 key={item.label}
-                href={item.href}
+                href={getHref(item.href)}
                 data-cursor-text="VIEW"
                 className="relative text-cream/75 hover:text-cream transition-colors duration-300 py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-rose hover:after:w-full after:transition-all after:duration-300"
               >
@@ -145,7 +154,7 @@ export function Navbar() {
           {siteConfig.navItems.map((item, idx) => (
             <a
               key={item.label}
-              href={item.href}
+              href={getHref(item.href)}
               onClick={() => setMobileMenuOpen(false)}
               className="text-2xl font-light tracking-wider text-cream hover:text-rose transition-colors flex items-center justify-between border-b border-white/[0.08] pb-4"
               style={{
