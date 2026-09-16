@@ -48,18 +48,16 @@ export function FinalCTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              onClick={() => {
-                if (typeof window !== "undefined") {
-                  window.dispatchEvent(new CustomEvent("open-intake-modal"));
-                }
-              }}
+            <a
+              href={siteConfig.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
               data-cursor-text="BOOK"
               className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-rose hover:bg-rose/90 text-white text-xs sm:text-sm font-semibold tracking-[0.16em] uppercase transition-all duration-300 shadow-[0_4px_24px_rgba(224,40,79,0.4)] hover:shadow-[0_6px_32px_rgba(224,40,79,0.55)] active:scale-[0.98]"
             >
               <span>BOOK STRATEGY CALL</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </button>
+            </a>
 
             <button
               onClick={copyEmail}

@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { ArrowUpRight, Check, Sparkles } from "lucide-react";
+import { siteConfig } from "@/data/site";
 
 interface ServiceTier {
   title: string;
@@ -183,8 +184,10 @@ export function ServicesOfferings() {
 
               {/* Bottom CTA */}
               <div className="pt-6 border-t border-white/[0.08] mt-4">
-                <button
-                  onClick={() => openIntakeModalWithTier(tier.tierKey)}
+                <a
+                  href={siteConfig.calendly}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-cursor-text="START"
                   className={`w-full inline-flex items-center justify-center gap-2 py-4 px-6 rounded-full text-xs sm:text-sm font-semibold tracking-[0.16em] uppercase transition-all duration-300 ${
                     tier.isPopular
@@ -194,7 +197,7 @@ export function ServicesOfferings() {
                 >
                   <span>{tier.ctaText}</span>
                   <ArrowUpRight className="w-4 h-4" />
-                </button>
+                </a>
               </div>
             </div>
           ))}

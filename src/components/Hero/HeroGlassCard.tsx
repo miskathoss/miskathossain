@@ -61,18 +61,16 @@ export const HeroGlassCard = forwardRef<HTMLDivElement, HeroGlassCardProps>(
               <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
 
-            <button
-              onClick={() => {
-                if (onTalkClick) onTalkClick();
-                if (typeof window !== "undefined") {
-                  window.dispatchEvent(new CustomEvent("open-intake-modal"));
-                }
-              }}
+            <a
+              href={siteConfig.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={onTalkClick}
               data-cursor-text="BOOK"
               className="inline-flex items-center justify-center px-4 sm:px-5 lg:px-6 py-2.5 sm:py-3 rounded-full text-cream hover:text-white text-[11px] sm:text-xs lg:text-sm font-medium tracking-[0.1em] sm:tracking-[0.14em] uppercase border border-white/[0.22] hover:border-white/[0.45] bg-white/[0.04] hover:bg-white/[0.1] transition-all duration-300 backdrop-blur-md active:scale-[0.98] whitespace-nowrap shrink-0"
             >
               BOOK STRATEGY CALL
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -77,19 +77,17 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-8 text-xs font-medium tracking-[0.14em] text-cream/70 uppercase">
           {siteConfig.navItems.map((item) =>
             item.isCta ? (
-              <button
+              <a
                 key={item.label}
-                onClick={() => {
-                  if (typeof window !== "undefined") {
-                    window.dispatchEvent(new CustomEvent("open-intake-modal"));
-                  }
-                }}
+                href={siteConfig.calendly}
+                target="_blank"
+                rel="noopener noreferrer"
                 data-cursor-text="BOOK"
                 className="group relative inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-cream text-xs font-semibold tracking-[0.14em] uppercase overflow-hidden border border-white/[0.18] bg-white/[0.06] hover:bg-rose/90 hover:border-rose transition-all duration-300 backdrop-blur-md shadow-sm"
               >
                 <span>{item.label}</span>
                 <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </button>
+              </a>
             ) : (
               <a
                 key={item.label}
@@ -157,14 +155,12 @@ export function Navbar() {
           </div>
           {siteConfig.navItems.map((item, idx) =>
             item.isCta ? (
-              <button
+              <a
                 key={item.label}
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  if (typeof window !== "undefined") {
-                    window.dispatchEvent(new CustomEvent("open-intake-modal"));
-                  }
-                }}
+                href={siteConfig.calendly}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
                 className="text-2xl font-light tracking-wider text-rose hover:text-white transition-colors flex items-center justify-between border-b border-white/[0.08] pb-4 text-left w-full"
                 style={{
                   transitionDelay: `${idx * 40}ms`,
@@ -172,7 +168,7 @@ export function Navbar() {
               >
                 <span>{item.label}</span>
                 <ArrowUpRight className="w-5 h-5 text-rose" />
-              </button>
+              </a>
             ) : (
               <a
                 key={item.label}

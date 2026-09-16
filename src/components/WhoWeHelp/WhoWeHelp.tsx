@@ -11,6 +11,7 @@ import {
   Zap,
   ArrowUpRight,
 } from "lucide-react";
+import { siteConfig } from "@/data/site";
 
 interface CoachNiche {
   category: string;
@@ -176,13 +177,15 @@ export function WhoWeHelp() {
               </p>
             </div>
 
-            <button
-              onClick={openIntakeModal}
+            <a
+              href={siteConfig.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-rose hover:bg-rose/90 text-white text-xs font-semibold tracking-[0.16em] uppercase transition-all shadow-[0_4px_20px_rgba(224,40,79,0.35)]"
             >
               <span>INQUIRE FOR YOUR PRACTICE</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
-            </button>
+            </a>
           </div>
         </div>
       </div>

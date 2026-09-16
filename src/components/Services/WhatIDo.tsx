@@ -4,6 +4,7 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "lucide-react";
+import { siteConfig } from "@/data/site";
 
 interface Discipline {
   number: string;
@@ -80,9 +81,9 @@ export function WhatIDo() {
     return () => ctx.revert();
   }, []);
 
-  const openIntakeModal = () => {
+  const openCalendly = () => {
     if (typeof window !== "undefined") {
-      window.dispatchEvent(new CustomEvent("open-intake-modal"));
+      window.open(siteConfig.calendly, "_blank", "noopener,noreferrer");
     }
   };
 
@@ -115,7 +116,7 @@ export function WhatIDo() {
           {disciplines.map((item) => (
             <div
               key={item.number}
-              onClick={openIntakeModal}
+              onClick={openCalendly}
               className="discipline-card group relative flex flex-col justify-between p-8 sm:p-10 rounded-[28px] border border-white/[0.1] bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/[0.22] transition-all duration-500 backdrop-blur-md cursor-pointer"
               data-cursor-text="EXPLORE"
             >

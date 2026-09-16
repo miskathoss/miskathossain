@@ -292,21 +292,10 @@ export function PricingClient() {
 
                 {/* Card Bottom CTA */}
                 <div className="pt-6 border-t border-white/[0.08] mt-4">
-                  <button
-                    onClick={() => {
-                      if (typeof window !== "undefined") {
-                        const tierKey = tier.title.includes("ESSENTIALS")
-                          ? "Essentials"
-                          : tier.title.includes("COACHING")
-                          ? "Coaching Suite"
-                          : "VIP";
-                        window.dispatchEvent(
-                          new CustomEvent("open-intake-modal", {
-                            detail: { tier: tierKey },
-                          })
-                        );
-                      }
-                    }}
+                  <a
+                    href={siteConfig.calendly}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     data-cursor-text="BOOK"
                     className={`w-full inline-flex items-center justify-center gap-2 py-4 px-6 rounded-full text-xs sm:text-sm font-semibold tracking-[0.16em] uppercase transition-all duration-300 ${
                       tier.isPopular
@@ -316,7 +305,7 @@ export function PricingClient() {
                   >
                     <span>{tier.ctaText}</span>
                     <ArrowUpRight className="w-4 h-4" />
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -443,19 +432,17 @@ export function PricingClient() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              onClick={() => {
-                if (typeof window !== "undefined") {
-                  window.dispatchEvent(new CustomEvent("open-intake-modal"));
-                }
-              }}
+            <a
+              href={siteConfig.calendly}
+              target="_blank"
+              rel="noopener noreferrer"
               data-cursor-text="BOOK"
               className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-rose hover:bg-rose/90 text-white text-xs sm:text-sm font-semibold tracking-[0.16em] uppercase transition-all duration-300 shadow-[0_4px_24px_rgba(224,40,79,0.4)] hover:shadow-[0_6px_32px_rgba(224,40,79,0.55)] active:scale-[0.98]"
             >
               <Calendar className="w-4 h-4" />
               <span>RESERVE DISCOVERY SESSION</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </button>
+            </a>
 
             <a
               href={`mailto:${siteConfig.email}?subject=Inquiry: Partnership Scope & Availability`}
