@@ -332,7 +332,7 @@ export function Hero() {
         </div>
 
         {/* ── Layer 3: Initial Floating Hero Glass Card (Bottom Left) ── */}
-        <div className="relative z-10 w-full h-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 flex flex-col justify-end pb-12 sm:pb-16 lg:pb-20 pointer-events-none">
+        <div className="relative z-10 w-full h-full max-w-7xl mx-auto px-4 sm:px-10 lg:px-12 flex flex-col justify-end pb-12 sm:pb-16 lg:pb-20 pointer-events-none">
           <div className="flex items-end justify-between w-full">
             <div className="w-full max-w-xl">
               <HeroGlassCard ref={glassCardRef} />
@@ -354,7 +354,7 @@ export function Hero() {
         </div>
 
         {/* ── Layer 4: Chapter 1 Card — THE AUTHORITY STANDARD (Right on Desktop, Bottom on Mobile) ── */}
-        <div className="absolute inset-0 z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 pointer-events-none flex items-end sm:items-center justify-end pb-12 sm:pb-0">
+        <div className="absolute inset-0 z-10 max-w-7xl mx-auto px-4 sm:px-10 lg:px-12 pointer-events-none flex items-end sm:items-center justify-end pb-12 sm:pb-0">
           <div
             ref={chapter1Ref}
             className="w-full max-w-[460px] lg:max-w-[500px] opacity-0 pointer-events-none will-change-transform select-none"
@@ -393,7 +393,7 @@ export function Hero() {
         </div>
 
         {/* ── Layer 5: Chapter 2 Card — THE CONVERSION ENGINE (Left on Desktop, Bottom on Mobile) ── */}
-        <div className="absolute inset-0 z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 pointer-events-none flex items-end sm:items-center justify-start pb-12 sm:pb-0">
+        <div className="absolute inset-0 z-10 max-w-7xl mx-auto px-4 sm:px-10 lg:px-12 pointer-events-none flex items-end sm:items-center justify-start pb-12 sm:pb-0">
           <div
             ref={chapter2Ref}
             className="w-full max-w-[460px] lg:max-w-[500px] opacity-0 pointer-events-none will-change-transform select-none"
