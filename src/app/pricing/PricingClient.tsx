@@ -17,11 +17,26 @@ import {
   Calendar,
 } from "lucide-react";
 
+type Currency = "USD" | "EUR" | "GBP";
+
+interface CurrencyOption {
+  code: Currency;
+  label: string;
+  symbol: string;
+  name: string;
+}
+
+const currencies: CurrencyOption[] = [
+  { code: "USD", label: "USD", symbol: "$", name: "US Dollar" },
+  { code: "EUR", label: "EUR", symbol: "€", name: "Euro" },
+  { code: "GBP", label: "GBP", symbol: "£", name: "British Pound" },
+];
+
 interface PricingTier {
   tierNumber: string;
   badge?: string;
   title: string;
-  price: string;
+  prices: Record<Currency, string>;
   subtitle: string;
   description: string;
   isPopular?: boolean;
@@ -37,7 +52,11 @@ const pricingTiers: PricingTier[] = [
   {
     tierNumber: "TIER 01",
     title: "AUTHORITY ESSENTIALS",
-    price: "Starting at $1,099 USD",
+    prices: {
+      USD: "Starting at $1,099 USD",
+      EUR: "Starting at €1,049 EUR",
+      GBP: "Starting at £899 GBP",
+    },
     subtitle: "FOUNDATIONAL BRAND IDENTITY & SINGLE-PAGE WEB SYSTEM",
     description:
       "Designed for emerging coaches who need a sleek, high-trust digital footprint to validate their offer and start booking clients immediately.",
@@ -55,7 +74,11 @@ const pricingTiers: PricingTier[] = [
     tierNumber: "TIER 02",
     badge: "SIGNATURE OFFERING",
     title: "COACHING SUITE",
-    price: "Starting at $1,999 USD",
+    prices: {
+      USD: "Starting at $1,999 USD",
+      EUR: "Starting at €1,899 EUR",
+      GBP: "Starting at £1,599 GBP",
+    },
     subtitle: "COMPLETE BRAND IDENTITY & MULTI-PAGE CONVERSION SYSTEM",
     description:
       "The definitive transformation for established coaches ready to replace an amateur site, elevate their positioning, and consistently attract ideal clients.",
@@ -74,7 +97,11 @@ const pricingTiers: PricingTier[] = [
   {
     tierNumber: "TIER 03",
     title: "VIP TRANSFORMATION",
-    price: "Starting at $3,999 USD",
+    prices: {
+      USD: "Starting at $3,999 USD",
+      EUR: "Starting at €3,799 EUR",
+      GBP: "Starting at £3,199 GBP",
+    },
     subtitle: "END-TO-END BRAND, WEB & GROWTH PARTNER",
     description:
       "Maximum support for top-tier coaches, masterminds, and keynote speakers seeking total market authority, custom copywriting, and ongoing strategic design support.",
@@ -122,9 +149,15 @@ const faqs = [
     answer:
       "Absolutely. All platforms are architected cleanly and modularly. You can seamlessly expand with additional landing pages, client portals, podcast hubs, or bespoke payment gateways as your practice expands.",
   },
+  {
+    question: "Can I pay in EUR or GBP instead of USD?",
+    answer:
+      "Yes. Invoices can be issued in USD ($), EUR (€), or GBP (£) based on your preference. Payments are settled securely via Stripe, Wise, or international wire transfer with zero conversion markups.",
+  },
 ];
 
 export function PricingClient() {
+  const [selectedCurrency, setSelectedCurrency] = useState<Currency>("USD");
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   const toggleFaq = (index: number) => {
@@ -199,6 +232,46 @@ export function PricingClient() {
       {/* Pricing Cards Grid */}
       <section className="relative px-6 sm:px-12 lg:px-24 pb-20 sm:pb-28">
         <div className="max-w-7xl mx-auto">
+          {/* Switchable Currency Selector */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-white/[0.08]">
+            <div className="flex items-center gap-2.5 text-xs sm:text-sm text-cream/70">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="font-mono text-xs uppercase tracking-wider text-cream/50">
+                DISPLAY CURRENCY:
+              </span>
+              <span className="text-white font-medium">
+                {selectedCurrency === "USD" && "US Dollars ($ USD)"}
+                {selectedCurrency === "EUR" && "Euros (€ EUR)"}
+                {selectedCurrency === "GBP" && "British Pounds (£ GBP)"}
+              </span>
+            </div>
+
+            {/* Currency Switcher Buttons */}
+            <div className="inline-flex items-center p-1 rounded-full bg-white/[0.04] border border-white/[0.12] backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+              {currencies.map((curr) => {
+                const isActive = selectedCurrency === curr.code;
+                return (
+                  <button
+                    key={curr.code}
+                    onClick={() => setSelectedCurrency(curr.code)}
+                    type="button"
+                    aria-label={`Switch price to ${curr.name} (${curr.code})`}
+                    className={`relative px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all duration-300 flex items-center gap-1.5 ${
+                      isActive
+                        ? "bg-rose text-white shadow-[0_2px_14px_rgba(224,40,79,0.5)] scale-[1.02]"
+                        : "text-cream/60 hover:text-white hover:bg-white/[0.04]"
+                    }`}
+                  >
+                    <span className={isActive ? "text-white" : "text-rose font-bold"}>
+                      {curr.symbol}
+                    </span>
+                    <span>{curr.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-8 items-stretch">
             {pricingTiers.map((tier) => (
               <div
@@ -240,11 +313,37 @@ export function PricingClient() {
 
                   {/* Price Anchor */}
                   <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.08] mb-6">
-                    <span className="text-xs font-mono uppercase tracking-wider text-cream/50 block mb-1">
-                      INVESTMENT ANCHOR
-                    </span>
-                    <div className="text-2xl sm:text-3xl font-light tracking-tight text-white">
-                      {tier.price}
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-xs font-mono uppercase tracking-wider text-cream/50">
+                        INVESTMENT ANCHOR
+                      </span>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-rose/90 px-2.5 py-0.5 rounded-full bg-rose/10 border border-rose/20 font-semibold">
+                        {selectedCurrency}
+                      </span>
+                    </div>
+                    <div className="text-2xl sm:text-3xl font-light tracking-tight text-white transition-all duration-200">
+                      {tier.prices[selectedCurrency]}
+                    </div>
+                    {/* Cross-Currency Equivalents */}
+                    <div className="mt-2.5 pt-2 border-t border-white/[0.06] flex items-center justify-between text-[11px] font-mono text-cream/45">
+                      <span className="uppercase text-cream/40">Also:</span>
+                      <span className="text-right">
+                        {selectedCurrency === "USD" && (
+                          <>
+                            {tier.prices.EUR.replace("Starting at ", "")} &bull; {tier.prices.GBP.replace("Starting at ", "")}
+                          </>
+                        )}
+                        {selectedCurrency === "EUR" && (
+                          <>
+                            {tier.prices.USD.replace("Starting at ", "")} &bull; {tier.prices.GBP.replace("Starting at ", "")}
+                          </>
+                        )}
+                        {selectedCurrency === "GBP" && (
+                          <>
+                            {tier.prices.USD.replace("Starting at ", "")} &bull; {tier.prices.EUR.replace("Starting at ", "")}
+                          </>
+                        )}
+                      </span>
                     </div>
                   </div>
 
