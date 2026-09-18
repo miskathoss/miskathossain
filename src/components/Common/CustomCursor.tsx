@@ -85,11 +85,9 @@ export function CustomCursor() {
         }}
       >
         <div
-          className={`rounded-full bg-rose transition-all duration-200 ${
-            cursorText
+          className={`rounded-full transition-all duration-200 ${
+            cursorText || isPointer
               ? "w-0 h-0 opacity-0"
-              : isPointer
-              ? "w-2.5 h-2.5 bg-rose opacity-100"
               : "w-1.5 h-1.5 bg-cream opacity-80"
           }`}
         />
@@ -103,12 +101,12 @@ export function CustomCursor() {
         }}
       >
         <div
-          className={`flex items-center justify-center rounded-full border border-white/20 transition-all duration-300 backdrop-blur-[2px] ${
+          className={`flex items-center justify-center rounded-full transition-all duration-200 ${
             cursorText
-              ? "px-3.5 py-1.5 bg-dark/80 border-rose/50 text-[10px] tracking-widest uppercase font-medium text-cream"
+              ? "px-3.5 py-1.5 bg-dark/95 border border-rose/50 text-[10px] tracking-widest uppercase font-medium text-cream shadow-lg backdrop-blur-sm"
               : isPointer
-              ? "w-10 h-10 bg-white/[0.08] border-rose/60 scale-110"
-              : "w-7 h-7 bg-white/[0.03] border-white/15"
+              ? "w-9 h-9 border border-rose/60 bg-transparent scale-105"
+              : "w-7 h-7 border border-white/20 bg-transparent"
           }`}
         >
           {cursorText && <span>{cursorText}</span>}

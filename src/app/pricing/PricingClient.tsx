@@ -259,7 +259,7 @@ export function PricingClient() {
                     className={`relative px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all duration-300 flex items-center gap-1.5 ${
                       isActive
                         ? "bg-rose text-white shadow-[0_2px_14px_rgba(224,40,79,0.5)] scale-[1.02]"
-                        : "text-cream/60 hover:text-white hover:bg-white/[0.04]"
+                        : "text-cream/75 hover:text-white hover:bg-white/[0.08] active:scale-95"
                     }`}
                   >
                     <span className={isActive ? "text-white" : "text-rose font-bold"}>
