@@ -324,27 +324,6 @@ export function PricingClient() {
                     <div className="text-2xl sm:text-3xl font-light tracking-tight text-white transition-all duration-200">
                       {tier.prices[selectedCurrency]}
                     </div>
-                    {/* Cross-Currency Equivalents */}
-                    <div className="mt-2.5 pt-2 border-t border-white/[0.06] flex items-center justify-between text-[11px] font-mono text-cream/45">
-                      <span className="uppercase text-cream/40">Also:</span>
-                      <span className="text-right">
-                        {selectedCurrency === "USD" && (
-                          <>
-                            {tier.prices.EUR.replace("Starting at ", "")} &bull; {tier.prices.GBP.replace("Starting at ", "")}
-                          </>
-                        )}
-                        {selectedCurrency === "EUR" && (
-                          <>
-                            {tier.prices.USD.replace("Starting at ", "")} &bull; {tier.prices.GBP.replace("Starting at ", "")}
-                          </>
-                        )}
-                        {selectedCurrency === "GBP" && (
-                          <>
-                            {tier.prices.USD.replace("Starting at ", "")} &bull; {tier.prices.EUR.replace("Starting at ", "")}
-                          </>
-                        )}
-                      </span>
-                    </div>
                   </div>
 
                   {/* Description */}
