@@ -152,7 +152,7 @@ const faqs = [
   {
     question: "Can I pay in EUR or GBP instead of USD?",
     answer:
-      "Yes. Invoices can be issued in USD ($), EUR (€), or GBP (£) based on your preference. Payments are settled securely via Stripe, Wise, or international wire transfer with zero conversion markups.",
+      "Yes. Invoices can be issued in USD ($), EUR (€), or GBP (£) based on your preference. Payments are settled securely via Wise or direct international wire transfer with zero conversion markups.",
   },
 ];
 
