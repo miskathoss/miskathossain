@@ -42,10 +42,6 @@ export function Footer() {
                 <span className="text-rose">Visual Thinker</span>
               </div>
             </div>
-
-            <div className="text-xs text-cream/40 mt-8 sm:mt-12 font-mono">
-              {siteConfig.location}
-            </div>
           </div>
 
           {/* Col 2: Navigation shortcuts */}
