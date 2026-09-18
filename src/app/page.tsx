@@ -45,7 +45,7 @@ export default function Home() {
       {/* 9. Section 03 / Process — From Idea To Experience */}
       <Process />
 
-      {/* 10. Target Coach Categories — Who We Help */}
+      {/* 10. Target Coach Categories — Who I Help */}
       <WhoWeHelp />
 
       {/* 11. Commercial Services & Signature Brand + Website Tier */}

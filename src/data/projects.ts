@@ -45,7 +45,7 @@ export const projects: Project[] = [
       challenge:
         "Senior corporate learning executives needed clear proof of institutional capability and measurable business ROI. Carolyn Greiner brings over 15 years of elite expertise designing workforce learning frameworks, but her previous presence lacked the executive gravitas needed to command multi-stage enterprise advisory contracts.",
       thinking:
-        "We positioned Carolyn as an indispensable strategic partner aligned directly to high-level organizational goals. The digital experience was architected around four core pillars: 15+ Years in L&D, Strategic Partner Alignment, Measurable Impact, and End-to-End Implementation.",
+        "I positioned Carolyn as an indispensable strategic partner aligned directly to high-level organizational goals. The digital experience was architected around four core pillars: 15+ Years in L&D, Strategic Partner Alignment, Measurable Impact, and End-to-End Implementation.",
       direction:
         "Deep obsidian carbon canvas contrasted with warm executive amber-gold accents and clean editorial typography, projecting executive authority, intellectual warmth, and pedagogical precision.",
       identityDetails: [
@@ -229,7 +229,7 @@ export const projects: Project[] = [
       challenge:
         "Artificial intelligence platforms frequently suffer from cold, generic tech templates full of meaningless particle animations. Semla AI needed a brand that felt sophisticated, intelligent, and commercially actionable for enterprise executives seeking concrete data transformation.",
       thinking:
-        "We synthesized futuristic precision with approachable human interaction. The narrative leads with 'Elevate Your Data', framing complex machine learning algorithms into clear commercial outcomes: AI-powered tailoring, automated design generation, and assisted measurement.",
+        "I synthesized futuristic precision with approachable human interaction. The narrative leads with 'Elevate Your Data', framing complex machine learning algorithms into clear commercial outcomes: AI-powered tailoring, automated design generation, and assisted measurement.",
       direction:
         "Midnight indigo canvas (#0E1326) paired with electric sky blue (#4C82FB), dual Latin-Arabic wordmark typography, and sleek modern isometric illustrations.",
       identityDetails: [

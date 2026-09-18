@@ -94,7 +94,7 @@ export function WhoWeHelp() {
   return (
     <section
       ref={containerRef}
-      id="who-we-help"
+      id="who-i-help"
       className="relative w-full bg-dark text-cream py-16 sm:py-24 px-6 sm:px-12 lg:px-24 border-t border-white/[0.06] overflow-hidden"
     >
       {/* Background ambient lighting */}
@@ -106,7 +106,7 @@ export function WhoWeHelp() {
           <div>
             <div className="flex items-center gap-3 text-xs sm:text-sm font-semibold tracking-[0.24em] uppercase text-rose mb-3">
               <span className="w-8 h-[1px] bg-rose" />
-              <span>WHO WE HELP</span>
+              <span>WHO I HELP</span>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-light tracking-[-0.03em] text-cream leading-[1.08]">
               TAILORED FOR <br />
@@ -115,7 +115,7 @@ export function WhoWeHelp() {
           </div>
           <p className="max-w-md text-sm sm:text-base text-cream/70 font-light leading-relaxed">
             Whether you work with enterprise executives, private 1-on-1 clients, or group
-            cohorts—we build platforms calibrated to how your dream clients make buying decisions.
+            cohorts—I build platforms calibrated to how your dream clients make buying decisions.
           </p>
         </div>
 
@@ -173,7 +173,7 @@ export function WhoWeHelp() {
                 Consultants &amp; Advisory Firms
               </h3>
               <p className="text-sm text-cream/75 leading-relaxed font-light mb-6">
-                We also engineer high-authority digital platforms for keynote speakers, corporate advisors, and boutique consulting practices.
+                I also engineer high-authority digital platforms for keynote speakers, corporate advisors, and boutique consulting practices.
               </p>
             </div>
 

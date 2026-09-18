@@ -105,7 +105,7 @@ const faqs = [
   {
     question: "What if I already have a logo or existing brand guidelines?",
     answer:
-      "We can customize your scope accordingly. If your foundational brand identity is already corporate-ready, we can redirect strategic hours into deeper bespoke web interactions, corporate presentation decks, or higher-converting lead generation funnels.",
+      "I can customize your scope accordingly. If your foundational brand identity is already corporate-ready, I can redirect strategic hours into deeper bespoke web interactions, corporate presentation decks, or higher-converting lead generation funnels.",
   },
   {
     question: "Who owns the code, design files, and intellectual property?",
