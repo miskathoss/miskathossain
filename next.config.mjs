@@ -27,6 +27,20 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/INVESTMENT",
+        destination: "/investment",
+        permanent: true,
+      },
+      {
+        source: "/Investment",
+        destination: "/investment",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
