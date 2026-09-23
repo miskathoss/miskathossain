@@ -54,7 +54,7 @@ export function Hero() {
     // ── Tuning ──────────────────────────────────────────
     // Generous scroll track for cinematic pacing on both mobile and desktop
     const scrollDistance = isMobile ? "+=2600" : "+=3400";
-    const scrubSpeed = isMobile ? 0.35 : 0.6;
+    const scrubSpeed = isMobile ? 0.2 : 0.25;
 
     // Render loop: draw the current frame at display refresh rate
     const renderLoop = () => {
@@ -76,16 +76,16 @@ export function Hero() {
           scrub: scrubSpeed,
           anticipatePin: 1,
           onUpdate: (self) => {
-            // Map the active scrub range across 0.0 to 0.82 so all 240 frames play
-            // before the scene finishes its blur & fade into dark
-            const activeProgress = Math.min(1, self.progress / 0.82);
+            // 3D frame sequence plays fully across 0.0 to 0.58 so all 240 frames
+            // are experienced before Card 3 and the 3D model blur out
+            const activeProgress = Math.min(1, self.progress / 0.58);
             currentFrameRef.current = activeProgress * 239;
 
             // Update chapter indicator text bi-directionally
             if (indicatorText) {
-              if (self.progress < 0.20) {
+              if (self.progress < 0.16) {
                 indicatorText.textContent = "01 // OVERVIEW";
-              } else if (self.progress < 0.46) {
+              } else if (self.progress < 0.36) {
                 indicatorText.textContent = "02 // AUTHORITY";
               } else {
                 indicatorText.textContent = "03 // CONVERSION";
@@ -95,31 +95,31 @@ export function Hero() {
         },
       });
 
-      // ── Stage 1: Scroll cue fades out early (0 to 8%) ────────────────
+      // ── Stage 1: Scroll cue fades out early (0 to 6%) ────────────────
       if (scrollIndicator) {
         tl.to(
           scrollIndicator,
           {
             opacity: 0,
             y: 15,
-            duration: 0.08,
+            duration: 0.06,
             ease: "power2.out",
           },
           0
         );
       }
 
-      // ── Stage 1: Glass Card smooth exit (0.10 to 0.20) ───────────────
+      // ── Stage 1: Glass Card smooth exit (0.08 to 0.16) ───────────────
       if (glassCard) {
         tl.to(
           glassCard,
           {
             scale: 0.95,
             y: -10,
-            duration: 0.06,
+            duration: 0.05,
             ease: "none",
           },
-          0.10
+          0.08
         );
 
         tl.to(
@@ -129,7 +129,7 @@ export function Hero() {
             y: isMobile ? 25 : -10,
             opacity: 0,
             scale: 0.9,
-            duration: 0.08,
+            duration: 0.07,
             ease: "power2.inOut",
             onComplete: () => {
               if (glassCard) glassCard.style.pointerEvents = "none";
@@ -138,39 +138,39 @@ export function Hero() {
               if (glassCard) glassCard.style.pointerEvents = "auto";
             },
           },
-          0.14
+          0.10
         );
       }
 
-      // ── Chapter Step HUD Indicator (0.04 to 0.72) ───────────────────
+      // ── Chapter Step HUD Indicator (0.04 to 0.55) ───────────────────
       if (chapterIndicator) {
         tl.fromTo(
           chapterIndicator,
           { opacity: 0, y: -10 },
-          { opacity: 1, y: 0, duration: 0.06, ease: "power2.out" },
+          { opacity: 1, y: 0, duration: 0.05, ease: "power2.out" },
           0.04
         ).to(
           chapterIndicator,
           { opacity: 0, y: -10, duration: 0.05, ease: "power2.in" },
-          0.68
+          0.50
         );
       }
 
-      // ── Stage 2: Ghost Word 1 — AUTHORITY (0.18 to 0.44) ────────────
+      // ── Stage 2: Ghost Word 1 — AUTHORITY (0.14 to 0.34) ────────────
       if (ghost1) {
         tl.fromTo(
           ghost1,
           { opacity: 0, scale: 0.9, xPercent: -6 },
-          { opacity: 0.9, scale: 1, xPercent: 4, duration: 0.12, ease: "power1.out" },
-          0.18
+          { opacity: 0.9, scale: 1, xPercent: 4, duration: 0.08, ease: "power1.out" },
+          0.14
         ).to(
           ghost1,
-          { opacity: 0, scale: 1.06, xPercent: 12, duration: 0.10, ease: "power1.in" },
-          0.38
+          { opacity: 0, scale: 1.06, xPercent: 12, duration: 0.08, ease: "power1.in" },
+          0.26
         );
       }
 
-      // ── Stage 2: Chapter 1 Card — THE AUTHORITY STANDARD (0.20 to 0.44)
+      // ── Stage 2: Chapter 1 Card — THE AUTHORITY STANDARD (0.16 to 0.36)
       if (chapter1) {
         tl.fromTo(
           chapter1,
@@ -185,7 +185,7 @@ export function Hero() {
               if (chapter1) chapter1.style.pointerEvents = "auto";
             },
           },
-          0.20
+          0.16
         ).to(
           chapter1,
           {
@@ -201,26 +201,26 @@ export function Hero() {
               if (chapter1) chapter1.style.pointerEvents = "auto";
             },
           },
-          0.40
+          0.28
         );
       }
 
-      // ── Stage 3: Ghost Word 2 — CONVERSION (0.46 to 0.72) ───────────
+      // ── Stage 3: Ghost Word 2 — CONVERSION (0.34 to 0.56) ───────────
       if (ghost2) {
         tl.fromTo(
           ghost2,
           { opacity: 0, scale: 0.9, xPercent: 6, filter: "blur(0px)" },
-          { opacity: 0.9, scale: 1, xPercent: -4, duration: 0.10, ease: "power1.out" },
-          0.46
+          { opacity: 0.9, scale: 1, xPercent: -4, duration: 0.08, ease: "power1.out" },
+          0.34
         ).to(
           ghost2,
-          { opacity: 0, filter: "blur(12px)", scale: 1.06, xPercent: -12, duration: 0.08, ease: "power1.in" },
-          0.66
+          { opacity: 0, filter: "blur(24px)", scale: 1.06, xPercent: -12, duration: 0.08, ease: "power1.in" },
+          0.48
         );
       }
 
-      // ── Stage 3: Chapter 2 Card — THE CONVERSION ENGINE (0.48 to 0.74)
-      // Card 3 arrives, holds for comfortable reading, then fully blurs & dissolves
+      // ── Stage 3: Chapter 2 Card — 3RD CARD (THE CONVERSION ENGINE) ────
+      // Enters at 0.36, holds for reading through 0.50, then FULLY BLURS OUT by 0.58
       if (chapter2) {
         tl.fromTo(
           chapter2,
@@ -236,14 +236,14 @@ export function Hero() {
               if (chapter2) chapter2.style.pointerEvents = "auto";
             },
           },
-          0.48
+          0.36
         ).to(
           chapter2,
           {
             opacity: 0,
             y: -25,
-            scale: 0.94,
-            filter: "blur(16px)",
+            scale: 0.88,
+            filter: "blur(36px)",
             duration: 0.08,
             ease: "power2.in",
             onComplete: () => {
@@ -253,26 +253,24 @@ export function Hero() {
               if (chapter2) chapter2.style.pointerEvents = "auto";
             },
           },
-          0.66
+          0.50
         );
       }
 
-      // ── Stage 4: 3D Scene Blur & Dissolve to Pure Dark (0.72 to 0.84) ──
+      // ── Stage 4: 3D Scene Blur & Dissolve to Pure Dark (0.54 to 0.66) ──
       // The entire 3D model and background heavily blurs and fades into dark
-      // By 0.84, Stage 3 is 100% fully blurred and dissolved into pure dark
-      // A generous 16% dark cushion (0.84 to 1.00) ensures Section 2 only opens
-      // AFTER the 3D hero has fully blurred and vanished
+      // By 0.66, Stage 3 and 3rd card are 100% FULLY BLURRED and dissolved
       if (scrubberContainer) {
         tl.to(
           scrubberContainer,
           {
-            filter: "blur(28px)",
+            filter: "blur(36px)",
             opacity: 0,
             scale: 1.05,
             duration: 0.12,
             ease: "power2.inOut",
           },
-          0.72
+          0.54
         );
       }
 
@@ -284,9 +282,14 @@ export function Hero() {
             duration: 0.12,
             ease: "power2.inOut",
           },
-          0.72
+          0.54
         );
       }
+
+      // ── Stage 5: Massive Deep Dark Buffer (0.66 to 1.00) ────────────
+      // Hold pure dark buffer for the remaining 34% of scroll distance (~1,150px)
+      // Guarantees Section 2 opens ONLY after 3rd card is 100% fully blurred and dark
+      tl.to({}, { duration: 0.34 }, 0.66);
     }, container);
 
     return () => {
@@ -382,9 +385,9 @@ export function Hero() {
         <div className="absolute inset-0 z-10 max-w-7xl mx-auto px-4 sm:px-10 lg:px-12 pointer-events-none flex items-end sm:items-center justify-end pb-12 sm:pb-0">
           <div
             ref={chapter1Ref}
-            className="w-full max-w-[460px] lg:max-w-[500px] opacity-0 pointer-events-none will-change-transform select-none"
+            className="w-full max-w-[460px] lg:max-w-[500px] opacity-0 pointer-events-none will-change-[transform,opacity,filter] select-none"
           >
-            <div className="relative backdrop-blur-2xl bg-white/[0.08] border border-white/[0.16] rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 lg:p-9 shadow-[0_20px_50px_rgba(0,0,0,0.55)] overflow-hidden transition-all duration-300 before:absolute before:inset-0 before:pointer-events-none before:rounded-[inherit] before:border before:border-white/[0.12] before:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.22)] pointer-events-auto">
+            <div className="relative backdrop-blur-2xl bg-white/[0.08] border border-white/[0.16] rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 lg:p-9 shadow-[0_20px_50px_rgba(0,0,0,0.55)] overflow-hidden before:absolute before:inset-0 before:pointer-events-none before:rounded-[inherit] before:border before:border-white/[0.12] before:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.22)] pointer-events-auto">
               <div className="absolute -top-20 -left-20 w-48 h-48 bg-white/[0.05] rounded-full blur-3xl pointer-events-none" />
 
               <div className="flex items-center gap-2 mb-3 sm:mb-4">
@@ -423,7 +426,7 @@ export function Hero() {
             ref={chapter2Ref}
             className="w-full max-w-[460px] lg:max-w-[500px] opacity-0 pointer-events-none will-change-[transform,opacity,filter] select-none"
           >
-            <div className="relative backdrop-blur-2xl bg-white/[0.08] border border-white/[0.16] rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 lg:p-9 shadow-[0_20px_50px_rgba(0,0,0,0.55)] overflow-hidden transition-all duration-300 before:absolute before:inset-0 before:pointer-events-none before:rounded-[inherit] before:border before:border-white/[0.12] before:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.22)] pointer-events-auto">
+            <div className="relative backdrop-blur-2xl bg-white/[0.08] border border-white/[0.16] rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 lg:p-9 shadow-[0_20px_50px_rgba(0,0,0,0.55)] overflow-hidden before:absolute before:inset-0 before:pointer-events-none before:rounded-[inherit] before:border before:border-white/[0.12] before:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.22)] pointer-events-auto">
               <div className="absolute -top-20 -right-20 w-48 h-48 bg-white/[0.05] rounded-full blur-3xl pointer-events-none" />
 
               <div className="flex items-center gap-2 mb-3 sm:mb-4">
