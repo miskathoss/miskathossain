@@ -231,18 +231,18 @@ export default function AaronDemoClient() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Core Value Proposition */}
           <div className="lg:col-span-7 flex flex-col items-start">
-            {/* Live Availability Pill */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-amber-400/30 text-amber-300 text-[11px] font-medium tracking-[0.16em] uppercase mb-6 backdrop-blur-md">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Accepting New Clients Worldwide • Zoom & FaceTime</span>
+            {/* Category / Eyebrow Badge */}
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-amber-400/[0.06] border border-amber-400/30 text-amber-200 text-[11px] sm:text-xs font-medium tracking-[0.16em] uppercase mb-6 backdrop-blur-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              <span>Mindset | Spirituality | Physical Resilience</span>
             </div>
 
             {/* Editorial Headline */}
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-normal tracking-tight text-white leading-[1.08] mb-6">
-              Align Your Spirit.
+              Master Your Mind
               <br />
               <span className="italic font-light bg-gradient-to-r from-amber-200 via-amber-300 to-amber-100 bg-clip-text text-transparent">
-                Elevate Your Whole Life.
+                Master Your Life.
               </span>
             </h1>
 
