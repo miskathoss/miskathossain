@@ -19,6 +19,7 @@ import {
   Award,
   CheckCircle2,
   ArrowRight,
+  ArrowUpRight,
   ExternalLink,
   ChevronDown,
   ChevronUp,
@@ -237,7 +238,7 @@ export default function TamikaClient() {
             </span>
             <span className="hidden sm:inline text-[#A8A297]">• Integrity Partners | Cleveland, OH</span>
           </div>
-          <div className="flex items-center gap-4 text-xs">
+          <div className="flex items-center gap-3 text-xs">
             <a
               href="tel:2165843653"
               className="text-[#DFBA79] hover:text-white font-medium inline-flex items-center gap-1.5 transition-colors"
@@ -245,12 +246,15 @@ export default function TamikaClient() {
               <Phone className="w-3.5 h-3.5" /> (216) 584-3653
             </a>
             <span className="text-white/20">|</span>
-            <a
-              href="mailto:tamika@tamikashanea.com"
-              className="text-[#DFBA79] hover:text-white font-medium inline-flex items-center gap-1.5 transition-colors"
+            <Link
+              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] text-[#DFBA79] hover:text-white text-[11px] font-medium border border-[#C9A96E]/30 transition-all"
             >
-              <Mail className="w-3.5 h-3.5" /> tamika@tamikashanea.com
-            </a>
+              <span>Designed by Miskat</span>
+              <ArrowUpRight className="w-3 h-3 text-[#DFBA79]" />
+            </Link>
           </div>
         </div>
       </div>
@@ -259,21 +263,16 @@ export default function TamikaClient() {
       {/* 2. HEADER / NAVBAR STRIP (Wix Header Container) */}
       {/* ========================================================================= */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#0E0D10]/95 border-b border-white/[0.08] transition-all">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
           {/* Logo & Identity */}
-          <Link href="/tamika" className="group flex items-center gap-3.5">
+          <Link href="/tamika" className="group flex items-center gap-3.5 shrink-0">
             <div className="w-11 h-11 rounded-full border border-[#C9A96E]/40 bg-gradient-to-br from-[#2D261C] to-[#12100E] flex items-center justify-center text-[#DFBA79] font-serif font-bold text-lg shadow-inner group-hover:border-[#DFBA79] transition-all">
               TS
             </div>
             <div>
-              <div className="flex items-baseline gap-1.5">
-                <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-[#DFBA79] transition-colors">
-                  Tamika Shanea Robinson
-                </span>
-                <span className="text-[11px] font-semibold px-1.5 py-0.5 rounded bg-[#C9A96E]/20 text-[#DFBA79] border border-[#C9A96E]/30">
-                  MBA
-                </span>
-              </div>
+              <span className="block font-serif text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-[#DFBA79] transition-colors whitespace-nowrap">
+                Tamika Shanea Robinson
+              </span>
               <span className="block text-[11px] tracking-widest uppercase text-[#9C968B] font-medium">
                 Realtor® • Keller Williams Living
               </span>
@@ -281,18 +280,15 @@ export default function TamikaClient() {
           </Link>
 
           {/* Wix Menu Items */}
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-[#C4BFB5]">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-7 text-[13px] xl:text-sm font-medium text-[#C4BFB5] whitespace-nowrap">
             <a href="#services" className="hover:text-[#DFBA79] transition-colors">
               Buying & Selling
             </a>
             <a href="#properties" className="hover:text-[#DFBA79] transition-colors">
               Properties
             </a>
-            <a href="#pass-coaching" className="hover:text-[#DFBA79] transition-colors flex items-center gap-1.5">
-              <span>PASS Exam Coaching</span>
-              <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-[#C9A96E]/20 text-[#DFBA79]">
-                Prep
-              </span>
+            <a href="#pass-coaching" className="hover:text-[#DFBA79] transition-colors">
+              PASS Exam Coaching
             </a>
             <a href="#about" className="hover:text-[#DFBA79] transition-colors">
               About Tamika
@@ -305,14 +301,24 @@ export default function TamikaClient() {
             </a>
           </nav>
 
-          {/* Header Action Button (Wix Bookings Button) */}
-          <div className="flex items-center gap-3">
+          {/* Header Action Buttons (Miskat Website Button + Book Consultation) */}
+          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
+            <Link
+              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold text-[#DFBA79] bg-[#C9A96E]/10 hover:bg-[#C9A96E]/20 border border-[#C9A96E]/30 hover:border-[#DFBA79] transition-all"
+            >
+              <span>Miskat's Site</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-[#DFBA79]" />
+            </Link>
+
             <button
               onClick={() => {
                 setConsultType("buy");
                 setIsConsultModalOpen(true);
               }}
-              className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wide text-[#0A0A0C] bg-gradient-to-r from-[#DFBA79] via-[#C9A96E] to-[#B38F52] hover:brightness-110 shadow-lg shadow-[#C9A96E]/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center justify-center gap-2 px-3.5 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wide text-[#0A0A0C] bg-gradient-to-r from-[#DFBA79] via-[#C9A96E] to-[#B38F52] hover:brightness-110 shadow-lg shadow-[#C9A96E]/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <Calendar className="w-4 h-4" />
               <span>Book Consultation</span>
@@ -490,7 +496,7 @@ export default function TamikaClient() {
                 <div className="relative rounded-3xl overflow-hidden border-2 border-[#C9A96E]/40 bg-[#1A1815] shadow-2xl p-2.5">
                   <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden">
                     <Image
-                      src="/assets/tamika/tamika-portrait-clean.jpg"
+                      src="/assets/tamika/tamika-real-portrait.jpg"
                       alt="Tamika Shanea Robinson, MBA - Luxury Cleveland Realtor"
                       fill
                       className="object-cover object-top"
@@ -1053,7 +1059,7 @@ export default function TamikaClient() {
               <div className="relative rounded-3xl overflow-hidden border-2 border-[#C9A96E]/30 bg-[#161411] p-2.5 shadow-2xl">
                 <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
                   <Image
-                    src="/assets/tamika/tamika-portrait-clean.jpg"
+                    src="/assets/tamika/tamika-real-portrait.jpg"
                     alt="Tamika Shanea Robinson - The Motivating Mompreneur"
                     fill
                     className="object-cover object-top"

@@ -11,10 +11,10 @@ export const metadata: Metadata = {
       "A high-converting, luxury real estate digital experience and brand system crafted for Tamika Shanea Robinson, MBA. Designed by Miskat Hossain.",
     images: [
       {
-        url: "/assets/tamika/tamika-hero-concept.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Tamika Shanea Robinson, MBA - Luxury Realtor Concept",
+        url: "/assets/tamika/tamika-real-portrait.jpg",
+        width: 1076,
+        height: 1614,
+        alt: "Tamika Shanea Robinson, MBA - Keller Williams Living Realtor",
       },
     ],
   },
