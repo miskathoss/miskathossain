@@ -122,7 +122,7 @@ export default function TamikaClient() {
       price: "$549,000",
       specs: "5 Beds • 4 Baths • 3,180 Sq Ft",
       tag: "Under Contract in 6 Days",
-      image: "/assets/tamika/cleveland-luxury-home.jpg",
+      image: "/assets/tamika/shaker-heights-colonial.jpg",
       status: "Pending Sale",
       description:
         "Classic Cleveland charm paired with contemporary energy-efficient upgrades. Finished lower level suite, sunroom garden retreat, and top-tier school district proximity.",
@@ -496,8 +496,8 @@ export default function TamikaClient() {
                 <div className="relative rounded-3xl overflow-hidden border-2 border-[#C9A96E]/40 bg-[#1A1815] shadow-2xl p-2.5">
                   <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden">
                     <Image
-                      src="/assets/tamika/tamika-real-portrait.jpg"
-                      alt="Tamika Shanea Robinson, MBA - Luxury Cleveland Realtor"
+                      src="/assets/tamika/tamika-white-top.jpg"
+                      alt="Tamika Shanea Robinson - Luxury Cleveland Realtor"
                       fill
                       className="object-cover object-top"
                       priority
