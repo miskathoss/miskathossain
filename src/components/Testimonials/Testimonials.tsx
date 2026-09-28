@@ -30,6 +30,21 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
+    id: "kip-ioane",
+    name: "Kip Ioane",
+    avatar: "/testimonials/kip-ioane-avatar.png",
+    screenshot: "/testimonials/kip-ioane.png",
+    role: "Speaker, Author & Coach",
+    company: "Teams of Men",
+    fullTitle:
+      "Speaker, Author, and Coach transforming masculinity through sports teams | Founder #TeamsOfMen | President Kas Ioane Foundation | Best-Selling Author of #MirrorTraining.",
+    relationship: "Kip was Miskat’s client",
+    date: "September 28, 2026",
+    tag: "Website Project",
+    quote:
+      "Miskat was easy to work with, provided excellent and timely communication, and delivered on both in his own creativity and the edits I requested in our review process.",
+  },
+  {
     id: "carolyn-greiner",
     name: "Carolyn Greiner",
     avatar: "/testimonials/carolyn-greiner-avatar.png",
