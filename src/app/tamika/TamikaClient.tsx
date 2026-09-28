@@ -494,12 +494,12 @@ export default function TamikaClient() {
               <div className="relative mx-auto max-w-md lg:max-w-none">
                 {/* Clean Framed Portrait of Tamika */}
                 <div className="relative rounded-3xl overflow-hidden border-2 border-[#C9A96E]/40 bg-[#1A1815] shadow-2xl p-2.5">
-                  <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden">
+                  <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] w-full rounded-2xl overflow-hidden bg-black">
                     <Image
-                      src="/assets/tamika/tamika-white-top.jpg"
+                      src="/assets/tamika/tamika-red-sweater.png"
                       alt="Tamika Shanea Robinson - Luxury Cleveland Realtor"
                       fill
-                      className="object-cover object-top"
+                      className="object-cover object-center"
                       priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
