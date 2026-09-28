@@ -30,32 +30,28 @@ import {
   Instagram,
   Linkedin,
   Facebook,
-  Filter,
-  SlidersHorizontal,
   Building,
-  DollarSign,
-  Compass,
   Send,
+  HelpCircle,
+  FileCheck,
 } from "lucide-react";
 
 export default function TamikaClient() {
   // Modal state
   const [isConsultModalOpen, setIsConsultModalOpen] = useState(false);
   const [consultType, setConsultType] = useState<"buy" | "sell" | "invest" | "pass">("buy");
-  const [consultStep, setConsultStep] = useState(1);
   const [consultSubmitted, setConsultSubmitted] = useState(false);
 
   // Property Search Simulator state
   const [searchLocation, setSearchLocation] = useState("All Cleveland Areas");
   const [searchType, setSearchType] = useState("Single Family");
   const [searchPrice, setSearchPrice] = useState("Any Price");
-  const [searchResultsOpen, setSearchResultsOpen] = useState(false);
 
-  // Valuation Quiz state
-  const [quizGoal, setQuizGoal] = useState<"selling" | "buying" | "investing" | "licensing">("selling");
-  const [quizTimeline, setQuizTimeline] = useState("1 - 3 Months");
-  const [quizBudget, setQuizBudget] = useState("$300K - $500K");
-  const [quizSubmitted, setQuizSubmitted] = useState(false);
+  // Valuation Lead Form state
+  const [leadGoal, setLeadGoal] = useState<"selling" | "buying" | "investing" | "licensing">("selling");
+  const [leadTimeline, setLeadTimeline] = useState("1 - 3 Months");
+  const [leadBudget, setLeadBudget] = useState("$300K - $500K");
+  const [leadSubmitted, setLeadSubmitted] = useState(false);
 
   // Active FAQ accordion state
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
@@ -81,7 +77,6 @@ export default function TamikaClient() {
   const resetConsultModal = () => {
     setIsConsultModalOpen(false);
     setTimeout(() => {
-      setConsultStep(1);
       setConsultSubmitted(false);
       setFormData({
         name: "",
@@ -137,8 +132,8 @@ export default function TamikaClient() {
     {
       name: "PASS Power Hour",
       price: "$47",
-      duration: "1 Hour Intensive Session",
-      badge: "Targeted Breakthrough",
+      duration: "1-Hour Strategy Session",
+      badge: "Targeted Topic Sprint",
       description:
         "Master your most difficult real estate exam topic in a high-focus 60-minute strategy sprint with Tamika.",
       features: [
@@ -153,7 +148,7 @@ export default function TamikaClient() {
     {
       name: "PASS Assessment",
       price: "$97",
-      duration: "90 Min Diagnostic & Action Plan",
+      duration: "90-Min Diagnostic & Action Plan",
       badge: "Most Popular Diagnostic",
       description:
         "Pinpoint your exact score liabilities and get a crystal-clear, day-by-day study roadmap to guarantee you pass.",
@@ -170,8 +165,8 @@ export default function TamikaClient() {
     {
       name: "PASS Accelerator",
       price: "$297",
-      duration: "Comprehensive Coaching Sprint",
-      badge: "Complete Licensing Prep",
+      duration: "Complete Licensing Coaching",
+      badge: "Comprehensive Mentorship",
       description:
         "End-to-end personalized coaching, comprehensive mock review, and direct mentorship until your license is in hand.",
       features: [
@@ -220,135 +215,150 @@ export default function TamikaClient() {
       a: "PASS is my specialized exam preparation and mentoring academy designed for prospective real estate agents. Whether you are struggling with the Ohio state-specific law exam, real estate math, or the national principles portion, PASS gives you targeted diagnostics and memory systems so you can pass with confidence on your next attempt.",
     },
     {
+      q: "Can this website design be directly built and managed on Wix?",
+      a: "Yes! Every section of this page is purposefully structured to be 100% buildable in Wix Studio / Wix Editor using native Wix elements: Section Strips, 2-Column Responsive Splits, Wix Repeaters, Wix Bookings for appointments, Wix CMS for property listings, and Wix Forms for instant lead generation.",
+    },
+    {
       q: "How can I schedule a consultation or property showing?",
-      a: "You can click any 'Book Consultation' or 'Schedule Call' button on this page to pick a time, or reach out directly by call/text at (216) 584-3653 or (216) 269-6714. Consultations can be conducted via phone, Zoom video, or over coffee in the Cleveland area.",
+      a: "You can click any 'Book Consultation' or 'Schedule Call' button on this page to pick a time, or reach out directly by call/text at (216) 584-3653 or (216) 269-6714. Consultations can be conducted via phone, Zoom video, or in-person in the Cleveland area.",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-[#0A0A0C] text-[#F3F1EC] selection:bg-[#C9A96E] selection:text-[#0A0A0C] font-sans antialiased overflow-x-hidden">
-      {/* Top Banner Notice */}
-      <div className="bg-gradient-to-r from-[#171615] via-[#211E19] to-[#171615] border-b border-[#C9A96E]/20 py-2.5 px-4 text-center text-xs sm:text-sm tracking-wide text-[#E3D8C8]">
-        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#C9A96E]/15 text-[#DFBA79] text-xs font-semibold uppercase tracking-wider border border-[#C9A96E]/30">
-            <Sparkles className="w-3 h-3 text-[#DFBA79]" /> Keller Williams Living
-          </span>
-          <span>Cleveland & Lakewood Luxury Realtor® • Real Estate Investor • MBA Strategist</span>
-          <a
-            href="tel:2165843653"
-            className="text-[#DFBA79] hover:text-[#F5E2BE] font-medium underline underline-offset-4 ml-1 inline-flex items-center gap-1"
-          >
-            <Phone className="w-3.5 h-3.5" /> (216) 584-3653
-          </a>
+    <div className="min-h-screen bg-[#0E0D10] text-[#F3F1EC] selection:bg-[#C9A96E] selection:text-[#0A0A0C] font-sans antialiased overflow-x-hidden">
+      {/* ========================================================================= */}
+      {/* 1. TOP ANNOUNCEMENT STRIP (Wix Top Strip) */}
+      {/* ========================================================================= */}
+      <div className="bg-[#181614] border-b border-[#C9A96E]/20 py-2.5 px-4 text-xs tracking-wide text-[#E3D8C8]">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#C9A96E]/20 text-[#DFBA79] text-[11px] font-semibold uppercase tracking-wider border border-[#C9A96E]/30">
+              <Sparkles className="w-3 h-3 text-[#DFBA79]" /> Keller Williams Living
+            </span>
+            <span className="hidden sm:inline text-[#A8A297]">• Integrity Partners | Cleveland, OH</span>
+          </div>
+          <div className="flex items-center gap-4 text-xs">
+            <a
+              href="tel:2165843653"
+              className="text-[#DFBA79] hover:text-white font-medium inline-flex items-center gap-1.5 transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5" /> (216) 584-3653
+            </a>
+            <span className="text-white/20">|</span>
+            <a
+              href="mailto:tamika@tamikashanea.com"
+              className="text-[#DFBA79] hover:text-white font-medium inline-flex items-center gap-1.5 transition-colors"
+            >
+              <Mail className="w-3.5 h-3.5" /> tamika@tamikashanea.com
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Sticky Luxury Navbar */}
-      <nav className="sticky top-0 z-50 backdrop-blur-xl bg-[#0A0A0C]/85 border-b border-white/[0.08] transition-all">
+      {/* ========================================================================= */}
+      {/* 2. HEADER / NAVBAR STRIP (Wix Header Container) */}
+      {/* ========================================================================= */}
+      <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#0E0D10]/95 border-b border-white/[0.08] transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* Logo / Identity */}
-          <Link href="/tamika" className="group flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full border border-[#C9A96E]/40 bg-gradient-to-br from-[#2A241C] to-[#14120F] flex items-center justify-center text-[#DFBA79] font-serif font-bold text-lg shadow-inner group-hover:border-[#DFBA79] transition-all">
+          {/* Logo & Identity */}
+          <Link href="/tamika" className="group flex items-center gap-3.5">
+            <div className="w-11 h-11 rounded-full border border-[#C9A96E]/40 bg-gradient-to-br from-[#2D261C] to-[#12100E] flex items-center justify-center text-[#DFBA79] font-serif font-bold text-lg shadow-inner group-hover:border-[#DFBA79] transition-all">
               TS
             </div>
             <div>
-              <span className="block font-serif text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-[#DFBA79] transition-colors">
-                Tamika Shanea Robinson<span className="text-[#C9A96E] font-sans text-xs ml-1 font-semibold">MBA</span>
-              </span>
-              <span className="block text-[11px] tracking-widest uppercase text-[#A39E93]">
+              <div className="flex items-baseline gap-1.5">
+                <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-[#DFBA79] transition-colors">
+                  Tamika Shanea Robinson
+                </span>
+                <span className="text-[11px] font-semibold px-1.5 py-0.5 rounded bg-[#C9A96E]/20 text-[#DFBA79] border border-[#C9A96E]/30">
+                  MBA
+                </span>
+              </div>
+              <span className="block text-[11px] tracking-widest uppercase text-[#9C968B] font-medium">
                 Realtor® • Keller Williams Living
               </span>
             </div>
           </Link>
 
-          {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-[#C4BFB5]">
-            <a href="#properties" className="hover:text-[#DFBA79] transition-colors">
-              Properties
-            </a>
+          {/* Wix Menu Items */}
+          <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-[#C4BFB5]">
             <a href="#services" className="hover:text-[#DFBA79] transition-colors">
               Buying & Selling
             </a>
+            <a href="#properties" className="hover:text-[#DFBA79] transition-colors">
+              Properties
+            </a>
             <a href="#pass-coaching" className="hover:text-[#DFBA79] transition-colors flex items-center gap-1.5">
-              <span>PASS Coaching</span>
-              <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-[#C9A96E]/20 text-[#DFBA79] border border-[#C9A96E]/30">
-                Exam Prep
+              <span>PASS Exam Coaching</span>
+              <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-[#C9A96E]/20 text-[#DFBA79]">
+                Prep
               </span>
             </a>
             <a href="#about" className="hover:text-[#DFBA79] transition-colors">
               About Tamika
             </a>
             <a href="#podcast" className="hover:text-[#DFBA79] transition-colors">
-              Podcast & Books
+              Podcast & Book
             </a>
-            <a href="#testimonials" className="hover:text-[#DFBA79] transition-colors">
-              Reviews
+            <a href="#faq" className="hover:text-[#DFBA79] transition-colors">
+              FAQ
             </a>
-          </div>
+          </nav>
 
-          {/* CTA & Phone */}
+          {/* Header Action Button (Wix Bookings Button) */}
           <div className="flex items-center gap-3">
-            <a
-              href="tel:2165843653"
-              className="hidden sm:inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#E3D8C8] hover:text-[#DFBA79] px-3 py-2 rounded-lg border border-white/10 hover:border-[#C9A96E]/40 transition-all"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#DFBA79]" /> (216) 584-3653
-            </a>
             <button
               onClick={() => {
                 setConsultType("buy");
                 setIsConsultModalOpen(true);
               }}
-              className="relative inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold tracking-wide text-[#0A0A0C] bg-gradient-to-r from-[#DFBA79] via-[#C9A96E] to-[#B38F52] hover:brightness-110 shadow-lg shadow-[#C9A96E]/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wide text-[#0A0A0C] bg-gradient-to-r from-[#DFBA79] via-[#C9A96E] to-[#B38F52] hover:brightness-110 shadow-lg shadow-[#C9A96E]/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <Calendar className="w-4 h-4" />
               <span>Book Consultation</span>
             </button>
           </div>
         </div>
-      </nav>
+      </header>
 
-      {/* Hero Section */}
-      <section className="relative pt-8 sm:pt-14 pb-20 lg:pb-32 overflow-hidden">
-        {/* Ambient Glows */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[#C9A96E]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
-        <div className="absolute top-10 right-0 w-[400px] h-[400px] bg-[#A67C37]/8 rounded-full blur-[120px] pointer-events-none -z-10" />
-
+      {/* ========================================================================= */}
+      {/* 3. HERO STRIP (Wix 2-Column Responsive Split Strip: 55% Left / 45% Right) */}
+      {/* ========================================================================= */}
+      <section className="relative py-12 sm:py-20 lg:py-24 border-b border-white/[0.08] overflow-hidden bg-gradient-to-b from-[#141216] to-[#0E0D10]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            {/* Left Column: Headline & Action */}
-            <div className="lg:col-span-7 space-y-6 sm:space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+            {/* Left Column (55%): Content & Action */}
+            <div className="lg:col-span-7 space-y-6">
               {/* Eyebrow badge */}
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#1F1B15] border border-[#C9A96E]/30 text-xs tracking-wider uppercase text-[#E3D8C8]">
-                <span className="w-2 h-2 rounded-full bg-[#DFBA79] animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1F1B16] border border-[#C9A96E]/30 text-xs font-semibold uppercase tracking-wider text-[#DFBA79]">
+                <ShieldCheck className="w-4 h-4 text-[#DFBA79]" />
                 <span>Keller Williams Living • Integrity Partners</span>
               </div>
 
-              {/* Title */}
+              {/* Main Headline */}
               <div className="space-y-3">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold text-white tracking-tight leading-[1.12]">
                   Elevating <br />
-                  <span className="italic font-light text-[#EAD8B8] font-serif">Cleveland Living</span>{" "}
-                  <br />
+                  <span className="italic font-light text-[#EAD8B8] font-serif">Cleveland Living</span> <br />
                   <span className="bg-gradient-to-r from-[#DFBA79] via-[#F3E2C4] to-[#C9A96E] bg-clip-text text-transparent">
                     With Vision & Precision.
                   </span>
                 </h1>
-                <p className="text-base sm:text-lg text-[#B5B0A4] max-w-xl leading-relaxed pt-2">
-                  Tamika Shanea Robinson, MBA, merges elite Keller Williams residential representation with rigorous
-                  financial acumen. Serving buyers, luxury sellers, and investors across Greater Cleveland & Lakewood.
+                <p className="text-base sm:text-lg text-[#B5B0A4] max-w-xl leading-relaxed pt-1">
+                  Trusted Keller Williams Living Realtor®, real estate investor, and Cleveland State University MBA.
+                  Dedicated to guiding buyers, luxury home sellers, and investors across Greater Cleveland & Lakewood.
                 </p>
               </div>
 
-              {/* Dual Action Buttons */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              {/* Primary Action Buttons */}
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
                 <a
                   href="#properties"
-                  className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-semibold text-sm tracking-wide bg-gradient-to-r from-[#DFBA79] via-[#C9A96E] to-[#B38F52] text-[#0A0A0C] hover:brightness-110 shadow-xl shadow-[#C9A96E]/20 transition-all group"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm tracking-wide bg-gradient-to-r from-[#DFBA79] via-[#C9A96E] to-[#B38F52] text-[#0A0A0C] hover:brightness-110 shadow-lg shadow-[#C9A96E]/20 transition-all"
                 >
                   <Home className="w-4 h-4 text-[#0A0A0C]" />
                   <span>Find Your Dream Home</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4" />
                 </a>
 
                 <button
@@ -359,92 +369,83 @@ export default function TamikaClient() {
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm tracking-wide bg-white/[0.04] hover:bg-white/[0.08] text-white border border-white/15 hover:border-[#C9A96E]/50 transition-all"
                 >
                   <Key className="w-4 h-4 text-[#DFBA79]" />
-                  <span>Get Free Home Valuation</span>
+                  <span>Schedule Free Consultation</span>
                 </button>
               </div>
 
-              {/* Interactive Property Search Simulator Bar */}
-              <div className="bg-[#121114]/90 border border-[#C9A96E]/30 rounded-2xl p-3 sm:p-4 shadow-2xl backdrop-blur-md">
-                <div className="text-xs uppercase tracking-widest font-semibold text-[#DFBA79] mb-3 flex items-center justify-between">
-                  <span className="flex items-center gap-1.5">
-                    <Search className="w-3.5 h-3.5" /> Instant MLS Property Search
+              {/* Wix Property Search Bar Strip */}
+              <div className="bg-[#161418] border border-white/10 rounded-2xl p-4 shadow-xl mt-6">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs uppercase tracking-wider font-semibold text-[#DFBA79] flex items-center gap-1.5">
+                    <Search className="w-3.5 h-3.5" /> Quick Property Finder
                   </span>
-                  <span className="text-[#8E887D] font-normal lowercase">greater cleveland mls feed</span>
+                  <span className="text-[11px] text-[#8E887D]">Greater Cleveland MLS Feed</span>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                   <div className="bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-xs">
-                    <label className="block text-[10px] uppercase tracking-wider text-[#8E887D] font-medium">
-                      Location
-                    </label>
+                    <label className="block text-[10px] uppercase text-[#8E887D] font-medium">Area</label>
                     <select
                       value={searchLocation}
                       onChange={(e) => setSearchLocation(e.target.value)}
                       className="bg-transparent text-white w-full outline-none mt-0.5 cursor-pointer font-medium"
                     >
-                      <option value="All Cleveland Areas" className="bg-[#121114]">
+                      <option value="All Cleveland Areas" className="bg-[#161418]">
                         All Greater Cleveland
                       </option>
-                      <option value="Lakewood" className="bg-[#121114]">
+                      <option value="Lakewood" className="bg-[#161418]">
                         Lakewood, OH
                       </option>
-                      <option value="Downtown Cleveland" className="bg-[#121114]">
+                      <option value="Downtown Cleveland" className="bg-[#161418]">
                         Downtown Cleveland / Lakefront
                       </option>
-                      <option value="Shaker Heights" className="bg-[#121114]">
+                      <option value="Shaker Heights" className="bg-[#161418]">
                         Shaker Heights
                       </option>
-                      <option value="Westlake" className="bg-[#121114]">
+                      <option value="Westlake" className="bg-[#161418]">
                         Westlake / Rocky River
                       </option>
-                      <option value="Beachwood" className="bg-[#121114]">
+                      <option value="Beachwood" className="bg-[#161418]">
                         Beachwood & East Side
                       </option>
                     </select>
                   </div>
 
                   <div className="bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-xs">
-                    <label className="block text-[10px] uppercase tracking-wider text-[#8E887D] font-medium">
-                      Property Type
-                    </label>
+                    <label className="block text-[10px] uppercase text-[#8E887D] font-medium">Property</label>
                     <select
                       value={searchType}
                       onChange={(e) => setSearchType(e.target.value)}
                       className="bg-transparent text-white w-full outline-none mt-0.5 cursor-pointer font-medium"
                     >
-                      <option value="Single Family" className="bg-[#121114]">
+                      <option value="Single Family" className="bg-[#161418]">
                         Single Family Home
                       </option>
-                      <option value="Luxury Penthouse / Condo" className="bg-[#121114]">
-                        Luxury Condo / Penthouse
+                      <option value="Luxury Penthouse" className="bg-[#161418]">
+                        Luxury Penthouse / Condo
                       </option>
-                      <option value="Multi-Family Investment" className="bg-[#121114]">
-                        Multi-Family (Investment)
-                      </option>
-                      <option value="New Construction" className="bg-[#121114]">
-                        New Construction
+                      <option value="Multi-Family" className="bg-[#161418]">
+                        Multi-Family Investment
                       </option>
                     </select>
                   </div>
 
                   <div className="bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-xs">
-                    <label className="block text-[10px] uppercase tracking-wider text-[#8E887D] font-medium">
-                      Price Range
-                    </label>
+                    <label className="block text-[10px] uppercase text-[#8E887D] font-medium">Price</label>
                     <select
                       value={searchPrice}
                       onChange={(e) => setSearchPrice(e.target.value)}
                       className="bg-transparent text-white w-full outline-none mt-0.5 cursor-pointer font-medium"
                     >
-                      <option value="Any Price" className="bg-[#121114]">
+                      <option value="Any Price" className="bg-[#161418]">
                         Any Price
                       </option>
-                      <option value="$250K - $450K" className="bg-[#121114]">
+                      <option value="$250K - $450K" className="bg-[#161418]">
                         $250,000 - $450,000
                       </option>
-                      <option value="$450K - $750K" className="bg-[#121114]">
+                      <option value="$450K - $750K" className="bg-[#161418]">
                         $450,000 - $750,000
                       </option>
-                      <option value="$750K - $1.5M+" className="bg-[#121114]">
+                      <option value="$750K - $1.5M+" className="bg-[#161418]">
                         $750,000 - $1.5M+
                       </option>
                     </select>
@@ -453,41 +454,56 @@ export default function TamikaClient() {
 
                 <div className="mt-3 flex items-center justify-between pt-1">
                   <span className="text-[11px] text-[#A39E93]">
-                    Showing verified listings filtered for <strong className="text-white">{searchLocation}</strong>
+                    Selected filter: <strong className="text-white">{searchLocation}</strong>
                   </span>
                   <a
                     href="#properties"
-                    onClick={() => setSearchResultsOpen(true)}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#DFBA79] hover:text-[#F3E2C4] transition-colors"
+                    className="inline-flex items-center gap-1 text-xs font-semibold text-[#DFBA79] hover:underline"
                   >
-                    <span>Browse 42+ Listings</span>
+                    <span>View Matching Homes</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </div>
               </div>
+
+              {/* Trust Metric Counters (Wix Counter Strip) */}
+              <div className="grid grid-cols-3 gap-4 pt-4 border-t border-white/[0.08]">
+                <div>
+                  <div className="text-2xl sm:text-3xl font-serif font-bold text-white">20+</div>
+                  <div className="text-xs text-[#8E887D] mt-0.5">Years Business Leadership</div>
+                </div>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-serif font-bold text-[#DFBA79]">$10M+</div>
+                  <div className="text-xs text-[#8E887D] mt-0.5">Transaction Volume</div>
+                </div>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-serif font-bold text-white">94%</div>
+                  <div className="text-xs text-[#8E887D] mt-0.5">PASS Exam Pass Rate</div>
+                </div>
+              </div>
             </div>
 
-            {/* Right Column: Visual Mockup Showcase with Floating Badges */}
+            {/* Right Column (45%): Tamika's Actual Portrait Photo */}
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-md lg:max-w-none">
-                {/* Main Visual Image Card */}
-                <div className="relative rounded-3xl overflow-hidden border border-[#C9A96E]/30 bg-gradient-to-b from-[#1C1A17] to-[#0D0C0B] p-2 shadow-2xl group">
-                  <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden">
+                {/* Clean Framed Portrait of Tamika */}
+                <div className="relative rounded-3xl overflow-hidden border-2 border-[#C9A96E]/40 bg-[#1A1815] shadow-2xl p-2.5">
+                  <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden">
                     <Image
-                      src="/assets/tamika/tamika-hero-concept.jpg"
+                      src="/assets/tamika/tamika-portrait-clean.jpg"
                       alt="Tamika Shanea Robinson, MBA - Luxury Cleveland Realtor"
                       fill
-                      className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                      className="object-cover object-top"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-transparent to-transparent opacity-80" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
-                    {/* Bottom Caption Overlay */}
-                    <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl backdrop-blur-md bg-black/60 border border-white/10 text-white">
+                    {/* Bottom Caption Pill */}
+                    <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-black/75 backdrop-blur-md border border-white/10 text-white">
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="font-serif font-bold text-base text-[#F5EAD4]">Tamika Shanea' Robinson</p>
-                          <p className="text-xs text-[#C9A96E] font-medium">MBA • Realtor® • Author • Coach</p>
+                          <p className="font-serif font-bold text-base text-white">Tamika Shanea Robinson</p>
+                          <p className="text-xs text-[#DFBA79] font-medium">MBA • Realtor® • Author • Coach</p>
                         </div>
                         <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 rounded bg-[#C9A96E]/20 text-[#DFBA79] border border-[#C9A96E]/40">
                           Cleveland, OH
@@ -497,25 +513,25 @@ export default function TamikaClient() {
                   </div>
                 </div>
 
-                {/* Floating Metric 1: Volume / Impact */}
-                <div className="absolute -top-4 -left-4 sm:-left-6 backdrop-blur-xl bg-[#141210]/90 border border-[#C9A96E]/40 rounded-2xl p-3 sm:p-4 shadow-xl flex items-center gap-3 animate-bounce [animation-duration:6s]">
-                  <div className="w-10 h-10 rounded-xl bg-[#C9A96E]/20 border border-[#C9A96E]/40 flex items-center justify-center text-[#DFBA79]">
-                    <TrendingUp className="w-5 h-5" />
+                {/* Floating Badge 1: Keller Williams Living */}
+                <div className="absolute -top-4 -left-4 sm:-left-6 backdrop-blur-xl bg-[#141210]/95 border border-[#C9A96E]/40 rounded-2xl p-3 shadow-xl flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#C9A96E]/20 border border-[#C9A96E]/40 flex items-center justify-center text-[#DFBA79]">
+                    <Building className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-lg font-bold font-serif text-white">$10M+</div>
-                    <div className="text-[11px] text-[#A39E93] uppercase tracking-wider font-medium">Volume & Impact</div>
+                    <div className="text-xs font-bold text-white">Keller Williams Living</div>
+                    <div className="text-[10px] text-[#A39E93]">Integrity Partners Group</div>
                   </div>
                 </div>
 
-                {/* Floating Metric 2: PASS Real Estate Coaching */}
-                <div className="absolute -bottom-6 -right-2 sm:-right-4 backdrop-blur-xl bg-[#141210]/95 border border-[#C9A96E]/40 rounded-2xl p-3.5 sm:p-4 shadow-2xl flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#C9A96E] to-[#997334] flex items-center justify-center text-[#0A0A0C]">
-                    <GraduationCap className="w-5 h-5" />
+                {/* Floating Badge 2: Cleveland Specialist */}
+                <div className="absolute -bottom-4 -right-2 sm:-right-4 backdrop-blur-xl bg-[#141210]/95 border border-[#C9A96E]/40 rounded-2xl p-3 shadow-xl flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#DFBA79] to-[#997334] flex items-center justify-center text-[#0A0A0C]">
+                    <Award className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold font-serif text-white">PASS Coaching</div>
-                    <div className="text-[11px] text-[#DFBA79] font-medium">94% First-Time Pass Rate</div>
+                    <div className="text-xs font-bold text-white">Cleveland & Lakewood</div>
+                    <div className="text-[10px] text-[#DFBA79]">Luxury Residential Specialist</div>
                   </div>
                 </div>
               </div>
@@ -524,251 +540,186 @@ export default function TamikaClient() {
         </div>
       </section>
 
-      {/* Brand & Authority Marquee */}
-      <section className="border-y border-white/[0.08] bg-[#0E0D10]/60 py-6 overflow-hidden">
+      {/* ========================================================================= */}
+      {/* 4. CREDENTIALS & AFFILIATIONS STRIP (Wix Logo Bar / Gallery) */}
+      {/* ========================================================================= */}
+      <section className="border-b border-white/[0.08] bg-[#0A0A0C] py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-xs uppercase tracking-widest text-[#8E887D] font-semibold mb-5">
-            Credentials, Affiliations & Media Distribution
+          <p className="text-center text-[11px] uppercase tracking-widest text-[#8E887D] font-semibold mb-4">
+            Brokerage Affiliations & Professional Recognition
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center opacity-75">
-            <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[#C4BFB5]">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center opacity-80">
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[#C4BFB5]">
               <Building className="w-4 h-4 text-[#DFBA79]" /> Keller Williams Living
             </div>
-            <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[#C4BFB5]">
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[#C4BFB5]">
               <Award className="w-4 h-4 text-[#DFBA79]" /> Cleveland State MBA
             </div>
-            <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[#C4BFB5]">
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[#C4BFB5]">
               <ShieldCheck className="w-4 h-4 text-[#DFBA79]" /> National Assoc. of Realtors
             </div>
-            <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[#C4BFB5]">
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[#C4BFB5]">
               <Mic className="w-4 h-4 text-[#DFBA79]" /> Spotify Podcasts
             </div>
-            <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[#C4BFB5]">
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[#C4BFB5]">
               <Star className="w-4 h-4 text-[#DFBA79]" /> Apple Podcasts
             </div>
-            <div className="flex items-center gap-2 text-sm font-semibold tracking-wider text-[#C4BFB5]">
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[#C4BFB5]">
               <BookOpen className="w-4 h-4 text-[#DFBA79]" /> Author (Fall 2026)
             </div>
           </div>
         </div>
       </section>
 
-      {/* Real Estate Advisory Pillars (Buying, Selling, Investing) */}
-      <section id="services" className="py-20 lg:py-28 relative">
+      {/* ========================================================================= */}
+      {/* 5. SERVICES STRIP (Wix 3-Column Card Repeater: Sellers, Buyers, Investors) */}
+      {/* ========================================================================= */}
+      <section id="services" className="py-20 lg:py-24 border-b border-white/[0.08]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
+          <div className="text-center max-w-3xl mx-auto space-y-3 mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-[#DFBA79] px-3 py-1 rounded-full bg-[#C9A96E]/10 border border-[#C9A96E]/30 inline-block">
               Full-Spectrum Real Estate Services
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
-              Strategic Representation <br />
-              <span className="italic font-light text-[#EAD8B8]">Tailored to Your Financial Future.</span>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
+              Real Estate Representation Grounded in Strategy.
             </h2>
-            <p className="text-sm sm:text-base text-[#A39E93] leading-relaxed">
-              Real estate decisions deserve more than intuition. Tamika combines deep Greater Cleveland market roots
-              with MBA analytics to ensure you negotiate from strength.
+            <p className="text-sm text-[#A39E93]">
+              Every transaction is structured to optimize your net financial outcome, reduce time on market, and protect
+              your generational equity.
             </p>
-
-            {/* Tab Selectors */}
-            <div className="inline-flex p-1.5 rounded-xl bg-white/[0.04] border border-white/10 mt-4">
-              <button
-                onClick={() => setActiveTab("sellers")}
-                className={`px-5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
-                  activeTab === "sellers"
-                    ? "bg-gradient-to-r from-[#DFBA79] to-[#C9A96E] text-[#0A0A0C] shadow-md"
-                    : "text-[#B5B0A4] hover:text-white"
-                }`}
-              >
-                For Home Sellers
-              </button>
-              <button
-                onClick={() => setActiveTab("buyers")}
-                className={`px-5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
-                  activeTab === "buyers"
-                    ? "bg-gradient-to-r from-[#DFBA79] to-[#C9A96E] text-[#0A0A0C] shadow-md"
-                    : "text-[#B5B0A4] hover:text-white"
-                }`}
-              >
-                For Home Buyers
-              </button>
-              <button
-                onClick={() => setActiveTab("investors")}
-                className={`px-5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
-                  activeTab === "investors"
-                    ? "bg-gradient-to-r from-[#DFBA79] to-[#C9A96E] text-[#0A0A0C] shadow-md"
-                    : "text-[#B5B0A4] hover:text-white"
-                }`}
-              >
-                For Investors
-              </button>
-            </div>
           </div>
 
-          {/* Tab Content Display */}
-          <div className="bg-[#121114] border border-white/10 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl">
-            {activeTab === "sellers" && (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                <div className="space-y-6">
-                  <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#DFBA79] uppercase tracking-wider">
-                    <Key className="w-4 h-4" /> Maximum Net Profit Strategy
-                  </div>
-                  <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">
-                    Sell Your Home for Top Dollar With Proven Architectural Staging & Digital Syndication.
-                  </h3>
-                  <p className="text-sm text-[#A39E93] leading-relaxed">
-                    We don&apos;t just put a sign in the yard. We craft an editorial narrative around your property with 4K
-                    cinematic video, custom landing pages, targeted social ad campaigns, and Keller Williams Living&apos;s
-                    vast buyer network to generate competitive bidding wars.
-                  </p>
-                  <ul className="space-y-3 text-sm text-[#D1CCC3]">
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#DFBA79] shrink-0" />
-                      <span>MBA Comparative Market Valuation & Micro-trend pricing</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#DFBA79] shrink-0" />
-                      <span>Professional staging consultation & luxury HDR photography</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#DFBA79] shrink-0" />
-                      <span>Fierce contract negotiation protecting your timelines and net proceeds</span>
-                    </li>
-                  </ul>
-                  <button
-                    onClick={() => {
-                      setConsultType("sell");
-                      setIsConsultModalOpen(true);
-                    }}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#DFBA79] to-[#C9A96E] text-[#0A0A0C] font-semibold text-sm hover:brightness-110 transition-all"
-                  >
-                    <span>Request Free Seller Analysis</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1: Home Sellers */}
+            <div className="bg-[#141216] border border-white/10 hover:border-[#C9A96E]/40 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xl transition-all group">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-xl bg-[#C9A96E]/15 border border-[#C9A96E]/30 flex items-center justify-center text-[#DFBA79] group-hover:bg-[#C9A96E]/25 transition-colors">
+                  <Key className="w-6 h-6" />
                 </div>
-                <div className="relative rounded-2xl overflow-hidden aspect-video lg:aspect-[4/3] border border-white/10">
-                  <Image
-                    src="/assets/tamika/cleveland-luxury-home.jpg"
-                    alt="Cleveland Home Selling Showcase"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-black/75 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/15 text-xs text-[#DFBA79] font-semibold">
-                    Avg Days on Market: 8 Days
-                  </div>
-                </div>
+                <h3 className="font-serif font-bold text-xl text-white">For Home Sellers</h3>
+                <p className="text-xs text-[#A39E93] leading-relaxed">
+                  Maximize your net profit with targeted architectural staging, professional HDR media, and competitive
+                  Keller Williams syndication across major buyer platforms.
+                </p>
+                <ul className="space-y-2.5 text-xs text-[#C4BFB5] pt-2">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#DFBA79] shrink-0" />
+                    <span>MBA micro-market valuation & pricing analytics</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#DFBA79] shrink-0" />
+                    <span>Cinematic 4K video tours & targeted social ads</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#DFBA79] shrink-0" />
+                    <span>Fierce contract negotiation protecting your net return</span>
+                  </li>
+                </ul>
               </div>
-            )}
 
-            {activeTab === "buyers" && (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                <div className="space-y-6">
-                  <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#DFBA79] uppercase tracking-wider">
-                    <Home className="w-4 h-4" /> First-Time & Luxury Buyer Guidance
-                  </div>
-                  <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">
-                    Find Your Sanctuary in Greater Cleveland Without the Stress.
-                  </h3>
-                  <p className="text-sm text-[#A39E93] leading-relaxed">
-                    Whether you are searching for a charming craftsman in Lakewood, a historic gem in Shaker Heights, or a
-                    sleek downtown condo, Tamika provides patient, step-by-step guidance from pre-approval through closing day.
-                  </p>
-                  <ul className="space-y-3 text-sm text-[#D1CCC3]">
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#DFBA79] shrink-0" />
-                      <span>Access to off-market & coming-soon listings before the public</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#DFBA79] shrink-0" />
-                      <span>First-time home buyer grant navigation & trusted mortgage lender partners</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#DFBA79] shrink-0" />
-                      <span>In-depth structural inspection reviews and appraisal contingency protection</span>
-                    </li>
-                  </ul>
-                  <button
-                    onClick={() => {
-                      setConsultType("buy");
-                      setIsConsultModalOpen(true);
-                    }}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#DFBA79] to-[#C9A96E] text-[#0A0A0C] font-semibold text-sm hover:brightness-110 transition-all"
-                  >
-                    <span>Schedule Buyer Consultation</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-                <div className="relative rounded-2xl overflow-hidden aspect-video lg:aspect-[4/3] border border-white/10">
-                  <Image
-                    src="/assets/tamika/cleveland-interior.jpg"
-                    alt="Cleveland Home Buying Showcase"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-black/75 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/15 text-xs text-[#DFBA79] font-semibold">
-                    100% Client Satisfaction
-                  </div>
-                </div>
+              <div className="mt-8 pt-4 border-t border-white/10">
+                <button
+                  onClick={() => {
+                    setConsultType("sell");
+                    setIsConsultModalOpen(true);
+                  }}
+                  className="w-full py-2.5 rounded-xl bg-white/[0.05] hover:bg-gradient-to-r hover:from-[#DFBA79] hover:to-[#C9A96E] hover:text-[#0A0A0C] text-xs font-semibold text-white border border-white/15 transition-all flex items-center justify-center gap-1.5"
+                >
+                  <span>Request Valuation</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
               </div>
-            )}
+            </div>
 
-            {activeTab === "investors" && (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                <div className="space-y-6">
-                  <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#DFBA79] uppercase tracking-wider">
-                    <TrendingUp className="w-4 h-4" /> Wealth Building & Cash Flow
-                  </div>
-                  <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">
-                    Unlock High-Yield Cleveland Rental Portfolios & Multi-Family Assets.
-                  </h3>
-                  <p className="text-sm text-[#A39E93] leading-relaxed">
-                    Cleveland is consistently ranked as one of the best cash-flow markets in the United States. As an active
-                    real estate investor with an MBA, Tamika models cap rates, cash-on-cash yields, and value-add
-                    renovation potential for out-of-state and local investors alike.
-                  </p>
-                  <ul className="space-y-3 text-sm text-[#D1CCC3]">
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#DFBA79] shrink-0" />
-                      <span>Duplex, triplex & small commercial property sourcing</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#DFBA79] shrink-0" />
-                      <span>BRRRR strategy modeling & pro-forma expense budgeting</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-4 h-4 text-[#DFBA79] shrink-0" />
-                      <span>Connections to trusted property managers & vetted contractors</span>
-                    </li>
-                  </ul>
-                  <button
-                    onClick={() => {
-                      setConsultType("invest");
-                      setIsConsultModalOpen(true);
-                    }}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#DFBA79] to-[#C9A96E] text-[#0A0A0C] font-semibold text-sm hover:brightness-110 transition-all"
-                  >
-                    <span>Discuss Investment Strategy</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+            {/* Card 2: Home Buyers */}
+            <div className="bg-[#141216] border border-white/10 hover:border-[#C9A96E]/40 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xl transition-all group">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-xl bg-[#C9A96E]/15 border border-[#C9A96E]/30 flex items-center justify-center text-[#DFBA79] group-hover:bg-[#C9A96E]/25 transition-colors">
+                  <Home className="w-6 h-6" />
                 </div>
-                <div className="relative rounded-2xl overflow-hidden aspect-video lg:aspect-[4/3] border border-white/10">
-                  <Image
-                    src="/assets/tamika/cleveland-luxury-home.jpg"
-                    alt="Cleveland Real Estate Investment"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-black/75 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/15 text-xs text-[#DFBA79] font-semibold">
-                    Target Yield: 11% - 16% Cap
-                  </div>
-                </div>
+                <h3 className="font-serif font-bold text-xl text-white">For Home Buyers</h3>
+                <p className="text-xs text-[#A39E93] leading-relaxed">
+                  Patient, hands-on guidance through Lakewood, Downtown, and Greater Cleveland neighborhoods with access
+                  to off-market inventory and trusted mortgage partners.
+                </p>
+                <ul className="space-y-2.5 text-xs text-[#C4BFB5] pt-2">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#DFBA79] shrink-0" />
+                    <span>Early access to upcoming & off-market listings</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#DFBA79] shrink-0" />
+                    <span>First-time home buyer grant navigation</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#DFBA79] shrink-0" />
+                    <span>Thorough structural & inspection contingency protection</span>
+                  </li>
+                </ul>
               </div>
-            )}
+
+              <div className="mt-8 pt-4 border-t border-white/10">
+                <button
+                  onClick={() => {
+                    setConsultType("buy");
+                    setIsConsultModalOpen(true);
+                  }}
+                  className="w-full py-2.5 rounded-xl bg-white/[0.05] hover:bg-gradient-to-r hover:from-[#DFBA79] hover:to-[#C9A96E] hover:text-[#0A0A0C] text-xs font-semibold text-white border border-white/15 transition-all flex items-center justify-center gap-1.5"
+                >
+                  <span>Start Home Search</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Card 3: Real Estate Investors */}
+            <div className="bg-[#141216] border border-white/10 hover:border-[#C9A96E]/40 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xl transition-all group">
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-xl bg-[#C9A96E]/15 border border-[#C9A96E]/30 flex items-center justify-center text-[#DFBA79] group-hover:bg-[#C9A96E]/25 transition-colors">
+                  <TrendingUp className="w-6 h-6" />
+                </div>
+                <h3 className="font-serif font-bold text-xl text-white">For Real Estate Investors</h3>
+                <p className="text-xs text-[#A39E93] leading-relaxed">
+                  Leverage Cleveland&apos;s nation-leading cash flow market with pro-forma financial models, cap rate audits,
+                  and vetted local property management connections.
+                </p>
+                <ul className="space-y-2.5 text-xs text-[#C4BFB5] pt-2">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#DFBA79] shrink-0" />
+                    <span>Multi-family & duplex cash flow pro-formas</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#DFBA79] shrink-0" />
+                    <span>BRRRR strategy modeling & renovation budgeting</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#DFBA79] shrink-0" />
+                    <span>Out-of-state investor turnkey support & local vetting</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mt-8 pt-4 border-t border-white/10">
+                <button
+                  onClick={() => {
+                    setConsultType("invest");
+                    setIsConsultModalOpen(true);
+                  }}
+                  className="w-full py-2.5 rounded-xl bg-white/[0.05] hover:bg-gradient-to-r hover:from-[#DFBA79] hover:to-[#C9A96E] hover:text-[#0A0A0C] text-xs font-semibold text-white border border-white/15 transition-all flex items-center justify-center gap-1.5"
+                >
+                  <span>Discuss Investment</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Properties Showcase */}
-      <section id="properties" className="py-20 bg-[#0C0B0E] border-t border-white/[0.08] relative">
+      {/* ========================================================================= */}
+      {/* 6. FEATURED PROPERTIES (Wix CMS Repeater / Dynamic Property Grid) */}
+      {/* ========================================================================= */}
+      <section id="properties" className="py-20 lg:py-24 border-b border-white/[0.08] bg-[#0B0A0D]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
@@ -780,7 +731,7 @@ export default function TamikaClient() {
               </h2>
             </div>
             <p className="text-sm text-[#A39E93] max-w-md mt-3 md:mt-0">
-              Explore handpicked residences and luxury estates represented with distinction by Tamika Shanea Robinson.
+              Browse current listings and notable recent sales represented by Tamika Shanea Robinson at Keller Williams Living.
             </p>
           </div>
 
@@ -800,7 +751,7 @@ export default function TamikaClient() {
                   <div className="absolute top-3 left-3 bg-[#0A0A0C]/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-semibold text-[#DFBA79] border border-white/10">
                     {prop.tag}
                   </div>
-                  <div className="absolute bottom-3 right-3 bg-black/75 backdrop-blur-md px-2.5 py-1 rounded-md text-xs font-bold text-white">
+                  <div className="absolute bottom-3 right-3 bg-black/85 backdrop-blur-md px-3 py-1 rounded-md text-xs font-bold text-white">
                     {prop.price}
                   </div>
                 </div>
@@ -838,49 +789,49 @@ export default function TamikaClient() {
         </div>
       </section>
 
-      {/* "PASS with Tamika" — Real Estate Exam Prep Coaching */}
-      <section id="pass-coaching" className="py-20 lg:py-28 relative overflow-hidden bg-gradient-to-b from-[#0F0E11] via-[#151310] to-[#0A0A0C]">
+      {/* ========================================================================= */}
+      {/* 7. "PASS WITH TAMIKA" (Wix Pricing Plans / Wix Stores Product Strip) */}
+      {/* ========================================================================= */}
+      <section id="pass-coaching" className="py-20 lg:py-24 border-b border-white/[0.08] bg-gradient-to-b from-[#13110E] to-[#0E0D10]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
-            <div className="lg:col-span-8 space-y-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+            <div className="lg:col-span-8 space-y-3">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C9A96E]/15 border border-[#C9A96E]/30 text-xs font-bold uppercase tracking-wider text-[#DFBA79]">
-                <GraduationCap className="w-4 h-4" /> Signature Educational Program
+                <GraduationCap className="w-4 h-4" /> Signature Educational Academy
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
-                PASS with Tamika: <br />
-                <span className="italic font-light text-[#EAD8B8]">Your Fast-Track to Real Estate Licensing.</span>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
+                PASS with Tamika: Real Estate Exam Prep Coaching.
               </h2>
-              <p className="text-sm sm:text-base text-[#A39E93] max-w-2xl leading-relaxed">
-                Struggling with real estate math, property covenants, or state-specific Ohio statutes? Tamika’s structured
-                coaching turns complex exam topics into intuitive memory shortcuts so you pass on your very next attempt.
+              <p className="text-sm text-[#A39E93] max-w-2xl leading-relaxed">
+                Struggling with real estate finance formulas, property deed types, or Ohio agency laws? Tamika’s structured
+                coaching turns intimidating exam concepts into intuitive memory systems so you pass on your very next try.
               </p>
             </div>
 
-            {/* Book Preview Feature */}
-            <div className="lg:col-span-4 bg-[#1A1713] border border-[#C9A96E]/40 rounded-2xl p-5 shadow-xl">
+            {/* Book Spotlight Widget (Wix Store Product Card) */}
+            <div className="lg:col-span-4 bg-[#181613] border border-[#C9A96E]/40 rounded-2xl p-5 shadow-xl">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#DFBA79] mb-2">
                 <BookOpen className="w-3.5 h-3.5" /> Upcoming Real Estate Book
               </div>
               <h4 className="font-serif font-bold text-base text-white">Closing the Deal: A Real Estate Love Story</h4>
               <p className="text-xs text-[#B5B0A4] mt-1">
-                By Tamika Shanea Robinson, MBA • Coming Fall 2026. A compelling fusion of industry insights, romance, and
-                entrepreneurial grit.
+                By Tamika Shanea Robinson, MBA • Fall 2026. A captivating fusion of property negotiation insights and romance.
               </p>
-              <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
-                <span className="text-[11px] text-[#A39E93]">Pre-order list opening soon</span>
-                <span className="text-xs font-semibold text-[#DFBA79]">stan.store/tamikashanea1</span>
+              <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs">
+                <span className="text-[#8E887D]">Pre-orders opening soon</span>
+                <span className="text-[#DFBA79] font-medium">stan.store/tamikashanea1</span>
               </div>
             </div>
           </div>
 
-          {/* Pricing Cards */}
+          {/* Pricing Plans Grid (Wix Pricing Plans App) */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {passTiers.map((tier, idx) => (
               <div
                 key={idx}
                 className={`relative rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                   tier.popular
-                    ? "bg-gradient-to-b from-[#1C1812] to-[#12100D] border-2 border-[#C9A96E] shadow-2xl shadow-[#C9A96E]/15 scale-105 z-10"
+                    ? "bg-gradient-to-b from-[#1C1812] to-[#12100D] border-2 border-[#C9A96E] shadow-2xl scale-105 z-10"
                     : "bg-[#141216] border border-white/10 hover:border-white/20"
                 }`}
               >
@@ -933,13 +884,15 @@ export default function TamikaClient() {
         </div>
       </section>
 
-      {/* Interactive Home Valuation & Client Intake Tool */}
-      <section className="py-20 bg-[#0E0D10] border-y border-white/[0.08] relative">
+      {/* ========================================================================= */}
+      {/* 8. INTERACTIVE LEAD INTAKE (Wix Forms & Payments Strip) */}
+      {/* ========================================================================= */}
+      <section className="py-20 bg-[#0E0D10] border-b border-white/[0.08]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-b from-[#181615] to-[#100F0E] border border-[#C9A96E]/30 rounded-3xl p-6 sm:p-10 shadow-2xl">
+          <div className="bg-[#151317] border border-[#C9A96E]/30 rounded-3xl p-6 sm:p-10 shadow-2xl">
             <div className="text-center max-w-xl mx-auto space-y-2 mb-8">
               <span className="text-xs font-bold uppercase tracking-widest text-[#DFBA79]">
-                Instant Strategy Match
+                Direct Consultation Intake
               </span>
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white">
                 Tell Tamika About Your Next Move
@@ -949,7 +902,7 @@ export default function TamikaClient() {
               </p>
             </div>
 
-            {quizSubmitted ? (
+            {leadSubmitted ? (
               <div className="bg-[#1C1A17] border border-[#C9A96E]/50 rounded-2xl p-8 text-center space-y-4">
                 <div className="w-14 h-14 rounded-full bg-[#C9A96E]/20 text-[#DFBA79] mx-auto flex items-center justify-center">
                   <CheckCircle2 className="w-8 h-8" />
@@ -960,7 +913,7 @@ export default function TamikaClient() {
                   email shortly.
                 </p>
                 <button
-                  onClick={() => setQuizSubmitted(false)}
+                  onClick={() => setLeadSubmitted(false)}
                   className="text-xs text-[#DFBA79] underline font-semibold mt-2"
                 >
                   Submit another inquiry
@@ -970,11 +923,10 @@ export default function TamikaClient() {
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
-                  setQuizSubmitted(true);
+                  setLeadSubmitted(true);
                 }}
                 className="space-y-6"
               >
-                {/* Step 1: Goal */}
                 <div>
                   <label className="block text-xs uppercase tracking-wider text-[#C4BFB5] font-semibold mb-3">
                     1. What is your primary objective?
@@ -989,9 +941,9 @@ export default function TamikaClient() {
                       <button
                         type="button"
                         key={item.id}
-                        onClick={() => setQuizGoal(item.id as any)}
+                        onClick={() => setLeadGoal(item.id as any)}
                         className={`flex flex-col items-center justify-center p-3 rounded-xl border text-xs font-medium transition-all ${
-                          quizGoal === item.id
+                          leadGoal === item.id
                             ? "bg-[#C9A96E]/20 border-[#DFBA79] text-white shadow-md"
                             : "bg-black/30 border-white/10 text-[#8E887D] hover:text-white"
                         }`}
@@ -1003,27 +955,26 @@ export default function TamikaClient() {
                   </div>
                 </div>
 
-                {/* Step 2: Timeline & Budget */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs uppercase tracking-wider text-[#C4BFB5] font-semibold mb-2">
                       2. Target Timeline
                     </label>
                     <select
-                      value={quizTimeline}
-                      onChange={(e) => setQuizTimeline(e.target.value)}
+                      value={leadTimeline}
+                      onChange={(e) => setLeadTimeline(e.target.value)}
                       className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-2.5 text-xs text-white outline-none focus:border-[#C9A96E]"
                     >
-                      <option value="Immediately (0 - 30 Days)" className="bg-[#121114]">
+                      <option value="Immediately (0 - 30 Days)" className="bg-[#161418]">
                         Immediately (0 - 30 Days)
                       </option>
-                      <option value="1 - 3 Months" className="bg-[#121114]">
+                      <option value="1 - 3 Months" className="bg-[#161418]">
                         1 - 3 Months
                       </option>
-                      <option value="3 - 6 Months" className="bg-[#121114]">
+                      <option value="3 - 6 Months" className="bg-[#161418]">
                         3 - 6 Months
                       </option>
-                      <option value="Just Researching & Planning" className="bg-[#121114]">
+                      <option value="Just Researching & Planning" className="bg-[#161418]">
                         Just Researching & Planning
                       </option>
                     </select>
@@ -1034,30 +985,29 @@ export default function TamikaClient() {
                       3. Target Price or Home Value
                     </label>
                     <select
-                      value={quizBudget}
-                      onChange={(e) => setQuizBudget(e.target.value)}
+                      value={leadBudget}
+                      onChange={(e) => setLeadBudget(e.target.value)}
                       className="w-full bg-black/40 border border-white/15 rounded-xl px-4 py-2.5 text-xs text-white outline-none focus:border-[#C9A96E]"
                     >
-                      <option value="Under $250,000" className="bg-[#121114]">
+                      <option value="Under $250,000" className="bg-[#161418]">
                         Under $250,000
                       </option>
-                      <option value="$250,000 - $450,000" className="bg-[#121114]">
+                      <option value="$250,000 - $450,000" className="bg-[#161418]">
                         $250,000 - $450,000
                       </option>
-                      <option value="$450,000 - $750,000" className="bg-[#121114]">
+                      <option value="$450,000 - $750,000" className="bg-[#161418]">
                         $450,000 - $750,000
                       </option>
-                      <option value="$750,000 - $1.5M+" className="bg-[#121114]">
+                      <option value="$750,000 - $1.5M+" className="bg-[#161418]">
                         $750,000 - $1.5M+ (Luxury Collection)
                       </option>
-                      <option value="PASS Coaching Tier" className="bg-[#121114]">
+                      <option value="PASS Coaching Tier" className="bg-[#161418]">
                         PASS Coaching Tier ($47 - $297)
                       </option>
                     </select>
                   </div>
                 </div>
 
-                {/* Step 3: Contact */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <input
                     type="text"
@@ -1092,30 +1042,32 @@ export default function TamikaClient() {
         </div>
       </section>
 
-      {/* About Tamika Shanea Robinson, MBA ("The Motivating Mompreneur") */}
-      <section id="about" className="py-20 lg:py-28 relative">
+      {/* ========================================================================= */}
+      {/* 9. ABOUT STRIP (Wix 2-Column Split: Portrait + Biography) */}
+      {/* ========================================================================= */}
+      <section id="about" className="py-20 lg:py-24 border-b border-white/[0.08]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Portrait Image */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden border border-[#C9A96E]/30 bg-[#161411] p-3 shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden border-2 border-[#C9A96E]/30 bg-[#161411] p-2.5 shadow-2xl">
                 <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
                   <Image
-                    src="/assets/tamika/tamika-portrait.png"
+                    src="/assets/tamika/tamika-portrait-clean.jpg"
                     alt="Tamika Shanea Robinson - The Motivating Mompreneur"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
               </div>
             </div>
 
-            {/* Biography & Story */}
+            {/* Bio Column */}
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#DFBA79]">
                 <Heart className="w-4 h-4" /> The Motivating Mompreneur
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
                 Inspiring & Changing Lives Daily <br />
                 <span className="italic font-light text-[#EAD8B8]">Through Positivity, Faith & Strategy.</span>
               </h2>
@@ -1199,8 +1151,10 @@ export default function TamikaClient() {
         </div>
       </section>
 
-      {/* Media & Podcast Section */}
-      <section id="podcast" className="py-20 bg-[#0C0B0E] border-t border-white/[0.08] relative">
+      {/* ========================================================================= */}
+      {/* 10. MEDIA & PODCAST STRIP (Wix Media Strip) */}
+      {/* ========================================================================= */}
+      <section id="podcast" className="py-20 border-b border-white/[0.08] bg-[#0A0A0C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-[#171512] via-[#211E18] to-[#171512] border border-[#C9A96E]/30 rounded-3xl p-8 sm:p-12 shadow-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -1255,26 +1209,25 @@ export default function TamikaClient() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section id="testimonials" className="py-20 lg:py-28 relative">
+      {/* ========================================================================= */}
+      {/* 11. TESTIMONIALS (Wix Testimonial Repeater) */}
+      {/* ========================================================================= */}
+      <section id="testimonials" className="py-20 border-b border-white/[0.08]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
+          <div className="text-center max-w-2xl mx-auto space-y-2 mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-[#DFBA79]">
               Verified Client Stories
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
+            <h2 className="text-3xl font-serif font-bold text-white tracking-tight">
               Trust Built on Exceptional Results
             </h2>
-            <p className="text-sm text-[#A39E93]">
-              Read how Tamika Shanea Robinson advocates for home sellers, buyers, and future real estate professionals.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t, idx) => (
               <div
                 key={idx}
-                className="bg-[#131115] border border-white/10 hover:border-[#C9A96E]/30 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xl transition-all"
+                className="bg-[#141216] border border-white/10 hover:border-[#C9A96E]/30 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xl transition-all"
               >
                 <div className="space-y-4">
                   <div className="flex items-center gap-1 text-[#DFBA79]">
@@ -1300,10 +1253,12 @@ export default function TamikaClient() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-[#0C0B0E] border-t border-white/[0.08]">
+      {/* ========================================================================= */}
+      {/* 12. FAQ STRIP (Wix FAQ App) */}
+      {/* ========================================================================= */}
+      <section id="faq" className="py-20 border-b border-white/[0.08] bg-[#0A0A0C]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-3 mb-12">
+          <div className="text-center space-y-2 mb-12">
             <span className="text-xs font-bold uppercase tracking-widest text-[#DFBA79]">
               Clear Answers
             </span>
@@ -1338,11 +1293,13 @@ export default function TamikaClient() {
         </div>
       </section>
 
-      {/* Final Call to Action */}
-      <section className="py-20 lg:py-28 relative overflow-hidden bg-gradient-to-b from-[#13110E] via-[#1C1813] to-[#0A0A0C]">
+      {/* ========================================================================= */}
+      {/* 13. FINAL CALL TO ACTION (Wix Full-Width Banner Strip) */}
+      {/* ========================================================================= */}
+      <section className="py-20 lg:py-24 relative overflow-hidden bg-gradient-to-b from-[#15120E] via-[#1E1913] to-[#0A0A0C]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <span className="text-xs font-bold uppercase tracking-widest text-[#DFBA79] px-3.5 py-1.5 rounded-full bg-[#C9A96E]/15 border border-[#C9A96E]/30 inline-block">
-            Start Your Cleveland Journey Today
+            Start Your Real Estate Journey
           </span>
           <h2 className="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">
             Ready to Make Your Move With an <br />
@@ -1373,7 +1330,9 @@ export default function TamikaClient() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* ========================================================================= */}
+      {/* 14. WIX FOOTER (Wix Footer Container) */}
+      {/* ========================================================================= */}
       <footer className="border-t border-white/10 bg-[#080709] py-14 text-xs text-[#8E887D]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
@@ -1467,9 +1426,11 @@ export default function TamikaClient() {
         </div>
       </footer>
 
-      {/* Consultation Booking Modal */}
+      {/* ========================================================================= */}
+      {/* 15. BOOKING MODAL (Wix Bookings App Modal) */}
+      {/* ========================================================================= */}
       {isConsultModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
           <div className="relative w-full max-w-lg bg-[#141216] border border-[#C9A96E]/40 rounded-3xl p-6 sm:p-8 shadow-2xl overflow-hidden">
             <button
               onClick={resetConsultModal}
