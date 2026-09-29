@@ -285,10 +285,6 @@ export default function NutrimenteClient() {
       <div className="bg-[#2F5061] text-white text-xs py-2 px-4 sm:px-6 relative z-50">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2.5 text-center md:text-left">
           <div className="flex items-center gap-2 flex-wrap justify-center">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#4297A0] text-white font-semibold text-[11px] tracking-wide uppercase shadow-sm">
-              <Sparkles className="w-3 h-3 text-[#FAF8F5]" />
-              Awwwards Redesign Concept
-            </span>
             <span className="text-[#E0EBF0]">
               Nutrimente by Angela Senese (IFMCP) • Redesigned by{" "}
               <strong className="text-white">Miskat Hossain</strong>
