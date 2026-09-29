@@ -280,61 +280,19 @@ export default function NutrimenteClient() {
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#2F5061] font-sans antialiased selection:bg-[#4297A0] selection:text-white">
       {/* ========================================================================= */}
-      {/* 1. CONCEPT HEADER & WORDPRESS BLUEPRINT BAR                               */}
+      {/* 1. SINGLE-LINE STICKY HEADER                                             */}
       {/* ========================================================================= */}
-      <div className="bg-[#2F5061] text-white text-xs py-2 px-4 sm:px-6 relative z-50">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2.5 text-center md:text-left">
-          <div className="flex items-center gap-2 flex-wrap justify-center">
-            <span className="text-[#E0EBF0]">
-              Nutrimente by Angela Senese (IFMCP) • Redesigned by{" "}
-              <strong className="text-white">Miskat Hossain</strong>
-            </span>
-          </div>
-
-          <div className="flex items-center gap-3 text-[11px] text-[#C0D4DC]">
-            <button
-              onClick={() => setWpDrawerOpen(true)}
-              className="inline-flex items-center gap-1 text-[#E07A70] hover:text-white transition-colors underline decoration-dotted underline-offset-4 font-medium"
-            >
-              <Code2 className="w-3.5 h-3.5 text-[#E07A70]" />
-              <span>WordPress Implementation Blueprint</span>
-            </button>
-            <span className="text-[#41687A]">|</span>
-            <a
-              href="https://nutrimente.co.uk/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 hover:text-white transition-colors"
-            >
-              <span>Current Live Site</span>
-              <ExternalLink className="w-3 h-3" />
-            </a>
-            <span className="text-[#41687A]">|</span>
-            <Link
-              href="/"
-              className="inline-flex items-center gap-1 text-[#4297A0] hover:text-white font-semibold transition-colors bg-white/10 px-2 py-0.5 rounded-md"
-            >
-              <span>Miskat's Site</span>
-              <ArrowUpRight className="w-3 h-3" />
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* ========================================================================= */}
-      {/* 2. MAIN STICKY NAVIGATION (Using Her Official Logo & Color System)         */}
-      {/* ========================================================================= */}
-      <header className="sticky top-0 z-40 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#E3ECEB] transition-all shadow-[0_2px_15px_-3px_rgba(47,80,97,0.05)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
+      <header className="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E3ECEB] transition-all shadow-[0_2px_15px_-3px_rgba(47,80,97,0.05)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4 lg:gap-6">
           {/* Her Own Official Brand Logo */}
-          <Link href="/nutrimente" className="flex items-center gap-3 group">
+          <Link href="/nutrimente" className="flex items-center gap-3 shrink-0 group">
             <div className="relative py-1">
               <Image
                 src="/assets/nutrimente/nutrimente-official-logo.png"
                 alt="Nutrimente — nourishing body & mind by Angela Senese"
                 width={200}
                 height={55}
-                className="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+                className="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-[1.02]"
                 priority
                 unoptimized
               />
@@ -342,7 +300,7 @@ export default function NutrimenteClient() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-[#2F5061]/80">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-7 text-xs font-semibold uppercase tracking-wider text-[#2F5061]/80">
             <a href="#about" className="hover:text-[#4297A0] transition-colors">
               About Angela
             </a>
@@ -370,14 +328,30 @@ export default function NutrimenteClient() {
             </a>
           </nav>
 
-          {/* Action CTAs */}
-          <div className="flex items-center gap-3">
+          {/* Action CTAs in ONE single line */}
+          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
+            <button
+              onClick={() => setWpDrawerOpen(true)}
+              className="hidden xl:inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold text-[#E07A70] bg-[#FFF5F3] hover:bg-[#FEECE8] border border-[#F4DDD9] transition-all"
+            >
+              <Code2 className="w-3.5 h-3.5 text-[#E07A70]" />
+              <span>WP Guide</span>
+            </button>
+
+            <Link
+              href="/"
+              className="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold text-[#2F5061] bg-[#FAF8F5] hover:bg-[#EBF3F2] border border-[#DCE9E8] transition-all"
+            >
+              <span>Miskat's Site</span>
+              <ArrowUpRight className="w-3 h-3 text-[#4297A0]" />
+            </Link>
+
             <button
               onClick={() => {
                 setBookingService("Free 15-Minute Discovery Call");
                 setIsBookingModalOpen(true);
               }}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#4297A0] hover:bg-[#367C84] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-md shadow-[#4297A0]/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full bg-[#4297A0] hover:bg-[#367C84] text-white text-xs sm:text-sm font-semibold tracking-wide shadow-md shadow-[#4297A0]/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <Calendar className="w-3.5 h-3.5" />
               <span>Book Discovery Call</span>
