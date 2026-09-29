@@ -56,49 +56,11 @@ export default function NutrimenteClient() {
   // Active FAQ Accordion
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
 
-  // Interactive Hero Clinical Pathway Selector
-  const [heroPathway, setHeroPathway] = useState<"hormones" | "glp1" | "metabolism" | "gut">("hormones");
-
   // Interactive Health Audit / Root Cause Quiz
   const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([
     "tired-afternoon",
     "brain-fog",
   ]);
-
-  const heroPathwaysData = {
-    hormones: {
-      badge: "Perimenopause & Hormonal Balance",
-      title: "Restore Hormonal Harmony Without Guesswork",
-      desc: "Comprehensive dried-urine hormone metabolomics (DUTCH) to address brain fog, sudden weight gain around the middle, sleep disruptions, and erratic cycles.",
-      testing: "DUTCH Complete + Adrenal Cortisol Curve + Thyroid Panel",
-      timeline: "Measurable improvements within 4-6 weeks",
-      color: "teal",
-    },
-    glp1: {
-      badge: "Beyond the Injection™ Co-Care",
-      title: "Protect Muscle & Prevent Rebound on GLP-1",
-      desc: "Clinical nutrition co-care for Wegovy, Ozempic and Mounjaro users to preserve lean tissue, soothe gastrointestinal side effects, and ensure permanent results.",
-      testing: "Fasting Insulin + ApoB + Bioelectrical Body Composition",
-      timeline: "Symptom relief within 14 days",
-      color: "coral",
-    },
-    metabolism: {
-      badge: "Cardiometabolic & Longevity",
-      title: "Reverse Insulin Resistance & Energy Crashes",
-      desc: "Connect the dots between rising cholesterol, blood glucose volatility, afternoon fatigue, and visceral fat storage with root-cause functional medicine.",
-      testing: "Advanced Lipid NMR + HbA1c + HOMA-IR + Liver Biomarkers",
-      timeline: "Normalised biomarkers in 8-12 weeks",
-      color: "teal",
-    },
-    gut: {
-      badge: "Gut-Brain & Microbiome PCR",
-      title: "Eliminate Bloating & Restore Gut Integrity",
-      desc: "Targeted DNA stool diagnostics to identify microbial dysbiosis, low stomach acid, impaired bile flow, and food intolerances without restrictive starvation diets.",
-      testing: "GI-MAP DNA PCR Stool Panel + Zonulin + Secretory IgA",
-      timeline: "90% digestive symptom resolution in 6-8 weeks",
-      color: "coral",
-    },
-  };
 
   const symptomList = [
     {
@@ -330,13 +292,6 @@ export default function NutrimenteClient() {
 
           {/* Action CTAs in ONE single line */}
           <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
-            <button
-              onClick={() => setWpDrawerOpen(true)}
-              className="hidden xl:inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold text-[#E07A70] bg-[#FFF5F3] hover:bg-[#FEECE8] border border-[#F4DDD9] transition-all"
-            >
-              <Code2 className="w-3.5 h-3.5 text-[#E07A70]" />
-              <span>WP Guide</span>
-            </button>
 
             <Link
               href="/"
@@ -467,84 +422,11 @@ export default function NutrimenteClient() {
                 </p>
               </div>
 
-              {/* Interactive Quick-Pillar Selector (Awwwards feature) */}
-              <div className="p-4 rounded-2xl bg-white border border-[#DCE9E8] shadow-sm space-y-3">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="font-semibold text-[#2F5061] uppercase tracking-wider text-[11px]">
-                    Explore Your Primary Health Focus:
-                  </span>
-                  <span className="text-[#E07A70] text-[11px] font-semibold">Interactive Clinical Snapshot</span>
-                </div>
-
-                {/* 4 Interactive Buttons */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                  <button
-                    onClick={() => setHeroPathway("hormones")}
-                    className={`px-3 py-2 rounded-xl text-xs font-semibold transition-all text-center ${
-                      heroPathway === "hormones"
-                        ? "bg-[#4297A0] text-white shadow-sm"
-                        : "bg-[#F3F8F8] text-[#2F5061] hover:bg-[#E5F2F2]"
-                    }`}
-                  >
-                    Hormones & Peri
-                  </button>
-                  <button
-                    onClick={() => setHeroPathway("glp1")}
-                    className={`px-3 py-2 rounded-xl text-xs font-semibold transition-all text-center ${
-                      heroPathway === "glp1"
-                        ? "bg-[#E07A70] text-white shadow-sm"
-                        : "bg-[#FFF5F3] text-[#2F5061] hover:bg-[#FEECE8]"
-                    }`}
-                  >
-                    GLP-1 Co-Care
-                  </button>
-                  <button
-                    onClick={() => setHeroPathway("metabolism")}
-                    className={`px-3 py-2 rounded-xl text-xs font-semibold transition-all text-center ${
-                      heroPathway === "metabolism"
-                        ? "bg-[#4297A0] text-white shadow-sm"
-                        : "bg-[#F3F8F8] text-[#2F5061] hover:bg-[#E5F2F2]"
-                    }`}
-                  >
-                    Metabolism & Heart
-                  </button>
-                  <button
-                    onClick={() => setHeroPathway("gut")}
-                    className={`px-3 py-2 rounded-xl text-xs font-semibold transition-all text-center ${
-                      heroPathway === "gut"
-                        ? "bg-[#E07A70] text-white shadow-sm"
-                        : "bg-[#FFF5F3] text-[#2F5061] hover:bg-[#FEECE8]"
-                    }`}
-                  >
-                    Gut & Microbiome
-                  </button>
-                </div>
-
-                {/* Live Snapshot Card */}
-                <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#E8EFF0] space-y-1.5 text-xs">
-                  <div className="flex items-center justify-between">
-                    <span className="font-serif font-bold text-sm text-[#2F5061]">
-                      {heroPathwaysData[heroPathway].title}
-                    </span>
-                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-white border border-[#DCE8E8] text-[#4297A0] font-semibold">
-                      {heroPathwaysData[heroPathway].timeline}
-                    </span>
-                  </div>
-                  <p className="text-[#2F5061]/80 text-xs leading-relaxed">
-                    {heroPathwaysData[heroPathway].desc}
-                  </p>
-                  <div className="pt-1 flex items-center gap-1.5 text-[11px] text-[#4297A0] font-medium">
-                    <Dna className="w-3.5 h-3.5" />
-                    <span>Lab diagnostics: {heroPathwaysData[heroPathway].testing}</span>
-                  </div>
-                </div>
-              </div>
-
               {/* Dual Action CTAs in Brand Colors */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-1">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
                 <button
                   onClick={() => {
-                    setBookingService(`Consultation — ${heroPathwaysData[heroPathway].badge}`);
+                    setBookingService("Free 15-Minute Discovery Call");
                     setIsBookingModalOpen(true);
                   }}
                   className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#4297A0] hover:bg-[#367C84] text-white font-semibold text-sm tracking-wide shadow-lg shadow-[#4297A0]/20 transition-all transform hover:-translate-y-0.5"
@@ -583,65 +465,67 @@ export default function NutrimenteClient() {
             {/* Right Visual Composition (5 cols) */}
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-md lg:max-w-none">
-                {/* Organic curved framing in soft teal/coral */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#4297A0]/15 via-[#E07A70]/10 to-transparent rounded-[2.5rem] transform rotate-2 scale-105 -z-10" />
+                {/* Organic curved framing in soft teal/coral glow */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#4297A0]/15 via-[#E07A70]/10 to-transparent rounded-[2.5rem] transform rotate-1 scale-105 -z-10" />
 
                 {/* Primary Angela Portrait Card */}
-                <div className="relative rounded-[2.2rem] overflow-hidden border border-[#DCE9E8] bg-white shadow-xl">
-                  <Image
-                    src="/assets/nutrimente/angela-hero.jpg"
-                    alt="Angela Senese - Certified Functional Medicine Practitioner & Registered Nutritional Therapist"
-                    width={800}
-                    height={1000}
-                    className="w-full h-[470px] sm:h-[530px] object-cover object-top hover:scale-[1.02] transition-transform duration-700"
-                    priority
-                    unoptimized
-                  />
+                <div className="bg-white rounded-[2.2rem] p-3 sm:p-4 border border-[#DCE9E8] shadow-xl">
+                  {/* Photo Frame - Unobstructed view of Angela */}
+                  <div className="relative rounded-[1.8rem] overflow-hidden bg-[#FAF8F5]">
+                    <Image
+                      src="/assets/nutrimente/angela-hero.jpg"
+                      alt="Angela Senese - Certified Functional Medicine Practitioner & Registered Nutritional Therapist"
+                      width={1200}
+                      height={800}
+                      className="w-full aspect-[4/3.5] sm:aspect-[4/3.6] object-cover object-[center_28%] transition-transform duration-700 hover:scale-[1.02]"
+                      priority
+                      unoptimized
+                    />
 
-                  {/* Gradient Overlay for bottom text */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2F5061] via-[#2F5061]/20 to-transparent opacity-90" />
-
-                  {/* Floating Bio Card on the image */}
-                  <div className="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E3ECEB] space-y-2 shadow-lg">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[#2F5061] font-serif text-lg font-bold">Angela Senese</span>
-                      <span className="px-2.5 py-0.5 rounded-full bg-[#EBF4F4] text-[#4297A0] text-[11px] font-bold">
-                        IFMCP, DipCNM, mBANT
-                      </span>
+                    {/* Small un-intrusive accreditation tag at top-right corner */}
+                    <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-md border border-[#DCE9E8] rounded-full px-3 py-1 shadow-sm flex items-center gap-1.5">
+                      <Award className="w-3.5 h-3.5 text-[#4297A0]" />
+                      <span className="text-[11px] font-bold text-[#2F5061]">IFM Certified Practitioner</span>
                     </div>
-                    <p className="text-xs text-[#2F5061]/80 leading-relaxed font-normal">
-                      "I help clients connect the dots between early warning signs, cutting-edge functional labs, and everyday realistic nutrition."
-                    </p>
-                    <div className="pt-1 flex items-center justify-between text-[11px] text-[#2F5061]/70">
-                      <span className="flex items-center gap-1">
-                        <MapPin className="w-3 h-3 text-[#4297A0]" /> Farnham & London Clinic
+                  </div>
+
+                  {/* Clean Bio & Credential Bar below the photo - nothing covers her face */}
+                  <div className="pt-3.5 px-2">
+                    <div className="flex items-center justify-between gap-2">
+                      <div>
+                        <h3 className="text-[#2F5061] font-serif text-lg font-bold">Angela Senese</h3>
+                        <p className="text-xs text-[#2F5061]/70 font-medium">
+                          IFMCP • DipCNM • mBANT • CNHC Registered
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <div className="flex items-center gap-1 text-[#E07A70] text-xs font-bold justify-end">
+                          <Star className="w-3.5 h-3.5 fill-current" />
+                          <span>5.0</span>
+                        </div>
+                        <p className="text-[11px] text-[#2F5061]/60">Verified Patient Reviews</p>
+                      </div>
+                    </div>
+
+                    <div className="mt-3 pt-3 border-t border-[#E3ECEB] flex items-center justify-between text-xs text-[#2F5061]/75">
+                      <span className="flex items-center gap-1 font-medium">
+                        <MapPin className="w-3.5 h-3.5 text-[#4297A0]" /> Farnham, Surrey & London
                       </span>
-                      <span className="flex items-center gap-1 text-[#E07A70] font-semibold">
-                        <Star className="w-3 h-3 fill-current" /> 5.0 Patient Rating
+                      <span className="px-2 py-0.5 rounded-full bg-[#EBF4F4] text-[#4297A0] text-[10px] font-bold tracking-wide">
+                        Top 20% IFM Score
                       </span>
                     </div>
                   </div>
                 </div>
 
-                {/* Floating Metric Pill: IFM Top 20% Quintile */}
-                <div className="absolute -top-4 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md border border-[#DCE9E8] rounded-2xl p-3.5 shadow-lg flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#EBF4F4] flex items-center justify-center text-[#4297A0]">
-                    <Award className="w-5 h-5 text-[#4297A0]" />
+                {/* Innovation Highlight below portrait card */}
+                <div className="mt-3 bg-white/95 backdrop-blur-md border border-[#DCE9E8] rounded-2xl p-3 shadow-md flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#FFF5F3] flex items-center justify-center text-[#E07A70] shrink-0">
+                    <Stethoscope className="w-4 h-4 text-[#E07A70]" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-[#2F5061] tracking-wide">Top 20% Quintile</div>
-                    <div className="text-[11px] text-[#2F5061]/70">IFM Final Assessment Score</div>
-                  </div>
-                </div>
-
-                {/* Floating Metric Pill: GLP-1 Innovation */}
-                <div className="absolute -bottom-4 -right-2 sm:-right-4 bg-white/95 backdrop-blur-md border border-[#DCE9E8] rounded-2xl p-3.5 shadow-lg flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#FFF5F3] flex items-center justify-center text-[#E07A70]">
-                    <Stethoscope className="w-5 h-5 text-[#E07A70]" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold text-[#2F5061] tracking-wide">Beyond the Injection™</div>
-                    <div className="text-[11px] text-[#2F5061]/70">GLP-1 Functional Co-Care</div>
+                    <div className="text-xs font-bold text-[#2F5061]">Beyond the Injection™ Co-Care</div>
+                    <div className="text-[11px] text-[#2F5061]/70">Pioneering functional nutrition protocol for GLP-1 patients</div>
                   </div>
                 </div>
               </div>
