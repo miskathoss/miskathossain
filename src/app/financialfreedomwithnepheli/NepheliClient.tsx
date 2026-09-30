@@ -252,20 +252,10 @@ export default function NepheliClient() {
       <header className="border-b border-[#1F2922] bg-[#0A0D0C]/90 backdrop-blur-md sticky top-[41px] z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Brand Name with verified badge */}
-          <Link href="#top" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-[#52B788] shadow-md group-hover:border-[#74C69D] transition-colors shrink-0">
-              <Image
-                src="/assets/nepheli/nepheli-avatar.jpg"
-                alt="Nepheli"
-                fill
-                sizes="40px"
-                priority
-                className="object-cover"
-              />
-            </div>
+          <Link href="#top" className="flex items-center gap-2 group">
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-[#D8F3DC] transition-colors">
+                <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white group-hover:text-[#D8F3DC] transition-colors">
                   Nepheli
                 </span>
                 <CheckCircle2 className="w-4 h-4 text-[#52B788] fill-[#52B788]/20" />
