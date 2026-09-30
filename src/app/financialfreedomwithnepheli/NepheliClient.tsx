@@ -251,27 +251,27 @@ export default function NepheliClient() {
       {/* ============================================================== */}
       <header className="border-b border-[#1F2922] bg-[#0A0D0C]/90 backdrop-blur-md sticky top-[41px] z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* Logo with verified badge */}
+          {/* Brand Name with verified badge */}
           <Link href="#top" className="flex items-center gap-3 group">
-            <div className="relative w-11 h-11 rounded-xl overflow-hidden border border-[#52B788]/60 shadow-lg group-hover:border-[#74C69D] transition-colors bg-[#08120C]">
+            <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-[#52B788] shadow-md group-hover:border-[#74C69D] transition-colors shrink-0">
               <Image
-                src="/assets/nepheli/nepheli-logo.jpg"
-                alt="Financial Freedom With Nepheli Logo"
+                src="/assets/nepheli/nepheli-avatar.jpg"
+                alt="Nepheli"
                 fill
-                sizes="44px"
+                sizes="40px"
                 priority
                 className="object-cover"
               />
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="font-serif text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-[#D8F3DC] transition-colors">
-                  FINANCIAL FREEDOM
+                <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-white group-hover:text-[#D8F3DC] transition-colors">
+                  Nepheli
                 </span>
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#52B788] fill-[#52B788]/20" />
+                <CheckCircle2 className="w-4 h-4 text-[#52B788] fill-[#52B788]/20" />
               </div>
               <p className="text-[10px] text-[#95D5B2] font-semibold tracking-wider uppercase">
-                WITH NEPHELI • WEALTH STRATEGY
+                Financial Freedom & Wealth Strategy
               </p>
             </div>
           </Link>
@@ -484,29 +484,21 @@ export default function NepheliClient() {
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
                 
-                {/* Main Hero Visual: Nepheli's High-Res Editorial Portrait */}
-                <div className="relative rounded-3xl overflow-hidden border-2 border-[#2D6A4F]/60 shadow-[0_20px_50px_rgba(27,67,50,0.35)] bg-gradient-to-b from-[#162319] to-[#0A0D0C] aspect-[3/4]">
+                {/* Main Hero Visual: Nepheli's Real Photo from Instagram */}
+                <div className="relative rounded-3xl overflow-hidden border-2 border-[#2D6A4F]/60 shadow-[0_20px_50px_rgba(27,67,50,0.35)] bg-gradient-to-b from-[#162319] to-[#0A0D0C] aspect-square">
                   <Image
-                    src="/assets/nepheli/nepheli-hero-portrait.jpg"
-                    alt="Nepheli - Financial Freedom & Wealth Strategist"
+                    src="/assets/nepheli/nepheli-real-hero.jpg"
+                    alt="Nepheli - Financial Freedom Strategist"
                     fill
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     priority
-                    className="object-cover object-top hover:scale-[1.02] transition-transform duration-700"
+                    className="object-cover object-center hover:scale-[1.03] transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D0C] via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D0C] via-transparent to-transparent opacity-75" />
 
-                  {/* Top Floating Brand Identity Badge */}
+                  {/* Top Floating Badge with her original verified handle */}
                   <div className="absolute top-4 left-4 bg-[#0A0D0C]/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#2D6A4F]/60 text-xs font-semibold text-[#D8F3DC] flex items-center gap-2 shadow-xl">
-                    <div className="relative w-5 h-5 rounded-md overflow-hidden shrink-0 border border-[#52B788]/40">
-                      <Image
-                        src="/assets/nepheli/nepheli-logo.jpg"
-                        alt="Logo Emblem"
-                        fill
-                        sizes="20px"
-                        className="object-cover"
-                      />
-                    </div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#52B788] animate-pulse" />
                     <span>Financial Freedom With Nepheli</span>
                   </div>
 
@@ -616,108 +608,6 @@ export default function NepheliClient() {
               </p>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================== */}
-      {/* 4.5 BRAND IDENTITY & DEMO LOGO ARCHITECTURE */}
-      {/* ============================================================== */}
-      <section className="py-20 border-b border-[#18231B] bg-gradient-to-b from-[#0A0D0C] via-[#0E1610] to-[#0A0D0C] relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#101913] border border-[#263D2B] rounded-3xl p-6 sm:p-12 shadow-2xl relative">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-              
-              {/* Logo Presentation Display */}
-              <div className="lg:col-span-5 flex flex-col items-center text-center">
-                <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl overflow-hidden border-2 border-[#52B788]/60 shadow-[0_15px_40px_rgba(45,106,79,0.4)] bg-[#070D09] group">
-                  <Image
-                    src="/assets/nepheli/nepheli-logo.jpg"
-                    alt="Financial Freedom With Nepheli - Official Brand Logo Concept"
-                    fill
-                    sizes="(max-width: 640px) 256px, 288px"
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40" />
-                </div>
-
-                <div className="mt-4 inline-flex items-center gap-2 bg-[#17261C] px-3.5 py-1 rounded-full border border-[#2E4D35] text-xs font-semibold text-[#D8F3DC]">
-                  <Sparkles className="w-3.5 h-3.5 text-[#F4A261]" />
-                  <span>Custom Monogram & Wordmark Concept</span>
-                </div>
-              </div>
-
-              {/* Brand Architecture & Symbolism */}
-              <div className="lg:col-span-7">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#52B788] bg-[#1B4332]/50 px-3 py-1 rounded-full border border-[#2D6A4F]/40">
-                  Visual Identity Architecture
-                </span>
-
-                <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl font-normal text-white mt-4 mb-4">
-                  A Custom Brand Identity Tailored for Financial Authority
-                </h3>
-
-                <p className="text-xs sm:text-sm text-[#A3B899] leading-relaxed mb-6">
-                  To elevate your social reach into a high-converting wealth advisory, your visual brand must instantly convey trust, longevity, and sophistication. This custom identity was engineered around your core teachings:
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  <div className="p-4 rounded-xl bg-[#142017] border border-[#233827]">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#52B788]" />
-                      <h4 className="text-xs font-bold uppercase tracking-wide text-white">
-                        The Rising Wealth Arc
-                      </h4>
-                    </div>
-                    <p className="text-xs text-[#8BA087]">
-                      The swooping gold curve intertwining with the &ldquo;N&rdquo; visualizes the hockey-stick inflection point of compound interest.
-                    </p>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-[#142017] border border-[#233827]">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#F4A261]" />
-                      <h4 className="text-xs font-bold uppercase tracking-wide text-white">
-                        The North Star Sparkle
-                      </h4>
-                    </div>
-                    <p className="text-xs text-[#8BA087]">
-                      Positioned atop the monogram, symbolizing financial clarity, intentionality, and freedom as life’s greatest reward.
-                    </p>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-[#142017] border border-[#233827]">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#2D6A4F]" />
-                      <h4 className="text-xs font-bold uppercase tracking-wide text-white">
-                        Emerald & Obsidian Tone
-                      </h4>
-                    </div>
-                    <p className="text-xs text-[#8BA087]">
-                      Deep forest green reflects growth, wealth health, and stability — grounding your content in calm, proven principles.
-                    </p>
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-[#142017] border border-[#233827]">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#D8F3DC]" />
-                      <h4 className="text-xs font-bold uppercase tracking-wide text-white">
-                        Executive Typography
-                      </h4>
-                    </div>
-                    <p className="text-xs text-[#8BA087]">
-                      Refined editorial serif headlines paired with modern Swiss sans-serif for crystal-clear readability on mobile screens.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2 text-xs text-[#70846E]">
-                  <CheckCircle2 className="w-4 h-4 text-[#52B788]" />
-                  <span>Ready for website, YouTube thumbnails, PDF workbooks, and business cards.</span>
-                </div>
-              </div>
-
-            </div>
           </div>
         </div>
       </section>
@@ -1522,21 +1412,21 @@ export default function NepheliClient() {
       <footer className="border-t border-[#1C261F] pt-12 pb-28 sm:pb-12 bg-[#060907] text-xs text-[#70846E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <div className="relative w-10 h-10 rounded-xl overflow-hidden border border-[#52B788]/60 shrink-0 bg-[#08120C]">
+            <div className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-[#52B788] shrink-0 shadow-md">
               <Image
-                src="/assets/nepheli/nepheli-logo.jpg"
-                alt="Financial Freedom With Nepheli Logo"
+                src="/assets/nepheli/nepheli-avatar.jpg"
+                alt="Nepheli"
                 fill
-                sizes="40px"
+                sizes="36px"
                 className="object-cover"
               />
             </div>
             <div>
               <p className="font-serif font-bold text-white text-sm">
-                Financial Freedom With Nepheli
+                Nepheli
               </p>
               <p className="text-[11px] text-[#8BA087]">
-                Grants Pass, Oregon • &ldquo;Freedom is life’s greatest reward&rdquo;
+                Financial Freedom Strategist • Grants Pass, Oregon
               </p>
             </div>
           </div>
