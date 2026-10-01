@@ -404,15 +404,14 @@ export default function NeuroNuanceClient() {
               </div>
             </div>
 
-            {/* Right Media Column: Desk Portrait */}
+            {/* Right Media Column: Cristi's Official Portrait */}
             <div className="lg:col-span-6 flex justify-center lg:justify-end relative">
-              <div className="relative w-full max-w-lg lg:max-w-none rounded-2xl overflow-hidden shadow-sm">
+              <div className="relative w-full max-w-md sm:max-w-lg aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white ring-1 ring-[#E8DCF0] bg-white">
                 <Image
-                  src="/assets/neuronuance/cristi-desk-portrait.png"
-                  alt="Cristi Trudgeon - Transformational Coaching & Neuroscience"
-                  width={574}
-                  height={396}
-                  className="w-full h-auto object-cover rounded-2xl"
+                  src="/assets/neuronuance/cristi-hero.jpg"
+                  alt="Cristi Trudgeon - Founder of NeuroNuance Inc."
+                  fill
+                  className="object-cover object-top hover:scale-[1.02] transition-transform duration-500"
                   priority
                 />
               </div>
