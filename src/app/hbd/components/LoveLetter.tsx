@@ -69,6 +69,32 @@ export function LoveLetter() {
           </p>
         </div>
 
+        {/* Custom Song Lyrics Tribute */}
+        <div className="mt-6 p-5 sm:p-6 rounded-2xl bg-white/[0.04] border border-rose-400/25 backdrop-blur-md">
+          <div className="flex items-center justify-between gap-2 text-rose-300 text-xs font-mono uppercase tracking-wider mb-3">
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+              <span>আমাদের গান — &ldquo;শুভ জন্মদিন রিমতি&rdquo;</span>
+            </div>
+            <span className="text-[11px] text-amber-200/80 font-serif">A Song for You 🎵</span>
+          </div>
+          <p className="font-serif text-amber-100/90 text-xs sm:text-sm leading-relaxed whitespace-pre-line border-l-2 border-rose-400/50 pl-4 py-1 italic">
+{`"শুভ জন্মদিন, Rimti,
+আমার প্রিয় মানুষ,
+তোমাকে পেয়ে এই জীবনটা
+হয়ে গেছে অনেক বেশি সুন্দর।
+
+তুমি হাসো, তুমি ভালো থাকো,
+তোমার সব স্বপ্ন পূরণ হোক,
+আর যতদিন আমরা একসাথে—
+আমাদের ভালোবাসা ততদিন থাকুক।
+
+তোমার জন্মদিনটা শুধু তোমার জন্মদিন না,
+এটা আমার কাছেও একটা বিশেষ দিন...
+কারণ এই দিনেই আমার জীবনের সবচেয়ে সুন্দর মানুষটা পৃথিবীতে এসেছিল। ❤️"`}
+          </p>
+        </div>
+
         {/* Signature */}
         <div className="mt-8 pt-6 border-t border-rose-400/20 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-center sm:text-left">

@@ -58,12 +58,12 @@ export function HbdClient() {
           {isPlayingMusic ? (
             <>
               <Volume2 className="w-4 h-4 text-rose-400 animate-pulse" />
-              <span className="hidden sm:inline">Music Playing</span>
+              <span className="inline-block max-w-[170px] truncate sm:max-w-none">শুভ জন্মদিন রিমতি 🎵</span>
             </>
           ) : (
             <>
               <VolumeX className="w-4 h-4 text-slate-400" />
-              <span className="hidden sm:inline">Play Romantic Music</span>
+              <span>গান শুনুন 🎵</span>
             </>
           )}
         </button>
