@@ -39,12 +39,21 @@ class SoundEngine {
 
     if (typeof window !== "undefined") {
       if (!this.customAudio) {
-        const audio = new Audio("/hbd/song.m4a");
+        // Try song.mp3 first, then song.m4a
+        const audio = new Audio("/hbd/song.mp3");
         audio.loop = true;
-        audio.volume = 0.85;
+        audio.volume = 0.9;
 
         audio.addEventListener("error", () => {
-          this.startSynthesizedAmbient();
+          // Try fallback to m4a if mp3 not found
+          const fallback = new Audio("/hbd/song.m4a");
+          fallback.loop = true;
+          fallback.volume = 0.9;
+          fallback.play().then(() => {
+            this.customAudio = fallback;
+          }).catch((err) => {
+            console.warn("Could not play audio track:", err);
+          });
         });
 
         const playPromise = audio.play();
@@ -53,14 +62,12 @@ class SoundEngine {
             .then(() => {
               this.customAudio = audio;
             })
-            .catch(() => {
-              this.startSynthesizedAmbient();
+            .catch((err) => {
+              console.warn("Could not play song.mp3 directly:", err);
             });
-        } else {
-          this.startSynthesizedAmbient();
         }
       } else {
-        this.customAudio.play().catch(() => this.startSynthesizedAmbient());
+        this.customAudio.play().catch((err) => console.warn(err));
       }
     }
   }
