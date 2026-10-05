@@ -17,43 +17,107 @@ interface PhotoItem {
 const photos: PhotoItem[] = [
   {
     id: 1,
-    src: "/hbd/rimty-1.jpg",
-    title: "The Day Our Forever Began",
-    subtitle: "Our Blessed Beginning",
-    note: "Holding your hand on this day, I knew without a single doubt that I had found my forever. You looked like an angel, and you still do every second of every day.",
+    src: "/rimty/memories/1.jpg",
+    title: "Our Beautiful Beginning",
+    subtitle: "Memory 01",
+    note: "Holding your hand here felt like holding my entire universe. From day one, you made my life complete and brighter than the stars.",
     rotation: "-rotate-2",
   },
   {
     id: 2,
-    src: "/hbd/rimty-2.jpg",
-    title: "My Safe Haven",
-    subtitle: "In Your Warmth",
-    note: "Whenever the world gets noisy, this moment reminds me where my peace lives. Forehead against forehead, heartbeat against heartbeat. You are my home, Rimty.",
-    rotation: "rotate-3",
-  },
-  {
-    id: 3,
-    src: "/hbd/rimty-3.jpg",
-    title: "Dreaming Under The Same Sky",
-    subtitle: "Looking Ahead Together",
-    note: "Looking up into the sky beside you filled my heart with endless dreams. Every prayer I ever made was answered the moment you came into my life.",
-    rotation: "-rotate-3",
-  },
-  {
-    id: 4,
-    src: "/hbd/rimty-4.jpg",
-    title: "Walking Hand In Hand",
-    subtitle: "Every Step With You",
-    note: "Strolling through the garden with your hand in mine. No matter what path life takes us down, as long as your fingers are laced with mine, I am the luckiest man alive.",
+    src: "/rimty/memories/2.jpg",
+    title: "That Radiant Smile",
+    subtitle: "Memory 02",
+    note: "Your smile has this effortless way of washing away every worry. Whenever I see you smile like this, my heart feels at home.",
     rotation: "rotate-2",
   },
   {
-    id: 5,
-    src: "/hbd/rimty-5.jpg",
-    title: "The Most Beautiful Woman In The World",
-    subtitle: "My Queen, Rimty",
-    note: "Your elegance, your kindness, your pure smile, and the warmth of your heart. Happy Birthday to the queen of my heart. I love you more than words could ever convey.",
+    id: 3,
+    src: "/rimty/memories/3.jpg",
+    title: "Moments Captured in Time",
+    subtitle: "Memory 03",
+    note: "Every picture of us is a treasure I hold close to my heart. Looking back at this moment reminds me of how truly blessed I am.",
     rotation: "-rotate-1",
+  },
+  {
+    id: 4,
+    src: "/rimty/memories/4.jpg",
+    title: "In Your Eyes, My World",
+    subtitle: "Memory 04",
+    note: "Whenever the world gets noisy, being with you is where my peace lives. You are not only my wife; you are my best friend and soulmate.",
+    rotation: "rotate-3",
+  },
+  {
+    id: 5,
+    src: "/rimty/memories/5.jpg",
+    title: "Little Candid Magic",
+    subtitle: "Memory 05",
+    note: "The sweetest moments in life are often the quiet, candid ones where we just laugh and be ourselves. I cherish every second.",
+    rotation: "-rotate-3",
+  },
+  {
+    id: 6,
+    src: "/rimty/memories/6.jpg",
+    title: "Side by Side",
+    subtitle: "Memory 06",
+    note: "No matter where life leads us or what road we walk, as long as I am walking it beside you, every step is a blessing.",
+    rotation: "rotate-1",
+  },
+  {
+    id: 7,
+    src: "/rimty/memories/7.jpg",
+    title: "My Safe Haven",
+    subtitle: "Memory 07",
+    note: "In your warmth, your gentleness, and your kindness, I found everything I had ever prayed for.",
+    rotation: "-rotate-2",
+  },
+  {
+    id: 8,
+    src: "/rimty/memories/8.jpg",
+    title: "Endless Laughter & Joy",
+    subtitle: "Memory 08",
+    note: "You bring so much joy into our days. Seeing you happy is my greatest mission in this life.",
+    rotation: "rotate-2",
+  },
+  {
+    id: 9,
+    src: "/rimty/memories/9.jpg",
+    title: "Dreaming Under The Sky",
+    subtitle: "Memory 09",
+    note: "Looking into our future together with hope, dreams, and unconditional love. Whatever comes, we take on this universe together.",
+    rotation: "-rotate-1",
+  },
+  {
+    id: 10,
+    src: "/rimty/memories/10.jpg",
+    title: "Pure Happiness",
+    subtitle: "Memory 10",
+    note: "A picture worth more than ten thousand words. My heart swells with gratitude every time I look at this memory.",
+    rotation: "rotate-3",
+  },
+  {
+    id: 11,
+    src: "/rimty/memories/11.jpg",
+    title: "Every Day A Blessing",
+    subtitle: "Memory 11",
+    note: "Life with you is a continuous celebration. Thank you for being the wonderful, caring woman that you are.",
+    rotation: "-rotate-3",
+  },
+  {
+    id: 12,
+    src: "/rimty/memories/12.jpg",
+    title: "Forever & Always",
+    subtitle: "Memory 12",
+    note: "Through every season of life, my love for you only grows deeper, stronger, and more resilient with each passing year.",
+    rotation: "rotate-2",
+  },
+  {
+    id: 13,
+    src: "/rimty/memories/13.jpg",
+    title: "The Queen of My Heart",
+    subtitle: "Memory 13",
+    note: "Happy Birthday to the most breathtaking woman in the entire world. Here is to a lifetime of walking hand in hand, my dearest Rimty.",
+    rotation: "-rotate-2",
   },
 ];
 
@@ -66,22 +130,22 @@ export function PhotoGallery() {
   };
 
   return (
-    <div className="relative z-10 py-16 px-4 max-w-6xl mx-auto">
+    <div className="relative z-10 py-12 px-4 max-w-6xl mx-auto">
       {/* Title */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-400/20 text-rose-300 text-xs tracking-widest uppercase mb-3">
           <Camera className="w-3.5 h-3.5" />
-          <span>Our Precious Memories</span>
+          <span>Our Precious Memories ({photos.length} Photos)</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200">
-          A Constellation of You & Me ✨
+          A Constellation of You &amp; Me ✨
         </h2>
         <p className="text-sm text-slate-300/80 mt-2">
-          Click any polaroid to reveal the memory and love note behind it.
+          Click any polaroid to view the photo and read the special note behind it.
         </p>
       </div>
 
-      {/* Grid of Polaroid Cards */}
+      {/* Grid of Polaroid Cards maintaining serial */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         {photos.map((photo) => (
           <div
@@ -122,7 +186,7 @@ export function PhotoGallery() {
       {/* Modal View for Expanded Memory */}
       {activePhoto && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in">
-          <div className="relative w-full max-w-2xl bg-gradient-to-b from-slate-900 via-slate-900/95 to-slate-950 border border-rose-400/30 rounded-3xl p-6 sm:p-8 shadow-[0_0_50px_rgba(244,63,94,0.3)]">
+          <div className="relative w-full max-w-2xl bg-gradient-to-b from-slate-900 via-slate-900/95 to-slate-950 border border-rose-400/30 rounded-3xl p-6 sm:p-8 shadow-[0_0_50px_rgba(244,63,94,0.3)] max-h-[92vh] overflow-y-auto">
             {/* Close Button */}
             <button
               onClick={() => setActivePhoto(null)}
