@@ -5,10 +5,11 @@ import { soundEngine } from "./AudioEngine";
 import { Heart, Sparkles, Gift, Clock, ChevronDown } from "lucide-react";
 
 interface CountdownEnvelopeProps {
-  onUnlock?: () => void;
+  onUnlock: () => void;
+  isUnlocked: boolean;
 }
 
-export function CountdownEnvelope({ onUnlock }: CountdownEnvelopeProps) {
+export function CountdownEnvelope({ onUnlock, isUnlocked }: CountdownEnvelopeProps) {
   const [timeLeft, setTimeLeft] = useState<{
     days: number;
     hours: number;
@@ -16,8 +17,6 @@ export function CountdownEnvelope({ onUnlock }: CountdownEnvelopeProps) {
     seconds: number;
     isPast: boolean;
   }>({ days: 0, hours: 0, minutes: 0, seconds: 0, isPast: false });
-
-  const [isStarted, setIsStarted] = useState(false);
 
   useEffect(() => {
     // Target: October 8, 2026 00:00:00 Local Time
@@ -44,16 +43,16 @@ export function CountdownEnvelope({ onUnlock }: CountdownEnvelopeProps) {
   }, []);
 
   const handleStart = () => {
-    setIsStarted(true);
     soundEngine.playChime();
     soundEngine.toggleMusic(true);
-    if (onUnlock) onUnlock();
+    onUnlock();
 
-    // Smooth scroll down to chapter 1 (cake)
-    const cakeSection = document.getElementById("cake");
-    if (cakeSection) {
-      cakeSection.scrollIntoView({ behavior: "smooth" });
-    }
+    setTimeout(() => {
+      const cakeSection = document.getElementById("cake");
+      if (cakeSection) {
+        cakeSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 400);
   };
 
   return (
@@ -69,7 +68,7 @@ export function CountdownEnvelope({ onUnlock }: CountdownEnvelopeProps) {
         Happy Birthday, My Queen Rimty ❤️
       </h1>
       <p className="max-w-xl text-slate-300/90 text-sm sm:text-base font-light mb-8 leading-relaxed">
-        Welcome to your personal birthday website, designed step by step with all my heart. Scroll down to experience each surprise, from the birthday cake to our love letter.
+        Welcome to your personal birthday website, designed step by step with all my heart. Tap below to begin your celebration.
       </p>
 
       {/* Countdown Card */}
@@ -109,17 +108,19 @@ export function CountdownEnvelope({ onUnlock }: CountdownEnvelopeProps) {
         >
           <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           <Heart className="w-5 h-5 text-white fill-white animate-pulse" />
-          <span>{isStarted ? "Playing Music • Scroll Down" : "Tap to Play Song & Begin Journey"}</span>
+          <span>Tap to Play Song &amp; Begin Journey</span>
           <Gift className="w-5 h-5 text-amber-200" />
         </button>
 
-        <a
-          href="#cake"
-          className="inline-flex items-center gap-1.5 text-xs text-rose-300/80 hover:text-amber-200 transition-colors animate-bounce mt-4"
-        >
-          <span>Scroll down to explore each chapter</span>
-          <ChevronDown className="w-4 h-4" />
-        </a>
+        {isUnlocked && (
+          <a
+            href="#cake"
+            className="inline-flex items-center gap-1.5 text-xs text-rose-300/80 hover:text-amber-200 transition-colors animate-bounce mt-4"
+          >
+            <span>Scroll down to explore each chapter</span>
+            <ChevronDown className="w-4 h-4" />
+          </a>
+        )}
       </div>
     </section>
   );
