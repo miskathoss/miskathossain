@@ -9,7 +9,6 @@ interface PhotoItem {
   id: number;
   src: string;
   title: string;
-  subtitle: string;
   note: string;
   rotation: string;
 }
@@ -19,7 +18,6 @@ const photos: PhotoItem[] = [
     id: 1,
     src: "/rimty/memories/1.jpg",
     title: "Our Beautiful Beginning",
-    subtitle: "Memory 01",
     note: "Holding your hand here felt like holding my entire universe. From day one, you made my life complete and brighter than the stars.",
     rotation: "-rotate-2",
   },
@@ -27,7 +25,6 @@ const photos: PhotoItem[] = [
     id: 2,
     src: "/rimty/memories/2.jpg",
     title: "That Radiant Smile",
-    subtitle: "Memory 02",
     note: "Your smile has this effortless way of washing away every worry. Whenever I see you smile like this, my heart feels at home.",
     rotation: "rotate-2",
   },
@@ -35,7 +32,6 @@ const photos: PhotoItem[] = [
     id: 3,
     src: "/rimty/memories/3.jpg",
     title: "Moments Captured in Time",
-    subtitle: "Memory 03",
     note: "Every picture of us is a treasure I hold close to my heart. Looking back at this moment reminds me of how truly blessed I am.",
     rotation: "-rotate-1",
   },
@@ -43,7 +39,6 @@ const photos: PhotoItem[] = [
     id: 4,
     src: "/rimty/memories/4.jpg",
     title: "In Your Eyes, My World",
-    subtitle: "Memory 04",
     note: "Whenever the world gets noisy, being with you is where my peace lives. You are not only my wife; you are my best friend and soulmate.",
     rotation: "rotate-3",
   },
@@ -51,7 +46,6 @@ const photos: PhotoItem[] = [
     id: 5,
     src: "/rimty/memories/5.jpg",
     title: "Little Candid Magic",
-    subtitle: "Memory 05",
     note: "The sweetest moments in life are often the quiet, candid ones where we just laugh and be ourselves. I cherish every second.",
     rotation: "-rotate-3",
   },
@@ -59,7 +53,6 @@ const photos: PhotoItem[] = [
     id: 6,
     src: "/rimty/memories/6.jpg",
     title: "Side by Side",
-    subtitle: "Memory 06",
     note: "No matter where life leads us or what road we walk, as long as I am walking it beside you, every step is a blessing.",
     rotation: "rotate-1",
   },
@@ -67,7 +60,6 @@ const photos: PhotoItem[] = [
     id: 7,
     src: "/rimty/memories/7.jpg",
     title: "My Safe Haven",
-    subtitle: "Memory 07",
     note: "In your warmth, your gentleness, and your kindness, I found everything I had ever prayed for.",
     rotation: "-rotate-2",
   },
@@ -75,7 +67,6 @@ const photos: PhotoItem[] = [
     id: 8,
     src: "/rimty/memories/8.jpg",
     title: "Endless Laughter & Joy",
-    subtitle: "Memory 08",
     note: "You bring so much joy into our days. Seeing you happy is my greatest mission in this life.",
     rotation: "rotate-2",
   },
@@ -83,7 +74,6 @@ const photos: PhotoItem[] = [
     id: 9,
     src: "/rimty/memories/9.jpg",
     title: "Dreaming Under The Sky",
-    subtitle: "Memory 09",
     note: "Looking into our future together with hope, dreams, and unconditional love. Whatever comes, we take on this universe together.",
     rotation: "-rotate-1",
   },
@@ -91,7 +81,6 @@ const photos: PhotoItem[] = [
     id: 10,
     src: "/rimty/memories/10.jpg",
     title: "Pure Happiness",
-    subtitle: "Memory 10",
     note: "A picture worth more than ten thousand words. My heart swells with gratitude every time I look at this memory.",
     rotation: "rotate-3",
   },
@@ -99,7 +88,6 @@ const photos: PhotoItem[] = [
     id: 11,
     src: "/rimty/memories/11.jpg",
     title: "Every Day A Blessing",
-    subtitle: "Memory 11",
     note: "Life with you is a continuous celebration. Thank you for being the wonderful, caring woman that you are.",
     rotation: "-rotate-3",
   },
@@ -107,7 +95,6 @@ const photos: PhotoItem[] = [
     id: 12,
     src: "/rimty/memories/12.jpg",
     title: "Forever & Always",
-    subtitle: "Memory 12",
     note: "Through every season of life, my love for you only grows deeper, stronger, and more resilient with each passing year.",
     rotation: "rotate-2",
   },
@@ -115,7 +102,6 @@ const photos: PhotoItem[] = [
     id: 13,
     src: "/rimty/memories/13.jpg",
     title: "The Queen of My Heart",
-    subtitle: "Memory 13",
     note: "Happy Birthday to the most breathtaking woman in the entire world. Here is to a lifetime of walking hand in hand, my dearest Rimty.",
     rotation: "-rotate-2",
   },
@@ -135,7 +121,7 @@ export function PhotoGallery() {
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-400/20 text-rose-300 text-xs tracking-widest uppercase mb-3">
           <Camera className="w-3.5 h-3.5" />
-          <span>Our Precious Memories ({photos.length} Photos)</span>
+          <span>Our Precious Memories</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200">
           A Constellation of You &amp; Me ✨
@@ -175,9 +161,6 @@ export function PhotoGallery() {
                 <Heart className="w-3 h-3 text-rose-400 fill-rose-400" />
                 {photo.title}
               </h3>
-              <p className="text-[11px] text-rose-200/60 font-mono tracking-wider mt-0.5">
-                {photo.subtitle}
-              </p>
             </div>
           </div>
         ))}
@@ -208,7 +191,7 @@ export function PhotoGallery() {
               <div className="flex flex-col justify-center">
                 <div className="inline-flex items-center gap-1.5 text-xs text-rose-400 font-mono tracking-widest uppercase mb-2">
                   <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                  <span>{activePhoto.subtitle}</span>
+                  <span>A Moment With You</span>
                 </div>
 
                 <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
