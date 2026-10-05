@@ -78,13 +78,6 @@ const photos: PhotoItem[] = [
     rotation: "-rotate-1",
   },
   {
-    id: 10,
-    src: "/rimty/memories/10.jpg",
-    title: "Pure Happiness",
-    note: "A picture worth more than ten thousand words. My heart swells with gratitude every time I look at this memory.",
-    rotation: "rotate-3",
-  },
-  {
     id: 11,
     src: "/rimty/memories/11.jpg",
     title: "Every Day A Blessing",
