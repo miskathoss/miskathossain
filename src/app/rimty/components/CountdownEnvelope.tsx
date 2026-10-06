@@ -60,30 +60,30 @@ export function CountdownEnvelope({ onUnlock, isUnlocked }: CountdownEnvelopePro
       {/* Delicate header badge */}
       <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-300/30 bg-amber-400/10 backdrop-blur-md text-amber-200 text-xs sm:text-sm mb-6 tracking-widest uppercase shadow-lg">
         <Sparkles className="w-4 h-4 text-amber-300 animate-spin" style={{ animationDuration: "6s" }} />
-        <span>A Special Birthday Celebration From Miskat</span>
+        <span>মিশকাতের পক্ষ থেকে ভালোবাসার উপহার</span>
         <Sparkles className="w-4 h-4 text-amber-300 animate-spin" style={{ animationDuration: "6s" }} />
       </div>
 
       <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200 font-bold tracking-tight mb-4 drop-shadow-[0_4px_24px_rgba(255,182,193,0.3)]">
-        Happy Birthday, My Queen Rimty ❤️
+        শুভ জন্মদিন, আমার রানি রিমতি ❤️
       </h1>
       <p className="max-w-xl text-slate-300/90 text-sm sm:text-base font-light mb-8 leading-relaxed">
-        Welcome to your personal birthday website, designed step by step with all my heart. Tap below to begin your celebration.
+        তোমার জন্য পুরো মন দিয়ে তৈরি এই বিশেষ উপহার। নিচের বাটনে ট্যাপ করে গান ছেড়ে শুরু করো আমাদের আজকের দিনটি।
       </p>
 
       {/* Countdown Card */}
       <div className="relative group p-6 sm:p-8 rounded-3xl border border-rose-500/20 bg-slate-900/60 backdrop-blur-xl shadow-[0_10px_40px_rgba(224,40,79,0.15)] mb-8 w-full max-w-lg">
         <div className="flex items-center justify-center gap-2 text-rose-300 text-xs sm:text-sm font-medium tracking-wider mb-4">
           <Clock className="w-4 h-4" />
-          <span>{timeLeft.isPast ? "YOUR SPECIAL DAY IS HERE!" : "COUNTDOWN TO OCTOBER 8"}</span>
+          <span>{timeLeft.isPast ? "আজ তোমার সেই বিশেষ দিন!" : "৮ই অক্টোবরের কাউন্টডাউন"}</span>
         </div>
 
         <div className="grid grid-cols-4 gap-3 sm:gap-4">
           {[
-            { val: timeLeft.days, label: "Days" },
-            { val: timeLeft.hours, label: "Hours" },
-            { val: timeLeft.minutes, label: "Mins" },
-            { val: timeLeft.seconds, label: "Secs" },
+            { val: timeLeft.days, label: "দিন" },
+            { val: timeLeft.hours, label: "ঘণ্টা" },
+            { val: timeLeft.minutes, label: "মিনিট" },
+            { val: timeLeft.seconds, label: "সেকেন্ড" },
           ].map((item, idx) => (
             <div
               key={idx}
@@ -108,7 +108,7 @@ export function CountdownEnvelope({ onUnlock, isUnlocked }: CountdownEnvelopePro
         >
           <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           <Heart className="w-5 h-5 text-white fill-white animate-pulse" />
-          <span>Tap to Play Song &amp; Begin Journey</span>
+          <span>গানটা ছেড়ে ভেতরে এসো 🎵</span>
           <Gift className="w-5 h-5 text-amber-200" />
         </button>
 
@@ -117,7 +117,7 @@ export function CountdownEnvelope({ onUnlock, isUnlocked }: CountdownEnvelopePro
             href="#cake"
             className="inline-flex items-center gap-1.5 text-xs text-rose-300/80 hover:text-amber-200 transition-colors animate-bounce mt-4"
           >
-            <span>Scroll down to explore each chapter</span>
+            <span>নিচে স্ক্রল করে এগিয়ে যাও ✨</span>
             <ChevronDown className="w-4 h-4" />
           </a>
         )}

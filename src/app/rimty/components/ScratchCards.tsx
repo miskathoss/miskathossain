@@ -16,30 +16,30 @@ const coupons: Coupon[] = [
   {
     id: 1,
     icon: "☕",
-    title: "Breakfast in Bed & Special Coffee",
-    description: "Served hot with warm hugs and kisses whenever you desire to sleep in.",
-    badge: "Unlimited Validity",
+    title: "বেড টি/কফি ও সকালের নাশতা",
+    description: "যেদিন দেরি করে ঘুম থেকে উঠতে ইচ্ছে করবে, বিছানায় পছন্দের গরম কফি আর ভালোবাসা নিয়ে হাজির হবো।",
+    badge: "আনলিমিটেড মেয়াদী",
   },
   {
     id: 2,
     icon: "✈️",
-    title: "Surprise Romantic Getaway",
-    description: "You pick the dream destination, and I take care of every single detail.",
-    badge: "VIP Pass",
+    title: "সারপ্রাইজ রোমান্টিক ট্যুর",
+    description: "তোমার পছন্দের ড্রিম ডেস্টিনেশনের নাম শুধু বলবে, বাকি সমস্ত প্ল্যান আর দায়িত্ব আমার!",
+    badge: "ভিআইপি পাস",
   },
   {
     id: 3,
     icon: "💆‍♀️",
-    title: "1-Hour Ultimate Relaxing Massage",
-    description: "Scented candles, soothing music, and complete relaxation on demand.",
-    badge: "Anytime Pass",
+    title: "১ ঘণ্টার স্পেশাল রিলাক্সিং ম্যাসাজ",
+    description: "মোমবাতির আলো, পছন্দের গান আর সারাদিনের ক্লান্তি ধুয়ে দেওয়ার মতো পরম আরামদায়ক রিলাক্সেশন।",
+    badge: "যেকোনো সময় কার্যকর",
   },
   {
     id: 4,
     icon: "👑",
-    title: "The Queen's Wish Granted",
-    description: "Whatever Rimty wants, Rimty gets! One absolute wish granted with zero questions asked.",
-    badge: "Forever Valid",
+    title: "দ্য কুইন্স উইশ — রানির হুকুম!",
+    description: "রিমতি যা চাইবে তাই পাবে! কোনো প্রশ্ন বা বাহানা ছাড়া যেকোনো একটি সম্পূর্ণ আবদার পূরণ।",
+    badge: "আজীবন ভ্যালিড",
   },
 ];
 
@@ -69,11 +69,11 @@ function ScratchCardItem({ coupon }: { coupon: Coupon }) {
 
     // Text on foil
     ctx.fillStyle = "#5E1825";
-    ctx.font = "bold 14px sans-serif";
+    ctx.font = "bold 13px sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText("✨ Scratch Here to Reveal ✨", width / 2, height / 2 - 5);
+    ctx.fillText("✨ ঘষে কুপনটি আনলক করো ✨", width / 2, height / 2 - 5);
     ctx.font = "11px sans-serif";
-    ctx.fillText("Drag your finger or mouse", width / 2, height / 2 + 15);
+    ctx.fillText("আঙুল বা মাউস দিয়ে স্ক্র্যাচ করো", width / 2, height / 2 + 15);
   }, []);
 
   const scratch = (clientX: number, clientY: number) => {
@@ -141,7 +141,7 @@ function ScratchCardItem({ coupon }: { coupon: Coupon }) {
 
         <div className="flex items-center gap-1.5 text-xs text-rose-300 font-serif pt-2 border-t border-white/10">
           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-          <span>Officially Claimable by Rimty</span>
+          <span>রিমতির জন্য সম্পূর্ণ দাবিযোগ্য ও কার্যকর</span>
         </div>
       </div>
 
@@ -175,13 +175,13 @@ export function ScratchCards() {
       <div className="text-center mb-10">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-300 text-xs tracking-widest uppercase mb-3">
           <Gift className="w-3.5 h-3.5" />
-          <span>Interactive Birthday Gifts</span>
+          <span>তোমার জন্মদিনের বিশেষ উপহার</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200">
-          Rimty&apos;s Golden Love Coupons 🎟️
+          রিমতির গোল্ডেন লাভ কুপন 🎟️
         </h2>
         <p className="text-sm text-slate-300/80 mt-2 max-w-md mx-auto">
-          Rub your cursor or finger over each card to scratch and claim your exclusive birthday promises.
+          আঙুল বা মাউস দিয়ে কার্ডগুলো ঘষে স্ক্র্যাচ করো আর জিতে নাও জন্মদিনের স্পেশাল কুপনগুলো!
         </p>
       </div>
 

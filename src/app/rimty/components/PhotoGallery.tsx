@@ -17,85 +17,85 @@ const photos: PhotoItem[] = [
   {
     id: 1,
     src: "/rimty/memories/1.jpg",
-    title: "Our Beautiful Beginning",
-    note: "Holding your hand here felt like holding my entire universe. From day one, you made my life complete and brighter than the stars.",
+    title: "আমাদের সুন্দর শুরু",
+    note: "তোমার হাতটা যেদিন প্রথম ধরলাম, মনে হলো পুরো পৃথিবীটাই বুঝি আমার হাতে। প্রথম দিন থেকেই তুমি আমার জীবনটাকে আলোয় ভরিয়ে দিয়েছো।",
     rotation: "-rotate-2",
   },
   {
     id: 2,
     src: "/rimty/memories/2.jpg",
-    title: "That Radiant Smile",
-    note: "Your smile has this effortless way of washing away every worry. Whenever I see you smile like this, my heart feels at home.",
+    title: "তোমার সেই মায়াবী হাসি",
+    note: "তোমার এই হাসিটা এক নিমিষেই সারাদিনের সব ক্লান্তি দূর করে দেয়। যখনই তোমাকে এভাবে হাসতে দেখি, মনটা শান্ত হয়ে যায়।",
     rotation: "rotate-2",
   },
   {
     id: 3,
     src: "/rimty/memories/3.jpg",
-    title: "Moments Captured in Time",
-    note: "Every picture of us is a treasure I hold close to my heart. Looking back at this moment reminds me of how truly blessed I am.",
+    title: "স্মৃতির পাতায় বন্দি আমরা",
+    note: "আমাদের একসাথে কাটানো প্রতিটি ছবি আমার কাছে একটা অমূল্য রত্ন। এই মুহূর্তটার দিকে তাকালেই মন ভরে যায়।",
     rotation: "-rotate-1",
   },
   {
     id: 4,
     src: "/rimty/memories/4.jpg",
-    title: "In Your Eyes, My World",
-    note: "Whenever the world gets noisy, being with you is where my peace lives. You are not only my wife; you are my best friend and soulmate.",
+    title: "তোমার চোখে আমার দুনিয়া",
+    note: "বাইরের দুনিয়া যতই ব্যস্ত বা কোলাহলপূর্ণ হোক, তোমার কাছে আসলেই আমার শান্তি। তুমি শুধু আমার স্ত্রী নও, আমার সবচেয়ে প্রিয় বন্ধু।",
     rotation: "rotate-3",
   },
   {
     id: 5,
     src: "/rimty/memories/5.jpg",
-    title: "Little Candid Magic",
-    note: "The sweetest moments in life are often the quiet, candid ones where we just laugh and be ourselves. I cherish every second.",
+    title: "ছোট ছোট মিষ্টি মুহূর্ত",
+    note: "জীবনের সেরা মুহূর্তগুলো আসলে কোনো প্ল্যান ছাড়া হাসাহাসি করা এই সাধারণ সময়গুলোই। তোমার সাথে কাটানো প্রতিটি সেকেন্ডই স্পেশাল।",
     rotation: "-rotate-3",
   },
   {
     id: 6,
     src: "/rimty/memories/6.jpg",
-    title: "Side by Side",
-    note: "No matter where life leads us or what road we walk, as long as I am walking it beside you, every step is a blessing.",
+    title: "পাশাপাশি প্রতিটি পদক্ষেপে",
+    note: "জীবন যে পথেই নিয়ে যাক না কেন, যতদিন তোমার হাত ধরে পাশাপাশি হাঁটছি, ততদিন প্রতিটি পথই সুন্দর।",
     rotation: "rotate-1",
   },
   {
     id: 7,
     src: "/rimty/memories/7.jpg",
-    title: "My Safe Haven",
-    note: "In your warmth, your gentleness, and your kindness, I found everything I had ever prayed for.",
+    title: "আমার শান্তির ঠিকানা",
+    note: "তোমার মায়া, তোমার কোমলতা আর তোমার ভালোবাসার ভেতরেই আমি আমার সব প্রার্থনার উত্তর খুঁজে পেয়েছি।",
     rotation: "-rotate-2",
   },
   {
     id: 8,
     src: "/rimty/memories/8.jpg",
-    title: "Endless Laughter & Joy",
-    note: "You bring so much joy into our days. Seeing you happy is my greatest mission in this life.",
+    title: "অফুরন্ত হাসি আর আনন্দ",
+    note: "তুমি আমাদের দিনগুলোকে এত আনন্দে ভরিয়ে দাও! তোমাকে সবসময় এমন হাসিখুশি দেখতে পাওয়াটাই আমার জীবনের সবচেয়ে বড় প্রাপ্তি।",
     rotation: "rotate-2",
   },
   {
     id: 9,
     src: "/rimty/memories/9.jpg",
-    title: "Dreaming Under The Sky",
-    note: "Looking into our future together with hope, dreams, and unconditional love. Whatever comes, we take on this universe together.",
+    title: "একসাথে আগামীর স্বপ্ন",
+    note: "হাতে হাত রেখে সুন্দর একটা ভবিষ্যতের স্বপ্ন দেখা। সামনে যা-ই আসুক না কেন, আমরা দুজন একসাথে পার করবো।",
     rotation: "-rotate-1",
   },
   {
     id: 11,
     src: "/rimty/memories/11.jpg",
-    title: "Every Day A Blessing",
-    note: "Life with you is a continuous celebration. Thank you for being the wonderful, caring woman that you are.",
+    title: "প্রতিটি দিনই এক আশীর্বাদ",
+    note: "তোমার সাথে প্রতিটি দিন কাটানো যেন একটা উৎসব। আমার জীবনে এত চমৎকার ও যত্নশীল একজন মানুষ হওয়ার জন্য ধন্যবাদ।",
     rotation: "-rotate-3",
   },
   {
     id: 12,
     src: "/rimty/memories/12.jpg",
-    title: "Forever & Always",
-    note: "Through every season of life, my love for you only grows deeper, stronger, and more resilient with each passing year.",
+    title: "চিরকাল এবং সবসময়",
+    note: "সময়ের সাথে সাথে এবং প্রতিটি নতুন বছরে তোমার প্রতি ভালোবাসা শুধু আরও গভীর আর অটুট হয়ে চলেছে।",
     rotation: "rotate-2",
   },
   {
     id: 13,
     src: "/rimty/memories/13.jpg",
-    title: "The Queen of My Heart",
-    note: "Happy Birthday to the most breathtaking woman in the entire world. Here is to a lifetime of walking hand in hand, my dearest Rimty.",
+    title: "আমার হৃদয়ের রানি",
+    note: "পৃথিবীর সবচেয়ে অপূর্ব সুন্দর মানুষটাকে জন্মদিনের অনেক অনেক শুভেচ্ছা। সারা জীবন এভাবেই তোমার পাশে থাকতে চাই, আমার প্রিয় রিমতি।",
     rotation: "-rotate-2",
   },
 ];
@@ -114,13 +114,13 @@ export function PhotoGallery() {
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-400/20 text-rose-300 text-xs tracking-widest uppercase mb-3">
           <Camera className="w-3.5 h-3.5" />
-          <span>Our Precious Memories</span>
+          <span>আমাদের সুন্দর কিছু স্মৃতি</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200">
-          A Constellation of You &amp; Me ✨
+          তুমি আর আমি — কিছু প্রিয় মুহূর্ত ✨
         </h2>
         <p className="text-sm text-slate-300/80 mt-2">
-          Click any polaroid to view the photo and read the special note behind it.
+          যেকোনো ছবিতে ক্লিক করে পেছনের সুন্দর অনুভূতি ও গল্পটা পড়ে নাও।
         </p>
       </div>
 
@@ -143,7 +143,7 @@ export function PhotoGallery() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                 <span className="text-xs text-rose-200 flex items-center gap-1.5 font-medium">
-                  <Sparkles className="w-3.5 h-3.5" /> Tap to read note
+                  <Sparkles className="w-3.5 h-3.5" /> নোট দেখতে ট্যাপ করো
                 </span>
               </div>
             </div>
@@ -191,7 +191,7 @@ export function PhotoGallery() {
               <div className="flex flex-col justify-center">
                 <div className="inline-flex items-center gap-1.5 text-xs text-rose-400 font-mono tracking-widest uppercase mb-2">
                   <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                  <span>A Moment With You</span>
+                  <span>তোমার সাথে এক টুকরো মুহূর্ত</span>
                 </div>
 
                 <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
@@ -204,7 +204,7 @@ export function PhotoGallery() {
 
                 <div className="flex items-center gap-2 text-xs text-rose-300/80 font-serif mb-2">
                   <Heart className="w-4 h-4 fill-rose-400 text-rose-400" />
-                  <span>With all my love, Miskat</span>
+                  <span>অনেক ভালোবাসা সহ, মিশকাত ❤️</span>
                 </div>
 
                 {/* Additional Mobile Friendly Close Button */}
@@ -213,7 +213,7 @@ export function PhotoGallery() {
                   className="mt-4 w-full py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-xs sm:text-sm font-medium text-rose-200 hover:text-white flex items-center justify-center gap-2 transition-all active:scale-95"
                 >
                   <X className="w-4 h-4" />
-                  <span>Close Memory</span>
+                  <span>ছবি বন্ধ করো</span>
                 </button>
               </div>
             </div>

@@ -38,34 +38,34 @@ export function LoveLetter() {
             </div>
             <div>
               <p className="text-xs font-mono uppercase tracking-widest text-rose-300">
-                A Letter To My Wife
+                ভালোবাসার স্ত্রীর প্রতি চিঠি
               </p>
               <h3 className="text-xl sm:text-2xl font-serif font-bold text-amber-100">
-                My Dearest Rimty,
+                আমার সবচেয়ে প্রিয় রিমতি,
               </h3>
             </div>
           </div>
           <div className="text-right">
-            <span className="text-xs font-mono text-slate-400">October 8</span>
+            <span className="text-xs font-mono text-slate-400">৮ই অক্টোবর</span>
           </div>
         </div>
 
         {/* Letter Body */}
         <div className="space-y-4 font-serif text-slate-200/90 text-sm sm:text-base leading-relaxed tracking-wide">
           <p>
-            Happy Birthday to the most extraordinary woman in my entire world.
+            শুভ জন্মদিন আমার পুরো পৃথিবীর সবচেয়ে প্রিয় মানুষটাকে।
           </p>
           <p>
-            From the moment you stepped into my life, everything became more vibrant, more meaningful, and infinitely sweeter. When I look at you—whether it was on the unforgettable day we took those photos, or simply seeing you smile across the room on a quiet evening—my heart feels completely overwhelmed with gratitude.
+            তুমি যেদিন আমার জীবনে এলে, সেদিন থেকে আমার পৃথিবীটা আরও সুন্দর, অর্থপূর্ণ আর মিষ্টি হয়ে উঠেছে। যখনই তোমার দিকে তাকাই—সেটা আমাদের সেই সুন্দর ছবি তোলার দিনগুলোই হোক, কিংবা কোনো শান্ত বিকেলে ঘরের কোণে তোমার মিষ্টি হাসিটাই হোক—আমার হৃদয় এক অদ্ভুত কৃতজ্ঞতায় ভরে যায়।
           </p>
           <p>
-            You bring peace to my chaos, laughter to my days, and an unconditional love that inspires me to be the best version of myself. You are not only my wife; you are my best friend, my soulmate, and my greatest blessing.
+            আমার সব অস্থিরতায় তুমি এনে দাও এক পরম শান্তি, আমার প্রতিটি দিনকে ভরিয়ে দাও নির্মল হাসিতে। তুমি শুধু আমার স্ত্রী নও; তুমি আমার সবচেয়ে ভালো বন্ধু, আমার আত্মার সঙ্গী এবং আমার জীবনের সবচেয়ে বড় উপহার।
           </p>
           <p>
-            As you celebrate another year of your beautiful life, my only prayer is that all your dreams take flight, that your heart is always full of joy, and that you always remember how deeply and endlessly you are cherished.
+            তোমার এই সুন্দর জীবনের আরেকটি নতুন বছরে পা রাখার দিনে আমার একটাই দোয়া—তোমার প্রতিটি স্বপ্ন যেন সত্যি হয়, তোমার হৃদয় যেন সবসময় আনন্দে পরিপূর্ণ থাকে, আর তুমি যেন সবসময় মনে রাখো আমি তোমাকে কতটা ভালোবাসি।
           </p>
           <p className="pt-2">
-            No matter how many birthdays come and go, I will be right by your side, loving you more with every single breath.
+            জীবনের যতগুলো জন্মদিন আসবে আর যাবে, আমি সবসময় তোমার হাতটি ধরেই থাকবো। প্রতিটি নিঃশ্বাসে তোমাকে আরও বেশি ভালোবেসে যাবো।
           </p>
         </div>
 
@@ -73,10 +73,10 @@ export function LoveLetter() {
         <div className="mt-8 pt-6 border-t border-rose-400/20 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-center sm:text-left">
             <p className="text-xs text-rose-300 font-mono uppercase tracking-wider">
-              Forever and Always Yours,
+              চিরকাল এবং সবসময় শুধুই তোমার,
             </p>
             <p className="text-2xl sm:text-3xl font-serif italic text-amber-200 font-bold mt-1">
-              Miskat Hossain ❤️
+              মিশকাত হোসেন ❤️
             </p>
           </div>
 
@@ -87,7 +87,7 @@ export function LoveLetter() {
               className="relative overflow-visible px-6 py-3 rounded-full bg-gradient-to-r from-rose-600 via-pink-600 to-rose-500 text-white text-xs sm:text-sm font-medium shadow-[0_0_25px_rgba(244,63,94,0.4)] hover:shadow-[0_0_35px_rgba(244,63,94,0.7)] hover:scale-105 active:scale-95 transition-all flex items-center gap-2"
             >
               <Heart className="w-4 h-4 fill-white" />
-              <span>Tap to Send a Kiss ({kissCount})</span>
+              <span>ভালোবাসা পাঠাও ({kissCount}) ❤️</span>
             </button>
 
             {/* Floating kiss hearts */}
