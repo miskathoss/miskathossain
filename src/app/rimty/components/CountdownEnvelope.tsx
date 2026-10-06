@@ -65,7 +65,7 @@ export function CountdownEnvelope({ onUnlock, isUnlocked }: CountdownEnvelopePro
       </div>
 
       <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold leading-normal py-2 mb-4 text-rose-100 drop-shadow-[0_4px_24px_rgba(255,182,193,0.35)]">
-        শুভ জন্মদিন, আমার রানি রিমতি ❤️
+        শুভ জন্মদিন রিমতি ❤️
       </h1>
       <p className="max-w-xl text-slate-300/90 text-sm sm:text-base font-light mb-8 leading-relaxed">
         তোমার জন্য পুরো মন দিয়ে তৈরি এই বিশেষ উপহার। নিচের বাটনে ট্যাপ করে গান ছেড়ে শুরু করো আমাদের আজকের দিনটি।
