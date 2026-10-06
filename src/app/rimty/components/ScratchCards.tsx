@@ -177,8 +177,11 @@ export function ScratchCards() {
           <Gift className="w-3.5 h-3.5" />
           <span>তোমার জন্মদিনের বিশেষ উপহার</span>
         </div>
-        <h2 className="text-3xl sm:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200">
-          রিমতির গোল্ডেন লাভ কুপন 🎟️
+        <h2 className="text-3xl sm:text-5xl font-serif font-bold leading-[1.35] py-2">
+          <span className="inline-block py-1 text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200">
+            রিমতির গোল্ডেন লাভ কুপন
+          </span>{" "}
+          <span className="inline-block">🎟️</span>
         </h2>
         <p className="text-sm text-slate-300/80 mt-2 max-w-md mx-auto">
           আঙুল বা মাউস দিয়ে কার্ডগুলো ঘষে স্ক্র্যাচ করো আর জিতে নাও জন্মদিনের স্পেশাল কুপনগুলো!

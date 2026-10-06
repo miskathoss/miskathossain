@@ -60,12 +60,15 @@ export function CountdownEnvelope({ onUnlock, isUnlocked }: CountdownEnvelopePro
       {/* Delicate header badge */}
       <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-300/30 bg-amber-400/10 backdrop-blur-md text-amber-200 text-xs sm:text-sm mb-6 tracking-widest uppercase shadow-lg">
         <Sparkles className="w-4 h-4 text-amber-300 animate-spin" style={{ animationDuration: "6s" }} />
-        <span>মিশকাতের পক্ষ থেকে ভালোবাসার উপহার</span>
+        <span>মিসকাতের পক্ষ থেকে ভালোবাসার উপহার</span>
         <Sparkles className="w-4 h-4 text-amber-300 animate-spin" style={{ animationDuration: "6s" }} />
       </div>
 
-      <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200 font-bold tracking-tight mb-4 drop-shadow-[0_4px_24px_rgba(255,182,193,0.3)]">
-        শুভ জন্মদিন, আমার রানি রিমতি ❤️
+      <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-bold leading-[1.35] py-3 mb-4 drop-shadow-[0_4px_24px_rgba(255,182,193,0.3)]">
+        <span className="inline-block py-1 text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200">
+          শুভ জন্মদিন, আমার রানি রিমতি
+        </span>{" "}
+        <span className="inline-block text-rose-500">❤️</span>
       </h1>
       <p className="max-w-xl text-slate-300/90 text-sm sm:text-base font-light mb-8 leading-relaxed">
         তোমার জন্য পুরো মন দিয়ে তৈরি এই বিশেষ উপহার। নিচের বাটনে ট্যাপ করে গান ছেড়ে শুরু করো আমাদের আজকের দিনটি।

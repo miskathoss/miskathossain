@@ -116,8 +116,11 @@ export function PhotoGallery() {
           <Camera className="w-3.5 h-3.5" />
           <span>আমাদের সুন্দর কিছু স্মৃতি</span>
         </div>
-        <h2 className="text-3xl sm:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200">
-          তুমি আর আমি — কিছু প্রিয় মুহূর্ত ✨
+        <h2 className="text-3xl sm:text-5xl font-serif font-bold leading-[1.35] py-2">
+          <span className="inline-block py-1 text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200">
+            তুমি আর আমি — কিছু প্রিয় মুহূর্ত
+          </span>{" "}
+          <span className="inline-block text-amber-300">✨</span>
         </h2>
         <p className="text-sm text-slate-300/80 mt-2">
           যেকোনো ছবিতে ক্লিক করে পেছনের সুন্দর অনুভূতি ও গল্পটা পড়ে নাও।
@@ -204,7 +207,7 @@ export function PhotoGallery() {
 
                 <div className="flex items-center gap-2 text-xs text-rose-300/80 font-serif mb-2">
                   <Heart className="w-4 h-4 fill-rose-400 text-rose-400" />
-                  <span>অনেক ভালোবাসা সহ, মিশকাত ❤️</span>
+                  <span>অনেক ভালোবাসা সহ, মিসকাত ❤️</span>
                 </div>
 
                 {/* Additional Mobile Friendly Close Button */}

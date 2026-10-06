@@ -76,7 +76,7 @@ export function LoveLetter() {
               চিরকাল এবং সবসময় শুধুই তোমার,
             </p>
             <p className="text-2xl sm:text-3xl font-serif italic text-amber-200 font-bold mt-1">
-              মিশকাত হোসেন ❤️
+              মিসকাত হোসেন ❤️
             </p>
           </div>
 

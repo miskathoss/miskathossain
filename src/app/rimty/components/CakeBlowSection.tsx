@@ -119,8 +119,11 @@ export function CakeBlowSection({ onCandlesBlown }: CakeBlowSectionProps) {
         <Sparkles className="w-3.5 h-3.5" />
       </div>
 
-      <h2 className="text-3xl sm:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200 mb-2">
-        মোমবাতিতে ফুঁ দাও! 🎂
+      <h2 className="text-3xl sm:text-5xl font-serif font-bold leading-[1.35] py-2 mb-2">
+        <span className="inline-block py-1 text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200">
+          মোমবাতিতে ফুঁ দাও!
+        </span>{" "}
+        <span className="inline-block">🎂</span>
       </h2>
       <p className="text-sm text-slate-300/80 mb-8 max-w-md">
         চোখ বন্ধ করে মনে মনে একটা সুন্দর উইশ করো, তারপর ফুঁ দিয়ে নিভিয়ে দাও (মোমবাতিতে ট্যাপ করো অথবা নিচের বাটনে চাপ দাও)।

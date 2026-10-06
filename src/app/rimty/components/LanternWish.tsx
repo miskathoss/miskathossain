@@ -34,7 +34,7 @@ export function LanternWish() {
   };
 
   const presetWishes = [
-    "মিশকাতের সাথে সারাজীবন হাসি, আনন্দ আর শান্তির সংসার ✨",
+    "মিসকাতের সাথে সারাজীবন হাসি, আনন্দ আর শান্তির সংসার ✨",
     "একসাথে হাত ধরে পুরো পৃথিবী ঘুরে বেড়ানো 🌍",
     "আমাদের পরিবারের জন্য অফুরন্ত সুস্বাস্থ্য ও বরকত 🤍",
   ];
@@ -46,8 +46,11 @@ export function LanternWish() {
         <span>আকাশে উইশ ফানুস</span>
       </div>
 
-      <h2 className="text-3xl sm:text-5xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200 mb-3">
-        আকাশে ফানুস উড়িয়ে দাও 🏮
+      <h2 className="text-3xl sm:text-5xl font-serif font-bold leading-[1.35] py-2 mb-3">
+        <span className="inline-block py-1 text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200">
+          আকাশে ফানুস উড়িয়ে দাও
+        </span>{" "}
+        <span className="inline-block">🏮</span>
       </h2>
       <p className="text-sm text-slate-300/80 mb-6 max-w-md mx-auto">
         তোমার মনের যেকোনো ইচ্ছে লিখে ফানুসটি উড়িয়ে দাও রাতের আকাশে, তারাদের দেশে তোমার সব চাওয়া পূর্ণ হোক।
@@ -114,7 +117,7 @@ export function LanternWish() {
           শুভ জন্মদিন রিমতি!
         </p>
         <p className="text-xs text-slate-400 mt-1">
-          তোমার স্বামী মিশকাতের হৃদয়ের সবটুকু ভালোবাসা দিয়ে তৈরি • ৮ই অক্টোবর
+          তোমার স্বামী মিসকাতের হৃদয়ের সবটুকু ভালোবাসা দিয়ে তৈরি • ৮ই অক্টোবর
         </p>
       </div>
     </div>
