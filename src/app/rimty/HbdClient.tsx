@@ -7,6 +7,7 @@ import { CakeBlowSection } from "./components/CakeBlowSection";
 import { PhotoGallery } from "./components/PhotoGallery";
 import { ScratchCards } from "./components/ScratchCards";
 import { LoveLetter } from "./components/LoveLetter";
+import { MemoryVideoSection } from "./components/MemoryVideoSection";
 import { LanternWish } from "./components/LanternWish";
 import { soundEngine } from "./components/AudioEngine";
 import { Volume2, VolumeX, Heart, Sparkles } from "lucide-react";
@@ -129,11 +130,23 @@ export function HbdClient() {
             {/* Glowing Romantic Divider */}
             <div className="flex items-center justify-center gap-4 max-w-xl mx-auto px-4 opacity-40">
               <div className="h-px bg-gradient-to-r from-transparent via-rose-400 to-transparent flex-1" />
+              <Heart className="w-4 h-4 text-rose-400 fill-rose-400" />
+              <div className="h-px bg-gradient-to-r from-transparent via-rose-400 to-transparent flex-1" />
+            </div>
+
+            {/* Section 5: Memory Video Reel */}
+            <section id="video" className="relative pt-6 scroll-mt-20">
+              <MemoryVideoSection />
+            </section>
+
+            {/* Glowing Romantic Divider */}
+            <div className="flex items-center justify-center gap-4 max-w-xl mx-auto px-4 opacity-40">
+              <div className="h-px bg-gradient-to-r from-transparent via-rose-400 to-transparent flex-1" />
               <Sparkles className="w-4 h-4 text-amber-300" />
               <div className="h-px bg-gradient-to-r from-transparent via-rose-400 to-transparent flex-1" />
             </div>
 
-            {/* Section 5: Sky Lantern Wish Finale */}
+            {/* Section 6: Sky Lantern Wish Finale */}
             <section id="lantern" className="relative pt-6 scroll-mt-20">
               <LanternWish />
             </section>
