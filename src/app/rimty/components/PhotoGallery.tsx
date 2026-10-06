@@ -204,7 +204,7 @@ export function PhotoGallery() {
 
                 <div className="flex items-center gap-2 text-xs text-rose-300/80 font-serif mb-2">
                   <Heart className="w-4 h-4 fill-rose-400 text-rose-400" />
-                  <span>অনেক ভালোবাসা সহ, মিসকাত ❤️</span>
+                  <span>মিসকাত ❤️</span>
                 </div>
 
                 {/* Additional Mobile Friendly Close Button */}
