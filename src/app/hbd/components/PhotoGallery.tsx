@@ -161,14 +161,21 @@ export function PhotoGallery() {
 
       {/* Modal View for Expanded Memory */}
       {activePhoto && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in">
-          <div className="relative w-full max-w-2xl bg-gradient-to-b from-slate-900 via-slate-900/95 to-slate-950 border border-rose-400/30 rounded-3xl p-6 sm:p-8 shadow-[0_0_50px_rgba(244,63,94,0.3)] max-h-[92vh] overflow-y-auto">
-            {/* Close Button */}
+        <div
+          onClick={() => setActivePhoto(null)}
+          className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4 bg-slate-950/85 backdrop-blur-md animate-fade-in"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-2xl bg-gradient-to-b from-slate-900 via-slate-900/95 to-slate-950 border border-rose-400/30 rounded-3xl p-5 pt-8 sm:p-8 shadow-[0_0_50px_rgba(244,63,94,0.3)] max-h-[92vh] overflow-y-auto"
+          >
+            {/* Prominent High-Contrast Close Button */}
             <button
               onClick={() => setActivePhoto(null)}
-              className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors"
+              className="absolute top-3 right-3 sm:top-5 sm:right-5 z-30 w-10 h-10 rounded-full bg-slate-800/95 hover:bg-rose-600 border border-white/30 text-white flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.6)] transition-all hover:scale-110 active:scale-95"
+              aria-label="Close"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5 stroke-[2.5]" />
             </button>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
@@ -195,10 +202,19 @@ export function PhotoGallery() {
                   &ldquo;{activePhoto.note}&rdquo;
                 </p>
 
-                <div className="flex items-center gap-2 text-xs text-rose-300/80 font-serif">
+                <div className="flex items-center gap-2 text-xs text-rose-300/80 font-serif mb-2">
                   <Heart className="w-4 h-4 fill-rose-400 text-rose-400" />
                   <span>With all my love, Miskat</span>
                 </div>
+
+                {/* Additional Mobile Friendly Close Button */}
+                <button
+                  onClick={() => setActivePhoto(null)}
+                  className="mt-4 w-full py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-xs sm:text-sm font-medium text-rose-200 hover:text-white flex items-center justify-center gap-2 transition-all active:scale-95"
+                >
+                  <X className="w-4 h-4" />
+                  <span>Close Memory</span>
+                </button>
               </div>
             </div>
           </div>
