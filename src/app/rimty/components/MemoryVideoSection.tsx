@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import { soundEngine } from "./AudioEngine";
-import { Film, Play, Pause, Volume2, Sparkles, Heart } from "lucide-react";
+import { Music, Play, Pause, Volume2, Sparkles, Heart } from "lucide-react";
 
 export function MemoryVideoSection() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -37,15 +37,15 @@ export function MemoryVideoSection() {
       {/* Header */}
       <div className="mb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-400/20 text-rose-300 text-xs tracking-widest uppercase mb-3">
-          <Film className="w-3.5 h-3.5" />
-          <span>আমাদের বিশেষ ভিডিও</span>
+          <Music className="w-3.5 h-3.5" />
+          <span>একটি বিশেষ গান</span>
         </div>
 
         <h2 className="text-3xl sm:text-5xl font-bold leading-normal py-2 text-rose-100 drop-shadow-[0_2px_16px_rgba(251,113,133,0.35)]">
-          আমাদের গল্প 🎬
+          তোমার জন্মদিনের গান 🎵
         </h2>
         <p className="text-sm text-slate-300/80 mt-1 max-w-md mx-auto">
-          প্লে বাটনে ট্যাপ করে একসাথে কাটানো সুন্দর মুহূর্তগুলোর ভিডিও দেখে নাও।
+          প্লে বাটনে ট্যাপ করে তোমার জন্মদিন নিয়ে তৈরি এই বিশেষ গানটি শুনে নাও।
         </p>
       </div>
 
@@ -81,7 +81,7 @@ export function MemoryVideoSection() {
         {/* Bottom video footer note */}
         <div className="pt-3 pb-1 flex items-center justify-center gap-2 text-xs text-rose-300/70">
           <Heart className="w-3.5 h-3.5 fill-rose-400 text-rose-400" />
-          <span>রিমতির জন্মদিনের বিশেষ মুহূর্তগুলো</span>
+          <span>রিমতির জন্মদিনের বিশেষ গান ❤️</span>
         </div>
       </div>
     </div>
