@@ -46,11 +46,8 @@ export function LanternWish() {
         <span>আকাশে উইশ ফানুস</span>
       </div>
 
-      <h2 className="text-3xl sm:text-5xl font-serif font-bold leading-[1.35] py-2 mb-3">
-        <span className="inline-block py-1 text-transparent bg-clip-text bg-gradient-to-r from-pink-200 via-rose-100 to-amber-200">
-          আকাশে ফানুস উড়িয়ে দাও
-        </span>{" "}
-        <span className="inline-block">🏮</span>
+      <h2 className="text-3xl sm:text-5xl font-bold leading-normal py-2 mb-3 text-rose-100 drop-shadow-[0_2px_16px_rgba(251,113,133,0.35)]">
+        আকাশে ফানুস উড়িয়ে দাও 🏮
       </h2>
       <p className="text-sm text-slate-300/80 mb-6 max-w-md mx-auto">
         তোমার মনের যেকোনো ইচ্ছে লিখে ফানুসটি উড়িয়ে দাও রাতের আকাশে, তারাদের দেশে তোমার সব চাওয়া পূর্ণ হোক।

@@ -1,6 +1,14 @@
 import React from "react";
 import type { Metadata } from "next";
+import { Hind_Siliguri } from "next/font/google";
 import { HbdClient } from "./HbdClient";
+
+const hindSiliguri = Hind_Siliguri({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["bengali"],
+  display: "swap",
+  variable: "--font-hind-siliguri",
+});
 
 export const metadata: Metadata = {
   title: "Happy Birthday Rimty! ❤️ | From Miskat",
@@ -18,5 +26,9 @@ export const metadata: Metadata = {
 };
 
 export default function RimtyPage() {
-  return <HbdClient />;
+  return (
+    <div className={`${hindSiliguri.className} font-sans`}>
+      <HbdClient />
+    </div>
+  );
 }
