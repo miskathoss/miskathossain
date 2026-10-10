@@ -214,10 +214,11 @@ export default function VivianaClient() {
           MAIN NAVIGATION HEADER
       ────────────────────────────────────────────────────────────── */}
       <header className="sticky top-[41px] z-40 bg-[#FFF8F0]/95 backdrop-blur-md border-b border-[#EFE4D6] transition-all">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+          
           {/* Logo & Brand Identity */}
-          <Link href="#hero" className="flex items-center gap-3 group">
-            <div className="relative w-11 h-11 rounded-xl overflow-hidden shadow-xs border border-[#E4D5C5] bg-white p-0.5">
+          <Link href="#hero" className="flex items-center gap-3 shrink-0 group">
+            <div className="relative w-10 h-10 lg:w-11 lg:h-11 rounded-xl overflow-hidden shadow-xs border border-[#E4D5C5] bg-white p-0.5 shrink-0">
               <Image
                 src="/assets/viviana/The-Writing-Master-Logo.jpg"
                 alt="Viviana Munoz Logo"
@@ -225,60 +226,60 @@ export default function VivianaClient() {
                 className="object-contain"
               />
             </div>
-            <div className="flex flex-col">
-              <span className="font-extrabold tracking-tight text-lg text-[#542221] group-hover:text-[#3E1817] transition">
+            <div className="flex flex-col whitespace-nowrap">
+              <span className="font-extrabold tracking-tight text-base lg:text-lg text-[#542221] group-hover:text-[#3E1817] transition">
                 VIVIANA MUNOZ
               </span>
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-[#C87A65]">
+              <span className="text-[10px] lg:text-[11px] font-semibold uppercase tracking-wider text-[#C87A65]">
                 The LinkedIn Profit Project™
               </span>
             </div>
           </Link>
 
-          {/* Desktop Nav Items */}
-          <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-[#6E5552]">
-            <a href="#about-program" className="hover:text-[#542221] transition">
+          {/* Desktop Nav Items (Curated, whitespace-nowrap, clean spacing) */}
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-7 text-xs xl:text-sm font-semibold text-[#6E5552]">
+            <a href="#about-program" className="whitespace-nowrap hover:text-[#542221] transition py-1">
               The Method
             </a>
-            <a href="#brand-story" className="hover:text-[#542221] transition">
+            <a href="#brand-story" className="whitespace-nowrap hover:text-[#542221] transition py-1">
               My Story
             </a>
-            <a href="#calculator" className="hover:text-[#542221] transition">
-              Income Calculator
+            <a href="#calculator" className="whitespace-nowrap hover:text-[#542221] transition py-1">
+              Calculator
             </a>
-            <a href="#curriculum" className="hover:text-[#542221] transition">
+            <a href="#curriculum" className="whitespace-nowrap hover:text-[#542221] transition py-1">
               Curriculum
             </a>
-            <a href="#meet-viviana" className="hover:text-[#542221] transition">
+            <a href="#meet-viviana" className="whitespace-nowrap hover:text-[#542221] transition py-1">
               Meet Viviana
             </a>
-            <a href="#testimonials" className="hover:text-[#542221] transition">
+            <a href="#testimonials" className="whitespace-nowrap hover:text-[#542221] transition py-1">
               Testimonials
             </a>
-            <a href="#investment" className="hover:text-[#542221] transition">
+            <a href="#investment" className="whitespace-nowrap hover:text-[#542221] transition py-1">
               Investment
             </a>
-            <a href="#faq" className="hover:text-[#542221] transition">
+            <a href="#faq" className="whitespace-nowrap hover:text-[#542221] transition py-1">
               FAQ
             </a>
           </nav>
 
           {/* CTA & Mobile Menu Toggle */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 shrink-0">
             <button
               onClick={() => {
                 setModalType("enroll");
                 setIsModalOpen(true);
               }}
-              className="hidden sm:inline-flex items-center gap-2 bg-[#542221] hover:bg-[#3E1817] text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md hover:shadow-[#542221]/20 transition-all duration-300"
+              className="hidden sm:inline-flex items-center gap-2 bg-[#542221] hover:bg-[#3E1817] text-white px-4 lg:px-5 py-2.5 rounded-full text-xs lg:text-sm font-semibold shadow-md hover:shadow-[#542221]/20 whitespace-nowrap shrink-0 transition-all duration-300"
             >
               <span>Enroll Now — $2,000</span>
-              <ArrowUpRight className="w-4 h-4 text-[#FFD8CB]" />
+              <ArrowUpRight className="w-4 h-4 text-[#FFD8CB] shrink-0" />
             </button>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 md:hidden text-[#542221] hover:text-[#3E1817] focus:outline-none"
+              className="p-2 lg:hidden text-[#542221] hover:text-[#3E1817] focus:outline-none"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -288,7 +289,7 @@ export default function VivianaClient() {
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-[#FFF8F0] border-b border-[#EFE4D6] px-6 py-6 space-y-4 animate-in fade-in slide-in-from-top-4 duration-200">
+          <div className="lg:hidden bg-[#FFF8F0] border-b border-[#EFE4D6] px-6 py-6 space-y-4 animate-in fade-in slide-in-from-top-4 duration-200">
             <nav className="flex flex-col gap-3.5 text-base font-medium text-[#6E5552]">
               <a
                 href="#about-program"
