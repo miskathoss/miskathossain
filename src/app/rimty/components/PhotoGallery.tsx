@@ -3,7 +3,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { soundEngine } from "./AudioEngine";
-import { Heart, Sparkles, X, Camera } from "lucide-react";
+import { Heart, Sparkles, X, Camera, Instagram } from "lucide-react";
+
+interface PhotoCredit {
+  name: string;
+  instagramUrl: string;
+}
 
 interface PhotoItem {
   id: number;
@@ -11,6 +16,7 @@ interface PhotoItem {
   title: string;
   note: string;
   rotation: string;
+  credit?: PhotoCredit;
 }
 
 const photos: PhotoItem[] = [
@@ -27,6 +33,10 @@ const photos: PhotoItem[] = [
     title: "প্রতিচ্ছবি",
     note: "এক অদ্ভুত মায়াময় স্তব্ধতা। যার সাজপোশাকের জমকালো আভা ছাপিয়ে চোখ আটকে থাকে তার শান্ত চাহনিতে। যার উপস্থিতিতে চারপাশের সমস্ত চঞ্চলতা নিঃশব্দ হয়ে আসে। কাঁচের ওপারে ফুটে থাকা সেই মুখটি যেন আমার জীবনের সবচেয়ে পবিত্র প্রাপ্তি, যার স্নিগ্ধতায় সব ক্লান্তির অবসান।",
     rotation: "rotate-2",
+    credit: {
+      name: "Unaisa Khan",
+      instagramUrl: "https://www.instagram.com/_unaisa.khan_/",
+    },
   },
   {
     id: 3,
@@ -34,6 +44,10 @@ const photos: PhotoItem[] = [
     title: "একটুকরো প্রশান্তি",
     note: "কোলাহলমুখর এই পৃথিবীর ভিড়ে নিঃশব্দ এক আশ্রয়। যার সামান্যতম হেলান দিয়ে থাকার মাঝেও মিশে থাকে আজন্ম নির্ভরতা। যার অনুভূতির গভীরতা বুঝতে কোনো কথার প্রয়োজন হয় না; শুধু পাশে থাকাটুকুই যেন যাবতীয় অনিশ্চয়তার বিরুদ্ধে এক শান্ত প্রতিবাদ।",
     rotation: "-rotate-1",
+    credit: {
+      name: "Unaisa Khan",
+      instagramUrl: "https://www.instagram.com/_unaisa.khan_/",
+    },
   },
   {
     id: 4,
@@ -41,6 +55,10 @@ const photos: PhotoItem[] = [
     title: "আঙুলে আঙুল",
     note: "কোনো অলংকার কিংবা রঙের প্রদর্শনী নয়, কেবল দুটি হাতের স্পর্শে রচিত এক মৌন স্বীকারোক্তি। যে স্পর্শে শব্দের চেয়ে বিশ্বাস বেশি, প্রতিশ্রুতির চেয়ে অনুভব গাঢ়। হাত ছুঁয়ে থাকার এই নীরব ভাষাটাই যেন আমাদের নিজস্ব এক পৃথিবী গড়ে তোলে।",
     rotation: "rotate-3",
+    credit: {
+      name: "Unaisa Khan",
+      instagramUrl: "https://www.instagram.com/_unaisa.khan_/",
+    },
   },
   {
     id: 5,
@@ -48,6 +66,10 @@ const photos: PhotoItem[] = [
     title: "নিভৃত বিশ্রাম",
     note: "সব আয়োজন আর আনুষ্ঠানিকতা শেষের এক নিষ্কলুষ নির্জনতা। যেখানে সকল আবরণ খসে পড়ে, উন্মোচিত হয় সম্পর্কের সবচেয়ে সহজ, নিঃশঙ্ক রূপ। চলন্ত চাকার ছন্দে ঘুমিয়ে থাকা এই শান্ত মুখের মায়াতেই লুকিয়ে আছে আমার সমস্ত স্বস্তির ঠিকানা।",
     rotation: "-rotate-3",
+    credit: {
+      name: "Mahib Abrar Khan",
+      instagramUrl: "https://www.instagram.com/_khan_mahib_/",
+    },
   },
   {
     id: 6,
@@ -97,6 +119,10 @@ const photos: PhotoItem[] = [
     title: "পথের বাঁকে",
     note: "প্রকৃতির নিবিড় শ্যামলতার মাঝে যেন এক টুকরো স্নিগ্ধ বিস্ময়। যার ব্যক্তিত্বে মিশে থাকে আভিজাত্য আর সারল্যের এক দুর্লভ ভারসাম্য। জীবনের এই দীর্ঘ যাত্রাপথে যার হাত ধরে চলার চেয়ে বড় কোনো সৌভাগ্য আমার জানা নেই।",
     rotation: "-rotate-2",
+    credit: {
+      name: "Mahib Abrar Khan",
+      instagramUrl: "https://www.instagram.com/_khan_mahib_/",
+    },
   },
 ];
 
@@ -201,6 +227,22 @@ export function PhotoGallery() {
                 <p className="text-slate-300 text-sm leading-relaxed font-light mb-6 italic border-l-2 border-rose-500/50 pl-4 py-1">
                   &ldquo;{activePhoto.note}&rdquo;
                 </p>
+
+                {activePhoto.credit && (
+                  <div className="flex items-center gap-2 mb-4 px-3 py-1.5 rounded-xl bg-rose-500/10 border border-rose-500/20 text-xs text-slate-300 w-fit backdrop-blur-sm">
+                    <Camera className="w-3.5 h-3.5 text-rose-300 shrink-0" />
+                    <span className="text-slate-400">ছবি:</span>
+                    <a
+                      href={activePhoto.credit.instagramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-rose-200 hover:text-white font-medium underline underline-offset-2 decoration-rose-400/40 hover:decoration-white transition-colors"
+                    >
+                      <Instagram className="w-3.5 h-3.5 text-rose-400" />
+                      <span>{activePhoto.credit.name}</span>
+                    </a>
+                  </div>
+                )}
 
                 <div className="flex items-center gap-2 text-xs text-rose-300/80 font-serif mb-2">
                   <Heart className="w-4 h-4 fill-rose-400 text-rose-400" />
