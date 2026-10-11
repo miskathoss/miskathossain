@@ -336,62 +336,53 @@ export default function VeronicanaClient() {
 
       {/* 2. MAIN HEADER & LUXURY NAVIGATION */}
       <header className="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E6E1D8] transition-all">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* Brand Logo */}
-          <Link href="#hero" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden bg-white shadow-sm border border-[#E6E1D8] flex items-center justify-center p-1">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+          {/* Brand Logo - ORIGINAL LOGO ONLY, NO OTHER TEXT */}
+          <Link href="#hero" className="flex items-center flex-shrink-0 group">
+            <div className="relative h-14 w-44 sm:h-16 sm:w-52 transition-transform group-hover:scale-[1.02]">
               <Image
                 src="/assets/veronicana/logo.png"
-                alt="Veronicana Holistic Therapies Logo"
-                width={48}
-                height={48}
-                className="object-contain"
+                alt="Veronicana Holistic Therapies"
+                fill
+                className="object-contain object-left"
                 priority
               />
             </div>
-            <div>
-              <span className="block text-lg font-serif font-bold text-[#1B3B2E] tracking-tight group-hover:text-[#2D5A46] transition-colors">
-                VERONICANA
-              </span>
-              <span className="block text-[10px] tracking-widest uppercase font-medium text-[#7C8B82]">
-                Holistic Therapies • Drogheda
-              </span>
-            </div>
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-[#3A453F]">
-            <a href="#therapies" className="hover:text-[#1B3B2E] transition-colors">
+          {/* Desktop Navigation Links - ALWAYS SINGLE LINE (NO WRAPPING) */}
+          <nav className="hidden xl:flex items-center gap-6 xl:gap-8 text-sm font-medium text-[#3A453F] whitespace-nowrap flex-shrink-0">
+            <a href="#therapies" className="hover:text-[#1B3B2E] transition-colors whitespace-nowrap">
               Treatments
             </a>
-            <a href="#about" className="hover:text-[#1B3B2E] transition-colors">
+            <a href="#about" className="hover:text-[#1B3B2E] transition-colors whitespace-nowrap">
               About Veronica
             </a>
-            <a href="#quiz" className="hover:text-[#1B3B2E] transition-colors">
+            <a href="#quiz" className="hover:text-[#1B3B2E] transition-colors whitespace-nowrap">
               Therapy Matcher
             </a>
-            <a href="#philosophy" className="hover:text-[#1B3B2E] transition-colors">
+            <a href="#philosophy" className="hover:text-[#1B3B2E] transition-colors whitespace-nowrap">
               Our Method
             </a>
-            <a href="#testimonials" className="hover:text-[#1B3B2E] transition-colors">
+            <a href="#testimonials" className="hover:text-[#1B3B2E] transition-colors whitespace-nowrap">
               Reviews
             </a>
-            <a href="#faq" className="hover:text-[#1B3B2E] transition-colors">
+            <a href="#faq" className="hover:text-[#1B3B2E] transition-colors whitespace-nowrap">
               FAQ
             </a>
-            <a href="#location" className="hover:text-[#1B3B2E] transition-colors">
+            <a href="#location" className="hover:text-[#1B3B2E] transition-colors whitespace-nowrap">
               Clinic & Location
             </a>
           </nav>
 
           {/* Action CTAs */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-3 flex-shrink-0">
             <button
               onClick={() => {
                 setFormSubmitted(false);
                 setInquiryModalOpen(true);
               }}
-              className="text-xs uppercase tracking-wider font-semibold px-4 py-2.5 rounded-full border border-[#2D5A46] text-[#2D5A46] hover:bg-[#2D5A46]/5 transition-colors"
+              className="text-xs uppercase tracking-wider font-semibold px-4 py-2.5 rounded-full border border-[#2D5A46] text-[#2D5A46] hover:bg-[#2D5A46]/5 transition-colors whitespace-nowrap flex-shrink-0"
             >
               Ask a Question
             </button>
@@ -399,17 +390,17 @@ export default function VeronicanaClient() {
               href={FRESHA_BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-bold px-5 py-2.5 rounded-full bg-[#2D5A46] text-white hover:bg-[#1B3B2E] shadow-sm hover:shadow-md transition-all"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-bold px-5 py-2.5 rounded-full bg-[#2D5A46] text-white hover:bg-[#1B3B2E] shadow-sm hover:shadow-md transition-all whitespace-nowrap flex-shrink-0"
             >
               <Calendar className="w-3.5 h-3.5" />
               Book on Fresha
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - shows on screen width < xl */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-[#1B3B2E] hover:bg-[#EBE6DE] transition-colors"
+            className="xl:hidden p-2 rounded-lg text-[#1B3B2E] hover:bg-[#EBE6DE] transition-colors flex-shrink-0"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -418,7 +409,7 @@ export default function VeronicanaClient() {
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-[#FAF8F5] border-b border-[#E6E1D8] px-6 py-6 shadow-xl animate-in slide-in-from-top-4 duration-200">
+          <div className="xl:hidden bg-[#FAF8F5] border-b border-[#E6E1D8] px-6 py-6 shadow-xl animate-in slide-in-from-top-4 duration-200">
             <div className="flex flex-col gap-4 text-base font-medium text-[#2A3630]">
               <a
                 href="#therapies"
@@ -1487,18 +1478,14 @@ export default function VeronicanaClient() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden bg-white p-1">
+                <div className="relative h-12 w-40 bg-white/95 rounded-xl px-2 py-1 shadow-sm">
                   <Image
                     src="/assets/veronicana/logo.png"
-                    alt="Veronicana Logo"
-                    width={40}
-                    height={40}
-                    className="object-contain"
+                    alt="Veronicana Holistic Therapies"
+                    fill
+                    className="object-contain p-1"
                   />
                 </div>
-                <span className="text-xl font-serif font-bold text-white tracking-tight">
-                  VERONICANA
-                </span>
               </div>
               <p className="text-xs text-[#9BB0A4] leading-relaxed max-w-sm mb-4">
                 Dedicated to restoring the harmony of soul, mind, and body through authentic clinical
