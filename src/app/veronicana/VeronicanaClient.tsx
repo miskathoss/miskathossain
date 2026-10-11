@@ -596,26 +596,6 @@ export default function VeronicanaClient() {
                   </div>
                 </div>
 
-                {/* Floating Secondary Photo Tag (Sound Bath / Clinic) */}
-                <div className="hidden sm:flex absolute -bottom-6 -left-8 bg-white p-2.5 rounded-2xl shadow-xl border border-[#E6E1D8] items-center gap-3 max-w-xs animate-in fade-in duration-500">
-                  <div className="relative w-14 h-14 rounded-xl overflow-hidden flex-shrink-0">
-                    <Image
-                      src="/assets/veronicana/sound-bath.jpg"
-                      alt="Sound Bath Therapy"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <span className="text-[10px] uppercase font-bold text-[#2D5A46] tracking-wider block">
-                      Sound Bath & Reiki
-                    </span>
-                    <p className="text-xs font-medium text-[#2A3630] leading-tight">
-                      Acoustic Tibetan Singing Bowls & Energetic Reset
-                    </p>
-                  </div>
-                </div>
-
                 {/* Floating Accreditation Badge */}
                 <div className="absolute -top-5 -right-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-lg border border-[#E6E1D8] flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-[#EAF2ED] flex items-center justify-center text-[#2D5A46] font-bold text-xs">
