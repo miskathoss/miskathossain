@@ -22,16 +22,36 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // Subdomain rewriting for My Coach Viviana
-  if (hostname.startsWith("mycoachviviana.") || hostname.startsWith("viviana.")) {
+  // Subdomain rewriting for CYV Coaching
+  if (
+    hostname.startsWith("cyvcoaching.") ||
+    hostname.startsWith("cyv.")
+  ) {
     if (
       !pathname.startsWith("/_next") &&
       !pathname.startsWith("/assets") &&
       !pathname.startsWith("/api") &&
-      !pathname.startsWith("/mycoachviviana")
+      !pathname.startsWith("/cyvcoaching")
     ) {
       const url = request.nextUrl.clone();
-      url.pathname = `/mycoachviviana${pathname === "/" ? "" : pathname}`;
+      url.pathname = `/cyvcoaching${pathname === "/" ? "" : pathname}`;
+      return NextResponse.rewrite(url);
+    }
+  }
+
+  // Subdomain rewriting for Shelley Bridgman
+  if (
+    hostname.startsWith("shelleybridgman.") ||
+    hostname.startsWith("shelley.")
+  ) {
+    if (
+      !pathname.startsWith("/_next") &&
+      !pathname.startsWith("/assets") &&
+      !pathname.startsWith("/api") &&
+      !pathname.startsWith("/shelleybridgman")
+    ) {
+      const url = request.nextUrl.clone();
+      url.pathname = `/shelleybridgman${pathname === "/" ? "" : pathname}`;
       return NextResponse.rewrite(url);
     }
   }

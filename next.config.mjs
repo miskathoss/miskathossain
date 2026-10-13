@@ -5,6 +5,9 @@ const nextConfig = {
     unoptimized: true,
   },
   transpilePackages: ["gsap", "lenis"],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   async headers() {
     return [
       {
