@@ -705,14 +705,14 @@ export default function CYVClient() {
                   setMobileMenuOpen(false);
                   openBookingFor("Executive & C-Suite Leadership Coaching");
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-slate-950 bg-amber-400 hover:bg-amber-500 shadow-sm transition-colors text-sm"
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-full font-semibold text-slate-950 bg-amber-400 hover:bg-amber-500 shadow-sm transition-colors text-sm"
               >
                 <Calendar className="w-4 h-4" />
                 <span>Book 30-Min Discovery Session</span>
               </button>
               <a
                 href={PHONE_HREF}
-                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors text-sm"
+                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-full font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors text-sm"
               >
                 <Phone className="w-4 h-4 text-amber-600" />
                 <span>Call {PHONE_NUMBER}</span>
@@ -756,22 +756,22 @@ export default function CYVClient() {
                 clear communication, and actionable mindset growth for yourself, your community, and your company.
               </p>
 
-              {/* Action Buttons */}
-              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              {/* Action Buttons - Unified Design System */}
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
                 <button
                   onClick={() => openBookingFor("Executive & C-Suite Leadership Coaching")}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full text-sm sm:text-base font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 whitespace-nowrap"
                 >
-                  <Calendar className="w-5 h-5 text-slate-950" />
+                  <Calendar className="w-4 h-4 text-slate-950 shrink-0" />
                   <span>Book Free Discovery Call</span>
-                  <ArrowRight className="w-4 h-4 text-slate-950" />
+                  <ArrowRight className="w-4 h-4 text-slate-950 shrink-0" />
                 </button>
                 <a
                   href="#programs"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-semibold text-slate-800 bg-white border border-slate-300 hover:border-amber-500 hover:text-amber-700 shadow-sm hover:shadow transition-all duration-200"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm sm:text-base font-semibold text-[#0f223d] bg-white border border-slate-300 hover:border-amber-500 hover:bg-amber-50/50 shadow-xs hover:shadow transition-all duration-200 whitespace-nowrap"
                 >
                   <span>Explore Coaching Programs</span>
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-4 h-4 text-slate-500 shrink-0" />
                 </a>
               </div>
 
@@ -800,7 +800,7 @@ export default function CYVClient() {
 
                 {/* Main Portrait Card */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
-                  <div className="relative aspect-[4/5] w-full bg-slate-100">
+                  <div className="relative aspect-[4/3.8] sm:aspect-[4/3.6] w-full bg-slate-100 overflow-hidden">
                     <Image
                       src="/assets/cyvcoaching/angel_portrait.jpg"
                       alt="Coach Angel Laks — Founder of Changing Your View Executive Coaching"
@@ -833,24 +833,24 @@ export default function CYVClient() {
                 </div>
 
                 {/* Floating Trust Badge 1 (Top Left) */}
-                <div className="absolute -top-4 -left-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-xl shadow-lg border border-slate-200 hidden sm:flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-amber-50 text-amber-600">
-                    <ShieldCheck className="w-5 h-5" />
+                <div className="absolute -top-4 -left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-full shadow-lg border border-slate-200/80 hidden sm:flex items-center gap-2.5">
+                  <div className="p-1.5 rounded-full bg-amber-50 text-amber-600">
+                    <ShieldCheck className="w-4 h-4" />
                   </div>
-                  <div>
-                    <div className="text-xs font-bold text-slate-900">U.S. Air Force Veteran</div>
-                    <div className="text-[10px] text-slate-500">Security Forces Specialist</div>
+                  <div className="text-left pr-1">
+                    <div className="text-xs font-bold text-slate-900 leading-none">U.S. Air Force Veteran</div>
+                    <div className="text-[10px] text-slate-500 mt-0.5 leading-none">Security Forces Specialist</div>
                   </div>
                 </div>
 
                 {/* Floating Trust Badge 2 (Bottom Right) */}
-                <div className="absolute -bottom-5 -right-4 bg-white/95 backdrop-blur-md px-4 py-3 rounded-xl shadow-lg border border-slate-200 hidden sm:flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-emerald-50 text-emerald-600">
-                    <Award className="w-5 h-5" />
+                <div className="absolute -bottom-5 -right-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-full shadow-lg border border-slate-200/80 hidden sm:flex items-center gap-2.5">
+                  <div className="p-1.5 rounded-full bg-emerald-50 text-emerald-600">
+                    <Award className="w-4 h-4" />
                   </div>
-                  <div>
-                    <div className="text-xs font-bold text-slate-900">Maxwell Certified Team</div>
-                    <div className="text-[10px] text-slate-500">Coach, Speaker &amp; Trainer</div>
+                  <div className="text-left pr-1">
+                    <div className="text-xs font-bold text-slate-900 leading-none">Maxwell Certified Team</div>
+                    <div className="text-[10px] text-slate-500 mt-0.5 leading-none">Coach, Speaker &amp; Trainer</div>
                   </div>
                 </div>
               </div>
@@ -1000,7 +1000,7 @@ export default function CYVClient() {
               <div className="pt-2">
                 <button
                   onClick={() => openBookingFor("Personal & Professional Mindset Coaching")}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-slate-950 bg-amber-400 hover:bg-amber-500 shadow-md transition-colors text-sm"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-slate-950 bg-amber-400 hover:bg-amber-500 shadow-md transition-colors text-sm"
                 >
                   <span>Connect With Coach Angel</span>
                   <ArrowRight className="w-4 h-4" />
@@ -1128,7 +1128,7 @@ export default function CYVClient() {
                   </div>
                   <button
                     onClick={() => openBookingFor(selectedProgram.title)}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold text-xs sm:text-sm text-slate-950 bg-amber-400 hover:bg-amber-500 shadow-md transition-all duration-200"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-bold text-xs sm:text-sm text-slate-950 bg-amber-400 hover:bg-amber-500 shadow-md transition-all duration-200"
                   >
                     <Calendar className="w-4 h-4" />
                     <span>Inquire About This Track</span>
@@ -1193,7 +1193,7 @@ export default function CYVClient() {
             </div>
             <button
               onClick={() => openBookingFor("Discovery Call & Leadership Assessment Audit")}
-              className="px-6 py-3 rounded-xl font-bold text-xs sm:text-sm text-slate-950 bg-amber-400 hover:bg-amber-300 shadow-md transition-colors flex-shrink-0"
+              className="px-6 py-3 rounded-full font-bold text-xs sm:text-sm text-slate-950 bg-amber-400 hover:bg-amber-300 shadow-md transition-colors flex-shrink-0"
             >
               Schedule Free 30-Min Audit
             </button>
@@ -1297,7 +1297,7 @@ export default function CYVClient() {
                         .join("; ");
                       openBookingFor(diagnosticResult.matchedTrack, `Identified challenges: ${notes}`);
                     }}
-                    className="w-full sm:w-auto px-5 py-3 rounded-xl text-xs font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 transition-colors"
+                    className="w-full sm:w-auto px-6 py-3 rounded-full text-xs sm:text-sm font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 transition-colors shadow-sm"
                   >
                     Review Your Results on a Free Strategy Call
                   </button>
@@ -1520,7 +1520,7 @@ export default function CYVClient() {
               <div className="pt-4 flex items-center gap-4">
                 <button
                   onClick={() => openBookingFor("Keynote Speaking & Maxwell Masterminds")}
-                  className="px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-slate-950 bg-amber-400 hover:bg-amber-500 shadow-md transition-colors"
+                  className="px-7 py-3.5 rounded-full font-bold text-xs sm:text-sm text-slate-950 bg-amber-400 hover:bg-amber-500 shadow-md transition-colors"
                 >
                   Inquire for Speaking Engagements
                 </button>
@@ -1530,10 +1530,10 @@ export default function CYVClient() {
             <div className="lg:col-span-6 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 aspect-[4/3]">
                 <Image
-                  src="/assets/cyvcoaching/coaching_program_4.jpg"
+                  src="/assets/cyvcoaching/angel_speaking.jpg"
                   alt="Coach Angel Laks speaking on stage"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0b192c]/90 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 text-white">
@@ -1835,7 +1835,7 @@ export default function CYVClient() {
 
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-xl font-bold text-sm text-slate-950 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-md hover:shadow-lg transition-all"
+                    className="w-full py-4 rounded-full font-bold text-sm text-slate-950 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-md hover:shadow-lg transition-all"
                   >
                     Send Strategy Request &amp; Book Call
                   </button>
@@ -1989,7 +1989,7 @@ export default function CYVClient() {
                         modalData.phone,
                         modalData.challenge
                       )}
-                      className="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-950 bg-amber-400 hover:bg-amber-300 transition-colors inline-flex items-center gap-1.5"
+                      className="px-5 py-2.5 rounded-full text-xs font-semibold text-slate-950 bg-amber-400 hover:bg-amber-300 transition-colors inline-flex items-center gap-1.5"
                     >
                       <Mail className="w-3.5 h-3.5" />
                       <span>Send via Email Directly</span>
@@ -1999,7 +1999,7 @@ export default function CYVClient() {
                         setBookingModalOpen(false);
                         setModalSubmitted(false);
                       }}
-                      className="px-6 py-2.5 rounded-xl font-bold text-xs text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors"
+                      className="px-6 py-2.5 rounded-full font-bold text-xs text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors"
                     >
                       Done
                     </button>
@@ -2097,7 +2097,7 @@ export default function CYVClient() {
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-xl font-bold text-xs sm:text-sm text-slate-950 bg-amber-400 hover:bg-amber-300 shadow-md transition-colors"
+                    className="w-full py-3.5 rounded-full font-bold text-xs sm:text-sm text-slate-950 bg-amber-400 hover:bg-amber-300 shadow-md transition-colors"
                   >
                     Confirm &amp; Request 30-Min Strategy Call
                   </button>
