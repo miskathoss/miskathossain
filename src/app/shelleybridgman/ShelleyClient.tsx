@@ -698,25 +698,6 @@ export default function ShelleyClient() {
                   </div>
                 </div>
 
-                {/* Floating Accreditation Card */}
-                <div className="absolute -bottom-6 -left-6 sm:bottom-4 sm:-left-6 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl shadow-xl border border-[#E5DDD0] max-w-[240px]">
-                  <div className="flex items-center gap-3">
-                    <div className="relative w-12 h-10 rounded-lg overflow-hidden border border-[#E2D9CB] bg-white flex-shrink-0">
-                      <Image
-                        src="/assets/shelleybridgman/ShelleyBridgman-ukcp.jpg"
-                        alt="UKCP Registered Psychotherapist"
-                        fill
-                        className="object-contain p-0.5"
-                      />
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold text-[#181224] leading-tight">UKCP Registered</p>
-                      <p className="text-[11px] text-[#6B6178] leading-tight">
-                        Psychotherapist &amp; Hypnotherapist
-                      </p>
-                    </div>
-                  </div>
-                </div>
 
                 {/* Floating TEDx Card */}
                 <button
