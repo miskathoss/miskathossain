@@ -567,11 +567,11 @@ export default function CYVClient() {
       {/* =========================================================================
           STICKY HEADER & NAVIGATION
           ========================================================================= */}
-      <header className="sticky top-[37px] z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* Logo & Brand Name */}
-          <Link href="#top" className="flex items-center gap-3.5 group">
-            <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white p-1 transition-transform group-hover:scale-105">
+      <header className="sticky top-[37px] z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition-all">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 h-20 flex items-center justify-between gap-4">
+          {/* Logo & Brand Name - Single Line Format */}
+          <Link href="#top" className="flex items-center gap-2.5 sm:gap-3 shrink-0 group">
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden shadow-xs border border-slate-200/80 bg-white p-1 transition-transform group-hover:scale-105 shrink-0">
               <Image
                 src="/assets/cyvcoaching/logo.png"
                 alt="Changing Your View Executive Coaching Logo"
@@ -580,56 +580,57 @@ export default function CYVClient() {
                 priority
               />
             </div>
-            <div className="flex flex-col">
-              <span className="text-base sm:text-lg font-bold tracking-tight text-[#0f223d] uppercase leading-none">
+            <div className="flex items-baseline gap-1.5 whitespace-nowrap shrink-0">
+              <span className="text-sm sm:text-[15px] xl:text-base font-extrabold tracking-tight text-[#0f223d] uppercase whitespace-nowrap">
                 Changing Your View
               </span>
-              <span className="text-xs font-semibold text-amber-600 tracking-wider uppercase mt-1">
-                Executive Coaching LLC
+              <span className="text-xs font-bold text-amber-600 tracking-wider uppercase whitespace-nowrap">
+                Coaching
               </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">
-            <a href="#about" className="hover:text-amber-600 transition-colors">
+          {/* Desktop Navigation Links - Single Line Format */}
+          <nav className="hidden lg:flex items-center gap-3 xl:gap-5 2xl:gap-6 text-xs xl:text-sm font-medium text-slate-700 whitespace-nowrap shrink">
+            <a href="#about" className="hover:text-amber-600 transition-colors whitespace-nowrap py-1">
               Meet Angel
             </a>
-            <a href="#programs" className="hover:text-amber-600 transition-colors">
-              Coaching Programs
+            <a href="#programs" className="hover:text-amber-600 transition-colors whitespace-nowrap py-1">
+              Programs
             </a>
-            <a href="#framework" className="hover:text-amber-600 transition-colors">
-              The 4-Step Method
+            <a href="#framework" className="hover:text-amber-600 transition-colors whitespace-nowrap py-1">
+              4-Step Method
             </a>
-            <a href="#assessment" className="hover:text-amber-600 transition-colors">
-              Self-Assessment
+            <a href="#assessment" className="hover:text-amber-600 transition-colors whitespace-nowrap py-1">
+              Assessment
             </a>
-            <a href="#proof" className="hover:text-amber-600 transition-colors">
-              Impact &amp; Proof
+            <a href="#proof" className="hover:text-amber-600 transition-colors whitespace-nowrap py-1">
+              Proof
             </a>
-            <a href="#faq" className="hover:text-amber-600 transition-colors">
+            <a href="#faq" className="hover:text-amber-600 transition-colors whitespace-nowrap py-1">
               FAQ
             </a>
-            <a href="#contact" className="hover:text-amber-600 transition-colors">
+            <a href="#contact" className="hover:text-amber-600 transition-colors whitespace-nowrap py-1">
               Contact
             </a>
           </nav>
 
-          {/* Right Header Actions */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Right Header Actions - Single Line Format */}
+          <div className="hidden sm:flex items-center gap-2 xl:gap-3 shrink-0 whitespace-nowrap">
             <a
               href={PHONE_HREF}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-slate-700 hover:text-amber-600 rounded-lg hover:bg-slate-100 transition-colors"
+              className="inline-flex items-center gap-1.5 px-2.5 xl:px-3 py-2 text-xs font-semibold text-slate-700 hover:text-amber-600 rounded-lg hover:bg-slate-100 transition-colors whitespace-nowrap shrink-0"
             >
-              <Phone className="w-3.5 h-3.5 text-amber-500" />
-              <span>{PHONE_NUMBER}</span>
+              <Phone className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+              <span className="whitespace-nowrap">{PHONE_NUMBER}</span>
             </a>
             <button
               onClick={() => openBookingFor("Executive & C-Suite Leadership Coaching")}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center gap-2 px-3.5 xl:px-5 py-2.5 rounded-full text-xs xl:text-sm font-semibold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap shrink-0"
             >
-              <Calendar className="w-4 h-4 text-slate-950" />
-              <span>Book Strategy Session</span>
+              <Calendar className="w-4 h-4 text-slate-950 shrink-0" />
+              <span className="whitespace-nowrap hidden md:inline">Book Strategy Session</span>
+              <span className="whitespace-nowrap md:hidden">Book Session</span>
             </button>
           </div>
 
