@@ -279,6 +279,7 @@ export default function InsideOutClient() {
   const [pitchDetailsOpen, setPitchDetailsOpen] = useState(false);
   const [activePillar, setActivePillar] = useState(0);
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
+  const [heroPhoto, setHeroPhoto] = useState<"summit" | "portrait">("summit");
 
   // Booking Modal State
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -646,21 +647,49 @@ export default function InsideOutClient() {
             <div className="lg:col-span-5 relative flex justify-center">
               <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-3xl overflow-hidden border-2 border-teal-500/30 shadow-2xl shadow-teal-950/60 bg-gradient-to-b from-[#0F243A] to-[#081524] group">
                 <Image
-                  src="/images/insideoutleadership/dr_felipe_portrait.png"
+                  src={
+                    heroPhoto === "summit"
+                      ? "/images/insideoutleadership/dr_felipe_hero.jpg"
+                      : "/images/insideoutleadership/dr_felipe_chile.jpg"
+                  }
                   alt="Dr. Felipe Katich - Executive Mindful Leadership Coach"
                   fill
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
                   priority
                 />
 
+                {/* Subtle photo toggle button on top right */}
+                <div className="absolute top-3.5 right-3.5 z-20 flex items-center bg-[#071321]/85 backdrop-blur-md p-1 rounded-full border border-teal-500/30 text-[10px]">
+                  <button
+                    onClick={() => setHeroPhoto("summit")}
+                    className={`px-2.5 py-1 rounded-full transition-all ${
+                      heroPhoto === "summit"
+                        ? "bg-teal-500 text-white font-semibold shadow-sm"
+                        : "text-slate-300 hover:text-white"
+                    }`}
+                  >
+                    Expedition
+                  </button>
+                  <button
+                    onClick={() => setHeroPhoto("portrait")}
+                    className={`px-2.5 py-1 rounded-full transition-all ${
+                      heroPhoto === "portrait"
+                        ? "bg-teal-500 text-white font-semibold shadow-sm"
+                        : "text-slate-300 hover:text-white"
+                    }`}
+                  >
+                    Close-Up
+                  </button>
+                </div>
+
                 {/* Subtle bottom gradient overlay for card readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050E18] via-[#050E18]/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050E18] via-[#050E18]/30 to-transparent pointer-events-none" />
 
                 {/* Ambient accent border glow */}
                 <div className="absolute inset-0 rounded-3xl ring-1 ring-white/10 pointer-events-none" />
 
                 {/* Floating Verified Credentials Card */}
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#091A2E]/90 border border-teal-500/30 backdrop-blur-md text-white shadow-xl space-y-1.5">
+                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#091A2E]/90 border border-teal-500/30 backdrop-blur-md text-white shadow-xl space-y-1.5 z-10">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -672,8 +701,9 @@ export default function InsideOutClient() {
                       USC Ed.D.
                     </span>
                   </div>
-                  <h3 className="text-base font-bold text-white">
-                    Dr. Felipe (Phil) Katich
+                  <h3 className="text-base font-bold text-white flex items-center justify-between">
+                    <span>Dr. Felipe (Phil) Katich</span>
+                    <span className="text-xs font-normal text-teal-400">Houston, TX</span>
                   </h3>
                   <p className="text-xs text-slate-300 leading-snug">
                     Doctor of Organizational Change & Leadership (USC) • MBA • 20+ Yrs Executive Leadership
@@ -816,6 +846,47 @@ export default function InsideOutClient() {
               <div className="mt-8 pt-4 border-t border-teal-500/30 text-xs text-teal-300 font-semibold flex items-center justify-between">
                 <span>Result: Unshakeable executive presence, higher retention & team trust.</span>
                 <span className="text-[#F97316]">★ The Inside Out Shift</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Official Inside Out Shift Matrix Graphic */}
+          <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-[#0B1A2C] border border-teal-500/20 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 shadow-xl">
+            <div className="relative w-full md:w-72 aspect-[3/4] rounded-2xl overflow-hidden border border-teal-500/30 bg-white p-3 shrink-0 shadow-lg group">
+              <Image
+                src="/images/insideoutleadership/inside_out_shift_chart.png"
+                alt="The Inside Out Leadership Shift Chart"
+                fill
+                className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div className="space-y-4">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-teal-400">
+                Official Leadership Matrix
+              </span>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">
+                The Seven Core Transitions
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                The foundational matrix developed by Dr. Felipe Katich maps out the exact progression from traditional reactive defaults to mindful, intentional mastery across seven core leadership dimensions.
+              </p>
+              <div className="grid grid-cols-2 gap-2 text-xs text-slate-300 pt-1">
+                <div className="p-2.5 rounded-lg bg-[#071321] border border-slate-800 flex items-center gap-2">
+                  <span className="text-teal-400 font-bold">→</span>
+                  <span>Autopilot to <strong>Awareness</strong></span>
+                </div>
+                <div className="p-2.5 rounded-lg bg-[#071321] border border-slate-800 flex items-center gap-2">
+                  <span className="text-teal-400 font-bold">→</span>
+                  <span>Reactivity to <strong>Intention</strong></span>
+                </div>
+                <div className="p-2.5 rounded-lg bg-[#071321] border border-slate-800 flex items-center gap-2">
+                  <span className="text-teal-400 font-bold">→</span>
+                  <span>Control to <strong>Trust</strong></span>
+                </div>
+                <div className="p-2.5 rounded-lg bg-[#071321] border border-slate-800 flex items-center gap-2">
+                  <span className="text-teal-400 font-bold">→</span>
+                  <span>Pressure to <strong>Presence</strong></span>
+                </div>
               </div>
             </div>
           </div>
@@ -1264,11 +1335,23 @@ export default function InsideOutClient() {
               </div>
 
               {/* Quote Block */}
-              <blockquote className="p-4 rounded-xl bg-[#0E243A]/60 border-l-4 border-teal-400 text-sm text-slate-200 italic leading-relaxed">
-                "Change what happens within you so you can change how you show up—and transform what happens in the room."
-                <footer className="text-xs font-semibold text-teal-300 not-italic mt-2">
-                  — Dr. Felipe Katich, Ed.D., MBA
-                </footer>
+              <blockquote className="p-5 rounded-2xl bg-[#0E243A]/60 border-l-4 border-teal-400 text-sm text-slate-200 italic leading-relaxed space-y-3">
+                <p>
+                  "Change what happens within you so you can change how you show up—and transform what happens in the room."
+                </p>
+                <div className="flex items-center justify-between pt-1">
+                  <footer className="text-xs font-semibold text-teal-300 not-italic">
+                    — Dr. Felipe Katich, Ed.D., MBA
+                  </footer>
+                  <div className="relative w-28 h-10 invert opacity-90">
+                    <Image
+                      src="/images/insideoutleadership/signature.png"
+                      alt="Dr. Felipe Katich Signature"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
               </blockquote>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
