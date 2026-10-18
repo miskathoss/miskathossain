@@ -41,7 +41,6 @@ import {
 const ORIGINAL_WEBSITE_URL = "https://movemeantnow.com/";
 const KOI_RIVERS_LINKEDIN = "https://www.linkedin.com/in/koirivers/?isSelfProfile=false";
 const OFFICIAL_EMAIL = "info@movemeantnow.com";
-const OFFICIAL_PHONE = "(916) 555-0199";
 const JOTFORM_ENROLLMENT_URL = "https://pci.jotform.com/form/262160184299057";
 
 interface SprintPhase {

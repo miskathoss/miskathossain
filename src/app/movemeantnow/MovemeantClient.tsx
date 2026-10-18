@@ -66,6 +66,7 @@ interface ProgramOffering {
   badge: string;
   title: string;
   subtitle: string;
+  serviceType: ServiceType;
   image: string;
   tagline: string;
   summary: string;
@@ -83,6 +84,7 @@ const PROGRAM_OFFERINGS: ProgramOffering[] = [
     badge: "Dual-Accredited CCE Course",
     title: "The Threshold: Coaching Clients Who Come With an Ending, Not a Goal",
     subtitle: "Hold conversations where transition, identity, and faith converge without rushing clients toward the next goal.",
+    serviceType: "The Threshold™ Live Cohort (ICF + CCNI CCE — $97)",
     image: "/assets/movemeant/ending-and-goal.jpg",
     tagline: "Your clients aren't stuck. They're standing in an ending.",
     summary:
@@ -111,6 +113,7 @@ const PROGRAM_OFFERINGS: ProgramOffering[] = [
     badge: "Executive & Corporate Coaching",
     title: "Power Moves Leadership Framework™",
     subtitle: "High-stakes executive coaching for leaders seeking growth, influence, and enduring business impact.",
+    serviceType: "Power Moves™ Executive & Leadership Coaching",
     image: "/assets/movemeant/process-leadership.jpg",
     tagline: "Leadership today requires more than strong performance—it requires centered clarity.",
     summary:
@@ -138,6 +141,7 @@ const PROGRAM_OFFERINGS: ProgramOffering[] = [
     badge: "High-Velocity Accelerator",
     title: "The Movemeant Momentum Boost™ (90-Day Sprint)",
     subtitle: "A high-velocity 90-day executive sprint engineered for leaders standing at a pivotal career threshold.",
+    serviceType: "The 90-Day Movemeant Momentum Boost™ Sprint",
     image: "/assets/movemeant/koi-rivers-portrait-square.jpg",
     tagline: "Accelerate through your threshold. Turn transition into executive momentum.",
     summary:
@@ -166,6 +170,7 @@ const PROGRAM_OFFERINGS: ProgramOffering[] = [
     badge: "Organizational Consulting",
     title: "Team Alignment & Culture Development",
     subtitle: "From team friction to aligned execution—build healthy leaders and high-performing cultures.",
+    serviceType: "Team Alignment & Culture Development Consulting",
     image: "/assets/movemeant/hero-texture.jpg",
     tagline: "Culture is not an annual retreat. It is what happens every day in between.",
     summary:
@@ -298,6 +303,123 @@ const DIAGNOSTIC_QUESTIONS: DiagnosticQuestion[] = [
     ],
   },
 ];
+
+export interface DiagnosticArchetype {
+  service: ServiceType;
+  title: string;
+  badge: string;
+  score: number;
+  description: string;
+  actionStep: string;
+  first30Days: string;
+  somaticFocus: string;
+}
+
+export const computeDiagnosticResult = (answers: Record<number, number>): DiagnosticArchetype => {
+  const q1 = answers[1] ?? 0;
+  const q2 = answers[2] ?? 0;
+  const q3 = answers[3] ?? 0;
+
+  const scores: Record<ServiceType, number> = {
+    "The Threshold™ Live Cohort (ICF + CCNI CCE — $97)": 0,
+    "The 90-Day Movemeant Momentum Boost™ Sprint": 0,
+    "Power Moves™ Executive & Leadership Coaching": 0,
+    "Team Alignment & Culture Development Consulting": 0,
+    "Complimentary 20-Minute Clarity Diagnostic Call": 0,
+  };
+
+  const q1Option = DIAGNOSTIC_QUESTIONS[0]?.options[q1];
+  if (q1Option) scores[q1Option.pathway] += 50;
+
+  const q2Option = DIAGNOSTIC_QUESTIONS[1]?.options[q2];
+  if (q2Option) scores[q2Option.pathway] += 30;
+
+  const q3Option = DIAGNOSTIC_QUESTIONS[2]?.options[q3];
+  if (q3Option) scores[q3Option.pathway] += 20;
+
+  let highestService: ServiceType = "The Threshold™ Live Cohort (ICF + CCNI CCE — $97)";
+  let maxScore = -1;
+
+  const candidateServices: ServiceType[] = [
+    "The Threshold™ Live Cohort (ICF + CCNI CCE — $97)",
+    "The 90-Day Movemeant Momentum Boost™ Sprint",
+    "Power Moves™ Executive & Leadership Coaching",
+    "Team Alignment & Culture Development Consulting",
+  ];
+
+  for (const s of candidateServices) {
+    if (scores[s] > maxScore) {
+      maxScore = scores[s];
+      highestService = s;
+    }
+  }
+
+  if (highestService === "Team Alignment & Culture Development Consulting") {
+    return {
+      service: highestService,
+      title: "Team Alignment & Culture Development Consulting",
+      badge: "The Lived Culture Architect",
+      score: 96,
+      description:
+        "Your organization or department is navigating friction, cross-functional silos, or operational misalignment. Rather than rushing into another superficial annual retreat, you need an intentional, everyday operating rhythm and psychological safety framework that aligns vision with daily behavior.",
+      actionStep:
+        "Book a Team Culture Diagnostic Strategy Session with Koi Rivers to map out departmental friction points and design your quarterly alignment charter.",
+      first30Days:
+        "Comprehensive culture diagnostic audit, executive stakeholder interviews, and design of your custom team charter.",
+      somaticFocus:
+        "Down-regulating team anxiety, establishing respectful feedback norms, and somatic pacing in tense cross-functional meetings.",
+    };
+  }
+
+  if (highestService === "The 90-Day Movemeant Momentum Boost™ Sprint") {
+    return {
+      service: highestService,
+      title: "The Movemeant Momentum Boost™ (90-Day Executive Sprint)",
+      badge: "The High-Velocity Turnaround Executive",
+      score: 98,
+      description:
+        "You are standing at a pivotal career transition or executive promotion where year-long ambiguity is not an option. You require rapid somatic grounding, unshakeable boundary architecture, and tactical executive positioning in an intensive 90-day arc.",
+      actionStep:
+        "Apply for one of the 5 limited quarterly seats in the Movemeant Momentum Boost™ sprint to evaluate your transition threshold with Coach Koi Rivers.",
+      first30Days:
+        "Phase 1: The Threshold Audit & Somatic Grounding to dismantle what has concluded and stop reactive second-guessing.",
+      somaticFocus:
+        "4-7-8 vagal nerve reset and somatic boundary visualization to maintain emotional equilibrium under executive scrutiny.",
+    };
+  }
+
+  if (highestService === "Power Moves™ Executive & Leadership Coaching") {
+    return {
+      service: highestService,
+      title: "Power Moves Leadership Framework™ (Executive Advisory)",
+      badge: "The Strategic Executive Visionary",
+      score: 97,
+      description:
+        "You operate in high-stakes corporate or entrepreneurial environments where commercial results, board influence, and personal presence must align. You need confidential 1-on-1 strategic advisory to master executive voice, conquer imposter friction, and lead with centered authority.",
+      actionStep:
+        "Inquire for a confidential executive coaching retainer with Koi Rivers, PCC, customized to your corporate landscape and strategic objectives.",
+      first30Days:
+        "360° Leadership Diagnostic, stakeholder communication audit, and bespoke Power Moves Playbook construction.",
+      somaticFocus:
+        "Executive presence embodiment, vocal grounding, and somatic composure before high-stakes board presentations.",
+    };
+  }
+
+  return {
+    service: "The Threshold™ Live Cohort (ICF + CCNI CCE — $97)",
+    title: "The Threshold: Coaching Clients Who Come With an Ending, Not a Goal",
+    badge: "The Sacred Transition & Coach Education Specialist",
+    score: 99,
+    description:
+      "You are a coach, counselor, ministry leader, or professional standing in a profound ending or equipping others through major life interruptions. Traditional 'goal rushing' will only cause harm—you need dual-accredited (ICF + CCNI) competencies to coach endings with somatic depth and faith-forward discernment.",
+    actionStep:
+      "Register for the upcoming virtual live cohort ($97 intro rate) to earn 3.0 CCE credits and participate in observed triad coaching practicums with ICF mentors.",
+    first30Days:
+      "Enroll in the live 3-hour intensive, receive The Threshold Course Companion, and complete your verified CCE reflection transcript.",
+    somaticFocus:
+      "Holding space without absorbing grief; somatic grounding anchors informed by RYT-200 principles for holding others through transition.",
+  };
+};
 
 const FAQS = [
   {
@@ -1072,65 +1194,96 @@ export default function MovemeantClient() {
                 )}
               </div>
             ) : (
-              <div className="space-y-6 animate-in zoom-in-95 duration-200">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#529477]/20 text-[#529477] flex items-center justify-center font-bold">
-                    <CheckCircle2 className="w-5 h-5" />
+              (() => {
+                const result = computeDiagnosticResult(diagnosticAnswers);
+                return (
+                  <div className="space-y-6 animate-in zoom-in-95 duration-200">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-[#529477]/20 text-[#529477] flex items-center justify-center font-bold">
+                        <CheckCircle2 className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <span className="text-[11px] font-bold text-[#529477] uppercase tracking-wider">
+                          Assessment Analysis Complete
+                        </span>
+                        <h3 className="text-2xl font-serif text-white">Your Recommended Movemeant Pathway</h3>
+                      </div>
+                    </div>
+
+                    <div className="p-6 sm:p-8 rounded-2xl bg-[#0B0E14] border border-[#E5A93C]/40 space-y-5">
+                      <div className="flex flex-wrap items-center justify-between gap-2">
+                        <div className="flex items-center gap-2">
+                          <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#E5A93C]/10 text-[#E5A93C] border border-[#E5A93C]/30">
+                            Archetype: {result.badge}
+                          </span>
+                        </div>
+                        <span className="text-xs text-[#529477] font-semibold bg-[#529477]/10 px-3 py-1 rounded-full border border-[#529477]/30">
+                          {result.score}% Strategic Alignment
+                        </span>
+                      </div>
+
+                      <div>
+                        <h4 className="text-xl sm:text-2xl font-serif font-medium text-white">
+                          {result.title}
+                        </h4>
+                        <p className="text-xs sm:text-sm text-[#C8C2B7] leading-relaxed font-light mt-2">
+                          {result.description}
+                        </p>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+                        <div className="p-3.5 rounded-xl bg-[#121622] border border-white/5 space-y-1">
+                          <div className="text-[11px] font-bold text-[#E5A93C] uppercase tracking-wider">
+                            First 30 Days Focus
+                          </div>
+                          <p className="text-xs text-[#E5E0D8] leading-relaxed">
+                            {result.first30Days}
+                          </p>
+                        </div>
+                        <div className="p-3.5 rounded-xl bg-[#121622] border border-white/5 space-y-1">
+                          <div className="text-[11px] font-bold text-[#529477] uppercase tracking-wider">
+                            Somatic & Discernment Anchor
+                          </div>
+                          <p className="text-xs text-[#E5E0D8] leading-relaxed">
+                            {result.somaticFocus}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="p-3.5 rounded-xl bg-[#182030]/60 border border-[#E5A93C]/20 text-xs text-[#C8C2B7] space-y-1">
+                        <div className="font-semibold text-white">Recommended Next Step:</div>
+                        <p>{result.actionStep}</p>
+                      </div>
+
+                      <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
+                        <button
+                          onClick={() => {
+                            setSelectedService(result.service);
+                            setBookingForm((prev) => ({
+                              ...prev,
+                              service: result.service,
+                              message: `[Diagnostic Result: ${result.badge} (${result.score}% match)] — ${result.actionStep}`,
+                            }));
+                            setIsBookingOpen(true);
+                            setBookingSuccess(false);
+                          }}
+                          className="w-full sm:w-auto px-6 py-3 rounded-full text-xs font-semibold bg-[#E5A93C] hover:bg-[#F5C467] text-[#0B0E14] transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#E5A93C]/20"
+                        >
+                          <span>Proceed with {result.badge} Intake</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </button>
+
+                        <button
+                          onClick={resetDiagnostic}
+                          className="text-xs text-[#A39E93] hover:text-white transition-colors"
+                        >
+                          Retake Assessment
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <span className="text-[11px] font-bold text-[#529477] uppercase tracking-wider">
-                      Assessment Analysis Complete
-                    </span>
-                    <h3 className="text-2xl font-serif text-white">Your Recommended Movemeant Pathway</h3>
-                  </div>
-                </div>
-
-                <div className="p-6 rounded-2xl bg-[#0B0E14] border border-[#E5A93C]/40 space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#E5A93C]/10 text-[#E5A93C] border border-[#E5A93C]/30">
-                      Primary Match
-                    </span>
-                    <span className="text-xs text-[#A39E93]">98% Alignment Score</span>
-                  </div>
-
-                  <h4 className="text-xl font-serif font-medium text-white">
-                    {diagnosticAnswers[1] === 0 || diagnosticAnswers[2] === 0
-                      ? "The Threshold™: Coaching Clients Who Come With an Ending, Not a Goal"
-                      : diagnosticAnswers[1] === 1
-                      ? "The Movemeant Momentum Boost™ (90-Day Executive Sprint)"
-                      : "Power Moves Leadership Framework™ (Executive Advisory)"}
-                  </h4>
-
-                  <p className="text-xs sm:text-sm text-[#C8C2B7] leading-relaxed font-light">
-                    Based on your responses, you are standing at an inflection point where conventional goal-rushing will generate friction. Your optimal next step is to anchor in the threshold and establish unshakeable authority.
-                  </p>
-
-                  <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
-                    <button
-                      onClick={() => {
-                        const target =
-                          diagnosticAnswers[1] === 0 || diagnosticAnswers[2] === 0
-                            ? "The Threshold™ Live Cohort (ICF + CCNI CCE — $97)"
-                            : diagnosticAnswers[1] === 1
-                            ? "The 90-Day Movemeant Momentum Boost™ Sprint"
-                            : "Power Moves™ Executive & Leadership Coaching";
-                        openBookingWithService(target);
-                      }}
-                      className="w-full sm:w-auto px-6 py-3 rounded-full text-xs font-semibold bg-[#E5A93C] hover:bg-[#F5C467] text-[#0B0E14] transition-all flex items-center justify-center gap-2"
-                    >
-                      <span>Book Diagnostic Follow-up Call</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
-
-                    <button
-                      onClick={resetDiagnostic}
-                      className="text-xs text-[#A39E93] hover:text-white transition-colors"
-                    >
-                      Retake Assessment
-                    </button>
-                  </div>
-                </div>
-              </div>
+                );
+              })()
             )}
           </div>
         </div>
@@ -1378,7 +1531,7 @@ export default function MovemeantClient() {
                     </Link>
                   ) : (
                     <button
-                      onClick={() => openBookingWithService(program.title as ServiceType)}
+                      onClick={() => openBookingWithService(program.serviceType)}
                       className="px-5 py-2.5 rounded-full text-xs font-semibold bg-white/[0.08] hover:bg-[#E5A93C] text-white hover:text-[#0B0E14] transition-all flex items-center gap-1.5 ml-auto"
                     >
                       <span>{program.ctaText}</span>
@@ -1568,7 +1721,7 @@ export default function MovemeantClient() {
                 </div>
 
                 <div className="p-3 rounded-xl bg-[#0B0E14] border border-white/5 flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-amber-300] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-amber-300 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white">2025 Exceptional Woman of Color Award Honoree</strong>
                     <div className="text-[#A39E93]">Sac Cultural Hub Excellence Recognition</div>
