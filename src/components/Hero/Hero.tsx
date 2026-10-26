@@ -49,9 +49,12 @@ export function Hero() {
 
     const isMobile = window.innerWidth < 768;
 
-    // ── Tuning ──────────────────────────────────────────
-    // Generous scroll track for cinematic pacing on both mobile and desktop
-    const scrollDistance = isMobile ? "+=2600" : "+=3400";
+    // ── 3-Scroll Architecture Tuning ─────────────────────
+    // Pacing calibrated so:
+    // Scroll 1 -> Stage 1 (Glass Card) exits, Card 1 ("01 // The Authority Standard") fully opens
+    // Scroll 2 -> Card 1 exits, Card 2 ("02 // The Conversion Engine") fully opens
+    // Scroll 3 -> Card 2 exits, 3D model finishes, smoothly unpins into next section
+    const scrollDistance = isMobile ? "+=1100" : "+=1400";
     const scrubSpeed = isMobile ? 0.35 : 0.6;
 
     // Render loop: draw the current frame at display refresh rate
@@ -73,15 +76,21 @@ export function Hero() {
           pin: pinTarget,
           scrub: scrubSpeed,
           anticipatePin: 1,
+          snap: {
+            snapTo: "labelsDirectional",
+            duration: { min: 0.25, max: 0.5 },
+            delay: 0.04,
+            ease: "power2.out",
+          },
           onUpdate: (self) => {
             // Directly write to mutable ref — zero React overhead
             currentFrameRef.current = self.progress * 239;
 
             // Update chapter indicator text bi-directionally
             if (indicatorText) {
-              if (self.progress < 0.24) {
+              if (self.progress < 0.20) {
                 indicatorText.textContent = "01 // OVERVIEW";
-              } else if (self.progress < 0.54) {
+              } else if (self.progress < 0.55) {
                 indicatorText.textContent = "02 // AUTHORITY";
               } else {
                 indicatorText.textContent = "03 // CONVERSION";
@@ -91,41 +100,44 @@ export function Hero() {
         },
       });
 
-      // ── Stage 1: Scroll cue fades out early (0 to 8%) ────────────────
+      // ── Step 0: Overview Label ──────────────────────────────────────
+      tl.addLabel("overview", 0.0);
+
+      // ── Stage 1: Scroll cue fades out early (0 to 6%) ───────────────
       if (scrollIndicator) {
         tl.to(
           scrollIndicator,
           {
             opacity: 0,
             y: 15,
-            duration: 0.08,
+            duration: 0.06,
             ease: "power2.out",
           },
           0
         );
       }
 
-      // ── Stage 1: Glass Card smooth exit (0.12 to 0.22) ───────────────
+      // ── Stage 1: Glass Card smooth exit (0.00 to 0.16) ──────────────
       if (glassCard) {
         tl.to(
           glassCard,
           {
-            scale: 0.95,
+            scale: 0.94,
             y: -10,
             duration: 0.08,
             ease: "none",
           },
-          0.1
+          0
         );
 
         tl.to(
           glassCard,
           {
-            x: isMobile ? 0 : -60,
+            x: isMobile ? 0 : -50,
             y: isMobile ? 25 : -10,
             opacity: 0,
-            scale: 0.9,
-            duration: 0.10,
+            scale: 0.90,
+            duration: 0.12,
             ease: "power2.inOut",
             onComplete: () => {
               if (glassCard) glassCard.style.pointerEvents = "none";
@@ -134,7 +146,7 @@ export function Hero() {
               if (glassCard) glassCard.style.pointerEvents = "auto";
             },
           },
-          0.14
+          0.04
         );
       }
 
@@ -152,44 +164,50 @@ export function Hero() {
         );
       }
 
-      // ── Stage 2: Ghost Word 1 — AUTHORITY (0.18 to 0.50) ────────────
+      // ── Stage 2: Ghost Word 1 — AUTHORITY (0.08 to 0.44) ────────────
       if (ghost1) {
         tl.fromTo(
           ghost1,
-          { opacity: 0, scale: 0.9, xPercent: -6 },
-          { opacity: 0.9, scale: 1, xPercent: 4, duration: 0.12, ease: "power1.out" },
-          0.18
+          { opacity: 0, scale: 0.90, xPercent: -6 },
+          { opacity: 0.85, scale: 1, xPercent: 3, duration: 0.14, ease: "power1.out" },
+          0.08
         ).to(
           ghost1,
-          { opacity: 0, scale: 1.06, xPercent: 12, duration: 0.12, ease: "power1.in" },
-          0.44
+          { opacity: 0, scale: 1.06, xPercent: 12, duration: 0.10, ease: "power1.in" },
+          0.40
         );
       }
 
-      // ── Stage 2: Chapter 1 Card — THE AUTHORITY STANDARD (0.22 to 0.54)
+      // ── Stage 2: Chapter 1 Card — THE AUTHORITY STANDARD (0.16 to 0.52)
+      // Enters from 0.16 to 0.34, HOLDS centered at 0.36 (Label: authority), then exits 0.42 to 0.52
       if (chapter1) {
         tl.fromTo(
           chapter1,
-          { opacity: 0, y: 35, scale: 0.94 },
+          { opacity: 0, y: 40, scale: 0.94 },
           {
             opacity: 1,
             y: 0,
             scale: 1,
-            duration: 0.08,
+            duration: 0.18,
             ease: "power2.out",
             onStart: () => {
               if (chapter1) chapter1.style.pointerEvents = "auto";
             },
           },
-          0.22
-        ).to(
+          0.16
+        );
+
+        // Snap target 1: Card 1 is fully open, centered & settled at 0.36
+        tl.addLabel("authority", 0.36);
+
+        tl.to(
           chapter1,
           {
             opacity: 0,
-            y: -25,
+            y: -30,
             scale: 0.95,
-            duration: 0.08,
-            ease: "power2.in",
+            duration: 0.10,
+            ease: "power2.inOut",
             onComplete: () => {
               if (chapter1) chapter1.style.pointerEvents = "none";
             },
@@ -197,49 +215,56 @@ export function Hero() {
               if (chapter1) chapter1.style.pointerEvents = "auto";
             },
           },
-          0.48
+          0.42
         );
+      } else {
+        tl.addLabel("authority", 0.36);
       }
 
-      // ── Stage 3: Ghost Word 2 — CONVERSION (0.50 to 0.86) ───────────
+      // ── Stage 3: Ghost Word 2 — CONVERSION (0.44 to 0.80) ───────────
       if (ghost2) {
         tl.fromTo(
           ghost2,
-          { opacity: 0, scale: 0.9, xPercent: 6 },
-          { opacity: 0.9, scale: 1, xPercent: -4, duration: 0.12, ease: "power1.out" },
-          0.50
+          { opacity: 0, scale: 0.90, xPercent: 6 },
+          { opacity: 0.85, scale: 1, xPercent: -3, duration: 0.14, ease: "power1.out" },
+          0.44
         ).to(
           ghost2,
-          { opacity: 0, scale: 1.06, xPercent: -12, duration: 0.12, ease: "power1.in" },
-          0.78
+          { opacity: 0, scale: 1.06, xPercent: -12, duration: 0.10, ease: "power1.in" },
+          0.74
         );
       }
 
-      // ── Stage 3: Chapter 2 Card — THE CONVERSION ENGINE (0.54 to 0.92)
-      // Generous reading window from 0.60 to 0.86, then cleanly fades out before unpinning
+      // ── Stage 3: Chapter 2 Card — THE CONVERSION ENGINE (0.50 to 0.88)
+      // Enters from 0.50 to 0.70, HOLDS centered at 0.72 (Label: conversion), then exits 0.78 to 0.88
       if (chapter2) {
         tl.fromTo(
           chapter2,
-          { opacity: 0, y: 35, scale: 0.94 },
+          { opacity: 0, y: 40, scale: 0.94 },
           {
             opacity: 1,
             y: 0,
             scale: 1,
-            duration: 0.08,
+            duration: 0.20,
             ease: "power2.out",
             onStart: () => {
               if (chapter2) chapter2.style.pointerEvents = "auto";
             },
           },
-          0.54
-        ).to(
+          0.50
+        );
+
+        // Snap target 2: Card 2 is fully open, centered & settled at 0.72
+        tl.addLabel("conversion", 0.72);
+
+        tl.to(
           chapter2,
           {
             opacity: 0,
-            y: -25,
+            y: -30,
             scale: 0.95,
-            duration: 0.08,
-            ease: "power2.in",
+            duration: 0.10,
+            ease: "power2.inOut",
             onComplete: () => {
               if (chapter2) chapter2.style.pointerEvents = "none";
             },
@@ -247,23 +272,29 @@ export function Hero() {
               if (chapter2) chapter2.style.pointerEvents = "auto";
             },
           },
-          0.84
+          0.78
         );
+      } else {
+        tl.addLabel("conversion", 0.72);
       }
 
-      // ── Stage 4: Ghost Word 3 — SCALE (0.84 to 0.96) ────────────────
+      // ── Stage 4: Ghost Word 3 — SCALE (0.78 to 0.96) ────────────────
       if (ghost3) {
         tl.fromTo(
           ghost3,
           { opacity: 0, scale: 0.92, xPercent: -4 },
-          { opacity: 0.75, scale: 1, xPercent: 4, duration: 0.06, ease: "power1.out" },
-          0.84
+          { opacity: 0.70, scale: 1, xPercent: 4, duration: 0.08, ease: "power1.out" },
+          0.78
         ).to(
           ghost3,
-          { opacity: 0, scale: 1.04, xPercent: 10, duration: 0.06, ease: "power1.in" },
-          0.94
+          { opacity: 0, scale: 1.04, xPercent: 10, duration: 0.08, ease: "power1.in" },
+          0.88
         );
       }
+
+      // Snap target 3: 1.0 unpins into Section 2
+      tl.addLabel("next-section", 1.0);
+      tl.to({}, { duration: 0.01 }, 1.0);
     }, container);
 
     return () => {
@@ -275,7 +306,7 @@ export function Hero() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full bg-dark h-[300vh] md:h-[380vh]"
+      className="relative w-full bg-dark min-h-screen"
     >
       {/* Pinned Viewport Container */}
       <div
