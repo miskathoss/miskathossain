@@ -7,22 +7,18 @@ import {
   ShieldCheck,
   Award,
   ArrowRight,
-  Sparkles,
   Calendar,
-  Mail,
   Linkedin,
   ExternalLink,
   CheckCircle2,
   X,
   Compass,
-  Briefcase,
-  Users,
-  GraduationCap,
   Clock,
-  Layers,
   Phone,
+  Mail,
   AlertCircle,
   Loader2,
+  Menu,
 } from "lucide-react";
 
 // Official External Links & Invariants
@@ -111,6 +107,7 @@ export default function MovemeantClient() {
   const [activePathway, setActivePathway] = useState<FocusPathway>("executive");
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
   const [isPhilosophyDrawerOpen, setIsPhilosophyDrawerOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Form State: Populated, Loading, Error, Success
   const [formStatus, setFormStatus] = useState<"idle" | "loading" | "error" | "success">("idle");
@@ -134,9 +131,9 @@ export default function MovemeantClient() {
     }));
   }, [activePathway]);
 
-  // Lock body scroll when modals are open
+  // Lock body scroll when modals or mobile menu are open
   useEffect(() => {
-    if (isConsultationModalOpen || isPhilosophyDrawerOpen) {
+    if (isConsultationModalOpen || isPhilosophyDrawerOpen || isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
@@ -144,7 +141,7 @@ export default function MovemeantClient() {
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, [isConsultationModalOpen, isPhilosophyDrawerOpen]);
+  }, [isConsultationModalOpen, isPhilosophyDrawerOpen, isMobileMenuOpen]);
 
   // Close modals on Escape key
   useEffect(() => {
@@ -152,6 +149,7 @@ export default function MovemeantClient() {
       if (e.key === "Escape") {
         setIsConsultationModalOpen(false);
         setIsPhilosophyDrawerOpen(false);
+        setIsMobileMenuOpen(false);
       }
     };
     window.addEventListener("keydown", handleKeyDown);
@@ -169,6 +167,7 @@ export default function MovemeantClient() {
     setFormStatus("idle");
     setErrorMessage("");
     setIsConsultationModalOpen(true);
+    setIsMobileMenuOpen(false);
   };
 
   const handleFormSubmit = (e: React.FormEvent) => {
@@ -192,352 +191,490 @@ export default function MovemeantClient() {
     // Simulate reliable dispatch
     setTimeout(() => {
       setFormStatus("success");
-    }, 900);
+    }, 850);
+  };
+
+  const scrollToPathways = () => {
+    const el = document.getElementById("pathways-section");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0C0E] text-[#F5F3EF] selection:bg-[#C8A97E] selection:text-[#0A0C0E] antialiased">
+    <div className="min-h-screen bg-white text-[#18191B] selection:bg-[#D4CF50] selection:text-[#14170E] antialiased">
       {/* =========================================================================
-          1. MINIMALIST EXECUTIVE TOP NAVIGATION BAR
+          1. TOP ANNOUNCEMENT BANNER (Pixel-Accurate Olive/Moss Strip)
       ========================================================================= */}
-      <header className="sticky top-0 z-40 w-full border-b border-white/[0.08] bg-[#0A0C0E]/90 backdrop-blur-md">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-12">
-          {/* Brand Mark */}
+      <aside
+        onClick={() => handleOpenConsultation("threshold")}
+        className="w-full bg-[#DAD554] text-[#1E2413] py-2 px-4 text-center font-medium text-xs sm:text-[13px] tracking-normal transition-colors hover:bg-[#D2CE4F] cursor-pointer select-none"
+        aria-label="Cohort Enrollment Announcement"
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-center gap-1.5">
+          <span>Now Enrolling: Sept 29 Live Cohort | ICF + CCNI Accredited | $97 Introductory Rate</span>
+          <span className="font-semibold text-sm leading-none">→</span>
+        </div>
+      </aside>
+
+      {/* =========================================================================
+          2. CLEAN WHITE HEADER (Brand Logo + Navigation Menu)
+      ========================================================================= */}
+      <header className="sticky top-0 z-40 w-full bg-white border-b border-zinc-200/70 shadow-[0_2px_12px_rgba(0,0,0,0.02)]">
+        <div className="mx-auto flex h-20 sm:h-24 max-w-7xl items-center justify-between px-6 lg:px-12">
+          {/* Movemeant Logo */}
           <Link
             href="/movemeantnow"
-            className="group flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E] rounded-md px-1 py-0.5"
+            className="relative block h-11 w-40 sm:h-14 sm:w-52 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] rounded-sm transition-transform active:scale-[0.99]"
             aria-label="Movemeant Coaching and Consultancy Home"
           >
-            <span className="font-serif text-xl tracking-[0.08em] font-medium text-[#FAF8F5] transition-colors group-hover:text-[#C8A97E]">
-              MOVEMEANT
-            </span>
-            <span className="text-[10px] tracking-[0.18em] uppercase text-[#A39E93]">
-              Coaching & Consultancy · Koi Rivers, PCC
-            </span>
+            <Image
+              src="/assets/movemeant/logo.png"
+              alt="Movemeant Coaching & Consultancy Logo"
+              fill
+              sizes="(max-width: 640px) 160px, 210px"
+              priority
+              className="object-contain object-left"
+            />
           </Link>
 
-          {/* Context Links */}
-          <nav className="hidden md:flex items-center gap-8 text-xs font-medium tracking-wide uppercase text-[#A39E93]">
+          {/* Desktop Navigation Links */}
+          <nav
+            className="hidden lg:flex items-center gap-8 text-[13px] font-bold tracking-wider uppercase text-[#222426]"
+            aria-label="Primary Navigation"
+          >
+            <Link
+              href="/movemeantnow"
+              className="relative text-[#8E8A24] pb-1 transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2.5px] after:bg-[#8E8A24]"
+              aria-current="page"
+            >
+              HOME
+            </Link>
             <button
               onClick={() => setIsPhilosophyDrawerOpen(true)}
-              className="transition-colors hover:text-[#FAF8F5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E] rounded py-1 px-2"
+              className="transition-colors hover:text-[#8E8A24] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] rounded py-1 px-1"
             >
-              The Philosophy
+              ABOUT
             </button>
             <button
-              onClick={() => setIsPhilosophyDrawerOpen(true)}
-              className="transition-colors hover:text-[#FAF8F5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E] rounded py-1 px-2"
+              onClick={() => {
+                setActivePathway("threshold");
+                scrollToPathways();
+              }}
+              className="transition-colors hover:text-[#8E8A24] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] rounded py-1 px-1"
             >
-              Dual Accreditation
+              COACH EDUCATION
             </button>
-            <a
-              href={KOI_RIVERS_LINKEDIN}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 transition-colors hover:text-[#FAF8F5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E] rounded py-1 px-2"
+            <button
+              onClick={() => {
+                setActivePathway("culture");
+                scrollToPathways();
+              }}
+              className="inline-flex items-center gap-1 transition-colors hover:text-[#8E8A24] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] rounded py-1 px-1"
             >
-              <Linkedin className="h-3.5 w-3.5" />
-              <span>LinkedIn</span>
-            </a>
+              <span>ORGANIZATIONS</span>
+              <span className="text-[10px] leading-none">⌵</span>
+            </button>
+            <button
+              onClick={() => handleOpenConsultation()}
+              className="transition-colors hover:text-[#8E8A24] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] rounded py-1 px-1"
+            >
+              LET&apos;S WORK TOGETHER
+            </button>
           </nav>
 
-          {/* Quick Header CTA */}
+          {/* Quick Header CTA & Mobile Menu Toggle */}
           <div className="flex items-center gap-3">
             <button
               onClick={() => handleOpenConsultation()}
-              className="inline-flex h-11 items-center justify-center rounded-lg border border-[#C8A97E]/60 bg-[#C8A97E]/10 px-5 text-xs font-semibold uppercase tracking-wider text-[#FAF8F5] transition-all duration-150 hover:bg-[#C8A97E] hover:text-[#0A0C0E] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0E]"
+              className="hidden sm:inline-flex h-11 items-center justify-center rounded-full bg-[#18191B] px-5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-[#8E8A24] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24]"
             >
-              Request Consultation
+              Inquire Now
+            </button>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden p-2.5 rounded-lg border border-zinc-200 text-[#18191B] hover:bg-zinc-100 min-h-[44px] min-w-[44px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24]"
+              aria-label="Toggle navigation menu"
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
           </div>
         </div>
+
+        {/* Mobile Navigation Drawer */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden border-t border-zinc-200 bg-white px-6 py-5 shadow-lg">
+            <nav className="flex flex-col space-y-4 text-sm font-bold tracking-wider uppercase text-[#222426]">
+              <Link
+                href="/movemeantnow"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-[#8E8A24] py-1 border-b border-zinc-100"
+              >
+                HOME
+              </Link>
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setIsPhilosophyDrawerOpen(true);
+                }}
+                className="text-left py-1 hover:text-[#8E8A24] border-b border-zinc-100"
+              >
+                ABOUT
+              </button>
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setActivePathway("threshold");
+                  scrollToPathways();
+                }}
+                className="text-left py-1 hover:text-[#8E8A24] border-b border-zinc-100"
+              >
+                COACH EDUCATION
+              </button>
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setActivePathway("culture");
+                  scrollToPathways();
+                }}
+                className="text-left py-1 hover:text-[#8E8A24] border-b border-zinc-100"
+              >
+                ORGANIZATIONS
+              </button>
+              <button
+                onClick={() => handleOpenConsultation()}
+                className="text-left py-1 hover:text-[#8E8A24] border-b border-zinc-100"
+              >
+                LET&apos;S WORK TOGETHER
+              </button>
+              <button
+                onClick={() => handleOpenConsultation()}
+                className="mt-3 w-full h-11 rounded-full bg-[#8E8A24] text-xs font-bold uppercase tracking-wider text-white"
+              >
+                Request Consultation
+              </button>
+            </nav>
+          </div>
+        )}
       </header>
 
       {/* =========================================================================
-          2. THE MASTER HERO SECTION (Craft-Design Architecture)
+          3. MASTER HERO SECTION (Exact Reference Replication)
       ========================================================================= */}
-      <main className="relative overflow-hidden pt-8 pb-16 lg:pt-14 lg:pb-24">
-        {/* Subtle Architectural Atmosphere (Restrained, no tacky blur orbs) */}
+      <section className="relative overflow-hidden bg-[#FAF9F6] pt-10 sm:pt-14 pb-16 lg:pt-16 lg:pb-24 border-b border-zinc-200/60">
+        {/* Subtle authentic botanical bokeh foliage overlay at bottom-left */}
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, #FAF8F5 1px, transparent 0)",
-            backgroundSize: "32px 32px",
-          }}
+          className="pointer-events-none absolute bottom-0 left-0 w-80 sm:w-96 lg:w-[32rem] h-28 sm:h-36 z-0 select-none"
           aria-hidden="true"
-        />
+        >
+          <Image
+            src="/assets/movemeant/hero-bg-foliage-left.png"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 320px, 512px"
+            className="object-cover object-bottom opacity-75"
+          />
+        </div>
 
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
-          {/* Top Eyebrow Metadata Strip */}
-          <div className="mb-6 flex flex-wrap items-center gap-3 text-xs tracking-wider uppercase">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#C8A97E]/30 bg-[#16191D] px-3.5 py-1.5 text-[#C8A97E]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#C8A97E] animate-pulse" />
-              <span className="font-semibold text-[11px] tracking-[0.14em]">
-                ICF PCC & CCNI Dual-Accredited Advisory
-              </span>
-            </div>
-            <span className="hidden sm:inline text-white/30">•</span>
-            <span className="text-[#A39E93] text-[11px]">
-              Elk Grove & Greater Sacramento, CA
-            </span>
-          </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-8 xl:gap-12">
+            {/* Left Narrative Column */}
+            <div className="lg:col-span-6 xl:col-span-7 flex flex-col justify-center">
+              {/* Eyebrow */}
+              <p className="text-xs sm:text-[13px] font-semibold tracking-[0.18em] uppercase text-[#6B7280] mb-4 sm:mb-6">
+                ICF AND CCNI ACCREDITED COACH EDUCATION
+              </p>
 
-          {/* Main Grid: Asymmetrical Editorial Balance (Left: Narrative / Right: Dossier) */}
-          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
-            {/* Left Narrative Column (7 cols on desktop) */}
-            <div className="lg:col-span-7 flex flex-col justify-center">
-              {/* Primary Headline with Classical Editorial Contrast */}
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] leading-[1.12] font-normal tracking-[-0.02em] text-[#FAF8F5]">
-                Where executive transition meets{" "}
-                <span className="italic text-[#D4B68E] font-normal">
-                  sacred clarity.
+              {/* Main Headline */}
+              <h1 className="text-4xl sm:text-5xl lg:text-[4.15rem] font-bold tracking-tight text-[#111315] leading-[1.08]">
+                Building People Who
+                <span className="block text-[#8E8A24] font-bold mt-1 sm:mt-2">
+                  Build What Matters
                 </span>
               </h1>
 
-              {/* High-Signal Value Narrative */}
-              <p className="mt-6 text-base sm:text-lg leading-relaxed text-[#D0CBC0] max-w-2xl font-light">
-                When high-impact leaders face pivotal endings—corporate restructuring,
-                identity shifts, or elevated visibility—traditional goal-setting falls short.
-                Founded by{" "}
-                <strong className="font-medium text-[#FAF8F5]">
-                  Koi Rivers, M.A., ICF PCC
-                </strong>
-                , Movemeant guides executives and credentialed coaches through the sacred space
-                between what was and what is next.
+              {/* Subhead */}
+              <p className="mt-6 sm:mt-7 text-base sm:text-lg lg:text-[1.2rem] text-[#4A4E54] leading-relaxed max-w-xl font-normal">
+                Education and leadership development for today&apos;s leaders and tomorrow&apos;s coaches.
               </p>
 
-              {/* =========================================================================
-                  INTERACTIVE PATHWAY SWITCHER (Lens Selection directly inside Hero)
-              ========================================================================= */}
-              <div className="mt-8 rounded-xl border border-white/[0.08] bg-[#121519] p-5 sm:p-6 shadow-2xl">
-                {/* Lens Tabs */}
-                <div className="flex flex-wrap gap-2 border-b border-white/[0.08] pb-4">
-                  {(["executive", "threshold", "culture"] as FocusPathway[]).map((key) => {
-                    const pathway = PATHWAYS[key];
-                    const isActive = activePathway === key;
-                    return (
-                      <button
-                        key={key}
-                        onClick={() => setActivePathway(key)}
-                        className={`rounded-lg px-3.5 py-2 text-xs font-semibold tracking-wide transition-all duration-150 min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E] ${
-                          isActive
-                            ? "bg-[#C8A97E] text-[#0A0C0E] shadow-sm"
-                            : "bg-white/[0.04] text-[#A39E93] hover:bg-white/[0.08] hover:text-[#FAF8F5]"
-                        }`}
-                        aria-pressed={isActive}
-                      >
-                        {pathway.pill}
-                      </button>
-                    );
-                  })}
-                </div>
-
-                {/* Active Lens Content */}
-                <div className="mt-5 space-y-4">
-                  <div>
-                    <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#C8A97E]">
-                      {currentPathway.headlineAccent}
-                    </div>
-                    <p className="mt-1.5 text-sm leading-relaxed text-[#E2DFD8]">
-                      {currentPathway.summary}
-                    </p>
-                  </div>
-
-                  {/* Curated Deliverables List */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
-                    {currentPathway.deliverables.map((item, idx) => (
-                      <div
-                        key={idx}
-                        className="flex items-start gap-2.5 text-xs text-[#C5C0B4] leading-snug"
-                      >
-                        <CheckCircle2 className="h-4 w-4 shrink-0 text-[#C8A97E] mt-0.5" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Impact Proof Metric Strip */}
-                  <div className="mt-4 flex items-center justify-between border-t border-white/[0.08] pt-4 text-xs">
-                    <div>
-                      <span className="text-[#A39E93] block text-[11px] uppercase tracking-wider">
-                        {currentPathway.metricLabel}
-                      </span>
-                      <span className="text-xl font-serif font-medium text-[#FAF8F5]">
-                        {currentPathway.metricValue}
-                      </span>{" "}
-                      <span className="text-[#C5C0B4] text-[11px]">
-                        — {currentPathway.metricDetail}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Action Buttons Hub */}
-              <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              {/* Action Buttons Hub (Solid Primary Pill & Outlined Secondary Pill) */}
+              <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4">
                 <button
-                  onClick={() => handleOpenConsultation(activePathway)}
-                  className="inline-flex h-14 items-center justify-center gap-3 rounded-lg bg-[#FAF8F5] px-8 text-sm font-semibold uppercase tracking-wider text-[#0A0C0E] transition-all duration-150 hover:bg-[#C8A97E] active:scale-[0.98] shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0C0E]"
+                  onClick={() => handleOpenConsultation("threshold")}
+                  className="inline-flex items-center gap-2.5 rounded-full bg-[#D4CF50] hover:bg-[#C9C445] px-7 py-3.5 sm:px-8 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#14170E] transition-all duration-150 shadow-sm hover:shadow active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] focus-visible:ring-offset-2"
                 >
-                  <span>{currentPathway.ctaText}</span>
+                  <span>COACH EDUCATION</span>
                   <ArrowRight className="h-4 w-4" />
                 </button>
 
                 <button
-                  onClick={() => setIsPhilosophyDrawerOpen(true)}
-                  className="inline-flex h-14 items-center justify-center gap-2.5 rounded-lg border border-white/[0.16] bg-transparent px-6 text-sm font-medium text-[#FAF8F5] transition-all duration-150 hover:bg-white/[0.06] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E]"
+                  onClick={() => handleOpenConsultation("executive")}
+                  className="inline-flex items-center gap-2.5 rounded-full border-2 border-[#D4CF50] bg-white/80 hover:bg-[#D4CF50]/15 px-7 py-3.5 sm:px-8 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#14170E] transition-all duration-150 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] focus-visible:ring-offset-2"
                 >
-                  <Compass className="h-4 w-4 text-[#C8A97E]" />
-                  <span>The Threshold Philosophy</span>
+                  <span>ORGANIZATIONS</span>
+                  <ArrowRight className="h-4 w-4" />
                 </button>
               </div>
 
-              {/* Immediate Micro-Trust Note */}
-              <div className="mt-5 flex items-center gap-2 text-xs text-[#A39E93]">
-                <Clock className="h-3.5 w-3.5 text-[#C8A97E]" />
-                <span>Confidential inquiries reviewed directly by Koi Rivers within 24–48 hours.</span>
+              {/* Trust Subtext */}
+              <div className="mt-6 flex items-center gap-2 text-xs text-[#6B7280]">
+                <Clock className="h-3.5 w-3.5 text-[#8E8A24]" />
+                <span>Next live cohort begins Sept 29 · Dual ICF & CCNI renewal accredited.</span>
               </div>
             </div>
 
-            {/* Right Dossier Column (5 cols on desktop) */}
-            <div className="lg:col-span-5 flex flex-col items-center">
-              {/* Executive Dossier Card */}
-              <div className="relative w-full max-w-md rounded-2xl border border-white/[0.12] bg-[#121519] p-4 shadow-2xl">
-                {/* Authentic Portrait of Koi Rivers */}
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-[#1C2026]">
-                  <Image
-                    src="/assets/movemeant/koi-rivers-portrait.jpg"
-                    alt="Koi Rivers, M.A., ICF PCC — Founder & Chief Executive Strategist, Movemeant Coaching"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 420px"
-                    priority
-                    className="object-cover object-top"
-                  />
-                  {/* Subtle Gradient Vignette */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0C0E] via-transparent to-transparent opacity-60" />
+            {/* Right Visual Column (Circular Backdrop + Koi Rivers + Botanical Foliage) */}
+            <div className="lg:col-span-6 xl:col-span-5 flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-[520px] aspect-[574/460] overflow-hidden rounded-2xl sm:rounded-3xl shadow-[0_20px_50px_rgba(20,23,14,0.08)] bg-[#F4F3F0]">
+                <Image
+                  src="/assets/movemeant/hero-koi-portrait-clean.png"
+                  alt="Koi Rivers, M.A., ICF PCC — Founder & Chief Strategist, Movemeant Coaching & Consultancy"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 520px"
+                  priority
+                  className="object-cover object-center"
+                />
 
-                  {/* Verification Pill on Image */}
-                  <div className="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-[#0A0C0E]/80 backdrop-blur-md px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-[#FAF8F5]">
-                    <ShieldCheck className="h-3.5 w-3.5 text-[#C8A97E]" />
-                    <span>ICF PCC & CCNI Verified</span>
-                  </div>
-
-                  {/* Subtle Name Title Overlay */}
-                  <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-[#0A0C0E]/90 backdrop-blur-md p-3.5 border border-white/[0.08]">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <div className="font-serif text-base font-normal text-[#FAF8F5]">
-                          Koi Rivers, M.A.
-                        </div>
-                        <div className="text-[11px] tracking-wider uppercase text-[#C8A97E]">
-                          ICF Professional Certified Coach (PCC)
-                        </div>
-                      </div>
-                      <Award className="h-6 w-6 text-[#C8A97E] shrink-0" />
-                    </div>
-                  </div>
+                {/* Subtle Floating Credential Badge on Desktop */}
+                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur-md px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#14170E] shadow-sm border border-zinc-200/80">
+                  <ShieldCheck className="h-3.5 w-3.5 text-[#8E8A24]" />
+                  <span>Koi Rivers, PCC</span>
                 </div>
-
-                {/* Tactile Authentic Quote Strip */}
-                <div className="mt-4 rounded-lg border border-white/[0.06] bg-[#0E1115] p-4 text-xs leading-relaxed text-[#D0CBC0]">
-                  <p className="italic">
-                    &ldquo;Your clients aren&rsquo;t stuck. They are standing in an ending.
-                    When we honor transition before rushing to goals, transformative leadership
-                    takes root.&rdquo;
-                  </p>
-                  <div className="mt-2 text-[10px] tracking-widest uppercase font-semibold text-[#A39E93]">
-                    — The Threshold™ Core Thesis
-                  </div>
-                </div>
-
-                {/* Accreditation Micro-Badges */}
-                <div className="mt-4 grid grid-cols-2 gap-2 text-center text-[11px]">
-                  <div className="rounded border border-white/[0.06] bg-white/[0.02] p-2 text-[#C5C0B4]">
-                    <span className="block font-semibold text-[#FAF8F5]">ICF Sacramento</span>
-                    <span className="text-[10px] text-[#A39E93]">Director of DEIB</span>
-                  </div>
-                  <div className="rounded border border-white/[0.06] bg-white/[0.02] p-2 text-[#C5C0B4]">
-                    <span className="block font-semibold text-[#FAF8F5]">2025 Honoree</span>
-                    <span className="text-[10px] text-[#A39E93]">Exceptional Woman of Color</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* =========================================================================
-              3. TRUST GROUNDING PILLARS (Base of Hero Section)
-          ========================================================================= */}
-          <div className="mt-16 border-t border-white/[0.08] pt-10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
-              {/* Pillar 1 */}
-              <div className="flex flex-col space-y-1">
-                <div className="text-xs uppercase tracking-widest text-[#C8A97E] font-semibold">
-                  01 · Credential
-                </div>
-                <div className="font-serif text-lg text-[#FAF8F5]">ICF PCC Credentialed</div>
-                <p className="text-xs text-[#A39E93] leading-relaxed">
-                  International Coaching Federation Professional Certified Coach, representing top-tier coaching mastery.
-                </p>
-              </div>
-
-              {/* Pillar 2 */}
-              <div className="flex flex-col space-y-1">
-                <div className="text-xs uppercase tracking-widest text-[#C8A97E] font-semibold">
-                  02 · Governance
-                </div>
-                <div className="font-serif text-lg text-[#FAF8F5]">ICF Sacramento Board</div>
-                <p className="text-xs text-[#A39E93] leading-relaxed">
-                  Director of Diversity, Equity, Inclusion & Belonging (DEIB) advancing ethical, inclusive leadership.
-                </p>
-              </div>
-
-              {/* Pillar 3 */}
-              <div className="flex flex-col space-y-1">
-                <div className="text-xs uppercase tracking-widest text-[#C8A97E] font-semibold">
-                  03 · Education
-                </div>
-                <div className="font-serif text-lg text-[#FAF8F5]">Dual-Accredited CCE</div>
-                <p className="text-xs text-[#A39E93] leading-relaxed">
-                  Recognized for 36.0 Continuing Coach Education hours across both ICF and CCNI professional renewals.
-                </p>
-              </div>
-
-              {/* Pillar 4 */}
-              <div className="flex flex-col space-y-1">
-                <div className="text-xs uppercase tracking-widest text-[#C8A97E] font-semibold">
-                  04 · Academic Pedigree
-                </div>
-                <div className="font-serif text-lg text-[#FAF8F5]">UC Davis Master&rsquo;s</div>
-                <p className="text-xs text-[#A39E93] leading-relaxed">
-                  Master of Arts from the University of California, Davis, integrating rigorous research with lived practice.
-                </p>
               </div>
             </div>
           </div>
         </div>
-      </main>
+      </section>
 
       {/* =========================================================================
-          4. MINIMALIST EXECUTIVE FOOTER
+          4. TRUST GROUNDING PILLARS (Brand Foundation)
       ========================================================================= */}
-      <footer className="border-t border-white/[0.08] bg-[#07080A] py-10 text-xs text-[#8A857A]">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 sm:flex-row lg:px-12">
-          <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
-            <span className="font-serif text-sm tracking-wide text-[#FAF8F5]">
-              MOVEMEANT COACHING & CONSULTANCY
+      <section className="bg-white py-14 sm:py-16 border-b border-zinc-200/70">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {/* Pillar 1 */}
+            <div className="rounded-xl border border-zinc-200/80 bg-[#FAF9F6] p-6 transition-all hover:border-[#8E8A24]/50 hover:shadow-sm">
+              <div className="text-xs uppercase tracking-widest text-[#8E8A24] font-bold">
+                01 · Credential
+              </div>
+              <div className="mt-2 text-lg font-bold text-[#111315]">ICF PCC Credentialed</div>
+              <p className="mt-2 text-xs text-[#52525B] leading-relaxed">
+                International Coaching Federation Professional Certified Coach, representing top-tier coaching mastery and ethical standards.
+              </p>
+            </div>
+
+            {/* Pillar 2 */}
+            <div className="rounded-xl border border-zinc-200/80 bg-[#FAF9F6] p-6 transition-all hover:border-[#8E8A24]/50 hover:shadow-sm">
+              <div className="text-xs uppercase tracking-widest text-[#8E8A24] font-bold">
+                02 · Governance
+              </div>
+              <div className="mt-2 text-lg font-bold text-[#111315]">ICF Sacramento Board</div>
+              <p className="mt-2 text-xs text-[#52525B] leading-relaxed">
+                Director of Diversity, Equity, Inclusion & Belonging (DEIB) advancing ethical, inclusive, and systemic executive leadership.
+              </p>
+            </div>
+
+            {/* Pillar 3 */}
+            <div className="rounded-xl border border-zinc-200/80 bg-[#FAF9F6] p-6 transition-all hover:border-[#8E8A24]/50 hover:shadow-sm">
+              <div className="text-xs uppercase tracking-widest text-[#8E8A24] font-bold">
+                03 · Education
+              </div>
+              <div className="mt-2 text-lg font-bold text-[#111315]">Dual-Accredited CCE</div>
+              <p className="mt-2 text-xs text-[#52525B] leading-relaxed">
+                Recognized for 36.0 Continuing Coach Education hours across both ICF and CCNI professional renewal accreditations.
+              </p>
+            </div>
+
+            {/* Pillar 4 */}
+            <div className="rounded-xl border border-zinc-200/80 bg-[#FAF9F6] p-6 transition-all hover:border-[#8E8A24]/50 hover:shadow-sm">
+              <div className="text-xs uppercase tracking-widest text-[#8E8A24] font-bold">
+                04 · Pedigree
+              </div>
+              <div className="mt-2 text-lg font-bold text-[#111315]">UC Davis Master&apos;s</div>
+              <p className="mt-2 text-xs text-[#52525B] leading-relaxed">
+                Master of Arts from the University of California, Davis, integrating rigorous research with lived transformative executive practice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          5. INTERACTIVE PATHWAY SWITCHER (Executive / The Threshold / Culture)
+      ========================================================================= */}
+      <section id="pathways-section" className="bg-[#FAF9F6] py-16 sm:py-20 border-b border-zinc-200/70">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#8E8A24]">
+              Transformative Pathways
             </span>
-            <span className="hidden sm:inline text-white/20">•</span>
-            <span>Founded by Koi Rivers, M.A., PCC</span>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-[#111315]">
+              Tailored Advisory & Coach Education
+            </h2>
+            <p className="mt-3 text-sm text-[#4A4E54] leading-relaxed">
+              Explore the dedicated frameworks designed for executive inflection points, coach credentialing, and organizational culture.
+            </p>
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="rounded-2xl border border-zinc-200/90 bg-white p-6 sm:p-8 shadow-sm">
+            {/* Pathway Tabs */}
+            <div className="flex flex-wrap gap-2.5 border-b border-zinc-200 pb-5">
+              {(["executive", "threshold", "culture"] as FocusPathway[]).map((key) => {
+                const pathway = PATHWAYS[key];
+                const isActive = activePathway === key;
+                return (
+                  <button
+                    key={key}
+                    onClick={() => setActivePathway(key)}
+                    className={`rounded-full px-5 py-2.5 text-xs sm:text-[13px] font-bold tracking-wide transition-all min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] ${
+                      isActive
+                        ? "bg-[#8E8A24] text-white shadow-sm"
+                        : "bg-zinc-100 text-[#4A4E54] hover:bg-zinc-200 hover:text-[#111315]"
+                    }`}
+                    aria-pressed={isActive}
+                  >
+                    {pathway.pill}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Active Pathway Details */}
+            <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div className="lg:col-span-7 space-y-4">
+                <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#8E8A24]">
+                  {currentPathway.headlineAccent}
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#111315]">
+                  {currentPathway.tagline}
+                </h3>
+                <p className="text-sm sm:text-base leading-relaxed text-[#4A4E54]">
+                  {currentPathway.summary}
+                </p>
+
+                {/* Deliverables Checklist */}
+                <div className="pt-4 space-y-3">
+                  <span className="block text-xs font-bold uppercase tracking-wider text-[#111315]">
+                    Included Core Deliverables:
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    {currentPathway.deliverables.map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#4A4E54] leading-snug">
+                        <CheckCircle2 className="h-4 w-4 shrink-0 text-[#8E8A24] mt-0.5" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-6 flex flex-wrap items-center gap-4">
+                  <button
+                    onClick={() => handleOpenConsultation(activePathway)}
+                    className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#18191B] px-8 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-[#8E8A24] active:scale-[0.98] shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24]"
+                  >
+                    <span>{currentPathway.ctaText}</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </button>
+
+                  <button
+                    onClick={() => setIsPhilosophyDrawerOpen(true)}
+                    className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-zinc-300 bg-white px-6 text-xs font-bold uppercase tracking-wider text-[#18191B] transition-all hover:bg-zinc-50 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24]"
+                  >
+                    <Compass className="h-4 w-4 text-[#8E8A24]" />
+                    <span>The Threshold Philosophy</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Metric Card */}
+              <div className="lg:col-span-5 rounded-xl border border-zinc-200/90 bg-[#FAF9F6] p-6 sm:p-8 space-y-4">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#6B7280]">
+                  {currentPathway.metricLabel}
+                </span>
+                <div className="text-4xl sm:text-5xl font-bold text-[#8E8A24]">
+                  {currentPathway.metricValue}
+                </div>
+                <p className="text-xs sm:text-sm text-[#4A4E54] leading-relaxed">
+                  {currentPathway.metricDetail}
+                </p>
+                <div className="pt-4 border-t border-zinc-200 text-xs text-[#6B7280] flex items-center gap-2">
+                  <ShieldCheck className="h-4 w-4 text-[#8E8A24] shrink-0" />
+                  <span>Dual ICF PCC & CCNI verified methodology.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          6. THE THRESHOLD™ EDITORIAL THESIS
+      ========================================================================= */}
+      <section className="bg-white py-16 sm:py-20 border-b border-zinc-200/70">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Visual Portrait */}
+            <div className="lg:col-span-5">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-lg bg-zinc-100">
+                <Image
+                  src="/assets/movemeant/ending-and-goal.jpg"
+                  alt="Movemeant — Coaching Endings, Not Goals"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 450px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Narrative Editorial */}
+            <div className="lg:col-span-7 space-y-6">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#8E8A24]">
+                The Threshold™ Core Thesis
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#111315] leading-tight">
+                &ldquo;Your clients aren&apos;t stuck. They are standing in an ending.&rdquo;
+              </h2>
+              <p className="text-base text-[#4A4E54] leading-relaxed">
+                When high-performing leaders face pivotal transitions—corporate restructuring, identity shifts, or elevated visibility—traditional goal-setting falls short. Pushing forward prematurely without metabolizing what has ended breeds executive burnout and internal dissonance.
+              </p>
+              <p className="text-base text-[#4A4E54] leading-relaxed">
+                Founded by <strong>Koi Rivers, M.A., ICF PCC</strong>, Movemeant equips leaders and credentialed coaches with the vocabulary, somatic grounding, and faith-forward framework required to navigate the sacred space between what was and what comes next.
+              </p>
+              <div className="pt-2">
+                <button
+                  onClick={() => setIsPhilosophyDrawerOpen(true)}
+                  className="inline-flex items-center gap-2 text-sm font-bold text-[#8E8A24] hover:text-[#76721E] transition-colors"
+                >
+                  <span>Explore The Full Methodology & Verification</span>
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          7. EXECUTIVE FOOTER
+      ========================================================================= */}
+      <footer className="bg-[#18191B] text-zinc-300 py-12 text-xs">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 sm:flex-row lg:px-12">
+          <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+            <span className="font-bold tracking-wider text-white uppercase">
+              Movemeant Coaching & Consultancy
+            </span>
+            <span className="hidden sm:inline text-zinc-600">•</span>
+            <span className="text-zinc-400">Founded by Koi Rivers, M.A., ICF PCC</span>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-6">
             <a
               href={ORIGINAL_WEBSITE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 transition-colors hover:text-[#FAF8F5]"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
             >
               <span>Original Site</span>
               <ExternalLink className="h-3 w-3" />
@@ -546,14 +683,14 @@ export default function MovemeantClient() {
               href={KOI_RIVERS_LINKEDIN}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 transition-colors hover:text-[#FAF8F5]"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
             >
               <span>LinkedIn</span>
               <ExternalLink className="h-3 w-3" />
             </a>
             <a
               href={`mailto:${OFFICIAL_EMAIL}`}
-              className="transition-colors hover:text-[#FAF8F5]"
+              className="transition-colors hover:text-white"
             >
               {OFFICIAL_EMAIL}
             </a>
@@ -562,7 +699,7 @@ export default function MovemeantClient() {
       </footer>
 
       {/* =========================================================================
-          5. EXECUTIVE CONSULTATION INTAKE MODAL (All 4 UI States Handled)
+          8. EXECUTIVE CONSULTATION INTAKE MODAL (All 4 UI States Handled)
       ========================================================================= */}
       {isConsultationModalOpen && (
         <div
@@ -574,16 +711,16 @@ export default function MovemeantClient() {
           {/* Backdrop */}
           <div
             onClick={() => setIsConsultationModalOpen(false)}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
             aria-hidden="true"
           />
 
           {/* Modal Card */}
-          <div className="relative w-full max-w-lg rounded-2xl border border-white/[0.14] bg-[#121519] p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto">
+          <div className="relative w-full max-w-lg rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto">
             {/* Close Button */}
             <button
               onClick={() => setIsConsultationModalOpen(false)}
-              className="absolute top-5 right-5 rounded-lg p-2 text-[#A39E93] transition-colors hover:bg-white/[0.08] hover:text-[#FAF8F5] min-w-[44px] min-h-[44px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E]"
+              className="absolute top-5 right-5 rounded-lg p-2 text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-zinc-800 min-w-[44px] min-h-[44px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24]"
               aria-label="Close modal"
             >
               <X className="h-5 w-5" />
@@ -592,32 +729,32 @@ export default function MovemeantClient() {
             {/* STATE 1: SUCCESS CONFIRMATION */}
             {formStatus === "success" ? (
               <div className="py-6 text-center">
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#C8A97E]/20 text-[#C8A97E]">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#8E8A24]/15 text-[#8E8A24]">
                   <CheckCircle2 className="h-8 w-8" />
                 </div>
-                <h3 className="mt-4 font-serif text-2xl text-[#FAF8F5]">
+                <h3 className="mt-4 text-2xl font-bold text-[#111315]">
                   Inquiry Received with Discretion
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#D0CBC0]">
-                  Thank you, <strong className="text-[#FAF8F5]">{formData.fullName}</strong>. Your confidential inquiry regarding{" "}
-                  <span className="text-[#C8A97E] font-medium">{formData.pathway}</span> has been securely transmitted.
+                <p className="mt-2 text-sm leading-relaxed text-[#4A4E54]">
+                  Thank you, <strong className="text-[#111315]">{formData.fullName}</strong>. Your confidential inquiry regarding{" "}
+                  <span className="text-[#8E8A24] font-semibold">{formData.pathway}</span> has been securely transmitted.
                 </p>
-                <div className="mt-6 rounded-lg border border-white/[0.08] bg-[#0E1115] p-4 text-xs text-[#A39E93] text-left space-y-2">
-                  <div className="flex items-center gap-2 text-[#FAF8F5] font-medium">
-                    <Calendar className="h-4 w-4 text-[#C8A97E]" />
+                <div className="mt-6 rounded-lg border border-zinc-200 bg-[#FAF9F6] p-4 text-xs text-[#52525B] text-left space-y-2">
+                  <div className="flex items-center gap-2 text-[#111315] font-bold">
+                    <Calendar className="h-4 w-4 text-[#8E8A24]" />
                     <span>Next Steps:</span>
                   </div>
                   <p>
-                    1. Koi Rivers&rsquo; executive office will review your background and timeline within 24–48 business hours.
+                    1. Koi Rivers&apos; executive office will review your background and timeline within 24–48 business hours.
                   </p>
                   <p>
                     2. A private calendar invitation for a 20-minute clarity consultation will be sent to{" "}
-                    <span className="text-[#FAF8F5]">{formData.email}</span>.
+                    <span className="text-[#111315] font-semibold">{formData.email}</span>.
                   </p>
                 </div>
                 <button
                   onClick={() => setIsConsultationModalOpen(false)}
-                  className="mt-6 w-full h-12 rounded-lg bg-[#C8A97E] text-xs font-semibold uppercase tracking-wider text-[#0A0C0E] transition-colors hover:bg-[#FAF8F5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E]"
+                  className="mt-6 w-full h-12 rounded-full bg-[#18191B] text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-[#8E8A24] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24]"
                 >
                   Return to Overview
                 </button>
@@ -626,20 +763,20 @@ export default function MovemeantClient() {
               /* STATE 2: POPULATED INPUT / SUBMITTING FORM */
               <div>
                 <div className="mb-6">
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#C8A97E]">
+                  <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#8E8A24]">
                     Confidential Advisory Intake
                   </span>
-                  <h3 id="modal-title" className="mt-1 font-serif text-2xl text-[#FAF8F5]">
+                  <h3 id="modal-title" className="mt-1 text-2xl font-bold text-[#111315]">
                     Initiate an Executive Dialogue
                   </h3>
-                  <p className="mt-1.5 text-xs leading-relaxed text-[#A39E93]">
+                  <p className="mt-1.5 text-xs leading-relaxed text-[#52525B]">
                     Please share a few preliminary details to prepare for your conversation with Koi Rivers, PCC.
                   </p>
                 </div>
 
                 {/* Inline Error State */}
                 {formStatus === "error" && errorMessage && (
-                  <div className="mb-4 flex items-center gap-2.5 rounded-lg border border-rose-500/30 bg-rose-500/10 p-3 text-xs text-rose-300">
+                  <div className="mb-4 flex items-center gap-2.5 rounded-lg border border-rose-200 bg-rose-50 p-3 text-xs text-rose-700">
                     <AlertCircle className="h-4 w-4 shrink-0" />
                     <span>{errorMessage}</span>
                   </div>
@@ -647,7 +784,7 @@ export default function MovemeantClient() {
 
                 <form onSubmit={handleFormSubmit} className="space-y-4 text-left">
                   <div>
-                    <label className="block text-xs font-medium uppercase tracking-wider text-[#A39E93] mb-1.5">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#52525B] mb-1.5">
                       Full Name *
                     </label>
                     <input
@@ -656,13 +793,13 @@ export default function MovemeantClient() {
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       placeholder="e.g. Elena Vance"
-                      className="w-full h-11 rounded-lg border border-white/[0.12] bg-[#0A0C0E] px-3.5 text-sm text-[#FAF8F5] placeholder-[#5C5850] focus:border-[#C8A97E] focus:outline-none focus:ring-1 focus:ring-[#C8A97E]"
+                      className="w-full h-11 rounded-lg border border-zinc-300 bg-white px-3.5 text-sm text-[#111315] placeholder-zinc-400 focus:border-[#8E8A24] focus:outline-none focus:ring-1 focus:ring-[#8E8A24]"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-medium uppercase tracking-wider text-[#A39E93] mb-1.5">
+                      <label className="block text-xs font-bold uppercase tracking-wider text-[#52525B] mb-1.5">
                         Work Email *
                       </label>
                       <input
@@ -671,11 +808,11 @@ export default function MovemeantClient() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="elena@organization.com"
-                        className="w-full h-11 rounded-lg border border-white/[0.12] bg-[#0A0C0E] px-3.5 text-sm text-[#FAF8F5] placeholder-[#5C5850] focus:border-[#C8A97E] focus:outline-none focus:ring-1 focus:ring-[#C8A97E]"
+                        className="w-full h-11 rounded-lg border border-zinc-300 bg-white px-3.5 text-sm text-[#111315] placeholder-zinc-400 focus:border-[#8E8A24] focus:outline-none focus:ring-1 focus:ring-[#8E8A24]"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium uppercase tracking-wider text-[#A39E93] mb-1.5">
+                      <label className="block text-xs font-bold uppercase tracking-wider text-[#52525B] mb-1.5">
                         Organization & Title
                       </label>
                       <input
@@ -683,19 +820,19 @@ export default function MovemeantClient() {
                         value={formData.organization}
                         onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
                         placeholder="VP, Talent / Independent Coach"
-                        className="w-full h-11 rounded-lg border border-white/[0.12] bg-[#0A0C0E] px-3.5 text-sm text-[#FAF8F5] placeholder-[#5C5850] focus:border-[#C8A97E] focus:outline-none focus:ring-1 focus:ring-[#C8A97E]"
+                        className="w-full h-11 rounded-lg border border-zinc-300 bg-white px-3.5 text-sm text-[#111315] placeholder-zinc-400 focus:border-[#8E8A24] focus:outline-none focus:ring-1 focus:ring-[#8E8A24]"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium uppercase tracking-wider text-[#A39E93] mb-1.5">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#52525B] mb-1.5">
                       Engagement Focus
                     </label>
                     <select
                       value={formData.pathway}
                       onChange={(e) => setFormData({ ...formData, pathway: e.target.value })}
-                      className="w-full h-11 rounded-lg border border-white/[0.12] bg-[#0A0C0E] px-3.5 text-sm text-[#FAF8F5] focus:border-[#C8A97E] focus:outline-none focus:ring-1 focus:ring-[#C8A97E]"
+                      className="w-full h-11 rounded-lg border border-zinc-300 bg-white px-3.5 text-sm text-[#111315] focus:border-[#8E8A24] focus:outline-none focus:ring-1 focus:ring-[#8E8A24]"
                     >
                       <option value="Power Moves™ Executive & Leadership Advisory">
                         Power Moves™ Executive & Leadership Advisory
@@ -713,13 +850,13 @@ export default function MovemeantClient() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium uppercase tracking-wider text-[#A39E93] mb-1.5">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#52525B] mb-1.5">
                       Transition Timeline
                     </label>
                     <select
                       value={formData.timeline}
                       onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
-                      className="w-full h-11 rounded-lg border border-white/[0.12] bg-[#0A0C0E] px-3.5 text-sm text-[#FAF8F5] focus:border-[#C8A97E] focus:outline-none focus:ring-1 focus:ring-[#C8A97E]"
+                      className="w-full h-11 rounded-lg border border-zinc-300 bg-white px-3.5 text-sm text-[#111315] focus:border-[#8E8A24] focus:outline-none focus:ring-1 focus:ring-[#8E8A24]"
                     >
                       <option value="Immediate (Next 30 Days)">Immediate (Next 30 Days)</option>
                       <option value="Q4 / Next Quarter Planning">Q4 / Next Quarter Planning</option>
@@ -730,7 +867,7 @@ export default function MovemeantClient() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium uppercase tracking-wider text-[#A39E93] mb-1.5">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-[#52525B] mb-1.5">
                       Context or Key Questions (Optional)
                     </label>
                     <textarea
@@ -738,14 +875,14 @@ export default function MovemeantClient() {
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                       placeholder="Briefly describe the transition, leadership landscape, or cohort questions..."
-                      className="w-full rounded-lg border border-white/[0.12] bg-[#0A0C0E] p-3 text-sm text-[#FAF8F5] placeholder-[#5C5850] focus:border-[#C8A97E] focus:outline-none focus:ring-1 focus:ring-[#C8A97E]"
+                      className="w-full rounded-lg border border-zinc-300 bg-white p-3 text-sm text-[#111315] placeholder-zinc-400 focus:border-[#8E8A24] focus:outline-none focus:ring-1 focus:ring-[#8E8A24]"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={formStatus === "loading"}
-                    className="mt-2 w-full h-12 rounded-lg bg-[#FAF8F5] text-xs font-semibold uppercase tracking-wider text-[#0A0C0E] transition-all duration-150 hover:bg-[#C8A97E] disabled:opacity-60 flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E]"
+                    className="mt-2 w-full h-12 rounded-full bg-[#18191B] text-xs font-bold uppercase tracking-wider text-white transition-all duration-150 hover:bg-[#8E8A24] disabled:opacity-60 flex items-center justify-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24]"
                   >
                     {formStatus === "loading" ? (
                       <>
@@ -757,7 +894,7 @@ export default function MovemeantClient() {
                     )}
                   </button>
 
-                  <p className="text-[11px] text-center text-[#7A756C]">
+                  <p className="text-[11px] text-center text-zinc-500">
                     All submissions are governed under strict executive confidentiality.
                   </p>
                 </form>
@@ -768,7 +905,7 @@ export default function MovemeantClient() {
       )}
 
       {/* =========================================================================
-          6. THE THRESHOLD PHILOSOPHY & ACCREDITATION DRAWER
+          9. THE THRESHOLD PHILOSOPHY & ACCREDITATION DRAWER
       ========================================================================= */}
       {isPhilosophyDrawerOpen && (
         <div
@@ -780,58 +917,58 @@ export default function MovemeantClient() {
           {/* Backdrop */}
           <div
             onClick={() => setIsPhilosophyDrawerOpen(false)}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
             aria-hidden="true"
           />
 
           {/* Drawer Body */}
-          <div className="relative h-full w-full max-w-xl border-l border-white/[0.12] bg-[#101317] p-6 sm:p-10 shadow-2xl z-10 overflow-y-auto">
+          <div className="relative h-full w-full max-w-xl border-l border-zinc-200 bg-white p-6 sm:p-10 shadow-2xl z-10 overflow-y-auto">
             <button
               onClick={() => setIsPhilosophyDrawerOpen(false)}
-              className="absolute top-6 right-6 rounded-lg p-2 text-[#A39E93] transition-colors hover:bg-white/[0.08] hover:text-[#FAF8F5] min-w-[44px] min-h-[44px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E]"
+              className="absolute top-6 right-6 rounded-lg p-2 text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-zinc-800 min-w-[44px] min-h-[44px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24]"
               aria-label="Close philosophy drawer"
             >
               <X className="h-5 w-5" />
             </button>
 
-            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#C8A97E]">
+            <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#8E8A24]">
               Core Methodology & Accreditation
             </span>
-            <h2 id="drawer-title" className="mt-2 font-serif text-3xl font-normal text-[#FAF8F5]">
+            <h2 id="drawer-title" className="mt-2 text-3xl font-bold text-[#111315]">
               The Threshold™ Thesis
             </h2>
 
-            <div className="mt-6 space-y-6 text-sm leading-relaxed text-[#D0CBC0]">
-              <div className="rounded-xl border border-[#C8A97E]/30 bg-[#16191E] p-5">
-                <p className="font-serif italic text-base text-[#FAF8F5]">
+            <div className="mt-6 space-y-6 text-sm leading-relaxed text-[#4A4E54]">
+              <div className="rounded-xl border border-[#8E8A24]/30 bg-[#FAF9F6] p-5">
+                <p className="italic text-base text-[#111315]">
                   &ldquo;When a leader arrives at your office declaring they are &lsquo;stuck,&rsquo; they are rarely lacking ambition or strategy. They are standing in an ending.&rdquo;
                 </p>
-                <div className="mt-3 text-xs tracking-wider uppercase text-[#C8A97E] font-medium">
+                <div className="mt-3 text-xs tracking-wider uppercase text-[#8E8A24] font-bold">
                   — Koi Rivers, M.A., ICF PCC
                 </div>
               </div>
 
               <div>
-                <h4 className="font-serif text-lg text-[#FAF8F5]">Why Traditional Goal-Setting Breaks</h4>
-                <p className="mt-2 text-xs sm:text-sm text-[#A39E93]">
-                  Standard executive coaching immediately rushes to key results, 90-day targets, and tactical milestones. But when an organizational restructure dissolves a leader&rsquo;s identity, or when a long-standing corporate calling concludes, pushing forward without metabolizing what has ended creates executive anxiety, imposter syndrome, and team misalignment.
+                <h4 className="text-lg font-bold text-[#111315]">Why Traditional Goal-Setting Breaks</h4>
+                <p className="mt-2 text-xs sm:text-sm text-[#52525B]">
+                  Standard executive coaching immediately rushes to key results, 90-day targets, and tactical milestones. But when an organizational restructure dissolves a leader&apos;s identity, or when a long-standing corporate calling concludes, pushing forward without metabolizing what has ended creates executive anxiety, imposter syndrome, and team misalignment.
                 </p>
               </div>
 
               <div>
-                <h4 className="font-serif text-lg text-[#FAF8F5]">Dual Accreditation Verification</h4>
+                <h4 className="text-lg font-bold text-[#111315]">Dual Accreditation Verification</h4>
                 <div className="mt-3 space-y-2 text-xs">
-                  <div className="flex items-start gap-2.5 rounded-lg border border-white/[0.08] bg-[#0A0C0E] p-3">
-                    <Award className="h-4 w-4 text-[#C8A97E] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-2.5 rounded-lg border border-zinc-200 bg-[#FAF9F6] p-3">
+                    <Award className="h-4 w-4 text-[#8E8A24] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-[#FAF8F5] block">International Coaching Federation (ICF)</strong>
+                      <strong className="text-[#111315] block">International Coaching Federation (ICF)</strong>
                       <span>36.0 Continuing Coach Education (CCE) units recognized globally for credential renewals.</span>
                     </div>
                   </div>
-                  <div className="flex items-start gap-2.5 rounded-lg border border-white/[0.08] bg-[#0A0C0E] p-3">
-                    <ShieldCheck className="h-4 w-4 text-[#C8A97E] shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-2.5 rounded-lg border border-zinc-200 bg-[#FAF9F6] p-3">
+                    <ShieldCheck className="h-4 w-4 text-[#8E8A24] shrink-0 mt-0.5" />
                     <div>
-                      <strong className="text-[#FAF8F5] block">Christian Coaches Network International (CCNI)</strong>
+                      <strong className="text-[#111315] block">Christian Coaches Network International (CCNI)</strong>
                       <span>36.0 CCE units for faith-forward coaches integrating biblical wisdom without dogma.</span>
                     </div>
                   </div>
@@ -839,19 +976,19 @@ export default function MovemeantClient() {
               </div>
 
               <div>
-                <h4 className="font-serif text-lg text-[#FAF8F5]">About Koi Rivers</h4>
-                <p className="mt-2 text-xs sm:text-sm text-[#A39E93]">
+                <h4 className="text-lg font-bold text-[#111315]">About Koi Rivers</h4>
+                <p className="mt-2 text-xs sm:text-sm text-[#52525B]">
                   Koi Rivers holds a Master of Arts from UC Davis and serves as the Board Director of Diversity, Equity, Inclusion & Belonging (DEIB) for the ICF Sacramento Charter Chapter. In 2025, she was honored as an Exceptional Woman of Color for civic leadership and executive mentorship.
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between">
+              <div className="pt-4 border-t border-zinc-200">
                 <button
                   onClick={() => {
                     setIsPhilosophyDrawerOpen(false);
                     handleOpenConsultation("threshold");
                   }}
-                  className="w-full h-12 rounded-lg bg-[#FAF8F5] text-xs font-semibold uppercase tracking-wider text-[#0A0C0E] transition-all hover:bg-[#C8A97E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A97E]"
+                  className="w-full h-12 rounded-full bg-[#18191B] text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-[#8E8A24] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24]"
                 >
                   Inquire for The Threshold Cohort
                 </button>

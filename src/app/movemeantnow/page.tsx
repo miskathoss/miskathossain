@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import MovemeantClient from "./MovemeantClient";
 
 export const metadata: Metadata = {
-  title: "Movemeant Coaching & Consultancy | Koi Rivers, PCC — Faith-Forward Leadership & Coach Education",
+  title:
+    "Building People Who Build What Matters — Movemeant Coaching & Consultancy | Koi Rivers, PCC",
   description:
     "ICF & CCNI dual-accredited coach education, executive consulting, and faith-forward leadership development founded by Koi Rivers, PCC. Home of The Threshold™ and Power Moves Leadership Framework™. Redesigned by Miskat Hossain.",
   openGraph: {
