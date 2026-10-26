@@ -56,6 +56,23 @@ export function middleware(request: NextRequest) {
     }
   }
 
+  // Subdomain rewriting for Christian Thornton
+  if (
+    hostname.startsWith("christianthornton.") ||
+    hostname.startsWith("christiandavidthornton.")
+  ) {
+    if (
+      !pathname.startsWith("/_next") &&
+      !pathname.startsWith("/assets") &&
+      !pathname.startsWith("/api") &&
+      !pathname.startsWith("/christianthornton")
+    ) {
+      const url = request.nextUrl.clone();
+      url.pathname = `/christianthornton${pathname === "/" ? "" : pathname}`;
+      return NextResponse.rewrite(url);
+    }
+  }
+
   // Legacy route redirection
   if (pathname === "/INVESTMENT" || pathname === "/Investment") {
     const url = request.nextUrl.clone();
