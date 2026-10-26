@@ -653,6 +653,13 @@ export default function MovemeantClient() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-6">
+            <Link
+              href="/pricing"
+              className="inline-flex items-center gap-1.5 rounded-full bg-[#8E8A24] text-white px-4 py-2 font-semibold hover:bg-[#A39F2B] transition-colors"
+            >
+              <span>See price plan</span>
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
             <a
               href={ORIGINAL_WEBSITE_URL}
               target="_blank"
