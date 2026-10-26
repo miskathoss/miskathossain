@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { ArrowUpRight, Mail, CheckCircle2, Copy } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { GlassCard } from "@/components/Common/GlassCard";
@@ -58,6 +59,15 @@ export function FinalCTA() {
               <span>BOOK STRATEGY CALL</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
+
+            <Link
+              href="/pricing"
+              data-cursor-text="PRICING"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-white/[0.2] hover:border-white/[0.45] bg-white/[0.04] hover:bg-white/[0.1] text-cream text-xs sm:text-sm font-medium tracking-[0.16em] uppercase transition-all duration-300 backdrop-blur-md active:scale-[0.98]"
+            >
+              <span>See price plan</span>
+              <ArrowUpRight className="w-4 h-4 text-cream/70" />
+            </Link>
 
             <button
               onClick={copyEmail}
