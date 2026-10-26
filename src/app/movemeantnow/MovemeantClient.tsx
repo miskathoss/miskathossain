@@ -202,18 +202,18 @@ export default function MovemeantClient() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-[#18191B] selection:bg-[#D4CF50] selection:text-[#14170E] antialiased">
+    <div className="min-h-screen bg-white text-[#18191B] selection:bg-[#D4CF50] selection:text-[#14170E] antialiased overflow-x-hidden w-full max-w-[100vw]">
       {/* =========================================================================
           1. TOP ANNOUNCEMENT BANNER (Pixel-Accurate Olive/Moss Strip)
       ========================================================================= */}
       <aside
         onClick={() => handleOpenConsultation("threshold")}
-        className="w-full bg-[#DAD554] text-[#1E2413] py-2 px-4 text-center font-medium text-xs sm:text-[13px] tracking-normal transition-colors hover:bg-[#D2CE4F] cursor-pointer select-none"
+        className="w-full bg-[#DAD554] text-[#1E2413] py-2 px-3 sm:px-4 text-center font-medium text-[11px] sm:text-[13px] tracking-normal transition-colors hover:bg-[#D2CE4F] cursor-pointer select-none"
         aria-label="Cohort Enrollment Announcement"
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-center gap-1.5">
+        <div className="mx-auto flex max-w-7xl items-center justify-center gap-1.5 flex-wrap">
           <span>Now Enrolling: Sept 29 Live Cohort | ICF + CCNI Accredited | $97 Introductory Rate</span>
-          <span className="font-semibold text-sm leading-none">→</span>
+          <span className="font-semibold text-sm leading-none shrink-0">→</span>
         </div>
       </aside>
 
@@ -225,14 +225,14 @@ export default function MovemeantClient() {
           {/* Movemeant Logo */}
           <Link
             href="/movemeantnow"
-            className="relative block h-11 w-40 sm:h-14 sm:w-52 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] rounded-sm transition-transform active:scale-[0.99]"
+            className="relative block h-10 w-36 sm:h-12 sm:w-48 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] rounded-sm transition-transform active:scale-[0.99]"
             aria-label="Movemeant Coaching and Consultancy Home"
           >
             <Image
               src="/assets/movemeant/logo.png"
               alt="Movemeant Coaching & Consultancy Logo"
               fill
-              sizes="(max-width: 640px) 160px, 210px"
+              sizes="(max-width: 640px) 150px, 200px"
               priority
               className="object-contain object-left"
             />
@@ -240,12 +240,12 @@ export default function MovemeantClient() {
 
           {/* Desktop Navigation Links */}
           <nav
-            className="hidden lg:flex items-center gap-8 text-[13px] font-bold tracking-wider uppercase text-[#222426]"
+            className="hidden lg:flex items-center gap-8 xl:gap-9 text-[13px] font-bold tracking-wider uppercase text-[#222426]"
             aria-label="Primary Navigation"
           >
             <Link
               href="/movemeantnow"
-              className="relative text-[#8E8A24] pb-1 transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2.5px] after:bg-[#8E8A24]"
+              className="relative text-[#8E8A24] pb-1.5 transition-colors after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-[#8E8A24]"
               aria-current="page"
             >
               HOME
@@ -283,23 +283,15 @@ export default function MovemeantClient() {
             </button>
           </nav>
 
-          {/* Quick Header CTA & Mobile Menu Toggle */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => handleOpenConsultation()}
-              className="hidden sm:inline-flex h-11 items-center justify-center rounded-full bg-[#18191B] px-5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-[#8E8A24] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24]"
-            >
-              Inquire Now
-            </button>
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2.5 rounded-lg border border-zinc-200 text-[#18191B] hover:bg-zinc-100 min-h-[44px] min-w-[44px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24]"
-              aria-label="Toggle navigation menu"
-              aria-expanded={isMobileMenuOpen}
-            >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
-          </div>
+          {/* Mobile Menu Toggle Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden p-2.5 rounded-lg border border-zinc-200 text-[#18191B] hover:bg-zinc-100 min-h-[44px] min-w-[44px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24]"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMobileMenuOpen}
+          >
+            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
 
         {/* Mobile Navigation Drawer */}
@@ -362,86 +354,77 @@ export default function MovemeantClient() {
       {/* =========================================================================
           3. MASTER HERO SECTION (Exact Reference Replication)
       ========================================================================= */}
-      <section className="relative overflow-hidden bg-[#FAF9F6] pt-10 sm:pt-14 pb-16 lg:pt-16 lg:pb-24 border-b border-zinc-200/60">
-        {/* Subtle authentic botanical bokeh foliage overlay at bottom-left */}
+      <section className="relative overflow-hidden bg-[#F5F3F1] border-b border-zinc-200/70 pt-8 sm:pt-12 lg:pt-8 pb-10 lg:pb-0">
+        {/* Subtle authentic botanical foliage overlay at bottom-left */}
         <div
-          className="pointer-events-none absolute bottom-0 left-0 w-80 sm:w-96 lg:w-[32rem] h-28 sm:h-36 z-0 select-none"
+          className="pointer-events-none absolute bottom-0 left-0 w-80 sm:w-96 lg:w-[450px] h-24 sm:h-28 z-0 select-none"
           aria-hidden="true"
         >
           <Image
             src="/assets/movemeant/hero-bg-foliage-left.png"
             alt=""
             fill
-            sizes="(max-width: 768px) 320px, 512px"
-            className="object-cover object-bottom opacity-75"
+            sizes="(max-width: 768px) 320px, 450px"
+            className="object-contain object-bottom-left"
           />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-8 xl:gap-12">
+        <div className="relative z-10 mx-auto max-w-7xl pl-6 sm:pl-8 lg:pl-12 pr-6 sm:pr-8 lg:pr-0">
+          <div className="grid grid-cols-1 items-end gap-8 lg:grid-cols-12 lg:gap-4 xl:gap-6">
             {/* Left Narrative Column */}
-            <div className="lg:col-span-6 xl:col-span-7 flex flex-col justify-center">
+            <div className="lg:col-span-6 xl:col-span-6 flex flex-col justify-center pb-8 lg:pb-12 pt-4 lg:pt-6">
               {/* Eyebrow */}
-              <p className="text-xs sm:text-[13px] font-semibold tracking-[0.18em] uppercase text-[#6B7280] mb-4 sm:mb-6">
+              <p className="text-xs sm:text-[13px] font-semibold tracking-[0.18em] uppercase text-[#6E737B] mb-3 sm:mb-4">
                 ICF AND CCNI ACCREDITED COACH EDUCATION
               </p>
 
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-[4.15rem] font-bold tracking-tight text-[#111315] leading-[1.08]">
+              <h1 className="text-3xl sm:text-4xl lg:text-[2.65rem] xl:text-[3.15rem] font-bold tracking-tight text-[#18191B] leading-[1.12]">
                 Building People Who
-                <span className="block text-[#8E8A24] font-bold mt-1 sm:mt-2">
+                <span className="block text-[#8F9E30] font-bold mt-1 sm:mt-1.5">
                   Build What Matters
                 </span>
               </h1>
 
               {/* Subhead */}
-              <p className="mt-6 sm:mt-7 text-base sm:text-lg lg:text-[1.2rem] text-[#4A4E54] leading-relaxed max-w-xl font-normal">
+              <p className="mt-4 sm:mt-5 text-base sm:text-lg lg:text-[1.05rem] xl:text-[1.15rem] text-[#4A4E54] leading-relaxed max-w-lg font-normal">
                 Education and leadership development for today&apos;s leaders and tomorrow&apos;s coaches.
               </p>
 
               {/* Action Buttons Hub (Solid Primary Pill & Outlined Secondary Pill) */}
-              <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4">
+              <div className="mt-6 sm:mt-8 flex flex-col xs:flex-row sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
                 <button
                   onClick={() => handleOpenConsultation("threshold")}
-                  className="inline-flex items-center gap-2.5 rounded-full bg-[#D4CF50] hover:bg-[#C9C445] px-7 py-3.5 sm:px-8 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#14170E] transition-all duration-150 shadow-sm hover:shadow active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] focus-visible:ring-offset-2"
+                  className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#D4CF50] hover:bg-[#C9C445] px-6 py-3.5 sm:px-7 sm:py-3.5 text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#14170E] transition-all duration-150 shadow-sm hover:shadow active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] focus-visible:ring-offset-2"
                 >
                   <span>COACH EDUCATION</span>
                   <ArrowRight className="h-4 w-4" />
                 </button>
 
                 <button
-                  onClick={() => handleOpenConsultation("executive")}
-                  className="inline-flex items-center gap-2.5 rounded-full border-2 border-[#D4CF50] bg-white/80 hover:bg-[#D4CF50]/15 px-7 py-3.5 sm:px-8 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#14170E] transition-all duration-150 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] focus-visible:ring-offset-2"
+                  onClick={() => {
+                    setActivePathway("culture");
+                    scrollToPathways();
+                  }}
+                  className="inline-flex items-center justify-center gap-2.5 rounded-full border-2 border-[#D4CF50] bg-white/70 hover:bg-[#D4CF50]/15 px-6 py-3.5 sm:px-7 sm:py-3.5 text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#14170E] transition-all duration-150 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] focus-visible:ring-offset-2"
                 >
                   <span>ORGANIZATIONS</span>
                   <ArrowRight className="h-4 w-4" />
                 </button>
               </div>
-
-              {/* Trust Subtext */}
-              <div className="mt-6 flex items-center gap-2 text-xs text-[#6B7280]">
-                <Clock className="h-3.5 w-3.5 text-[#8E8A24]" />
-                <span>Next live cohort begins Sept 29 · Dual ICF & CCNI renewal accredited.</span>
-              </div>
             </div>
 
-            {/* Right Visual Column (Circular Backdrop + Koi Rivers + Botanical Foliage) */}
-            <div className="lg:col-span-6 xl:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[520px] aspect-[574/460] overflow-hidden rounded-2xl sm:rounded-3xl shadow-[0_20px_50px_rgba(20,23,14,0.08)] bg-[#F4F3F0]">
+            {/* Right Visual Column (Circular Backdrop + Koi Rivers + Botanical Foliage seamlessly integrated) */}
+            <div className="lg:col-span-6 xl:col-span-6 flex justify-center lg:justify-end items-end self-end w-full">
+              <div className="relative w-full max-w-[360px] sm:max-w-[460px] lg:max-w-[514px] aspect-[514/460] mx-auto lg:mx-0">
                 <Image
-                  src="/assets/movemeant/hero-koi-portrait-clean.png"
+                  src="/assets/movemeant/hero-koi-portrait-seamless.png"
                   alt="Koi Rivers, M.A., ICF PCC — Founder & Chief Strategist, Movemeant Coaching & Consultancy"
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 520px"
                   priority
-                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 514px"
+                  className="object-contain object-bottom-right"
                 />
-
-                {/* Subtle Floating Credential Badge on Desktop */}
-                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur-md px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#14170E] shadow-sm border border-zinc-200/80">
-                  <ShieldCheck className="h-3.5 w-3.5 text-[#8E8A24]" />
-                  <span>Koi Rivers, PCC</span>
-                </div>
               </div>
             </div>
           </div>
@@ -520,7 +503,7 @@ export default function MovemeantClient() {
 
           <div className="rounded-2xl border border-zinc-200/90 bg-white p-6 sm:p-8 shadow-sm">
             {/* Pathway Tabs */}
-            <div className="flex flex-wrap gap-2.5 border-b border-zinc-200 pb-5">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 border-b border-zinc-200 pb-5">
               {(["executive", "threshold", "culture"] as FocusPathway[]).map((key) => {
                 const pathway = PATHWAYS[key];
                 const isActive = activePathway === key;
@@ -528,7 +511,7 @@ export default function MovemeantClient() {
                   <button
                     key={key}
                     onClick={() => setActivePathway(key)}
-                    className={`rounded-full px-5 py-2.5 text-xs sm:text-[13px] font-bold tracking-wide transition-all min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] ${
+                    className={`rounded-full px-5 py-2.5 text-xs sm:text-[13px] font-bold tracking-wide transition-all min-h-[44px] text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E8A24] ${
                       isActive
                         ? "bg-[#8E8A24] text-white shadow-sm"
                         : "bg-zinc-100 text-[#4A4E54] hover:bg-zinc-200 hover:text-[#111315]"
