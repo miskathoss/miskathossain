@@ -271,6 +271,16 @@ export default function ChristianClient() {
 
             <span className="text-slate-600 hidden sm:inline">|</span>
 
+            <Link
+              href="/pricing"
+              className="inline-flex items-center gap-1 text-[11px] font-bold text-white bg-[#EE5014] hover:bg-[#d6450f] px-2.5 py-1 rounded transition-colors shadow-sm"
+            >
+              <span>See price plan</span>
+              <ArrowRight className="w-3 h-3" />
+            </Link>
+
+            <span className="text-slate-600 hidden sm:inline">|</span>
+
             <a
               href={MISKAT_PORTFOLIO_URL}
               target="_blank"
@@ -643,6 +653,40 @@ export default function ChristianClient() {
             </div>
           </div>
         </section>
+
+        {/* ── BOTTOM CONVERSION STRIP: SEE PRICE PLAN ── */}
+        <section className="relative z-20 bg-gradient-to-r from-[#071529] via-[#0A1E3F] to-[#071529] text-white py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-200/80 shadow-inner">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+              <div className="w-14 h-14 rounded-2xl bg-white/[0.08] border border-white/15 flex items-center justify-center text-[#EE5014] shrink-0 shadow-lg">
+                <Sparkles className="w-7 h-7 text-[#EE5014]" />
+              </div>
+              <div>
+                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#EE5014] mb-1">
+                  <span>Executive Digital Architecture</span>
+                  <span className="text-slate-400">•</span>
+                  <span className="text-slate-300">By Miskat Hossain</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+                  Ready to elevate your organization&apos;s digital presence?
+                </h3>
+                <p className="text-slate-300 text-sm mt-1 max-w-2xl">
+                  Turn your leadership, advisory, or coaching practice into a high-converting authority flagship. Review our transparent project scopes and investment tiers.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+              <Link
+                href="/pricing"
+                className="inline-flex items-center justify-center gap-2.5 bg-[#EE5014] hover:bg-[#d6450f] text-white px-8 py-4 rounded-xl font-bold text-base shadow-[0_4px_24px_rgba(238,80,20,0.35)] hover:shadow-[0_6px_32px_rgba(238,80,20,0.5)] hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-150"
+              >
+                <span>See price plan</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* ── FOOTER CREDENTIALS & VALUE ARCHITECTURE ── */}
@@ -655,6 +699,13 @@ export default function ChristianClient() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-6">
+            <Link
+              href="/pricing"
+              className="inline-flex items-center gap-1.5 text-white hover:text-[#EE5014] font-bold transition-colors bg-white/10 hover:bg-white/15 px-3.5 py-1.5 rounded-lg text-xs"
+            >
+              <span>See price plan</span>
+              <ArrowRight className="w-3.5 h-3.5 text-[#EE5014]" />
+            </Link>
             <button
               onClick={() => setIsServicesDrawerOpen(true)}
               className="hover:text-[#EE5014] transition-colors"
@@ -700,6 +751,19 @@ export default function ChristianClient() {
           </div>
         </div>
       </footer>
+
+      {/* ── FLOATING BOTTOM CTA: SEE PRICE PLAN ── */}
+      <div className="fixed bottom-6 right-6 z-40">
+        <Link
+          href="/pricing"
+          aria-label="See price plan"
+          className="group inline-flex items-center gap-2.5 bg-[#0A1E3F]/95 hover:bg-[#071529] text-white px-5 py-3 rounded-full shadow-2xl border border-slate-700/80 hover:border-[#EE5014] transition-all duration-200 active:scale-[0.98] backdrop-blur-md"
+        >
+          <span className="w-2 h-2 rounded-full bg-[#EE5014] animate-pulse" />
+          <span className="text-xs sm:text-sm font-bold tracking-wide">See price plan</span>
+          <ArrowRight className="w-3.5 h-3.5 text-[#EE5014] group-hover:translate-x-1 transition-transform" />
+        </Link>
+      </div>
 
       {/* ── MODAL: WORK WITH ME / EXECUTIVE INQUIRY (4 UI STATES) ── */}
       {isContactModalOpen && (
