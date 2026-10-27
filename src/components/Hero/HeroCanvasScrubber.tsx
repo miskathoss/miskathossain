@@ -123,7 +123,26 @@ export const HeroCanvasScrubber = React.forwardRef<
       const offsetX = isMobile ? (cw - nw) * 0.5 : (cw - nw) * 0.48;
       const offsetY = (ch - nh) * 0.5;
 
-      ctx.drawImage(img, offsetX, offsetY, nw, nh);
+      // Inset source crop by 4px top/bottom to cut off any raw JPEG edge artifacts
+      const cropY = 4;
+      const sH = ih - cropY * 2;
+      ctx.drawImage(img, 0, cropY, iw, sH, offsetX, offsetY, nw, nh);
+
+      // Direct Canvas Bottom Vignette & Solid Seal:
+      // Hardware-rendered directly into canvas context buffer to guarantee
+      // that GPU texture sampling or fractional DPR can never leak colors at the bottom seam.
+      const fadeH = Math.min(Math.round(ch * 0.25), 240);
+      const bottomGrad = ctx.createLinearGradient(0, ch - fadeH, 0, ch);
+      bottomGrad.addColorStop(0, "rgba(17, 17, 17, 0)");
+      bottomGrad.addColorStop(0.65, "rgba(17, 17, 17, 0.85)");
+      bottomGrad.addColorStop(1, "#111111");
+      ctx.fillStyle = bottomGrad;
+      ctx.fillRect(0, ch - fadeH, cw, fadeH);
+
+      // Solid dark seal on bottom 6px of the canvas buffer
+      ctx.fillStyle = "#111111";
+      ctx.fillRect(0, ch - 6, cw, 6);
+
       lastRenderedActualIndex.current = bestFrameIndex;
 
       if (!isCanvasActive) {
@@ -344,7 +363,7 @@ export const HeroCanvasScrubber = React.forwardRef<
   }, [drawFrame]);
 
   return (
-    <div className="absolute inset-0 w-full h-full pointer-events-none select-none">
+    <div className="absolute inset-0 w-full h-full pointer-events-none select-none overflow-hidden">
       {/* 
         Instant First-Paint 3D Visual:
         Directly rendered into HTML so the browser renders Miskat's 3D image
@@ -371,6 +390,10 @@ export const HeroCanvasScrubber = React.forwardRef<
       {/* Atmospheric vignette and cinematic film gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-black/30 pointer-events-none z-10" />
       <div className="absolute inset-0 bg-gradient-to-r from-dark/60 via-transparent to-dark/30 pointer-events-none hidden md:block z-10" />
+
+      {/* Solid bottom feathering & seal to guarantee 0px gap/seam with Section 2 */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-dark via-dark/95 to-transparent pointer-events-none z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-3 bg-dark pointer-events-none z-10" />
     </div>
   );
 });
