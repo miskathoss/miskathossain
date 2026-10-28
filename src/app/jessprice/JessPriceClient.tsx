@@ -628,10 +628,10 @@ export default function JessPriceClient() {
         <div className="absolute top-1/3 right-10 w-80 h-80 bg-purple-100/50 rounded-full blur-3xl pointer-events-none -z-10" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
             
             {/* LEFT COLUMN: HERO CONTENT */}
-            <div className="lg:col-span-6 xl:col-span-7 space-y-6 pt-2 pb-6 lg:pb-12">
+            <div className="lg:col-span-6 xl:col-span-5 space-y-6 pt-2 pb-6 lg:pb-12">
               
               {/* Badge Pill */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-100/90 text-indigo-700 text-xs font-bold tracking-wider uppercase shadow-xs">
@@ -713,13 +713,13 @@ export default function JessPriceClient() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN: HER HERO IMAGE (FEATURING JESS'S AUTHENTIC IMAGE) */}
-            <div className="lg:col-span-6 xl:col-span-5 relative flex items-center justify-center lg:justify-end">
-              <div className="relative w-full max-w-[500px] aspect-[1/1] sm:aspect-[4/3.8] flex items-end justify-center">
+            {/* RIGHT COLUMN: HER HERO IMAGE (ENLARGED & EXECUTIVE PRESENCE) */}
+            <div className="lg:col-span-6 xl:col-span-7 relative flex items-center justify-center lg:justify-end">
+              <div className="relative w-full max-w-[580px] lg:max-w-[660px] xl:max-w-[720px] aspect-[1/1] sm:aspect-[4/3.8] lg:aspect-[4/3.8] flex items-end justify-center">
                 
                 {/* Backdrop Soft Glow & Connecting Paths */}
                 <div className="absolute inset-0 -z-10 flex items-center justify-center">
-                  <div className="w-80 h-80 rounded-full bg-gradient-to-tr from-indigo-200/60 to-purple-200/50 blur-2xl" />
+                  <div className="w-[480px] h-[480px] rounded-full bg-gradient-to-tr from-indigo-200/70 to-purple-200/60 blur-3xl" />
                 </div>
 
                 {/* Curved Connection Lines */}
@@ -743,7 +743,7 @@ export default function JessPriceClient() {
                 </svg>
 
                 {/* Background Widget 1: Mini Browser Preview (Left) */}
-                <div className="absolute top-10 left-2 sm:left-6 z-10 bg-white/95 backdrop-blur-sm rounded-xl border border-slate-200 p-2.5 shadow-lg w-28 sm:w-36 hidden sm:block transform -rotate-3 hover:rotate-0 transition-transform">
+                <div className="absolute top-10 left-2 sm:left-4 z-10 bg-white/95 backdrop-blur-sm rounded-xl border border-slate-200 p-2.5 shadow-lg w-28 sm:w-36 hidden sm:block transform -rotate-3 hover:rotate-0 transition-transform">
                   <div className="flex items-center gap-1 mb-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-rose-400" />
                     <div className="w-1.5 h-1.5 rounded-full bg-amber-400" />
@@ -762,26 +762,26 @@ export default function JessPriceClient() {
                   </div>
                 </div>
 
-                {/* JESS PRICE'S HERO PORTRAIT (HER IMAGE) */}
-                <div className="relative w-full h-[94%] flex items-end justify-center">
-                  <div className="relative w-[340px] sm:w-[380px] h-[370px] sm:h-[410px]">
+                {/* JESS PRICE'S HERO PORTRAIT (HER IMAGE - ENLARGED) */}
+                <div className="relative w-full h-[98%] flex items-end justify-center">
+                  <div className="relative w-[400px] sm:w-[480px] lg:w-[540px] xl:w-[600px] h-[440px] sm:h-[510px] lg:h-[560px] xl:h-[620px]">
                     <Image
                       src="/assets/jessprice/jess-portrait-transparent.png"
                       alt="Jess Price - Senior Instructional Designer & Curriculum Developer"
                       fill
-                      className="object-contain object-bottom drop-shadow-xl"
+                      className="object-contain object-bottom drop-shadow-2xl scale-105 transform origin-bottom"
                       priority
                     />
 
                     {/* Sleek Laptop Workstation Base */}
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-[240px] sm:w-[280px] h-6 bg-gradient-to-t from-slate-200 to-slate-100 rounded-t-xl border-t border-x border-slate-300 shadow-md flex items-center justify-center">
-                      <div className="w-16 h-1 bg-slate-300 rounded-full" />
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-[320px] sm:w-[380px] lg:w-[440px] h-7 bg-gradient-to-t from-slate-200 to-slate-100 rounded-t-xl border-t border-x border-slate-300 shadow-md flex items-center justify-center">
+                      <div className="w-20 h-1 bg-slate-300 rounded-full" />
                     </div>
                   </div>
                 </div>
 
                 {/* Floating Skill Badge 1: Top Right */}
-                <div className="absolute top-6 right-0 sm:right-1 z-20 bg-white/95 backdrop-blur-md border border-slate-200 rounded-xl p-2.5 shadow-md flex items-center gap-2.5 max-w-[195px] hover:scale-105 transition-transform">
+                <div className="absolute top-2 sm:top-4 right-0 lg:-right-4 z-20 bg-white/95 backdrop-blur-md border border-slate-200 rounded-xl p-2.5 shadow-md flex items-center gap-2.5 max-w-[205px] hover:scale-105 transition-transform">
                   <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
                     <Lightbulb className="w-4 h-4" />
                   </div>
@@ -794,7 +794,7 @@ export default function JessPriceClient() {
                 </div>
 
                 {/* Floating Skill Badge 2: Mid Right */}
-                <div className="absolute top-28 right-0 sm:-right-2 z-20 bg-white/95 backdrop-blur-md border border-slate-200 rounded-xl p-2.5 shadow-md flex items-center gap-2.5 max-w-[185px] hover:scale-105 transition-transform">
+                <div className="absolute top-28 sm:top-32 right-0 lg:-right-6 z-20 bg-white/95 backdrop-blur-md border border-slate-200 rounded-xl p-2.5 shadow-md flex items-center gap-2.5 max-w-[195px] hover:scale-105 transition-transform">
                   <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
                     <Play className="w-4 h-4 fill-indigo-600" />
                   </div>
@@ -807,7 +807,7 @@ export default function JessPriceClient() {
                 </div>
 
                 {/* Floating Skill Badge 3: Lower Right */}
-                <div className="absolute top-52 right-2 sm:right-0 z-20 bg-white/95 backdrop-blur-md border border-slate-200 rounded-xl p-2.5 shadow-md flex items-center gap-2.5 max-w-[195px] hover:scale-105 transition-transform">
+                <div className="absolute top-56 sm:top-60 right-2 lg:-right-2 z-20 bg-white/95 backdrop-blur-md border border-slate-200 rounded-xl p-2.5 shadow-md flex items-center gap-2.5 max-w-[205px] hover:scale-105 transition-transform">
                   <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
                     <Settings className="w-4 h-4" />
                   </div>
@@ -820,9 +820,9 @@ export default function JessPriceClient() {
                 </div>
 
                 {/* Laptop Front Highlight Card: 19+ Years of Experience */}
-                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 z-20 bg-white/95 backdrop-blur-md border border-slate-200 rounded-2xl px-5 py-3 shadow-xl flex items-center gap-4 whitespace-nowrap">
-                  <div className="text-center pr-3 border-r border-slate-200">
-                    <div className="text-2xl font-black text-indigo-600 leading-none">19+</div>
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 z-20 bg-white/95 backdrop-blur-md border border-slate-200 rounded-2xl px-6 py-3.5 shadow-xl flex items-center gap-4 whitespace-nowrap">
+                  <div className="text-center pr-3.5 border-r border-slate-200">
+                    <div className="text-2xl sm:text-3xl font-black text-indigo-600 leading-none">19+</div>
                     <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-0.5">
                       Years of Exp.
                     </div>
@@ -831,7 +831,7 @@ export default function JessPriceClient() {
                     <div className="w-6 h-6 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center">
                       <Check className="w-3.5 h-3.5 stroke-[3]" />
                     </div>
-                    <div className="text-[11px] font-bold text-slate-800 tracking-wide uppercase">
+                    <div className="text-[11px] sm:text-xs font-bold text-slate-800 tracking-wide uppercase">
                       Healthcare • Automotive • Education
                     </div>
                   </div>
