@@ -1,0 +1,190 @@
+[
+  {
+    "slug": "sarah-jenkins",
+    "name": "Sarah Jenkins",
+    "businessName": "Sarah Jenkins Leadership Advisory",
+    "niche": "Executive Leadership & Board Advisory",
+    "url": "https://sarahjenkinsleadership.com",
+    "city": "Toronto",
+    "province": "ON",
+    "targetAudience": "Fortune 500 VPs, Senior Directors & Emerging Board Candidates",
+    "palette": {
+      "primary": "#0B132B",
+      "accent": "#C5A880",
+      "accentHover": "#B3956D",
+      "bg": "#FAF9F6",
+      "cardBg": "#FFFFFF",
+      "text": "#0F172A",
+      "muted": "#64748B"
+    },
+    "originalHeadline": "Helping leaders lead with clarity and confidence.",
+    "originalWeaknesses": [
+      "Vague, cliché headline ('lead with clarity') fails to communicate high-stakes business outcomes.",
+      "Hidden booking funnel requiring 4 clicks and a 6-field form with no instant calendar scheduler.",
+      "Generic corporate blue aesthetic that undervalues executive advisory engagements priced above $25K."
+    ],
+    "conversionFixes": [
+      {
+        "title": "High-Stakes Outcome Hook",
+        "detail": "Transformed passive messaging into a concrete VP-to-Boardroom transition promise with explicit enterprise ROI."
+      },
+      {
+        "title": "Zero-Friction Consultation Booking",
+        "detail": "Embedded a 1-click confidential calendar booking path directly above the fold, eliminating 3 drop-off steps."
+      },
+      {
+        "title": "Bespoke Editorial Authority Styling",
+        "detail": "Upgraded visual language to obsidian & champagne gold with verified board governance proof metrics ($1.2B+ advised)."
+      }
+    ],
+    "eyebrow": "EXECUTIVE LEADERSHIP & BOARD GOVERNANCE",
+    "socialProofPill": "Trusted by 140+ Enterprise VPs & Directors",
+    "headline": "Transition from Senior VP to Confident Board Director — Without Corporate Politics.",
+    "subheadline": "Bespoke 1-on-1 advisory for corporate executives stepping into multi-million dollar board governance, executive committee leadership, and enterprise transformation.",
+    "primaryCta": "Schedule Confidential Advisory Call",
+    "secondaryCta": "Review Board Readiness Framework",
+    "portraitUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=85",
+    "metrics": [
+      { "value": "$1.2B+", "label": "Enterprise Value Advised" },
+      { "value": "140+", "label": "Board Appointments Guided" },
+      { "value": "98%", "label": "Client Retention & Referral" }
+    ],
+    "clientLogos": [
+      "Enterprise Banking",
+      "Global Health Systems",
+      "FinTech Ventures",
+      "TSX / NYSE Boards"
+    ],
+    "testimonial": {
+      "quote": "Sarah gave me the exact governance blueprint and political acumen required to secure my first Fortune 500 board seat in under six months.",
+      "author": "Elena Rostova",
+      "role": "Independent Director & Former Executive VP, NorthAm Health"
+    }
+  },
+  {
+    "slug": "apex-consulting",
+    "name": "Marcus Vance",
+    "businessName": "Apex Consulting Group",
+    "niche": "B2B Revenue Architecture & GTM Scaling",
+    "url": "https://apexconsultinggroup.io",
+    "city": "Vancouver",
+    "province": "BC",
+    "targetAudience": "Series A–C SaaS Founders, CROs & Tech CEOs ($5M–$30M ARR)",
+    "palette": {
+      "primary": "#09090B",
+      "accent": "#10B981",
+      "accentHover": "#059669",
+      "secondaryAccent": "#6366F1",
+      "bg": "#09090B",
+      "cardBg": "#18181B",
+      "text": "#FAFAFA",
+      "muted": "#A1A1AA"
+    },
+    "originalHeadline": "We optimize business performance and drive sustainable growth.",
+    "originalWeaknesses": [
+      "Generic enterprise buzzwords ('drive sustainable growth') that tech founders and CROs tune out.",
+      "No ARR benchmarks, target ACVs, or stage-specific proof anywhere above the fold.",
+      "High-friction 9-field contact form with 48-hour response latency killing warm founder intent."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Quantified ARR Benchmark Hook",
+        "detail": "Anchored the headline to a clear '$2M–$5M Net New ARR' benchmark specifically calibrated for Series A–C software."
+      },
+      {
+        "title": "Real-Time Pipeline Proof Widget",
+        "detail": "Surfaced live sales velocity metrics, pipeline growth rates, and CAC payback indicators directly in the hero fold."
+      },
+      {
+        "title": "Dual-Intent Conversion Pathway",
+        "detail": "Balanced an instant GTM Revenue Audit CTA for high-intent buyers with a 12-Month ARR Benchmark report for warm evaluators."
+      }
+    ],
+    "eyebrow": "SERIES A–C REVENUE ARCHITECTURE",
+    "socialProofPill": "Backed by YC & Techstars Alumni Companies",
+    "headline": "Add $2M–$5M in Qualified Net-New ARR — Without Inflating Sales Headcount.",
+    "subheadline": "We build repeatable outbound acquisition engines, optimize sales pipeline velocity, and turn mid-market deal cycles into predictable revenue for B2B software companies.",
+    "primaryCta": "Request GTM Revenue Audit",
+    "secondaryCta": "View 12-Month ARR Benchmarks",
+    "portraitUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85",
+    "metrics": [
+      { "value": "$180M+", "label": "Net ARR Added for Clients" },
+      { "value": "42 Days", "label": "Average Sales Cycle (down from 89)" },
+      { "value": "3.8x", "label": "Average Pipeline Velocity" }
+    ],
+    "clientLogos": [
+      "CloudGrid AI",
+      "DataCore Systems",
+      "HyperScale Ops",
+      "Vektor Security"
+    ],
+    "testimonial": {
+      "quote": "Apex completely restructured our outbound motion. We closed $1.8M in pipeline within our first 90 days without hiring a single additional SDR.",
+      "author": "Julian Mercer",
+      "role": "Founder & CEO, HyperScale Technologies"
+    }
+  },
+  {
+    "slug": "david-ross-coaching",
+    "name": "David Ross",
+    "businessName": "David Ross Peak Performance",
+    "niche": "High-Performance Mindset & Neurobiology for Tech Founders",
+    "url": "https://davidrosscoaching.com",
+    "city": "Montreal",
+    "province": "QC",
+    "targetAudience": "Venture-Backed Founders, Technical CEOs & CTOs",
+    "palette": {
+      "primary": "#051A14",
+      "accent": "#22C55E",
+      "accentHover": "#16A34A",
+      "secondaryAccent": "#EAB308",
+      "bg": "#040D0A",
+      "cardBg": "#0A1F17",
+      "text": "#F3F4F6",
+      "muted": "#9CA3AF"
+    },
+    "originalHeadline": "Unlock your inner potential and live your best life.",
+    "originalWeaknesses": [
+      "Sounds like a spiritual retreat; skeptical technical founders dismiss it as unscientific fluff.",
+      "Zero biomarker integration, cognitive data, or tangible metrics showing time and energy leverage.",
+      "Zero calendar integration; prospect is forced to send an unformatted email inquiry."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Neurobiology & Time-Leverage Hook",
+        "detail": "Pivoted from cliché life-coaching jargon to a precise cognitive engineering hook: 14-hour days to 6 high-leverage hours."
+      },
+      {
+        "title": "Biomarker & Deep-Work Proof Card",
+        "detail": "Featured HRV stabilization, weekly hours reclaimed (+8.2 hrs), and cognitive endurance benchmarks right beside the founder."
+      },
+      {
+        "title": "Low-Risk Cognitive Diagnostic",
+        "detail": "Replaced the generic consultation form with a high-status 20-minute 'Cognitive Diagnostic Call' guaranteed pitch-free."
+      }
+    ],
+    "eyebrow": "NEURO-PERFORMANCE FOR TECHNICAL FOUNDERS",
+    "socialProofPill": "Coached 100+ Seed & Series A Technical Founders",
+    "headline": "Compress 14-Hour Workdays into 6 High-Leverage Hours — Without Revenue Plateauing.",
+    "subheadline": "A neurobiology-backed operating system for venture-backed founders to eliminate decision fatigue, sustain deep cognitive flow, and scale their companies without burnout.",
+    "primaryCta": "Schedule Cognitive Diagnostic Call",
+    "secondaryCta": "Review 3-Pillar Neuro Protocol",
+    "portraitUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=85",
+    "metrics": [
+      { "value": "8.2 hrs", "label": "Avg Weekly Time Reclaimed" },
+      { "value": "4.2x", "label": "Deep Work Flow Velocity" },
+      { "value": "0%", "label": "Client Burnout Rate Across 3 Yrs" }
+    ],
+    "clientLogos": [
+      "Y Combinator Founders",
+      "Techstars Cohorts",
+      "DevOps Executives",
+      "FinTech CTOs"
+    ],
+    "testimonial": {
+      "quote": "David's cognitive protocol took me from 70-hour chaotic weeks to 35 high-impact hours while our ARR grew 140%. He is the secret weapon for any technical founder.",
+      "author": "Karan Singhal",
+      "role": "CTO & Co-Founder, Omniview Systems"
+    }
+  }
+]

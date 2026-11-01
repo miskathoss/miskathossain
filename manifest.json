@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-11-01T14:35:48.352Z",
+  "totalLeads": 3,
+  "previews": [
+    {
+      "slug": "sarah-jenkins",
+      "name": "Sarah Jenkins",
+      "businessName": "Sarah Jenkins Leadership Advisory",
+      "niche": "Executive Leadership & Board Advisory",
+      "rootPath": "previews/sarah-jenkins/index.html",
+      "publicPreviewPath": "public/preview/sarah-jenkins/index.html",
+      "publicPreviewsPath": "public/previews/sarah-jenkins/index.html",
+      "liveUrl": "https://miskathossain.net/preview/sarah-jenkins",
+      "alternativeUrl": "https://miskathossain.net/previews/sarah-jenkins"
+    },
+    {
+      "slug": "apex-consulting",
+      "name": "Marcus Vance",
+      "businessName": "Apex Consulting Group",
+      "niche": "B2B Revenue Architecture & GTM Scaling",
+      "rootPath": "previews/apex-consulting/index.html",
+      "publicPreviewPath": "public/preview/apex-consulting/index.html",
+      "publicPreviewsPath": "public/previews/apex-consulting/index.html",
+      "liveUrl": "https://miskathossain.net/preview/apex-consulting",
+      "alternativeUrl": "https://miskathossain.net/previews/apex-consulting"
+    },
+    {
+      "slug": "david-ross-coaching",
+      "name": "David Ross",
+      "businessName": "David Ross Peak Performance",
+      "niche": "High-Performance Mindset & Neurobiology for Tech Founders",
+      "rootPath": "previews/david-ross-coaching/index.html",
+      "publicPreviewPath": "public/preview/david-ross-coaching/index.html",
+      "publicPreviewsPath": "public/previews/david-ross-coaching/index.html",
+      "liveUrl": "https://miskathossain.net/preview/david-ross-coaching",
+      "alternativeUrl": "https://miskathossain.net/previews/david-ross-coaching"
+    }
+  ]
+}
