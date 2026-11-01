@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T14:35:48.352Z",
+  "generatedAt": "2026-11-01T14:50:52.708Z",
   "totalLeads": 3,
   "previews": [
     {
@@ -7,6 +7,7 @@
       "name": "Sarah Jenkins",
       "businessName": "Sarah Jenkins Leadership Advisory",
       "niche": "Executive Leadership & Board Advisory",
+      "theme": "executive",
       "rootPath": "previews/sarah-jenkins/index.html",
       "publicPreviewPath": "public/preview/sarah-jenkins/index.html",
       "publicPreviewsPath": "public/previews/sarah-jenkins/index.html",
@@ -18,6 +19,7 @@
       "name": "Marcus Vance",
       "businessName": "Apex Consulting Group",
       "niche": "B2B Revenue Architecture & GTM Scaling",
+      "theme": "tech-saas",
       "rootPath": "previews/apex-consulting/index.html",
       "publicPreviewPath": "public/preview/apex-consulting/index.html",
       "publicPreviewsPath": "public/previews/apex-consulting/index.html",
@@ -29,6 +31,7 @@
       "name": "David Ross",
       "businessName": "David Ross Peak Performance",
       "niche": "High-Performance Mindset & Neurobiology for Tech Founders",
+      "theme": "performance",
       "rootPath": "previews/david-ross-coaching/index.html",
       "publicPreviewPath": "public/preview/david-ross-coaching/index.html",
       "publicPreviewsPath": "public/previews/david-ross-coaching/index.html",

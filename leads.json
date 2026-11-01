@@ -132,6 +132,7 @@
     "url": "https://davidrosscoaching.com",
     "city": "Montreal",
     "province": "QC",
+    "theme": "performance",
     "targetAudience": "Venture-Backed Founders, Technical CEOs & CTOs",
     "palette": {
       "primary": "#051A14",
