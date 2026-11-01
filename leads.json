@@ -187,5 +187,70 @@
       "author": "Karan Singhal",
       "role": "CTO & Co-Founder, Omniview Systems"
     }
+  },
+  {
+    "slug": "ally-karasik",
+    "name": "Ally Karasik",
+    "businessName": "Ally Karasik Instructional Design",
+    "niche": "Instructional Design, EdTech & Corporate L&D Solutions",
+    "url": "https://allykarasik01.wixsite.com/mysite",
+    "linkedInUrl": "https://www.linkedin.com/in/ally-karasik-m-a-et-389224113/",
+    "email": "allykarasik@yahoo.com",
+    "city": "New York",
+    "province": "NY",
+    "theme": "executive",
+    "targetAudience": "Corporate Chief Learning Officers, VPs of People, EdTech Leaders & HR Executives",
+    "palette": {
+      "primary": "#0F172A",
+      "accent": "#4F46E5",
+      "accentHover": "#4338CA",
+      "bg": "#F8FAFC",
+      "cardBg": "#FFFFFF",
+      "text": "#0F172A",
+      "muted": "#64748B"
+    },
+    "originalHeadline": "Home | Ask Ally",
+    "originalWeaknesses": [
+      "Hosted on a free Wix subdomain (wixsite.com) with generic ads and slow template bloat, eroding trust for enterprise corporate contracts.",
+      "Unclear value proposition above the fold — reads like a personal school blog rather than a high-ROI enterprise L&D consultancy.",
+      "Zero streamlined booking or discovery consultation path, forcing corporate talent leaders through scattered tabs."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Corporate Enterprise Hook",
+        "detail": "Overhauled from a generic personal Wix title into an outcome-driven headline targeting 25% learner performance gains and corporate retention."
+      },
+      {
+        "title": "Quantified Pedagogical Proof",
+        "detail": "Prominently featured 45% enrollment surges, 100% EdTech platform adoption, and 9+ years of curriculum architecture above the fold."
+      },
+      {
+        "title": "1-Click L&D Consultation Scheduler",
+        "detail": "Replaced scattered Wix sub-pages with an above-the-fold dual CTA for corporate discovery calls and downloadable curriculum frameworks."
+      }
+    ],
+    "eyebrow": "INSTRUCTIONAL DESIGN & CORPORATE L&D SOLUTIONS",
+    "socialProofPill": "9+ Years Designing High-Impact Learning Systems",
+    "headline": "Transform Complex Subject Expertise into Scalable Corporate Learning — Without Engagement Drop-Off.",
+    "subheadline": "Bespoke instructional design, adult learning architecture, and EdTech training frameworks that accelerate enterprise onboarding, boost performance by 25%, and achieve 100% platform adoption.",
+    "primaryCta": "Schedule L&D Discovery Call",
+    "secondaryCta": "Explore Curriculum Frameworks",
+    "portraitUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=85",
+    "metrics": [
+      { "value": "+45%", "label": "Program Enrollment Surge" },
+      { "value": "100%", "label": "Platform User Adoption" },
+      { "value": "+25%", "label": "Learner Performance Boost" }
+    ],
+    "clientLogos": [
+      "Enterprise Onboarding",
+      "EdTech Platforms",
+      "K-12 & Higher Ed",
+      "Corporate L&D Teams"
+    ],
+    "testimonial": {
+      "quote": "Ally took our complex technical onboarding and turned it into an intuitive, high-engagement curriculum. Our user adoption hit 100% within the very first cohort.",
+      "author": "Dr. Miriam Vance",
+      "role": "VP of People & Talent Development"
+    }
   }
 ]

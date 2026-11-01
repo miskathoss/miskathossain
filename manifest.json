@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-01T14:50:52.708Z",
-  "totalLeads": 3,
+  "generatedAt": "2026-11-01T15:00:45.727Z",
+  "totalLeads": 4,
   "previews": [
     {
       "slug": "sarah-jenkins",
@@ -37,6 +37,18 @@
       "publicPreviewsPath": "public/previews/david-ross-coaching/index.html",
       "liveUrl": "https://miskathossain.net/preview/david-ross-coaching",
       "alternativeUrl": "https://miskathossain.net/previews/david-ross-coaching"
+    },
+    {
+      "slug": "ally-karasik",
+      "name": "Ally Karasik",
+      "businessName": "Ally Karasik Instructional Design",
+      "niche": "Instructional Design, EdTech & Corporate L&D Solutions",
+      "theme": "executive",
+      "rootPath": "previews/ally-karasik/index.html",
+      "publicPreviewPath": "public/preview/ally-karasik/index.html",
+      "publicPreviewsPath": "public/previews/ally-karasik/index.html",
+      "liveUrl": "https://miskathossain.net/preview/ally-karasik",
+      "alternativeUrl": "https://miskathossain.net/previews/ally-karasik"
     }
   ]
 }

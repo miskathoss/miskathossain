@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ally Karasik Instructional Design | Instructional Design, EdTech &amp; Corporate L&amp;D Solutions</title>
+  
+  <!-- Typography: Playfair Display + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#0F172A',
+              slate: '#1E293B',
+              gold: '#4F46E5',
+              goldDark: '#4338CA',
+              champagne: '#F4EFEA',
+              cream: '#F8FAFC',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    body {
+      background-color: #F8FAFC;
+      color: #0B132B;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .serif-title {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .gold-glow {
+      box-shadow: 0 10px 30px -10px rgba(197, 168, 128, 0.35);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-gold/20 selection:text-brand-navy">
+
+  <!-- Executive Header Navigation -->
+  <header class="w-full border-b border-brand-navy/5 bg-brand-cream/80 backdrop-blur-md sticky top-0 z-40 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-brand-navy text-white flex items-center justify-center font-serif text-lg font-bold shadow-sm">
+          AK
+        </div>
+        <div>
+          <span class="text-sm font-bold tracking-widest uppercase block text-brand-navy">Ally Karasik</span>
+          <span class="text-xs text-brand-slate/60 font-medium tracking-tight">Instructional Design, EdTech &amp; Corporate L&amp;D Solutions</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-slate/80">
+        <a href="#overview" class="hover:text-brand-navy transition-colors">Overview</a>
+        <a href="#framework" class="hover:text-brand-navy transition-colors">Framework</a>
+        <a href="#outcomes" class="hover:text-brand-navy transition-colors">Client Outcomes</a>
+        <a href="#about" class="hover:text-brand-navy transition-colors">About</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#book" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider bg-brand-navy text-white hover:bg-brand-slate px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm active:scale-[0.98]">
+          <span>Advisory Inquiry</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-gold"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-12 lg:py-20">
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-brand-navy/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left: Copy -->
+        <div class="lg:col-span-7 flex flex-col items-start text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-champagne border border-brand-gold/30 text-xs font-semibold text-brand-navy tracking-wide mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+            <span class="uppercase tracking-widest text-[11px]">INSTRUCTIONAL DESIGN &amp; CORPORATE L&amp;D SOLUTIONS</span>
+            <span class="text-brand-navy/30">|</span>
+            <span class="text-brand-slate/80 font-normal">9+ Years Designing High-Impact Learning Systems</span>
+          </div>
+
+          <h1 class="serif-title text-4xl sm:text-5xl lg:text-[54px] font-semibold tracking-tight text-brand-navy leading-[1.15] mb-6">
+            Transform Complex Subject Expertise into Scalable Corporate Learning — Without Engagement Drop-Off.
+          </h1>
+
+          <p class="text-base sm:text-lg text-brand-slate/80 leading-relaxed max-w-2xl font-normal mb-8">
+            Bespoke instructional design, adult learning architecture, and EdTech training frameworks that accelerate enterprise onboarding, boost performance by 25%, and achieve 100% platform adoption.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
+            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-brand-navy text-white hover:bg-brand-slate text-sm font-semibold tracking-wide transition-all duration-150 shadow-md gold-glow active:scale-[0.98]">
+              <i data-lucide="calendar" class="w-4 h-4 text-brand-gold"></i>
+              <span>Schedule L&amp;D Discovery Call</span>
+            </a>
+            
+            <a href="#framework" class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-white hover:bg-brand-champagne/60 text-brand-navy border border-brand-navy/15 text-sm font-semibold tracking-wide transition-all duration-150 shadow-sm active:scale-[0.98]">
+              <i data-lucide="file-text" class="w-4 h-4 text-brand-slate/60"></i>
+              <span>Explore Curriculum Frameworks</span>
+            </a>
+          </div>
+
+          <div class="w-full pt-8 border-t border-brand-navy/10 grid grid-cols-3 gap-4 sm:gap-8">
+            
+              <div>
+                <div class="serif-title text-2xl sm:text-3xl font-bold text-brand-navy">+45%</div>
+                <div class="text-xs text-brand-slate/70 font-medium tracking-tight mt-0.5">Program Enrollment Surge</div>
+              </div>
+            
+              <div>
+                <div class="serif-title text-2xl sm:text-3xl font-bold text-brand-navy">100%</div>
+                <div class="text-xs text-brand-slate/70 font-medium tracking-tight mt-0.5">Platform User Adoption</div>
+              </div>
+            
+              <div>
+                <div class="serif-title text-2xl sm:text-3xl font-bold text-brand-navy">+25%</div>
+                <div class="text-xs text-brand-slate/70 font-medium tracking-tight mt-0.5">Learner Performance Boost</div>
+              </div>
+            
+          </div>
+
+        </div>
+
+        <!-- Right: Visual Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="absolute -inset-3 bg-gradient-to-tr from-brand-gold/30 via-transparent to-brand-navy/10 rounded-3xl blur-lg"></div>
+
+            <div class="relative bg-white p-3 rounded-2xl shadow-xl border border-brand-gold/20 overflow-hidden">
+              <div class="aspect-[4/5] rounded-xl overflow-hidden bg-brand-navy/5 relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" 
+                  alt="Ally Karasik" 
+                  class="w-full h-full object-cover object-top filter contrast-[1.03]"
+                  loading="eager"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-white">
+                  <div class="text-xs uppercase tracking-widest text-brand-gold font-semibold">Instructional Design, EdTech &amp; Corporate L&amp;D Solutions</div>
+                  <div class="serif-title text-lg font-semibold">Ally Karasik</div>
+                  <div class="text-xs text-zinc-300 font-light mt-0.5">Ally Karasik Instructional Design</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute -bottom-6 -left-6 sm:-left-8 max-w-xs bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-xl border border-brand-gold/30 hidden sm:block">
+              <div class="flex items-center gap-1 text-amber-500 mb-1.5">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+              </div>
+              <p class="text-xs text-brand-slate italic leading-snug">
+                "Ally took our complex technical onboarding and turned it into an intuitive, high-engagement curriculum. Our user adoption hit 100% within the very first cohort."
+              </p>
+              <div class="mt-2 pt-2 border-t border-brand-navy/5 flex items-center justify-between">
+                <div>
+                  <div class="text-[11px] font-bold text-brand-navy">Dr. Miriam Vance</div>
+                  <div class="text-[10px] text-brand-slate/60">VP of People &amp; Talent Development</div>
+                </div>
+                <i data-lucide="shield-check" class="w-4 h-4 text-brand-gold"></i>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Client Institutional Ecosystem Banner -->
+    <div class="w-full mt-16 lg:mt-24 border-y border-brand-navy/5 bg-brand-champagne/30 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <span class="text-xs font-semibold uppercase tracking-widest text-brand-slate/60">
+            Advising Leaders Across Major Organizations
+          </span>
+          <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-semibold tracking-wider text-brand-slate/80 uppercase">
+            
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
+                <span>Enterprise Onboarding</span>
+              </div>
+            
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
+                <span>EdTech Platforms</span>
+              </div>
+            
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
+                <span>K-12 &amp; Higher Ed</span>
+              </div>
+            
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
+                <span>Corporate L&amp;D Teams</span>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Interactive Footer Anchor -->
+  <footer class="w-full py-8 border-t border-brand-navy/5 text-center text-xs text-brand-slate/50">
+    <div class="max-w-7xl mx-auto px-4">
+      &copy; 2026 Ally Karasik Instructional Design. All Rights Reserved. Private & Confidential.
+    </div>
+  </footer>
+
+  
+  <!-- MANDATORY DESIGNER PREVIEW BAR (FIXED Z-50) -->
+  <aside 
+    id="designer-preview-bar" 
+    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3.5 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-zinc-950/85 backdrop-blur-xl border border-white/15 shadow-2xl text-white transition-all transform duration-200"
+    role="region"
+    aria-label="Design Concept Attribution Bar"
+  >
+    <div class="flex items-center gap-2.5">
+      <span class="relative flex h-2.5 w-2.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+      </span>
+      <div class="text-xs sm:text-[13px] font-medium leading-none text-zinc-200 truncate max-w-[150px] sm:max-w-none">
+        Redesign concept for <span class="font-bold text-white">Ally Karasik</span>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <button 
+        id="why-converts-btn"
+        type="button"
+        onclick="toggleConvertsModal()" 
+        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-[0.97] text-zinc-200 hover:text-white text-xs font-semibold tracking-tight transition-all border border-white/10 cursor-pointer"
+        aria-expanded="false"
+        aria-controls="converts-modal"
+      >
+        <i data-lucide="help-circle" class="w-3.5 h-3.5 text-zinc-400"></i>
+        <span>Why This Converts <span class="text-zinc-400 font-normal">(Notes)</span></span>
+      </button>
+
+      <a 
+        href="https://miskathossain.net" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-white text-zinc-950 hover:bg-zinc-100 active:scale-[0.97] text-xs font-bold tracking-tight transition-all shadow-md cursor-pointer whitespace-nowrap"
+      >
+        <span>Claim This Design</span>
+        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </aside>
+
+  <!-- MODAL: WHY THIS CONVERTS -->
+  <div 
+    id="converts-modal" 
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+  >
+    <div 
+      class="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-left transform scale-95 transition-transform duration-200"
+      onclick="event.stopPropagation()"
+    >
+      <button 
+        type="button" 
+        onclick="toggleConvertsModal()" 
+        class="absolute top-5 right-5 p-2 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
+        aria-label="Close notes modal"
+      >
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-3">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+        <span>CONVERSION LEAK ANALYSIS</span>
+      </div>
+
+      <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight">
+        Why This Redesign Converts
+      </h2>
+      <p class="text-xs sm:text-sm text-zinc-400 mt-1 mb-6">
+        Here is how this bespoke hero section fixes existing conversion leaks for <span class="text-white font-medium">Ally Karasik Instructional Design</span>:
+      </p>
+
+      <div class="space-y-3.5 mb-6">
+        
+          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
+            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+              1
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-zinc-100">Corporate Enterprise Hook</div>
+              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Overhauled from a generic personal Wix title into an outcome-driven headline targeting 25% learner performance gains and corporate retention.</div>
+            </div>
+          </div>
+        
+          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
+            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+              2
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-zinc-100">Quantified Pedagogical Proof</div>
+              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Prominently featured 45% enrollment surges, 100% EdTech platform adoption, and 9+ years of curriculum architecture above the fold.</div>
+            </div>
+          </div>
+        
+          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
+            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+              3
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-zinc-100">1-Click L&amp;D Consultation Scheduler</div>
+              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Replaced scattered Wix sub-pages with an above-the-fold dual CTA for corporate discovery calls and downloadable curriculum frameworks.</div>
+            </div>
+          </div>
+        
+      </div>
+
+      <div class="pt-5 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <span class="text-[11px] text-zinc-500 text-center sm:text-left">
+          Crafted by <a href="https://miskathossain.net" target="_blank" rel="noopener noreferrer" class="text-zinc-300 font-semibold hover:underline">Miskat Hossain</a> • High-Converting 3D & UX Architect
+        </span>
+        <a 
+          href="https://miskathossain.net" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white text-zinc-950 font-bold text-xs hover:bg-zinc-100 transition-all shadow-md active:scale-[0.98] w-full sm:w-auto justify-center"
+        >
+          <span>Claim & Deploy This Section</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function toggleConvertsModal() {
+      const modal = document.getElementById('converts-modal');
+      const btn = document.getElementById('why-converts-btn');
+      const isHidden = modal.classList.contains('pointer-events-none');
+      
+      if (isHidden) {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100');
+        modal.querySelector('div').classList.remove('scale-95');
+        modal.querySelector('div').classList.add('scale-100');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.classList.remove('opacity-100');
+        modal.querySelector('div').classList.add('scale-95');
+        modal.querySelector('div').classList.remove('scale-100');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function initPreviewModal() {
+      const modal = document.getElementById('converts-modal');
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          toggleConvertsModal();
+        }
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
+          toggleConvertsModal();
+        }
+      });
+    }
+  </script>
+  
+
+  <script>
+    lucide.createIcons();
+    initPreviewModal();
+  </script>
+</body>
+</html>
