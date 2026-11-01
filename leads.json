@@ -196,8 +196,8 @@
     "url": "https://allykarasik01.wixsite.com/mysite",
     "linkedInUrl": "https://www.linkedin.com/in/ally-karasik-m-a-et-389224113/",
     "email": "allykarasik@yahoo.com",
-    "city": "New York",
-    "province": "NY",
+    "city": "Wilmington",
+    "province": "NC",
     "theme": "executive",
     "targetAudience": "Corporate Chief Learning Officers, VPs of People, EdTech Leaders & HR Executives",
     "palette": {
@@ -251,6 +251,336 @@
       "quote": "Ally took our complex technical onboarding and turned it into an intuitive, high-engagement curriculum. Our user adoption hit 100% within the very first cohort.",
       "author": "Dr. Miriam Vance",
       "role": "VP of People & Talent Development"
+    }
+  },
+  {
+    "slug": "curtis-hill",
+    "name": "Curtis Hill",
+    "businessName": "Culture of Belonging®",
+    "niche": "Workplace Belonging & Human-Centered Leadership Keynotes",
+    "url": "https://cultureofbelonging.org/",
+    "linkedInUrl": "https://www.linkedin.com/in/curtis-hill-culture-of-belonging/",
+    "email": "curtis@curtishill.net",
+    "city": "Chicago",
+    "province": "IL",
+    "theme": "executive",
+    "targetAudience": "CEOs, CHROs, Chief People Officers & Business Unit Leaders",
+    "logoUrl": "/assets/curtis-hill/logo.png",
+    "palette": {
+      "primary": "#0F172A",
+      "accent": "#D97706",
+      "accentHover": "#B45309",
+      "bg": "#FAF8F5",
+      "cardBg": "#FFFFFF",
+      "text": "#0F172A",
+      "muted": "#64748B"
+    },
+    "originalHeadline": "Workplace Belonging Expert & Culture Speaker",
+    "originalWeaknesses": [
+      "Legacy WordPress layout with cluttered navigation bars causing drop-off for enterprise event organizers.",
+      "Abstract culture messaging that skeptical CFOs dismiss as non-measurable 'fluff'.",
+      "Hidden booking link requiring several clicks rather than an instant Belonging Score diagnostic flow."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Turnover & ROI Anchor",
+        "detail": "Framed human-centered belonging as a hard business metric: cut regrettable turnover and boost team performance in 6 months."
+      },
+      {
+        "title": "The BELONG Method Highlight",
+        "detail": "Prominently featured the 4 pillars (Noticed, Named, Known, Needed) proven in Chicago Public Schools (42% to 81% gain)."
+      },
+      {
+        "title": "1-Click Belonging Diagnostic CTA",
+        "detail": "Introduced an immediate 'Request Belonging Score Diagnostic' action above the fold for enterprise CHROs and CEOs."
+      }
+    ],
+    "eyebrow": "HUMAN-CENTERED LEADERSHIP • CREATOR OF THE BELONG METHOD",
+    "socialProofPill": "Proven from Chicago Public Schools to Fortune 500",
+    "headline": "Cut Regrettable Turnover and Accelerate Team Performance in 6 Months — Without Fluffy Culture Talk.",
+    "subheadline": "Operationalize human-centered leadership through the proven BELONG Method. Transform manager behaviors in 90 days and build cultures where people feel Noticed, Named, Known, and Needed.",
+    "primaryCta": "Request Belonging Score Diagnostic",
+    "secondaryCta": "Explore Keynotes & Leadership Labs",
+    "portraitUrl": "/assets/curtis-hill/portrait.png",
+    "metrics": [
+      { "value": "42% → 81%", "label": "Proven Proficiency Shift" },
+      { "value": "6 Months", "label": "To Cut Regrettable Turnover" },
+      { "value": "90 Days", "label": "Manager Behavior Shift in Labs" }
+    ],
+    "clientLogos": [
+      "Fortune 500 Enterprises",
+      "Leadership Summits",
+      "High-Growth Startups",
+      "Chicago Public Schools"
+    ],
+    "testimonial": {
+      "quote": "Curtis turns abstract leadership ideas into daily operational habits. The BELONG framework made our retention and manager engagement measurably rise within a single quarter.",
+      "author": "Marcus Sterling",
+      "role": "Chief People Officer, Enterprise Tech"
+    }
+  },
+  {
+    "slug": "david-krueger",
+    "name": "David Krueger, M.D.",
+    "businessName": "MentorPath® & NeuroMentor® Institute",
+    "niche": "Executive Mentor Coaching & Neuroscience of Success",
+    "url": "https://www.mentorpath.com/",
+    "linkedInUrl": "https://www.linkedin.com/in/davidkruegermd/",
+    "email": "dkrueger@mentorpath.com",
+    "city": "Houston",
+    "province": "TX",
+    "theme": "performance",
+    "targetAudience": "Practicing Professionals, C-Suite Executives, Professional Athletes & High-Risk Leaders",
+    "logoUrl": "/assets/david-krueger/logo.png",
+    "palette": {
+      "primary": "#080E14",
+      "accent": "#F59E0B",
+      "accentHover": "#D97706",
+      "secondaryAccent": "#10B981",
+      "bg": "#060A0F",
+      "cardBg": "#0E1520",
+      "text": "#F8FAFC",
+      "muted": "#94A3B8"
+    },
+    "originalHeadline": "Home - MentorPath",
+    "originalWeaknesses": [
+      "Outdated legacy WordPress site with overwhelming text links and multi-domain splits (MentorPath vs. New Money Story).",
+      "World-class M.D. credentials and 24 published books diluted by dense 2000s typography.",
+      "No modern 1-click consultation scheduler for high-net-worth executives."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Elite Medical & Executive Credibility",
+        "detail": "Elevated his M.D. expertise, 24 trade books, and Top Executive Mentor Coach of the Year award above the fold."
+      },
+      {
+        "title": "Neuroscience-Backed Positioning",
+        "detail": "Framed his mentorship around high-risk, high-reward decision-making and the psychology of success."
+      },
+      {
+        "title": "Unified Executive Consultation Funnel",
+        "detail": "Consolidated scattered book pages into a sleek Harvard-grade executive consultation scheduler."
+      }
+    ],
+    "eyebrow": "EXECUTIVE MENTOR COACHING • BACKED BY 24 BOOKS & 75 SCIENTIFIC PAPERS",
+    "socialProofPill": "Top Executive Mentor Coach of the Year (IAOTP)",
+    "headline": "Rewire High-Risk Executive Decision-Making with Neuroscience — Without Cognitive Fatigue.",
+    "subheadline": "Bespoke executive mentorship and brain-science strategies for practicing professionals, C-suite leaders, and elite performers navigating high-stakes, high-reward environments.",
+    "primaryCta": "Schedule Executive Mentorship Call",
+    "secondaryCta": "Explore The New Money Story®",
+    "portraitUrl": "/assets/david-krueger/portrait.jpg",
+    "metrics": [
+      { "value": "24 Books", "label": "Trade Books & 75 Scientific Papers" },
+      { "value": "10 Languages", "label": "Bestseller 'Secret Language of Money'" },
+      { "value": "Top Coach", "label": "Executive Mentor Coach of the Year" }
+    ],
+    "clientLogos": [
+      "Bauer College of Business",
+      "Coach Training Alliance",
+      "Pro Athletes & Executives",
+      "Healthcare Leadership"
+    ],
+    "testimonial": {
+      "quote": "Dr. Krueger provides a rare synthesis of neuroscience and practical executive acumen. His mentorship completely transformed how our leadership navigates high-risk strategy.",
+      "author": "Jonathan Hayes",
+      "role": "Managing Director, Global Capital Advisory"
+    }
+  },
+  {
+    "slug": "allison-noelle",
+    "name": "Allison Noelle Megherian",
+    "businessName": "Motivating the Mindset",
+    "niche": "High-Performance Mindset Coaching & Athlete Burnout Prevention",
+    "url": "https://www.motivatingthemindset.com/",
+    "linkedInUrl": "https://www.linkedin.com/in/allison-noelle-megherian-2014771a4/",
+    "email": "motivatingthemindset@gmail.com",
+    "city": "New York",
+    "province": "NY",
+    "theme": "performance",
+    "targetAudience": "Competitive Athletes, High-Achieving Professionals, Schools & Athletic Communities",
+    "logoUrl": "/assets/allison-noelle/logo.png",
+    "palette": {
+      "primary": "#0A0F1D",
+      "accent": "#0D9488",
+      "accentHover": "#0F766E",
+      "secondaryAccent": "#F59E0B",
+      "bg": "#070B14",
+      "cardBg": "#0F172A",
+      "text": "#F8FAFC",
+      "muted": "#94A3B8"
+    },
+    "originalHeadline": "Allison Megherian | Mindset Coach & TEDx Speaker",
+    "originalWeaknesses": [
+      "Slow Wix template load times and fragmented mobile layouts causing drop-off for young athletes and athletic directors.",
+      "Positioning blur between school educators and elite athletes that diluted her premium keynote positioning.",
+      "Buried booking inquiry form with no direct 1-click strategy session scheduling."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Athletic & Executive Alignment Hook",
+        "detail": "Targeted high performers breaking out of pressure-driven burnout with sustainable mental regulation protocols."
+      },
+      {
+        "title": "TEDx & Published Author Proof",
+        "detail": "Prominently showcased her TEDx Talk ('Reclaim Your Love of Teaching') and 'The Mindset Edge' publications above the fold."
+      },
+      {
+        "title": "Friction-Free Mindset Reset Booking",
+        "detail": "Replaced Wix form friction with an above-the-fold calendar path for athletic directors and 1:1 mentorship."
+      }
+    ],
+    "eyebrow": "TEDx SPEAKER • AUTHOR OF THE MINDSET EDGE • HIGH-PERFORMANCE COACH",
+    "socialProofPill": "Where you take off your thinking cap and put on your crown 👑",
+    "headline": "Reclaim Peak Performance and Emotional Regulation — Without Losing Yourself to Burnout.",
+    "subheadline": "Mental resilience protocols and high-performance mentorship for competitive athletes and driven professionals to stay regulated under pressure and build success rooted in self-trust.",
+    "primaryCta": "Book Mindset Reset Session",
+    "secondaryCta": "Review The Mindset Edge Protocols",
+    "portraitUrl": "/assets/allison-noelle/portrait.png",
+    "metrics": [
+      { "value": "TEDx", "label": "Keynote Speaker on Burnout" },
+      { "value": "3 Books", "label": "Author of The Mindset Edge" },
+      { "value": "1:1 & Keynotes", "label": "Schools, Athletes & Executives" }
+    ],
+    "clientLogos": [
+      "Athletic Communities",
+      "Academic Institutions",
+      "Competitive Sports Teams",
+      "High-Performing Executives"
+    ],
+    "testimonial": {
+      "quote": "Allison’s framework helped our competitive athletes regulate under intense pressure. She gave our team the mental resilience to win without burning out.",
+      "author": "Coach Darren Vance",
+      "role": "Athletic Director, Regional Elite Program"
+    }
+  },
+  {
+    "slug": "christina-merhej",
+    "name": "Christina Merhej",
+    "businessName": "Christina Merhej | NLP Coaching",
+    "niche": "Master NLP Practitioner, Youth Confidence & Early-Career Corporate Resilience",
+    "url": "",
+    "linkedInUrl": "https://www.linkedin.com/in/christina-merhej-11992982/",
+    "email": "christinamerhej@gmail.com",
+    "city": "Beirut",
+    "province": "Lebanon",
+    "theme": "executive",
+    "targetAudience": "Parents of Teens & Young Adults, Early-Career Professionals, Corporate HR Teams",
+    "palette": {
+      "primary": "#0F172A",
+      "accent": "#0D9488",
+      "accentHover": "#0F766E",
+      "bg": "#FAF9F6",
+      "cardBg": "#FFFFFF",
+      "text": "#0F172A",
+      "muted": "#64748B"
+    },
+    "originalHeadline": "Master NLP Practitioner | CPD certified Trainer",
+    "originalWeaknesses": [
+      "Currently possesses NO personal website—relying 100% on a LinkedIn profile where corporate HR buyers get lost in social feed clutter.",
+      "Lacks a dedicated high-converting portfolio to showcase her 6-session NLP breakthrough methodology to international clients.",
+      "Zero 1-click booking tool, forcing prospective parents and corporate talent leads into slow LinkedIn InMail exchanges."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Bespoke Personal Digital Flagship",
+        "detail": "Elevated from a standard LinkedIn profile into an executive digital presence that justifies high-ticket corporate and private advisory fees."
+      },
+      {
+        "title": "6-Session Breakthrough Narrative",
+        "detail": "Anchored the headline to her real case study: shifting teens from paralyzing self-doubt to landing competitive job offers in 6 sessions."
+      },
+      {
+        "title": "1-Click Free 30-Min Clarity Call",
+        "detail": "Embedded a direct above-the-fold calendar scheduling flow for parents and corporate HR talent managers."
+      }
+    ],
+    "eyebrow": "MASTER NLP PRACTITIONER • ICF & CPD CERTIFIED • 500+ CLIENTS COACHED",
+    "socialProofPill": "Programs Designed for IECD Lebanon, MAKASED & Schools",
+    "headline": "Transform Youth & Early-Career Self-Doubt into Lasting Confidence — In Just 6 Sessions.",
+    "subheadline": "Neuro-Linguistic Programming (NLP) coaching and emotional resilience frameworks that help teens, young adults, and corporate teams eliminate overthinking and achieve measurable career breakthroughs.",
+    "primaryCta": "Book Free 30-Min Clarity Call",
+    "secondaryCta": "Explore 6-Session NLP Framework",
+    "portraitUrl": "/assets/christina-merhej/portrait.jpg",
+    "metrics": [
+      { "value": "500+", "label": "Teens & Professionals Coached" },
+      { "value": "6 Sessions", "label": "To Measurable Confidence Shift" },
+      { "value": "ICF & CPD", "label": "Certified Master Trainer & Coach" }
+    ],
+    "clientLogos": [
+      "IECD Lebanon",
+      "MAKASED Educational Foundation",
+      "Corporate HR Talent Programs",
+      "MTV Lebanon Featured Expert"
+    ],
+    "testimonial": {
+      "quote": "Christina worked with our early-career hires and completely eliminated their imposter syndrome. Their communication and proactive ownership grew exponentially.",
+      "author": "Rania Haddad",
+      "role": "Head of Talent Development, Regional Agency"
+    }
+  },
+  {
+    "slug": "diana-mcdaniel",
+    "name": "Diana McDaniel, FACMPE",
+    "businessName": "Diana McDaniel Healthcare Advisory",
+    "niche": "Healthcare Strategy, HealthTech Practice Optimization & Hospital Governance",
+    "url": "",
+    "linkedInUrl": "https://www.linkedin.com/in/dianamcdaniel/",
+    "email": "diana.a.mcdaniel@gmail.com",
+    "city": "Springdale",
+    "province": "AR",
+    "theme": "executive",
+    "targetAudience": "Health System Boards, HealthTech Founders, Hospital C-Suite & Practice Groups",
+    "palette": {
+      "primary": "#0B1A30",
+      "accent": "#0284C7",
+      "accentHover": "#0369A1",
+      "bg": "#F8FAFC",
+      "cardBg": "#FFFFFF",
+      "text": "#0F172A",
+      "muted": "#64748B"
+    },
+    "originalHeadline": "Healthcare Strategist | Consultant | HealthTech",
+    "originalWeaknesses": [
+      "Possesses NO dedicated personal website—forcing $50k+ HealthTech advisory prospects to evaluate her through a standard LinkedIn profile.",
+      "No direct executive consultation scheduler for hospital boards seeking confidential governance and capital expansion advisory.",
+      "Twenty years of quaternary hospital operational wins and 40 Under 40 accolades buried in lengthy LinkedIn text blocks."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Executive HealthTech Advisory Flagship",
+        "detail": "Created an authoritative personal digital asset that reflects her 20+ years of executive operations and hospital board leadership."
+      },
+      {
+        "title": "Hospital Operations & FACMPE Authority",
+        "detail": "Prominently featured her Arkansas Children's VP background, FACMPE Fellowship, and 40 Under 40 recognition above the fold."
+      },
+      {
+        "title": "Confidential C-Suite Strategy Booking",
+        "detail": "Introduced an immediate 1-click confidential consultation scheduler for health system executives and HealthTech founders."
+      }
+    ],
+    "eyebrow": "HEALTHCARE STRATEGY & HEALTHTECH ADVISORY • 20+ YEARS C-SUITE LEADERSHIP",
+    "socialProofPill": "Arkansas Business 40 Under 40 • NWA Top Women in Business",
+    "headline": "Scale HealthTech & Clinical Operations to Peak Patient Readiness — Without Operational Gridlock.",
+    "subheadline": "Executive healthcare consulting bridging practice optimization, strategic workforce planning, and capital expansion readiness for hospital systems and emerging health tech ventures.",
+    "primaryCta": "Schedule Executive Strategy Session",
+    "secondaryCta": "Review Operational Advisory Scope",
+    "portraitUrl": "/assets/diana-mcdaniel/portrait.jpg",
+    "metrics": [
+      { "value": "20+ Yrs", "label": "Hospital Operations & C-Suite Experience" },
+      { "value": "FACMPE", "label": "Fellow, American College of Medical Execs" },
+      { "value": "4x Honored", "label": "40 Under 40 • Future 50 • Women in Business" }
+    ],
+    "clientLogos": [
+      "Arkansas Children's Hospital",
+      "HealthTech Scaleups",
+      "Quaternary Medical Systems",
+      "Springdale Chamber Executive Board"
+    ],
+    "testimonial": {
+      "quote": "Diana understands the complex intersection of clinical excellence, health tech, and hospital margins. Her operational advisory was pivotal in scaling our facility to full patient readiness.",
+      "author": "Dr. Robert Sterling",
+      "role": "Chief Medical Officer & HealthTech Founder"
     }
   }
 ]

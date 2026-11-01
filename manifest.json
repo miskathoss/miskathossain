@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-01T15:11:38.012Z",
-  "totalLeads": 4,
+  "generatedAt": "2026-11-01T15:45:30.807Z",
+  "totalLeads": 9,
   "previews": [
     {
       "slug": "sarah-jenkins",
@@ -49,6 +49,66 @@
       "publicPreviewsPath": "public/previews/ally-karasik/index.html",
       "liveUrl": "https://miskathossain.net/preview/ally-karasik",
       "alternativeUrl": "https://miskathossain.net/previews/ally-karasik"
+    },
+    {
+      "slug": "curtis-hill",
+      "name": "Curtis Hill",
+      "businessName": "Culture of Belonging®",
+      "niche": "Workplace Belonging & Human-Centered Leadership Keynotes",
+      "theme": "executive",
+      "rootPath": "previews/curtis-hill/index.html",
+      "publicPreviewPath": "public/preview/curtis-hill/index.html",
+      "publicPreviewsPath": "public/previews/curtis-hill/index.html",
+      "liveUrl": "https://miskathossain.net/preview/curtis-hill",
+      "alternativeUrl": "https://miskathossain.net/previews/curtis-hill"
+    },
+    {
+      "slug": "david-krueger",
+      "name": "David Krueger, M.D.",
+      "businessName": "MentorPath® & NeuroMentor® Institute",
+      "niche": "Executive Mentor Coaching & Neuroscience of Success",
+      "theme": "performance",
+      "rootPath": "previews/david-krueger/index.html",
+      "publicPreviewPath": "public/preview/david-krueger/index.html",
+      "publicPreviewsPath": "public/previews/david-krueger/index.html",
+      "liveUrl": "https://miskathossain.net/preview/david-krueger",
+      "alternativeUrl": "https://miskathossain.net/previews/david-krueger"
+    },
+    {
+      "slug": "allison-noelle",
+      "name": "Allison Noelle Megherian",
+      "businessName": "Motivating the Mindset",
+      "niche": "High-Performance Mindset Coaching & Athlete Burnout Prevention",
+      "theme": "performance",
+      "rootPath": "previews/allison-noelle/index.html",
+      "publicPreviewPath": "public/preview/allison-noelle/index.html",
+      "publicPreviewsPath": "public/previews/allison-noelle/index.html",
+      "liveUrl": "https://miskathossain.net/preview/allison-noelle",
+      "alternativeUrl": "https://miskathossain.net/previews/allison-noelle"
+    },
+    {
+      "slug": "christina-merhej",
+      "name": "Christina Merhej",
+      "businessName": "Christina Merhej | NLP Coaching",
+      "niche": "Master NLP Practitioner, Youth Confidence & Early-Career Corporate Resilience",
+      "theme": "executive",
+      "rootPath": "previews/christina-merhej/index.html",
+      "publicPreviewPath": "public/preview/christina-merhej/index.html",
+      "publicPreviewsPath": "public/previews/christina-merhej/index.html",
+      "liveUrl": "https://miskathossain.net/preview/christina-merhej",
+      "alternativeUrl": "https://miskathossain.net/previews/christina-merhej"
+    },
+    {
+      "slug": "diana-mcdaniel",
+      "name": "Diana McDaniel, FACMPE",
+      "businessName": "Diana McDaniel Healthcare Advisory",
+      "niche": "Healthcare Strategy, HealthTech Practice Optimization & Hospital Governance",
+      "theme": "executive",
+      "rootPath": "previews/diana-mcdaniel/index.html",
+      "publicPreviewPath": "public/preview/diana-mcdaniel/index.html",
+      "publicPreviewsPath": "public/previews/diana-mcdaniel/index.html",
+      "liveUrl": "https://miskathossain.net/preview/diana-mcdaniel",
+      "alternativeUrl": "https://miskathossain.net/previews/diana-mcdaniel"
     }
   ]
 }
