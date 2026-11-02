@@ -1,57 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
   <title>Motivating the Mindset | High-Performance Mindset Coaching &amp; Athlete Burnout Prevention</title>
   
+  <!-- Typography: Playfair Display + Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Inter"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           },
           colors: {
-            carbon: '#070B14',
-            deepSage: '#0A1F17',
-            electricSage: '#0D9488',
-            limeBio: '#4ADE80',
+            brand: {
+              navy: '#335152',
+              slate: '#1E293B',
+              gold: '#C59B27',
+              goldDark: '#A8811A',
+              champagne: '#F4EFEA',
+              cream: '#FBF9F4',
+            }
           }
         }
       }
     }
   </script>
   
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <style>
     body {
-      background-color: #070B14;
-      color: #F3F4F6;
-      font-family: 'Inter', sans-serif;
+      background-color: #FBF9F4;
+      color: #0B132B;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       -webkit-font-smoothing: antialiased;
     }
-    .bio-glow {
-      box-shadow: 0 0 35px -8px rgba(34, 197, 94, 0.25);
+    .serif-title {
+      font-family: 'Playfair Display', Georgia, serif;
     }
-    .carbon-card {
-      background: radial-gradient(120% 120% at 50% 0%, #0D261E 0%, #05140F 100%);
-      border: 1px solid rgba(34, 197, 94, 0.2);
+    .gold-glow {
+      box-shadow: 0 10px 30px -10px rgba(197, 168, 128, 0.35);
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-electricSage/20 selection:text-limeBio">
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-gold/20 selection:text-brand-navy">
 
-  <header class="w-full border-b border-emerald-950/60 bg-carbon/80 backdrop-blur-md sticky top-0 z-40">
+  <!-- Executive Header Navigation -->
+  <header class="w-full border-b border-brand-navy/5 bg-brand-cream/80 backdrop-blur-md sticky top-0 z-40 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3">
         
@@ -59,137 +65,126 @@
         
       </div>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
-        <a href="#protocol" class="hover:text-emerald-400 transition-colors">Protocol</a>
-        <a href="#biomarkers" class="hover:text-emerald-400 transition-colors">Biomarkers</a>
-        <a href="#outcomes" class="hover:text-emerald-400 transition-colors">Outcomes</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-slate/80">
+        <a href="#overview" class="hover:text-brand-navy transition-colors">Overview</a>
+        <a href="#framework" class="hover:text-brand-navy transition-colors">Framework</a>
+        <a href="#outcomes" class="hover:text-brand-navy transition-colors">Client Outcomes</a>
         
-          <a href="https://www.linkedin.com/in/allison-noelle-megherian-2014771a4/" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 flex items-center gap-1.5 transition-colors">
+          <a href="https://www.linkedin.com/in/allison-noelle-megherian-2014771a4/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-navy flex items-center gap-1.5 text-brand-slate transition-colors">
             <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-            <span>LinkedIn</span>
+            <span>LinkedIn Profile</span>
           </a>
         
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="#diagnostic" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider bg-electricSage hover:bg-emerald-500 text-carbon font-mono px-4 py-2.5 rounded-lg transition-all shadow-md active:scale-[0.98]">
-          <span>Diagnostic Call</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        <a href="#book" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider bg-brand-navy text-white hover:bg-brand-slate px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm active:scale-[0.98]">
+          <span>Advisory Inquiry</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-gold"></i>
         </a>
       </div>
     </div>
   </header>
 
+  <!-- Hero Section -->
   <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-12 lg:py-20">
-    <div class="absolute top-10 left-1/3 w-96 h-96 bg-electricSage/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-brand-navy/5 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
+        <!-- Left: Copy -->
         <div class="lg:col-span-7 flex flex-col items-start text-left">
           
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-deepSage/80 border border-electricSage/30 text-xs font-mono text-zinc-300 mb-6">
-            <span class="w-2 h-2 rounded-full bg-electricSage animate-ping"></span>
-            <span class="text-electricSage font-bold uppercase tracking-wider">TEDx SPEAKER • AUTHOR OF THE MINDSET EDGE • HIGH-PERFORMANCE COACH</span>
-            <span class="text-zinc-600">|</span>
-            <span class="text-zinc-400">Where you take off your thinking cap and put on your crown 👑</span>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-champagne border border-brand-gold/30 text-xs font-semibold text-brand-navy tracking-wide mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+            <span class="uppercase tracking-widest text-[11px]">TEDx SPEAKER • AUTHOR OF THE MINDSET EDGE • HIGH-PERFORMANCE COACH</span>
+            <span class="text-brand-navy/30">|</span>
+            <span class="text-brand-slate/80 font-normal">Where you take off your thinking cap and put on your crown 👑</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-extrabold tracking-tight text-white leading-[1.14] mb-6">
-            Reclaim Peak Performance and Emotional Regulation — Without Losing Yourself to Burnout.
+          <h1 class="serif-title text-4xl sm:text-5xl lg:text-[54px] font-semibold tracking-tight text-brand-navy leading-[1.15] mb-6">
+            Stop the Spiral. Regulate Pressure. Perform with Confidence.
           </h1>
 
-          <p class="text-base sm:text-lg text-zinc-300 leading-relaxed max-w-2xl font-normal mb-8">
-            Mental resilience protocols and high-performance mentorship for competitive athletes and driven professionals to stay regulated under pressure and build success rooted in self-trust.
+          <p class="text-base sm:text-lg text-brand-slate/80 leading-relaxed max-w-2xl font-normal mb-8">
+            Mindset coaching, workshops, and speaking for driven professionals, competitive athletes, and teams. Reclaim your identity outside of achievement and build sustainable peak performance without burnout.
           </p>
 
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#diagnostic" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-electricSage hover:bg-emerald-500 text-carbon font-mono text-sm font-bold tracking-wide transition-all duration-150 bio-glow active:scale-[0.98]">
-              <i data-lucide="brain-circuit" class="w-4 h-4 text-carbon"></i>
+            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-brand-navy text-white hover:bg-brand-slate text-sm font-semibold tracking-wide transition-all duration-150 shadow-md gold-glow active:scale-[0.98]">
+              <i data-lucide="calendar" class="w-4 h-4 text-brand-gold"></i>
               <span>Book Mindset Reset Session</span>
             </a>
             
-            <a href="#protocol" class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-deepSage/90 hover:bg-emerald-950 text-zinc-200 border border-electricSage/30 text-sm font-semibold tracking-wide transition-all duration-150 shadow-sm active:scale-[0.98]">
-              <i data-lucide="shield" class="w-4 h-4 text-emerald-400"></i>
+            <a href="#framework" class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-white hover:bg-brand-champagne/60 text-brand-navy border border-brand-navy/15 text-sm font-semibold tracking-wide transition-all duration-150 shadow-sm active:scale-[0.98]">
+              <i data-lucide="file-text" class="w-4 h-4 text-brand-slate/60"></i>
               <span>Review The Mindset Edge Protocols</span>
             </a>
           </div>
 
-          <div class="w-full pt-8 border-t border-emerald-950 grid grid-cols-3 gap-4 sm:gap-8">
+          <div class="w-full pt-8 border-t border-brand-navy/10 grid grid-cols-3 gap-4 sm:gap-8">
             
               <div>
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">TEDx</div>
-                <div class="text-xs text-zinc-400 font-medium tracking-tight mt-0.5">Keynote Speaker on Burnout</div>
+                <div class="serif-title text-2xl sm:text-3xl font-bold text-brand-navy">TEDx</div>
+                <div class="text-xs text-brand-slate/70 font-medium tracking-tight mt-0.5">Keynote Speaker on Burnout</div>
               </div>
             
               <div>
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">3 Books</div>
-                <div class="text-xs text-zinc-400 font-medium tracking-tight mt-0.5">Author of The Mindset Edge</div>
+                <div class="serif-title text-2xl sm:text-3xl font-bold text-brand-navy">3 Books</div>
+                <div class="text-xs text-brand-slate/70 font-medium tracking-tight mt-0.5">Author of The Mindset Edge</div>
               </div>
             
               <div>
-                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">1:1 &amp; Keynotes</div>
-                <div class="text-xs text-zinc-400 font-medium tracking-tight mt-0.5">Schools, Athletes &amp; Executives</div>
+                <div class="serif-title text-2xl sm:text-3xl font-bold text-brand-navy">1:1 &amp; Keynotes</div>
+                <div class="text-xs text-brand-slate/70 font-medium tracking-tight mt-0.5">Schools, Athletes &amp; Executives</div>
               </div>
             
           </div>
 
         </div>
 
+        <!-- Right: Visual Card -->
         <div class="lg:col-span-5 relative">
           <div class="relative mx-auto max-w-md lg:max-w-none">
-            
-            <div class="carbon-card rounded-2xl p-6 shadow-2xl relative overflow-hidden">
-              <div class="flex items-center justify-between pb-4 border-b border-electricSage/20 mb-5">
-                <div class="flex items-center gap-2">
-                  <div class="w-2.5 h-2.5 rounded-full bg-electricSage animate-pulse"></div>
-                  <span class="text-xs font-mono text-emerald-300 font-semibold uppercase tracking-wider">NEUROLOGICAL PROTOCOL MONITOR</span>
-                </div>
-                <span class="text-[11px] font-mono text-zinc-400">V4.8 QUANTIFIED</span>
-              </div>
+            <div class="absolute -inset-3 bg-gradient-to-tr from-brand-gold/30 via-transparent to-brand-navy/10 rounded-3xl blur-lg"></div>
 
-              <div class="space-y-3.5 mb-5">
-                <div class="bg-carbon/80 p-3.5 rounded-xl border border-emerald-900/40 flex items-center justify-between">
-                  <div class="flex items-center gap-3">
-                    <div class="p-2 rounded-lg bg-emerald-950 text-electricSage">
-                      <i data-lucide="clock" class="w-4 h-4"></i>
-                    </div>
-                    <div>
-                      <div class="text-xs text-zinc-400 font-mono">RECLAIMED HIGH-LEVERAGE TIME</div>
-                      <div class="text-lg font-bold text-white font-mono">+8.2 Hours / Week</div>
-                    </div>
-                  </div>
-                  <span class="text-xs font-mono text-electricSage font-bold">100% RECOVERED</span>
-                </div>
-
-                <div class="bg-carbon/80 p-3.5 rounded-xl border border-emerald-900/40 flex items-center justify-between">
-                  <div class="flex items-center gap-3">
-                    <div class="p-2 rounded-lg bg-emerald-950 text-electricSage">
-                      <i data-lucide="zap" class="w-4 h-4"></i>
-                    </div>
-                    <div>
-                      <div class="text-xs text-zinc-400 font-mono">FLOW STATE DURATION</div>
-                      <div class="text-lg font-bold text-white font-mono">4.2x Continuous Focus</div>
-                    </div>
-                  </div>
-                  <span class="text-xs font-mono text-electricSage font-bold">ZERO FOG</span>
+            <div class="relative bg-white p-3 rounded-2xl shadow-xl border border-brand-gold/20 overflow-hidden">
+              <div class="aspect-[4/5] rounded-xl overflow-hidden bg-brand-navy/5 relative">
+                <img 
+                  src="/assets/allison-noelle/portrait.jpg" 
+                  alt="Allison Noelle Megherian" 
+                  class="w-full h-full object-cover object-top filter contrast-[1.03]"
+                  loading="eager"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-white">
+                  <div class="text-xs uppercase tracking-widest text-brand-gold font-semibold">High-Performance Mindset Coaching &amp; Athlete Burnout Prevention</div>
+                  <div class="serif-title text-lg font-semibold">Allison Noelle Megherian</div>
+                  <div class="text-xs text-zinc-300 font-light mt-0.5">Motivating the Mindset</div>
                 </div>
               </div>
+            </div>
 
-              <div class="bg-carbon/90 rounded-xl p-4 border border-emerald-900/60">
-                <div class="flex items-center gap-1 text-electricSage mb-2">
-                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
-                  <span class="text-[11px] font-mono uppercase tracking-wider text-emerald-300">Verified Client Review</span>
-                </div>
-                <p class="text-xs text-zinc-300 italic leading-relaxed mb-3">
-                  "Allison’s framework helped our competitive athletes regulate under intense pressure. She gave our team the mental resilience to win without burning out."
-                </p>
-                <div class="flex items-center justify-between pt-2 border-t border-emerald-950 text-[11px] font-mono">
-                  <span class="font-bold text-white">Coach Darren Vance</span>
-                  <span class="text-zinc-400">Athletic Director, Regional Elite Program</span>
-                </div>
+            <div class="absolute -bottom-6 -left-6 sm:-left-8 max-w-xs bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-xl border border-brand-gold/30 hidden sm:block">
+              <div class="flex items-center gap-1 text-amber-500 mb-1.5">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
               </div>
-
+              <p class="text-xs text-brand-slate italic leading-snug">
+                "Allison’s framework helped our competitive athletes regulate under intense pressure. She gave our team the mental resilience to win without burning out."
+              </p>
+              <div class="mt-2 pt-2 border-t border-brand-navy/5 flex items-center justify-between">
+                <div>
+                  <div class="text-[11px] font-bold text-brand-navy">Coach Darren Vance</div>
+                  <div class="text-[10px] text-brand-slate/60">Athletic Director, Regional Elite Program</div>
+                </div>
+                <i data-lucide="shield-check" class="w-4 h-4 text-brand-gold"></i>
+              </div>
             </div>
 
           </div>
@@ -198,32 +193,33 @@
       </div>
     </div>
 
-    <div class="w-full mt-16 lg:mt-24 border-y border-emerald-950/80 bg-carbon/90 py-6">
+    <!-- Client Institutional Ecosystem Banner -->
+    <div class="w-full mt-16 lg:mt-24 border-y border-brand-navy/5 bg-brand-champagne/30 py-6">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500">
-            Protocols Implemented Across Elite Engineering Teams
+          <span class="text-xs font-semibold uppercase tracking-widest text-brand-slate/60">
+            Advising Leaders Across Major Organizations
           </span>
-          <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-mono text-zinc-400">
+          <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-semibold tracking-wider text-brand-slate/80 uppercase">
             
               <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-electricSage"></i>
-                <span class="text-zinc-300">Athletic Communities</span>
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
+                <span>Athletic Communities</span>
               </div>
             
               <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-electricSage"></i>
-                <span class="text-zinc-300">Academic Institutions</span>
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
+                <span>Academic Institutions</span>
               </div>
             
               <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-electricSage"></i>
-                <span class="text-zinc-300">Competitive Sports Teams</span>
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
+                <span>Competitive Sports Teams</span>
               </div>
             
               <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-electricSage"></i>
-                <span class="text-zinc-300">High-Performing Executives</span>
+                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
+                <span>High-Performing Executives</span>
               </div>
             
           </div>
@@ -232,9 +228,10 @@
     </div>
   </main>
 
-  <footer class="w-full py-8 border-t border-emerald-950 text-center text-xs text-zinc-600 font-mono">
+  <!-- Interactive Footer Anchor -->
+  <footer class="w-full py-8 border-t border-brand-navy/5 text-center text-xs text-brand-slate/50">
     <div class="max-w-7xl mx-auto px-4">
-      &copy; 2026 Motivating the Mindset. Neuro-Operating Systems for High-Impact Founders.
+      &copy; 2026 Motivating the Mindset. All Rights Reserved. Private & Confidential.
     </div>
   </footer>
 

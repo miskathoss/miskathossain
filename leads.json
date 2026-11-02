@@ -45,9 +45,18 @@
     "secondaryCta": "Review Board Readiness Framework",
     "portraitUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=85",
     "metrics": [
-      { "value": "$1.2B+", "label": "Enterprise Value Advised" },
-      { "value": "140+", "label": "Board Appointments Guided" },
-      { "value": "98%", "label": "Client Retention & Referral" }
+      {
+        "value": "$1.2B+",
+        "label": "Enterprise Value Advised"
+      },
+      {
+        "value": "140+",
+        "label": "Board Appointments Guided"
+      },
+      {
+        "value": "98%",
+        "label": "Client Retention & Referral"
+      }
     ],
     "clientLogos": [
       "Enterprise Banking",
@@ -108,9 +117,18 @@
     "secondaryCta": "View 12-Month ARR Benchmarks",
     "portraitUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85",
     "metrics": [
-      { "value": "$180M+", "label": "Net ARR Added for Clients" },
-      { "value": "42 Days", "label": "Average Sales Cycle (down from 89)" },
-      { "value": "3.8x", "label": "Average Pipeline Velocity" }
+      {
+        "value": "$180M+",
+        "label": "Net ARR Added for Clients"
+      },
+      {
+        "value": "42 Days",
+        "label": "Average Sales Cycle (down from 89)"
+      },
+      {
+        "value": "3.8x",
+        "label": "Average Pipeline Velocity"
+      }
     ],
     "clientLogos": [
       "CloudGrid AI",
@@ -172,9 +190,18 @@
     "secondaryCta": "Review 3-Pillar Neuro Protocol",
     "portraitUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=85",
     "metrics": [
-      { "value": "8.2 hrs", "label": "Avg Weekly Time Reclaimed" },
-      { "value": "4.2x", "label": "Deep Work Flow Velocity" },
-      { "value": "0%", "label": "Client Burnout Rate Across 3 Yrs" }
+      {
+        "value": "8.2 hrs",
+        "label": "Avg Weekly Time Reclaimed"
+      },
+      {
+        "value": "4.2x",
+        "label": "Deep Work Flow Velocity"
+      },
+      {
+        "value": "0%",
+        "label": "Client Burnout Rate Across 3 Yrs"
+      }
     ],
     "clientLogos": [
       "Y Combinator Founders",
@@ -237,9 +264,18 @@
     "secondaryCta": "Explore Curriculum Frameworks",
     "portraitUrl": "/assets/ally-karasik/ally-portrait.jpg",
     "metrics": [
-      { "value": "+45%", "label": "Program Enrollment Surge" },
-      { "value": "100%", "label": "Platform User Adoption" },
-      { "value": "+25%", "label": "Learner Performance Boost" }
+      {
+        "value": "+45%",
+        "label": "Program Enrollment Surge"
+      },
+      {
+        "value": "100%",
+        "label": "Platform User Adoption"
+      },
+      {
+        "value": "+25%",
+        "label": "Learner Performance Boost"
+      }
     ],
     "clientLogos": [
       "Enterprise Onboarding",
@@ -303,9 +339,18 @@
     "secondaryCta": "Explore Keynotes & Leadership Labs",
     "portraitUrl": "/assets/curtis-hill/portrait.png",
     "metrics": [
-      { "value": "42% → 81%", "label": "Proven Proficiency Shift" },
-      { "value": "6 Months", "label": "To Cut Regrettable Turnover" },
-      { "value": "90 Days", "label": "Manager Behavior Shift in Labs" }
+      {
+        "value": "42% → 81%",
+        "label": "Proven Proficiency Shift"
+      },
+      {
+        "value": "6 Months",
+        "label": "To Cut Regrettable Turnover"
+      },
+      {
+        "value": "90 Days",
+        "label": "Manager Behavior Shift in Labs"
+      }
     ],
     "clientLogos": [
       "Fortune 500 Enterprises",
@@ -370,9 +415,18 @@
     "secondaryCta": "Explore The New Money Story®",
     "portraitUrl": "/assets/david-krueger/portrait.jpg",
     "metrics": [
-      { "value": "24 Books", "label": "Trade Books & 75 Scientific Papers" },
-      { "value": "10 Languages", "label": "Bestseller 'Secret Language of Money'" },
-      { "value": "Top Coach", "label": "Executive Mentor Coach of the Year" }
+      {
+        "value": "24 Books",
+        "label": "Trade Books & 75 Scientific Papers"
+      },
+      {
+        "value": "10 Languages",
+        "label": "Bestseller 'Secret Language of Money'"
+      },
+      {
+        "value": "Top Coach",
+        "label": "Executive Mentor Coach of the Year"
+      }
     ],
     "clientLogos": [
       "Bauer College of Business",
@@ -396,18 +450,17 @@
     "email": "motivatingthemindset@gmail.com",
     "city": "New York",
     "province": "NY",
-    "theme": "performance",
+    "theme": "executive",
     "targetAudience": "Competitive Athletes, High-Achieving Professionals, Schools & Athletic Communities",
     "logoUrl": "/assets/allison-noelle/logo.png",
     "palette": {
-      "primary": "#0A0F1D",
-      "accent": "#0D9488",
-      "accentHover": "#0F766E",
-      "secondaryAccent": "#F59E0B",
-      "bg": "#070B14",
-      "cardBg": "#0F172A",
-      "text": "#F8FAFC",
-      "muted": "#94A3B8"
+      "primary": "#335152",
+      "accent": "#C59B27",
+      "accentHover": "#A8811A",
+      "bg": "#FBF9F4",
+      "cardBg": "#FFFFFF",
+      "text": "#1F3334",
+      "muted": "#5B7172"
     },
     "originalHeadline": "Allison Megherian | Mindset Coach & TEDx Speaker",
     "originalWeaknesses": [
@@ -431,15 +484,24 @@
     ],
     "eyebrow": "TEDx SPEAKER • AUTHOR OF THE MINDSET EDGE • HIGH-PERFORMANCE COACH",
     "socialProofPill": "Where you take off your thinking cap and put on your crown 👑",
-    "headline": "Reclaim Peak Performance and Emotional Regulation — Without Losing Yourself to Burnout.",
-    "subheadline": "Mental resilience protocols and high-performance mentorship for competitive athletes and driven professionals to stay regulated under pressure and build success rooted in self-trust.",
+    "headline": "Stop the Spiral. Regulate Pressure. Perform with Confidence.",
+    "subheadline": "Mindset coaching, workshops, and speaking for driven professionals, competitive athletes, and teams. Reclaim your identity outside of achievement and build sustainable peak performance without burnout.",
     "primaryCta": "Book Mindset Reset Session",
     "secondaryCta": "Review The Mindset Edge Protocols",
-    "portraitUrl": "/assets/allison-noelle/portrait.png",
+    "portraitUrl": "/assets/allison-noelle/portrait.jpg",
     "metrics": [
-      { "value": "TEDx", "label": "Keynote Speaker on Burnout" },
-      { "value": "3 Books", "label": "Author of The Mindset Edge" },
-      { "value": "1:1 & Keynotes", "label": "Schools, Athletes & Executives" }
+      {
+        "value": "TEDx",
+        "label": "Keynote Speaker on Burnout"
+      },
+      {
+        "value": "3 Books",
+        "label": "Author of The Mindset Edge"
+      },
+      {
+        "value": "1:1 & Keynotes",
+        "label": "Schools, Athletes & Executives"
+      }
     ],
     "clientLogos": [
       "Athletic Communities",
@@ -502,9 +564,18 @@
     "secondaryCta": "Explore 6-Session NLP Framework",
     "portraitUrl": "/assets/christina-merhej/portrait.jpg",
     "metrics": [
-      { "value": "500+", "label": "Teens & Professionals Coached" },
-      { "value": "6 Sessions", "label": "To Measurable Confidence Shift" },
-      { "value": "ICF & CPD", "label": "Certified Master Trainer & Coach" }
+      {
+        "value": "500+",
+        "label": "Teens & Professionals Coached"
+      },
+      {
+        "value": "6 Sessions",
+        "label": "To Measurable Confidence Shift"
+      },
+      {
+        "value": "ICF & CPD",
+        "label": "Certified Master Trainer & Coach"
+      }
     ],
     "clientLogos": [
       "IECD Lebanon",
@@ -567,9 +638,18 @@
     "secondaryCta": "Review Operational Advisory Scope",
     "portraitUrl": "/assets/diana-mcdaniel/portrait.jpg",
     "metrics": [
-      { "value": "20+ Yrs", "label": "Hospital Operations & C-Suite Experience" },
-      { "value": "FACMPE", "label": "Fellow, American College of Medical Execs" },
-      { "value": "4x Honored", "label": "40 Under 40 • Future 50 • Women in Business" }
+      {
+        "value": "20+ Yrs",
+        "label": "Hospital Operations & C-Suite Experience"
+      },
+      {
+        "value": "FACMPE",
+        "label": "Fellow, American College of Medical Execs"
+      },
+      {
+        "value": "4x Honored",
+        "label": "40 Under 40 • Future 50 • Women in Business"
+      }
     ],
     "clientLogos": [
       "Arkansas Children's Hospital",
@@ -581,6 +661,7 @@
       "quote": "Diana understands the complex intersection of clinical excellence, health tech, and hospital margins. Her operational advisory was pivotal in scaling our facility to full patient readiness.",
       "author": "Dr. Robert Sterling",
       "role": "Chief Medical Officer & HealthTech Founder"
-    }
+    },
+    "logoUrl": "/assets/diana-mcdaniel/logo.png"
   }
 ]
