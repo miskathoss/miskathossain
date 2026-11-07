@@ -4,73 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Diana McDaniel Healthcare Advisory | Healthcare Strategy, HealthTech Practice Optimization &amp; Hospital Governance</title>
+  <title>Diana McDaniel, FACMPE | Executive Healthcare Advisory & HealthTech Optimization</title>
   
-  <!-- Typography: Playfair Display + Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           },
           colors: {
-            brand: {
-              navy: '#0B1A30',
-              slate: '#1E293B',
-              gold: '#0284C7',
-              goldDark: '#0369A1',
-              champagne: '#F4EFEA',
-              cream: '#F8FAFC',
-            }
+            healthNavy: '#0B1A30',
+            healthTeal: '#0284C7',
+            healthTealDark: '#0369A1',
+            healthTealLight: '#E0F2FE',
+            healthCoral: '#E07A5F',
           }
         }
       }
     }
   </script>
-  
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <style>
     body {
-      background-color: #F8FAFC;
-      color: #0B132B;
+      background-color: #FFFFFF;
+      color: #0B1A30;
       font-family: 'Plus Jakarta Sans', sans-serif;
       -webkit-font-smoothing: antialiased;
     }
-    .serif-title {
-      font-family: 'Playfair Display', Georgia, serif;
-    }
-    .gold-glow {
-      box-shadow: 0 10px 30px -10px rgba(197, 168, 128, 0.35);
-    }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-brand-gold/20 selection:text-brand-navy">
+<body class="min-h-screen flex flex-col justify-between selection:bg-healthTeal/20 selection:text-healthNavy">
 
-  <!-- Executive Header Navigation -->
-  <header class="w-full border-b border-brand-navy/5 bg-brand-cream/80 backdrop-blur-md sticky top-0 z-40 transition-all">
+  <!-- Executive Header Nav with Authentic Prosper Med Logo -->
+  <header class="w-full border-b border-slate-100 bg-white/95 backdrop-blur-md sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        
-          <img src="/assets/diana-mcdaniel/logo.png" alt="Diana McDaniel Healthcare Advisory Logo" class="h-9 sm:h-10 w-auto max-w-[180px] object-contain">
-        
+        <img src="/assets/diana-mcdaniel/logo.png" alt="Prosper Med Logo" class="h-9 sm:h-10 w-auto max-w-[200px] object-contain">
+        <div class="hidden sm:block border-l border-slate-200 pl-3">
+          <span class="text-xs font-bold tracking-wider uppercase block text-healthNavy">DIANA MCDANIEL, FACMPE</span>
+          <span class="text-[11px] text-slate-500 font-medium">Healthcare Strategy & Advisory</span>
+        </div>
       </div>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-slate/80">
-        <a href="#overview" class="hover:text-brand-navy transition-colors">Overview</a>
-        <a href="#framework" class="hover:text-brand-navy transition-colors">Framework</a>
-        <a href="#outcomes" class="hover:text-brand-navy transition-colors">Client Outcomes</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#advisory" class="hover:text-healthNavy transition-colors">Executive Advisory</a>
+        <a href="#healthtech" class="hover:text-healthNavy transition-colors">HealthTech Readiness</a>
+        <a href="#governance" class="hover:text-healthNavy transition-colors">Hospital Governance</a>
         
-          <a href="https://www.linkedin.com/in/dianamcdaniel/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-navy flex items-center gap-1.5 text-brand-slate transition-colors">
+          <a href="https://www.linkedin.com/in/dianamcdaniel/" target="_blank" rel="noopener noreferrer" class="hover:text-healthNavy flex items-center gap-1.5 text-slate-700 transition-colors">
             <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
             <span>LinkedIn Profile</span>
           </a>
@@ -78,160 +66,128 @@
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="#book" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider bg-brand-navy text-white hover:bg-brand-slate px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm active:scale-[0.98]">
+        <a href="#book" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider bg-healthTeal hover:bg-healthTealDark text-white px-5 py-2.5 rounded-full transition-all duration-200 shadow-md active:scale-[0.98]">
           <span>Advisory Inquiry</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-gold"></i>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-12 lg:py-20">
-    <div class="absolute -top-32 -right-32 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-brand-navy/5 rounded-full blur-3xl pointer-events-none"></div>
-
+  <!-- Hero Section with Organic Sweeping Division (Reference 18.png RAM Methods) -->
+  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-12 lg:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
-        <!-- Left: Copy -->
+        <!-- Left: Authority Headline & Pitch -->
         <div class="lg:col-span-7 flex flex-col items-start text-left">
           
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-champagne border border-brand-gold/30 text-xs font-semibold text-brand-navy tracking-wide mb-6">
-            <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
-            <span class="uppercase tracking-widest text-[11px]">HEALTHCARE STRATEGY &amp; HEALTHTECH ADVISORY • 20+ YEARS C-SUITE LEADERSHIP</span>
-            <span class="text-brand-navy/30">|</span>
-            <span class="text-brand-slate/80 font-normal">Arkansas Business 40 Under 40 • NWA Top Women in Business</span>
+          <div class="mb-5">
+            <span class="text-xs uppercase tracking-[0.2em] font-extrabold text-healthTeal block">
+              HEALTHCARE STRATEGY &bull; HEALTHTECH ADVISORY &bull; 20+ YEARS C-SUITE LEADERSHIP
+            </span>
+            <div class="w-14 h-1 bg-healthTeal mt-2 rounded-full"></div>
           </div>
 
-          <h1 class="serif-title text-4xl sm:text-5xl lg:text-[54px] font-semibold tracking-tight text-brand-navy leading-[1.15] mb-6">
-            Scale HealthTech &amp; Clinical Operations to Peak Patient Readiness — Without Operational Gridlock.
+          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight text-healthNavy leading-[1.12] mb-6">
+            SCALE HEALTHTECH & CLINICAL OPERATIONS TO <span class="text-healthTeal">PEAK READINESS.</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-brand-slate/80 leading-relaxed max-w-2xl font-normal mb-8">
-            Executive healthcare consulting bridging practice optimization, strategic workforce planning, and capital expansion readiness for hospital systems and emerging health tech ventures.
-          </p>
+          <div class="flex items-start gap-4 mb-8">
+            <div class="w-12 h-12 rounded-full border-2 border-healthTeal/30 flex items-center justify-center shrink-0 text-healthTeal bg-healthTealLight/50">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+              Executive healthcare consulting bridging practice optimization, strategic workforce planning, and capital expansion readiness for hospital systems and emerging health tech ventures.
+            </p>
+          </div>
 
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-brand-navy text-white hover:bg-brand-slate text-sm font-semibold tracking-wide transition-all duration-150 shadow-md gold-glow active:scale-[0.98]">
-              <i data-lucide="calendar" class="w-4 h-4 text-brand-gold"></i>
-              <span>Schedule Executive Strategy Session</span>
+            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-healthTeal hover:bg-healthTealDark text-white text-sm font-bold tracking-wide transition-all shadow-lg shadow-sky-500/20 active:scale-[0.98]">
+              <span>WORK WITH DIANA</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
             
-            <a href="#framework" class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-white hover:bg-brand-champagne/60 text-brand-navy border border-brand-navy/15 text-sm font-semibold tracking-wide transition-all duration-150 shadow-sm active:scale-[0.98]">
-              <i data-lucide="file-text" class="w-4 h-4 text-brand-slate/60"></i>
-              <span>Review Operational Advisory Scope</span>
+            <a href="#case-studies" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white hover:bg-slate-50 text-healthNavy border-2 border-healthTeal/40 text-sm font-bold tracking-wide transition-all active:scale-[0.98]">
+              <i data-lucide="file-text" class="w-4 h-4 text-healthTeal"></i>
+              <span>REVIEW ADVISORY SCOPE</span>
             </a>
-          </div>
-
-          <div class="w-full pt-8 border-t border-brand-navy/10 grid grid-cols-3 gap-4 sm:gap-8">
-            
-              <div>
-                <div class="serif-title text-2xl sm:text-3xl font-bold text-brand-navy">20+ Yrs</div>
-                <div class="text-xs text-brand-slate/70 font-medium tracking-tight mt-0.5">Hospital Operations &amp; C-Suite Experience</div>
-              </div>
-            
-              <div>
-                <div class="serif-title text-2xl sm:text-3xl font-bold text-brand-navy">FACMPE</div>
-                <div class="text-xs text-brand-slate/70 font-medium tracking-tight mt-0.5">Fellow, American College of Medical Execs</div>
-              </div>
-            
-              <div>
-                <div class="serif-title text-2xl sm:text-3xl font-bold text-brand-navy">4x Honored</div>
-                <div class="text-xs text-brand-slate/70 font-medium tracking-tight mt-0.5">40 Under 40 • Future 50 • Women in Business</div>
-              </div>
-            
           </div>
 
         </div>
 
-        <!-- Right: Visual Card -->
+        <!-- Right: Full-Height Portrait with Organic Wave Backdrop (Reference 18.png) -->
         <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none">
-            <div class="absolute -inset-3 bg-gradient-to-tr from-brand-gold/30 via-transparent to-brand-navy/10 rounded-3xl blur-lg"></div>
+          <div class="relative mx-auto max-w-md lg:max-w-none flex justify-center lg:justify-end">
+            
+            <!-- Organic Radial Backdrop Wave -->
+            <div class="absolute -inset-4 bg-gradient-to-tr from-sky-100 via-sky-50 to-white rounded-[40px] blur-xl -z-10"></div>
 
-            <div class="relative bg-white p-3 rounded-2xl shadow-xl border border-brand-gold/20 overflow-hidden">
-              <div class="aspect-[4/5] rounded-xl overflow-hidden bg-brand-navy/5 relative">
-                <img 
-                  src="/assets/diana-mcdaniel/portrait.jpg" 
-                  alt="Diana McDaniel, FACMPE" 
-                  class="w-full h-full object-cover object-top filter contrast-[1.03]"
-                  loading="eager"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4 text-white">
-                  <div class="text-xs uppercase tracking-widest text-brand-gold font-semibold">Healthcare Strategy, HealthTech Practice Optimization &amp; Hospital Governance</div>
-                  <div class="serif-title text-lg font-semibold">Diana McDaniel, FACMPE</div>
-                  <div class="text-xs text-zinc-300 font-light mt-0.5">Diana McDaniel Healthcare Advisory</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="absolute -bottom-6 -left-6 sm:-left-8 max-w-xs bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-xl border border-brand-gold/30 hidden sm:block">
-              <div class="flex items-center gap-1 text-amber-500 mb-1.5">
-                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-              </div>
-              <p class="text-xs text-brand-slate italic leading-snug">
-                "Diana understands the complex intersection of clinical excellence, health tech, and hospital margins. Her operational advisory was pivotal in scaling our facility to full patient readiness."
-              </p>
-              <div class="mt-2 pt-2 border-t border-brand-navy/5 flex items-center justify-between">
-                <div>
-                  <div class="text-[11px] font-bold text-brand-navy">Dr. Robert Sterling</div>
-                  <div class="text-[10px] text-brand-slate/60">Chief Medical Officer &amp; HealthTech Founder</div>
-                </div>
-                <i data-lucide="shield-check" class="w-4 h-4 text-brand-gold"></i>
-              </div>
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-sky-100 bg-white max-w-[390px]">
+              <img 
+                src="/assets/diana-mcdaniel/portrait.jpg" 
+                alt="Diana McDaniel, FACMPE" 
+                class="w-full h-auto object-cover object-center filter contrast-[1.03]"
+                loading="eager"
+              />
             </div>
 
           </div>
         </div>
 
       </div>
-    </div>
 
-    <!-- Client Institutional Ecosystem Banner -->
-    <div class="w-full mt-16 lg:mt-24 border-y border-brand-navy/5 bg-brand-champagne/30 py-6">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span class="text-xs font-semibold uppercase tracking-widest text-brand-slate/60">
-            Advising Leaders Across Major Organizations
-          </span>
-          <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-semibold tracking-wider text-brand-slate/80 uppercase">
-            
-              <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
-                <span>Arkansas Children&#039;s Hospital</span>
-              </div>
-            
-              <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
-                <span>HealthTech Scaleups</span>
-              </div>
-            
-              <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
-                <span>Quaternary Medical Systems</span>
-              </div>
-            
-              <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
-                <span>Springdale Chamber Executive Board</span>
-              </div>
-            
+      <!-- Bottom Floating 3-Metric Bar (Directly matching Reference 18.png) -->
+      <div class="w-full mt-12 bg-white rounded-3xl border border-slate-200/80 p-5 sm:p-6 shadow-xl">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+          
+          <div class="flex items-center gap-4 px-4 py-2">
+            <div class="w-12 h-12 rounded-full bg-healthTealLight text-healthTeal flex items-center justify-center shrink-0">
+              <i data-lucide="award" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <div class="text-xl sm:text-2xl font-extrabold text-healthNavy">40 UNDER 40</div>
+              <div class="text-xs text-slate-500 font-medium">Arkansas Business Honoree & NWA Leader</div>
+            </div>
           </div>
+
+          <div class="flex items-center gap-4 px-4 py-2">
+            <div class="w-12 h-12 rounded-full bg-healthTealLight text-healthTeal flex items-center justify-center shrink-0">
+              <i data-lucide="building-2" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <div class="text-xl sm:text-2xl font-extrabold text-healthNavy">20+ YEARS</div>
+              <div class="text-xs text-slate-500 font-medium">Hospital & C-Suite Executive Operations</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 px-4 py-2">
+            <div class="w-12 h-12 rounded-full bg-healthTealLight text-healthTeal flex items-center justify-center shrink-0">
+              <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <div class="text-xl sm:text-2xl font-extrabold text-healthNavy">FACMPE FELLOW</div>
+              <div class="text-xs text-slate-500 font-medium">American College of Medical Practice Execs</div>
+            </div>
+          </div>
+
         </div>
       </div>
+
+      <!-- Institutional Healthcare Ecosystem -->
+      <div class="w-full mt-8 py-4 px-4 flex flex-wrap items-center justify-center gap-8 text-xs font-bold tracking-wider text-slate-400 uppercase">
+        <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-healthTeal"></i> Arkansas Children's Hospital Leadership</span>
+        <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-healthTeal"></i> Quaternary Medical Systems</span>
+        <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-healthTeal"></i> HealthTech Advisory Scaleups</span>
+        <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-healthTeal"></i> Springdale Chamber Executive Board</span>
+      </div>
+
     </div>
   </main>
 
-  <!-- Interactive Footer Anchor -->
-  <footer class="w-full py-8 border-t border-brand-navy/5 text-center text-xs text-brand-slate/50">
+  <footer class="w-full py-8 border-t border-slate-100 text-center text-xs text-slate-400">
     <div class="max-w-7xl mx-auto px-4">
-      &copy; 2026 Diana McDaniel Healthcare Advisory. All Rights Reserved. Private & Confidential.
+      &copy; 2026 Prosper Med LLC &bull; Diana McDaniel, FACMPE. Confidential Healthcare Advisory.
     </div>
   </footer>
 

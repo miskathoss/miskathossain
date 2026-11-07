@@ -4,186 +4,163 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Motivating the Mindset | High-Performance Mindset Coaching &amp; Athlete Burnout Prevention</title>
+  <title>Motivating the Mindset | Allison Noelle Megherian</title>
   
-  <!-- Typography: Playfair Display + Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           },
           colors: {
-            brand: {
-              navy: '#335152',
-              slate: '#1E293B',
+            editorial: {
+              ivory: '#FAF7F2',
+              cream: '#F4ECE1',
+              charcoal: '#1E293B',
+              slate: '#556972',
+              terracotta: '#D97746',
+              terracottaDark: '#C26233',
               gold: '#C59B27',
-              goldDark: '#A8811A',
-              champagne: '#F4EFEA',
-              cream: '#FBF9F4',
+              sand: '#EFE7DA',
             }
           }
         }
       }
     }
   </script>
-  
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <style>
     body {
-      background-color: #FBF9F4;
-      color: #0B132B;
+      background-color: #FAF7F2;
+      color: #1E293B;
       font-family: 'Plus Jakarta Sans', sans-serif;
       -webkit-font-smoothing: antialiased;
     }
-    .serif-title {
-      font-family: 'Playfair Display', Georgia, serif;
-    }
-    .gold-glow {
-      box-shadow: 0 10px 30px -10px rgba(197, 168, 128, 0.35);
+    .arch-portrait {
+      border-top-left-radius: 200px;
+      border-top-right-radius: 200px;
+      border-bottom-left-radius: 28px;
+      border-bottom-right-radius: 28px;
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-brand-gold/20 selection:text-brand-navy">
+<body class="min-h-screen flex flex-col justify-between selection:bg-editorial-terracotta/20 selection:text-editorial-charcoal">
 
-  <!-- Executive Header Navigation -->
-  <header class="w-full border-b border-brand-navy/5 bg-brand-cream/80 backdrop-blur-md sticky top-0 z-40 transition-all">
+  <!-- Editorial Top Nav -->
+  <header class="w-full border-b border-editorial-sand/80 bg-editorial-ivory/90 backdrop-blur-md sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        
-          <img src="/assets/allison-noelle/logo.png" alt="Motivating the Mindset Logo" class="h-9 sm:h-10 w-auto max-w-[180px] object-contain">
-        
+        <img src="/assets/allison-noelle/logo.png" alt="Motivating the Mindset Crown" class="h-10 sm:h-11 w-auto object-contain">
+        <div class="border-l border-editorial-sand pl-3">
+          <span class="text-xs sm:text-sm font-bold tracking-[0.15em] uppercase block text-editorial-charcoal">MOTIVATING THE MINDSET</span>
+          <span class="text-[11px] text-editorial-slate font-medium">Allison Noelle Megherian</span>
+        </div>
       </div>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-slate/80">
-        <a href="#overview" class="hover:text-brand-navy transition-colors">Overview</a>
-        <a href="#framework" class="hover:text-brand-navy transition-colors">Framework</a>
-        <a href="#outcomes" class="hover:text-brand-navy transition-colors">Client Outcomes</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-editorial-slate">
+        <a href="#about" class="hover:text-editorial-terracotta transition-colors">About</a>
+        <a href="#speaking" class="hover:text-editorial-terracotta transition-colors">TEDx Speaking</a>
+        <a href="#books" class="hover:text-editorial-terracotta transition-colors">The Mindset Edge</a>
+        <a href="#mentorship" class="hover:text-editorial-terracotta transition-colors">1:1 Mentorship</a>
         
-          <a href="https://www.linkedin.com/in/allison-noelle-megherian-2014771a4/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-navy flex items-center gap-1.5 text-brand-slate transition-colors">
+          <a href="https://www.linkedin.com/in/allison-noelle-megherian-2014771a4/" target="_blank" rel="noopener noreferrer" class="hover:text-editorial-terracotta flex items-center gap-1.5 transition-colors">
             <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-            <span>LinkedIn Profile</span>
+            <span>LinkedIn</span>
           </a>
         
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="#book" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider bg-brand-navy text-white hover:bg-brand-slate px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm active:scale-[0.98]">
-          <span>Advisory Inquiry</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-gold"></i>
+        <a href="#book" class="inline-flex items-center gap-2 text-xs font-semibold tracking-wide text-editorial-terracotta border border-editorial-terracotta hover:bg-editorial-terracotta hover:text-white px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm active:scale-[0.98]">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+          <span>Let's Connect</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-12 lg:py-20">
-    <div class="absolute -top-32 -right-32 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-brand-navy/5 rounded-full blur-3xl pointer-events-none"></div>
-
+  <!-- Editorial Hero Section (Inspired by Reference 19.png) -->
+  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-12 lg:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
-        <!-- Left: Copy -->
+        <!-- Left: Copy Hook -->
         <div class="lg:col-span-7 flex flex-col items-start text-left">
           
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-champagne border border-brand-gold/30 text-xs font-semibold text-brand-navy tracking-wide mb-6">
-            <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
-            <span class="uppercase tracking-widest text-[11px]">TEDx SPEAKER • AUTHOR OF THE MINDSET EDGE • HIGH-PERFORMANCE COACH</span>
-            <span class="text-brand-navy/30">|</span>
-            <span class="text-brand-slate/80 font-normal">Where you take off your thinking cap and put on your crown 👑</span>
+          <div class="text-xs uppercase tracking-[0.2em] font-semibold text-editorial-terracotta mb-4 flex items-center gap-2">
+            <span class="w-6 h-[1.5px] bg-editorial-terracotta"></span>
+            <span>FOUNDER • TEDx SPEAKER • AUTHOR OF THE MINDSET EDGE</span>
           </div>
 
-          <h1 class="serif-title text-4xl sm:text-5xl lg:text-[54px] font-semibold tracking-tight text-brand-navy leading-[1.15] mb-6">
-            Stop the Spiral. Regulate Pressure. Perform with Confidence.
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-[58px] font-normal tracking-tight text-editorial-charcoal leading-[1.12] mb-6">
+            Stop the spiral. Regulate pressure. <span class="italic text-editorial-terracotta font-medium">Perform with confidence.</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-brand-slate/80 leading-relaxed max-w-2xl font-normal mb-8">
-            Mindset coaching, workshops, and speaking for driven professionals, competitive athletes, and teams. Reclaim your identity outside of achievement and build sustainable peak performance without burnout.
+          <p class="text-base sm:text-lg text-editorial-slate leading-relaxed max-w-xl font-normal mb-8">
+            You can have the perfect strategy and still stay stuck if your mindset isn't aligned. 1:1 mentorship and keynotes designed to help competitive athletes and high performers regulate under pressure, reconnect to identity, and build success rooted in self-trust.
           </p>
 
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-brand-navy text-white hover:bg-brand-slate text-sm font-semibold tracking-wide transition-all duration-150 shadow-md gold-glow active:scale-[0.98]">
-              <i data-lucide="calendar" class="w-4 h-4 text-brand-gold"></i>
+            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-editorial-terracotta hover:bg-editorial-terracottaDark text-white text-sm font-semibold tracking-wide transition-all shadow-md active:scale-[0.98]">
               <span>Book Mindset Reset Session</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
             
-            <a href="#framework" class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-white hover:bg-brand-champagne/60 text-brand-navy border border-brand-navy/15 text-sm font-semibold tracking-wide transition-all duration-150 shadow-sm active:scale-[0.98]">
-              <i data-lucide="file-text" class="w-4 h-4 text-brand-slate/60"></i>
-              <span>Review The Mindset Edge Protocols</span>
+            <a href="#tedx" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white hover:bg-editorial-sand/60 text-editorial-charcoal border border-editorial-sand text-sm font-semibold tracking-wide transition-all shadow-sm active:scale-[0.98]">
+              <i data-lucide="play-circle" class="w-4 h-4 text-editorial-terracotta"></i>
+              <span>Watch TEDx Talk</span>
             </a>
           </div>
 
-          <div class="w-full pt-8 border-t border-brand-navy/10 grid grid-cols-3 gap-4 sm:gap-8">
-            
-              <div>
-                <div class="serif-title text-2xl sm:text-3xl font-bold text-brand-navy">TEDx</div>
-                <div class="text-xs text-brand-slate/70 font-medium tracking-tight mt-0.5">Keynote Speaker on Burnout</div>
-              </div>
-            
-              <div>
-                <div class="serif-title text-2xl sm:text-3xl font-bold text-brand-navy">3 Books</div>
-                <div class="text-xs text-brand-slate/70 font-medium tracking-tight mt-0.5">Author of The Mindset Edge</div>
-              </div>
-            
-              <div>
-                <div class="serif-title text-2xl sm:text-3xl font-bold text-brand-navy">1:1 &amp; Keynotes</div>
-                <div class="text-xs text-brand-slate/70 font-medium tracking-tight mt-0.5">Schools, Athletes &amp; Executives</div>
-              </div>
-            
+          <!-- Proof Quote Bar -->
+          <div class="w-full pt-6 border-t border-editorial-sand flex items-center gap-4">
+            <div class="flex -space-x-1">
+              <span class="w-2 h-2 rounded-full bg-editorial-terracotta"></span>
+            </div>
+            <p class="text-xs text-editorial-slate italic">
+              "Reclaim Your Love of Teaching" &bull; Author of 3 Mindset Edge Books &bull; Mentor to Elite Athletic Programs
+            </p>
           </div>
 
         </div>
 
-        <!-- Right: Visual Card -->
+        <!-- Right: Architectural Archway Portrait (Reference 19.png) -->
         <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none">
-            <div class="absolute -inset-3 bg-gradient-to-tr from-brand-gold/30 via-transparent to-brand-navy/10 rounded-3xl blur-lg"></div>
+          <div class="relative mx-auto max-w-sm lg:max-w-none flex justify-center">
+            
+            <!-- Soft Organic Halo -->
+            <div class="absolute -top-10 -right-6 w-96 h-96 rounded-full bg-gradient-to-tr from-orange-200/40 via-amber-100/50 to-transparent blur-3xl pointer-events-none"></div>
 
-            <div class="relative bg-white p-3 rounded-2xl shadow-xl border border-brand-gold/20 overflow-hidden">
-              <div class="aspect-[4/5] rounded-xl overflow-hidden bg-brand-navy/5 relative">
-                <img 
-                  src="/assets/allison-noelle/portrait.jpg" 
-                  alt="Allison Noelle Megherian" 
-                  class="w-full h-full object-cover object-top filter contrast-[1.03]"
-                  loading="eager"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4 text-white">
-                  <div class="text-xs uppercase tracking-widest text-brand-gold font-semibold">High-Performance Mindset Coaching &amp; Athlete Burnout Prevention</div>
-                  <div class="serif-title text-lg font-semibold">Allison Noelle Megherian</div>
-                  <div class="text-xs text-zinc-300 font-light mt-0.5">Motivating the Mindset</div>
-                </div>
-              </div>
+            <!-- Arch Frame with Authentic Portrait -->
+            <div class="relative w-full max-w-[370px] aspect-[3/4] overflow-hidden arch-portrait shadow-2xl border-4 border-white bg-editorial-sand">
+              <img 
+                src="/assets/allison-noelle/portrait.jpg" 
+                alt="Allison Noelle Megherian" 
+                class="w-full h-full object-cover object-top filter contrast-[1.03]"
+                loading="eager"
+              />
             </div>
 
-            <div class="absolute -bottom-6 -left-6 sm:-left-8 max-w-xs bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-xl border border-brand-gold/30 hidden sm:block">
-              <div class="flex items-center gap-1 text-amber-500 mb-1.5">
-                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-              </div>
-              <p class="text-xs text-brand-slate italic leading-snug">
-                "Allison’s framework helped our competitive athletes regulate under intense pressure. She gave our team the mental resilience to win without burning out."
+            <!-- Floating Signature Quote Card (Reference 19.png) -->
+            <div class="absolute -bottom-6 -right-4 sm:-right-6 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border border-editorial-sand max-w-[270px]">
+              <div class="text-editorial-terracotta text-2xl font-serif leading-none mb-1">“</div>
+              <p class="text-xs font-serif italic text-editorial-charcoal leading-relaxed mb-2.5">
+                Where you take off your thinking cap and put on your crown 👑
               </p>
-              <div class="mt-2 pt-2 border-t border-brand-navy/5 flex items-center justify-between">
+              <div class="pt-2 border-t border-editorial-sand flex items-center justify-between">
                 <div>
-                  <div class="text-[11px] font-bold text-brand-navy">Coach Darren Vance</div>
-                  <div class="text-[10px] text-brand-slate/60">Athletic Director, Regional Elite Program</div>
+                  <div class="text-[11px] font-bold text-editorial-charcoal">Allison Noelle Megherian</div>
+                  <div class="text-[10px] text-editorial-slate">Founder, Motivating the Mindset</div>
                 </div>
-                <i data-lucide="shield-check" class="w-4 h-4 text-brand-gold"></i>
+                <i data-lucide="crown" class="w-4 h-4 text-editorial-gold"></i>
               </div>
             </div>
 
@@ -191,47 +168,60 @@
         </div>
 
       </div>
-    </div>
 
-    <!-- Client Institutional Ecosystem Banner -->
-    <div class="w-full mt-16 lg:mt-24 border-y border-brand-navy/5 bg-brand-champagne/30 py-6">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span class="text-xs font-semibold uppercase tracking-widest text-brand-slate/60">
-            Advising Leaders Across Major Organizations
-          </span>
-          <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-semibold tracking-wider text-brand-slate/80 uppercase">
-            
-              <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
-                <span>Athletic Communities</span>
-              </div>
-            
-              <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
-                <span>Academic Institutions</span>
-              </div>
-            
-              <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
-                <span>Competitive Sports Teams</span>
-              </div>
-            
-              <div class="flex items-center gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>
-                <span>High-Performing Executives</span>
-              </div>
-            
+      <!-- Bottom 4-Pillar Strip (Reference 19.png) -->
+      <div class="w-full mt-14 bg-white/95 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-editorial-sand p-4 sm:p-6 shadow-xl">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 divide-y sm:divide-y-0 sm:divide-x divide-editorial-sand">
+          
+          <div class="flex items-center gap-3.5 px-3 py-2">
+            <div class="w-10 h-10 rounded-full bg-editorial-cream text-editorial-terracotta flex items-center justify-center shrink-0">
+              <i data-lucide="brain" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-editorial-charcoal">Mindset Resilience</div>
+              <div class="text-[11px] text-editorial-slate">Rewire beliefs & self-trust</div>
+            </div>
           </div>
+
+          <div class="flex items-center gap-3.5 px-3 py-2">
+            <div class="w-10 h-10 rounded-full bg-editorial-cream text-editorial-gold flex items-center justify-center shrink-0">
+              <i data-lucide="crown" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-editorial-charcoal">Identity Reconnection</div>
+              <div class="text-[11px] text-editorial-slate">Thrive beyond achievement</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3.5 px-3 py-2">
+            <div class="w-10 h-10 rounded-full bg-editorial-cream text-editorial-terracotta flex items-center justify-center shrink-0">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-editorial-charcoal">Pressure Regulation</div>
+              <div class="text-[11px] text-editorial-slate">Stay regulated under stakes</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3.5 px-3 py-2">
+            <div class="w-10 h-10 rounded-full bg-editorial-cream text-editorial-terracottaDark flex items-center justify-center shrink-0">
+              <i data-lucide="trophy" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-editorial-charcoal">Athletic Performance</div>
+              <div class="text-[11px] text-editorial-slate">Elite execution without burnout</div>
+            </div>
+          </div>
+
         </div>
       </div>
+
     </div>
   </main>
 
-  <!-- Interactive Footer Anchor -->
-  <footer class="w-full py-8 border-t border-brand-navy/5 text-center text-xs text-brand-slate/50">
+  <footer class="w-full py-8 border-t border-editorial-sand text-center text-xs text-editorial-slate/70">
     <div class="max-w-7xl mx-auto px-4">
-      &copy; 2026 Motivating the Mindset. All Rights Reserved. Private & Confidential.
+      &copy; 2026 Motivating the Mindset LLC &bull; Allison Noelle Megherian. All Rights Reserved.
     </div>
   </footer>
 
