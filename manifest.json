@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-11-08T08:35:47.895Z",
-  "activeRosterCount": 19,
+  "lastUpdated": "2026-11-08T15:19:01.414Z",
+  "activeRosterCount": 25,
   "preservedLeads": [
     "allison-noelle",
     "christina-merhej",
@@ -271,6 +271,116 @@
       "screenshotPath": "previews/anya-vasquez/hero-preview.png",
       "publicScreenshotPath": "public/preview/anya-vasquez/hero-preview.png",
       "status": "Designed & Live"
+    },
+    {
+      "name": "Alto Tree Service",
+      "businessName": "Alto Tree Service",
+      "slug": "alto-tree-service",
+      "url": "https://miskathossain.net/preview/alto-tree-service",
+      "originalWebsite": "https://altotreeservice.com",
+      "previewUrl": "/preview/alto-tree-service",
+      "previewPath": "previews/alto-tree-service/index.html",
+      "heroPreviewImage": "/preview/alto-tree-service/hero-preview.png",
+      "category": "Tree Care & Removal",
+      "headline": "Precision tree removal. Done safely, cleanly, on time.",
+      "brandColors": {
+        "primary": "#FF7B00",
+        "dark": "#18181B",
+        "cream": "#FFFBF5"
+      }
+    },
+    {
+      "name": "Lumberjay's Landscaping & Tree Services",
+      "businessName": "Lumberjay's Landscaping",
+      "slug": "lumberjays-landscaping",
+      "url": "https://miskathossain.net/preview/lumberjays-landscaping",
+      "originalWebsite": "https://lumberjays-landscaping.business.site",
+      "previewUrl": "/preview/lumberjays-landscaping",
+      "previewPath": "previews/lumberjays-landscaping/index.html",
+      "heroPreviewImage": "/preview/lumberjays-landscaping/hero-preview.png",
+      "category": "Tree Care & Landscaping",
+      "headline": "Heavy-duty tree removal & complete property care in Reading, PA.",
+      "brandColors": {
+        "primary": "#166534",
+        "amber": "#D97706",
+        "cream": "#FAFBF9"
+      }
+    },
+    {
+      "name": "MAX Tree Service",
+      "businessName": "MAX Tree Service",
+      "slug": "max-tree",
+      "url": "https://miskathossain.net/preview/max-tree",
+      "originalWebsite": "https://max-tree.com",
+      "previewUrl": "/preview/max-tree",
+      "previewPath": "previews/max-tree/index.html",
+      "heroPreviewImage": "/preview/max-tree/hero-preview.png",
+      "category": "Heavy Crane & Tree Removal",
+      "headline": "Big Trees. Tough Spots. Consider It Done.",
+      "brandColors": {
+        "primary": "#06581C",
+        "orange": "#EE5F21",
+        "dark": "#141414"
+      }
+    },
+    {
+      "name": "Thompson's Tree Service, LLC",
+      "businessName": "Thompson's Tree Service",
+      "slug": "thompsons-tree-service",
+      "url": "https://miskathossain.net/preview/thompsons-tree-service",
+      "originalWebsite": "https://www.thompsonstreeservicetn.com",
+      "previewUrl": "/preview/thompsons-tree-service",
+      "previewPath": "previews/thompsons-tree-service/index.html",
+      "heroPreviewImage": "/preview/thompsons-tree-service/hero-preview.png",
+      "category": "Veteran-Owned Tree Care",
+      "headline": "Clarksville's trusted leaders in tree pruning and removal.",
+      "brandColors": {
+        "primary": "#2D6A4F",
+        "sage": "#45926C",
+        "charcoal": "#2D2E32"
+      }
+    },
+    {
+      "name": "Dean's Tree Service",
+      "businessName": "Dean's Tree Service",
+      "slug": "deans-tree-service",
+      "url": "https://miskathossain.net/preview/deans-tree-service",
+      "originalWebsite": "https://www.deanstreeservice.com/",
+      "previewUrl": "/preview/deans-tree-service",
+      "previewPath": "previews/deans-tree-service/index.html",
+      "heroPreviewImage": "/preview/deans-tree-service/hero-preview.png",
+      "category": "Heritage Tree Care (70 Years)",
+      "headline": "We make tree service simple. Three generations of trust in Shenandoah Valley.",
+      "brandColors": {
+        "primary": "#2C5B2A",
+        "gold": "#C29B38",
+        "cream": "#FAF9F5"
+      }
+    },
+    {
+      "name": "Brown's Tree & Stump Service",
+      "businessName": "Brown's Tree and Stump",
+      "slug": "browns-tree-and-stump",
+      "url": "https://miskathossain.net/preview/browns-tree-and-stump",
+      "originalWebsite": "http://brownstreeandstump.com",
+      "previewUrl": "/preview/browns-tree-and-stump",
+      "previewPath": "previews/browns-tree-and-stump/index.html",
+      "heroPreviewImage": "/preview/browns-tree-and-stump/hero-preview.png",
+      "category": "Bucket Truck & Stump Removal",
+      "headline": "Roanoke's heavy-duty tree & stump removal experts.",
+      "brandColors": {
+        "primary": "#2F4F4F",
+        "amber": "#F59E0B",
+        "dark": "#18181B"
+      }
     }
+  ],
+  "treeServiceLeads": [
+    "alto-tree-service",
+    "lumberjays-landscaping",
+    "max-tree",
+    "thompsons-tree-service",
+    "deans-tree-service",
+    "browns-tree-and-stump"
   ]
 }
