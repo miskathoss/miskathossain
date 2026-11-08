@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-11-08T07:06:27.226Z",
+  "totalLeads": 3,
+  "previews": [
+    {
+      "slug": "allison-noelle",
+      "name": "Allison Noelle Megherian",
+      "businessName": "Motivating the Mindset",
+      "niche": "High-Performance Mindset Coaching & Athlete Burnout Prevention",
+      "theme": "executive",
+      "rootPath": "previews/allison-noelle/index.html",
+      "publicPreviewPath": "public/preview/allison-noelle/index.html",
+      "publicPreviewsPath": "public/previews/allison-noelle/index.html",
+      "liveUrl": "https://miskathossain.net/preview/allison-noelle",
+      "alternativeUrl": "https://miskathossain.net/previews/allison-noelle"
+    },
+    {
+      "slug": "christina-merhej",
+      "name": "Christina Merhej",
+      "businessName": "Christina Merhej | NLP Coaching",
+      "niche": "Master NLP Practitioner, Youth Confidence & Early-Career Corporate Resilience",
+      "theme": "executive",
+      "rootPath": "previews/christina-merhej/index.html",
+      "publicPreviewPath": "public/preview/christina-merhej/index.html",
+      "publicPreviewsPath": "public/previews/christina-merhej/index.html",
+      "liveUrl": "https://miskathossain.net/preview/christina-merhej",
+      "alternativeUrl": "https://miskathossain.net/previews/christina-merhej"
+    },
+    {
+      "slug": "diana-mcdaniel",
+      "name": "Diana McDaniel, FACMPE",
+      "businessName": "Diana McDaniel Healthcare Advisory",
+      "niche": "Healthcare Strategy, HealthTech Practice Optimization & Hospital Governance",
+      "theme": "executive",
+      "rootPath": "previews/diana-mcdaniel/index.html",
+      "publicPreviewPath": "public/preview/diana-mcdaniel/index.html",
+      "publicPreviewsPath": "public/previews/diana-mcdaniel/index.html",
+      "liveUrl": "https://miskathossain.net/preview/diana-mcdaniel",
+      "alternativeUrl": "https://miskathossain.net/previews/diana-mcdaniel"
+    }
+  ]
+}
