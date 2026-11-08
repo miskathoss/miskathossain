@@ -1,232 +1,238 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Coach Doc / Meridian Blueprint LLC | VR Fitness Ambassador &amp; Behavioral Science Peak Performance</title>
-  
+  <title>Coach Doc | Antonio Harrison, Ph.D., BCBA-D</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            brandBg: '#090D16',
-            brandAccent: '#FF385C',
-            brandSecondary: '#8B5CF6',
+            speaker: {
+              bg: '#09090B',
+              card: '#18181B',
+              violet: '#8B5CF6',
+              amber: '#F59E0B',
+              slate: '#A1A1AA',
+              border: '#27272A'
+            }
           }
         }
       }
     }
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <style>
-    body {
-      background-color: #090D16;
-      color: #FFFFFF;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    .glow-accent {
-      box-shadow: 0 0 40px -10px #FF385C40;
-    }
-  </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-brandAccent/20 selection:text-white">
+<body class="bg-speaker-bg text-white font-sans antialiased min-h-screen flex flex-col selection:bg-speaker-violet selection:text-white">
 
-  <!-- Header Navigation -->
-  <header class="w-full border-b border-zinc-800/80 bg-zinc-950/80 backdrop-blur-md sticky top-0 z-40 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-sm shadow-md" style="background: linear-gradient(135deg, #FF385C, #8B5CF6); color: #FFFFFF;">
-          AH
+  
+  <!-- Designer Preview Bar -->
+  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
+    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        LIVE DEMO REDESIGN
+      </span>
+      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Antonio Harrison, Ph.D., BCBA-D</strong></span>
+    </div>
+    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
+      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
+        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
+        <span>Why This Converts Better</span>
+      </button>
+      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
+        <span>Miskat's Portfolio</span>
+        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </div>
+
+  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="flex items-center gap-2.5 mb-4">
+        <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
+        <h3 class="text-lg font-bold text-white">Coach Doc / Meridian Blueprint LLC</h3>
+      </div>
+      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
+        This custom hero redesign addresses critical conversion leaks identified on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
+      </p>
+      
+      <div class="space-y-4 mb-6">
+        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
+          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
+            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
+            <span>Current Friction Points</span>
+          </div>
+          <ul class="text-xs text-zinc-300 space-y-1 list-disc list-inside">
+            <li>Basic flat Wix site disconnected from his cutting-edge Meta / Supernatural VR fitness identity.</li><li>Lacks high-energy motion design and athletic visual gravitas.</li><li>Buried speaking kit and keynote booking for corporate conference organizers.</li>
+          </ul>
         </div>
-        <div>
-          <span class="text-sm font-extrabold tracking-tight uppercase block" style="color: #FFFFFF;">Coach Doc / Meridian Blueprint LLC</span>
-          <span class="text-[11px] font-medium tracking-tight" style="color: #94A3B8;">Antonio Harrison, Ph.D., BCBA-D</span>
+
+        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
+          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
+            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+            <span>Implemented Redesign Enhancements</span>
+          </div>
+          <div class="text-xs text-zinc-300 space-y-2">
+            <div><strong class="text-white">Cutting-Edge VR Athletic Design:</strong> Infused Supernatural-inspired neon coral &amp; ultraviolet gradients with high-velocity typography.</div><div><strong class="text-white">Dual Authority Framework:</strong> Positioned his Ph.D. behavioral credentials alongside elite VR fitness mastery.</div><div><strong class="text-white">Executive Keynote Booking Funnel:</strong> Built a dedicated speaker kit action driving immediate corporate stage inquiries.</div>
+          </div>
         </div>
       </div>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium" style="color: #94A3B8;">
-        <a href="#overview" class="hover:text-brandAccent transition-colors">Overview</a>
-        <a href="#framework" class="hover:text-brandAccent transition-colors">Framework</a>
-        <a href="#outcomes" class="hover:text-brandAccent transition-colors">Outcomes</a>
-        
-          <a href="https://www.linkedin.com/in/drantonioharrison/" target="_blank" rel="noopener noreferrer" class="hover:text-brandAccent flex items-center gap-1.5 transition-colors">
-            <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-            <span>LinkedIn</span>
-          </a>
-        
+      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
+        <span>Ready to implement this live?</span>
+        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header with Authentic Logo -->
+  <header class="w-full border-b border-speaker-border/80 bg-speaker-bg/90 backdrop-blur-md sticky top-[45px] z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3.5">
+        <img src="/assets/antonio-harrison/logo.png" alt="Meridian / Coach Doc Logo" class="h-10 sm:h-11 w-auto object-contain">
+        <div class="border-l border-zinc-800 pl-3">
+          <span class="text-sm font-extrabold tracking-tight uppercase block text-white">COACH DOC</span>
+          <span class="text-[11px] text-speaker-slate font-medium">Antonio Harrison, Ph.D., BCBA-D</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-speaker-slate">
+        <a href="#keynotes" class="hover:text-speaker-violet transition-colors">Keynotes</a>
+        <a href="#supernatural" class="hover:text-speaker-violet transition-colors">VR Fitness</a>
+        <a href="#meridian" class="hover:text-speaker-violet transition-colors">Meridian Blueprint</a>
+        <a href="https://www.linkedin.com/in/drantonioharrison/" target="_blank" class="hover:text-speaker-violet flex items-center gap-1.5 transition-colors">
+          <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
+          <span>LinkedIn</span>
+        </a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="#book" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full transition-all duration-200 shadow-md active:scale-[0.98]" style="background-color: #FF385C; color: #FFFFFF;">
-          <span>Inquire</span>
+        <a href="#book" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-speaker-violet text-white hover:bg-violet-600 transition-all shadow-md active:scale-95">
+          <span>Book Keynote</span>
           <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-12 lg:py-16">
-    
-    <!-- Background Ambience -->
-    <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full blur-3xl pointer-events-none opacity-20" style="background-color: #FF385C;"></div>
-    <div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full blur-3xl pointer-events-none opacity-15" style="background-color: #8B5CF6;"></div>
+  <!-- Hero Section (Reference 9.jpg - David Rios Stage Speaker Layout) -->
+  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-14 lg:py-20">
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-speaker-violet/20 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-speaker-amber/15 blur-[120px] rounded-full pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
         
-        <!-- Left: Copy & Value Proposition -->
+        <!-- Left: Copy & Keynote Focus -->
         <div class="lg:col-span-7 flex flex-col items-start text-left">
           
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border" style="color: #FF385C; border-color: #FF385C40; background-color: #FF385C15;">
-            <span class="w-2 h-2 rounded-full animate-pulse" style="background-color: #FF385C;"></span>
-            <span class="uppercase tracking-widest text-[11px] font-bold">PH.D., BCBA-D • VR FITNESS COACH &amp; SUPERNATURAL AMBASSADOR • KEYNOTE SPEAKER</span>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border border-speaker-violet/30 bg-speaker-violet/10 text-speaker-violet">
+            <i data-lucide="mic" class="w-3.5 h-3.5 text-speaker-amber"></i>
+            <span class="uppercase tracking-widest text-[11px] font-bold">KEYNOTE SPEAKER • SUPERNATURAL VR COACH • BEHAVIOR SCIENTIST</span>
           </div>
 
-          <h1 class="font-sans text-4xl sm:text-5xl lg:text-[54px] font-bold tracking-tight leading-[1.12] mb-6" style="color: #FFFFFF;">
-            Rewire Your Mindset &amp; Movement Through Behavioral Science and Virtual Reality.
+          <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-black tracking-tight leading-[1.1] mb-6 text-white uppercase">
+            Transform Human Performance Through Behavioral Science &amp; Immersion.
           </h1>
 
-          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal mb-8" style="color: #94A3B8;">
-            Where doctorate-level behavioral analysis converges with Supernatural VR athletics. Elite mental conditioning, high-energy movement protocols, and keynote transformations for individuals and corporate stages.
+          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal text-speaker-slate mb-8">
+            Ph.D., BCBA-D, official VR coach on Meta&#039;s Supernatural, and founder of Meridian Blueprint LLC. Delivering electrifying keynotes and behavioral conditioning that build burnout immunity and unshakeable discipline.
           </p>
 
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] glow-accent" style="background-color: #FF385C; color: #FFFFFF;">
-              <span>Book Keynote Speaking</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            <a href="#speaker-kit" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] bg-speaker-violet text-white hover:bg-violet-600">
+              <i data-lucide="calendar" class="w-4 h-4 text-speaker-amber"></i>
+              <span>Download Speaker Kit &amp; Check Dates</span>
             </a>
             
-            <a href="#framework" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all shadow-sm active:scale-[0.98] bg-zinc-900/90 hover:bg-zinc-800 text-white border border-zinc-700">
-              <i data-lucide="sparkles" class="w-4 h-4" style="color: #FF385C;"></i>
-              <span>Explore Meridian Blueprint</span>
+            <a href="#reel" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all bg-speaker-card hover:bg-zinc-800 text-white border border-speaker-border">
+              <i data-lucide="play" class="w-4 h-4 text-speaker-violet"></i>
+              <span>Watch Keynote Reel</span>
             </a>
           </div>
 
-          <!-- 3-Pillar Row -->
-          <div class="w-full pt-6 border-t border-zinc-800 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            
-              <div class="p-3.5 rounded-2xl bg-zinc-900/80 border border-zinc-800/80">
-                <div class="flex items-center gap-2 text-xs font-bold mb-1.5" style="color: #FFFFFF;">
-                  <i data-lucide="glasses" class="w-4 h-4" style="color: #FF385C;"></i>
-                  <span>VR Movement Immersion</span>
-                </div>
-                <p class="text-[11px] leading-snug" style="color: #94A3B8;">
-                  Dynamic Supernatural VR athletic protocols that turn fitness into flow state.
-                </p>
-              </div>
-            
-              <div class="p-3.5 rounded-2xl bg-zinc-900/80 border border-zinc-800/80">
-                <div class="flex items-center gap-2 text-xs font-bold mb-1.5" style="color: #FFFFFF;">
-                  <i data-lucide="brain" class="w-4 h-4" style="color: #FF385C;"></i>
-                  <span>Behavioral Rewiring</span>
-                </div>
-                <p class="text-[11px] leading-snug" style="color: #94A3B8;">
-                  Doctorate-level operant conditioning methods to lock in lifelong habits.
-                </p>
-              </div>
-            
-              <div class="p-3.5 rounded-2xl bg-zinc-900/80 border border-zinc-800/80">
-                <div class="flex items-center gap-2 text-xs font-bold mb-1.5" style="color: #FFFFFF;">
-                  <i data-lucide="mic" class="w-4 h-4" style="color: #FF385C;"></i>
-                  <span>High-Voltage Keynotes</span>
-                </div>
-                <p class="text-[11px] leading-snug" style="color: #94A3B8;">
-                  Electrifying corporate speaking that shakes leadership teams into action.
-                </p>
-              </div>
-            
+          <!-- 3 Stage Metrics -->
+          <div class="w-full pt-8 border-t border-speaker-border grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="p-4 rounded-2xl bg-speaker-card/80 border border-speaker-border">
+              <div class="text-2xl font-black text-speaker-amber mb-0.5">100K+</div>
+              <div class="text-xs font-bold text-white">Supernatural VR Athletes</div>
+              <div class="text-[11px] text-speaker-slate">Coached in immersive movement</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-speaker-card/80 border border-speaker-border">
+              <div class="text-2xl font-black text-speaker-violet mb-0.5">Ph.D. / BCBA-D</div>
+              <div class="text-xs font-bold text-white">Doctoral Behavioral Rigor</div>
+              <div class="text-[11px] text-speaker-slate">Evidence-based performance</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-speaker-card/80 border border-speaker-border">
+              <div class="text-2xl font-black text-white mb-0.5">Global Keynotes</div>
+              <div class="text-xs font-bold text-white">High-Impact Presence</div>
+              <div class="text-[11px] text-speaker-slate">Corporate &amp; athletic stages</div>
+            </div>
           </div>
 
         </div>
 
-        <!-- Right: Authority Visual Display Card -->
+        <!-- Right: Reference 9.jpg Keynote Speaker Card with Authentic Portrait -->
         <div class="lg:col-span-5 relative">
           <div class="relative mx-auto max-w-md lg:max-w-none flex justify-center">
             
-            <div class="relative w-full rounded-3xl p-6 sm:p-8 shadow-2xl border bg-zinc-900/90 border-zinc-800 backdrop-blur-xl">
+            <!-- Atmospheric Halo -->
+            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-speaker-violet via-speaker-amber to-transparent opacity-25 blur-2xl"></div>
+
+            <div class="relative w-full rounded-3xl bg-speaker-card border border-speaker-border p-6 shadow-2xl flex flex-col items-center">
               
-              <!-- Card Header -->
-              <div class="flex items-center justify-between pb-4 border-b border-zinc-800 mb-6">
-                <div class="flex items-center gap-2.5">
-                  <div class="w-3 h-3 rounded-full animate-pulse" style="background-color: #FF385C;"></div>
-                  <span class="text-xs font-mono font-bold uppercase tracking-wider" style="color: #FF385C;">
-                    Coach Doc / Meridian Blueprint LLC
-                  </span>
-                </div>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-zinc-800 text-zinc-300">VERIFIED</span>
+              <!-- Card Top -->
+              <div class="w-full flex items-center justify-between pb-4 border-b border-speaker-border mb-5">
+                <span class="px-3 py-1 rounded-full text-[11px] font-mono font-bold bg-speaker-amber/20 text-speaker-amber border border-speaker-amber/30">
+                  FEATURED KEYNOTE ARTIST
+                </span>
+                <span class="text-xs text-speaker-slate font-medium">Meta Supernatural Ambassador</span>
               </div>
 
-              <!-- Main Card Focus -->
-              <div class="rounded-2xl p-5 mb-5 bg-zinc-950/80 border border-zinc-800/80">
-                <div class="text-[11px] font-mono uppercase tracking-wider mb-2" style="color: #94A3B8;">
-                  STRATEGIC FOCUS & OUTCOMES
+              <!-- Authentic Portrait Image -->
+              <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-speaker-border shadow-2xl bg-zinc-950">
+                <img 
+                  src="/assets/antonio-harrison/portrait.jpg" 
+                  alt="Coach Doc Antonio Harrison Ph.D." 
+                  class="w-full h-full object-cover object-top filter contrast-[1.04]"
+                />
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                
+                <!-- Bottom Tag -->
+                <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-speaker-border flex items-center justify-between">
+                  <div>
+                    <div class="text-sm font-bold text-white">Antonio Harrison, Ph.D.</div>
+                    <div class="text-[11px] text-speaker-slate">Author • Behavioral Architect • Coach Doc</div>
+                  </div>
+                  <div class="w-8 h-8 rounded-full bg-speaker-violet/20 flex items-center justify-center text-speaker-violet">
+                    <i data-lucide="mic-2" class="w-4 h-4"></i>
+                  </div>
                 </div>
-                <div class="text-lg sm:text-xl font-bold mb-3" style="color: #FFFFFF;">
-                  VR Fitness Ambassador &amp; Behavioral Science Peak Performance
-                </div>
-                <p class="text-xs leading-relaxed" style="color: #94A3B8;">
-                  Bespoke execution framework engineered specifically for Antonio Harrison, Ph.D., BCBA-D's enterprise and high-impact clientele.
-                </p>
               </div>
 
-              <!-- Metrics Stack -->
-              <div class="space-y-3 mb-6">
-                
-                  <div class="p-3.5 rounded-xl flex items-center justify-between bg-zinc-950/60 border border-zinc-800/50">
-                    <div>
-                      <div class="text-lg sm:text-xl font-extrabold font-mono" style="color: #FF385C;">Ph.D., BCBA-D</div>
-                      <div class="text-xs font-medium" style="color: #94A3B8;">Behavioral Psychologist</div>
-                    </div>
-                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #FF385C15; color: #FF385C;">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                  </div>
-                
-                  <div class="p-3.5 rounded-xl flex items-center justify-between bg-zinc-950/60 border border-zinc-800/50">
-                    <div>
-                      <div class="text-lg sm:text-xl font-extrabold font-mono" style="color: #FF385C;">Supernatural</div>
-                      <div class="text-xs font-medium" style="color: #94A3B8;">Official VR Ambassador</div>
-                    </div>
-                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #FF385C15; color: #FF385C;">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                  </div>
-                
-                  <div class="p-3.5 rounded-xl flex items-center justify-between bg-zinc-950/60 border border-zinc-800/50">
-                    <div>
-                      <div class="text-lg sm:text-xl font-extrabold font-mono" style="color: #FF385C;">10,000+</div>
-                      <div class="text-xs font-medium" style="color: #94A3B8;">Athletes &amp; Leaders Coached</div>
-                    </div>
-                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #FF385C15; color: #FF385C;">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                  </div>
-                
+              <!-- Signature Topic Hook -->
+              <div class="w-full mt-4 p-4 rounded-xl bg-zinc-950/80 border border-speaker-border flex items-center gap-3">
+                <i data-lucide="sparkles" class="w-5 h-5 text-speaker-amber shrink-0"></i>
+                <div class="text-xs text-speaker-slate">
+                  <strong class="text-white">Signature Keynote:</strong> "The Behavioral Blueprint: Rewiring Instincts for Elite Execution."
+                </div>
               </div>
-
-              <!-- LinkedIn Profile Anchor -->
-              
-                <a href="https://www.linkedin.com/in/drantonioharrison/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-bold transition-all bg-zinc-800 hover:bg-zinc-700 text-white">
-                  <i data-lucide="linkedin" class="w-4 h-4 text-[#0A66C2]"></i>
-                  <span>View Antonio Harrison, Ph.D., BCBA-D's Official LinkedIn</span>
-                </a>
-              
 
             </div>
 
@@ -234,230 +240,25 @@
         </div>
 
       </div>
-
-      <!-- Bottom Authority Ecosystem Banner -->
-      <div class="w-full mt-14 rounded-2xl border bg-zinc-950/60 border-zinc-800/80 py-5 px-6">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span class="text-xs font-bold uppercase tracking-wider" style="color: #94A3B8;">
-            PROVEN TRACK RECORD & INSTITUTIONAL EXPERTISE
-          </span>
-          <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-bold" style="color: #FFFFFF;">
-            
-              <span class="flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #FF385C;"></i>
-                <span>Ph.D., BCBA-D Behavioral Psychologist</span>
-              </span>
-            
-              <span class="flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #FF385C;"></i>
-                <span>Supernatural Official VR Ambassador</span>
-              </span>
-            
-              <span class="flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #FF385C;"></i>
-                <span>10,000+ Athletes &amp; Leaders Coached</span>
-              </span>
-            
-          </div>
-        </div>
-      </div>
-
     </div>
   </main>
 
-  <!-- Interactive Footer -->
-  <footer class="w-full py-8 border-t border-zinc-800 text-zinc-500 text-center text-xs">
-    <div class="max-w-7xl mx-auto px-4">
-      &copy; 2026 Coach Doc / Meridian Blueprint LLC. All Rights Reserved. Private & Confidential Redesign Concept.
+  <footer class="w-full border-t border-speaker-border py-6 bg-speaker-bg text-center text-xs text-speaker-slate">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <img src="/assets/antonio-harrison/logo.png" alt="Meridian" class="h-6 w-auto opacity-70">
+        <span>© 2026 Meridian Blueprint LLC • Dr. Antonio Harrison. All rights reserved.</span>
+      </div>
+      <div class="text-zinc-500">Live Redesign Preview • Designed with pride by Miskat Hossain</div>
     </div>
   </footer>
 
-  
-  <!-- MANDATORY DESIGNER PREVIEW BAR (FIXED Z-50) -->
-  <aside 
-    id="designer-preview-bar" 
-    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3.5 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-zinc-950/90 backdrop-blur-xl border border-white/15 shadow-2xl text-white transition-all transform duration-200"
-    role="region"
-    aria-label="Design Concept Attribution Bar"
-  >
-    <div class="flex items-center gap-2.5">
-      <span class="relative flex h-2.5 w-2.5">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-      </span>
-      <div class="text-xs sm:text-[13px] font-medium leading-none text-zinc-200 truncate max-w-[140px] sm:max-w-none">
-        Redesign concept for <span class="font-bold text-white">Antonio Harrison, Ph.D., BCBA-D</span>
-      </div>
-    </div>
-
-    <!-- Demo Scope Tag -->
-    <span class="hidden lg:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-medium tracking-tight">
-      <i data-lucide="info" class="w-3 h-3"></i>
-      <span>Demo Hero Only • Full Redesign Available</span>
-    </span>
-
-    <div class="flex items-center gap-2">
-      <button 
-        id="why-converts-btn"
-        type="button"
-        onclick="toggleConvertsModal()" 
-        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-[0.97] text-zinc-200 hover:text-white text-xs font-semibold tracking-tight transition-all border border-white/10 cursor-pointer"
-        aria-expanded="false"
-        aria-controls="converts-modal"
-      >
-        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-zinc-400"></i>
-        <span>Why This Converts <span class="text-zinc-400 font-normal">(Notes)</span></span>
-      </button>
-
-      <a 
-        href="https://miskathossain.net" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-white text-zinc-950 hover:bg-zinc-100 active:scale-[0.97] text-xs font-bold tracking-tight transition-all shadow-md cursor-pointer whitespace-nowrap"
-      >
-        <span>Discuss Full Redesign</span>
-        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-      </a>
-    </div>
-  </aside>
-
-  <!-- MODAL: WHY THIS CONVERTS -->
-  <div 
-    id="converts-modal" 
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modal-title"
-  >
-    <div 
-      class="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-left transform scale-95 transition-transform duration-200"
-      onclick="event.stopPropagation()"
-    >
-      <button 
-        type="button" 
-        onclick="toggleConvertsModal()" 
-        class="absolute top-5 right-5 p-2 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
-        aria-label="Close notes modal"
-      >
-        <i data-lucide="x" class="w-4 h-4"></i>
-      </button>
-
-      <!-- Prominent Full Website Redesign Notice -->
-      <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-emerald-500/15 to-indigo-500/10 border border-emerald-500/30 mb-5 flex items-start gap-3">
-        <div class="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5">
-          <i data-lucide="info" class="w-4 h-4"></i>
-        </div>
-        <div class="text-xs text-zinc-300 leading-relaxed">
-          <span class="font-bold text-white block text-sm mb-0.5">This is just a demo hero section of your entire website.</span>
-          I created this bespoke concept to show how modern typography, visual hierarchy, and clear conversion paths elevate your positioning. 
-          <span class="text-emerald-300 font-semibold">Knock me or contact me to discuss a complete, high-converting website redesign for your business.</span>
-        </div>
-      </div>
-
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-2">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-        <span>CONVERSION LEAK ANALYSIS</span>
-      </div>
-
-      <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight">
-        Why This Redesign Converts More Clients
-      </h2>
-      <p class="text-xs sm:text-sm text-zinc-400 mt-1 mb-5">
-        Key architectural improvements applied to elevate <span class="text-white font-medium">Coach Doc / Meridian Blueprint LLC</span>.
-      </p>
-
-      <div class="space-y-3 mb-6">
-        
-          <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800">
-            <div class="text-xs font-bold text-white flex items-center gap-2 mb-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>Cutting-Edge VR Athletic Design</span>
-            </div>
-            <p class="text-xs text-zinc-400 leading-relaxed pl-5.5">
-              Infused Supernatural-inspired neon coral &amp; ultraviolet gradients with high-velocity typography.
-            </p>
-          </div>
-        
-          <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800">
-            <div class="text-xs font-bold text-white flex items-center gap-2 mb-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>Dual Authority Framework</span>
-            </div>
-            <p class="text-xs text-zinc-400 leading-relaxed pl-5.5">
-              Positioned his Ph.D. behavioral credentials alongside elite VR fitness mastery.
-            </p>
-          </div>
-        
-          <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800">
-            <div class="text-xs font-bold text-white flex items-center gap-2 mb-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>Executive Keynote Booking Funnel</span>
-            </div>
-            <p class="text-xs text-zinc-400 leading-relaxed pl-5.5">
-              Built a dedicated speaker kit action driving immediate corporate stage inquiries.
-            </p>
-          </div>
-        
-      </div>
-
-      <div class="pt-4 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <div class="text-xs text-zinc-400 text-center sm:text-left">
-          Ready for the full high-performance site?
-        </div>
-        <a 
-          href="https://miskathossain.net" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold text-xs tracking-wide transition-all shadow-lg active:scale-[0.98]"
-        >
-          <span>Knock Me to Redesign Full Site</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <script>
-    function toggleConvertsModal() {
-      const modal = document.getElementById('converts-modal');
-      const btn = document.getElementById('why-converts-btn');
-      const isHidden = modal.classList.contains('pointer-events-none');
-      
-      if (isHidden) {
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        modal.classList.add('opacity-100');
-        modal.querySelector('div').classList.remove('scale-95');
-        modal.querySelector('div').classList.add('scale-100');
-        btn.setAttribute('aria-expanded', 'true');
-      } else {
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        modal.classList.remove('opacity-100');
-        modal.querySelector('div').classList.add('scale-95');
-        modal.querySelector('div').classList.remove('scale-100');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    }
-
-    function initPreviewModal() {
-      const modal = document.getElementById('converts-modal');
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          toggleConvertsModal();
-        }
-      });
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
-          toggleConvertsModal();
-        }
-      });
-    }
-  </script>
-  
-
   <script>
     lucide.createIcons();
-    initPreviewModal();
+    function toggleNotesModal() {
+      const m = document.getElementById('notes-modal');
+      m.classList.toggle('hidden');
+    }
   </script>
 </body>
 </html>

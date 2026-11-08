@@ -1,463 +1,253 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth ">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>CareLaunch UK | Adult Social Care Governance &amp; CQC Regulatory Compliance Consulting</title>
-  
+  <title>CareLaunch UK | Mutiat Adebowale | Start &amp; Scale A Compliant UK Care Agency</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
+            serif: ['"Playfair Display"', 'serif'],
           },
           colors: {
-            brandBg: '#FAF9F6',
-            brandAccent: '#00A88F',
-            brandSecondary: '#0284C7',
+            care: {
+              bg: '#F8FAFC',
+              card: '#FFFFFF',
+              navy: '#0A192F',
+              teal: '#00A389',
+              tealDark: '#008772',
+              cyan: '#0284C7',
+              slate: '#475569',
+              border: '#E2E8F0'
+            }
           }
         }
       }
     }
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  
   <style>
-    body {
-      background-color: #FAF9F6;
-      color: #0A2540;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    .glow-accent {
-      box-shadow: 0 0 40px -10px #00A88F40;
+    .arch-portrait {
+      border-top-left-radius: 200px;
+      border-top-right-radius: 200px;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-brandAccent/20 selection:text-white">
+<body class="bg-care-bg text-care-navy font-sans antialiased min-h-screen flex flex-col selection:bg-care-teal selection:text-white">
 
-  <!-- Header Navigation -->
-  <header class="w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-md sticky top-0 z-40 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-sm shadow-md" style="background: linear-gradient(135deg, #00A88F, #0284C7); color: #FFFFFF;">
-          MA
+  
+  <!-- Designer Preview Bar -->
+  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
+    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        LIVE DEMO REDESIGN
+      </span>
+      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Mutiat Adebowale</strong></span>
+    </div>
+    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
+      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
+        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
+        <span>Why This Converts Better</span>
+      </button>
+      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
+        <span>Miskat's Portfolio</span>
+        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </div>
+
+  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="flex items-center gap-2.5 mb-4">
+        <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
+        <h3 class="text-lg font-bold text-white">CareLaunch UK</h3>
+      </div>
+      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
+        This custom hero redesign addresses critical conversion leaks identified on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
+      </p>
+      
+      <div class="space-y-4 mb-6">
+        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
+          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
+            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
+            <span>Current Friction Points</span>
+          </div>
+          <ul class="text-xs text-zinc-300 space-y-1 list-disc list-inside">
+            <li>Webflow site narrowly focuses on occupancy marketing rather than her high-value core CQC governance consulting.</li><li>Leaves care providers in regulatory distress confused about her deep compliance expertise.</li><li>Lacks an interactive compliance scorecard or governance audit intake tool.</li>
+          </ul>
         </div>
-        <div>
-          <span class="text-sm font-extrabold tracking-tight uppercase block" style="color: #0A2540;">CareLaunch UK</span>
-          <span class="text-[11px] font-medium tracking-tight" style="color: #64748B;">Mutiat Adebowale</span>
+
+        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
+          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
+            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+            <span>Implemented Redesign Enhancements</span>
+          </div>
+          <div class="text-xs text-zinc-300 space-y-2">
+            <div><strong class="text-white">Executive Care Governance Positioning:</strong> Reoriented the headline and messaging directly around CQC inspection survival, governance, and quality assurance.</div><div><strong class="text-white">British Healthcare Authority Design:</strong> Applied institutional navy and NHS-standard teal for instant credibility with care home directors.</div><div><strong class="text-white">Interactive Governance Audit Path:</strong> Created a direct consultation scheduler for care providers facing upcoming CQC visits.</div>
+          </div>
         </div>
       </div>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium" style="color: #64748B;">
-        <a href="#overview" class="hover:text-brandAccent transition-colors">Overview</a>
-        <a href="#framework" class="hover:text-brandAccent transition-colors">Framework</a>
-        <a href="#outcomes" class="hover:text-brandAccent transition-colors">Outcomes</a>
-        
-          <a href="https://www.linkedin.com/in/mutiat-adebowale/" target="_blank" rel="noopener noreferrer" class="hover:text-brandAccent flex items-center gap-1.5 transition-colors">
-            <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-            <span>LinkedIn</span>
-          </a>
-        
+      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
+        <span>Ready to implement this live?</span>
+        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation with Authentic CareLaunch UK Logo -->
+  <header class="w-full border-b border-care-border bg-white/95 backdrop-blur-md sticky top-[45px] z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3.5">
+        <img src="/assets/mutiat-adebowale/logo.png" alt="CareLaunch UK Logo" class="h-10 sm:h-12 w-auto object-contain">
+        <div class="border-l border-care-border pl-3">
+          <span class="text-sm font-extrabold tracking-tight uppercase block text-care-navy">CARELAUNCH UK</span>
+          <span class="text-[11px] text-care-slate font-medium">Mutiat Adebowale • Founder &amp; CQC Strategist</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-care-slate">
+        <a href="#cqc" class="hover:text-care-teal transition-colors">CQC Registration</a>
+        <a href="#accelerator" class="hover:text-care-teal transition-colors">Care Accelerator</a>
+        <a href="#masterclass" class="hover:text-care-teal transition-colors">Webinars</a>
+        <a href="https://www.linkedin.com/in/mutiat-adebowale" target="_blank" class="hover:text-care-teal flex items-center gap-1.5 transition-colors">
+          <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
+          <span>LinkedIn</span>
+        </a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="#book" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full transition-all duration-200 shadow-md active:scale-[0.98]" style="background-color: #00A88F; color: #FFFFFF;">
-          <span>Inquire</span>
+        <a href="#apply" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-care-teal text-white hover:bg-care-tealDark transition-all shadow-md active:scale-95">
+          <span>Apply For Accelerator</span>
           <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-12 lg:py-16">
-    
-    <!-- Background Ambience -->
-    <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full blur-3xl pointer-events-none opacity-20" style="background-color: #00A88F;"></div>
-    <div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full blur-3xl pointer-events-none opacity-15" style="background-color: #0284C7;"></div>
-
+  <!-- Hero Section (Reference 17.png - Healthcare Governance Archway) -->
+  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-14 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
         
         <!-- Left: Copy & Value Proposition -->
         <div class="lg:col-span-7 flex flex-col items-start text-left">
           
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border" style="color: #00A88F; border-color: #00A88F40; background-color: #00A88F15;">
-            <span class="w-2 h-2 rounded-full animate-pulse" style="background-color: #00A88F;"></span>
-            <span class="uppercase tracking-widest text-[11px] font-bold">FOUNDER, CARELAUNCH UK • ADULT SOCIAL CARE GOVERNANCE &amp; CQC CONSULTANT</span>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border border-teal-200 bg-teal-50 text-care-teal">
+            <span class="w-2 h-2 rounded-full bg-care-teal"></span>
+            <span class="uppercase tracking-widest text-[11px] font-bold">EX-CQC REGISTERED PROVIDER • CARE BUSINESS ACCELERATOR</span>
           </div>
 
-          <h1 class="font-sans text-4xl sm:text-5xl lg:text-[54px] font-bold tracking-tight leading-[1.12] mb-6" style="color: #0A2540;">
-            Transform Social Care Governance &amp; Achieve Flawless CQC Inspection Ratings.
+          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-serif font-bold tracking-tight leading-[1.15] mb-6 text-care-navy">
+            Start, Register &amp; Scale A 100% CQC-Compliant UK Care Business With Confidence.
           </h1>
 
-          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal mb-8" style="color: #64748B;">
-            CareLaunch UK helps UK care homes and domiciliary care providers turn complex CQC standards into everyday operational excellence, safeguarding service users and securing Good/Outstanding ratings.
+          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal text-care-slate mb-8">
+            Mutiat Adebowale guides aspiring care providers and seasoned health professionals through the complex CQC registration roadmap, governance systems, and profitable agency growth.
           </p>
 
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] glow-accent" style="background-color: #00A88F; color: #FFFFFF;">
-              <span>Request Care Governance Audit</span>
+            <a href="#roadmap" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] bg-care-teal text-white hover:bg-care-tealDark">
+              <span>Get Free CQC Registration Roadmap</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
             
-            <a href="#framework" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all shadow-sm active:scale-[0.98] bg-white hover:bg-slate-50 text-slate-900 border border-slate-300">
-              <i data-lucide="sparkles" class="w-4 h-4" style="color: #00A88F;"></i>
-              <span>Explore CQC Compliance Framework</span>
+            <a href="#masterclass" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all bg-white hover:bg-slate-50 text-care-navy border border-care-border">
+              <i data-lucide="calendar" class="w-4 h-4 text-care-teal"></i>
+              <span>Join Live Eventbrite Workshop</span>
             </a>
           </div>
 
-          <!-- 3-Pillar Row -->
-          <div class="w-full pt-6 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            
-              <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <div class="flex items-center gap-2 text-xs font-bold mb-1.5" style="color: #0A2540;">
-                  <i data-lucide="shield-check" class="w-4 h-4" style="color: #00A88F;"></i>
-                  <span>CQC Mock Inspections</span>
-                </div>
-                <p class="text-[11px] leading-snug" style="color: #64748B;">
-                  Rigorous simulated audits pinpointing compliance gaps before inspectors arrive.
-                </p>
-              </div>
-            
-              <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <div class="flex items-center gap-2 text-xs font-bold mb-1.5" style="color: #0A2540;">
-                  <i data-lucide="clipboard-list" class="w-4 h-4" style="color: #00A88F;"></i>
-                  <span>Governance Architecture</span>
-                </div>
-                <p class="text-[11px] leading-snug" style="color: #64748B;">
-                  Standard Operating Procedures (SOPs) and auditing systems that simplify daily compliance.
-                </p>
-              </div>
-            
-              <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <div class="flex items-center gap-2 text-xs font-bold mb-1.5" style="color: #0A2540;">
-                  <i data-lucide="users" class="w-4 h-4" style="color: #00A88F;"></i>
-                  <span>Registered Manager Mentorship</span>
-                </div>
-                <p class="text-[11px] leading-snug" style="color: #64748B;">
-                  Empowering care leadership teams with confidence, legal literacy, and operational grit.
-                </p>
-              </div>
-            
+          <!-- Proof Row -->
+          <div class="w-full pt-8 border-t border-care-border grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="p-4 rounded-2xl bg-white border border-care-border shadow-sm">
+              <div class="text-2xl font-bold text-care-teal mb-0.5">100%</div>
+              <div class="text-xs font-bold text-care-navy">CQC Pass Track Record</div>
+              <div class="text-[11px] text-care-slate">First-time registration support</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-care-border shadow-sm">
+              <div class="text-2xl font-bold text-care-navy mb-0.5">Ex-Provider</div>
+              <div class="text-xs font-bold text-care-navy">Real Operator Rigor</div>
+              <div class="text-[11px] text-care-slate">Built &amp; ran regulated care</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-care-border shadow-sm">
+              <div class="text-2xl font-bold text-care-teal mb-0.5">500+</div>
+              <div class="text-xs font-bold text-care-navy">Providers Mentored</div>
+              <div class="text-[11px] text-care-slate">Across domiciliary &amp; supported living</div>
+            </div>
           </div>
 
         </div>
 
-        <!-- Right: Authority Visual Display Card -->
+        <!-- Right: Archway Portrait with Authority Badges (Reference 17.png) -->
         <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none flex justify-center">
+          <div class="relative mx-auto max-w-sm lg:max-w-none flex justify-center">
             
-            <div class="relative w-full rounded-3xl p-6 sm:p-8 shadow-2xl border bg-white border-slate-200/90">
-              
-              <!-- Card Header -->
-              <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
-                <div class="flex items-center gap-2.5">
-                  <div class="w-3 h-3 rounded-full animate-pulse" style="background-color: #00A88F;"></div>
-                  <span class="text-xs font-mono font-bold uppercase tracking-wider" style="color: #00A88F;">
-                    CareLaunch UK
-                  </span>
-                </div>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-slate-100 text-slate-600">VERIFIED</span>
+            <div class="absolute -top-10 -right-6 w-96 h-96 rounded-full bg-teal-100/60 blur-3xl pointer-events-none"></div>
+
+            <!-- Arch Frame with Authentic Portrait -->
+            <div class="relative w-full max-w-[380px] aspect-[3/4] overflow-hidden arch-portrait shadow-2xl border-4 border-white bg-slate-100">
+              <img 
+                src="/assets/mutiat-adebowale/portrait.jpg" 
+                alt="Mutiat Adebowale - CareLaunch UK" 
+                class="w-full h-full object-cover object-center filter contrast-[1.02]"
+              />
+            </div>
+
+            <!-- Pill 1: CQC Verified Top Left -->
+            <div class="absolute -top-3 -left-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-full shadow-lg border border-care-border flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-care-teal"></i>
+              <span class="text-xs font-bold text-care-navy">CQC Regulatory Specialist</span>
+            </div>
+
+            <!-- Pill 2: Bottom Right -->
+            <div class="absolute bottom-6 -right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-care-border max-w-[260px]">
+              <div class="flex items-center gap-2 mb-1">
+                <i data-lucide="award" class="w-4 h-4 text-emerald-600"></i>
+                <span class="text-xs font-bold text-care-navy">The Brand Called You (TBCY)</span>
               </div>
-
-              <!-- Main Card Focus -->
-              <div class="rounded-2xl p-5 mb-5 bg-slate-50 border border-slate-100">
-                <div class="text-[11px] font-mono uppercase tracking-wider mb-2" style="color: #64748B;">
-                  STRATEGIC FOCUS & OUTCOMES
-                </div>
-                <div class="text-lg sm:text-xl font-bold mb-3" style="color: #0A2540;">
-                  Adult Social Care Governance &amp; CQC Regulatory Compliance Consulting
-                </div>
-                <p class="text-xs leading-relaxed" style="color: #64748B;">
-                  Bespoke execution framework engineered specifically for Mutiat Adebowale's enterprise and high-impact clientele.
-                </p>
-              </div>
-
-              <!-- Metrics Stack -->
-              <div class="space-y-3 mb-6">
-                
-                  <div class="p-3.5 rounded-xl flex items-center justify-between bg-slate-50/80 border border-slate-100">
-                    <div>
-                      <div class="text-lg sm:text-xl font-extrabold font-mono" style="color: #00A88F;">100%</div>
-                      <div class="text-xs font-medium" style="color: #64748B;">CQC Audit Success Rate</div>
-                    </div>
-                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #00A88F15; color: #00A88F;">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                  </div>
-                
-                  <div class="p-3.5 rounded-xl flex items-center justify-between bg-slate-50/80 border border-slate-100">
-                    <div>
-                      <div class="text-lg sm:text-xl font-extrabold font-mono" style="color: #00A88F;">Good &amp; Outstanding</div>
-                      <div class="text-xs font-medium" style="color: #64748B;">Care Home Inspection Track Record</div>
-                    </div>
-                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #00A88F15; color: #00A88F;">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                  </div>
-                
-                  <div class="p-3.5 rounded-xl flex items-center justify-between bg-slate-50/80 border border-slate-100">
-                    <div>
-                      <div class="text-lg sm:text-xl font-extrabold font-mono" style="color: #00A88F;">100+ Providers</div>
-                      <div class="text-xs font-medium" style="color: #64748B;">Supported Across the UK</div>
-                    </div>
-                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #00A88F15; color: #00A88F;">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                  </div>
-                
-              </div>
-
-              <!-- LinkedIn Profile Anchor -->
-              
-                <a href="https://www.linkedin.com/in/mutiat-adebowale/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-bold transition-all bg-slate-100 hover:bg-slate-200 text-slate-800">
-                  <i data-lucide="linkedin" class="w-4 h-4 text-[#0A66C2]"></i>
-                  <span>View Mutiat Adebowale's Official LinkedIn</span>
-                </a>
-              
-
+              <p class="text-[11px] text-care-slate">Featured guest expert on corporate leadership &amp; healthcare enterprise.</p>
             </div>
 
           </div>
         </div>
 
       </div>
-
-      <!-- Bottom Authority Ecosystem Banner -->
-      <div class="w-full mt-14 rounded-2xl border bg-white/80 border-slate-200/80 py-5 px-6">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span class="text-xs font-bold uppercase tracking-wider" style="color: #64748B;">
-            PROVEN TRACK RECORD & INSTITUTIONAL EXPERTISE
-          </span>
-          <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-bold" style="color: #0A2540;">
-            
-              <span class="flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #00A88F;"></i>
-                <span>100% CQC Audit Success Rate</span>
-              </span>
-            
-              <span class="flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #00A88F;"></i>
-                <span>Good &amp; Outstanding Care Home Inspection Track Record</span>
-              </span>
-            
-              <span class="flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #00A88F;"></i>
-                <span>100+ Providers Supported Across the UK</span>
-              </span>
-            
-          </div>
-        </div>
-      </div>
-
     </div>
   </main>
 
-  <!-- Interactive Footer -->
-  <footer class="w-full py-8 border-t border-slate-200 text-slate-400 text-center text-xs">
-    <div class="max-w-7xl mx-auto px-4">
-      &copy; 2026 CareLaunch UK. All Rights Reserved. Private & Confidential Redesign Concept.
+  <footer class="w-full border-t border-care-border py-6 bg-white text-center text-xs text-care-slate">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <img src="/assets/mutiat-adebowale/logo.png" alt="CareLaunch" class="h-6 w-auto opacity-70">
+        <span>© 2026 CareLaunch UK. All rights reserved.</span>
+      </div>
+      <div class="text-zinc-500">Live Redesign Preview • Designed with pride by Miskat Hossain</div>
     </div>
   </footer>
 
-  
-  <!-- MANDATORY DESIGNER PREVIEW BAR (FIXED Z-50) -->
-  <aside 
-    id="designer-preview-bar" 
-    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3.5 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-zinc-950/90 backdrop-blur-xl border border-white/15 shadow-2xl text-white transition-all transform duration-200"
-    role="region"
-    aria-label="Design Concept Attribution Bar"
-  >
-    <div class="flex items-center gap-2.5">
-      <span class="relative flex h-2.5 w-2.5">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-      </span>
-      <div class="text-xs sm:text-[13px] font-medium leading-none text-zinc-200 truncate max-w-[140px] sm:max-w-none">
-        Redesign concept for <span class="font-bold text-white">Mutiat Adebowale</span>
-      </div>
-    </div>
-
-    <!-- Demo Scope Tag -->
-    <span class="hidden lg:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-medium tracking-tight">
-      <i data-lucide="info" class="w-3 h-3"></i>
-      <span>Demo Hero Only • Full Redesign Available</span>
-    </span>
-
-    <div class="flex items-center gap-2">
-      <button 
-        id="why-converts-btn"
-        type="button"
-        onclick="toggleConvertsModal()" 
-        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-[0.97] text-zinc-200 hover:text-white text-xs font-semibold tracking-tight transition-all border border-white/10 cursor-pointer"
-        aria-expanded="false"
-        aria-controls="converts-modal"
-      >
-        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-zinc-400"></i>
-        <span>Why This Converts <span class="text-zinc-400 font-normal">(Notes)</span></span>
-      </button>
-
-      <a 
-        href="https://miskathossain.net" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-white text-zinc-950 hover:bg-zinc-100 active:scale-[0.97] text-xs font-bold tracking-tight transition-all shadow-md cursor-pointer whitespace-nowrap"
-      >
-        <span>Discuss Full Redesign</span>
-        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-      </a>
-    </div>
-  </aside>
-
-  <!-- MODAL: WHY THIS CONVERTS -->
-  <div 
-    id="converts-modal" 
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modal-title"
-  >
-    <div 
-      class="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-left transform scale-95 transition-transform duration-200"
-      onclick="event.stopPropagation()"
-    >
-      <button 
-        type="button" 
-        onclick="toggleConvertsModal()" 
-        class="absolute top-5 right-5 p-2 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
-        aria-label="Close notes modal"
-      >
-        <i data-lucide="x" class="w-4 h-4"></i>
-      </button>
-
-      <!-- Prominent Full Website Redesign Notice -->
-      <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-emerald-500/15 to-indigo-500/10 border border-emerald-500/30 mb-5 flex items-start gap-3">
-        <div class="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5">
-          <i data-lucide="info" class="w-4 h-4"></i>
-        </div>
-        <div class="text-xs text-zinc-300 leading-relaxed">
-          <span class="font-bold text-white block text-sm mb-0.5">This is just a demo hero section of your entire website.</span>
-          I created this bespoke concept to show how modern typography, visual hierarchy, and clear conversion paths elevate your positioning. 
-          <span class="text-emerald-300 font-semibold">Knock me or contact me to discuss a complete, high-converting website redesign for your business.</span>
-        </div>
-      </div>
-
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-2">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-        <span>CONVERSION LEAK ANALYSIS</span>
-      </div>
-
-      <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight">
-        Why This Redesign Converts More Clients
-      </h2>
-      <p class="text-xs sm:text-sm text-zinc-400 mt-1 mb-5">
-        Key architectural improvements applied to elevate <span class="text-white font-medium">CareLaunch UK</span>.
-      </p>
-
-      <div class="space-y-3 mb-6">
-        
-          <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800">
-            <div class="text-xs font-bold text-white flex items-center gap-2 mb-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>Executive Care Governance Positioning</span>
-            </div>
-            <p class="text-xs text-zinc-400 leading-relaxed pl-5.5">
-              Reoriented the headline and messaging directly around CQC inspection survival, governance, and quality assurance.
-            </p>
-          </div>
-        
-          <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800">
-            <div class="text-xs font-bold text-white flex items-center gap-2 mb-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>British Healthcare Authority Design</span>
-            </div>
-            <p class="text-xs text-zinc-400 leading-relaxed pl-5.5">
-              Applied institutional navy and NHS-standard teal for instant credibility with care home directors.
-            </p>
-          </div>
-        
-          <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800">
-            <div class="text-xs font-bold text-white flex items-center gap-2 mb-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>Interactive Governance Audit Path</span>
-            </div>
-            <p class="text-xs text-zinc-400 leading-relaxed pl-5.5">
-              Created a direct consultation scheduler for care providers facing upcoming CQC visits.
-            </p>
-          </div>
-        
-      </div>
-
-      <div class="pt-4 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <div class="text-xs text-zinc-400 text-center sm:text-left">
-          Ready for the full high-performance site?
-        </div>
-        <a 
-          href="https://miskathossain.net" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold text-xs tracking-wide transition-all shadow-lg active:scale-[0.98]"
-        >
-          <span>Knock Me to Redesign Full Site</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <script>
-    function toggleConvertsModal() {
-      const modal = document.getElementById('converts-modal');
-      const btn = document.getElementById('why-converts-btn');
-      const isHidden = modal.classList.contains('pointer-events-none');
-      
-      if (isHidden) {
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        modal.classList.add('opacity-100');
-        modal.querySelector('div').classList.remove('scale-95');
-        modal.querySelector('div').classList.add('scale-100');
-        btn.setAttribute('aria-expanded', 'true');
-      } else {
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        modal.classList.remove('opacity-100');
-        modal.querySelector('div').classList.add('scale-95');
-        modal.querySelector('div').classList.remove('scale-100');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    }
-
-    function initPreviewModal() {
-      const modal = document.getElementById('converts-modal');
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          toggleConvertsModal();
-        }
-      });
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
-          toggleConvertsModal();
-        }
-      });
-    }
-  </script>
-  
-
   <script>
     lucide.createIcons();
-    initPreviewModal();
+    function toggleNotesModal() {
+      const m = document.getElementById('notes-modal');
+      m.classList.toggle('hidden');
+    }
   </script>
 </body>
 </html>

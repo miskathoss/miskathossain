@@ -1,232 +1,234 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth ">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>The Aniala Group / Coach Tei | Faith-Led Women Entrepreneur Coaching &amp; Life Transitions</title>
-  
+  <title>Coach Tei | The Aniala Group | Tracy Gainer MS LPC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
+            serif: ['"Cormorant Garamond"', 'serif'],
           },
           colors: {
-            brandBg: '#FAF5F0',
-            brandAccent: '#BE5A5A',
-            brandSecondary: '#4A1525',
+            aniala: {
+              bg: '#FAF5F8',
+              card: '#FFFFFF',
+              plum: '#2A1428',
+              rose: '#9D446E',
+              roseDark: '#803457',
+              terracotta: '#D97746',
+              slate: '#5A4A57',
+              border: '#EADCE5'
+            }
           }
         }
       }
     }
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <style>
-    body {
-      background-color: #FAF5F0;
-      color: #2E1065;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    .glow-accent {
-      box-shadow: 0 0 40px -10px #BE5A5A40;
-    }
-  </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-brandAccent/20 selection:text-white">
+<body class="bg-aniala-bg text-aniala-plum font-sans antialiased min-h-screen flex flex-col selection:bg-aniala-rose selection:text-white">
 
-  <!-- Header Navigation -->
-  <header class="w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-md sticky top-0 z-40 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-sm shadow-md" style="background: linear-gradient(135deg, #BE5A5A, #4A1525); color: #FFFFFF;">
-          TG
+  
+  <!-- Designer Preview Bar -->
+  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
+    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        LIVE DEMO REDESIGN
+      </span>
+      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Tracy Gainer MS LPC</strong></span>
+    </div>
+    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
+      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
+        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
+        <span>Why This Converts Better</span>
+      </button>
+      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
+        <span>Miskat's Portfolio</span>
+        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </div>
+
+  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="flex items-center gap-2.5 mb-4">
+        <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
+        <h3 class="text-lg font-bold text-white">The Aniala Group / Coach Tei</h3>
+      </div>
+      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
+        This custom hero redesign addresses critical conversion leaks identified on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
+      </p>
+      
+      <div class="space-y-4 mb-6">
+        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
+          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
+            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
+            <span>Current Friction Points</span>
+          </div>
+          <ul class="text-xs text-zinc-300 space-y-1 list-disc list-inside">
+            <li>Brand fragmentation across Coach Tei, Aniala Coaching, and private psychotherapy on an overloaded WordPress site.</li><li>Cluttered visual hierarchy and mixed font treatments creating cognitive friction.</li><li>Unclear distinction between clinical therapy services and premium business mentorship.</li>
+          </ul>
         </div>
-        <div>
-          <span class="text-sm font-extrabold tracking-tight uppercase block" style="color: #2E1065;">The Aniala Group / Coach Tei</span>
-          <span class="text-[11px] font-medium tracking-tight" style="color: #71717A;">Tracy Gainer MS LPC</span>
+
+        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
+          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
+            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+            <span>Implemented Redesign Enhancements</span>
+          </div>
+          <div class="text-xs text-zinc-300 space-y-2">
+            <div><strong class="text-white">Unified Luxury Brand Flagship:</strong> Harmonized her psychotherapy and business coaching under a warm, feminine editorial palette (blush rose &amp; plum).</div><div><strong class="text-white">Clear Transformation Pillars:</strong> Articulated midlife transitions, spiritual alignment, and business expansion as distinct offerings.</div><div><strong class="text-white">Friction-Free Clarity Intake:</strong> Created a welcoming, zero-intimidation consultation booking flow for faith-driven women.</div>
+          </div>
         </div>
       </div>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium" style="color: #71717A;">
-        <a href="#overview" class="hover:text-brandAccent transition-colors">Overview</a>
-        <a href="#framework" class="hover:text-brandAccent transition-colors">Framework</a>
-        <a href="#outcomes" class="hover:text-brandAccent transition-colors">Outcomes</a>
-        
-          <a href="https://www.linkedin.com/in/therapistracygainer/" target="_blank" rel="noopener noreferrer" class="hover:text-brandAccent flex items-center gap-1.5 transition-colors">
-            <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-            <span>LinkedIn</span>
-          </a>
-        
+      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
+        <span>Ready to implement this live?</span>
+        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="w-full border-b border-aniala-border bg-white/95 backdrop-blur-md sticky top-[45px] z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3.5">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-pink-500 to-rose-700 flex items-center justify-center font-serif text-white font-bold text-lg shadow-md">
+          TG
+        </div>
+        <div class="border-l border-aniala-border pl-3">
+          <span class="text-sm font-extrabold tracking-tight uppercase block text-aniala-plum">THE ANIALA GROUP</span>
+          <span class="text-[11px] text-aniala-slate font-medium">Tracy Gainer MS LPC • Coach Tei</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-aniala-slate">
+        <a href="#about" class="hover:text-aniala-rose transition-colors">About Tracy</a>
+        <a href="#book" class="hover:text-aniala-rose transition-colors">Nurtured By Faith</a>
+        <a href="#detox" class="hover:text-aniala-rose transition-colors">Decision Detox</a>
+        <a href="https://www.linkedin.com/in/therapistracygaine" target="_blank" class="hover:text-aniala-rose flex items-center gap-1.5 transition-colors">
+          <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
+          <span>LinkedIn</span>
+        </a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="#book" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full transition-all duration-200 shadow-md active:scale-[0.98]" style="background-color: #BE5A5A; color: #FFFFFF;">
-          <span>Inquire</span>
+        <a href="#book" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-aniala-rose text-white hover:bg-aniala-roseDark transition-all shadow-md active:scale-95">
+          <span>Book Decision Detox</span>
           <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-12 lg:py-16">
-    
-    <!-- Background Ambience -->
-    <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full blur-3xl pointer-events-none opacity-20" style="background-color: #BE5A5A;"></div>
-    <div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full blur-3xl pointer-events-none opacity-15" style="background-color: #4A1525;"></div>
-
+  <!-- Hero Section (Reference 20.png - Evolved Energetics Warm Plum & Rose) -->
+  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-14 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
         
         <!-- Left: Copy & Value Proposition -->
         <div class="lg:col-span-7 flex flex-col items-start text-left">
           
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border" style="color: #BE5A5A; border-color: #BE5A5A40; background-color: #BE5A5A15;">
-            <span class="w-2 h-2 rounded-full animate-pulse" style="background-color: #BE5A5A;"></span>
-            <span class="uppercase tracking-widest text-[11px] font-bold">LICENSED PSYCHOTHERAPIST • FAITH-BASED BUSINESS COACH • PODCAST HOST</span>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border border-pink-200 bg-pink-100/60 text-aniala-rose">
+            <i data-lucide="heart" class="w-3.5 h-3.5"></i>
+            <span class="uppercase tracking-widest text-[11px] font-bold">LICENSED PROFESSIONAL COUNSELOR • AUTHOR • FAITH STRATEGIST</span>
           </div>
 
-          <h1 class="font-serif text-4xl sm:text-5xl lg:text-[54px] font-bold tracking-tight leading-[1.12] mb-6" style="color: #2E1065;">
-            Empowering Faith-Led Women to Master Midlife Transitions &amp; Thrive in Business.
+          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-serif font-bold tracking-tight leading-[1.15] mb-6 text-aniala-plum">
+            Break Overwhelm, Heal Decision Fatigue &amp; Reclaim Your God-Given Purpose.
           </h1>
 
-          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal mb-8" style="color: #71717A;">
-            Founder of The Aniala Group and Coach Tei. Guiding faith-driven women entrepreneurs through personal reinvention, emotional healing, and strategic business growth with peace and clarity.
+          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal text-aniala-slate mb-8">
+            MS, LPC, clinical therapist, and author of <em>Nurtured By Faith</em>. Guiding high-achieving women and leaders out of chronic emotional burnout through clinical faith-based therapy and the Decision Detox framework.
           </p>
 
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] glow-accent" style="background-color: #BE5A5A; color: #FFFFFF;">
-              <span>Schedule Clarity Consultation</span>
+            <a href="#detox" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] bg-aniala-rose text-white hover:bg-aniala-roseDark">
+              <span>Apply For Decision Detox Mentorship</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
             
-            <a href="#framework" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all shadow-sm active:scale-[0.98] bg-white hover:bg-slate-50 text-slate-900 border border-slate-300">
-              <i data-lucide="sparkles" class="w-4 h-4" style="color: #BE5A5A;"></i>
-              <span>Listen to The Aniala Podcast</span>
+            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all bg-white hover:bg-slate-50 text-aniala-plum border border-aniala-border">
+              <i data-lucide="book-open" class="w-4 h-4 text-aniala-rose"></i>
+              <span>Order Nurtured By Faith</span>
             </a>
           </div>
 
-          <!-- 3-Pillar Row -->
-          <div class="w-full pt-6 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            
-              <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <div class="flex items-center gap-2 text-xs font-bold mb-1.5" style="color: #2E1065;">
-                  <i data-lucide="heart" class="w-4 h-4" style="color: #BE5A5A;"></i>
-                  <span>Emotional Reconnection</span>
-                </div>
-                <p class="text-[11px] leading-snug" style="color: #71717A;">
-                  Clinical therapy tools to heal burnout, guilt, and emotional exhaustion.
-                </p>
-              </div>
-            
-              <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <div class="flex items-center gap-2 text-xs font-bold mb-1.5" style="color: #2E1065;">
-                  <i data-lucide="sparkles" class="w-4 h-4" style="color: #BE5A5A;"></i>
-                  <span>Midlife Reinvention</span>
-                </div>
-                <p class="text-[11px] leading-snug" style="color: #71717A;">
-                  Navigating major career and personal pivots with confidence and purpose.
-                </p>
-              </div>
-            
-              <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <div class="flex items-center gap-2 text-xs font-bold mb-1.5" style="color: #2E1065;">
-                  <i data-lucide="briefcase" class="w-4 h-4" style="color: #BE5A5A;"></i>
-                  <span>Faith-Led Business Growth</span>
-                </div>
-                <p class="text-[11px] leading-snug" style="color: #71717A;">
-                  Sustainable entrepreneurial strategies aligned with your core values.
-                </p>
-              </div>
-            
+          <!-- Proof Metrics -->
+          <div class="w-full pt-8 border-t border-aniala-border grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="p-4 rounded-2xl bg-white border border-aniala-border shadow-sm">
+              <div class="text-2xl font-serif font-bold text-aniala-rose mb-0.5">MS, LPC</div>
+              <div class="text-xs font-bold text-aniala-plum">Clinical Therapy Rigor</div>
+              <div class="text-[11px] text-aniala-slate">Licensed mental health</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-aniala-border shadow-sm">
+              <div class="text-2xl font-serif font-bold text-aniala-plum mb-0.5">Nurtured By Faith</div>
+              <div class="text-xs font-bold text-aniala-plum">Published Author</div>
+              <div class="text-[11px] text-aniala-slate">Amazon bestselling title</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-aniala-border shadow-sm">
+              <div class="text-2xl font-serif font-bold text-aniala-terracotta mb-0.5">Decision Detox</div>
+              <div class="text-xs font-bold text-aniala-plum">Signature Program</div>
+              <div class="text-[11px] text-aniala-slate">Clarity &amp; peace of mind</div>
+            </div>
           </div>
 
         </div>
 
-        <!-- Right: Authority Visual Display Card -->
+        <!-- Right: Reference 20.png Editorial Card with Authentic Portrait -->
         <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none flex justify-center">
+          <div class="relative mx-auto max-w-sm lg:max-w-none flex justify-center">
             
-            <div class="relative w-full rounded-3xl p-6 sm:p-8 shadow-2xl border bg-white border-slate-200/90">
+            <!-- Soft Organic Halo -->
+            <div class="absolute -top-10 -right-6 w-96 h-96 rounded-full bg-pink-200/50 blur-3xl pointer-events-none"></div>
+
+            <div class="relative w-full rounded-3xl bg-white border border-aniala-border p-6 shadow-xl flex flex-col items-center">
               
-              <!-- Card Header -->
-              <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
-                <div class="flex items-center gap-2.5">
-                  <div class="w-3 h-3 rounded-full animate-pulse" style="background-color: #BE5A5A;"></div>
-                  <span class="text-xs font-mono font-bold uppercase tracking-wider" style="color: #BE5A5A;">
-                    The Aniala Group / Coach Tei
-                  </span>
-                </div>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-slate-100 text-slate-600">VERIFIED</span>
+              <!-- Frame Header -->
+              <div class="w-full flex items-center justify-between pb-4 border-b border-aniala-border mb-5">
+                <span class="text-xs font-serif font-bold tracking-wider text-aniala-rose">THE ANIALA GROUP</span>
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-sans font-bold bg-pink-100 text-aniala-rose">COACH TEI</span>
               </div>
 
-              <!-- Main Card Focus -->
-              <div class="rounded-2xl p-5 mb-5 bg-slate-50 border border-slate-100">
-                <div class="text-[11px] font-mono uppercase tracking-wider mb-2" style="color: #71717A;">
-                  STRATEGIC FOCUS & OUTCOMES
+              <!-- Authentic Portrait Image -->
+              <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-aniala-border shadow-inner bg-slate-100">
+                <img 
+                  src="/assets/tracy-gainer/portrait.jpg" 
+                  alt="Tracy Gainer MS LPC - Coach Tei" 
+                  class="w-full h-full object-cover object-top filter contrast-[1.02]"
+                />
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-aniala-plum/80 via-transparent to-transparent"></div>
+                
+                <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-aniala-border flex items-center justify-between">
+                  <div>
+                    <div class="text-sm font-bold text-aniala-plum">Tracy Gainer, MS LPC</div>
+                    <div class="text-[11px] text-aniala-slate">Faith Therapist &amp; Author</div>
+                  </div>
+                  <i data-lucide="sparkles" class="w-5 h-5 text-aniala-rose"></i>
                 </div>
-                <div class="text-lg sm:text-xl font-bold mb-3" style="color: #2E1065;">
-                  Faith-Led Women Entrepreneur Coaching &amp; Life Transitions
-                </div>
-                <p class="text-xs leading-relaxed" style="color: #71717A;">
-                  Bespoke execution framework engineered specifically for Tracy Gainer MS LPC's enterprise and high-impact clientele.
-                </p>
               </div>
 
-              <!-- Metrics Stack -->
-              <div class="space-y-3 mb-6">
-                
-                  <div class="p-3.5 rounded-xl flex items-center justify-between bg-slate-50/80 border border-slate-100">
-                    <div>
-                      <div class="text-lg sm:text-xl font-extrabold font-mono" style="color: #BE5A5A;">MS LPC</div>
-                      <div class="text-xs font-medium" style="color: #71717A;">Licensed Psychotherapist</div>
-                    </div>
-                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #BE5A5A15; color: #BE5A5A;">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                  </div>
-                
-                  <div class="p-3.5 rounded-xl flex items-center justify-between bg-slate-50/80 border border-slate-100">
-                    <div>
-                      <div class="text-lg sm:text-xl font-extrabold font-mono" style="color: #BE5A5A;">500+</div>
-                      <div class="text-xs font-medium" style="color: #71717A;">Women Leaders Guided</div>
-                    </div>
-                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #BE5A5A15; color: #BE5A5A;">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                  </div>
-                
-                  <div class="p-3.5 rounded-xl flex items-center justify-between bg-slate-50/80 border border-slate-100">
-                    <div>
-                      <div class="text-lg sm:text-xl font-extrabold font-mono" style="color: #BE5A5A;">Faith + Biz</div>
-                      <div class="text-xs font-medium" style="color: #71717A;">Integrated Life Strategy</div>
-                    </div>
-                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #BE5A5A15; color: #BE5A5A;">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                  </div>
-                
+              <div class="w-full mt-4 p-4 rounded-xl bg-pink-50/80 border border-pink-100 flex items-center gap-3">
+                <i data-lucide="book" class="w-5 h-5 text-aniala-rose shrink-0"></i>
+                <div class="text-xs text-aniala-slate">
+                  <strong class="text-aniala-plum">Bestselling Author:</strong> <em>Nurtured By Faith</em> — Healing trauma and reconnecting with peace.
+                </div>
               </div>
-
-              <!-- LinkedIn Profile Anchor -->
-              
-                <a href="https://www.linkedin.com/in/therapistracygainer/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-bold transition-all bg-slate-100 hover:bg-slate-200 text-slate-800">
-                  <i data-lucide="linkedin" class="w-4 h-4 text-[#0A66C2]"></i>
-                  <span>View Tracy Gainer MS LPC's Official LinkedIn</span>
-                </a>
-              
 
             </div>
 
@@ -234,230 +236,22 @@
         </div>
 
       </div>
-
-      <!-- Bottom Authority Ecosystem Banner -->
-      <div class="w-full mt-14 rounded-2xl border bg-white/80 border-slate-200/80 py-5 px-6">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span class="text-xs font-bold uppercase tracking-wider" style="color: #71717A;">
-            PROVEN TRACK RECORD & INSTITUTIONAL EXPERTISE
-          </span>
-          <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-bold" style="color: #2E1065;">
-            
-              <span class="flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #BE5A5A;"></i>
-                <span>MS LPC Licensed Psychotherapist</span>
-              </span>
-            
-              <span class="flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #BE5A5A;"></i>
-                <span>500+ Women Leaders Guided</span>
-              </span>
-            
-              <span class="flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #BE5A5A;"></i>
-                <span>Faith + Biz Integrated Life Strategy</span>
-              </span>
-            
-          </div>
-        </div>
-      </div>
-
     </div>
   </main>
 
-  <!-- Interactive Footer -->
-  <footer class="w-full py-8 border-t border-slate-200 text-slate-400 text-center text-xs">
-    <div class="max-w-7xl mx-auto px-4">
-      &copy; 2026 The Aniala Group / Coach Tei. All Rights Reserved. Private & Confidential Redesign Concept.
+  <footer class="w-full border-t border-aniala-border py-6 bg-white text-center text-xs text-aniala-slate">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>© 2026 The Aniala Group • Tracy Gainer MS LPC. All rights reserved.</div>
+      <div class="text-zinc-500">Live Redesign Preview • Designed with pride by Miskat Hossain</div>
     </div>
   </footer>
 
-  
-  <!-- MANDATORY DESIGNER PREVIEW BAR (FIXED Z-50) -->
-  <aside 
-    id="designer-preview-bar" 
-    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3.5 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-zinc-950/90 backdrop-blur-xl border border-white/15 shadow-2xl text-white transition-all transform duration-200"
-    role="region"
-    aria-label="Design Concept Attribution Bar"
-  >
-    <div class="flex items-center gap-2.5">
-      <span class="relative flex h-2.5 w-2.5">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-      </span>
-      <div class="text-xs sm:text-[13px] font-medium leading-none text-zinc-200 truncate max-w-[140px] sm:max-w-none">
-        Redesign concept for <span class="font-bold text-white">Tracy Gainer MS LPC</span>
-      </div>
-    </div>
-
-    <!-- Demo Scope Tag -->
-    <span class="hidden lg:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-medium tracking-tight">
-      <i data-lucide="info" class="w-3 h-3"></i>
-      <span>Demo Hero Only • Full Redesign Available</span>
-    </span>
-
-    <div class="flex items-center gap-2">
-      <button 
-        id="why-converts-btn"
-        type="button"
-        onclick="toggleConvertsModal()" 
-        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-[0.97] text-zinc-200 hover:text-white text-xs font-semibold tracking-tight transition-all border border-white/10 cursor-pointer"
-        aria-expanded="false"
-        aria-controls="converts-modal"
-      >
-        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-zinc-400"></i>
-        <span>Why This Converts <span class="text-zinc-400 font-normal">(Notes)</span></span>
-      </button>
-
-      <a 
-        href="https://miskathossain.net" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-white text-zinc-950 hover:bg-zinc-100 active:scale-[0.97] text-xs font-bold tracking-tight transition-all shadow-md cursor-pointer whitespace-nowrap"
-      >
-        <span>Discuss Full Redesign</span>
-        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-      </a>
-    </div>
-  </aside>
-
-  <!-- MODAL: WHY THIS CONVERTS -->
-  <div 
-    id="converts-modal" 
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modal-title"
-  >
-    <div 
-      class="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-left transform scale-95 transition-transform duration-200"
-      onclick="event.stopPropagation()"
-    >
-      <button 
-        type="button" 
-        onclick="toggleConvertsModal()" 
-        class="absolute top-5 right-5 p-2 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
-        aria-label="Close notes modal"
-      >
-        <i data-lucide="x" class="w-4 h-4"></i>
-      </button>
-
-      <!-- Prominent Full Website Redesign Notice -->
-      <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-emerald-500/15 to-indigo-500/10 border border-emerald-500/30 mb-5 flex items-start gap-3">
-        <div class="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5">
-          <i data-lucide="info" class="w-4 h-4"></i>
-        </div>
-        <div class="text-xs text-zinc-300 leading-relaxed">
-          <span class="font-bold text-white block text-sm mb-0.5">This is just a demo hero section of your entire website.</span>
-          I created this bespoke concept to show how modern typography, visual hierarchy, and clear conversion paths elevate your positioning. 
-          <span class="text-emerald-300 font-semibold">Knock me or contact me to discuss a complete, high-converting website redesign for your business.</span>
-        </div>
-      </div>
-
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-2">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-        <span>CONVERSION LEAK ANALYSIS</span>
-      </div>
-
-      <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight">
-        Why This Redesign Converts More Clients
-      </h2>
-      <p class="text-xs sm:text-sm text-zinc-400 mt-1 mb-5">
-        Key architectural improvements applied to elevate <span class="text-white font-medium">The Aniala Group / Coach Tei</span>.
-      </p>
-
-      <div class="space-y-3 mb-6">
-        
-          <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800">
-            <div class="text-xs font-bold text-white flex items-center gap-2 mb-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>Unified Luxury Brand Flagship</span>
-            </div>
-            <p class="text-xs text-zinc-400 leading-relaxed pl-5.5">
-              Harmonized her psychotherapy and business coaching under a warm, feminine editorial palette (blush rose &amp; plum).
-            </p>
-          </div>
-        
-          <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800">
-            <div class="text-xs font-bold text-white flex items-center gap-2 mb-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>Clear Transformation Pillars</span>
-            </div>
-            <p class="text-xs text-zinc-400 leading-relaxed pl-5.5">
-              Articulated midlife transitions, spiritual alignment, and business expansion as distinct offerings.
-            </p>
-          </div>
-        
-          <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800">
-            <div class="text-xs font-bold text-white flex items-center gap-2 mb-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>Friction-Free Clarity Intake</span>
-            </div>
-            <p class="text-xs text-zinc-400 leading-relaxed pl-5.5">
-              Created a welcoming, zero-intimidation consultation booking flow for faith-driven women.
-            </p>
-          </div>
-        
-      </div>
-
-      <div class="pt-4 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <div class="text-xs text-zinc-400 text-center sm:text-left">
-          Ready for the full high-performance site?
-        </div>
-        <a 
-          href="https://miskathossain.net" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold text-xs tracking-wide transition-all shadow-lg active:scale-[0.98]"
-        >
-          <span>Knock Me to Redesign Full Site</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <script>
-    function toggleConvertsModal() {
-      const modal = document.getElementById('converts-modal');
-      const btn = document.getElementById('why-converts-btn');
-      const isHidden = modal.classList.contains('pointer-events-none');
-      
-      if (isHidden) {
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        modal.classList.add('opacity-100');
-        modal.querySelector('div').classList.remove('scale-95');
-        modal.querySelector('div').classList.add('scale-100');
-        btn.setAttribute('aria-expanded', 'true');
-      } else {
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        modal.classList.remove('opacity-100');
-        modal.querySelector('div').classList.add('scale-95');
-        modal.querySelector('div').classList.remove('scale-100');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    }
-
-    function initPreviewModal() {
-      const modal = document.getElementById('converts-modal');
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          toggleConvertsModal();
-        }
-      });
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
-          toggleConvertsModal();
-        }
-      });
-    }
-  </script>
-  
-
   <script>
     lucide.createIcons();
-    initPreviewModal();
+    function toggleNotesModal() {
+      const m = document.getElementById('notes-modal');
+      m.classList.toggle('hidden');
+    }
   </script>
 </body>
 </html>

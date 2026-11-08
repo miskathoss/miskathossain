@@ -1,232 +1,225 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth ">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Be World Class Group | Sport Psychology Consultant, Author &amp; Keynote Speaker</title>
-  
+  <title>Be World Class | Simon Hartley | Elite Sport Psychology</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            brandBg: '#FAF9F6',
-            brandAccent: '#D97706',
-            brandSecondary: '#2563EB',
+            worldclass: {
+              bg: '#050C1A',
+              card: '#0E1B38',
+              amber: '#F59E0B',
+              blue: '#38BDF8',
+              slate: '#94A3B8',
+              border: '#1E2F56'
+            }
           }
         }
       }
     }
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <style>
-    body {
-      background-color: #FAF9F6;
-      color: #0F172A;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    .glow-accent {
-      box-shadow: 0 0 40px -10px #D9770640;
-    }
-  </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-brandAccent/20 selection:text-white">
+<body class="bg-worldclass-bg text-white font-sans antialiased min-h-screen flex flex-col selection:bg-worldclass-amber selection:text-black">
 
-  <!-- Header Navigation -->
-  <header class="w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-md sticky top-0 z-40 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl flex items-center justify-center font-bold text-sm shadow-md" style="background: linear-gradient(135deg, #D97706, #2563EB); color: #FFFFFF;">
-          SH
+  
+  <!-- Designer Preview Bar -->
+  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
+    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        LIVE DEMO REDESIGN
+      </span>
+      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Simon Hartley</strong></span>
+    </div>
+    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
+      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
+        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
+        <span>Why This Converts Better</span>
+      </button>
+      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
+        <span>Miskat's Portfolio</span>
+        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </div>
+
+  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="flex items-center gap-2.5 mb-4">
+        <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
+        <h3 class="text-lg font-bold text-white">Be World Class Group</h3>
+      </div>
+      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
+        This custom hero redesign addresses critical conversion leaks identified on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
+      </p>
+      
+      <div class="space-y-4 mb-6">
+        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
+          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
+            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
+            <span>Current Friction Points</span>
+          </div>
+          <ul class="text-xs text-zinc-300 space-y-1 list-disc list-inside">
+            <li>World-class athletic coaching caliber trapped in a dated WordPress theme with a confusing &#039;40+&#039; headline.</li><li>Lack of modern authority positioning for high-ticket corporate speaking buyers.</li><li>Media, podcasts, and published books buried beneath fragmented submenus.</li>
+          </ul>
         </div>
-        <div>
-          <span class="text-sm font-extrabold tracking-tight uppercase block" style="color: #0F172A;">Be World Class Group</span>
-          <span class="text-[11px] font-medium tracking-tight" style="color: #64748B;">Simon Hartley</span>
+
+        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
+          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
+            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+            <span>Implemented Redesign Enhancements</span>
+          </div>
+          <div class="text-xs text-zinc-300 space-y-2">
+            <div><strong class="text-white">Olympic-Grade Visual Identity:</strong> Crafted a prestigious deep navy and gold aesthetic reflecting 25+ years of championship consultation.</div><div><strong class="text-white">Elite Proof Triad:</strong> Positioned Olympic, Premier League, and author credentials directly above the fold.</div><div><strong class="text-white">Corporate Stage Acquisition Path:</strong> Prioritized high-ticket keynote and leadership advisory scheduling.</div>
+          </div>
         </div>
       </div>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium" style="color: #64748B;">
-        <a href="#overview" class="hover:text-brandAccent transition-colors">Overview</a>
-        <a href="#framework" class="hover:text-brandAccent transition-colors">Framework</a>
-        <a href="#outcomes" class="hover:text-brandAccent transition-colors">Outcomes</a>
-        
-          <a href="https://www.linkedin.com/in/beworldclass-simon/" target="_blank" rel="noopener noreferrer" class="hover:text-brandAccent flex items-center gap-1.5 transition-colors">
-            <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-            <span>LinkedIn</span>
-          </a>
-        
+      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
+        <span>Ready to implement this live?</span>
+        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header with Authentic Be World Class SVG Logo -->
+  <header class="w-full border-b border-worldclass-border bg-worldclass-bg/95 backdrop-blur-md sticky top-[45px] z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3.5">
+        <img src="/assets/simon-hartley/logo.svg" alt="Be World Class Logo" class="h-9 sm:h-10 w-auto object-contain">
+        <div class="border-l border-zinc-800 pl-3">
+          <span class="text-sm font-extrabold tracking-tight uppercase block text-white">BE WORLD CLASS GROUP</span>
+          <span class="text-[11px] text-worldclass-slate font-medium">Simon Hartley • Founder &amp; Keynote Speaker</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-worldclass-slate">
+        <a href="#speaking" class="hover:text-worldclass-amber transition-colors">Keynotes</a>
+        <a href="#athletes" class="hover:text-worldclass-amber transition-colors">Olympic Track Record</a>
+        <a href="#books" class="hover:text-worldclass-amber transition-colors">Bestselling Books</a>
+        <a href="https://www.linkedin.com/in/beworldclass-simon/" target="_blank" class="hover:text-worldclass-amber flex items-center gap-1.5 transition-colors">
+          <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
+          <span>LinkedIn</span>
+        </a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="#book" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full transition-all duration-200 shadow-md active:scale-[0.98]" style="background-color: #D97706; color: #FFFFFF;">
-          <span>Inquire</span>
+        <a href="#book" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-worldclass-amber text-black hover:bg-amber-400 transition-all shadow-md active:scale-95">
+          <span>Book Keynote</span>
           <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-12 lg:py-16">
-    
-    <!-- Background Ambience -->
-    <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full blur-3xl pointer-events-none opacity-20" style="background-color: #D97706;"></div>
-    <div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full blur-3xl pointer-events-none opacity-15" style="background-color: #2563EB;"></div>
-
+  <!-- Hero Section (Reference 9.jpg - Stadium Pitch Keynote Layout) -->
+  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-14 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
         
         <!-- Left: Copy & Value Proposition -->
         <div class="lg:col-span-7 flex flex-col items-start text-left">
           
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border" style="color: #D97706; border-color: #D9770640; background-color: #D9770615;">
-            <span class="w-2 h-2 rounded-full animate-pulse" style="background-color: #D97706;"></span>
-            <span class="uppercase tracking-widest text-[11px] font-bold">FOUNDER, BE WORLD CLASS • OLYMPIC &amp; PREMIER LEAGUE CONSULTANT • AUTHOR</span>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border border-amber-500/30 bg-amber-500/10 text-worldclass-amber">
+            <i data-lucide="award" class="w-3.5 h-3.5"></i>
+            <span class="uppercase tracking-widest text-[11px] font-bold">OLYMPIC &amp; PREMIER LEAGUE SPORT PSYCHOLOGY CONSULTANT</span>
           </div>
 
-          <h1 class="font-sans text-4xl sm:text-5xl lg:text-[54px] font-bold tracking-tight leading-[1.12] mb-6" style="color: #0F172A;">
-            Cultivate the Mindset of Olympians &amp; Champions in Your Organization.
+          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-black tracking-tight leading-[1.12] mb-6 text-white uppercase">
+            Equipping Global Leaders &amp; Olympians to Consistently Deliver World-Class Results.
           </h1>
 
-          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal mb-8" style="color: #64748B;">
-            25+ years coaching Olympic gold medalists, Premier League footballers, and Fortune 500 boards to perform under immense pressure and sustain world-class execution.
+          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal text-worldclass-slate mb-8">
+            Author, professional speaker, and sport psychology consultant behind Olympic gold medalists, Premier League clubs, and global executive teams. Learn how the world&#039;s best think, execute, and prevail.
           </p>
 
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] glow-accent" style="background-color: #D97706; color: #FFFFFF;">
-              <span>Book Keynote or Corporate Advisory</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            <a href="#keynote" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] bg-worldclass-amber text-black hover:bg-amber-400">
+              <i data-lucide="mic" class="w-4 h-4"></i>
+              <span>Book Simon For Your Conference</span>
             </a>
             
-            <a href="#framework" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all shadow-sm active:scale-[0.98] bg-white hover:bg-slate-50 text-slate-900 border border-slate-300">
-              <i data-lucide="sparkles" class="w-4 h-4" style="color: #D97706;"></i>
-              <span>Explore World Class Frameworks</span>
+            <a href="#books" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all bg-worldclass-card hover:bg-zinc-800 text-white border border-worldclass-border">
+              <i data-lucide="book" class="w-4 h-4 text-worldclass-amber"></i>
+              <span>Explore Published Books</span>
             </a>
           </div>
 
-          <!-- 3-Pillar Row -->
-          <div class="w-full pt-6 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            
-              <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <div class="flex items-center gap-2 text-xs font-bold mb-1.5" style="color: #0F172A;">
-                  <i data-lucide="trophy" class="w-4 h-4" style="color: #D97706;"></i>
-                  <span>Championship Culture</span>
-                </div>
-                <p class="text-[11px] leading-snug" style="color: #64748B;">
-                  Transplanting elite sport team dynamics into corporate leadership squads.
-                </p>
-              </div>
-            
-              <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <div class="flex items-center gap-2 text-xs font-bold mb-1.5" style="color: #0F172A;">
-                  <i data-lucide="activity" class="w-4 h-4" style="color: #D97706;"></i>
-                  <span>Pressure Mastery</span>
-                </div>
-                <p class="text-[11px] leading-snug" style="color: #64748B;">
-                  Mental frameworks to make high-stakes decisions with absolute clarity.
-                </p>
-              </div>
-            
-              <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <div class="flex items-center gap-2 text-xs font-bold mb-1.5" style="color: #0F172A;">
-                  <i data-lucide="book-open" class="w-4 h-4" style="color: #D97706;"></i>
-                  <span>Published Methodology</span>
-                </div>
-                <p class="text-[11px] leading-snug" style="color: #64748B;">
-                  8+ books deconstructing how world-class performers achieve the impossible.
-                </p>
-              </div>
-            
+          <!-- Athletic Proof Row -->
+          <div class="w-full pt-8 border-t border-worldclass-border grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="p-4 rounded-2xl bg-worldclass-card border border-worldclass-border">
+              <div class="text-2xl font-black text-worldclass-amber mb-0.5">25+ Years</div>
+              <div class="text-xs font-bold text-white">Elite Athletic Mentorship</div>
+              <div class="text-[11px] text-worldclass-slate">World champions &amp; Olympians</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-worldclass-card border border-worldclass-border">
+              <div class="text-2xl font-black text-white mb-0.5">Premier League</div>
+              <div class="text-xs font-bold text-white">High-Stakes Psychology</div>
+              <div class="text-[11px] text-worldclass-slate">International athletics rigor</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-worldclass-card border border-worldclass-border">
+              <div class="text-2xl font-black text-worldclass-amber mb-0.5">8 Bestsellers</div>
+              <div class="text-xs font-bold text-white">Published Thought Leadership</div>
+              <div class="text-[11px] text-worldclass-slate">Global keynote popularity</div>
+            </div>
           </div>
 
         </div>
 
-        <!-- Right: Authority Visual Display Card -->
+        <!-- Right: Reference 9.jpg Stadium Pitch Portrait Card -->
         <div class="lg:col-span-5 relative">
           <div class="relative mx-auto max-w-md lg:max-w-none flex justify-center">
             
-            <div class="relative w-full rounded-3xl p-6 sm:p-8 shadow-2xl border bg-white border-slate-200/90">
+            <div class="relative w-full rounded-3xl bg-worldclass-card border border-worldclass-border p-6 shadow-2xl flex flex-col items-center">
               
-              <!-- Card Header -->
-              <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
-                <div class="flex items-center gap-2.5">
-                  <div class="w-3 h-3 rounded-full animate-pulse" style="background-color: #D97706;"></div>
-                  <span class="text-xs font-mono font-bold uppercase tracking-wider" style="color: #D97706;">
-                    Be World Class Group
-                  </span>
-                </div>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-slate-100 text-slate-600">VERIFIED</span>
+              <div class="w-full flex items-center justify-between pb-4 border-b border-worldclass-border mb-5">
+                <span class="text-xs font-mono font-bold tracking-wider text-worldclass-amber">BE WORLD CLASS</span>
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-amber-950/60 text-amber-400 border border-amber-800">KEYNOTE SPEAKER</span>
               </div>
 
-              <!-- Main Card Focus -->
-              <div class="rounded-2xl p-5 mb-5 bg-slate-50 border border-slate-100">
-                <div class="text-[11px] font-mono uppercase tracking-wider mb-2" style="color: #64748B;">
-                  STRATEGIC FOCUS & OUTCOMES
+              <!-- Authentic Stadium Portrait -->
+              <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-worldclass-border shadow-2xl bg-zinc-950">
+                <img 
+                  src="/assets/simon-hartley/portrait.jpg" 
+                  alt="Simon Hartley - Be World Class" 
+                  class="w-full h-full object-cover object-top filter contrast-[1.03]"
+                />
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                
+                <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-worldclass-border flex items-center justify-between">
+                  <div>
+                    <div class="text-sm font-bold text-white">Simon Hartley</div>
+                    <div class="text-[11px] text-worldclass-slate">Founder, Be World Class Group</div>
+                  </div>
+                  <img src="/assets/simon-hartley/logo.svg" alt="BWC" class="h-6 w-auto object-contain">
                 </div>
-                <div class="text-lg sm:text-xl font-bold mb-3" style="color: #0F172A;">
-                  Sport Psychology Consultant, Author &amp; Keynote Speaker
-                </div>
-                <p class="text-xs leading-relaxed" style="color: #64748B;">
-                  Bespoke execution framework engineered specifically for Simon Hartley's enterprise and high-impact clientele.
-                </p>
               </div>
 
-              <!-- Metrics Stack -->
-              <div class="space-y-3 mb-6">
-                
-                  <div class="p-3.5 rounded-xl flex items-center justify-between bg-slate-50/80 border border-slate-100">
-                    <div>
-                      <div class="text-lg sm:text-xl font-extrabold font-mono" style="color: #D97706;">Olympians</div>
-                      <div class="text-xs font-medium" style="color: #64748B;">&amp; World Champions Coached</div>
-                    </div>
-                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #D9770615; color: #D97706;">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                  </div>
-                
-                  <div class="p-3.5 rounded-xl flex items-center justify-between bg-slate-50/80 border border-slate-100">
-                    <div>
-                      <div class="text-lg sm:text-xl font-extrabold font-mono" style="color: #D97706;">8+ Books</div>
-                      <div class="text-xs font-medium" style="color: #64748B;">Published on Mindset &amp; Leadership</div>
-                    </div>
-                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #D9770615; color: #D97706;">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                  </div>
-                
-                  <div class="p-3.5 rounded-xl flex items-center justify-between bg-slate-50/80 border border-slate-100">
-                    <div>
-                      <div class="text-lg sm:text-xl font-extrabold font-mono" style="color: #D97706;">Premier League</div>
-                      <div class="text-xs font-medium" style="color: #64748B;">Elite Team Culture Advisor</div>
-                    </div>
-                    <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #D9770615; color: #D97706;">
-                      <i data-lucide="check" class="w-4 h-4"></i>
-                    </div>
-                  </div>
-                
+              <div class="w-full mt-4 p-4 rounded-xl bg-zinc-950/80 border border-worldclass-border flex items-center gap-3">
+                <i data-lucide="radio" class="w-5 h-5 text-worldclass-amber shrink-0"></i>
+                <div class="text-xs text-worldclass-slate">
+                  <strong class="text-white">Podium Podcast &amp; Masterclass:</strong> Deconstructing the mental blueprints of world-class performers.
+                </div>
               </div>
-
-              <!-- LinkedIn Profile Anchor -->
-              
-                <a href="https://www.linkedin.com/in/beworldclass-simon/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-bold transition-all bg-slate-100 hover:bg-slate-200 text-slate-800">
-                  <i data-lucide="linkedin" class="w-4 h-4 text-[#0A66C2]"></i>
-                  <span>View Simon Hartley's Official LinkedIn</span>
-                </a>
-              
 
             </div>
 
@@ -234,230 +227,25 @@
         </div>
 
       </div>
-
-      <!-- Bottom Authority Ecosystem Banner -->
-      <div class="w-full mt-14 rounded-2xl border bg-white/80 border-slate-200/80 py-5 px-6">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span class="text-xs font-bold uppercase tracking-wider" style="color: #64748B;">
-            PROVEN TRACK RECORD & INSTITUTIONAL EXPERTISE
-          </span>
-          <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-bold" style="color: #0F172A;">
-            
-              <span class="flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #D97706;"></i>
-                <span>Olympians &amp; World Champions Coached</span>
-              </span>
-            
-              <span class="flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #D97706;"></i>
-                <span>8+ Books Published on Mindset &amp; Leadership</span>
-              </span>
-            
-              <span class="flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5" style="color: #D97706;"></i>
-                <span>Premier League Elite Team Culture Advisor</span>
-              </span>
-            
-          </div>
-        </div>
-      </div>
-
     </div>
   </main>
 
-  <!-- Interactive Footer -->
-  <footer class="w-full py-8 border-t border-slate-200 text-slate-400 text-center text-xs">
-    <div class="max-w-7xl mx-auto px-4">
-      &copy; 2026 Be World Class Group. All Rights Reserved. Private & Confidential Redesign Concept.
+  <footer class="w-full border-t border-worldclass-border py-6 bg-worldclass-bg text-center text-xs text-worldclass-slate">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <img src="/assets/simon-hartley/logo.svg" alt="Be World Class" class="h-5 w-auto opacity-70">
+        <span>© 2026 Be World Class Group • Simon Hartley. All rights reserved.</span>
+      </div>
+      <div class="text-zinc-500">Live Redesign Preview • Designed with pride by Miskat Hossain</div>
     </div>
   </footer>
 
-  
-  <!-- MANDATORY DESIGNER PREVIEW BAR (FIXED Z-50) -->
-  <aside 
-    id="designer-preview-bar" 
-    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3.5 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-zinc-950/90 backdrop-blur-xl border border-white/15 shadow-2xl text-white transition-all transform duration-200"
-    role="region"
-    aria-label="Design Concept Attribution Bar"
-  >
-    <div class="flex items-center gap-2.5">
-      <span class="relative flex h-2.5 w-2.5">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-      </span>
-      <div class="text-xs sm:text-[13px] font-medium leading-none text-zinc-200 truncate max-w-[140px] sm:max-w-none">
-        Redesign concept for <span class="font-bold text-white">Simon Hartley</span>
-      </div>
-    </div>
-
-    <!-- Demo Scope Tag -->
-    <span class="hidden lg:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-medium tracking-tight">
-      <i data-lucide="info" class="w-3 h-3"></i>
-      <span>Demo Hero Only • Full Redesign Available</span>
-    </span>
-
-    <div class="flex items-center gap-2">
-      <button 
-        id="why-converts-btn"
-        type="button"
-        onclick="toggleConvertsModal()" 
-        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-[0.97] text-zinc-200 hover:text-white text-xs font-semibold tracking-tight transition-all border border-white/10 cursor-pointer"
-        aria-expanded="false"
-        aria-controls="converts-modal"
-      >
-        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-zinc-400"></i>
-        <span>Why This Converts <span class="text-zinc-400 font-normal">(Notes)</span></span>
-      </button>
-
-      <a 
-        href="https://miskathossain.net" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-white text-zinc-950 hover:bg-zinc-100 active:scale-[0.97] text-xs font-bold tracking-tight transition-all shadow-md cursor-pointer whitespace-nowrap"
-      >
-        <span>Discuss Full Redesign</span>
-        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-      </a>
-    </div>
-  </aside>
-
-  <!-- MODAL: WHY THIS CONVERTS -->
-  <div 
-    id="converts-modal" 
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modal-title"
-  >
-    <div 
-      class="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-left transform scale-95 transition-transform duration-200"
-      onclick="event.stopPropagation()"
-    >
-      <button 
-        type="button" 
-        onclick="toggleConvertsModal()" 
-        class="absolute top-5 right-5 p-2 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
-        aria-label="Close notes modal"
-      >
-        <i data-lucide="x" class="w-4 h-4"></i>
-      </button>
-
-      <!-- Prominent Full Website Redesign Notice -->
-      <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-emerald-500/15 to-indigo-500/10 border border-emerald-500/30 mb-5 flex items-start gap-3">
-        <div class="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5">
-          <i data-lucide="info" class="w-4 h-4"></i>
-        </div>
-        <div class="text-xs text-zinc-300 leading-relaxed">
-          <span class="font-bold text-white block text-sm mb-0.5">This is just a demo hero section of your entire website.</span>
-          I created this bespoke concept to show how modern typography, visual hierarchy, and clear conversion paths elevate your positioning. 
-          <span class="text-emerald-300 font-semibold">Knock me or contact me to discuss a complete, high-converting website redesign for your business.</span>
-        </div>
-      </div>
-
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-2">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-        <span>CONVERSION LEAK ANALYSIS</span>
-      </div>
-
-      <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight">
-        Why This Redesign Converts More Clients
-      </h2>
-      <p class="text-xs sm:text-sm text-zinc-400 mt-1 mb-5">
-        Key architectural improvements applied to elevate <span class="text-white font-medium">Be World Class Group</span>.
-      </p>
-
-      <div class="space-y-3 mb-6">
-        
-          <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800">
-            <div class="text-xs font-bold text-white flex items-center gap-2 mb-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>Olympic-Grade Visual Identity</span>
-            </div>
-            <p class="text-xs text-zinc-400 leading-relaxed pl-5.5">
-              Crafted a prestigious deep navy and gold aesthetic reflecting 25+ years of championship consultation.
-            </p>
-          </div>
-        
-          <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800">
-            <div class="text-xs font-bold text-white flex items-center gap-2 mb-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>Elite Proof Triad</span>
-            </div>
-            <p class="text-xs text-zinc-400 leading-relaxed pl-5.5">
-              Positioned Olympic, Premier League, and author credentials directly above the fold.
-            </p>
-          </div>
-        
-          <div class="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800">
-            <div class="text-xs font-bold text-white flex items-center gap-2 mb-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>Corporate Stage Acquisition Path</span>
-            </div>
-            <p class="text-xs text-zinc-400 leading-relaxed pl-5.5">
-              Prioritized high-ticket keynote and leadership advisory scheduling.
-            </p>
-          </div>
-        
-      </div>
-
-      <div class="pt-4 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <div class="text-xs text-zinc-400 text-center sm:text-left">
-          Ready for the full high-performance site?
-        </div>
-        <a 
-          href="https://miskathossain.net" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold text-xs tracking-wide transition-all shadow-lg active:scale-[0.98]"
-        >
-          <span>Knock Me to Redesign Full Site</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <script>
-    function toggleConvertsModal() {
-      const modal = document.getElementById('converts-modal');
-      const btn = document.getElementById('why-converts-btn');
-      const isHidden = modal.classList.contains('pointer-events-none');
-      
-      if (isHidden) {
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        modal.classList.add('opacity-100');
-        modal.querySelector('div').classList.remove('scale-95');
-        modal.querySelector('div').classList.add('scale-100');
-        btn.setAttribute('aria-expanded', 'true');
-      } else {
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        modal.classList.remove('opacity-100');
-        modal.querySelector('div').classList.add('scale-95');
-        modal.querySelector('div').classList.remove('scale-100');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    }
-
-    function initPreviewModal() {
-      const modal = document.getElementById('converts-modal');
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          toggleConvertsModal();
-        }
-      });
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
-          toggleConvertsModal();
-        }
-      });
-    }
-  </script>
-  
-
   <script>
     lucide.createIcons();
-    initPreviewModal();
+    function toggleNotesModal() {
+      const m = document.getElementById('notes-modal');
+      m.classList.toggle('hidden');
+    }
   </script>
 </body>
 </html>
