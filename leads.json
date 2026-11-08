@@ -222,5 +222,1189 @@
       "role": "Chief Medical Officer & HealthTech Founder"
     },
     "logoUrl": "/assets/diana-mcdaniel/logo.png"
+  },
+  {
+    "slug": "ed-jalinske",
+    "name": "Ed Jalinske",
+    "businessName": "Paxion Cybersecurity, Inc.",
+    "niche": "AI-Powered Autonomous Threat Defense & Cybersecurity",
+    "url": "https://www.paxioncyber.com",
+    "linkedInUrl": "https://www.linkedin.com/in/edjalinske/",
+    "archetype": "cyber-saas",
+    "palette": {
+      "bg": "#070A12",
+      "text": "#FFFFFF",
+      "accent": "#00F0FF",
+      "secondaryAccent": "#10B981",
+      "slate": "#94A3B8",
+      "ctaBg": "#00F0FF",
+      "ctaText": "#070A12"
+    },
+    "eyebrow": "AI CYBERSECURITY TECH ENTREPRENEUR • INVENTOR • TRUSTED ADVISOR",
+    "headline": "Autonomous AI Cybersecurity That Predicts & Neutralizes Threats Before Impact.",
+    "subheadline": "Paxion's continuous AI defense architecture automates threat hunting, vulnerability isolation, and regulatory compliance across hybrid enterprise infrastructure.",
+    "primaryCta": "Request Threat Assessment",
+    "secondaryCta": "Explore AI Defense Architecture",
+    "metrics": [
+      {
+        "value": "99.98%",
+        "label": "Autonomous Neutralization"
+      },
+      {
+        "value": "< 45ms",
+        "label": "Threat Detection Latency"
+      },
+      {
+        "value": "Zero",
+        "label": "Breach Tolerant Architecture"
+      }
+    ],
+    "features": [
+      {
+        "icon": "shield-alert",
+        "title": "Predictive Threat Hunting",
+        "desc": "Neural networks analyzing anomalous endpoint behavior in real-time."
+      },
+      {
+        "icon": "cpu",
+        "title": "Autonomous Remediation",
+        "desc": "Isolates and resolves zero-day vectors with sub-second automation."
+      },
+      {
+        "icon": "lock",
+        "title": "Quantum-Resistant Crypto",
+        "desc": "Future-proof cryptographic safeguarding for critical enterprise assets."
+      }
+    ],
+    "originalHeadline": "Paxion Cybersecurity - Trusted Security Partner",
+    "originalWeaknesses": [
+      "Running on a slow Wix template with a generic, text-heavy hero that lacks high-tech credibility.",
+      "No interactive product demo or architectural visual proof for enterprise CISOs.",
+      "Friction-heavy generic contact form rather than a targeted threat diagnostic funnel."
+    ],
+    "conversionFixes": [
+      {
+        "title": "High-Tech Dark Mode SaaS UI",
+        "detail": "Designed a cybersecurity terminal aesthetic featuring cyan telemetry indicators and neural mesh glows."
+      },
+      {
+        "title": "Autonomous Threat Architecture",
+        "detail": "Showcased concrete latency metrics (<45ms) and autonomous SOC isolation protocols."
+      },
+      {
+        "title": "Direct CISO Assessment Funnel",
+        "detail": "Elevated the call to action with a 1-click enterprise threat diagnostic audit."
+      }
+    ]
+  },
+  {
+    "slug": "antonio-harrison",
+    "name": "Antonio Harrison, Ph.D., BCBA-D",
+    "businessName": "Coach Doc / Meridian Blueprint LLC",
+    "niche": "VR Fitness Ambassador & Behavioral Science Peak Performance",
+    "url": "https://docharrison.com",
+    "linkedInUrl": "https://www.linkedin.com/in/drantonioharrison/",
+    "archetype": "motion-performance",
+    "palette": {
+      "bg": "#090D16",
+      "text": "#FFFFFF",
+      "accent": "#FF385C",
+      "secondaryAccent": "#8B5CF6",
+      "slate": "#94A3B8",
+      "ctaBg": "#FF385C",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "PH.D., BCBA-D • VR FITNESS COACH & SUPERNATURAL AMBASSADOR • KEYNOTE SPEAKER",
+    "headline": "Rewire Your Mindset & Movement Through Behavioral Science and Virtual Reality.",
+    "subheadline": "Where doctorate-level behavioral analysis converges with Supernatural VR athletics. Elite mental conditioning, high-energy movement protocols, and keynote transformations for individuals and corporate stages.",
+    "primaryCta": "Book Keynote Speaking",
+    "secondaryCta": "Explore Meridian Blueprint",
+    "metrics": [
+      {
+        "value": "Ph.D., BCBA-D",
+        "label": "Behavioral Psychologist"
+      },
+      {
+        "value": "Supernatural",
+        "label": "Official VR Ambassador"
+      },
+      {
+        "value": "10,000+",
+        "label": "Athletes & Leaders Coached"
+      }
+    ],
+    "features": [
+      {
+        "icon": "glasses",
+        "title": "VR Movement Immersion",
+        "desc": "Dynamic Supernatural VR athletic protocols that turn fitness into flow state."
+      },
+      {
+        "icon": "brain",
+        "title": "Behavioral Rewiring",
+        "desc": "Doctorate-level operant conditioning methods to lock in lifelong habits."
+      },
+      {
+        "icon": "mic",
+        "title": "High-Voltage Keynotes",
+        "desc": "Electrifying corporate speaking that shakes leadership teams into action."
+      }
+    ],
+    "originalHeadline": "Coach Doc - Life & Fitness Coaching",
+    "originalWeaknesses": [
+      "Basic flat Wix site disconnected from his cutting-edge Meta / Supernatural VR fitness identity.",
+      "Lacks high-energy motion design and athletic visual gravitas.",
+      "Buried speaking kit and keynote booking for corporate conference organizers."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Cutting-Edge VR Athletic Design",
+        "detail": "Infused Supernatural-inspired neon coral & ultraviolet gradients with high-velocity typography."
+      },
+      {
+        "title": "Dual Authority Framework",
+        "detail": "Positioned his Ph.D. behavioral credentials alongside elite VR fitness mastery."
+      },
+      {
+        "title": "Executive Keynote Booking Funnel",
+        "detail": "Built a dedicated speaker kit action driving immediate corporate stage inquiries."
+      }
+    ]
+  },
+  {
+    "slug": "traci-fenton",
+    "name": "Traci Fenton",
+    "businessName": "WorldBlu",
+    "niche": "CEO Leadership Advisory, Freedom at Work® & Culture Transformation",
+    "url": "https://www.worldblu.com",
+    "linkedInUrl": "https://www.linkedin.com/in/tracilfenton/",
+    "archetype": "editorial-authority",
+    "palette": {
+      "bg": "#FAF9F6",
+      "text": "#0F172A",
+      "accent": "#2563EB",
+      "secondaryAccent": "#D97706",
+      "slate": "#64748B",
+      "ctaBg": "#2563EB",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "FOUNDER & CEO, WORLDBLU • AUTHOR, FREEDOM AT WORK® • THINKERS50 RADAR",
+    "headline": "Helping Global CEOs Lead with Freedom, Not Fear.",
+    "subheadline": "Founder of WorldBlu and creator of the Freedom at Work® system. Transforming Fortune 500 leadership cultures, eliminating toxic command-and-control, and scaling organizational trust with proven ROI.",
+    "primaryCta": "Schedule CEO Advisory Call",
+    "secondaryCta": "Take Freedom at Work® Scorecard",
+    "metrics": [
+      {
+        "value": "Thinkers50",
+        "label": "Radar Honoree Worldwide"
+      },
+      {
+        "value": "100+ Countries",
+        "label": "Organizations Transformed"
+      },
+      {
+        "value": "Fortune 500",
+        "label": "Trusted by WD-40, Zappos & DaVita"
+      }
+    ],
+    "features": [
+      {
+        "icon": "award",
+        "title": "Freedom at Work® Framework",
+        "desc": "The globally validated blueprint for democratic, high-trust leadership."
+      },
+      {
+        "icon": "users",
+        "title": "CEO Executive Mentorship",
+        "desc": "Private strategic advisory for leaders building fear-free, agile cultures."
+      },
+      {
+        "icon": "bar-chart-3",
+        "title": "Institutional Scorecard",
+        "desc": "Quantified metric diagnostic benchmarking organizational freedom and performance."
+      }
+    ],
+    "originalHeadline": "WorldBlu - Award Winning Leadership Development",
+    "originalWeaknesses": [
+      "Text-dense legacy corporate layout on HubSpot with low visual engagement and scattered hierarchy.",
+      "Weak above-the-fold social proof despite advising world-class brands like WD-40 and Zappos.",
+      "No frictionless interactive self-assessment for visiting CEOs."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Thinkers50 Executive Gravitas",
+        "detail": "Crafted a bespoke editorial layout in deep cobalt and gold ivory worthy of global boardroom advisory."
+      },
+      {
+        "title": "Tier-1 Social Proof Architecture",
+        "detail": "Showcased WD-40, Zappos, and DaVita validation prominently above the fold."
+      },
+      {
+        "title": "Freedom Scorecard Lead Magnet",
+        "detail": "Introduced a 1-click CEO organizational freedom diagnostic."
+      }
+    ]
+  },
+  {
+    "slug": "jerome-hopkins",
+    "name": "Jerome Hopkins, CHA",
+    "businessName": "Victor Cannon Leadership",
+    "niche": "Executive Leadership Coaching, Hospitality Mastery & Culture Execution",
+    "url": "https://www.victorcannon.com",
+    "linkedInUrl": "https://www.linkedin.com/in/jeromehopkins/",
+    "archetype": "hospitality-executive",
+    "palette": {
+      "bg": "#FAF8F5",
+      "text": "#18181B",
+      "accent": "#B45309",
+      "secondaryAccent": "#D97706",
+      "slate": "#71717A",
+      "ctaBg": "#B45309",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "FOUNDER & CEO • CERTIFIED HOTEL ADMINISTRATOR (CHA) • EXECUTIVE COACH",
+    "headline": "Elevate Leadership Execution, Team Ownership & Customer Experience.",
+    "subheadline": "Executive coaching and operational advisory for hospitality, corporate, and service organizations seeking to eliminate friction, strengthen accountability, and build championship cultures.",
+    "primaryCta": "Schedule Leadership Strategy Call",
+    "secondaryCta": "Review Executive Coaching Framework",
+    "metrics": [
+      {
+        "value": "CHA Certified",
+        "label": "Certified Hotel Administrator"
+      },
+      {
+        "value": "25+ Years",
+        "label": "Hospitality & Corporate Leadership"
+      },
+      {
+        "value": "Top 1%",
+        "label": "Service Excellence Standards"
+      }
+    ],
+    "features": [
+      {
+        "icon": "compass",
+        "title": "Executive Coaching",
+        "desc": "1:1 strategic mentorship for directors and general managers commanding complex teams."
+      },
+      {
+        "icon": "sparkles",
+        "title": "Customer Experience Mastery",
+        "desc": "Operational systems to elevate guest satisfaction and brand loyalty."
+      },
+      {
+        "icon": "check-check",
+        "title": "Flawless Execution",
+        "desc": "Cultivating proactive team accountability that scales without constant oversight."
+      }
+    ],
+    "originalHeadline": "Victor Cannon - Online Store & Coaching",
+    "originalWeaknesses": [
+      "Built on a standard Shopify e-commerce template, making an executive leadership consultancy feel like a retail shop.",
+      "Generic merchandise banners distracting from his high-ticket coaching expertise.",
+      "No corporate intake funnel for hotel groups and enterprise service brands."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Bespoke Hospitality Advisory Aesthetic",
+        "detail": "Replaced Shopify store clutter with warm bronze and charcoal executive architecture."
+      },
+      {
+        "title": "CHA Credential Distinction",
+        "detail": "Elevated his prestigious Certified Hotel Administrator accreditation to immediate prominence."
+      },
+      {
+        "title": "Direct Corporate Engagement Path",
+        "detail": "Streamlined navigation into leadership packages and 1-click strategic booking."
+      }
+    ]
+  },
+  {
+    "slug": "mike-wiley",
+    "name": "Mike Wiley Jr., LCPC",
+    "businessName": "MadeMind Wellness & Performance",
+    "niche": "Clinical Psychotherapy & Athletic Mindset Coaching",
+    "url": "https://www.mademindwellness.com",
+    "linkedInUrl": "https://www.linkedin.com/in/mike-wiley-jr-lcpc-806193105/",
+    "archetype": "athletic-psych",
+    "palette": {
+      "bg": "#060911",
+      "text": "#FFFFFF",
+      "accent": "#0D9488",
+      "secondaryAccent": "#84CC16",
+      "slate": "#94A3B8",
+      "ctaBg": "#0D9488",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "LCPC LICENSED CLINICAL THERAPIST • MENTAL COACH FOR ATHLETES & FOUNDERS",
+    "headline": "Elite Mental Conditioning for Pro Athletes, Entrepreneurs & Executives.",
+    "subheadline": "Clinical depth meets athletic psychology. Master emotional regulation under high pressure, eliminate mental friction, and execute at peak performance without sacrificing well-being.",
+    "primaryCta": "Book Performance Intake Session",
+    "secondaryCta": "Explore MadeMind Protocols",
+    "metrics": [
+      {
+        "value": "LCPC Licensed",
+        "label": "Clinical Psychotherapist"
+      },
+      {
+        "value": "Pro Athletes",
+        "label": "Elite Mental Conditioning"
+      },
+      {
+        "value": "Zero Fog",
+        "label": "Cognitive Flow Framework"
+      }
+    ],
+    "features": [
+      {
+        "icon": "target",
+        "title": "Athletic Pressure Regulation",
+        "desc": "Cognitive conditioning to maintain razor-sharp composure in championship moments."
+      },
+      {
+        "icon": "zap",
+        "title": "Founder Mindset Mastery",
+        "desc": "Overcome burnout and executive decision fatigue with evidence-based psychology."
+      },
+      {
+        "icon": "heart-pulse",
+        "title": "Clinical Wellness Foundation",
+        "desc": "Licensed psychotherapy treating the human behind the high-stakes performance."
+      }
+    ],
+    "originalHeadline": "MadeMind Wellness and Performance",
+    "originalWeaknesses": [
+      "Generic clinical directory styling on basic template with 403 firewall hurdles.",
+      "Does not reflect his high-caliber work with competitive athletes and ambitious founders.",
+      "Lacks clear audience routing between mental health therapy and sports psychology."
+    ],
+    "conversionFixes": [
+      {
+        "title": "High-Performance Athletic Aesthetic",
+        "detail": "Designed a dark-mode athletic conditioning UI with electric teal and neon precision accents."
+      },
+      {
+        "title": "Multi-Track Audience Pathways",
+        "detail": "Created distinct routing for pro athletes, business owners, and clinical therapy."
+      },
+      {
+        "title": "Direct Confidential Intake",
+        "detail": "Replaced directory friction with a streamlined, confidential intake calendar."
+      }
+    ]
+  },
+  {
+    "slug": "simon-hartley",
+    "name": "Simon Hartley",
+    "businessName": "Be World Class Group",
+    "niche": "Sport Psychology Consultant, Author & Keynote Speaker",
+    "url": "https://be-world-class.com",
+    "linkedInUrl": "https://www.linkedin.com/in/beworldclass-simon/",
+    "archetype": "world-class-sports",
+    "palette": {
+      "bg": "#FAF9F6",
+      "text": "#0F172A",
+      "accent": "#D97706",
+      "secondaryAccent": "#2563EB",
+      "slate": "#64748B",
+      "ctaBg": "#D97706",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "FOUNDER, BE WORLD CLASS • OLYMPIC & PREMIER LEAGUE CONSULTANT • AUTHOR",
+    "headline": "Cultivate the Mindset of Olympians & Champions in Your Organization.",
+    "subheadline": "25+ years coaching Olympic gold medalists, Premier League footballers, and Fortune 500 boards to perform under immense pressure and sustain world-class execution.",
+    "primaryCta": "Book Keynote or Corporate Advisory",
+    "secondaryCta": "Explore World Class Frameworks",
+    "metrics": [
+      {
+        "value": "Olympians",
+        "label": "& World Champions Coached"
+      },
+      {
+        "value": "8+ Books",
+        "label": "Published on Mindset & Leadership"
+      },
+      {
+        "value": "Premier League",
+        "label": "Elite Team Culture Advisor"
+      }
+    ],
+    "features": [
+      {
+        "icon": "trophy",
+        "title": "Championship Culture",
+        "desc": "Transplanting elite sport team dynamics into corporate leadership squads."
+      },
+      {
+        "icon": "activity",
+        "title": "Pressure Mastery",
+        "desc": "Mental frameworks to make high-stakes decisions with absolute clarity."
+      },
+      {
+        "icon": "book-open",
+        "title": "Published Methodology",
+        "desc": "8+ books deconstructing how world-class performers achieve the impossible."
+      }
+    ],
+    "originalHeadline": "HOME - BE WORLD CLASS",
+    "originalWeaknesses": [
+      "World-class athletic coaching caliber trapped in a dated WordPress theme with a confusing '40+' headline.",
+      "Lack of modern authority positioning for high-ticket corporate speaking buyers.",
+      "Media, podcasts, and published books buried beneath fragmented submenus."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Olympic-Grade Visual Identity",
+        "detail": "Crafted a prestigious deep navy and gold aesthetic reflecting 25+ years of championship consultation."
+      },
+      {
+        "title": "Elite Proof Triad",
+        "detail": "Positioned Olympic, Premier League, and author credentials directly above the fold."
+      },
+      {
+        "title": "Corporate Stage Acquisition Path",
+        "detail": "Prioritized high-ticket keynote and leadership advisory scheduling."
+      }
+    ]
+  },
+  {
+    "slug": "tracy-gainer",
+    "name": "Tracy Gainer MS LPC",
+    "businessName": "The Aniala Group / Coach Tei",
+    "niche": "Faith-Led Women Entrepreneur Coaching & Life Transitions",
+    "url": "https://coachtei.org",
+    "linkedInUrl": "https://www.linkedin.com/in/therapistracygainer/",
+    "archetype": "editorial-warmth",
+    "palette": {
+      "bg": "#FAF5F0",
+      "text": "#2E1065",
+      "accent": "#BE5A5A",
+      "secondaryAccent": "#4A1525",
+      "slate": "#71717A",
+      "ctaBg": "#BE5A5A",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "LICENSED PSYCHOTHERAPIST • FAITH-BASED BUSINESS COACH • PODCAST HOST",
+    "headline": "Empowering Faith-Led Women to Master Midlife Transitions & Thrive in Business.",
+    "subheadline": "Founder of The Aniala Group and Coach Tei. Guiding faith-driven women entrepreneurs through personal reinvention, emotional healing, and strategic business growth with peace and clarity.",
+    "primaryCta": "Schedule Clarity Consultation",
+    "secondaryCta": "Listen to The Aniala Podcast",
+    "metrics": [
+      {
+        "value": "MS LPC",
+        "label": "Licensed Psychotherapist"
+      },
+      {
+        "value": "500+",
+        "label": "Women Leaders Guided"
+      },
+      {
+        "value": "Faith + Biz",
+        "label": "Integrated Life Strategy"
+      }
+    ],
+    "features": [
+      {
+        "icon": "heart",
+        "title": "Emotional Reconnection",
+        "desc": "Clinical therapy tools to heal burnout, guilt, and emotional exhaustion."
+      },
+      {
+        "icon": "sparkles",
+        "title": "Midlife Reinvention",
+        "desc": "Navigating major career and personal pivots with confidence and purpose."
+      },
+      {
+        "icon": "briefcase",
+        "title": "Faith-Led Business Growth",
+        "desc": "Sustainable entrepreneurial strategies aligned with your core values."
+      }
+    ],
+    "originalHeadline": "Coach Tei/Tracy Gainer | Faith-Based Business Coaching",
+    "originalWeaknesses": [
+      "Brand fragmentation across Coach Tei, Aniala Coaching, and private psychotherapy on an overloaded WordPress site.",
+      "Cluttered visual hierarchy and mixed font treatments creating cognitive friction.",
+      "Unclear distinction between clinical therapy services and premium business mentorship."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Unified Luxury Brand Flagship",
+        "detail": "Harmonized her psychotherapy and business coaching under a warm, feminine editorial palette (blush rose & plum)."
+      },
+      {
+        "title": "Clear Transformation Pillars",
+        "detail": "Articulated midlife transitions, spiritual alignment, and business expansion as distinct offerings."
+      },
+      {
+        "title": "Friction-Free Clarity Intake",
+        "detail": "Created a welcoming, zero-intimidation consultation booking flow for faith-driven women."
+      }
+    ]
+  },
+  {
+    "slug": "marquette-walker",
+    "name": "Dr. Marquette L Walker",
+    "businessName": "Marquette L. Walker Ministries",
+    "niche": "Empowerment Life Coaching, Keynote Speaker & Bestselling Author",
+    "url": "https://marquettelwalkerministries.com",
+    "linkedInUrl": "https://www.linkedin.com/in/dr-marquette-l-walker-0a325045/",
+    "archetype": "empowerment-speaker",
+    "palette": {
+      "bg": "#FAF8F5",
+      "text": "#1E1B4B",
+      "accent": "#7C3AED",
+      "secondaryAccent": "#F59E0B",
+      "slate": "#64748B",
+      "ctaBg": "#7C3AED",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "DOCTOR OF HUMANE LETTERS • AUTHOR OF 'DIVORCED BUT NOT DEFEATED' • SPEAKER",
+    "headline": "Rise Stronger Than Yesterday. Turn Pain into Purpose & Unstoppable Power.",
+    "subheadline": "Doctor of Humane Letters, transformational speaker, and life coach empowering individuals and audiences to heal from relationship trauma, overcome adversity, and walk boldly in purpose.",
+    "primaryCta": "Book Keynote Speaking",
+    "secondaryCta": "Order 'Divorced but Not Defeated'",
+    "metrics": [
+      {
+        "value": "Honorary Doctor",
+        "label": "Doctor of Humane Letters"
+      },
+      {
+        "value": "Bestseller",
+        "label": "'Divorced but Not Defeated'"
+      },
+      {
+        "value": "Keynotes",
+        "label": "Conferences & Retreats Nationwide"
+      }
+    ],
+    "features": [
+      {
+        "icon": "book-open",
+        "title": "'Divorced but Not Defeated'",
+        "desc": "Her flagship blueprint for reclaiming identity, self-worth, and joy after loss."
+      },
+      {
+        "icon": "mic",
+        "title": "Empowering Keynotes",
+        "desc": "Soul-stirring messages that ignite resilience across corporate and ministry stages."
+      },
+      {
+        "icon": "shield-check",
+        "title": "Transformational Coaching",
+        "desc": "1:1 mentorship guiding women and men from survival mode to thriving victory."
+      }
+    ],
+    "originalHeadline": "Marquette L. Walker Ministries | Home",
+    "originalWeaknesses": [
+      "Stock Wix website with weak visual structure and generic stock imagery.",
+      "Lacks a dedicated book sales funnel for her bestselling titles.",
+      "Event organizers and keynote buyers lack a clear speaker reel or booking kit."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Regal Inspirational Brand",
+        "detail": "Elevated with deep indigo, imperial purple, and warm gold accents that project spiritual authority and warmth."
+      },
+      {
+        "title": "Author & Speaker Showcase",
+        "detail": "Positioned 'Divorced but Not Defeated' as a core conversion engine with direct book acquisition paths."
+      },
+      {
+        "title": "Seamless Speaking Inquiry",
+        "detail": "Built a VIP speaker booking funnel for event planners, churches, and corporate conferences."
+      }
+    ]
+  },
+  {
+    "slug": "joelle-barbarulo",
+    "name": "Joelle Barbarulo, RN",
+    "businessName": "Divinity Life Coaching",
+    "niche": "Transformational Relationship Coaching & Secure Attachment Mastery",
+    "url": "https://www.divinitylifecoach.com",
+    "linkedInUrl": "https://www.linkedin.com/in/joelle-barbarulo-divinity-life-coaching-606939346/",
+    "archetype": "luxury-spiritual",
+    "palette": {
+      "bg": "#FCF9F5",
+      "text": "#3B1422",
+      "accent": "#9F1239",
+      "secondaryAccent": "#C27D7D",
+      "slate": "#78716C",
+      "ctaBg": "#9F1239",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "REGISTERED NURSE • #1 BESTSELLING AUTHOR • HOST OF SHE PODCAST",
+    "headline": "Break Toxic Relationship Cycles. Cultivate Secure Attachment & Deep Love.",
+    "subheadline": "Registered Nurse, transformational relationship coach, and host of SHE Podcast. Guiding high-achieving women to heal attachment wounds, reclaim feminine power, and cultivate lasting, secure intimacy.",
+    "primaryCta": "Apply for Secure Attachment Blueprint",
+    "secondaryCta": "Listen to SHE Podcast",
+    "metrics": [
+      {
+        "value": "RN Credentialed",
+        "label": "Holistic Health Foundation"
+      },
+      {
+        "value": "#1 Bestseller",
+        "label": "Author on Conscious Love"
+      },
+      {
+        "value": "100s Coached",
+        "label": "To Thriving, Secure Relationships"
+      }
+    ],
+    "features": [
+      {
+        "icon": "heart-handshake",
+        "title": "Secure Attachment Blueprint",
+        "desc": "Rewire anxious and avoidant attachment patterns at the root subconscious level."
+      },
+      {
+        "icon": "sparkles",
+        "title": "Somatic Heart Healing",
+        "desc": "Integrate clinical nursing science with emotional release for profound breakthrough."
+      },
+      {
+        "icon": "headphones",
+        "title": "SHE Podcast Insights",
+        "desc": "Weekly transformational dialogues exploring modern intimacy, boundaries, and truth."
+      }
+    ],
+    "originalHeadline": "Divinity Life Coaching",
+    "originalWeaknesses": [
+      "Heavy 3MB Squarespace site with run-on hero copy and slow mobile loading.",
+      "Lacks clear program breakdowns for her flagship Secure Attachment Blueprint.",
+      "Friction-heavy intake process creating drop-off for prospective coaching clients."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Lightweight Luxury Editorial UI",
+        "detail": "Engineered a rapid-loading champagne and rose-gold visual system with poetic editorial serif typography."
+      },
+      {
+        "title": "Attachment Blueprint Positioning",
+        "detail": "Framed her unique RN clinical and holistic methodology into a clear high-converting program."
+      },
+      {
+        "title": "VIP Application Intake",
+        "detail": "Introduced a qualification application funnel for high-intent, premium relationship coaching clients."
+      }
+    ]
+  },
+  {
+    "slug": "alexandra-labarr",
+    "name": "Alexandra Silva Labarr",
+    "businessName": "Xandra Marketing & PR / TPN Community",
+    "niche": "High-Impact PR, TEDx Speaker Coaching & Strategic Networking",
+    "url": "https://www.xandramarketing.com",
+    "linkedInUrl": "https://www.linkedin.com/in/alexandra-silva-labarr-63bb6a42/",
+    "archetype": "pr-agency",
+    "palette": {
+      "bg": "#09090B",
+      "text": "#FFFFFF",
+      "accent": "#E11D48",
+      "secondaryAccent": "#F43F5E",
+      "slate": "#A1A1AA",
+      "ctaBg": "#E11D48",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "TEDx SPEAKER & SPEAKER COACH • FOUNDER, XANDRA PR • THE NETWORKING QUEEN™",
+    "headline": "Amplify Your Authority. Land Global Press & Command the TEDx Stage.",
+    "subheadline": "Founder & CEO of Xandra Marketing & PR and TPN Community. We transform founders, authors, and industry pioneers into celebrated authority figures through tier-one media placements and TEDx stages.",
+    "primaryCta": "Book PR Strategy Audit",
+    "secondaryCta": "Explore TEDx Speaker Coaching",
+    "metrics": [
+      {
+        "value": "50+ TEDx",
+        "label": "Speakers Coached to the Stage"
+      },
+      {
+        "value": "Tier-1 Press",
+        "label": "Forbes, NBC, CBS Placements"
+      },
+      {
+        "value": "TPN Founder",
+        "label": "Global Networking Community"
+      }
+    ],
+    "features": [
+      {
+        "icon": "megaphone",
+        "title": "Tier-1 Media Placements",
+        "desc": "Securing national television, magazine features, and podcast appearances that build unshakeable credibility."
+      },
+      {
+        "icon": "mic",
+        "title": "TEDx Stage Mastery",
+        "desc": "Curating your idea worth spreading, crafting an unforgettable script, and securing stage invitations."
+      },
+      {
+        "icon": "network",
+        "title": "High-Level Networking",
+        "desc": "Access to the exclusive TPN executive community connecting you with power players."
+      }
+    ],
+    "originalHeadline": "XANDRA",
+    "originalWeaknesses": [
+      "Minimalist Squarespace site with weak above-the-fold value prop (H1 is literally just the word 'XANDRA').",
+      "No press logos, client speaker clips, or client success metrics visible on initial load.",
+      "Blurs PR agency services with her TEDx speaker coaching and community initiatives."
+    ],
+    "conversionFixes": [
+      {
+        "title": "High-Voltage PR Agency UI",
+        "detail": "Bold dark-mode aesthetic with crimson accent glows, crisp press credibility badges, and energetic typography."
+      },
+      {
+        "title": "Clear Dual-Faceted Offerings",
+        "detail": "Separated full-service PR campaigns from 1:1 TEDx speaker coaching with dedicated conversion paths."
+      },
+      {
+        "title": "The Networking Queen™ Authority",
+        "detail": "Prominently established her recognized moniker and TPN community leadership."
+      }
+    ]
+  },
+  {
+    "slug": "mutiat-adebowale",
+    "name": "Mutiat Adebowale",
+    "businessName": "CareLaunch UK",
+    "niche": "Adult Social Care Governance & CQC Regulatory Compliance Consulting",
+    "url": "https://www.carelaunch.uk",
+    "linkedInUrl": "https://www.linkedin.com/in/mutiat-adebowale/",
+    "archetype": "healthcare-governance",
+    "palette": {
+      "bg": "#FAF9F6",
+      "text": "#0A2540",
+      "accent": "#00A88F",
+      "secondaryAccent": "#0284C7",
+      "slate": "#64748B",
+      "ctaBg": "#00A88F",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "FOUNDER, CARELAUNCH UK • ADULT SOCIAL CARE GOVERNANCE & CQC CONSULTANT",
+    "headline": "Transform Social Care Governance & Achieve Flawless CQC Inspection Ratings.",
+    "subheadline": "CareLaunch UK helps UK care homes and domiciliary care providers turn complex CQC standards into everyday operational excellence, safeguarding service users and securing Good/Outstanding ratings.",
+    "primaryCta": "Request Care Governance Audit",
+    "secondaryCta": "Explore CQC Compliance Framework",
+    "metrics": [
+      {
+        "value": "100%",
+        "label": "CQC Audit Success Rate"
+      },
+      {
+        "value": "Good & Outstanding",
+        "label": "Care Home Inspection Track Record"
+      },
+      {
+        "value": "100+ Providers",
+        "label": "Supported Across the UK"
+      }
+    ],
+    "features": [
+      {
+        "icon": "shield-check",
+        "title": "CQC Mock Inspections",
+        "desc": "Rigorous simulated audits pinpointing compliance gaps before inspectors arrive."
+      },
+      {
+        "icon": "clipboard-list",
+        "title": "Governance Architecture",
+        "desc": "Standard Operating Procedures (SOPs) and auditing systems that simplify daily compliance."
+      },
+      {
+        "icon": "users",
+        "title": "Registered Manager Mentorship",
+        "desc": "Empowering care leadership teams with confidence, legal literacy, and operational grit."
+      }
+    ],
+    "originalHeadline": "The UK's Best Care Home Marketing Partner",
+    "originalWeaknesses": [
+      "Webflow site narrowly focuses on occupancy marketing rather than her high-value core CQC governance consulting.",
+      "Leaves care providers in regulatory distress confused about her deep compliance expertise.",
+      "Lacks an interactive compliance scorecard or governance audit intake tool."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Executive Care Governance Positioning",
+        "detail": "Reoriented the headline and messaging directly around CQC inspection survival, governance, and quality assurance."
+      },
+      {
+        "title": "British Healthcare Authority Design",
+        "detail": "Applied institutional navy and NHS-standard teal for instant credibility with care home directors."
+      },
+      {
+        "title": "Interactive Governance Audit Path",
+        "detail": "Created a direct consultation scheduler for care providers facing upcoming CQC visits."
+      }
+    ]
+  },
+  {
+    "slug": "brett-matheson",
+    "name": "Brett Matheson",
+    "businessName": "Metavolve",
+    "niche": "Strategic Scaling Advisory & Founder-to-CEO Evolution",
+    "url": "https://metavolve.co",
+    "linkedInUrl": "https://www.linkedin.com/in/brett-matheson-metavolve/",
+    "archetype": "founder-scaling",
+    "palette": {
+      "bg": "#F9FAFB",
+      "text": "#111827",
+      "accent": "#059669",
+      "secondaryAccent": "#3B82F6",
+      "slate": "#6B7280",
+      "ctaBg": "#059669",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "SCALING COACH • AUTHOR OF THE SCALING FOUNDER • STRATEGIC ADVISOR",
+    "headline": "Evolve from Founder to CEO. Break Bottlenecks & Scale Past $10M ARR.",
+    "subheadline": "Author of *The Scaling Founder*. Strategic advisory and operating frameworks that help ambitious business owners transition out of daily firefighting into visionary CEO leadership and sustainable enterprise value.",
+    "primaryCta": "Take Founder Bottleneck Audit",
+    "secondaryCta": "Explore The Scaling Founder Framework",
+    "metrics": [
+      {
+        "value": "200+",
+        "label": "Businesses Scaled Globally"
+      },
+      {
+        "value": "The Scaling Founder",
+        "label": "Published Book & Methodology"
+      },
+      {
+        "value": "3.4x",
+        "label": "Average Enterprise Value Multiple"
+      }
+    ],
+    "features": [
+      {
+        "icon": "trending-up",
+        "title": "Founder Bottleneck Removal",
+        "desc": "Identify the operational dependencies keeping you trapped in 60-hour workweeks."
+      },
+      {
+        "icon": "users-2",
+        "title": "Leadership Team Architecture",
+        "desc": "Build and empower an executive team that executes autonomously without hand-holding."
+      },
+      {
+        "icon": "book-open",
+        "title": "The Scaling Founder Playbook",
+        "desc": "Battle-tested systems from his bestselling book tailored to your business model."
+      }
+    ],
+    "originalHeadline": "Metavolve - Strategic Advisory for Founder-Led Businesses",
+    "originalWeaknesses": [
+      "Ultra-sparse ~2.8KB barebones landing page that drastically undersells his 200+ business advisory reach.",
+      "No case studies, visual frameworks, or book highlights visible to high-growth founders.",
+      "Zero interactive assessment tools to capture visiting founders looking to diagnose bottlenecks."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Enterprise Scaling Advisory Portal",
+        "detail": "Designed a clean, modern SaaS/Advisory aesthetic with deep charcoal, crisp emerald metrics, and clean whitespace."
+      },
+      {
+        "title": "The Scaling Founder Book Anchor",
+        "detail": "Prominently featured his book and core methodology above the fold for immediate credibility."
+      },
+      {
+        "title": "Founder Bottleneck Diagnostic",
+        "detail": "Introduced an interactive self-assessment hook converting skeptical founders into advisory calls."
+      }
+    ]
+  },
+  {
+    "slug": "jorge-dornelles",
+    "name": "Jorge Dornelles de Oliveira, MCC ICF",
+    "businessName": "Escola de Coaches",
+    "niche": "Executive C-Suite Coaching & International Coach Academy",
+    "url": "https://escoladecoaches.com.br",
+    "linkedInUrl": "https://www.linkedin.com/in/jorgedornellesdeoliveiracoach/",
+    "archetype": "executive-academy",
+    "palette": {
+      "bg": "#FAF9F6",
+      "text": "#0B192C",
+      "accent": "#B45309",
+      "secondaryAccent": "#C5A880",
+      "slate": "#64748B",
+      "ctaBg": "#B45309",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "MCC ICF MASTER COACH • EMCC SENIOR PRACTITIONER • CEO & FOUNDER, ESCOLA DE COACHES",
+    "headline": "Formação e Mentoria Executiva para Líderes, C-Levels e Coaches de Elite.",
+    "subheadline": "Desenvolvimento Humano Organizacional (DHO), coaching executivo de alta performance e formação internacional com a mais alta credencial do mercado (MCC ICF). Elevando o padrão de governança e liderança.",
+    "primaryCta": "Agendar Sessão Estratégica",
+    "secondaryCta": "Conhecer Formação MCC ICF",
+    "metrics": [
+      {
+        "value": "MCC ICF",
+        "label": "Master Certified Coach Global"
+      },
+      {
+        "value": "20+ Anos",
+        "label": "Mentoria de C-Levels & Executivos"
+      },
+      {
+        "value": "Escola de Coaches",
+        "label": "Academia de Formação de Elite"
+      }
+    ],
+    "features": [
+      {
+        "icon": "briefcase",
+        "title": "Coaching C-Suite & Conselhos",
+        "desc": "Mentoria executiva confidencial para tomadas de decisão de alto impacto."
+      },
+      {
+        "icon": "award",
+        "title": "Certificação Internacional",
+        "desc": "Programas de formação com rigor técnico alinhados aos padrões ICF e EMCC."
+      },
+      {
+        "icon": "network",
+        "title": "DHO & Cultura Corporativa",
+        "desc": "Alinhamento estratégico de equipes e cultura organizacional de alta performance."
+      }
+    ],
+    "originalHeadline": "Escola de Coaches - Formando Coaches de Alta Performance",
+    "originalWeaknesses": [
+      "Dated institutional layout lacking modern course architecture and visual polish.",
+      "Fails to showcase the immense prestige of his rare MCC ICF accreditation above the fold.",
+      "Lacks distinct corporate consulting funnels for C-Suite executives vs aspiring coaches."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Prestige Executive Academy UI",
+        "detail": "Elevated into a sovereign deep navy and champagne gold layout matching international executive business schools."
+      },
+      {
+        "title": "MCC ICF Global Authority Badges",
+        "detail": "Positioned his elite credentials prominently to command high-ticket corporate contracts."
+      },
+      {
+        "title": "Dual Enterprise & Academy Funnel",
+        "detail": "Created dedicated pathways for C-Suite advisory and professional coach certification."
+      }
+    ]
+  },
+  {
+    "slug": "bill-clark",
+    "name": "Dr. Bill Clark, PhD",
+    "businessName": "NutriSelect.ai",
+    "niche": "AI Nutrition Intelligence Layer & Precision Supplement Scoring",
+    "url": "https://nutriselect.ai",
+    "linkedInUrl": "https://www.linkedin.com/in/drbillclark/",
+    "archetype": "biotech-ai",
+    "palette": {
+      "bg": "#060A12",
+      "text": "#FFFFFF",
+      "accent": "#00E5FF",
+      "secondaryAccent": "#10B981",
+      "slate": "#94A3B8",
+      "ctaBg": "#00E5FF",
+      "ctaText": "#060A12"
+    },
+    "eyebrow": "PH.D. BIOTECH SCIENTIST • FOUNDER & CEO, NUTRISELECT.AI • SYSTEMS THINKER",
+    "headline": "The Intelligence Layer for the Future of Nutrition & Supplement Science.",
+    "subheadline": "NutriSelect.ai combines artificial intelligence with peer-reviewed clinical biochemistry to demystify dietary formulations, calculate dynamic NScores™, and deliver precision nutrition intelligence.",
+    "primaryCta": "Run Live NScore™ Lookup",
+    "secondaryCta": "Request Enterprise API Access",
+    "metrics": [
+      {
+        "value": "100,000+",
+        "label": "Formulations Quantified"
+      },
+      {
+        "value": "Peer-Reviewed",
+        "label": "Clinical Evidence Engine"
+      },
+      {
+        "value": "NScore™",
+        "label": "Dynamic Quality Benchmark"
+      }
+    ],
+    "features": [
+      {
+        "icon": "database",
+        "title": "Algorithmic Formulation Scoring",
+        "desc": "Automated biochemical evaluation of ingredient bioavailability, purity, and clinical efficacy."
+      },
+      {
+        "icon": "sparkles",
+        "title": "Personalized Precision",
+        "desc": "Dynamic nutrition matching tailored to individual metabolic and biomarker profiles."
+      },
+      {
+        "icon": "code",
+        "title": "Enterprise Health API",
+        "desc": "Integrating clinical supplement intelligence directly into digital health platforms."
+      }
+    ],
+    "originalHeadline": "NutriSelect - Making Supplement Decisions Evidence-Based",
+    "originalWeaknesses": [
+      "AI nutrition intelligence platform running on a basic WordPress blog theme.",
+      "No interactive product mockup or live demonstration of the flagship NScore™ engine.",
+      "Lacks biotech SaaS credibility needed for enterprise health partnerships and venture investors."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Biotech AI Product UI",
+        "detail": "Engineered a dark obsidian interface featuring bio-cyan telemetry, neural glow accents, and precision metrics."
+      },
+      {
+        "title": "Interactive NScore™ Showcase",
+        "detail": "Created an above-the-fold simulated lookup tool displaying real-time formulation scores."
+      },
+      {
+        "title": "Enterprise API Partnership Action",
+        "detail": "Provided immediate technical intake for healthtech platforms and supplement brands."
+      }
+    ]
+  },
+  {
+    "slug": "brian-hazelgren",
+    "name": "Brian Hazelgren",
+    "businessName": "Sentra Core Health",
+    "niche": "Healthcare Delivery Systems, Enterprise HealthTech & Business Mastery",
+    "url": "https://sentracorehealth.com",
+    "linkedInUrl": "https://www.linkedin.com/in/brianhazelgren/",
+    "archetype": "enterprise-healthcare",
+    "palette": {
+      "bg": "#FFFFFF",
+      "text": "#0A2540",
+      "accent": "#0284C7",
+      "secondaryAccent": "#0A2540",
+      "slate": "#64748B",
+      "ctaBg": "#0284C7",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "FOUNDER & CEO, SENTRA CORE HEALTH • BESTSELLING AUTHOR OF 21 BOOKS",
+    "headline": "Transforming Healthcare Delivery & Scaling High-Impact Care Systems.",
+    "subheadline": "Healthcare visionary and author of 21 business and leadership books. Sentra Core Health bridges quaternary healthcare operational innovation with patient-centered commercial scalability.",
+    "primaryCta": "Schedule Strategic Consultation",
+    "secondaryCta": "Explore Sentra Core Solutions",
+    "metrics": [
+      {
+        "value": "21 Books",
+        "label": "Bestselling Author on Business"
+      },
+      {
+        "value": "30+ Years",
+        "label": "Healthcare Executive Leadership"
+      },
+      {
+        "value": "Sentra Core",
+        "label": "Integrated Care Platform"
+      }
+    ],
+    "features": [
+      {
+        "icon": "activity",
+        "title": "Clinical Workflow Optimization",
+        "desc": "Streamlining medical practice and health system operations to lower costs and elevate care."
+      },
+      {
+        "icon": "book-open",
+        "title": "The Entrepreneur's Game Plan",
+        "desc": "Authoritative business frameworks from his 21 books deployed to scale healthcare ventures."
+      },
+      {
+        "icon": "building",
+        "title": "Enterprise Health Innovation",
+        "desc": "Modern care architecture designed for patient outcomes and institutional resilience."
+      }
+    ],
+    "originalHeadline": "Sentra Core Health",
+    "originalWeaknesses": [
+      "Major healthcare venture running on an entry-level GoDaddy Website Builder template.",
+      "Underrepresents his remarkable career (21 published books and 30+ years in healthcare).",
+      "No interactive clinical workflow diagrams or enterprise investor-grade trust architecture."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Enterprise Healthcare Flagship",
+        "detail": "Built a crisp clinical navy and sky blue interface that immediately earns the trust of hospital executives."
+      },
+      {
+        "title": "21-Book Author Authority Strip",
+        "detail": "Positioned his extensive literary and entrepreneurial track record right beside his healthcare credentials."
+      },
+      {
+        "title": "C-Suite Advisory Calendar",
+        "detail": "Replaced GoDaddy template friction with a high-trust consultation funnel for hospital boards."
+      }
+    ]
+  },
+  {
+    "slug": "anya-vasquez",
+    "name": "Anya Vasquez",
+    "businessName": "Energy Coach Anya / Ascend Nation",
+    "niche": "Wealth Energetics, High-Ticket Alignment & Manifestation Strategy",
+    "url": "https://energycoachanya.com",
+    "linkedInUrl": "https://www.linkedin.com/in/energycoachanya/",
+    "archetype": "luxury-energetics",
+    "palette": {
+      "bg": "#FAF7F2",
+      "text": "#18181B",
+      "accent": "#E07A5F",
+      "secondaryAccent": "#D4AF37",
+      "slate": "#71717A",
+      "ctaBg": "#E07A5F",
+      "ctaText": "#FFFFFF"
+    },
+    "eyebrow": "CO-FOUNDER, ASCEND NATION • ENERGY COACH • WEALTH MANIFESTATION STRATEGIST",
+    "headline": "Break Your Income Ceiling with Radical Energetic Alignment & Purpose.",
+    "subheadline": "Energy Coach and Co-Founder of Ascend Nation. Guiding ambitious entrepreneurs to release subconscious money blocks, regulate their nervous system for high-ticket expansion, and manifest 7-figure freedom with ease.",
+    "primaryCta": "Apply for Energetic Alignment Mentorship",
+    "secondaryCta": "Watch Free Alignment Masterclass",
+    "metrics": [
+      {
+        "value": "Ascend Nation",
+        "label": "Co-Founder & Movement Lead"
+      },
+      {
+        "value": "7-Figure Shifts",
+        "label": "Client Breakthrough Benchmarks"
+      },
+      {
+        "value": "Subconscious",
+        "label": "Nervous System Recalibration"
+      }
+    ],
+    "features": [
+      {
+        "icon": "sparkles",
+        "title": "Wealth Frequency Calibration",
+        "desc": "Clearing subconscious energetic resistance to allow effortless revenue expansion."
+      },
+      {
+        "icon": "heart",
+        "title": "Nervous System Expansion",
+        "desc": "Conditioning your body and mind to hold high-ticket volume without burnout or panic."
+      },
+      {
+        "icon": "target",
+        "title": "Aligned Execution",
+        "desc": "Harmonizing strategic business action with feminine flow and divine purpose."
+      }
+    ],
+    "originalHeadline": "Energy Coach Anya",
+    "originalWeaknesses": [
+      "Cluttered funnel page with awkward headline formatting ('I am Energy coach Anya -').",
+      "Lacks the visual elegance and refined luxury demanded by high-ticket female founders.",
+      "Scattered call-to-actions that fail to qualify applicants for her inner-circle mentorship."
+    ],
+    "conversionFixes": [
+      {
+        "title": "Luxury Editorial Aesthetic",
+        "detail": "Designed with warm champagne sand, terracotta accents, and gold serif typography inspired by high-fashion journals."
+      },
+      {
+        "title": "Subconscious Wealth Positioning",
+        "detail": "Shifted away from generic spirituality toward high-impact nervous system regulation and income breakthrough."
+      },
+      {
+        "title": "High-Ticket Application Funnel",
+        "detail": "Replaced cluttered funnel buttons with an exclusive mentorship application path."
+      }
+    ]
   }
 ]
