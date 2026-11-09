@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cassie Zampa-Keim | Innovative Match &bull; Elite Matchmaking for Executives 50+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          },
+          colors: {
+            match: {
+              charcoal: '#111317',
+              card: '#1B1E24',
+              gold: '#D4AF37',
+              goldHover: '#BE9B2C',
+              cream: '#F6F4F0',
+              slate: '#8A92A0'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #111317; color: #F6F4F0; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .fluid-ribbon {
+      background: radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.12) 0%, transparent 60%);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between fluid-ribbon selection:bg-amber-500/20 selection:text-white">
+
+  <!-- Nav (Ref 12.jpg Smoky Fluid Header) -->
+  <header class="w-full border-b border-white/10 bg-match-charcoal/90 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-match-gold/20 border border-match-gold/40 text-match-gold flex items-center justify-center font-serif text-lg font-bold">IM</div>
+        <div>
+          <span class="font-serif text-lg font-bold tracking-widest block text-white">INNOVATIVE MATCH</span>
+          <span class="text-[10px] text-match-gold uppercase tracking-widest font-semibold">Cassie Zampa-Keim • CEO &amp; Dating Strategist</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-wider font-semibold text-match-slate">
+        <a href="#about" class="hover:text-match-gold transition-colors">About Cassie</a>
+        <a href="#matchmaking" class="hover:text-match-gold transition-colors">Executive Matchmaking</a>
+        <a href="#book" class="hover:text-match-gold transition-colors">Dating After Divorce</a>
+      </nav>
+
+      <a href="#apply" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-match-gold hover:bg-match-goldHover text-match-charcoal text-xs font-bold uppercase tracking-wider transition-all shadow-md active:scale-95">
+        <i data-lucide="lock" class="w-3.5 h-3.5"></i>
+        <span>Confidential Application</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section (Ref 12.jpg Architecture: Smoky Fluid Ribbon Backdrop + Clean Pill Buttons + Trust Ticker) -->
+  <main class="flex-1 flex flex-col justify-center py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Copy Hook -->
+        <div class="lg:col-span-7 flex flex-col items-start text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-match-gold/30 text-xs font-semibold text-match-gold mb-5">
+            <span class="w-2 h-2 rounded-full bg-match-gold"></span>
+            <span>AWARD-WINNING RELATIONSHIP EXPERT • FOR EXECUTIVES &amp; FOUNDERS 50+</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-[62px] font-normal tracking-tight text-white leading-[1.1] mb-6">
+            Discreet, Bespoke <br>
+            Matchmaking for <br>
+            <span class="italic text-match-gold font-medium">Accomplished Adults.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-match-slate leading-relaxed max-w-xl mb-8 font-light">
+            You've achieved exceptional professional success. Finding an equally exceptional life partner requires insider strategy, complete discretion, and an unparalleled network. Cassie Zampa-Keim curates matches for discerning executives over 50.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
+            <a href="#apply" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-match-gold hover:bg-match-goldHover text-match-charcoal text-sm font-bold uppercase tracking-wider transition-all shadow-lg active:scale-95">
+              <span>Apply for Private Membership</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="#about" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-match-card hover:bg-white/10 text-white border border-white/15 text-sm font-semibold transition-all">
+              <span>Read Dating Strategist Dossier</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="w-full pt-6 border-t border-white/10 flex flex-wrap items-center gap-8 text-xs text-match-slate">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-match-gold"></i>
+              <span>100% Confidential Vetting</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="heart-handshake" class="w-4 h-4 text-match-gold"></i>
+              <span>30+ Yrs Industry Insider</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="book" class="w-4 h-4 text-match-gold"></i>
+              <span>Author of Dating After Divorce</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Executive Portrait Card (Ref 12.jpg) -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-[400px]">
+            
+            <div class="rounded-3xl overflow-hidden border border-match-gold/25 bg-match-card shadow-2xl relative">
+              <img src="/assets/cassie-zampa-keim/portrait.jpg" alt="Cassie Zampa-Keim" class="w-full h-[500px] object-cover" onerror="this.src='/assets/cassie-zampa-keim/hero_1.jpg'">
+              
+              <div class="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-black/85 backdrop-blur-md border border-white/10">
+                <div class="text-[11px] font-bold text-match-gold uppercase tracking-wider">PRIVATE CLIENT ROSTER</div>
+                <div class="text-sm font-serif font-bold text-white">Strictly Confidential Admissions</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full py-6 border-t border-white/5 text-center text-xs text-match-slate">
+    &copy; 2026 Innovative Match • Cassie Zampa-Keim • Elite Dating Strategist.
+  </footer>
+
+  
+  <!-- MANDATORY DESIGNER PREVIEW BAR (FLOATING BOTTOM-RIGHT DOCK) -->
+  <aside 
+    id="designer-preview-bar" 
+    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3.5 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-zinc-950/90 backdrop-blur-xl border border-white/15 shadow-2xl text-white transition-all transform duration-200"
+    role="region"
+    aria-label="Design Concept Attribution Bar"
+  >
+    <div class="flex items-center gap-2.5">
+      <span class="relative flex h-2.5 w-2.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+      </span>
+      <div class="text-xs sm:text-[13px] font-medium leading-none text-zinc-200 truncate max-w-[140px] sm:max-w-none">
+        Redesign concept for <span class="font-bold text-white">Cassie Zampa-Keim</span>
+      </div>
+    </div>
+
+    <span class="hidden lg:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-medium tracking-tight">
+      <i data-lucide="info" class="w-3 h-3"></i>
+      <span>Demo Hero Only • Full Redesign Available</span>
+    </span>
+
+    <div class="flex items-center gap-2">
+      <button 
+        id="why-converts-btn"
+        type="button"
+        onclick="toggleConvertsModal()" 
+        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-[0.97] text-zinc-200 hover:text-white text-xs font-semibold tracking-tight transition-all border border-white/10 cursor-pointer"
+        aria-expanded="false"
+        aria-controls="converts-modal"
+      >
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-zinc-400"></i>
+        <span>Why This Converts <span class="text-zinc-400 font-normal">(Notes)</span></span>
+      </button>
+
+      <a 
+        href="https://miskathossain.net" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-white text-zinc-950 hover:bg-zinc-100 active:scale-[0.97] text-xs font-bold tracking-tight transition-all shadow-md cursor-pointer whitespace-nowrap"
+      >
+        <span>Discuss Full Redesign</span>
+        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </aside>
+
+  <!-- MODAL: WHY THIS CONVERTS -->
+  <div 
+    id="converts-modal" 
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+  >
+    <div 
+      class="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-left transform scale-95 transition-transform duration-200"
+      onclick="event.stopPropagation()"
+    >
+      <button 
+        type="button" 
+        onclick="toggleConvertsModal()" 
+        class="absolute top-5 right-5 p-2 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
+        aria-label="Close notes modal"
+      >
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-emerald-500/15 to-indigo-500/10 border border-emerald-500/30 mb-5 flex items-start gap-3">
+        <div class="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5">
+          <i data-lucide="info" class="w-4 h-4"></i>
+        </div>
+        <div class="text-xs text-zinc-300 leading-relaxed">
+          <span class="font-bold text-white block text-sm mb-0.5">This is just a demo hero section of your entire website.</span>
+          I created this bespoke concept to show how modern visual architecture, distinct reference layouts, and streamlined conversion paths elevate your positioning. 
+          <span class="text-emerald-300 font-semibold">Knock me or contact me to discuss a complete, high-converting website redesign for your business.</span>
+        </div>
+      </div>
+
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-2">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+        <span>CONVERSION LEAK ANALYSIS</span>
+      </div>
+
+      <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight">
+        Why This Redesign Converts
+      </h2>
+      <p class="text-xs sm:text-sm text-zinc-400 mt-1 mb-5">
+        Here is how this bespoke hero section fixes existing conversion leaks for <span class="text-white font-medium">Innovative Match</span>:
+      </p>
+
+      <div class="space-y-3 mb-6">
+        
+          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
+            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+              1
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-zinc-100">Ultra-High Net Worth Matchmaking UI</div>
+              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Replaced generic template headline with an elite, confidential executive matchmaking layout (Ref 12.jpg FinanPro).</div>
+            </div>
+          </div>
+        
+          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
+            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+              2
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-zinc-100">Specialization in Executives 50+</div>
+              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Positioned her bespoke vetting methodology specifically for mature founders, executives, and high-net-worth divorcees.</div>
+            </div>
+          </div>
+        
+          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
+            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+              3
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-zinc-100">Confidential Qualification Gate</div>
+              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Added a private qualification application protecting client discretion and elevating perceived luxury.</div>
+            </div>
+          </div>
+        
+      </div>
+
+      <div class="pt-5 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <span class="text-[11px] text-zinc-500 text-center sm:text-left">
+          Crafted by <a href="https://miskathossain.net" target="_blank" rel="noopener noreferrer" class="text-zinc-300 font-semibold hover:underline">Miskat Hossain</a> • 3D & High-Converting UX Architect
+        </span>
+        <a 
+          href="https://miskathossain.net" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white text-zinc-950 font-bold text-xs hover:bg-zinc-100 transition-all shadow-md active:scale-[0.98] w-full sm:w-auto justify-center"
+        >
+          <span>Knock Me to Redesign Full Site</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleConvertsModal() {
+      const modal = document.getElementById('converts-modal');
+      const btn = document.getElementById('why-converts-btn');
+      const isHidden = modal.classList.contains('pointer-events-none');
+      if (isHidden) {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100');
+        modal.querySelector('div').classList.remove('scale-95');
+        modal.querySelector('div').classList.add('scale-100');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.classList.remove('opacity-100');
+        modal.querySelector('div').classList.add('scale-95');
+        modal.querySelector('div').classList.remove('scale-100');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function initPreviewModal() {
+      const modal = document.getElementById('converts-modal');
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) toggleConvertsModal();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
+          toggleConvertsModal();
+        }
+      });
+    }
+  </script>
+  
+
+  <script>
+    lucide.createIcons();
+    initPreviewModal();
+  </script>
+</body>
+</html>

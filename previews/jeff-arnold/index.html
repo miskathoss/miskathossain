@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeff Arnold | 4Spot Consulting &bull; The Automated Recruiter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            grotesk: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          },
+          colors: {
+            spot: {
+              navy: '#0C2340',
+              blue: '#1E6FA8',
+              sky: '#7FB2DA',
+              light: '#F4F8FB',
+              slate: '#4B5D70'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #F4F8FB; color: #0C2340; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .concentric-rings {
+      background-image: radial-gradient(circle, rgba(30, 111, 168, 0.1) 1px, transparent 1px), radial-gradient(circle, rgba(30, 111, 168, 0.05) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between concentric-rings selection:bg-blue-500/20 selection:text-spot-navy">
+
+  <!-- Nav (Ref 4.jpg Cardo Minimal Geometric Nav) -->
+  <header class="w-full border-b border-spot-sky/30 bg-white/90 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="/assets/jeff-arnold/logo_circle.png" alt="4Spot Consulting Logo" class="h-10 w-10 object-contain" onerror="this.src='/assets/jeff-arnold/logo.png'">
+        <div>
+          <span class="font-grotesk font-bold text-base tracking-tight text-spot-navy">4SPOT CONSULTING</span>
+          <span class="text-[10px] text-spot-blue uppercase tracking-widest font-semibold block">Stop Logging. Start Leading.</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-wider font-semibold text-spot-slate">
+        <a href="#books" class="hover:text-spot-blue transition-colors">Bestselling Books</a>
+        <a href="#shrm" class="hover:text-spot-blue transition-colors">SHRM Recertification</a>
+        <a href="#automation" class="hover:text-spot-blue transition-colors">AI Automation</a>
+        <a href="#keynotes" class="hover:text-spot-blue transition-colors">Keynotes</a>
+      </nav>
+
+      <a href="#calculate" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-spot-blue hover:bg-spot-navy text-white text-xs font-bold transition-all shadow-md active:scale-95">
+        <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+        <span>Calculate Hours Reclaimed</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section (Ref 4.jpg Architecture: Geometric Minimalism + Square Photo with Concentric Rings + ROI Slider) -->
+  <main class="flex-1 flex flex-col justify-center py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Copy & Value Metric -->
+        <div class="lg:col-span-7 flex flex-col items-start text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100/70 border border-spot-blue/30 text-xs font-semibold text-spot-blue mb-5">
+            <span class="w-2 h-2 rounded-full bg-spot-blue"></span>
+            <span>AMAZON #1 BESTSELLING AUTHOR • SHRM RECERTIFICATION PROVIDER</span>
+          </div>
+
+          <h1 class="font-grotesk text-4xl sm:text-6xl lg:text-[62px] font-bold tracking-tight text-spot-navy leading-[1.08] mb-6">
+            Stop Logging. <br>
+            <span class="text-spot-blue">Start Leading.</span> <br>
+            Reclaim 25% of Your Week.
+          </h1>
+
+          <p class="text-base sm:text-lg text-spot-slate leading-relaxed max-w-xl mb-8">
+            Eliminate repetitive administrative drag. Jeff Arnold equips recruiting teams, legal practices, and corporate leaders with automated workflows that unlock 10+ hours per person every single week.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
+            <a href="#audit" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-spot-blue hover:bg-spot-navy text-white text-sm font-bold tracking-wide transition-all shadow-lg active:scale-95">
+              <span>Book Team Efficiency Audit</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="#books" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white hover:bg-zinc-50 text-spot-navy border border-spot-sky/50 text-sm font-semibold transition-all">
+              <i data-lucide="book-open" class="w-4 h-4 text-spot-blue"></i>
+              <span>Get The Books</span>
+            </a>
+          </div>
+
+          <!-- 3-Stat Metric Row (Ref 4.jpg) -->
+          <div class="w-full pt-6 border-t border-spot-sky/30 grid grid-cols-3 gap-4 text-left">
+            <div>
+              <div class="font-grotesk text-3xl font-bold text-spot-navy">25%</div>
+              <div class="text-xs text-spot-slate mt-0.5">Average Time Reclaimed</div>
+            </div>
+            <div>
+              <div class="font-grotesk text-3xl font-bold text-spot-blue">#1</div>
+              <div class="text-xs text-spot-slate mt-0.5">Amazon Bestseller</div>
+            </div>
+            <div>
+              <div class="font-grotesk text-3xl font-bold text-spot-navy">SHRM</div>
+              <div class="text-xs text-spot-slate mt-0.5">Accredited Provider</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Books Showcase + Interactive Efficiency Card (Ref 4.jpg) -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-[420px]">
+            
+            <!-- Card Container -->
+            <div class="rounded-3xl bg-white p-6 border border-spot-sky/40 shadow-2xl">
+              
+              <!-- Books Display -->
+              <div class="flex items-center justify-center gap-4 mb-6">
+                <img src="/assets/jeff-arnold/book_recruiter.png" alt="The Automated Recruiter" class="h-44 object-contain shadow-md rounded-lg">
+                <img src="/assets/jeff-arnold/book_lawfirm.png" alt="The Automated Law Firm" class="h-44 object-contain shadow-md rounded-lg">
+              </div>
+
+              <!-- Interactive ROI Card (Ref 4.jpg slider) -->
+              <div class="p-4 rounded-2xl bg-spot-light border border-spot-sky/30">
+                <div class="flex items-center justify-between text-xs font-bold text-spot-navy mb-2">
+                  <span>TEAM SIZE CALCULATOR</span>
+                  <span class="text-spot-blue font-mono" id="team-calc">15 Team Members</span>
+                </div>
+                <input type="range" min="5" max="100" value="15" class="w-full accent-[#1E6FA8] mb-3" oninput="document.getElementById('team-calc').innerText = this.value + ' Team Members'; document.getElementById('hours-calc').innerText = (this.value * 10) + ' hrs/wk';">
+                
+                <div class="flex items-center justify-between text-xs pt-2 border-t border-spot-sky/20">
+                  <span class="text-spot-slate">Hours Reclaimed:</span>
+                  <span class="font-bold text-spot-blue text-sm" id="hours-calc">150 hrs/wk</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full py-6 border-t border-spot-sky/30 text-center text-xs text-spot-slate">
+    &copy; 2026 4Spot Consulting LLC • Jeff Arnold • Stop Logging. Start Leading.
+  </footer>
+
+  
+  <!-- MANDATORY DESIGNER PREVIEW BAR (FLOATING BOTTOM-RIGHT DOCK) -->
+  <aside 
+    id="designer-preview-bar" 
+    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3.5 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-zinc-950/90 backdrop-blur-xl border border-white/15 shadow-2xl text-white transition-all transform duration-200"
+    role="region"
+    aria-label="Design Concept Attribution Bar"
+  >
+    <div class="flex items-center gap-2.5">
+      <span class="relative flex h-2.5 w-2.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+      </span>
+      <div class="text-xs sm:text-[13px] font-medium leading-none text-zinc-200 truncate max-w-[140px] sm:max-w-none">
+        Redesign concept for <span class="font-bold text-white">Jeff Arnold</span>
+      </div>
+    </div>
+
+    <span class="hidden lg:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-medium tracking-tight">
+      <i data-lucide="info" class="w-3 h-3"></i>
+      <span>Demo Hero Only • Full Redesign Available</span>
+    </span>
+
+    <div class="flex items-center gap-2">
+      <button 
+        id="why-converts-btn"
+        type="button"
+        onclick="toggleConvertsModal()" 
+        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-[0.97] text-zinc-200 hover:text-white text-xs font-semibold tracking-tight transition-all border border-white/10 cursor-pointer"
+        aria-expanded="false"
+        aria-controls="converts-modal"
+      >
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-zinc-400"></i>
+        <span>Why This Converts <span class="text-zinc-400 font-normal">(Notes)</span></span>
+      </button>
+
+      <a 
+        href="https://miskathossain.net" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-white text-zinc-950 hover:bg-zinc-100 active:scale-[0.97] text-xs font-bold tracking-tight transition-all shadow-md cursor-pointer whitespace-nowrap"
+      >
+        <span>Discuss Full Redesign</span>
+        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </aside>
+
+  <!-- MODAL: WHY THIS CONVERTS -->
+  <div 
+    id="converts-modal" 
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+  >
+    <div 
+      class="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-left transform scale-95 transition-transform duration-200"
+      onclick="event.stopPropagation()"
+    >
+      <button 
+        type="button" 
+        onclick="toggleConvertsModal()" 
+        class="absolute top-5 right-5 p-2 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
+        aria-label="Close notes modal"
+      >
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-emerald-500/15 to-indigo-500/10 border border-emerald-500/30 mb-5 flex items-start gap-3">
+        <div class="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5">
+          <i data-lucide="info" class="w-4 h-4"></i>
+        </div>
+        <div class="text-xs text-zinc-300 leading-relaxed">
+          <span class="font-bold text-white block text-sm mb-0.5">This is just a demo hero section of your entire website.</span>
+          I created this bespoke concept to show how modern visual architecture, distinct reference layouts, and streamlined conversion paths elevate your positioning. 
+          <span class="text-emerald-300 font-semibold">Knock me or contact me to discuss a complete, high-converting website redesign for your business.</span>
+        </div>
+      </div>
+
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-2">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+        <span>CONVERSION LEAK ANALYSIS</span>
+      </div>
+
+      <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight">
+        Why This Redesign Converts
+      </h2>
+      <p class="text-xs sm:text-sm text-zinc-400 mt-1 mb-5">
+        Here is how this bespoke hero section fixes existing conversion leaks for <span class="text-white font-medium">4Spot Consulting</span>:
+      </p>
+
+      <div class="space-y-3 mb-6">
+        
+          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
+            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+              1
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-zinc-100">Geometric AI Agency Visuals</div>
+              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Replaced clunky WordPress theme with sharp Cardo-style concentric geometry and interactive ROI slider.</div>
+            </div>
+          </div>
+        
+          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
+            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+              2
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-zinc-100">Amazon #1 Bestseller Proof</div>
+              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Front-loaded *The Automated Recruiter* and *The Automated Law Firm* 3D covers directly in the hero.</div>
+            </div>
+          </div>
+        
+          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
+            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+              3
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-zinc-100">SHRM Recertification Hook</div>
+              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Prominently surfaced SHRM accreditation with instant &#039;Reclaim 25% of Your Team&#039;s Week&#039; CTA.</div>
+            </div>
+          </div>
+        
+      </div>
+
+      <div class="pt-5 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <span class="text-[11px] text-zinc-500 text-center sm:text-left">
+          Crafted by <a href="https://miskathossain.net" target="_blank" rel="noopener noreferrer" class="text-zinc-300 font-semibold hover:underline">Miskat Hossain</a> • 3D & High-Converting UX Architect
+        </span>
+        <a 
+          href="https://miskathossain.net" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white text-zinc-950 font-bold text-xs hover:bg-zinc-100 transition-all shadow-md active:scale-[0.98] w-full sm:w-auto justify-center"
+        >
+          <span>Knock Me to Redesign Full Site</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleConvertsModal() {
+      const modal = document.getElementById('converts-modal');
+      const btn = document.getElementById('why-converts-btn');
+      const isHidden = modal.classList.contains('pointer-events-none');
+      if (isHidden) {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100');
+        modal.querySelector('div').classList.remove('scale-95');
+        modal.querySelector('div').classList.add('scale-100');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.classList.remove('opacity-100');
+        modal.querySelector('div').classList.add('scale-95');
+        modal.querySelector('div').classList.remove('scale-100');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function initPreviewModal() {
+      const modal = document.getElementById('converts-modal');
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) toggleConvertsModal();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
+          toggleConvertsModal();
+        }
+      });
+    }
+  </script>
+  
+
+  <script>
+    lucide.createIcons();
+    initPreviewModal();
+  </script>
+</body>
+</html>
