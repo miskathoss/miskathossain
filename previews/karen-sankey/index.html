@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr Karen Sankey | Community Wellness CIC &bull; Bevan Fellow</title>
+  <title>Dr Karen Sankey | Former NHS GP (30+ Yrs) • Bevan Fellow • Community Wellness CIC</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
@@ -14,18 +16,20 @@
       theme: {
         extend: {
           fontFamily: {
-            serif: ['"Playfair Display"', 'serif'],
+            serif: ['"Cormorant Garamond"', 'serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif']
           },
           colors: {
-            botanical: {
-              bg: '#0F1D14',
-              card: '#16281D',
-              forest: '#264A34',
+            clinic: {
+              obsidian: '#09130E',
+              forest: '#12241A',
+              card: '#193325',
+              border: '#254A36',
               sage: '#8FA87B',
-              cream: '#FAF7F0',
-              linen: '#EDE8DD',
-              muted: '#A5B5A8'
+              sageLight: '#B7CEAB',
+              linen: '#FAF7F0',
+              cream: '#EDE7DC',
+              muted: '#9CB0A2'
             }
           }
         }
@@ -33,139 +37,240 @@
     }
   </script>
   <style>
-    body { background-color: #0F1D14; color: #FAF7F0; font-family: 'Plus Jakarta Sans', sans-serif; }
-    .botanical-arch {
+    body { background-color: #09130E; color: #FAF7F0; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .botanical-glow {
+      background: radial-gradient(circle at 65% 25%, rgba(143, 168, 123, 0.15) 0%, rgba(18, 36, 26, 0.5) 45%, transparent 75%);
+    }
+    .sanctuary-card {
+      background: linear-gradient(135deg, rgba(25, 51, 37, 0.8) 0%, rgba(18, 36, 26, 0.95) 100%);
+      border: 1px solid rgba(143, 168, 123, 0.2);
+      backdrop-filter: blur(16px);
+    }
+    .arch-portrait-frame {
       border-top-left-radius: 200px;
       border-top-right-radius: 200px;
-      border-bottom-left-radius: 24px;
-      border-bottom-right-radius: 24px;
+      border-bottom-left-radius: 28px;
+      border-bottom-right-radius: 28px;
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-emerald-500/30 selection:text-white">
+<body class="min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-emerald-500/30 selection:text-white">
 
-  <!-- Nav (Ref 17.png Botanical Deep Green Header) -->
-  <header class="w-full border-b border-white/10 bg-[#0F1D14]/90 backdrop-blur-md sticky top-0 z-40">
+  <!-- Top Authority Bar (Credentials & NHS Track Record) -->
+  <div class="w-full bg-clinic-forest border-b border-clinic-border/60 py-2 px-4 text-center text-xs font-medium text-clinic-muted">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-left">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold bg-clinic-sage/20 text-clinic-sageLight border border-clinic-sage/30">
+          <i data-lucide="shield-check" class="w-3 h-3"></i> BEVAN EXEMPLAR
+        </span>
+        <span class="hidden sm:inline">The Bevan Commission Exemplar &amp; Fellow • Wales &amp; UK Healthcare Innovation</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] text-clinic-muted">
+        <span>30+ Years NHS General Practitioner</span>
+        <span class="hidden md:inline">•</span>
+        <span class="hidden md:inline">Trained by Dr. Gabor Maté</span>
+        <span class="hidden md:inline">•</span>
+        <span class="hidden md:inline">UnLtd Social Entrepreneur</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="w-full border-b border-white/5 bg-clinic-obsidian/85 backdrop-blur-xl sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-full bg-botanical-sage/20 border border-botanical-sage/40 text-botanical-sage flex items-center justify-center">
-          <i data-lucide="leaf" class="w-4 h-4"></i>
-        </div>
-        <div>
-          <span class="font-serif text-base font-bold tracking-wide block text-white">COMMUNITY WELLNESS</span>
-          <span class="text-[10px] text-botanical-sage uppercase tracking-widest font-semibold">Dr Karen Sankey • Bevan Fellow</span>
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center gap-3.5">
+        <img 
+          src="/assets/karen-sankey/community_wellness_logo.svg" 
+          alt="Community Wellness CIC" 
+          class="h-10 w-auto object-contain brightness-125"
+          onerror="this.src='/assets/karen-sankey/logo_ks_cream.png'"
+        >
+        <div class="border-l border-clinic-border pl-3">
+          <span class="font-serif text-lg font-bold tracking-wide block text-white">DR KAREN SANKEY</span>
+          <span class="text-[10px] text-clinic-sage uppercase tracking-widest font-semibold">Trauma-Informed Practice &amp; Human Flourishing</span>
         </div>
       </div>
 
-      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold text-botanical-muted">
-        <a href="#about" class="hover:text-botanical-sage transition-colors">About Dr Karen</a>
-        <a href="#trauma-informed" class="hover:text-botanical-sage transition-colors">Trauma-Informed Practice</a>
-        <a href="#bevan" class="hover:text-botanical-sage transition-colors">Bevan Commission</a>
-        <a href="#programs" class="hover:text-botanical-sage transition-colors">CIC Programs</a>
+      <!-- Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-clinic-muted">
+        <a href="#about" class="hover:text-clinic-sageLight transition-colors">About Dr Karen</a>
+        <a href="#cic" class="hover:text-clinic-sageLight transition-colors">Community Wellness CIC</a>
+        <a href="#gabor-mate" class="hover:text-clinic-sageLight transition-colors">Trauma &amp; Compassionate Inquiry</a>
+        <a href="#commissioning" class="hover:text-clinic-sageLight transition-colors">NHS &amp; Public Sector</a>
       </nav>
 
-      <a href="#consult" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-botanical-sage hover:bg-botanical-sage/90 text-botanical-bg text-xs font-bold uppercase tracking-wider transition-all shadow-md active:scale-95">
-        <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
-        <span>Book Consultation</span>
-      </a>
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <a href="#commission" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-clinic-sage hover:bg-clinic-sageLight text-clinic-obsidian text-xs font-bold uppercase tracking-wider transition-all shadow-md active:scale-95">
+          <i data-lucide="heart-handshake" class="w-3.5 h-3.5"></i>
+          <span>Commission a Program</span>
+        </a>
+      </div>
+
     </div>
   </header>
 
-  <!-- Hero Section (Ref 17.png Architecture: Botanical Arched Portrait + Deep Forest Green) -->
-  <main class="flex-1 flex flex-col justify-center py-12 lg:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <!-- Hero Section -->
+  <main class="flex-1 relative flex flex-col justify-center botanical-glow py-12 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         
-        <!-- Left: Copy Hook -->
+        <!-- Left Column: Copy Hook -->
         <div class="lg:col-span-7 flex flex-col items-start text-left">
           
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-botanical-forest border border-botanical-sage/30 text-xs font-semibold text-botanical-sage mb-5">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-botanical-sage"></i>
-            <span>BEVAN FELLOW • UNLTD SOCIAL ENTREPRENEUR • FOUNDER CIC</span>
+          <!-- Category Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-clinic-forest border border-clinic-sage/40 text-xs font-semibold text-clinic-sageLight mb-6 backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-clinic-sage animate-pulse"></span>
+            <span>FORMER NHS GENERAL PRACTITIONER (30+ YRS) • BEVAN FELLOW • CIC FOUNDER</span>
           </div>
 
-          <h1 class="font-serif text-4xl sm:text-5xl lg:text-[60px] font-normal tracking-tight text-white leading-[1.12] mb-6">
-            Trauma-Informed Practice &amp; <br>
-            <span class="italic text-botanical-sage">Human Flourishing.</span>
+          <!-- Main H1 Headline -->
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-[66px] font-normal tracking-tight text-white leading-[1.08] mb-6">
+            Beyond symptom suppression. <br>
+            <span class="italic text-clinic-sage font-medium">Restoring the whole human.</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-botanical-muted leading-relaxed max-w-xl mb-8">
-            Bridging clinical therapeutic coaching, health sector innovation, and community resilience. Dr Karen Sankey partners with NHS leaders, organizations, and communities to foster sustainable healing and compassionate leadership.
+          <!-- Empathetic Subheadline -->
+          <p class="text-base sm:text-lg text-clinic-muted leading-relaxed max-w-xl mb-8 font-light">
+            Modern medicine excels in acute care, but chronic stress, burnout, and generational trauma require a radically different foundation. Bridging 30+ years in NHS practice with Dr. Gabor Maté’s Compassionate Inquiry, Dr Karen Sankey leads systemic trauma-informed programs for healthcare leaders, organizations, and communities.
           </p>
 
+          <!-- Dual Conversion Action Path -->
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#consult" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-botanical-sage hover:bg-botanical-sage/90 text-botanical-bg text-sm font-bold uppercase tracking-wider transition-all shadow-lg active:scale-95">
-              <span>Book Therapeutic Consultation</span>
+            <a href="#commission" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-clinic-sage hover:bg-clinic-sageLight text-clinic-obsidian text-sm font-bold uppercase tracking-wider transition-all shadow-xl active:scale-95">
+              <span>Commission Community Program</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
-            <a href="#fellowship" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-botanical-card hover:bg-botanical-forest text-white border border-white/10 text-sm font-semibold transition-all">
-              <i data-lucide="shield" class="w-4 h-4 text-botanical-sage"></i>
-              <span>View Bevan Fellowship Research</span>
+
+            <a href="#private-care" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full sanctuary-card hover:bg-clinic-forest text-white text-sm font-semibold transition-all active:scale-95">
+              <i data-lucide="calendar" class="w-4 h-4 text-clinic-sage"></i>
+              <span>1:1 Therapeutic Mentorship</span>
             </a>
           </div>
 
-          <!-- Impact Metrics -->
-          <div class="w-full pt-6 border-t border-white/10 grid grid-cols-3 gap-4 text-left">
+          <!-- Proof Metrics -->
+          <div class="w-full pt-6 border-t border-white/10 grid grid-cols-3 gap-6 text-left">
             <div>
-              <div class="font-serif text-2xl sm:text-3xl font-bold text-white">20+ Yrs</div>
-              <div class="text-xs text-botanical-muted mt-0.5">Clinical Therapeutic Expertise</div>
+              <div class="font-serif text-3xl font-bold text-white">30+ Yrs</div>
+              <div class="text-xs text-clinic-muted mt-0.5">NHS Clinical Medicine</div>
             </div>
             <div>
-              <div class="font-serif text-2xl sm:text-3xl font-bold text-botanical-sage">CIC</div>
-              <div class="text-xs text-botanical-muted mt-0.5">Social Enterprise Founder</div>
+              <div class="font-serif text-3xl font-bold text-clinic-sage">Gabor Maté</div>
+              <div class="text-xs text-clinic-muted mt-0.5">Compassionate Inquiry Trained</div>
             </div>
             <div>
-              <div class="font-serif text-2xl sm:text-3xl font-bold text-white">Bevan</div>
-              <div class="text-xs text-botanical-muted mt-0.5">Innovation Commission Fellow</div>
+              <div class="font-serif text-3xl font-bold text-white">Bevan</div>
+              <div class="text-xs text-clinic-muted mt-0.5">Innovation Commission Fellow</div>
             </div>
           </div>
 
         </div>
 
-        <!-- Right: Ref 17.png Arched Botanical Composition -->
+        <!-- Right Column: Real Portrait & Authentic Proof Composition -->
         <div class="lg:col-span-5 relative flex justify-center">
-          <div class="relative w-full max-w-[400px]">
+          <div class="relative w-full max-w-[420px]">
             
-            <div class="botanical-arch bg-gradient-to-b from-botanical-forest to-botanical-card p-4 border border-botanical-sage/20 shadow-2xl overflow-hidden text-center flex flex-col items-center justify-center min-h-[460px]">
-              <div class="w-24 h-24 rounded-full bg-botanical-bg border border-botanical-sage/40 flex items-center justify-center mb-5 text-botanical-sage">
-                <i data-lucide="heart-handshake" class="w-12 h-12"></i>
-              </div>
-              <h3 class="font-serif text-2xl font-bold text-white mb-2">Community Wellness CIC</h3>
-              <p class="text-xs text-botanical-muted max-w-[260px] leading-relaxed mb-6">
-                Creating safe, compassionate environments for community mental health, trauma recovery, and systemic organizational care.
-              </p>
-              <div class="px-4 py-2 rounded-full bg-botanical-bg/80 border border-botanical-sage/30 text-botanical-sage text-xs font-semibold">
-                Wales &amp; UK Social Enterprise
-              </div>
-            </div>
+            <!-- Soft Botanical Glow -->
+            <div class="absolute -inset-4 bg-gradient-to-tr from-clinic-sage/20 via-clinic-forest to-transparent rounded-3xl blur-2xl"></div>
 
-            <!-- Floating Badge -->
-            <div class="absolute -bottom-4 -left-4 p-3.5 rounded-2xl bg-botanical-bg border border-botanical-sage/30 shadow-xl flex items-center gap-3">
-              <div class="w-8 h-8 rounded-full bg-botanical-sage/20 text-botanical-sage flex items-center justify-center">
-                <i data-lucide="award" class="w-4 h-4"></i>
+            <!-- Portrait Frame -->
+            <div class="arch-portrait-frame relative overflow-hidden border border-clinic-sage/30 bg-clinic-forest shadow-2xl p-3">
+              <img 
+                src="/assets/karen-sankey/portrait.jpg" 
+                alt="Dr Karen Sankey" 
+                class="w-full h-[480px] object-cover rounded-[20px] brightness-105"
+                onerror="this.src='/assets/karen-sankey/dr_karen_portrait.jpg'"
+              >
+
+              <!-- Floating Seal (Top Left): Gabor Maté Certification -->
+              <div class="absolute top-6 left-6 p-3 rounded-2xl bg-clinic-obsidian/90 backdrop-blur-md border border-clinic-sage/40 flex items-center gap-2.5 shadow-xl">
+                <div class="w-8 h-8 rounded-xl bg-clinic-sage/20 text-clinic-sage flex items-center justify-center">
+                  <i data-lucide="heart" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-[9px] font-bold text-clinic-sage uppercase tracking-widest">CLINICAL TRAINING</div>
+                  <div class="text-xs font-serif font-bold text-white">Compassionate Inquiry</div>
+                </div>
               </div>
-              <div>
-                <div class="text-xs font-bold text-white">UnLtd Social Entrepreneur</div>
-                <div class="text-[10px] text-botanical-muted">Recognized UK Community Impact</div>
+
+              <!-- Floating Impact Dock (Bottom): Community Wellness CIC -->
+              <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-clinic-obsidian/95 backdrop-blur-xl border border-clinic-sage/30 shadow-2xl flex items-center justify-between">
+                <div>
+                  <div class="text-[10px] font-bold text-clinic-sage uppercase tracking-wider">SOCIAL ENTERPRISE</div>
+                  <div class="text-sm font-serif font-bold text-white">Community Wellness CIC</div>
+                  <div class="text-[11px] text-clinic-muted mt-0.5">Trauma-informed public health models</div>
+                </div>
+                <div class="w-9 h-9 rounded-full bg-clinic-forest border border-clinic-sage/30 flex items-center justify-center text-clinic-sage shrink-0">
+                  <i data-lucide="leaf" class="w-4 h-4"></i>
+                </div>
               </div>
+
             </div>
 
           </div>
         </div>
 
       </div>
+
+      <!-- 3-Pillar Service Tracks -->
+      <div class="mt-14 pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-5 text-left">
+        
+        <div class="sanctuary-card p-5 rounded-2xl border border-white/10 hover:border-clinic-sage/40 transition-all">
+          <div class="w-9 h-9 rounded-xl bg-clinic-sage/20 text-clinic-sage flex items-center justify-center mb-3">
+            <i data-lucide="building" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base text-white mb-1">NHS &amp; Public Sector Commissioning</h3>
+          <p class="text-xs text-clinic-muted leading-relaxed mb-3">
+            Psychoeducation and systemic nervous system regulation programs designed for healthcare staff and community teams.
+          </p>
+          <a href="#commission" class="text-xs font-bold text-clinic-sage flex items-center gap-1 hover:underline">
+            <span>Explore Commissioning Models</span> &rarr;
+          </a>
+        </div>
+
+        <div class="sanctuary-card p-5 rounded-2xl border border-white/10 hover:border-clinic-sage/40 transition-all">
+          <div class="w-9 h-9 rounded-xl bg-clinic-sage/20 text-clinic-sage flex items-center justify-center mb-3">
+            <i data-lucide="heart-pulse" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base text-white mb-1">Trauma-Informed Practice</h3>
+          <p class="text-xs text-clinic-muted leading-relaxed mb-3">
+            Moving beyond pathology labels to explore how unaddressed childhood trauma and chronic stress drive chronic physical illness.
+          </p>
+          <a href="#gabor-mate" class="text-xs font-bold text-clinic-sage flex items-center gap-1 hover:underline">
+            <span>Dr. Gabor Maté Framework</span> &rarr;
+          </a>
+        </div>
+
+        <div class="sanctuary-card p-5 rounded-2xl border border-white/10 hover:border-clinic-sage/40 transition-all">
+          <div class="w-9 h-9 rounded-xl bg-clinic-sage/20 text-clinic-sage flex items-center justify-center mb-3">
+            <i data-lucide="user-check" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-serif font-bold text-base text-white mb-1">Private Therapeutic Mentorship</h3>
+          <p class="text-xs text-clinic-muted leading-relaxed mb-3">
+            Compass Sessions and Discovery partnerships for executives, clinicians, and individuals breaking free from perfectionism.
+          </p>
+          <a href="#private-care" class="text-xs font-bold text-clinic-sage flex items-center gap-1 hover:underline">
+            <span>Book Discovery Session</span> &rarr;
+          </a>
+        </div>
+
+      </div>
+
     </div>
   </main>
 
-  <footer class="w-full py-6 border-t border-white/5 text-center text-xs text-botanical-muted">
-    &copy; 2026 Community Wellness CIC • Dr Karen Sankey • Karen Sankey Wellness.
+  <footer class="w-full py-6 border-t border-white/5 text-center text-xs text-clinic-muted">
+    &copy; 2026 Community Wellness CIC &bull; Dr Karen Sankey &bull; Karen Sankey Wellness.
   </footer>
 
   
-  <!-- MANDATORY DESIGNER PREVIEW BAR (FLOATING BOTTOM-RIGHT DOCK) -->
+  <!-- Sleek Floating Attribution Dock -->
   <aside 
     id="designer-preview-bar" 
-    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3.5 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-zinc-950/90 backdrop-blur-xl border border-white/15 shadow-2xl text-white transition-all transform duration-200"
+    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3.5 px-4 py-2.5 rounded-2xl bg-zinc-950/90 backdrop-blur-xl border border-white/15 shadow-2xl text-white transition-all"
     role="region"
     aria-label="Design Concept Attribution Bar"
   >
@@ -174,14 +279,13 @@
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
         <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
       </span>
-      <div class="text-xs sm:text-[13px] font-medium leading-none text-zinc-200 truncate max-w-[140px] sm:max-w-none">
-        Redesign concept for <span class="font-bold text-white">Dr Karen Sankey</span>
+      <div class="text-xs sm:text-[13px] font-medium leading-none text-zinc-200">
+        Bespoke Concept for <span class="font-bold text-white">Dr Karen Sankey</span>
       </div>
     </div>
 
-    <span class="hidden lg:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-medium tracking-tight">
-      <i data-lucide="info" class="w-3 h-3"></i>
-      <span>Demo Hero Only • Full Redesign Available</span>
+    <span class="hidden md:inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-medium">
+      Demo Hero Section
     </span>
 
     <div class="flex items-center gap-2">
@@ -189,36 +293,34 @@
         id="why-converts-btn"
         type="button"
         onclick="toggleConvertsModal()" 
-        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-[0.97] text-zinc-200 hover:text-white text-xs font-semibold tracking-tight transition-all border border-white/10 cursor-pointer"
-        aria-expanded="false"
-        aria-controls="converts-modal"
+        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 text-zinc-200 hover:text-white text-xs font-semibold transition-all border border-white/10 cursor-pointer"
       >
-        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-zinc-400"></i>
-        <span>Why This Converts <span class="text-zinc-400 font-normal">(Notes)</span></span>
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-400"></i>
+        <span>Site Audit &amp; Conversion Notes</span>
       </button>
 
       <a 
         href="https://miskathossain.net" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-white text-zinc-950 hover:bg-zinc-100 active:scale-[0.97] text-xs font-bold tracking-tight transition-all shadow-md cursor-pointer whitespace-nowrap"
+        class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-white text-zinc-950 hover:bg-zinc-100 active:scale-95 text-xs font-bold transition-all shadow-md cursor-pointer whitespace-nowrap"
       >
-        <span>Discuss Full Redesign</span>
+        <span>Discuss Redesign</span>
         <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
       </a>
     </div>
   </aside>
 
-  <!-- MODAL: WHY THIS CONVERTS -->
+  <!-- Modal: In-Depth Website Audit & Conversion Leaks -->
   <div 
     id="converts-modal" 
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200"
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200"
     role="dialog"
     aria-modal="true"
     aria-labelledby="modal-title"
   >
     <div 
-      class="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-left transform scale-95 transition-transform duration-200"
+      class="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-left transform scale-95 transition-transform duration-200 max-h-[90vh] overflow-y-auto"
       onclick="event.stopPropagation()"
     >
       <button 
@@ -230,74 +332,66 @@
         <i data-lucide="x" class="w-4 h-4"></i>
       </button>
 
-      <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-emerald-500/15 to-indigo-500/10 border border-emerald-500/30 mb-5 flex items-start gap-3">
-        <div class="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5">
-          <i data-lucide="info" class="w-4 h-4"></i>
-        </div>
-        <div class="text-xs text-zinc-300 leading-relaxed">
-          <span class="font-bold text-white block text-sm mb-0.5">This is just a demo hero section of your entire website.</span>
-          I created this bespoke concept to show how modern visual architecture, distinct reference layouts, and streamlined conversion paths elevate your positioning. 
-          <span class="text-emerald-300 font-semibold">Knock me or contact me to discuss a complete, high-converting website redesign for your business.</span>
-        </div>
-      </div>
-
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-2">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-        <span>CONVERSION LEAK ANALYSIS</span>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-3">
+        <i data-lucide="activity" class="w-3.5 h-3.5"></i>
+        <span>PROFESSIONAL WEBSITE AUDIT</span>
       </div>
 
       <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight">
-        Why This Redesign Converts
+        Why This Redesign Outperforms The Current Site
       </h2>
       <p class="text-xs sm:text-sm text-zinc-400 mt-1 mb-5">
-        Here is how this bespoke hero section fixes existing conversion leaks for <span class="text-white font-medium">Community Wellness CIC</span>:
+        Audit prepared specifically for <strong class="text-white">Community Wellness CIC & Karen Sankey Wellness</strong> based on current site architecture:
       </p>
 
-      <div class="space-y-3 mb-6">
-        
-          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
-            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-              1
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-zinc-100">Botanical Healthcare Elevation</div>
-              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Framed trauma-informed healthcare in an elegant botanical deep forest canvas (Catherine Schwebel style).</div>
-            </div>
-          </div>
-        
-          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
-            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-              2
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-zinc-100">Bevan Commission Fellowship Proof</div>
-              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Elevated her Bevan Fellowship and UnLtd Social Entrepreneur credentials prominently above the fold.</div>
-            </div>
-          </div>
-        
-          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
-            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-              3
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-zinc-100">B2B Social Enterprise Booking</div>
-              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Separated individual therapeutic wellness from NHS &amp; corporate organizational training tracks.</div>
-            </div>
-          </div>
-        
+      <!-- Current Friction Points -->
+      <div class="p-4 rounded-2xl bg-red-950/20 border border-red-900/40 mb-4">
+        <div class="text-xs font-bold text-red-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+          <i data-lucide="alert-octagon" class="w-3.5 h-3.5"></i>
+          <span>Critical Issues on Current Website</span>
+        </div>
+        <ul class="text-xs text-zinc-300 space-y-1.5 list-disc list-inside">
+          <li>Dated blog-style WordPress theme with missing H1 tag, hurting SEO and primary viewport engagement.</li><li>Buries her 30+ years as an NHS General Practitioner and specialized training with Dr. Gabor Maté in Compassionate Inquiry.</li><li>Confusing layout that fails to separate NHS / Public Sector commissioning from private 1:1 therapeutic coaching.</li><li>Lacks clear social proof metrics for her Bevan Innovation Commission Fellowship and UnLtd Social Entrepreneur recognition.</li>
+        </ul>
       </div>
 
-      <div class="pt-5 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <span class="text-[11px] text-zinc-500 text-center sm:text-left">
-          Crafted by <a href="https://miskathossain.net" target="_blank" rel="noopener noreferrer" class="text-zinc-300 font-semibold hover:underline">Miskat Hossain</a> • 3D & High-Converting UX Architect
+      <!-- Implemented Solutions -->
+      <div class="p-4 rounded-2xl bg-emerald-950/20 border border-emerald-900/40 mb-6">
+        <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+          <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
+          <span>Implemented Conversion Architecture</span>
+        </div>
+        <div class="text-xs text-zinc-300 space-y-2.5">
+          
+            <div>
+              <strong class="text-white">Clinical Sanctuary Aesthetic:</strong> Engineered an authoritative, restorative botanical canvas (Cormorant Garamond + Plus Jakarta Sans) balancing medical gravitas with deep therapeutic compassion.
+            </div>
+          
+            <div>
+              <strong class="text-white">30+ Years NHS GP & Gabor Maté Proof:</strong> Front-loaded her 3 decades in clinical medicine, Gabor Maté certification, and Bevan Commission Fellowship above the fold.
+            </div>
+          
+            <div>
+              <strong class="text-white">Dual Public-Sector vs. Private Pathways:</strong> Created distinct intake funnels for NHS Trust / council program commissioning and private executive healing.
+            </div>
+          
+            <div>
+              <strong class="text-white">Authentic Clinical Photography & Vector Logo:</strong> Integrated her real authentic photograph and official Community Wellness CIC vector branding.
+            </div>
+          
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+        <span class="text-zinc-500">
+          Designed by <a href="https://miskathossain.net" target="_blank" class="text-zinc-300 font-semibold hover:underline">Miskat Hossain</a>
         </span>
         <a 
           href="https://miskathossain.net" 
           target="_blank" 
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white text-zinc-950 font-bold text-xs hover:bg-zinc-100 transition-all shadow-md active:scale-[0.98] w-full sm:w-auto justify-center"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white text-zinc-950 font-bold hover:bg-zinc-100 transition-all w-full sm:w-auto justify-center"
         >
-          <span>Knock Me to Redesign Full Site</span>
+          <span>Schedule Full Redesign Chat</span>
           <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
       </div>
@@ -323,24 +417,17 @@
         btn.setAttribute('aria-expanded', 'false');
       }
     }
-
-    function initPreviewModal() {
-      const modal = document.getElementById('converts-modal');
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) toggleConvertsModal();
-      });
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
-          toggleConvertsModal();
-        }
-      });
-    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('converts-modal');
+        if (!modal.classList.contains('pointer-events-none')) toggleConvertsModal();
+      }
+    });
   </script>
   
 
   <script>
     lucide.createIcons();
-    initPreviewModal();
   </script>
 </body>
 </html>
