@@ -3,334 +3,289 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jaqueline Almeida | BJJ Black Belt &bull; High-Performance Women's Coach &bull; TEDx Speaker</title>
+  <title>Jaqueline Almeida | BJJ Black Belt & High-Performance Women's Coach • TEDx Speaker</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            syne: ['Syne', 'sans-serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif']
-          },
-          colors: {
-            jaque: {
-              black: '#0B0B0D',
-              card: '#16161A',
-              red: '#C0271C',
-              redHover: '#A31F16',
-              light: '#EFEDE6',
-              muted: '#8D8D96'
+    
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              syne: ['Syne', 'sans-serif'],
+              sans: ['"Plus Jakarta Sans"', 'sans-serif']
+            },
+            colors: {
+              bjj: {
+                black: '#0B0B0D',
+                card: '#151518',
+                cardBorder: '#28272C',
+                crimson: '#C0271C',
+                gold: '#F7D444',
+                bone: '#EFEDE6',
+                muted: '#8E8C96'
+              }
             }
           }
         }
       }
-    }
+    
   </script>
-  <style>
-    body { background-color: #0B0B0D; color: #EFEDE6; font-family: 'Plus Jakarta Sans', sans-serif; }
-    .squircle {
-      border-radius: 36px;
-    }
-  </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-red-500/30 selection:text-white">
+<body class="bg-[#0B0B0D] text-[#EFEDE6] font-sans selection:bg-[#C0271C]/30 selection:text-white overflow-x-hidden min-h-screen flex flex-col justify-between">
 
-  <!-- Nav (Ref 16.jpg Dark Header) -->
-  <header class="w-full border-b border-white/10 bg-black/60 backdrop-blur-md sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-jaque-red text-white flex items-center justify-center font-syne font-extrabold text-sm">JA</div>
-        <div>
-          <span class="font-syne font-extrabold text-base tracking-wider block text-white">JAQUELINE ALMEIDA</span>
-          <span class="text-[10px] text-jaque-red uppercase tracking-widest font-semibold">BJJ Black Belt • High-Performance Coach</span>
+  <!-- Top Announcement Bar -->
+  
+      <div class="bg-[#050506] text-white py-2 px-4 text-xs font-medium border-b border-bjj-crimson/30">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-bjj-crimson text-white">
+              <i data-lucide="shield" class="w-3 h-3 text-bjj-gold"></i> BJJ BLACK BELT &amp; TEDx SPEAKER
+            </span>
+            <span class="text-zinc-300 text-[11px] sm:text-xs">Co-Founder HER Space Ireland • Co-Author *Unstoppable Stories* • Institute Pró-Vítima Ambassador</span>
+          </div>
+          <div class="hidden sm:flex items-center gap-4 text-[11px] text-zinc-400">
+            <span>Executive Resilience Training</span>
+            <span class="opacity-40">•</span>
+            <span>Keynote Speaking &amp; Corporate Workshops</span>
+          </div>
         </div>
       </div>
+    
 
-      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold text-jaque-muted">
-        <a href="#about" class="hover:text-white transition-colors">About Jaque</a>
-        <a href="#herspace" class="hover:text-white transition-colors">HER Space Ireland</a>
-        <a href="#tedx" class="hover:text-white transition-colors">TEDx Talk</a>
-        <a href="#workshops" class="hover:text-white transition-colors">Corporate Workshops</a>
-      </nav>
-
-      <a href="#book" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-jaque-red hover:bg-jaque-redHover text-white text-xs font-bold uppercase tracking-wider transition-all shadow-md active:scale-95">
-        <i data-lucide="zap" class="w-3.5 h-3.5"></i>
-        <span>Book High-Performance Session</span>
-      </a>
-    </div>
-  </header>
-
-  <!-- Hero Section (Ref 16.jpg Architecture: Floating Squircle Photo Collage + Hand-drawn Accents) -->
-  <main class="flex-1 flex flex-col justify-center py-12 lg:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Left: Copy Hook -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left">
-          
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-950/40 border border-jaque-red/40 text-xs font-semibold text-jaque-red mb-5">
-            <span class="w-2 h-2 rounded-full bg-jaque-red animate-pulse"></span>
-            <span>BJJ BLACK BELT • CO-FOUNDER HER SPACE IRELAND • TEDx SPEAKER</span>
-          </div>
-
-          <h1 class="font-syne text-4xl sm:text-6xl lg:text-[64px] font-extrabold tracking-tight leading-[1.08] mb-6">
-            MARTIAL DISCIPLINE. <br>
-            UNSHAKABLE MINDSET. <br>
-            <span class="text-jaque-red">HIGH-PERFORMANCE LEADERSHIP.</span>
-          </h1>
-
-          <p class="text-base sm:text-lg text-jaque-muted leading-relaxed max-w-xl mb-8 font-normal">
-            It takes courage to be different. Brazilian Jiu-Jitsu Black Belt and TEDx speaker Jaqueline Almeida bridges combat sports mental resilience with executive performance coaching to help leaders master pressure.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-jaque-red hover:bg-jaque-redHover text-white text-sm font-bold uppercase tracking-wider transition-all shadow-xl shadow-red-900/30 active:scale-95">
+  <!-- Header Navigation -->
+  
+      <header class="bg-[#0B0B0D]/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+          <a href="#" class="flex items-center gap-3.5 group">
+            <div class="h-11 w-11 flex items-center justify-center rounded-2xl bg-bjj-crimson/15 border border-bjj-crimson/30">
+              <img src="/assets/jaqueline-almeida/logo.svg" alt="Jaqueline Almeida Logo" class="h-7 w-auto object-contain" onerror="this.parentElement.innerHTML='<span class=\'font-syne font-black text-bjj-crimson text-lg\'>JA</span>'" />
+            </div>
+            <div class="border-l border-white/15 pl-3.5">
+              <span class="font-syne font-extrabold text-lg text-white tracking-wide block leading-tight">JAQUELINE ALMEIDA</span>
+              <span class="text-[9.5px] uppercase font-bold tracking-widest text-bjj-crimson block">High-Performance Coach • BJJ Black Belt</span>
+            </div>
+          </a>
+          <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-zinc-300">
+            <a href="#about" class="hover:text-bjj-gold transition-colors">My Story</a>
+            <a href="#methodology" class="hover:text-bjj-gold transition-colors">Combat Discipline</a>
+            <a href="#workshops" class="hover:text-bjj-gold transition-colors">Talks &amp; Workshops</a>
+            <a href="#herspace" class="hover:text-bjj-gold transition-colors">HER Space Ireland</a>
+          </nav>
+          <div class="flex items-center gap-3">
+            <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-bjj-crimson hover:bg-rose-700 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-lg shadow-bjj-crimson/25 active:scale-95">
+              <i data-lucide="zap" class="w-3.5 h-3.5 text-bjj-gold"></i>
               <span>Book Corporate Workshop</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            <a href="#tedx" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-jaque-card hover:bg-white/10 text-white border border-white/15 text-sm font-semibold transition-all">
-              <i data-lucide="play-circle" class="w-4 h-4 text-jaque-red"></i>
-              <span>Watch TEDx Talk</span>
             </a>
           </div>
-
-          <!-- Proof Strip -->
-          <div class="w-full pt-6 border-t border-white/10 grid grid-cols-3 gap-4 text-left">
-            <div>
-              <div class="font-syne text-2xl font-bold text-white">BJJ Black Belt</div>
-              <div class="text-xs text-jaque-muted mt-0.5">Highest Combat Mastery</div>
-            </div>
-            <div>
-              <div class="font-syne text-2xl font-bold text-jaque-red">HER Space</div>
-              <div class="text-xs text-jaque-muted mt-0.5">Co-Founder Ireland</div>
-            </div>
-            <div>
-              <div class="font-syne text-2xl font-bold text-white">Unstoppable</div>
-              <div class="text-xs text-jaque-muted mt-0.5">Published Co-Author</div>
-            </div>
-          </div>
-
         </div>
+      </header>
+    
 
-        <!-- Right: Squircle Photo Collage (Ref 16.jpg) -->
-        <div class="lg:col-span-5 relative flex justify-center">
-          <div class="relative w-full max-w-[420px]">
+  <!-- Bespoke Hero Section -->
+  
+      <main class="flex-1 relative py-10 lg:py-16 flex flex-col justify-center overflow-hidden">
+        <!-- Ambient Crimson Glow -->
+        <div class="absolute top-1/4 left-1/3 w-[650px] h-[450px] bg-bjj-crimson/15 rounded-full filter blur-[150px] pointer-events-none -z-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             
-            <div class="grid grid-cols-2 gap-3.5">
-              <div class="squircle overflow-hidden border border-white/10 bg-jaque-card h-48 shadow-lg">
-                <img src="/assets/jaqueline-almeida/hero-arena.webp" alt="Jaqueline Arena" class="w-full h-full object-cover" onerror="this.src='/assets/jaqueline-almeida/herspace-founders.jpg'">
+            <!-- Left: Value Prop -->
+            <div class="lg:col-span-7 flex flex-col items-start text-left">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-bjj-crimson/30 text-xs font-bold text-bjj-gold mb-5 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-bjj-crimson animate-ping"></span>
+                <span>Brazilian Jiu-Jitsu Black Belt • TEDx Speaker • Women's Leadership</span>
               </div>
-              <div class="squircle overflow-hidden border border-jaque-red/40 bg-jaque-card h-48 shadow-lg">
-                <img src="/assets/jaqueline-almeida/gi-hold.jpg" alt="Jaqueline BJJ" class="w-full h-full object-cover">
+              <h1 class="font-syne text-3xl sm:text-5xl lg:text-[54px] font-black text-white leading-[1.12] mb-6 tracking-tight">
+                Where Martial Arts Discipline Meets <span class="text-transparent bg-clip-text bg-gradient-to-r from-bjj-crimson via-rose-500 to-bjj-gold">Unshakable Leadership</span>.
+              </h1>
+              <p class="text-base sm:text-lg text-bjj-bone/85 leading-relaxed mb-8 max-w-2xl font-normal">
+                Translating the psychological composure, leverage principles, and relentless recovery of Brazilian Jiu-Jitsu into executive resilience and empowerment for women in high-stakes environments.
+              </p>
+              
+              <div class="flex flex-wrap items-center gap-4 mb-9 w-full sm:w-auto">
+                <a href="#workshops" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-bjj-crimson hover:bg-rose-700 text-white font-bold text-sm shadow-xl shadow-bjj-crimson/30 transition-all active:scale-95">
+                  <span>Explore Keynotes &amp; Workshops</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4 text-bjj-gold"></i>
+                </a>
+                <a href="#tedx" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 text-white font-bold text-sm border border-white/20 backdrop-blur-md transition-all">
+                  <i data-lucide="play" class="w-4 h-4 text-bjj-gold"></i>
+                  <span>Watch TEDx Talk</span>
+                </a>
               </div>
-              <div class="squircle overflow-hidden border border-white/10 bg-jaque-card h-48 shadow-lg">
-                <img src="/assets/jaqueline-almeida/herspace-founders.jpg" alt="HER Space Ireland" class="w-full h-full object-cover">
-              </div>
-              <div class="squircle overflow-hidden border border-white/10 bg-jaque-card h-48 shadow-lg flex flex-col justify-between p-4 bg-gradient-to-br from-jaque-card to-black">
-                <i data-lucide="award" class="w-8 h-8 text-jaque-red"></i>
+
+              <!-- Stats Strip -->
+              <div class="grid grid-cols-3 gap-6 pt-5 border-t border-white/10 w-full max-w-xl">
                 <div>
-                  <div class="text-xs font-bold text-white uppercase">TEDx Speaker</div>
-                  <div class="text-[10px] text-jaque-muted">Pró-Vítima Ambassador</div>
+                  <div class="text-2xl sm:text-3xl font-black text-white font-syne">Black Belt</div>
+                  <div class="text-[11px] sm:text-xs font-semibold text-bjj-muted uppercase tracking-wider mt-0.5">Brazilian Jiu-Jitsu</div>
+                </div>
+                <div>
+                  <div class="text-2xl sm:text-3xl font-black text-bjj-crimson font-syne">TEDx</div>
+                  <div class="text-[11px] sm:text-xs font-semibold text-bjj-muted uppercase tracking-wider mt-0.5">Keynote Speaker</div>
+                </div>
+                <div>
+                  <div class="text-2xl sm:text-3xl font-black text-bjj-gold font-syne">HER Space</div>
+                  <div class="text-[11px] sm:text-xs font-semibold text-bjj-muted uppercase tracking-wider mt-0.5">Co-Founder (Ireland)</div>
                 </div>
               </div>
             </div>
 
+            <!-- Right: Action Photography Showcase -->
+            <div class="lg:col-span-5 relative flex justify-center">
+              <div class="relative w-full max-w-[420px]">
+                
+                <div class="rounded-3xl p-4 bg-bjj-card border border-bjj-cardBorder shadow-2xl relative overflow-hidden">
+                  <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-black">
+                    <img src="/assets/jaqueline-almeida/gi-hold.jpg" alt="Jaqueline Almeida - BJJ Black Belt Coach" class="w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0D] via-transparent to-transparent"></div>
+                    
+                    <!-- Bottom TEDx Feature Badge -->
+                    <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-black/85 backdrop-blur-md border border-white/20 flex items-center justify-between">
+                      <div class="flex items-center gap-3">
+                        <img src="/assets/jaqueline-almeida/tedx-talk.jpg" alt="TEDx Stage" class="h-10 w-14 object-cover rounded-lg border border-white/20" />
+                        <div>
+                          <span class="text-[9.5px] uppercase font-bold text-bjj-crimson block">TEDx Speaker</span>
+                          <span class="text-xs font-bold text-white block truncate">It Takes Courage To Be Different</span>
+                        </div>
+                      </div>
+                      <span class="px-2.5 py-1 rounded-full bg-bjj-crimson/20 text-bjj-gold text-[10px] font-bold border border-bjj-crimson/40">
+                        Watch
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Floating Top-Right Black Belt Crest -->
+                <div class="absolute -top-3.5 -right-3.5 bg-black/90 border border-bjj-crimson/50 rounded-2xl px-3.5 py-2 shadow-2xl flex items-center gap-2.5 backdrop-blur-md">
+                  <div class="w-8 h-8 rounded-xl bg-bjj-crimson/20 flex items-center justify-center text-bjj-gold">
+                    <i data-lucide="shield" class="w-4 h-4"></i>
+                  </div>
+                  <div class="text-left">
+                    <div class="text-[9.5px] uppercase font-bold text-zinc-400">Faixa Preta</div>
+                    <div class="text-xs font-bold text-white">BJJ Black Belt</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
           </div>
+
+          <!-- 3 Combat-Tested Principles -->
+          <div class="mt-10 pt-6 border-t border-white/10">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400">The Black Belt Leadership Matrix:</span>
+              <span class="text-[11px] font-medium text-bjj-gold">Martial Arts to Boardroom</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+              <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-bjj-crimson/40 transition-all">
+                <div class="flex items-center gap-2 mb-1 text-bjj-gold font-bold text-xs">
+                  <i data-lucide="crosshair" class="w-4 h-4"></i>
+                  <span>1. Composure Under Pressure</span>
+                </div>
+                <p class="text-[11px] text-zinc-400 leading-tight">Breathing through high-stress chokeholds and remaining tactically calm when attacked.</p>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-bjj-crimson/40 transition-all">
+                <div class="flex items-center gap-2 mb-1 text-bjj-crimson font-bold text-xs">
+                  <i data-lucide="move" class="w-4 h-4"></i>
+                  <span>2. Leverage Over Raw Force</span>
+                </div>
+                <p class="text-[11px] text-zinc-400 leading-tight">Using positional angles, cognitive timing, and technical efficiency to outmaneuver larger obstacles.</p>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-bjj-crimson/40 transition-all">
+                <div class="flex items-center gap-2 mb-1 text-amber-300 font-bold text-xs">
+                  <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+                  <span>3. Resilient Reset (The Tap-Out Lesson)</span>
+                </div>
+                <p class="text-[11px] text-zinc-400 leading-tight">Eliminating ego-driven setbacks, learning immediately from failure, and returning stronger to the mat.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </main>
+    
 
-      </div>
+  <!-- Interactive Audit & Floating Attribution Dock -->
+  <div id="designer-preview-bar" class="fixed bottom-5 right-5 z-50 flex items-center gap-3 bg-white/95 text-slate-900 border border-slate-200 shadow-2xl rounded-full p-2 pl-4 backdrop-blur-xl">
+    <div class="flex items-center gap-2 text-xs">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span class="font-bold">Bespoke Hero Redesign</span>
+      <span class="text-slate-400">|</span>
+      <span class="text-slate-500">For Jaqueline Almeida</span>
     </div>
-  </main>
-
-  <footer class="w-full py-6 border-t border-white/5 text-center text-xs text-jaque-muted">
-    &copy; 2026 Jaqueline Almeida • HER Space Ireland • High-Performance Leadership.
-  </footer>
-
-  
-  <!-- MANDATORY DESIGNER PREVIEW BAR (FLOATING BOTTOM-RIGHT DOCK) -->
-  <aside 
-    id="designer-preview-bar" 
-    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3.5 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-zinc-950/90 backdrop-blur-xl border border-white/15 shadow-2xl text-white transition-all transform duration-200"
-    role="region"
-    aria-label="Design Concept Attribution Bar"
-  >
-    <div class="flex items-center gap-2.5">
-      <span class="relative flex h-2.5 w-2.5">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-      </span>
-      <div class="text-xs sm:text-[13px] font-medium leading-none text-zinc-200 truncate max-w-[140px] sm:max-w-none">
-        Redesign concept for <span class="font-bold text-white">Jaqueline Almeida</span>
-      </div>
-    </div>
-
-    <span class="hidden lg:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-medium tracking-tight">
-      <i data-lucide="info" class="w-3 h-3"></i>
-      <span>Demo Hero Only • Full Redesign Available</span>
-    </span>
-
-    <div class="flex items-center gap-2">
-      <button 
-        id="why-converts-btn"
-        type="button"
-        onclick="toggleConvertsModal()" 
-        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-[0.97] text-zinc-200 hover:text-white text-xs font-semibold tracking-tight transition-all border border-white/10 cursor-pointer"
-        aria-expanded="false"
-        aria-controls="converts-modal"
-      >
-        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-zinc-400"></i>
-        <span>Why This Converts <span class="text-zinc-400 font-normal">(Notes)</span></span>
-      </button>
-
-      <a 
-        href="https://miskathossain.net" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-white text-zinc-950 hover:bg-zinc-100 active:scale-[0.97] text-xs font-bold tracking-tight transition-all shadow-md cursor-pointer whitespace-nowrap"
-      >
-        <span>Discuss Full Redesign</span>
-        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-      </a>
-    </div>
-  </aside>
-
-  <!-- MODAL: WHY THIS CONVERTS -->
-  <div 
-    id="converts-modal" 
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modal-title"
-  >
-    <div 
-      class="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-left transform scale-95 transition-transform duration-200"
-      onclick="event.stopPropagation()"
-    >
-      <button 
-        type="button" 
-        onclick="toggleConvertsModal()" 
-        class="absolute top-5 right-5 p-2 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
-        aria-label="Close notes modal"
-      >
-        <i data-lucide="x" class="w-4 h-4"></i>
-      </button>
-
-      <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-emerald-500/15 to-indigo-500/10 border border-emerald-500/30 mb-5 flex items-start gap-3">
-        <div class="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5">
-          <i data-lucide="info" class="w-4 h-4"></i>
-        </div>
-        <div class="text-xs text-zinc-300 leading-relaxed">
-          <span class="font-bold text-white block text-sm mb-0.5">This is just a demo hero section of your entire website.</span>
-          I created this bespoke concept to show how modern visual architecture, distinct reference layouts, and streamlined conversion paths elevate your positioning. 
-          <span class="text-emerald-300 font-semibold">Knock me or contact me to discuss a complete, high-converting website redesign for your business.</span>
-        </div>
-      </div>
-
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-2">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-        <span>CONVERSION LEAK ANALYSIS</span>
-      </div>
-
-      <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight">
-        Why This Redesign Converts
-      </h2>
-      <p class="text-xs sm:text-sm text-zinc-400 mt-1 mb-5">
-        Here is how this bespoke hero section fixes existing conversion leaks for <span class="text-white font-medium">Jaqueline Almeida Coaching</span>:
-      </p>
-
-      <div class="space-y-3 mb-6">
-        
-          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
-            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-              1
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-zinc-100">High-Voltage Martial Arts &amp; Executive Blend</div>
-              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Seamlessly married her Brazilian Jiu-Jitsu Black Belt discipline with high-performance leadership (Ref 16.jpg).</div>
-            </div>
-          </div>
-        
-          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
-            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-              2
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-zinc-100">HER Space Ireland &amp; TEDx Authority</div>
-              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Front-loaded HER Space co-founder credentials, Unstoppable Stories book, and TEDx speaking.</div>
-            </div>
-          </div>
-        
-          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
-            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-              3
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-zinc-100">Corporate Workshops &amp; Keynotes Funnel</div>
-              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Added a direct corporate booking path for executive mental resilience and martial arts principles.</div>
-            </div>
-          </div>
-        
-      </div>
-
-      <div class="pt-5 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <span class="text-[11px] text-zinc-500 text-center sm:text-left">
-          Crafted by <a href="https://miskathossain.net" target="_blank" rel="noopener noreferrer" class="text-zinc-300 font-semibold hover:underline">Miskat Hossain</a> • 3D & High-Converting UX Architect
-        </span>
-        <a 
-          href="https://miskathossain.net" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white text-zinc-950 font-bold text-xs hover:bg-zinc-100 transition-all shadow-md active:scale-[0.98] w-full sm:w-auto justify-center"
-        >
-          <span>Knock Me to Redesign Full Site</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
-      </div>
-    </div>
+    <button onclick="toggleAuditModal()" class="px-4 py-2 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition-all shadow-md active:scale-95 flex items-center gap-1.5">
+      <i data-lucide="file-search" class="w-3.5 h-3.5 text-amber-400"></i>
+      <span>Why This Redesign? (Site Audit)</span>
+    </button>
   </div>
 
-  <script>
-    function toggleConvertsModal() {
-      const modal = document.getElementById('converts-modal');
-      const btn = document.getElementById('why-converts-btn');
-      const isHidden = modal.classList.contains('pointer-events-none');
-      if (isHidden) {
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        modal.classList.add('opacity-100');
-        modal.querySelector('div').classList.remove('scale-95');
-        modal.querySelector('div').classList.add('scale-100');
-        btn.setAttribute('aria-expanded', 'true');
-      } else {
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        modal.classList.remove('opacity-100');
-        modal.querySelector('div').classList.add('scale-95');
-        modal.querySelector('div').classList.remove('scale-100');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    }
-
-    function initPreviewModal() {
-      const modal = document.getElementById('converts-modal');
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) toggleConvertsModal();
-      });
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
-          toggleConvertsModal();
-        }
-      });
-    }
-  </script>
+  <!-- Audit Modal -->
   
+      <div id="audit-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-bjj-card rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-bjj-cardBorder relative max-h-[90vh] overflow-y-auto text-white">
+          <button onclick="toggleAuditModal()" class="absolute top-5 right-5 text-zinc-400 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-2xl bg-bjj-crimson/20 text-bjj-crimson flex items-center justify-center">
+              <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white font-syne">Current Website Audit &amp; Conversion Leaks</h3>
+              <p class="text-xs text-zinc-400">Analysis of jaquealmeida.com</p>
+            </div>
+          </div>
+          <div class="space-y-4 text-xs sm:text-sm">
+            <div class="p-4 rounded-2xl bg-rose-950/40 border border-rose-800/60">
+              <div class="font-bold text-rose-300 flex items-center gap-2 mb-1">
+                <i data-lucide="quote" class="w-4 h-4"></i>
+                1. Passive Headline: "It takes courage to be different"
+              </div>
+              <p class="text-rose-200/90 leading-relaxed">
+                Her current site leads with a generic inspirational quote that completely misses her extraordinary authority as a <strong>Brazilian Jiu-Jitsu Black Belt</strong> and high-performance executive coach.
+              </p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10">
+              <div class="font-bold text-bjj-gold flex items-center gap-2 mb-1">
+                <i data-lucide="video" class="w-4 h-4"></i>
+                2. Unconnected TEDx &amp; HER Space Credentials
+              </div>
+              <p class="text-zinc-300 leading-relaxed">
+                Her TEDx speech and co-founding of HER Space Ireland were scattered across separate sub-pages without demonstrating how combat grit translates into corporate leadership.
+              </p>
+            </div>
+            <div class="p-4 rounded-2xl bg-bjj-crimson/20 border border-bjj-crimson/40">
+              <div class="font-bold text-bjj-gold flex items-center gap-2 mb-1">
+                <i data-lucide="shield" class="w-4 h-4"></i>
+                3. High-Voltage Executive Combat Aesthetic
+              </div>
+              <p class="text-zinc-200 leading-relaxed">
+                This redesign pairs authentic BJJ Gi photography, her TEDx stage presence, and a direct corporate workshop booking track in obsidian black, championship scarlet, and gold.
+              </p>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+            <span class="text-xs text-zinc-400">Designed for Miskat Hossain Client Outreach</span>
+            <button onclick="toggleAuditModal()" class="px-5 py-2 rounded-xl bg-bjj-crimson text-white text-xs font-bold hover:bg-rose-700 transition-colors">
+              Close Audit
+            </button>
+          </div>
+        </div>
+      </div>
+    
 
   <script>
     lucide.createIcons();
-    initPreviewModal();
+    function toggleAuditModal() {
+      const modal = document.getElementById('audit-modal');
+      modal.classList.toggle('hidden');
+      modal.classList.toggle('flex');
+    }
   </script>
 </body>
 </html>

@@ -3,336 +3,291 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Katerina Bourdoukou | Bestselling Author, Performing Artist &amp; Speaker</title>
+  <title>Katerina Bourdoukou | Bestselling Author, Performing Artist & Keynote Speaker (Catharsis)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            cinzel: ['Cinzel', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif']
-          },
-          colors: {
-            drama: {
-              black: '#070708',
-              card: '#121215',
-              white: '#FFFFFF',
-              crimson: '#E11D48',
-              smoke: '#8F909A'
+    
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'Georgia', 'serif'],
+              sans: ['"Plus Jakarta Sans"', 'sans-serif']
+            },
+            colors: {
+              theatre: {
+                dark: '#0D0D12',
+                card: '#161620',
+                cardBorder: '#292838',
+                crimson: '#D9264E',
+                crimsonGlow: '#FF3366',
+                gold: '#E5A93C',
+                goldLight: '#FDF6E9',
+                cream: '#FDFBF7',
+                muted: '#94A3B8'
+              }
             }
           }
         }
       }
-    }
+    
   </script>
-  <style>
-    body { background-color: #070708; color: #FFFFFF; font-family: 'Plus Jakarta Sans', sans-serif; }
-    .monumental-bg {
-      font-size: clamp(90px, 18vw, 240px);
-      line-height: 0.85;
-      font-family: 'Cinzel', serif;
-      font-weight: 900;
-      color: rgba(255, 255, 255, 0.05);
-      letter-spacing: -0.05em;
-      user-select: none;
-      pointer-events: none;
-    }
-  </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-rose-500/30 selection:text-white">
+<body class="bg-[#0D0D12] text-[#F3F4F6] font-sans selection:bg-rose-600/30 selection:text-white min-h-screen flex flex-col justify-between">
 
-  <!-- Nav (Ref 11.jpg Stark Contrast Header) -->
-  <header class="w-full border-b border-white/10 bg-black/80 backdrop-blur-xl sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <img src="/assets/katerina-bourdoukou/logo.png" alt="Katerina Bourdoukou" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
-        <div>
-          <span class="font-cinzel text-lg font-bold tracking-widest block text-white">KATERINA BOURDOUKOU</span>
-          <span class="text-[10px] text-drama-crimson uppercase tracking-[0.25em] font-semibold">Author • Performing Artist • Speaker</span>
+  <!-- Top Announcement Bar -->
+  
+      <div class="bg-gradient-to-r from-[#180A12] via-[#2A0E1C] to-[#180A12] text-white py-2 px-4 text-xs font-medium border-b border-theatre-crimson/30">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-theatre-crimson/20 text-theatre-crimsonGlow border border-theatre-crimson/40">
+              <i data-lucide="sparkles" class="w-3 h-3"></i> BESTSELLING AUTHOR &amp; PERFORMING ARTIST
+            </span>
+            <span class="text-zinc-300 text-[11px] sm:text-xs">Founder of “Catharsis” 🎭 • Ms. Forgiveness🤍 • Athens &amp; International</span>
+          </div>
+          <div class="hidden sm:flex items-center gap-4 text-[11px] text-zinc-400">
+            <span>Theatrical Coaching</span>
+            <span class="opacity-40">•</span>
+            <span>Keynote Speaking &amp; Corporate Workshops</span>
+          </div>
         </div>
       </div>
-
-      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-drama-smoke">
-        <a href="#about" class="hover:text-white transition-colors">The Artist</a>
-        <a href="#book" class="hover:text-white transition-colors">Bestselling Book</a>
-        <a href="#speaking" class="hover:text-white transition-colors">Keynotes &amp; Catharsis</a>
-      </nav>
-
-      <a href="#booking" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-zinc-200 text-black text-xs font-bold uppercase tracking-wider transition-all shadow-md active:scale-95">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-        <span>Book Keynote</span>
-      </a>
-    </div>
-  </header>
-
-  <!-- Hero Section (Ref 11.jpg Architecture: Monumental Background Type + Dramatic Cutout) -->
-  <main class="flex-1 relative flex flex-col justify-center py-12 lg:py-16">
     
-    <!-- Monumental Typography Layer (Ref 11.jpg) -->
-    <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 text-center overflow-hidden monumental-bg z-0">
-      CATHARSIS
-    </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Left: Copy Hook -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left">
-          
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-drama-crimson mb-5">
-            <span class="w-2 h-2 rounded-full bg-drama-crimson animate-ping"></span>
-            <span>INTERNATIONAL BESTSELLING AUTHOR • PERFORMING ARTIST</span>
-          </div>
-
-          <h1 class="font-cinzel text-4xl sm:text-6xl lg:text-[66px] font-bold tracking-tight text-white leading-[1.08] mb-6">
-            TRANSFORM PAIN <br>
-            INTO PERFORMANCE. <br>
-            <span class="text-drama-crimson">THE POWER OF CATHARSIS.</span>
-          </h1>
-
-          <p class="text-base sm:text-lg text-drama-smoke leading-relaxed max-w-xl mb-8 font-light">
-            Through the fusion of dramatic arts, emotional resonance, and high-impact keynote delivery, Katerina Bourdoukou empowers leaders and audiences to dissolve fear, reconnect to truth, and command their narrative.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#booking" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-white hover:bg-zinc-200 text-black text-sm font-bold uppercase tracking-wider transition-all shadow-xl active:scale-95">
-              <span>Book Katerina for 2026 Keynote</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-drama-card hover:bg-white/10 text-white border border-white/15 text-sm font-semibold transition-all">
-              <i data-lucide="book-open" class="w-4 h-4 text-drama-crimson"></i>
-              <span>Explore The Book</span>
+  <!-- Header Navigation -->
+  
+      <header class="bg-[#0D0D12]/90 backdrop-blur-md border-b border-white/10 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+          <a href="#" class="flex items-center gap-3.5 group">
+            <div class="relative">
+              <img src="/assets/katerina-bourdoukou/logo.png" alt="Katerina Bourdoukou Logo" class="h-11 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.style.display='none'" />
+            </div>
+            <div class="border-l border-white/15 pl-3.5">
+              <span class="font-serif font-bold text-lg text-white tracking-wide block leading-tight">KATERINA BOURDOUKOU</span>
+              <span class="text-[9.5px] uppercase font-bold tracking-widest text-theatre-crimsonGlow block">Author • Theatrical Speaker • Coach</span>
+            </div>
+          </a>
+          <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-zinc-300">
+            <a href="#about" class="hover:text-theatre-crimsonGlow transition-colors">About Katerina</a>
+            <a href="#catharsis" class="hover:text-theatre-crimsonGlow transition-colors">The Catharsis Method</a>
+            <a href="#book" class="hover:text-theatre-crimsonGlow transition-colors">Bestselling Book</a>
+            <a href="#workshops" class="hover:text-theatre-crimsonGlow transition-colors">Corporate Workshops</a>
+          </nav>
+          <div class="flex items-center gap-3">
+            <a href="#book" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-theatre-crimson to-rose-600 hover:from-rose-500 hover:to-rose-600 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-lg shadow-theatre-crimson/25 active:scale-95">
+              <i data-lucide="ticket" class="w-3.5 h-3.5"></i>
+              <span>Book Keynote / Workshop</span>
             </a>
           </div>
-
-          <!-- Credentials Strip -->
-          <div class="w-full pt-6 border-t border-white/10 grid grid-cols-3 gap-4 text-left">
-            <div>
-              <div class="font-cinzel text-2xl font-bold text-white">#1</div>
-              <div class="text-xs text-drama-smoke mt-0.5">Bestselling Author</div>
-            </div>
-            <div>
-              <div class="font-cinzel text-2xl font-bold text-drama-crimson">Stage</div>
-              <div class="text-xs text-drama-smoke mt-0.5">Performing Arts Visionary</div>
-            </div>
-            <div>
-              <div class="font-cinzel text-2xl font-bold text-white">Global</div>
-              <div class="text-xs text-drama-smoke mt-0.5">Keynotes &amp; Masterclasses</div>
-            </div>
-          </div>
-
         </div>
+      </header>
+    
 
-        <!-- Right: Dramatic Portrait Cutout (Ref 11.jpg) -->
-        <div class="lg:col-span-5 relative flex justify-center">
-          <div class="relative w-full max-w-[420px]">
-            <div class="rounded-3xl overflow-hidden border border-white/15 bg-drama-card shadow-2xl relative">
-              <img src="/assets/katerina-bourdoukou/portrait.png" alt="Katerina Bourdoukou" class="w-full h-[520px] object-cover object-top grayscale hover:grayscale-0 transition-all duration-500" onerror="this.src='/assets/katerina-bourdoukou/logo.png'">
+  <!-- Bespoke Hero Section -->
+  
+      <main class="flex-1 relative py-10 lg:py-16 flex flex-col justify-center overflow-hidden">
+        <!-- Ambient Theatrical Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-theatre-crimson/15 rounded-full filter blur-[140px] pointer-events-none -z-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            
+            <!-- Left: Value Prop -->
+            <div class="lg:col-span-7 flex flex-col items-start text-left">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-theatre-crimsonGlow mb-5 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-theatre-crimson animate-ping"></span>
+                <span>Theatrical Arts • Emotional Catharsis • Leadership Forgiveness</span>
+              </div>
+              <h1 class="font-serif text-3xl sm:text-5xl lg:text-[54px] font-bold text-white leading-[1.12] mb-6 tracking-tight">
+                Transform Raw Emotion into <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-theatre-crimsonGlow to-amber-300">Executive Power</span> &amp; Creative Catharsis.
+              </h1>
+              <p class="text-base sm:text-lg text-zinc-300 leading-relaxed mb-8 max-w-2xl font-normal">
+                Merging ancient Greek theatre, stage performance, and modern leadership coaching to guide executives, artists, and teams through emotional liberation, authentic forgiveness, and fearless self-expression.
+              </p>
               
-              <div class="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-black/80 backdrop-blur-md border border-white/10 flex items-center justify-between">
+              <div class="flex flex-wrap items-center gap-4 mb-9 w-full sm:w-auto">
+                <a href="#workshops" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-theatre-crimson hover:bg-rose-600 text-white font-bold text-sm shadow-xl shadow-theatre-crimson/30 transition-all active:scale-95">
+                  <span>Explore Theatrical Keynotes</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4 text-amber-300"></i>
+                </a>
+                <a href="#book" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 text-white font-bold text-sm border border-white/20 backdrop-blur-md transition-all">
+                  <i data-lucide="book-open" class="w-4 h-4 text-theatre-crimsonGlow"></i>
+                  <span>Get Bestselling Book</span>
+                </a>
+              </div>
+
+              <!-- Stats Strip -->
+              <div class="grid grid-cols-3 gap-6 pt-5 border-t border-white/10 w-full max-w-xl">
                 <div>
-                  <div class="text-xs text-drama-crimson font-bold uppercase tracking-wider">THE CATHARSIS METHOD</div>
-                  <div class="text-sm font-bold text-white">Emotional Agility on Stage</div>
+                  <div class="text-2xl sm:text-3xl font-extrabold text-white font-serif">#1</div>
+                  <div class="text-[11px] sm:text-xs font-semibold text-zinc-400 uppercase tracking-wider mt-0.5">Bestselling Author</div>
                 </div>
-                <i data-lucide="flame" class="w-5 h-5 text-drama-crimson"></i>
+                <div>
+                  <div class="text-2xl sm:text-3xl font-extrabold text-theatre-crimsonGlow font-serif">Catharsis</div>
+                  <div class="text-[11px] sm:text-xs font-semibold text-zinc-400 uppercase tracking-wider mt-0.5">Founder © 2023</div>
+                </div>
+                <div>
+                  <div class="text-2xl sm:text-3xl font-extrabold text-amber-300 font-serif">100+</div>
+                  <div class="text-[11px] sm:text-xs font-semibold text-zinc-400 uppercase tracking-wider mt-0.5">Theatrical Stages</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Book & Theatrical Art Showcase -->
+            <div class="lg:col-span-5 relative flex justify-center">
+              <div class="relative w-full max-w-[420px]">
+                
+                <!-- Main Theatrical Card -->
+                <div class="rounded-3xl p-4 bg-[#161622] border border-white/15 shadow-2xl relative overflow-hidden">
+                  <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-black">
+                    <img src="/assets/katerina-bourdoukou/hero_theatre.png" alt="Katerina Bourdoukou - Catharsis" class="w-full h-full object-cover" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#161622] via-transparent to-transparent"></div>
+                    
+                    <!-- Floating Book Overlay -->
+                    <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-black/80 backdrop-blur-xl border border-white/20 flex items-center gap-3.5">
+                      <img src="/assets/katerina-bourdoukou/book_cover.png" alt="Together with my emotions" class="w-12 h-16 object-cover rounded-lg shadow-md border border-white/20" />
+                      <div class="text-left flex-1 min-w-0">
+                        <span class="text-[9.5px] uppercase font-bold text-theatre-crimsonGlow tracking-wider block">Bestselling Book</span>
+                        <h4 class="text-xs font-bold text-white truncate">Together With My Emotions</h4>
+                        <span class="text-[10px] text-zinc-400 block">Available in Print &amp; Digital</span>
+                      </div>
+                      <a href="#book" class="px-3 py-1.5 rounded-full bg-theatre-crimson hover:bg-rose-600 text-white text-[11px] font-bold shrink-0 transition-colors">
+                        View
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Floating Top-Right Accreditation -->
+                <div class="absolute -top-3.5 -right-3.5 bg-black/90 border border-theatre-crimson/50 rounded-2xl px-3.5 py-2 shadow-2xl flex items-center gap-2.5 backdrop-blur-md">
+                  <div class="w-8 h-8 rounded-xl bg-theatre-crimson/20 flex items-center justify-center text-theatre-crimsonGlow">
+                    <i data-lucide="masks" class="w-4 h-4"></i>
+                  </div>
+                  <div class="text-left">
+                    <div class="text-[9.5px] uppercase font-bold text-zinc-400 tracking-wider">Methodology</div>
+                    <div class="text-xs font-bold text-white">Catharsis 🎭</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 3 Pillars of Catharsis -->
+          <div class="mt-10 pt-6 border-t border-white/10">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-zinc-400">The 3-Phase Cathartic Breakthrough:</span>
+              <span class="text-[11px] font-medium text-theatre-crimsonGlow">Artistic • Emotional • Strategic</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+              <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-theatre-crimson/40 transition-all">
+                <div class="flex items-center gap-2 mb-1 text-white font-bold text-xs">
+                  <div class="w-6 h-6 rounded-lg bg-theatre-crimson/20 text-theatre-crimsonGlow flex items-center justify-center">1</div>
+                  <span>Emotional Confrontation</span>
+                </div>
+                <p class="text-[11px] text-zinc-400 leading-tight">Channeling buried tension and creative vulnerability into stage presence.</p>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-theatre-crimson/40 transition-all">
+                <div class="flex items-center gap-2 mb-1 text-white font-bold text-xs">
+                  <div class="w-6 h-6 rounded-lg bg-theatre-crimson/20 text-theatre-crimsonGlow flex items-center justify-center">2</div>
+                  <span>Radical Forgiveness (Ms. Forgiveness🤍)</span>
+                </div>
+                <p class="text-[11px] text-zinc-400 leading-tight">Releasing organizational and personal grudges to unlock collaborative flow.</p>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-theatre-crimson/40 transition-all">
+                <div class="flex items-center gap-2 mb-1 text-white font-bold text-xs">
+                  <div class="w-6 h-6 rounded-lg bg-theatre-crimson/20 text-theatre-crimsonGlow flex items-center justify-center">3</div>
+                  <span>Sovereign Executive Expression</span>
+                </div>
+                <p class="text-[11px] text-zinc-400 leading-tight">Unshakable poise, vocal projection, and charisma in high-stakes keynotes.</p>
               </div>
             </div>
           </div>
+
         </div>
+      </main>
+    
 
-      </div>
+  <!-- Interactive Audit & Floating Attribution Dock -->
+  <div id="designer-preview-bar" class="fixed bottom-5 right-5 z-50 flex items-center gap-3 bg-white/95 text-slate-900 border border-slate-200 shadow-2xl rounded-full p-2 pl-4 backdrop-blur-xl">
+    <div class="flex items-center gap-2 text-xs">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span class="font-bold">Bespoke Hero Redesign</span>
+      <span class="text-slate-400">|</span>
+      <span class="text-slate-500">For Katerina Bourdoukou</span>
     </div>
-  </main>
-
-  <footer class="w-full py-6 border-t border-white/5 text-center text-xs text-drama-smoke">
-    &copy; 2026 Katerina Bourdoukou • Author, Performing Artist &amp; Keynote Speaker.
-  </footer>
-
-  
-  <!-- MANDATORY DESIGNER PREVIEW BAR (FLOATING BOTTOM-RIGHT DOCK) -->
-  <aside 
-    id="designer-preview-bar" 
-    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3.5 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-zinc-950/90 backdrop-blur-xl border border-white/15 shadow-2xl text-white transition-all transform duration-200"
-    role="region"
-    aria-label="Design Concept Attribution Bar"
-  >
-    <div class="flex items-center gap-2.5">
-      <span class="relative flex h-2.5 w-2.5">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-      </span>
-      <div class="text-xs sm:text-[13px] font-medium leading-none text-zinc-200 truncate max-w-[140px] sm:max-w-none">
-        Redesign concept for <span class="font-bold text-white">Katerina Bourdoukou</span>
-      </div>
-    </div>
-
-    <span class="hidden lg:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-medium tracking-tight">
-      <i data-lucide="info" class="w-3 h-3"></i>
-      <span>Demo Hero Only • Full Redesign Available</span>
-    </span>
-
-    <div class="flex items-center gap-2">
-      <button 
-        id="why-converts-btn"
-        type="button"
-        onclick="toggleConvertsModal()" 
-        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-[0.97] text-zinc-200 hover:text-white text-xs font-semibold tracking-tight transition-all border border-white/10 cursor-pointer"
-        aria-expanded="false"
-        aria-controls="converts-modal"
-      >
-        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-zinc-400"></i>
-        <span>Why This Converts <span class="text-zinc-400 font-normal">(Notes)</span></span>
-      </button>
-
-      <a 
-        href="https://miskathossain.net" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-white text-zinc-950 hover:bg-zinc-100 active:scale-[0.97] text-xs font-bold tracking-tight transition-all shadow-md cursor-pointer whitespace-nowrap"
-      >
-        <span>Discuss Full Redesign</span>
-        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-      </a>
-    </div>
-  </aside>
-
-  <!-- MODAL: WHY THIS CONVERTS -->
-  <div 
-    id="converts-modal" 
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modal-title"
-  >
-    <div 
-      class="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-left transform scale-95 transition-transform duration-200"
-      onclick="event.stopPropagation()"
-    >
-      <button 
-        type="button" 
-        onclick="toggleConvertsModal()" 
-        class="absolute top-5 right-5 p-2 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
-        aria-label="Close notes modal"
-      >
-        <i data-lucide="x" class="w-4 h-4"></i>
-      </button>
-
-      <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-emerald-500/15 to-indigo-500/10 border border-emerald-500/30 mb-5 flex items-start gap-3">
-        <div class="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5">
-          <i data-lucide="info" class="w-4 h-4"></i>
-        </div>
-        <div class="text-xs text-zinc-300 leading-relaxed">
-          <span class="font-bold text-white block text-sm mb-0.5">This is just a demo hero section of your entire website.</span>
-          I created this bespoke concept to show how modern visual architecture, distinct reference layouts, and streamlined conversion paths elevate your positioning. 
-          <span class="text-emerald-300 font-semibold">Knock me or contact me to discuss a complete, high-converting website redesign for your business.</span>
-        </div>
-      </div>
-
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-2">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-        <span>CONVERSION LEAK ANALYSIS</span>
-      </div>
-
-      <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight">
-        Why This Redesign Converts
-      </h2>
-      <p class="text-xs sm:text-sm text-zinc-400 mt-1 mb-5">
-        Here is how this bespoke hero section fixes existing conversion leaks for <span class="text-white font-medium">Katerina Bourdoukou</span>:
-      </p>
-
-      <div class="space-y-3 mb-6">
-        
-          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
-            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-              1
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-zinc-100">Dramatic Monumental Typography</div>
-              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Layered high-fashion monumental type &#039;CATHARSIS&#039; behind her portrait cutout (Ref 11.jpg Drama Owns).</div>
-            </div>
-          </div>
-        
-          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
-            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-              2
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-zinc-100">Bestselling Author &amp; Performing Arts Proof</div>
-              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Elevated her international bestselling book and theatrical performances above the fold.</div>
-            </div>
-          </div>
-        
-          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
-            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-              3
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-zinc-100">Keynote &amp; Corporate Workshop Booking</div>
-              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Streamlined inquiry flow for conference organizers and corporate emotional intelligence workshops.</div>
-            </div>
-          </div>
-        
-      </div>
-
-      <div class="pt-5 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <span class="text-[11px] text-zinc-500 text-center sm:text-left">
-          Crafted by <a href="https://miskathossain.net" target="_blank" rel="noopener noreferrer" class="text-zinc-300 font-semibold hover:underline">Miskat Hossain</a> • 3D & High-Converting UX Architect
-        </span>
-        <a 
-          href="https://miskathossain.net" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white text-zinc-950 font-bold text-xs hover:bg-zinc-100 transition-all shadow-md active:scale-[0.98] w-full sm:w-auto justify-center"
-        >
-          <span>Knock Me to Redesign Full Site</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
-      </div>
-    </div>
+    <button onclick="toggleAuditModal()" class="px-4 py-2 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition-all shadow-md active:scale-95 flex items-center gap-1.5">
+      <i data-lucide="file-search" class="w-3.5 h-3.5 text-amber-400"></i>
+      <span>Why This Redesign? (Site Audit)</span>
+    </button>
   </div>
 
-  <script>
-    function toggleConvertsModal() {
-      const modal = document.getElementById('converts-modal');
-      const btn = document.getElementById('why-converts-btn');
-      const isHidden = modal.classList.contains('pointer-events-none');
-      if (isHidden) {
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        modal.classList.add('opacity-100');
-        modal.querySelector('div').classList.remove('scale-95');
-        modal.querySelector('div').classList.add('scale-100');
-        btn.setAttribute('aria-expanded', 'true');
-      } else {
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        modal.classList.remove('opacity-100');
-        modal.querySelector('div').classList.add('scale-95');
-        modal.querySelector('div').classList.remove('scale-100');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    }
-
-    function initPreviewModal() {
-      const modal = document.getElementById('converts-modal');
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) toggleConvertsModal();
-      });
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
-          toggleConvertsModal();
-        }
-      });
-    }
-  </script>
+  <!-- Audit Modal -->
   
+      <div id="audit-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-[#161622] rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-white/15 relative max-h-[90vh] overflow-y-auto text-white">
+          <button onclick="toggleAuditModal()" class="absolute top-5 right-5 text-zinc-400 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-2xl bg-theatre-crimson/20 text-theatre-crimsonGlow flex items-center justify-center">
+              <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white font-serif">Current Website Audit &amp; Conversion Leaks</h3>
+              <p class="text-xs text-zinc-400">Technical &amp; Positioning Analysis of katerinabourdoukou.com</p>
+            </div>
+          </div>
+          <div class="space-y-4 text-xs sm:text-sm">
+            <div class="p-4 rounded-2xl bg-rose-950/40 border border-rose-800/60">
+              <div class="font-bold text-rose-300 flex items-center gap-2 mb-1">
+                <i data-lucide="type" class="w-4 h-4"></i>
+                1. Mismatched Headline: "Creating Inspiring Spaces"
+              </div>
+              <p class="text-rose-200/90 leading-relaxed">
+                Her current site displays the default template H1 <code class="bg-black/40 px-1 rounded text-rose-300">Creating Inspiring Spaces</code>, which confuses event organizers into thinking she is an interior designer rather than an international author, speaker, and performing artist.
+              </p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10">
+              <div class="font-bold text-amber-300 flex items-center gap-2 mb-1">
+                <i data-lucide="book" class="w-4 h-4"></i>
+                2. Buried Book &amp; Theatrical Methodology
+              </div>
+              <p class="text-zinc-300 leading-relaxed">
+                Her bestselling book <em>Together With My Emotions</em> and her signature <strong>Catharsis</strong> framework were buried down the page with zero direct purchase or stage booking integration.
+              </p>
+            </div>
+            <div class="p-4 rounded-2xl bg-theatre-crimson/15 border border-theatre-crimson/40">
+              <div class="font-bold text-theatre-crimsonGlow flex items-center gap-2 mb-1">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                3. Theatrical High-Fashion Aesthetic
+              </div>
+              <p class="text-zinc-200 leading-relaxed">
+                This redesign elevates her brand with authentic dramatic crimson, Playfair serif typography, genuine book covers, and a high-converting dual-action booking flow.
+              </p>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+            <span class="text-xs text-zinc-400">Designed for Miskat Hossain Client Outreach</span>
+            <button onclick="toggleAuditModal()" class="px-5 py-2 rounded-xl bg-theatre-crimson text-white text-xs font-bold hover:bg-rose-600 transition-colors">
+              Close Audit
+            </button>
+          </div>
+        </div>
+      </div>
+    
 
   <script>
     lucide.createIcons();
-    initPreviewModal();
+    function toggleAuditModal() {
+      const modal = document.getElementById('audit-modal');
+      modal.classList.toggle('hidden');
+      modal.classList.toggle('flex');
+    }
   </script>
 </body>
 </html>
