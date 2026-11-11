@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viola's House | Maternity Shelter & Sustainable Motherhood Village - Dallas, TX</title>
+  <title>Viola's House | Maternity Shelter & Village - Dallas, TX</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
@@ -14,82 +14,72 @@
       theme: {
         extend: {
           fontFamily: {
-            serif: ['"Fraunces"', 'Georgia', 'serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif']
           },
           colors: {
-            clay: {
-              50: '#FDF8F6',
-              100: '#F8ECE7',
-              500: '#BA5A3A',
-              600: '#A44E31',
-              700: '#8E3F26'
+            viola: {
+              50: '#FDF8FD',
+              100: '#F9ECF9',
+              200: '#F3D4F3',
+              500: '#BA22D2',
+              600: '#A11EAD',
+              700: '#871790'
             },
-            warm: {
-              50: '#FCFBF8',
-              100: '#F8F4EE',
-              200: '#EFE8DE',
-              300: '#E2D7C8',
-              800: '#3D3833',
-              900: '#23201C'
+            heart: {
+              500: '#EB5B8B',
+              600: '#D94374'
             }
           }
         }
       }
     }
   </script>
-  <style>
-    body {
-      background-color: #FCFBF8;
-      color: #23201C;
-    }
-  </style>
 </head>
-<body class="font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-clay-100 selection:text-clay-700">
+<body class="bg-white text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-viola-100 selection:text-viola-700">
 
-  <!-- Top Crisis Helpline -->
-  <div class="bg-warm-900 text-warm-100 text-xs py-2 px-4 border-b border-warm-800">
+  <!-- Crisis & Accreditation Ribbon -->
+  <div class="bg-viola-50 border-b border-viola-100 text-xs py-1.5 px-4">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
-          <i data-lucide="phone-call" class="w-3 h-3 text-amber-400"></i> CRISIS HELPLINE
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-viola-600 text-white">
+          <i data-lucide="phone" class="w-3 h-3"></i> 24/7 CRISIS HELPLINE
         </span>
-        <span class="font-medium text-[11px] sm:text-xs">Pregnant or homeless tonight? Call <a href="tel:2148388924" class="underline font-bold text-white hover:text-amber-300">(214) 838-8924</a> for confidential emergency intake.</span>
+        <span class="text-slate-700 font-medium text-[11px] sm:text-xs">Pregnant or facing homelessness? Call <a href="tel:2148388924" class="font-bold text-viola-600 hover:text-viola-700 underline">(214) 838-8924</a> for confidential emergency intake.</span>
       </div>
-      <div class="hidden md:flex items-center gap-3 text-[11px] text-warm-300">
-        <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-3 h-3 text-emerald-400"></i> 501(c)(3) Licensed Texas Maternity Home</span>
+      <div class="hidden md:flex items-center gap-3 text-[11px] text-slate-500">
+        <span class="flex items-center gap-1 font-semibold text-slate-600"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-viola-600"></i> 501(c)(3) Licensed Maternity Home</span>
         <span>•</span>
-        <span>GuideStar Platinum</span>
+        <span>GuideStar Platinum Transparency</span>
       </div>
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="bg-[#FCFBF8]/95 backdrop-blur-md border-b border-warm-200 sticky top-0 z-40">
+  <!-- Clean Header Navigation -->
+  <header class="bg-white border-b border-slate-100 sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3 group">
-        <img src="/assets/thana-hickman-simmons/viola-love-logo.png" alt="Viola's House" class="h-9 w-auto object-contain" onerror="this.src='/assets/thana-hickman-simmons/logo.png'" />
-        <div class="border-l border-warm-200 pl-3 hidden sm:block">
-          <span class="block text-[11px] font-bold tracking-wider uppercase text-clay-500">Maternity Village</span>
-          <span class="block text-[10px] text-warm-800/70 font-medium">Dallas, Texas</span>
+        <img src="/assets/thana-hickman-simmons/viola_cropped_logo.png" alt="Viola's House" class="h-10 w-auto object-contain" />
+        <div class="border-l border-slate-200 pl-3 hidden sm:block">
+          <span class="block text-[11px] font-bold tracking-wider uppercase text-viola-600">Maternity Housing & Care</span>
+          <span class="block text-[10px] text-slate-400 font-medium">Dallas, Texas</span>
         </div>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold text-warm-800">
-        <a href="#about" class="hover:text-clay-500 transition-colors">Our Story</a>
-        <a href="#homes" class="hover:text-clay-500 transition-colors">Village Homes & Nursery</a>
-        <a href="#programs" class="hover:text-clay-500 transition-colors">Maternal Care & Doulas</a>
-        <a href="#report" class="hover:text-clay-500 transition-colors">2025 Impact Report</a>
+      <!-- Desktop Nav Links -->
+      <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold text-slate-600">
+        <a href="#about" class="hover:text-viola-600 transition-colors">Our Story</a>
+        <a href="#housing" class="hover:text-viola-600 transition-colors">Maternity Shelter</a>
+        <a href="#prenatal" class="hover:text-viola-600 transition-colors">Prenatal & Baby Care</a>
+        <a href="#impact" class="hover:text-viola-600 transition-colors">2025 Impact Report</a>
       </nav>
 
       <!-- Action Buttons -->
       <div class="flex items-center gap-2.5">
-        <a href="tel:2148388924" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-warm-900 bg-warm-100 hover:bg-warm-200 border border-warm-300 transition-all">
-          <i data-lucide="heart-handshake" class="w-3.5 h-3.5 text-clay-500"></i>
+        <a href="tel:2148388924" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold text-slate-700 bg-slate-50 hover:bg-slate-100 border border-slate-200 transition-all">
+          <i data-lucide="heart-handshake" class="w-3.5 h-3.5 text-heart-500"></i>
           <span>Need Shelter?</span>
         </a>
-        <a href="https://violashouse.org" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold text-white bg-clay-500 hover:bg-clay-600 shadow-sm transition-all">
+        <a href="#sponsor" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold text-white bg-viola-600 hover:bg-viola-700 shadow-xs transition-all">
           <i data-lucide="heart" class="w-3.5 h-3.5 fill-current"></i>
           <span>Sponsor a Mother</span>
         </a>
@@ -97,133 +87,118 @@
     </div>
   </header>
 
-  <!-- Editorial Hero Section -->
+  <!-- Clean Humanitarian Hero -->
   <main class="flex-1 py-6 lg:py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
         
-        <!-- Left Editorial Column -->
+        <!-- Left Column -->
         <div class="lg:col-span-7 space-y-4">
           
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-semibold bg-clay-100 text-clay-700 border border-clay-200">
-            <span class="w-1.5 h-1.5 rounded-full bg-clay-500"></span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-bold bg-viola-50 text-viola-700 border border-viola-200">
+            <span class="w-1.5 h-1.5 rounded-full bg-viola-600"></span>
             <span>Building Villages, Zip Code by Zip Code</span>
           </div>
 
-          <h1 class="font-serif text-2xl sm:text-3xl lg:text-[38px] font-bold text-warm-900 leading-[1.18] tracking-tight">
-            Every expectant teen mother deserves a <em class="italic font-normal text-clay-500">safe nursery</em>, compassionate care, and a roof over her head.
+          <h1 class="text-3xl sm:text-4xl lg:text-[40px] font-bold text-slate-900 leading-[1.16] tracking-tight">
+            Every expectant teen mother deserves a <span class="text-viola-600">safe home</span>, compassionate care, and a roof over her head.
           </h1>
 
-          <p class="text-xs sm:text-sm text-warm-800/80 leading-relaxed max-w-xl font-normal">
-            Founded by Thana Hickman-Simmons in South Dallas, Viola’s House provides emergency shelter, licensed prenatal healthcare, and transitional living for teen mothers who have aged out of foster care or face homelessness. No young mother has to face childbirth alone.
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl font-normal">
+            Founded by Thana Hickman-Simmons in South Dallas, Viola’s House provides emergency shelter, licensed prenatal healthcare, and transitional living for teen mothers facing homelessness. No young mother has to face childbirth alone.
           </p>
 
-          <!-- Interactive Village Sponsorship Selector -->
-          <div class="p-4 sm:p-5 rounded-xl bg-white border border-warm-200 shadow-sm space-y-3">
+          <!-- Village Sponsorship Selector -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-xs space-y-3">
             <div class="flex items-center justify-between">
               <div>
-                <span class="text-[10px] font-bold uppercase tracking-wider text-clay-500 block">Village Sponsorship Program</span>
-                <span class="text-xs font-semibold text-warm-900">Choose your monthly or one-time impact</span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-viola-600 block">Village Sponsorship Program</span>
+                <span class="text-xs font-bold text-slate-900">Choose your monthly or one-time impact</span>
               </div>
-              <div class="flex items-center bg-warm-100 p-0.5 rounded-lg text-[11px] font-semibold">
-                <button id="btn-monthly" onclick="setFrequency('monthly')" class="px-2 py-0.5 rounded bg-white text-warm-900 shadow-xs">Monthly</button>
-                <button id="btn-onetime" onclick="setFrequency('onetime')" class="px-2 py-0.5 rounded text-warm-800/70 hover:text-warm-900">One-Time</button>
+              <div class="flex items-center bg-white border border-slate-200 p-0.5 rounded-lg text-[11px] font-bold">
+                <button id="btn-monthly" onclick="setFrequency('monthly')" class="px-2 py-0.5 rounded bg-viola-600 text-white shadow-xs">Monthly</button>
+                <button id="btn-onetime" onclick="setFrequency('onetime')" class="px-2 py-0.5 rounded text-slate-600 hover:text-slate-900">One-Time</button>
               </div>
             </div>
 
             <!-- Preset Tiers -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              <button onclick="selectTier(35, 'Essential Diapers & Baby Care Bundle')" class="tier-btn active p-2.5 rounded-lg border-2 border-clay-500 bg-clay-50/70 text-left transition-all">
-                <span class="block text-base font-bold text-clay-700">$35<span class="text-[10px] font-normal text-warm-800/60" id="tier-freq-1">/mo</span></span>
-                <span class="block text-[10px] font-medium text-warm-800 mt-0.5 leading-tight">Diapers & Formula</span>
+              <button onclick="selectTier(35, 'Essential Diapers & Baby Care Bundle')" class="tier-btn active p-2.5 rounded-xl border-2 border-viola-600 bg-white text-left transition-all">
+                <span class="block text-base font-bold text-viola-700">$35<span class="text-[10px] font-normal text-slate-500" id="tier-freq-1">/mo</span></span>
+                <span class="block text-[11px] font-semibold text-slate-700 mt-0.5 leading-tight">Diapers & Formula</span>
               </button>
-              <button onclick="selectTier(120, '3 Nights of Safe Maternity Shelter & Meals')" class="tier-btn p-2.5 rounded-lg border border-warm-200 hover:border-clay-300 bg-white text-left transition-all">
-                <span class="block text-base font-bold text-warm-900">$120<span class="text-[10px] font-normal text-warm-800/60" id="tier-freq-2">/mo</span></span>
-                <span class="block text-[10px] font-medium text-warm-800 mt-0.5 leading-tight">Safe Shelter Nights</span>
+              <button onclick="selectTier(120, '3 Nights of Safe Maternity Shelter & Meals')" class="tier-btn p-2.5 rounded-xl border border-slate-200 hover:border-viola-300 bg-white text-left transition-all">
+                <span class="block text-base font-bold text-slate-900">$120<span class="text-[10px] font-normal text-slate-500" id="tier-freq-2">/mo</span></span>
+                <span class="block text-[11px] font-semibold text-slate-700 mt-0.5 leading-tight">Safe Shelter Nights</span>
               </button>
-              <button onclick="selectTier(350, 'Full Prenatal Clinic Visit & Doula Care')" class="tier-btn p-2.5 rounded-lg border border-warm-200 hover:border-clay-300 bg-white text-left transition-all">
-                <span class="block text-base font-bold text-warm-900">$350<span class="text-[10px] font-normal text-warm-800/60" id="tier-freq-3">/mo</span></span>
-                <span class="block text-[10px] font-medium text-warm-800 mt-0.5 leading-tight">Prenatal & Doula</span>
+              <button onclick="selectTier(350, 'Full Prenatal Clinic Visit & Doula Care')" class="tier-btn p-2.5 rounded-xl border border-slate-200 hover:border-viola-300 bg-white text-left transition-all">
+                <span class="block text-base font-bold text-slate-900">$350<span class="text-[10px] font-normal text-slate-500" id="tier-freq-3">/mo</span></span>
+                <span class="block text-[11px] font-semibold text-slate-700 mt-0.5 leading-tight">Prenatal & Doula</span>
               </button>
-              <button onclick="selectTier(1000, 'Full Mother & Infant Home Sponsorship')" class="tier-btn p-2.5 rounded-lg border border-warm-200 hover:border-clay-300 bg-white text-left transition-all">
-                <span class="block text-base font-bold text-warm-900">$1,000<span class="text-[10px] font-normal text-warm-800/60" id="tier-freq-4">/mo</span></span>
-                <span class="block text-[10px] font-medium text-warm-800 mt-0.5 leading-tight">Full Home Sponsor</span>
+              <button onclick="selectTier(1000, 'Full Mother & Infant Home Sponsorship')" class="tier-btn p-2.5 rounded-xl border border-slate-200 hover:border-viola-300 bg-white text-left transition-all">
+                <span class="block text-base font-bold text-slate-900">$1,000<span class="text-[10px] font-normal text-slate-500" id="tier-freq-4">/mo</span></span>
+                <span class="block text-[11px] font-semibold text-slate-700 mt-0.5 leading-tight">Full Home Sponsor</span>
               </button>
             </div>
 
             <!-- Dynamic Impact Feedback -->
-            <div class="flex items-center justify-between pt-1.5 border-t border-warm-100 text-[11px]">
-              <div class="flex items-center gap-1.5 text-warm-800">
-                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-clay-500 flex-shrink-0"></i>
-                <span id="tier-description" class="font-medium">Provides a month supply of diapers, wipes, and infant formula for one mother.</span>
+            <div class="flex items-center justify-between pt-1.5 border-t border-slate-200 text-xs">
+              <div class="flex items-center gap-1.5 text-slate-700">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-heart-500 flex-shrink-0"></i>
+                <span id="tier-description" class="font-medium text-[11px]">Provides a month supply of diapers, wipes, and infant formula for one mother.</span>
               </div>
-              <a href="https://violashouse.org" target="_blank" class="font-bold text-clay-600 hover:text-clay-700 underline whitespace-nowrap ml-2">Complete Gift →</a>
+              <a href="https://violashouse.org" target="_blank" class="font-bold text-viola-600 hover:text-viola-700 underline text-xs whitespace-nowrap ml-2">Complete Gift →</a>
             </div>
           </div>
 
-          <!-- Dual Call to Action & Metrics -->
+          <!-- Dual Call to Action Buttons -->
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 pt-0.5">
-            <a href="https://violashouse.org" target="_blank" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-bold text-xs bg-clay-500 hover:bg-clay-600 text-white shadow-sm transition-all">
+            <a href="https://violashouse.org" target="_blank" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-bold text-xs bg-viola-600 hover:bg-viola-700 text-white shadow-xs transition-all">
               <i data-lucide="heart" class="w-3.5 h-3.5 fill-current"></i>
               <span>Become a Village Sponsor Today</span>
             </a>
-            <a href="tel:2148388924" class="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full font-semibold text-xs bg-warm-100 hover:bg-warm-200 text-warm-900 border border-warm-300 transition-colors">
-              <i data-lucide="phone" class="w-3.5 h-3.5 text-clay-500"></i>
+            <a href="tel:2148388924" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full font-semibold text-xs bg-slate-100 hover:bg-slate-200 text-slate-800 transition-colors">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-viola-600"></i>
               <span>Intake Hotline: (214) 838-8924</span>
             </a>
           </div>
 
-          <!-- Verified Community Track Record -->
-          <div class="pt-3 border-t border-warm-200 grid grid-cols-3 gap-3">
+          <!-- Verified Community Metrics -->
+          <div class="pt-4 border-t border-slate-100 grid grid-cols-3 gap-3">
             <div>
-              <div class="font-serif text-xl sm:text-2xl font-bold text-warm-900">420+</div>
-              <div class="text-[10px] text-warm-800/70 font-medium">Teen Mothers Sheltered</div>
+              <div class="text-xl sm:text-2xl font-extrabold text-slate-900">420+</div>
+              <div class="text-[11px] text-slate-500 font-medium">Mothers Sheltered</div>
             </div>
             <div>
-              <div class="font-serif text-xl sm:text-2xl font-bold text-warm-900">15,000+</div>
-              <div class="text-[10px] text-warm-800/70 font-medium">Baby Care Kits Given</div>
+              <div class="text-xl sm:text-2xl font-extrabold text-slate-900">15,000+</div>
+              <div class="text-[11px] text-slate-500 font-medium">Care Kits Distributed</div>
             </div>
             <div>
-              <div class="font-serif text-xl sm:text-2xl font-bold text-clay-600">100%</div>
-              <div class="text-[10px] text-warm-800/70 font-medium">Healthy Birth Rate</div>
+              <div class="text-xl sm:text-2xl font-extrabold text-heart-500">100%</div>
+              <div class="text-[11px] text-slate-500 font-medium">Healthy Birth Outcomes</div>
             </div>
           </div>
 
         </div>
 
-        <!-- Right Visual & Story Column -->
+        <!-- Right Column: Clean Visual Showcase -->
         <div class="lg:col-span-5 space-y-3">
-          <div class="relative max-w-sm mx-auto lg:max-w-none">
-            <!-- Main Mother & Infant Photo -->
-            <div class="relative rounded-2xl overflow-hidden border-2 border-white shadow-lg bg-warm-100 aspect-[4/5] max-h-[420px]">
-              <img src="/assets/thana-hickman-simmons/mother-infant.jpg" alt="Mother and infant at Viola's House" class="w-full h-full object-cover" onerror="this.src='/assets/thana-hickman-simmons/mother-nursery.jpg'" />
-              <div class="absolute inset-0 bg-gradient-to-t from-warm-900/75 via-transparent to-transparent"></div>
-              
-              <!-- Bottom Photo Tag -->
-              <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md p-3 rounded-xl border border-warm-200/80 shadow-xs">
-                <div class="flex items-center gap-2.5">
-                  <img src="/assets/thana-hickman-simmons/thana-portrait.png" alt="Thana Hickman-Simmons" class="w-8 h-8 rounded-full object-cover border-2 border-clay-500" />
-                  <div>
-                    <span class="block text-[11px] font-bold text-warm-900">Thana Hickman-Simmons</span>
-                    <span class="block text-[9px] text-warm-800/70">Founder & CEO, Viola's House</span>
-                  </div>
+          <div class="relative rounded-2xl overflow-hidden border border-slate-200 shadow-lg bg-slate-50 aspect-[4/5] max-h-[440px] mx-auto">
+            <img src="/assets/thana-hickman-simmons/mother-infant.jpg" alt="Mother and infant at Viola's House" class="w-full h-full object-cover" onerror="this.src='/assets/thana-hickman-simmons/mother-nursery.jpg'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+            
+            <!-- Bottom Photo Caption -->
+            <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md p-3 rounded-xl border border-slate-200/80 shadow-xs">
+              <div class="flex items-center gap-2.5">
+                <img src="/assets/thana-hickman-simmons/thana-portrait.png" alt="Thana Hickman-Simmons" class="w-8 h-8 rounded-full object-cover border-2 border-viola-500" />
+                <div>
+                  <span class="block text-xs font-bold text-slate-900">Thana Hickman-Simmons</span>
+                  <span class="block text-[10px] text-slate-500">Founder & CEO, Viola's House</span>
                 </div>
-                <p class="text-[10px] italic text-warm-800 mt-1.5 leading-relaxed">
-                  "When we wrap a young mother in love, stability, and education, we rewrite the future for generations."
-                </p>
               </div>
-            </div>
-
-            <!-- Overlapping Nursery Community Card -->
-            <div class="hidden sm:block absolute -bottom-4 -left-4 bg-white p-2.5 rounded-xl border border-warm-200 shadow-lg max-w-[200px]">
-              <div class="aspect-video rounded-lg overflow-hidden mb-1.5 bg-warm-100">
-                <img src="/assets/thana-hickman-simmons/mother-nursery.jpg" alt="Viola's House Nursery" class="w-full h-full object-cover" />
-              </div>
-              <div class="flex items-center gap-1 text-[11px] font-bold text-warm-900">
-                <i data-lucide="check-circle-2" class="w-3 h-3 text-emerald-600"></i>
-                <span>Licensed Care</span>
-              </div>
-              <p class="text-[9px] text-warm-800/70">24/7 staff support & certified doula care.</p>
+              <p class="text-[10px] italic text-slate-700 mt-1.5 leading-relaxed">
+                "When we wrap a young mother in love, stability, and education, we rewrite the future for generations."
+              </p>
             </div>
           </div>
         </div>
@@ -245,11 +220,11 @@
     function setFrequency(freq) {
       currentFreq = freq;
       document.getElementById('btn-monthly').className = freq === 'monthly' 
-        ? 'px-2 py-0.5 rounded bg-white text-warm-900 shadow-xs' 
-        : 'px-2 py-0.5 rounded text-warm-800/70 hover:text-warm-900';
+        ? 'px-2 py-0.5 rounded bg-viola-600 text-white shadow-xs' 
+        : 'px-2 py-0.5 rounded text-slate-600 hover:text-slate-900';
       document.getElementById('btn-onetime').className = freq === 'onetime' 
-        ? 'px-2 py-0.5 rounded bg-white text-warm-900 shadow-xs' 
-        : 'px-2 py-0.5 rounded text-warm-800/70 hover:text-warm-900';
+        ? 'px-2 py-0.5 rounded bg-viola-600 text-white shadow-xs' 
+        : 'px-2 py-0.5 rounded text-slate-600 hover:text-slate-900';
       
       const suffix = freq === 'monthly' ? '/mo' : '';
       for (let i = 1; i <= 4; i++) {
@@ -259,9 +234,9 @@
 
     function selectTier(amount, title) {
       document.querySelectorAll('.tier-btn').forEach(btn => {
-        btn.className = 'tier-btn p-2.5 rounded-lg border border-warm-200 hover:border-clay-300 bg-white text-left transition-all';
+        btn.className = 'tier-btn p-2.5 rounded-xl border border-slate-200 hover:border-viola-300 bg-white text-left transition-all';
       });
-      event.currentTarget.className = 'tier-btn active p-2.5 rounded-lg border-2 border-clay-500 bg-clay-50/70 text-left transition-all';
+      event.currentTarget.className = 'tier-btn active p-2.5 rounded-xl border-2 border-viola-600 bg-white text-left transition-all';
       document.getElementById('tier-description').textContent = tierDescriptions[amount] || title;
     }
 
@@ -269,19 +244,19 @@
   </script>
 
   <!-- Designer Preview Bar & Audit Modal -->
-  <div id="designer-preview-bar" class="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 w-auto max-w-[95vw] bg-warm-900/95 backdrop-blur-md text-white px-3.5 py-2 rounded-full shadow-2xl border border-warm-700/60 flex items-center gap-3 text-xs">
+  <div id="designer-preview-bar" class="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 w-auto max-w-[95vw] bg-slate-900/95 backdrop-blur-md text-white px-3.5 py-2 rounded-full shadow-2xl border border-slate-700 flex items-center gap-3 text-xs">
     <div class="flex items-center gap-2">
-      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-      <span class="font-bold text-warm-100">Bespoke Hero Redesign</span>
-      <span class="text-warm-400 hidden sm:inline">• Viola's House</span>
+      <span class="w-2 h-2 rounded-full bg-viola-500"></span>
+      <span class="font-bold text-slate-100">Bespoke Hero Redesign</span>
+      <span class="text-slate-400 hidden sm:inline">• Viola's House</span>
     </div>
-    <div class="h-3.5 w-px bg-warm-700 hidden sm:block"></div>
+    <div class="h-3.5 w-px bg-slate-700 hidden sm:block"></div>
     <div class="flex items-center gap-2">
-      <button onclick="document.getElementById('notes-modal').classList.remove('hidden')" class="px-2.5 py-1 rounded-md bg-warm-800 hover:bg-warm-700 text-warm-200 text-xs font-medium transition-colors flex items-center gap-1.5 border border-warm-700">
-        <i data-lucide="file-text" class="w-3.5 h-3.5 text-clay-400"></i>
+      <button onclick="document.getElementById('notes-modal').classList.remove('hidden')" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors flex items-center gap-1.5 border border-slate-700">
+        <i data-lucide="file-text" class="w-3.5 h-3.5 text-viola-400"></i>
         <span>Site Audit & Notes</span>
       </button>
-      <a href="https://violashouse.org" target="_blank" class="px-2.5 py-1 rounded-md bg-warm-800 hover:bg-warm-700 text-warm-200 text-xs font-medium transition-colors flex items-center gap-1 border border-warm-700">
+      <a href="https://violashouse.org" target="_blank" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors flex items-center gap-1 border border-slate-700">
         <span>Current Site</span>
         <i data-lucide="external-link" class="w-3 h-3"></i>
       </a>
@@ -290,23 +265,23 @@
 
   <!-- Audit Modal -->
   <div id="notes-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-lg w-full p-6 text-warm-900 shadow-2xl border border-warm-200 max-h-[90vh] overflow-y-auto">
-      <div class="flex items-center justify-between pb-4 border-b border-warm-200">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 text-slate-900 shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200">
         <div class="flex items-center gap-2">
-          <i data-lucide="clipboard-list" class="w-5 h-5 text-clay-600"></i>
-          <h3 class="font-bold text-base text-warm-900">Website Audit & Conversion Analysis</h3>
+          <i data-lucide="clipboard-list" class="w-5 h-5 text-viola-600"></i>
+          <h3 class="font-bold text-base text-slate-900">Website Audit & Conversion Analysis</h3>
         </div>
-        <button onclick="document.getElementById('notes-modal').classList.add('hidden')" class="text-warm-400 hover:text-warm-800 p-1 rounded-lg">
+        <button onclick="document.getElementById('notes-modal').classList.add('hidden')" class="text-slate-400 hover:text-slate-800 p-1 rounded-lg">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
 
-      <div class="py-4 space-y-4 text-xs sm:text-sm text-warm-800">
+      <div class="py-4 space-y-4 text-xs sm:text-sm text-slate-700">
         <div>
           <h4 class="font-bold text-red-600 flex items-center gap-1.5 mb-1.5">
             <i data-lucide="alert-triangle" class="w-4 h-4"></i> Critical Conversion Leaks on Current Wix Site
           </h4>
-          <ul class="list-disc list-inside space-y-1 text-warm-800/80">
+          <ul class="list-disc list-inside space-y-1 text-slate-600">
             <li><strong>Severe Layout Shifts & Mobile Latency:</strong> The current Wix template loads unoptimized multi-megabyte images causing massive visual jank.</li>
             <li><strong>No Clear Crisis Admissions Hotline:</strong> Expectant teen mothers facing immediate homelessness have to dig through multiple sub-pages to find intake instructions.</li>
             <li><strong>Buried 400+ Mother Housing Metrics:</strong> Community impact is hidden behind generic carousel slides without quantifiable donor proof.</li>
@@ -314,18 +289,18 @@
           </ul>
         </div>
 
-        <div class="p-3.5 rounded-xl bg-warm-50 border border-warm-200 space-y-1.5">
-          <h4 class="font-bold text-clay-600 flex items-center gap-1.5">
-            <i data-lucide="check-circle" class="w-4 h-4"></i> Bespoke Architectural Solution
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+          <h4 class="font-bold text-viola-600 flex items-center gap-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Clean Architectural Redesign
           </h4>
-          <p class="text-warm-800/90 leading-relaxed">
-            Replaced generic SaaS dark slop with a warm terracotta & cream humanitarian design system. Added an urgent 24/7 crisis admission banner at the top, an interactive village monthly sponsorship calculator with clear impact outcomes ($35-$1,000), and authentic imagery celebrating Thana's Dallas community leadership.
+          <p class="text-slate-600 leading-relaxed">
+            Preserved Viola's House official signature violet (#BA22D2) & rose pink brand colors on a clean, bright, distraction-free white canvas. Added an immediate 24/7 crisis admission banner, an intuitive sponsorship calculator ($35-$1,000), and authentic South Dallas community photography.
           </p>
         </div>
       </div>
 
-      <div class="pt-4 border-t border-warm-200 flex justify-end">
-        <button onclick="document.getElementById('notes-modal').classList.add('hidden')" class="px-4 py-2 rounded-xl bg-clay-500 hover:bg-clay-600 text-white font-bold text-xs transition-colors">
+      <div class="pt-4 border-t border-slate-200 flex justify-end">
+        <button onclick="document.getElementById('notes-modal').classList.add('hidden')" class="px-4 py-2 rounded-xl bg-viola-600 hover:bg-viola-700 text-white font-bold text-xs transition-colors">
           Close Review
         </button>
       </div>
