@@ -1,252 +1,206 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Jorge Dornelles de Oliveira, MCC ICF | Master Executive Coaching</title>
+  <title>Escola de Coaches | Jorge Dornelles de Oliveira, MCC | Conceito de Redesign</title>
+  <meta name="description" content="Hero redesign concept for Jorge Dornelles de Oliveira by Miskat Hossain.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"Playfair Display"', 'serif'],
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
           },
           colors: {
-            icf: {
-              bg: '#0D1520',
-              card: '#172338',
-              gold: '#C59B27',
-              goldLight: '#E5C058',
-              blue: '#38BDF8',
-              slate: '#94A3B8',
-              border: '#273854'
-            }
-          }
-        }
-      }
-    }
+            brand: {
+              bg: '#FAF8F5', surface: '#FFFFFF', ink: '#0E1A2B', muted: '#59616E', line: '#E6E0D7',
+              accent: '#B10E3E', accentInk: '#FFFFFF', accent2: '#B4361F',
+            },
+          },
+        },
+      },
+    };
   </script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <style>
+    .hl{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:600;color:#B4361F}
+    .text-balance{text-wrap:balance}
+    .glass{background:rgba(255,255,255,.78);border-color:rgba(255,255,255,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+    .float-slow{animation:float 7s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @media (prefers-reduced-motion: reduce){.float-slow{animation:none}*{scroll-behavior:auto!important}}
+  </style>
 </head>
-<body class="bg-icf-bg text-white font-sans antialiased min-h-screen flex flex-col selection:bg-icf-gold selection:text-black">
-
-  
-  <!-- Designer Preview Bar -->
-  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
-    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        LIVE DEMO REDESIGN
-      </span>
-      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Jorge Dornelles de Oliveira, MCC ICF</strong></span>
-    </div>
-    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
-      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
-        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
-        <span>Why This Converts Better</span>
-      </button>
-      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
-        <span>Miskat's Portfolio</span>
-        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+<body class="bg-brand-bg font-body text-brand-ink antialiased selection:bg-brand-accent selection:text-brand-accentInk">
+  <div id="top" class="relative min-h-screen overflow-hidden pb-40 sm:pb-28">
+    <div class="pointer-events-none absolute -left-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-brand-accent2 opacity-[0.13] blur-3xl" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 top-1/3 h-[28rem] w-[28rem] rounded-full bg-brand-accent opacity-[0.10] blur-3xl" aria-hidden="true"></div>
+    
+    
+  <header class="relative z-20">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-6 lg:px-8">
+      <a href="#top" class="flex min-w-0 items-center gap-3">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-accent text-brand-accentInk font-display text-lg font-bold">EC</span>
+        <span class="min-w-0">
+          <span class="block truncate text-sm font-bold tracking-tight">Escola de Coaches</span>
+          <span class="hidden truncate text-xs text-brand-muted sm:block">Fundada por Jorge Dornelles de Oliveira, MCC</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-brand-muted lg:flex" aria-label="Primary">
+        <a href="#top" class="transition-colors hover:text-brand-ink">Formações</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Para Empresas</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Agenda</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Coaches Formados</a>
+      </nav>
+      <a href="#book" class="hidden shrink-0 items-center gap-2 rounded-full border border-brand-line px-4 py-2 text-sm font-semibold transition hover:border-brand-accent hover:bg-brand-accent hover:text-brand-accentInk sm:inline-flex">
+        Inscrições <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
       </a>
     </div>
-  </div>
-
-  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-      <div class="flex items-center gap-2.5 mb-4">
-        <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
-        <h3 class="text-lg font-bold text-white">Escola de Coaches</h3>
-      </div>
-      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
-        This custom hero redesign addresses critical conversion leaks identified on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
-      </p>
-      
-      <div class="space-y-4 mb-6">
-        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
-          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
-            <span>Current Friction Points</span>
+  </header>
+    <main>
+    <section class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 pb-12 pt-6 sm:px-6 sm:pt-10 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:pb-16 lg:pt-14">
+      <div class="min-w-0 lg:col-span-7">
+          <p class="inline-flex max-w-full items-center gap-2 rounded-2xl border sm:rounded-full border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-brand-ink backdrop-blur sm:text-[13px]">
+            <i data-lucide="award" class="h-4 w-4 shrink-0 text-brand-accent2"></i>
+            <span class="min-w-0 leading-snug">Master Certified Coach (MCC) · Formando coaches desde 2006</span>
+          </p>
+          <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-[3.6rem] font-bold leading-[1.06] tracking-tight text-balance">
+            Torne-se coach com a <span class="hl">profundidade</span> que o mercado exige, sem atalhos de fim de semana.
+          </h1>
+          <p class="mt-6 max-w-xl text-base leading-relaxed text-brand-muted sm:text-lg">A Formação de Coaches da Escola de Coaches reúne 228 horas de prática, mentoria e avaliação rigorosa, conduzida por Jorge Dornelles de Oliveira, Master Certified Coach.</p>
+          <div id="book" class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <a href="#book" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap bg-brand-accent px-7 py-4 text-sm font-bold text-brand-accentInk shadow-lg shadow-brand-accent/25 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-accent/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent sm:text-base">
+              <i data-lucide="calendar-check" class="h-5 w-5"></i>Agendar conversa de admissão
+              <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
+            </a>
+            <a href="#top" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap border border-brand-line bg-brand-surface/60 px-6 py-4 text-sm font-semibold backdrop-blur transition duration-200 hover:border-brand-ink/40 hover:bg-brand-surface sm:text-base">
+              <i data-lucide="book-open" class="h-5 w-5 text-brand-accent2 transition-transform group-hover:scale-110"></i>Conhecer a Formação
+            </a>
           </div>
-          <ul class="text-xs text-zinc-300 space-y-1 list-disc list-inside">
-            <li>Dated institutional layout lacking modern course architecture and visual polish.</li><li>Fails to showcase the immense prestige of his rare MCC ICF accreditation above the fold.</li><li>Lacks distinct corporate consulting funnels for C-Suite executives vs aspiring coaches.</li>
+          <p class="mt-4 flex items-center gap-2 text-sm text-brand-muted"><i data-lucide="building-2" class="h-4 w-4 text-brand-accent2"></i>Para empresas: contrate um coach formado pela Escola.</p>
+          
+          <dl class="mt-10 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-brand-line bg-brand-line">
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Formação completa</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">228 h</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Formação completa</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Primeira turma</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">2006</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Primeira turma</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Master Certified Coach</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">MCC</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Master Certified Coach</dd>
+            </div>
+          </dl>
+      </div>
+      <div class="min-w-0 lg:col-span-5 ">
+        
+        <div class="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none">
+          <div class="absolute -inset-5 rounded-[2.75rem] bg-gradient-to-br from-brand-accent2/30 via-transparent to-brand-accent/25 blur-2xl" aria-hidden="true"></div>
+          <div class="group relative overflow-hidden rounded-[2rem] border border-brand-line bg-brand-surface shadow-2xl shadow-black/15" style="aspect-ratio:4/5">
+            <img src="https://miskathossain.net/assets/jorge-dornelles/portrait.jpg" alt="Jorge Dornelles de Oliveira, Master Certified Coach" width="1800" height="1800" fetchpriority="high" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]" style="object-position:50% 22%">
+            <div class="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/55 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white"><p class="text-base font-bold">Jorge Dornelles de Oliveira</p><p class="text-xs text-white/80">Fundador &middot; Master Certified Coach</p></div>
+          </div>
+        <div class="glass float-slow absolute -left-3 top-10 sm:-left-10 flex max-w-[15rem] items-center gap-3 rounded-2xl border px-4 py-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-accent text-brand-accentInk"><i data-lucide="clock" class="h-5 w-5"></i></span>
+          <span class="min-w-0"><span class="block text-sm font-bold leading-tight">228 horas</span><span class="block text-xs leading-snug text-brand-muted">Prática, mentoria e avaliação</span></span>
+        </div>
+        <div class="glass float-slow absolute -right-3 bottom-24 sm:-right-8 flex max-w-[15rem] items-center gap-3 rounded-2xl border px-4 py-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-accent text-brand-accentInk"><i data-lucide="users" class="h-5 w-5"></i></span>
+          <span class="min-w-0"><span class="block text-sm font-bold leading-tight">Team coaching</span><span class="block text-xs leading-snug text-brand-muted">Presencial e online</span></span>
+        </div>
+        </div>
+      </div>
+    </section>
+      
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-3 border-t border-brand-line pt-6 sm:flex-row sm:items-center sm:gap-6">
+          <p class="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-brand-muted">Programas</p>
+          <ul class="flex flex-wrap gap-2">
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="graduation-cap" class="h-4 w-4 text-brand-accent2"></i>Formação de Coaches</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="users" class="h-4 w-4 text-brand-accent2"></i>Team Coaches</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="building-2" class="h-4 w-4 text-brand-accent2"></i>Coaching Interno</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="eye" class="h-4 w-4 text-brand-accent2"></i>Supervisão</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="compass" class="h-4 w-4 text-brand-accent2"></i>Mentor Coaching</li>
           </ul>
         </div>
-
-        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
-          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-            <span>Implemented Redesign Enhancements</span>
-          </div>
-          <div class="text-xs text-zinc-300 space-y-2">
-            <div><strong class="text-white">Prestige Executive Academy UI:</strong> Elevated into a sovereign deep navy and champagne gold layout matching international executive business schools.</div><div><strong class="text-white">MCC ICF Global Authority Badges:</strong> Positioned his elite credentials prominently to command high-ticket corporate contracts.</div><div><strong class="text-white">Dual Enterprise &amp; Academy Funnel:</strong> Created dedicated pathways for C-Suite advisory and professional coach certification.</div>
-          </div>
-        </div>
       </div>
+    </main>
+  </div>
 
-      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
-        <span>Ready to implement this live?</span>
-        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
+  <!-- Designer preview bar (concept only, not part of the client hero) -->
+  <div id="mh-bar" class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-md font-['Inter',sans-serif] sm:inset-x-auto sm:bottom-6 sm:right-6 sm:mx-0 sm:max-w-none">
+    <div class="flex flex-col gap-2.5 rounded-2xl border border-white/15 bg-zinc-950/75 px-3.5 py-3 text-white shadow-2xl shadow-black/40 backdrop-blur-xl sm:flex-row sm:items-center sm:gap-4 sm:py-2 sm:pl-4 sm:pr-2">
+      <p class="flex items-center justify-center gap-2 text-xs text-white/75 sm:justify-start sm:text-[13px]">
+        <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+        <span>Redesign concept for <strong class="font-semibold text-white">Jorge Dornelles de Oliveira</strong></span>
+      </p>
+      <div class="flex gap-2">
+        <button id="mh-notes-btn" type="button" aria-expanded="false" aria-controls="mh-notes" class="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/10 px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-white/20 sm:flex-none sm:text-[13px]">
+          <i data-lucide="sparkles" class="h-4 w-4 text-emerald-300"></i>Why This Converts (Notes)
+        </button>
+        <a href="https://miskathossain.net" target="_blank" rel="noopener" class="inline-flex flex-1 items-center justify-center gap-1 rounded-xl bg-white px-3.5 py-2 text-xs font-bold text-zinc-950 transition hover:bg-emerald-300 sm:flex-none sm:text-[13px]">Claim This Design &rarr;</a>
       </div>
     </div>
   </div>
 
-  <!-- Navigation with MCC ICF Badge -->
-  <header class="w-full border-b border-icf-border bg-icf-bg/95 backdrop-blur-md sticky top-[45px] z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3.5">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-600 flex items-center justify-center font-black text-black text-xs shadow-md">
-          MCC
+  <div id="mh-notes" class="fixed inset-0 z-50 hidden font-['Inter',sans-serif]" role="dialog" aria-modal="true" aria-labelledby="mh-notes-title">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-close></div>
+    <div class="absolute inset-x-3 bottom-3 max-h-[85vh] overflow-y-auto rounded-2xl border border-white/15 bg-zinc-950/90 p-5 text-white shadow-2xl backdrop-blur-xl sm:inset-x-auto sm:bottom-24 sm:right-6 sm:w-[27rem] sm:p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald-300">Designer notes</p>
+          <h2 id="mh-notes-title" class="mt-1 text-lg font-bold">Why This Converts</h2>
         </div>
-        <div class="border-l border-zinc-800 pl-3">
-          <span class="text-sm font-extrabold tracking-tight uppercase block text-white">JORGE DORNELLES</span>
-          <span class="text-[11px] text-icf-slate font-medium">Master Certified Coach (MCC) • Ex-President ICF Brazil</span>
-        </div>
+        <button type="button" data-close data-focus class="rounded-lg p-1.5 text-white/60 transition hover:bg-white/10 hover:text-white" aria-label="Close notes"><i data-lucide="x" class="h-5 w-5"></i></button>
       </div>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-icf-slate">
-        <a href="#coaching" class="hover:text-icf-gold transition-colors">Executive Coaching</a>
-        <a href="#supervision" class="hover:text-icf-gold transition-colors">Coach Supervision</a>
-        <a href="#academy" class="hover:text-icf-gold transition-colors">Escola de Coaches</a>
-        <a href="https://www.linkedin.com/in/jorgedornellesdeoliveira/" target="_blank" class="hover:text-icf-gold flex items-center gap-1.5 transition-colors">
-          <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-          <span>LinkedIn</span>
-        </a>
-      </nav>
-
-      <div class="flex items-center gap-3">
-        <a href="#consult" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-icf-gold text-black hover:bg-icf-goldLight transition-all shadow-md active:scale-95">
-          <span>Schedule Executive Session</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
+      <div class="mt-4 rounded-xl border border-rose-400/20 bg-rose-500/10 p-3.5 text-[13px] leading-relaxed text-white/80">
+        <span class="font-semibold text-rose-300">Before:</span> The current homepage has no H1 at all; the opening line (&quot;A profundidade que você procura...&quot;) sits beside a dense menu, and the rare MCC credential and 228-hour programme are buried below the fold.
       </div>
+      <ul class="mt-4 space-y-3.5">
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Depth as the differentiator</strong>The Portuguese headline turns the school's real edge (depth, not weekend shortcuts) into an outcome for aspiring coaches.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Proof Brazilian buyers trust</strong>228 hours, the 2006 first cohort and Jorge's MCC status sit in the proof bar beside the CTA.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Two funnels, clearly split</strong>Students book an admissions conversation; companies get a dedicated line to hire a school-trained coach.</p>
+        </li>
+      </ul>
+      <a href="https://miskathossain.net" target="_blank" rel="noopener" class="mt-5 flex items-center justify-center gap-1 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-zinc-950 transition hover:bg-emerald-300">Claim This Design &rarr;</a>
     </div>
-  </header>
-
-  <!-- Hero Section (Reference 8.jpg - Verified Talent Executive Academy) -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-        
-        <!-- Left: Copy & Value Proposition -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left">
-          
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border border-amber-500/30 bg-amber-500/10 text-icf-gold">
-            <i data-lucide="award" class="w-3.5 h-3.5"></i>
-            <span class="uppercase tracking-widest text-[11px] font-bold">MASTER CERTIFIED COACH (MCC) • INTERNATIONAL COACHING FEDERATION</span>
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-serif font-bold tracking-tight leading-[1.15] mb-6 text-white">
-            C-Suite Executive Coaching &amp; Master-Level Leadership Supervision.
-          </h1>
-
-          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal text-icf-slate mb-8">
-            Over 7,000 hours of executive coaching experience. Former President of ICF Brazil, accredited CSA London supervisor, and founder of Escola de Coaches Executivos, guiding Latin America's top CEOs and enterprise boards.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#consult" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] bg-icf-gold text-black hover:bg-icf-goldLight">
-              <span>Book C-Suite Advisory Inquiries</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            
-            <a href="#academy" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all bg-icf-card hover:bg-zinc-800 text-white border border-icf-border">
-              <i data-lucide="graduation-cap" class="w-4 h-4 text-icf-gold"></i>
-              <span>Escola de Coaches Executivos</span>
-            </a>
-          </div>
-
-          <!-- Proof Metrics -->
-          <div class="w-full pt-8 border-t border-icf-border grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="p-4 rounded-2xl bg-icf-card border border-icf-border">
-              <div class="text-2xl font-bold text-icf-gold mb-0.5">7,000+ Hrs</div>
-              <div class="text-xs font-bold text-white">Executive Coaching</div>
-              <div class="text-[11px] text-icf-slate">C-Suite &amp; board advisory</div>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-icf-card border border-icf-border">
-              <div class="text-2xl font-bold text-white mb-0.5">MCC Credential</div>
-              <div class="text-xs font-bold text-white">Highest ICF Distinction</div>
-              <div class="text-[11px] text-icf-slate">Top 1% of coaches globally</div>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-icf-card border border-icf-border">
-              <div class="text-2xl font-bold text-icf-gold mb-0.5">CSA London</div>
-              <div class="text-xs font-bold text-white">Accredited Supervisor</div>
-              <div class="text-[11px] text-icf-slate">Coaching supervision authority</div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: Reference 8.jpg Verified Talent Card with Authentic Portrait -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none flex justify-center">
-            
-            <div class="relative w-full rounded-3xl bg-icf-card border border-icf-border p-6 shadow-2xl flex flex-col items-center">
-              
-              <div class="w-full flex items-center justify-between pb-4 border-b border-icf-border mb-5">
-                <span class="text-xs font-mono font-bold tracking-wider text-icf-gold">EXECUTIVE COACHING</span>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-amber-950/60 text-amber-400 border border-amber-800">MCC ICF VERIFIED</span>
-              </div>
-
-              <!-- Authentic Portrait Image -->
-              <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-icf-border shadow-2xl bg-zinc-950">
-                <img 
-                  src="/assets/jorge-dornelles/portrait.jpg" 
-                  alt="Jorge Dornelles de Oliveira, MCC" 
-                  class="w-full h-full object-cover object-top filter contrast-[1.03]"
-                />
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-                
-                <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-icf-border flex items-center justify-between">
-                  <div>
-                    <div class="text-sm font-bold text-white">Jorge Dornelles de Oliveira</div>
-                    <div class="text-[11px] text-icf-slate">MCC ICF • Executive Coach Supervisor</div>
-                  </div>
-                  <i data-lucide="shield-check" class="w-5 h-5 text-icf-gold"></i>
-                </div>
-              </div>
-
-              <div class="w-full mt-4 p-4 rounded-xl bg-zinc-950/80 border border-icf-border flex items-center gap-3">
-                <i data-lucide="users" class="w-5 h-5 text-icf-gold shrink-0"></i>
-                <div class="text-xs text-icf-slate">
-                  <strong class="text-white">ICF Brazil Leadership:</strong> Past President ICF SP &amp; Brazil; Deliberative Council President (2015-2019).
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </main>
-
-  <footer class="w-full border-t border-icf-border py-6 bg-icf-bg text-center text-xs text-icf-slate">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>© 2026 Jorge Dornelles de Oliveira Coaching &amp; Consultoria. All rights reserved.</div>
-      <div class="text-zinc-500">Live Redesign Preview • Designed with pride by Miskat Hossain</div>
-    </div>
-  </footer>
+  </div>
 
   <script>
     lucide.createIcons();
-    function toggleNotesModal() {
-      const m = document.getElementById('notes-modal');
-      m.classList.toggle('hidden');
-    }
+    (function () {
+      var modal = document.getElementById('mh-notes');
+      var btn = document.getElementById('mh-notes-btn');
+      function setOpen(open) {
+        modal.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { modal.querySelector('[data-focus]').focus(); } else { btn.focus(); }
+      }
+      btn.addEventListener('click', function () { setOpen(modal.classList.contains('hidden')); });
+      modal.querySelectorAll('[data-close]').forEach(function (el) { el.addEventListener('click', function () { setOpen(false); }); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.classList.contains('hidden')) setOpen(false); });
+    })();
   </script>
 </body>
 </html>

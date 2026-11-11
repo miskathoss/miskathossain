@@ -4,250 +4,201 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Joelle Barbarulo Coaching | The Secure Attachment Blueprint™</title>
+  <title>Divinity Life Coaching | Joelle Barbarulo, RN | Redesign Concept</title>
+  <meta name="description" content="Hero redesign concept for Joelle Barbarulo, RN by Miskat Hossain.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"Playfair Display"', 'serif'],
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
           },
           colors: {
-            joelle: {
-              bg: '#FAF7F4',
-              card: '#FFFFFF',
-              charcoal: '#2D2328',
-              rose: '#C87D6B',
-              roseDark: '#AB6150',
-              gold: '#D4AF37',
-              slate: '#6B5E65',
-              border: '#EBE2DC'
-            }
-          }
-        }
-      }
-    }
+            brand: {
+              bg: '#FBF7F2', surface: '#FFFFFF', ink: '#2B2422', muted: '#665C58', line: '#EAE1D7',
+              accent: '#8C2F45', accentInk: '#FFFFFF', accent2: '#9E3A50',
+            },
+          },
+        },
+      },
+    };
   </script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <style>
+    .hl{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:600;color:#9E3A50}
+    .text-balance{text-wrap:balance}
+    .glass{background:rgba(255,255,255,.78);border-color:rgba(255,255,255,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+    .float-slow{animation:float 7s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @media (prefers-reduced-motion: reduce){.float-slow{animation:none}*{scroll-behavior:auto!important}}
+  </style>
 </head>
-<body class="bg-joelle-bg text-joelle-charcoal font-sans antialiased min-h-screen flex flex-col selection:bg-joelle-rose selection:text-white">
-
-  
-  <!-- Designer Preview Bar -->
-  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
-    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        LIVE DEMO REDESIGN
-      </span>
-      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Joelle Barbarulo, RN</strong></span>
-    </div>
-    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
-      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
-        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
-        <span>Why This Converts Better</span>
-      </button>
-      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
-        <span>Miskat's Portfolio</span>
-        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+<body class="bg-brand-bg font-body text-brand-ink antialiased selection:bg-brand-accent selection:text-brand-accentInk">
+  <div id="top" class="relative min-h-screen overflow-hidden pb-40 sm:pb-28">
+    <div class="pointer-events-none absolute -left-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-brand-accent2 opacity-[0.13] blur-3xl" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 top-1/3 h-[28rem] w-[28rem] rounded-full bg-brand-accent opacity-[0.10] blur-3xl" aria-hidden="true"></div>
+    
+    
+  <header class="relative z-20">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-6 lg:px-8">
+      <a href="#top" class="flex min-w-0 items-center gap-3">
+        <img src="https://miskathossain.net/assets/joelle-barbarulo/logo.png" alt="Divinity Life Coaching logo" class="h-11 w-11 object-contain" width="44" height="44">
+        <span class="min-w-0">
+          <span class="block truncate text-sm font-bold tracking-tight">Divinity Life Coaching</span>
+          <span class="hidden truncate text-xs text-brand-muted sm:block">Joelle Barbarulo, RN</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-brand-muted lg:flex" aria-label="Primary">
+        <a href="#top" class="transition-colors hover:text-brand-ink">Coaching</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Free Webinar</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Workbook</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Books</a>
+      </nav>
+      <a href="#book" class="hidden shrink-0 items-center gap-2 rounded-full border border-brand-line px-4 py-2 text-sm font-semibold transition hover:border-brand-accent hover:bg-brand-accent hover:text-brand-accentInk sm:inline-flex">
+        Free Consultation <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
       </a>
     </div>
-  </div>
-
-  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-      <div class="flex items-center gap-2.5 mb-4">
-        <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
-        <h3 class="text-lg font-bold text-white">Divinity Life Coaching</h3>
-      </div>
-      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
-        This custom hero redesign addresses critical conversion leaks identified on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
-      </p>
-      
-      <div class="space-y-4 mb-6">
-        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
-          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
-            <span>Current Friction Points</span>
+  </header>
+    <main>
+    <section class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 pb-12 pt-6 sm:px-6 sm:pt-10 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:pb-16 lg:pt-14">
+      <div class="min-w-0 lg:col-span-7">
+          <p class="inline-flex max-w-full items-center gap-2 rounded-2xl border sm:rounded-full border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-brand-ink backdrop-blur sm:text-[13px]">
+            <i data-lucide="heart" class="h-4 w-4 shrink-0 text-brand-accent2"></i>
+            <span class="min-w-0 leading-snug">Relationship coach for high-achieving professionals</span>
+          </p>
+          <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-[3.3rem] font-bold leading-[1.06] tracking-tight text-balance">
+            Build secure, lasting love. Break the pattern you keep repeating, <span class="hl">without losing yourself</span> to keep someone close.
+          </h1>
+          <p class="mt-6 max-w-xl text-base leading-relaxed text-brand-muted sm:text-lg">Trauma-informed 1:1 coaching with Joelle Barbarulo, RN, for successful people who understand their attachment style but still feel anxious in love.</p>
+          <div id="book" class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <a href="#book" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap bg-brand-accent px-7 py-4 text-sm font-bold text-brand-accentInk shadow-lg shadow-brand-accent/25 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-accent/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent sm:text-base">
+              <i data-lucide="calendar-heart" class="h-5 w-5"></i>Begin Your Free Consultation
+              <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
+            </a>
+            <a href="#top" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap border border-brand-line bg-brand-surface/60 px-6 py-4 text-sm font-semibold backdrop-blur transition duration-200 hover:border-brand-ink/40 hover:bg-brand-surface sm:text-base">
+              <i data-lucide="play-circle" class="h-5 w-5 text-brand-accent2 transition-transform group-hover:scale-110"></i>Watch the Free Webinar
+            </a>
           </div>
-          <ul class="text-xs text-zinc-300 space-y-1 list-disc list-inside">
-            <li>Heavy 3MB Squarespace site with run-on hero copy and slow mobile loading.</li><li>Lacks clear program breakdowns for her flagship Secure Attachment Blueprint.</li><li>Friction-heavy intake process creating drop-off for prospective coaching clients.</li>
+          <p class="mt-4 flex items-center gap-2 text-sm text-brand-muted"><i data-lucide="lock" class="h-4 w-4 text-brand-accent2"></i>Private, 1:1 and judgement-free.</p>
+          
+          <dl class="mt-10 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-brand-line bg-brand-line">
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Registered nurse</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">RN</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Registered nurse</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Root-level approach</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">Trauma-informed</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Root-level approach</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Private coaching</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">1:1</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Private coaching</dd>
+            </div>
+          </dl>
+      </div>
+      <div class="min-w-0 lg:col-span-5 ">
+        
+        <div class="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none">
+          <div class="absolute -inset-5 rounded-[2.75rem] bg-gradient-to-br from-brand-accent2/30 via-transparent to-brand-accent/25 blur-2xl" aria-hidden="true"></div>
+          <div class="group relative overflow-hidden rounded-t-[12rem] rounded-b-[2rem] border border-brand-line bg-brand-surface shadow-2xl shadow-black/15" style="aspect-ratio:4/5">
+            <img src="https://miskathossain.net/assets/joelle-barbarulo/portrait.jpg" alt="Joelle Barbarulo, RN, relationship coach" width="1366" height="2049" fetchpriority="high" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]" style="object-position:50% 20%">
+            <div class="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/55 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white"><p class="text-base font-bold">Joelle Barbarulo, RN</p><p class="text-xs text-white/80">Divinity Life Coaching</p></div>
+          </div>
+        <div class="glass float-slow absolute -left-3 top-14 sm:-left-12 flex max-w-[15rem] items-center gap-3 rounded-2xl border px-4 py-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-accent text-brand-accentInk"><i data-lucide="repeat" class="h-5 w-5"></i></span>
+          <span class="min-w-0"><span class="block text-sm font-bold leading-tight">Same pattern again?</span><span class="block text-xs leading-snug text-brand-muted">Anxious, avoidant or both</span></span>
+        </div>
+        <div class="glass float-slow absolute -right-3 bottom-24 sm:-right-8 flex max-w-[15rem] items-center gap-3 rounded-2xl border px-4 py-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-accent text-brand-accentInk"><i data-lucide="heart" class="h-5 w-5"></i></span>
+          <span class="min-w-0"><span class="block text-sm font-bold leading-tight">Secure attachment</span><span class="block text-xs leading-snug text-brand-muted">Healed at the root</span></span>
+        </div>
+        </div>
+      </div>
+    </section>
+      
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-3 border-t border-brand-line pt-6 sm:flex-row sm:items-center sm:gap-6">
+          <p class="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-brand-muted">What becomes possible</p>
+          <ul class="flex flex-wrap gap-2">
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="shield-check" class="h-4 w-4 text-brand-accent2"></i>Love that feels safe, not anxious</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="circle-check" class="h-4 w-4 text-brand-accent2"></i>Boundaries without guilt</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="heart-handshake" class="h-4 w-4 text-brand-accent2"></i>Intimacy that does not scare you</li>
           </ul>
         </div>
-
-        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
-          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-            <span>Implemented Redesign Enhancements</span>
-          </div>
-          <div class="text-xs text-zinc-300 space-y-2">
-            <div><strong class="text-white">Lightweight Luxury Editorial UI:</strong> Engineered a rapid-loading champagne and rose-gold visual system with poetic editorial serif typography.</div><div><strong class="text-white">Attachment Blueprint Positioning:</strong> Framed her unique RN clinical and holistic methodology into a clear high-converting program.</div><div><strong class="text-white">VIP Application Intake:</strong> Introduced a qualification application funnel for high-intent, premium relationship coaching clients.</div>
-          </div>
-        </div>
       </div>
+    </main>
+  </div>
 
-      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
-        <span>Ready to implement this live?</span>
-        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
+  <!-- Designer preview bar (concept only, not part of the client hero) -->
+  <div id="mh-bar" class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-md font-['Inter',sans-serif] sm:inset-x-auto sm:bottom-6 sm:right-6 sm:mx-0 sm:max-w-none">
+    <div class="flex flex-col gap-2.5 rounded-2xl border border-white/15 bg-zinc-950/75 px-3.5 py-3 text-white shadow-2xl shadow-black/40 backdrop-blur-xl sm:flex-row sm:items-center sm:gap-4 sm:py-2 sm:pl-4 sm:pr-2">
+      <p class="flex items-center justify-center gap-2 text-xs text-white/75 sm:justify-start sm:text-[13px]">
+        <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+        <span>Redesign concept for <strong class="font-semibold text-white">Joelle Barbarulo, RN</strong></span>
+      </p>
+      <div class="flex gap-2">
+        <button id="mh-notes-btn" type="button" aria-expanded="false" aria-controls="mh-notes" class="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/10 px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-white/20 sm:flex-none sm:text-[13px]">
+          <i data-lucide="sparkles" class="h-4 w-4 text-emerald-300"></i>Why This Converts (Notes)
+        </button>
+        <a href="https://miskathossain.net" target="_blank" rel="noopener" class="inline-flex flex-1 items-center justify-center gap-1 rounded-xl bg-white px-3.5 py-2 text-xs font-bold text-zinc-950 transition hover:bg-emerald-300 sm:flex-none sm:text-[13px]">Claim This Design &rarr;</a>
       </div>
     </div>
   </div>
 
-  <!-- Navigation with Authentic Joelle Logo -->
-  <header class="w-full border-b border-joelle-border bg-white/95 backdrop-blur-md sticky top-[45px] z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3.5">
-        <img src="/assets/joelle-barbarulo/logo.png" alt="Joelle Barbarulo Logo" class="h-10 sm:h-11 w-auto object-contain">
-        <div class="border-l border-joelle-border pl-3">
-          <span class="text-sm font-extrabold tracking-tight uppercase block text-joelle-charcoal">JOELLE BARBARULO</span>
-          <span class="text-[11px] text-joelle-slate font-medium">Registered Nurse • Attachment Coach</span>
+  <div id="mh-notes" class="fixed inset-0 z-50 hidden font-['Inter',sans-serif]" role="dialog" aria-modal="true" aria-labelledby="mh-notes-title">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-close></div>
+    <div class="absolute inset-x-3 bottom-3 max-h-[85vh] overflow-y-auto rounded-2xl border border-white/15 bg-zinc-950/90 p-5 text-white shadow-2xl backdrop-blur-xl sm:inset-x-auto sm:bottom-24 sm:right-6 sm:w-[27rem] sm:p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald-300">Designer notes</p>
+          <h2 id="mh-notes-title" class="mt-1 text-lg font-bold">Why This Converts</h2>
         </div>
+        <button type="button" data-close data-focus class="rounded-lg p-1.5 text-white/60 transition hover:bg-white/10 hover:text-white" aria-label="Close notes"><i data-lucide="x" class="h-5 w-5"></i></button>
       </div>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-joelle-slate">
-        <a href="#blueprint" class="hover:text-joelle-rose transition-colors">The Blueprint</a>
-        <a href="#podcast" class="hover:text-joelle-rose transition-colors">SHE Podcast</a>
-        <a href="#speaking" class="hover:text-joelle-rose transition-colors">Speaking</a>
-        <a href="https://www.linkedin.com/in/joelle-barbarulo-rn-bsn-8051a823b/" target="_blank" class="hover:text-joelle-rose flex items-center gap-1.5 transition-colors">
-          <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-          <span>LinkedIn</span>
-        </a>
-      </nav>
-
-      <div class="flex items-center gap-3">
-        <a href="#apply" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-joelle-rose text-white hover:bg-joelle-roseDark transition-all shadow-md active:scale-95">
-          <span>Apply For Mentorship</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
+      <div class="mt-4 rounded-xl border border-rose-400/20 bg-rose-500/10 p-3.5 text-[13px] leading-relaxed text-white/80">
+        <span class="font-semibold text-rose-300">Before:</span> The current hero repeats the same long question-headline twice (desktop and mobile copies both render), and &quot;begin your free consultation&quot; appears twice in lowercase without visual priority.
       </div>
+      <ul class="mt-4 space-y-3.5">
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">A tighter, outcome-first hook</strong>The H1 leads with the outcome (secure, lasting love) and names the fear that stops high achievers booking: losing themselves.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Empathy, then credibility</strong>Her own &quot;what becomes possible&quot; language becomes a trust row, with RN and trauma-informed credentials in the proof bar.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">One booking button that stands out</strong>A single high-contrast consultation CTA plus the free webinar for visitors who are not ready to talk yet.</p>
+        </li>
+      </ul>
+      <a href="https://miskathossain.net" target="_blank" rel="noopener" class="mt-5 flex items-center justify-center gap-1 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-zinc-950 transition hover:bg-emerald-300">Claim This Design &rarr;</a>
     </div>
-  </header>
-
-  <!-- Hero Section (Reference 20.png - Champagne Rose Editorial) -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-        
-        <!-- Left: Copy & Value Proposition -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left">
-          
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border border-rose-200 bg-rose-50 text-joelle-rose">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-joelle-gold"></i>
-            <span class="uppercase tracking-widest text-[11px] font-bold">HOLISTIC REGISTERED NURSE • CREATOR OF SECURE ATTACHMENT BLUEPRINT™</span>
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-serif font-bold tracking-tight leading-[1.15] mb-6 text-joelle-charcoal">
-            Break Anxious Attachment &amp; Heal Your Nervous System For Lasting Love.
-          </h1>
-
-          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal text-joelle-slate mb-8">
-            Holistic Registered Nurse (RN), relationship coach, and host of <em>The SHE Podcast</em>. Guiding high-achieving women and executives out of emotional self-abandonment into deep relational security.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#apply" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] bg-joelle-rose text-white hover:bg-joelle-roseDark">
-              <span>Apply For Attachment Mentorship</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            
-            <a href="#podcast" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all bg-white hover:bg-slate-50 text-joelle-charcoal border border-joelle-border">
-              <i data-lucide="headphones" class="w-4 h-4 text-joelle-rose"></i>
-              <span>Listen To SHE Podcast</span>
-            </a>
-          </div>
-
-          <!-- Proof Metrics -->
-          <div class="w-full pt-8 border-t border-joelle-border grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="p-4 rounded-2xl bg-white border border-joelle-border shadow-sm">
-              <div class="text-2xl font-serif font-bold text-joelle-rose mb-0.5">Holistic RN</div>
-              <div class="text-xs font-bold text-joelle-charcoal">Nervous System Rigor</div>
-              <div class="text-[11px] text-joelle-slate">Somatic regulation science</div>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-white border border-joelle-border shadow-sm">
-              <div class="text-2xl font-serif font-bold text-joelle-charcoal mb-0.5">SHE Podcast</div>
-              <div class="text-xs font-bold text-joelle-charcoal">Global Audience</div>
-              <div class="text-[11px] text-joelle-slate">Weekly relationship episodes</div>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-white border border-joelle-border shadow-sm">
-              <div class="text-2xl font-serif font-bold text-joelle-gold mb-0.5">Blueprint™</div>
-              <div class="text-xs font-bold text-joelle-charcoal">Signature Method</div>
-              <div class="text-[11px] text-joelle-slate">From anxious to secure</div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: Reference 20.png Editorial Card with Authentic Portrait -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-sm lg:max-w-none flex justify-center">
-            
-            <div class="absolute -top-10 -right-6 w-96 h-96 rounded-full bg-rose-200/40 blur-3xl pointer-events-none"></div>
-
-            <div class="relative w-full rounded-3xl bg-white border border-joelle-border p-6 shadow-xl flex flex-col items-center">
-              
-              <div class="w-full flex items-center justify-between pb-4 border-b border-joelle-border mb-5">
-                <span class="text-xs font-serif font-bold tracking-wider text-joelle-rose">DIVINITY LIFE COACHING</span>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-sans font-bold bg-rose-50 text-joelle-rose">RN CERTIFIED</span>
-              </div>
-
-              <!-- Authentic Portrait Image -->
-              <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-joelle-border shadow-inner bg-slate-100">
-                <img 
-                  src="/assets/joelle-barbarulo/portrait.jpg" 
-                  alt="Joelle Barbarulo, RN" 
-                  class="w-full h-full object-cover object-top filter contrast-[1.02]"
-                />
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-joelle-charcoal/80 via-transparent to-transparent"></div>
-                
-                <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-joelle-border flex items-center justify-between">
-                  <div>
-                    <div class="text-sm font-bold text-joelle-charcoal">Joelle Barbarulo, RN</div>
-                    <div class="text-[11px] text-joelle-slate">Creator, Secure Attachment Blueprint™</div>
-                  </div>
-                  <img src="/assets/joelle-barbarulo/logo.png" alt="Logo" class="h-6 w-auto object-contain">
-                </div>
-              </div>
-
-              <div class="w-full mt-4 p-4 rounded-xl bg-rose-50/80 border border-rose-100 flex items-center gap-3">
-                <i data-lucide="heart" class="w-5 h-5 text-joelle-rose shrink-0"></i>
-                <div class="text-xs text-joelle-slate">
-                  <strong class="text-joelle-charcoal">Nervous System Somatics:</strong> Rewiring the physiological alarm bells triggered by intimacy.
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </main>
-
-  <footer class="w-full border-t border-joelle-border py-6 bg-white text-center text-xs text-joelle-slate">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>© 2026 Joelle Barbarulo Coaching LLC. All rights reserved.</div>
-      <div class="text-zinc-500">Live Redesign Preview • Designed with pride by Miskat Hossain</div>
-    </div>
-  </footer>
+  </div>
 
   <script>
     lucide.createIcons();
-    function toggleNotesModal() {
-      const m = document.getElementById('notes-modal');
-      m.classList.toggle('hidden');
-    }
+    (function () {
+      var modal = document.getElementById('mh-notes');
+      var btn = document.getElementById('mh-notes-btn');
+      function setOpen(open) {
+        modal.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { modal.querySelector('[data-focus]').focus(); } else { btn.focus(); }
+      }
+      btn.addEventListener('click', function () { setOpen(modal.classList.contains('hidden')); });
+      modal.querySelectorAll('[data-close]').forEach(function (el) { el.addEventListener('click', function () { setOpen(false); }); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.classList.contains('hidden')) setOpen(false); });
+    })();
   </script>
 </body>
 </html>

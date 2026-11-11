@@ -4,413 +4,201 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Motivating the Mindset | Allison Noelle Megherian</title>
-  
+  <title>Motivating the Mindset | Redesign Concept for Allison Megherian</title>
+  <meta name="description" content="Hero redesign concept for Allison Noelle Megherian by Miskat Hossain.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
           },
           colors: {
-            editorial: {
-              ivory: '#FAF7F2',
-              cream: '#F4ECE1',
-              charcoal: '#1E293B',
-              slate: '#556972',
-              terracotta: '#D97746',
-              terracottaDark: '#C26233',
-              gold: '#C59B27',
-              sand: '#EFE7DA',
-            }
-          }
-        }
-      }
-    }
+            brand: {
+              bg: '#FAF8F3', surface: '#FFFFFF', ink: '#1C3536', muted: '#566B6C', line: '#E4E0D5',
+              accent: '#335152', accentInk: '#FFFFFF', accent2: '#A8811A',
+            },
+          },
+        },
+      },
+    };
   </script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <style>
-    body {
-      background-color: #FAF7F2;
-      color: #1E293B;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    .arch-portrait {
-      border-top-left-radius: 200px;
-      border-top-right-radius: 200px;
-      border-bottom-left-radius: 28px;
-      border-bottom-right-radius: 28px;
-    }
+    .hl{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:600;color:#A8811A}
+    .text-balance{text-wrap:balance}
+    .glass{background:rgba(255,255,255,.78);border-color:rgba(255,255,255,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+    .float-slow{animation:float 7s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @media (prefers-reduced-motion: reduce){.float-slow{animation:none}*{scroll-behavior:auto!important}}
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-editorial-terracotta/20 selection:text-editorial-charcoal">
-
-  <!-- Editorial Top Nav -->
-  <header class="w-full border-b border-editorial-sand/80 bg-editorial-ivory/90 backdrop-blur-md sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <img src="/assets/allison-noelle/logo.png" alt="Motivating the Mindset Crown" class="h-10 sm:h-11 w-auto object-contain">
-        <div class="border-l border-editorial-sand pl-3">
-          <span class="text-xs sm:text-sm font-bold tracking-[0.15em] uppercase block text-editorial-charcoal">MOTIVATING THE MINDSET</span>
-          <span class="text-[11px] text-editorial-slate font-medium">Allison Noelle Megherian</span>
-        </div>
-      </div>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-editorial-slate">
-        <a href="#about" class="hover:text-editorial-terracotta transition-colors">About</a>
-        <a href="#speaking" class="hover:text-editorial-terracotta transition-colors">TEDx Speaking</a>
-        <a href="#books" class="hover:text-editorial-terracotta transition-colors">The Mindset Edge</a>
-        <a href="#mentorship" class="hover:text-editorial-terracotta transition-colors">1:1 Mentorship</a>
-        
-          <a href="https://www.linkedin.com/in/allison-noelle-megherian-2014771a4/" target="_blank" rel="noopener noreferrer" class="hover:text-editorial-terracotta flex items-center gap-1.5 transition-colors">
-            <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-            <span>LinkedIn</span>
-          </a>
-        
+<body class="bg-brand-bg font-body text-brand-ink antialiased selection:bg-brand-accent selection:text-brand-accentInk">
+  <div id="top" class="relative min-h-screen overflow-hidden pb-40 sm:pb-28">
+    <div class="pointer-events-none absolute -left-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-brand-accent2 opacity-[0.13] blur-3xl" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 top-1/3 h-[28rem] w-[28rem] rounded-full bg-brand-accent opacity-[0.10] blur-3xl" aria-hidden="true"></div>
+    
+    
+  <header class="relative z-20">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-6 lg:px-8">
+      <a href="#top" class="flex min-w-0 items-center gap-3">
+        <img src="https://miskathossain.net/assets/allison-noelle/logo.png" alt="Motivating the Mindset logo" class="h-10 w-auto" width="96" height="40">
+        <span class="min-w-0">
+          <span class="block truncate text-sm font-bold tracking-tight">Motivating the Mindset</span>
+          <span class="hidden truncate text-xs text-brand-muted sm:block">Allison Megherian · Mindset &amp; Performance Coach</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-brand-muted lg:flex" aria-label="Primary">
+        <a href="#top" class="transition-colors hover:text-brand-ink">Coaching</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Workshops</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Speaking</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">TEDx Talk</a>
       </nav>
-
-      <div class="flex items-center gap-3">
-        <a href="#book" class="inline-flex items-center gap-2 text-xs font-semibold tracking-wide text-editorial-terracotta border border-editorial-terracotta hover:bg-editorial-terracotta hover:text-white px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm active:scale-[0.98]">
-          <i data-lucide="phone" class="w-3.5 h-3.5"></i>
-          <span>Let's Connect</span>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Editorial Hero Section (Inspired by Reference 19.png) -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-12 lg:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        
-        <!-- Left: Copy Hook -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left">
-          
-          <div class="text-xs uppercase tracking-[0.2em] font-semibold text-editorial-terracotta mb-4 flex items-center gap-2">
-            <span class="w-6 h-[1.5px] bg-editorial-terracotta"></span>
-            <span>FOUNDER • TEDx SPEAKER • AUTHOR OF THE MINDSET EDGE</span>
-          </div>
-
-          <h1 class="font-serif text-4xl sm:text-5xl lg:text-[58px] font-normal tracking-tight text-editorial-charcoal leading-[1.12] mb-6">
-            Stop the spiral. Regulate pressure. <span class="italic text-editorial-terracotta font-medium">Perform with confidence.</span>
-          </h1>
-
-          <p class="text-base sm:text-lg text-editorial-slate leading-relaxed max-w-xl font-normal mb-8">
-            You can have the perfect strategy and still stay stuck if your mindset isn't aligned. 1:1 mentorship and keynotes designed to help competitive athletes and high performers regulate under pressure, reconnect to identity, and build success rooted in self-trust.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-editorial-terracotta hover:bg-editorial-terracottaDark text-white text-sm font-semibold tracking-wide transition-all shadow-md active:scale-[0.98]">
-              <span>Book Mindset Reset Session</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            
-            <a href="#tedx" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white hover:bg-editorial-sand/60 text-editorial-charcoal border border-editorial-sand text-sm font-semibold tracking-wide transition-all shadow-sm active:scale-[0.98]">
-              <i data-lucide="play-circle" class="w-4 h-4 text-editorial-terracotta"></i>
-              <span>Watch TEDx Talk</span>
-            </a>
-          </div>
-
-          <!-- Proof Quote Bar -->
-          <div class="w-full pt-6 border-t border-editorial-sand flex items-center gap-4">
-            <div class="flex -space-x-1">
-              <span class="w-2 h-2 rounded-full bg-editorial-terracotta"></span>
-            </div>
-            <p class="text-xs text-editorial-slate italic">
-              "Reclaim Your Love of Teaching" &bull; Author of 3 Mindset Edge Books &bull; Mentor to Elite Athletic Programs
-            </p>
-          </div>
-
-        </div>
-
-        <!-- Right: Architectural Archway Portrait (Reference 19.png) -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-sm lg:max-w-none flex justify-center">
-            
-            <!-- Soft Organic Halo -->
-            <div class="absolute -top-10 -right-6 w-96 h-96 rounded-full bg-gradient-to-tr from-orange-200/40 via-amber-100/50 to-transparent blur-3xl pointer-events-none"></div>
-
-            <!-- Arch Frame with Authentic Portrait -->
-            <div class="relative w-full max-w-[370px] aspect-[3/4] overflow-hidden arch-portrait shadow-2xl border-4 border-white bg-editorial-sand">
-              <img 
-                src="/assets/allison-noelle/portrait.jpg" 
-                alt="Allison Noelle Megherian" 
-                class="w-full h-full object-cover object-top filter contrast-[1.03]"
-                loading="eager"
-              />
-            </div>
-
-            <!-- Floating Signature Quote Card (Reference 19.png) -->
-            <div class="absolute -bottom-6 -right-4 sm:-right-6 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border border-editorial-sand max-w-[270px]">
-              <div class="text-editorial-terracotta text-2xl font-serif leading-none mb-1">“</div>
-              <p class="text-xs font-serif italic text-editorial-charcoal leading-relaxed mb-2.5">
-                Where you take off your thinking cap and put on your crown 👑
-              </p>
-              <div class="pt-2 border-t border-editorial-sand flex items-center justify-between">
-                <div>
-                  <div class="text-[11px] font-bold text-editorial-charcoal">Allison Noelle Megherian</div>
-                  <div class="text-[10px] text-editorial-slate">Founder, Motivating the Mindset</div>
-                </div>
-                <i data-lucide="crown" class="w-4 h-4 text-editorial-gold"></i>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Bottom 4-Pillar Strip (Reference 19.png) -->
-      <div class="w-full mt-14 bg-white/95 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-editorial-sand p-4 sm:p-6 shadow-xl">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 divide-y sm:divide-y-0 sm:divide-x divide-editorial-sand">
-          
-          <div class="flex items-center gap-3.5 px-3 py-2">
-            <div class="w-10 h-10 rounded-full bg-editorial-cream text-editorial-terracotta flex items-center justify-center shrink-0">
-              <i data-lucide="brain" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <div class="text-xs font-bold text-editorial-charcoal">Mindset Resilience</div>
-              <div class="text-[11px] text-editorial-slate">Rewire beliefs & self-trust</div>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-3.5 px-3 py-2">
-            <div class="w-10 h-10 rounded-full bg-editorial-cream text-editorial-gold flex items-center justify-center shrink-0">
-              <i data-lucide="crown" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <div class="text-xs font-bold text-editorial-charcoal">Identity Reconnection</div>
-              <div class="text-[11px] text-editorial-slate">Thrive beyond achievement</div>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-3.5 px-3 py-2">
-            <div class="w-10 h-10 rounded-full bg-editorial-cream text-editorial-terracotta flex items-center justify-center shrink-0">
-              <i data-lucide="sparkles" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <div class="text-xs font-bold text-editorial-charcoal">Pressure Regulation</div>
-              <div class="text-[11px] text-editorial-slate">Stay regulated under stakes</div>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-3.5 px-3 py-2">
-            <div class="w-10 h-10 rounded-full bg-editorial-cream text-editorial-terracottaDark flex items-center justify-center shrink-0">
-              <i data-lucide="trophy" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <div class="text-xs font-bold text-editorial-charcoal">Athletic Performance</div>
-              <div class="text-[11px] text-editorial-slate">Elite execution without burnout</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </main>
-
-  <footer class="w-full py-8 border-t border-editorial-sand text-center text-xs text-editorial-slate/70">
-    <div class="max-w-7xl mx-auto px-4">
-      &copy; 2026 Motivating the Mindset LLC &bull; Allison Noelle Megherian. All Rights Reserved.
-    </div>
-  </footer>
-
-  
-  <!-- MANDATORY DESIGNER PREVIEW BAR (FIXED Z-50) -->
-  <aside 
-    id="designer-preview-bar" 
-    class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center justify-between sm:justify-start gap-2.5 sm:gap-3.5 px-3.5 sm:px-4 py-2.5 rounded-2xl bg-zinc-950/90 backdrop-blur-xl border border-white/15 shadow-2xl text-white transition-all transform duration-200"
-    role="region"
-    aria-label="Design Concept Attribution Bar"
-  >
-    <div class="flex items-center gap-2.5">
-      <span class="relative flex h-2.5 w-2.5">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-      </span>
-      <div class="text-xs sm:text-[13px] font-medium leading-none text-zinc-200 truncate max-w-[140px] sm:max-w-none">
-        Redesign concept for <span class="font-bold text-white">Allison Noelle Megherian</span>
-      </div>
-    </div>
-
-    <!-- Demo Scope Tag -->
-    <span class="hidden lg:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-medium tracking-tight">
-      <i data-lucide="info" class="w-3 h-3"></i>
-      <span>Demo Hero Only • Full Redesign Available</span>
-    </span>
-
-    <div class="flex items-center gap-2">
-      <button 
-        id="why-converts-btn"
-        type="button"
-        onclick="toggleConvertsModal()" 
-        class="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-[0.97] text-zinc-200 hover:text-white text-xs font-semibold tracking-tight transition-all border border-white/10 cursor-pointer"
-        aria-expanded="false"
-        aria-controls="converts-modal"
-      >
-        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-zinc-400"></i>
-        <span>Why This Converts <span class="text-zinc-400 font-normal">(Notes)</span></span>
-      </button>
-
-      <a 
-        href="https://miskathossain.net" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-white text-zinc-950 hover:bg-zinc-100 active:scale-[0.97] text-xs font-bold tracking-tight transition-all shadow-md cursor-pointer whitespace-nowrap"
-      >
-        <span>Discuss Full Redesign</span>
-        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      <a href="#book" class="hidden shrink-0 items-center gap-2 rounded-full border border-brand-line px-4 py-2 text-sm font-semibold transition hover:border-brand-accent hover:bg-brand-accent hover:text-brand-accentInk sm:inline-flex">
+        Book Allison to Speak <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
       </a>
     </div>
-  </aside>
-
-  <!-- MODAL: WHY THIS CONVERTS -->
-  <div 
-    id="converts-modal" 
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modal-title"
-  >
-    <div 
-      class="relative w-full max-w-xl bg-zinc-950 border border-zinc-800 rounded-3xl p-6 sm:p-8 shadow-2xl text-left transform scale-95 transition-transform duration-200"
-      onclick="event.stopPropagation()"
-    >
-      <button 
-        type="button" 
-        onclick="toggleConvertsModal()" 
-        class="absolute top-5 right-5 p-2 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
-        aria-label="Close notes modal"
-      >
-        <i data-lucide="x" class="w-4 h-4"></i>
-      </button>
-
-      <!-- Prominent Full Website Redesign Notice -->
-      <div class="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-emerald-500/15 to-indigo-500/10 border border-emerald-500/30 mb-5 flex items-start gap-3">
-        <div class="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5">
-          <i data-lucide="info" class="w-4 h-4"></i>
+  </header>
+    <main>
+    <section class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 pb-12 pt-6 sm:px-6 sm:pt-10 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:pb-16 lg:pt-14">
+      <div class="min-w-0 lg:col-span-7">
+          <p class="inline-flex max-w-full items-center gap-2 rounded-2xl border sm:rounded-full border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-brand-ink backdrop-blur sm:text-[13px]">
+            <i data-lucide="mic" class="h-4 w-4 shrink-0 text-brand-accent2"></i>
+            <span class="min-w-0 leading-snug">TEDx Speaker · Mindset &amp; Performance Coach</span>
+          </p>
+          <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-[3.6rem] font-bold leading-[1.06] tracking-tight text-balance">
+            Calm, confident performance for driven professionals and teen athletes &mdash; <span class="hl">without the burnout spiral.</span>
+          </h1>
+          <p class="mt-6 max-w-xl text-base leading-relaxed text-brand-muted sm:text-lg">Neuroscience-informed coaching, workshops and keynotes that teach you to regulate pressure in the moment, so your confidence holds on game day, in the boardroom and in the classroom.</p>
+          <div id="book" class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <a href="#book" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap bg-brand-accent px-7 py-4 text-sm font-bold text-brand-accentInk shadow-lg shadow-brand-accent/25 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-accent/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent sm:text-base">
+              <i data-lucide="calendar-check" class="h-5 w-5"></i>Book a Mindset Reset Call
+              <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
+            </a>
+            <a href="#top" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap border border-brand-line bg-brand-surface/60 px-6 py-4 text-sm font-semibold backdrop-blur transition duration-200 hover:border-brand-ink/40 hover:bg-brand-surface sm:text-base">
+              <i data-lucide="play-circle" class="h-5 w-5 text-brand-accent2 transition-transform group-hover:scale-110"></i>Watch the TEDx Talk
+            </a>
+          </div>
+          <p class="mt-4 flex items-center gap-2 text-sm text-brand-muted"><i data-lucide="shield-check" class="h-4 w-4 text-brand-accent2"></i>1:1 coaching, team workshops and keynotes. Pick the path that fits.</p>
+          
+          <dl class="mt-10 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-brand-line bg-brand-line">
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">TEDxSUNYCortland speaker</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">TEDx</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">TEDxSUNYCortland speaker</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">1:1, workshops, keynotes</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">3 ways</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">1:1, workshops, keynotes</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Pros, teams &amp; teen athletes</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">3 audiences</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Pros, teams &amp; teen athletes</dd>
+            </div>
+          </dl>
+      </div>
+      <div class="min-w-0 lg:col-span-5 ">
+        
+        <div class="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none">
+          <div class="absolute -inset-5 rounded-[2.75rem] bg-gradient-to-br from-brand-accent2/30 via-transparent to-brand-accent/25 blur-2xl" aria-hidden="true"></div>
+          <div class="group relative overflow-hidden rounded-t-[12rem] rounded-b-[2rem] border border-brand-line bg-brand-surface shadow-2xl shadow-black/15" style="aspect-ratio:4/5">
+            <img src="https://miskathossain.net/assets/allison-noelle/portrait.jpg" alt="Allison Noelle Megherian, mindset and performance coach" width="960" height="1200" fetchpriority="high" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]" style="object-position:50% 20%">
+            <div class="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/55 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white"><p class="text-base font-bold">Allison Noelle Megherian</p><p class="text-xs text-white/80">Mindset &amp; Performance Coach</p></div>
+          </div>
+        <div class="glass float-slow absolute -left-3 top-10 sm:-left-10 flex max-w-[15rem] items-center gap-3 rounded-2xl border px-4 py-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-accent text-brand-accentInk"><i data-lucide="play" class="h-5 w-5"></i></span>
+          <span class="min-w-0"><span class="block text-sm font-bold leading-tight">Reclaim Your Love of Teaching</span><span class="block text-xs leading-snug text-brand-muted">TEDxSUNYCortland</span></span>
         </div>
-        <div class="text-xs text-zinc-300 leading-relaxed">
-          <span class="font-bold text-white block text-sm mb-0.5">This is just a demo hero section of your entire website.</span>
-          I created this bespoke concept to show how modern typography, visual hierarchy, and clear conversion paths elevate your positioning. 
-          <span class="text-emerald-300 font-semibold">Knock me or contact me to discuss a complete, high-converting website redesign for your business.</span>
+        <div class="glass float-slow absolute -right-3 bottom-24 sm:-right-8 flex max-w-[15rem] items-center gap-3 rounded-2xl border px-4 py-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-accent text-brand-accentInk"><i data-lucide="wind" class="h-5 w-5"></i></span>
+          <span class="min-w-0"><span class="block text-sm font-bold leading-tight">Stop the spiral</span><span class="block text-xs leading-snug text-brand-muted">Regulate pressure in real time</span></span>
+        </div>
         </div>
       </div>
-
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-medium mb-2">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-        <span>CONVERSION LEAK ANALYSIS</span>
+    </section>
+      
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <figure class="glass flex flex-col gap-4 rounded-2xl border p-5 sm:flex-row sm:items-center sm:gap-6 sm:p-6">
+          <i data-lucide="quote" class="h-8 w-8 shrink-0 text-brand-accent2"></i>
+          <blockquote class="text-base font-medium leading-relaxed sm:text-lg">&ldquo;After our first session, I knew she was going to change my life.&rdquo;</blockquote>
+          <figcaption class="shrink-0 text-sm sm:ml-auto sm:max-w-[16rem] sm:text-right">
+            <span class="block font-semibold">Kristen</span>
+            <span class="block text-brand-muted">1:1 Mindset Coaching client</span>
+          </figcaption>
+        </figure>
       </div>
+    </main>
+  </div>
 
-      <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight">
-        Why This Redesign Converts
-      </h2>
-      <p class="text-xs sm:text-sm text-zinc-400 mt-1 mb-5">
-        Here is how this bespoke hero section fixes existing conversion leaks for <span class="text-white font-medium">Motivating the Mindset</span>:
+  <!-- Designer preview bar (concept only, not part of the client hero) -->
+  <div id="mh-bar" class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-md font-['Inter',sans-serif] sm:inset-x-auto sm:bottom-6 sm:right-6 sm:mx-0 sm:max-w-none">
+    <div class="flex flex-col gap-2.5 rounded-2xl border border-white/15 bg-zinc-950/75 px-3.5 py-3 text-white shadow-2xl shadow-black/40 backdrop-blur-xl sm:flex-row sm:items-center sm:gap-4 sm:py-2 sm:pl-4 sm:pr-2">
+      <p class="flex items-center justify-center gap-2 text-xs text-white/75 sm:justify-start sm:text-[13px]">
+        <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+        <span>Redesign concept for <strong class="font-semibold text-white">Allison Noelle Megherian</strong></span>
       </p>
-
-      <div class="space-y-3 mb-6">
-        
-          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
-            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-              1
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-zinc-100">Athletic &amp; Executive Alignment Hook</div>
-              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Targeted high performers breaking out of pressure-driven burnout with sustainable mental regulation protocols.</div>
-            </div>
-          </div>
-        
-          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
-            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-              2
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-zinc-100">TEDx &amp; Published Author Proof</div>
-              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Prominently showcased her TEDx Talk (&#039;Reclaim Your Love of Teaching&#039;) and &#039;The Mindset Edge&#039; publications above the fold.</div>
-            </div>
-          </div>
-        
-          <div class="p-3.5 rounded-2xl bg-zinc-900/90 border border-zinc-800/80 flex items-start gap-3">
-            <div class="w-6 h-6 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-              3
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-zinc-100">Friction-Free Mindset Reset Booking</div>
-              <div class="text-xs text-zinc-400 leading-relaxed mt-0.5">Replaced Wix form friction with an above-the-fold calendar path for athletic directors and 1:1 mentorship.</div>
-            </div>
-          </div>
-        
+      <div class="flex gap-2">
+        <button id="mh-notes-btn" type="button" aria-expanded="false" aria-controls="mh-notes" class="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/10 px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-white/20 sm:flex-none sm:text-[13px]">
+          <i data-lucide="sparkles" class="h-4 w-4 text-emerald-300"></i>Why This Converts (Notes)
+        </button>
+        <a href="https://miskathossain.net" target="_blank" rel="noopener" class="inline-flex flex-1 items-center justify-center gap-1 rounded-xl bg-white px-3.5 py-2 text-xs font-bold text-zinc-950 transition hover:bg-emerald-300 sm:flex-none sm:text-[13px]">Claim This Design &rarr;</a>
       </div>
+    </div>
+  </div>
 
-      <div class="pt-5 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <span class="text-[11px] text-zinc-500 text-center sm:text-left">
-          Crafted by <a href="https://miskathossain.net" target="_blank" rel="noopener noreferrer" class="text-zinc-300 font-semibold hover:underline">Miskat Hossain</a> • 3D & High-Converting UX Architect
-        </span>
-        <a 
-          href="https://miskathossain.net" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white text-zinc-950 font-bold text-xs hover:bg-zinc-100 transition-all shadow-md active:scale-[0.98] w-full sm:w-auto justify-center"
-        >
-          <span>Knock Me to Redesign Full Site</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
+  <div id="mh-notes" class="fixed inset-0 z-50 hidden font-['Inter',sans-serif]" role="dialog" aria-modal="true" aria-labelledby="mh-notes-title">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-close></div>
+    <div class="absolute inset-x-3 bottom-3 max-h-[85vh] overflow-y-auto rounded-2xl border border-white/15 bg-zinc-950/90 p-5 text-white shadow-2xl backdrop-blur-xl sm:inset-x-auto sm:bottom-24 sm:right-6 sm:w-[27rem] sm:p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald-300">Designer notes</p>
+          <h2 id="mh-notes-title" class="mt-1 text-lg font-bold">Why This Converts</h2>
+        </div>
+        <button type="button" data-close data-focus class="rounded-lg p-1.5 text-white/60 transition hover:bg-white/10 hover:text-white" aria-label="Close notes"><i data-lucide="x" class="h-5 w-5"></i></button>
       </div>
-
+      <div class="mt-4 rounded-xl border border-rose-400/20 bg-rose-500/10 p-3.5 text-[13px] leading-relaxed text-white/80">
+        <span class="font-semibold text-rose-300">Before:</span> The Wix hero stacks her name, three titles and two equal-weight buttons, the TEDx talk is a small text link, and testimonials are long paragraphs far below the fold.
+      </div>
+      <ul class="mt-4 space-y-3.5">
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">An outcome headline, not a job title</strong>The H1 now names the result (calm performance under pressure), who it is for and the pain it removes, so athletic directors and professionals self-qualify in seconds.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">TEDx authority where the eye lands</strong>The talk becomes the eyebrow badge, a floating proof card and the secondary CTA, turning her strongest credential into a click path.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">One clear next step</strong>A single high-contrast &quot;Book a Mindset Reset Call&quot; button leads, with a real client quote directly under the fold to remove doubt.</p>
+        </li>
+      </ul>
+      <a href="https://miskathossain.net" target="_blank" rel="noopener" class="mt-5 flex items-center justify-center gap-1 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-zinc-950 transition hover:bg-emerald-300">Claim This Design &rarr;</a>
     </div>
   </div>
 
   <script>
-    function toggleConvertsModal() {
-      const modal = document.getElementById('converts-modal');
-      const btn = document.getElementById('why-converts-btn');
-      const isHidden = modal.classList.contains('pointer-events-none');
-      
-      if (isHidden) {
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        modal.classList.add('opacity-100');
-        modal.querySelector('div').classList.remove('scale-95');
-        modal.querySelector('div').classList.add('scale-100');
-        btn.setAttribute('aria-expanded', 'true');
-      } else {
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        modal.classList.remove('opacity-100');
-        modal.querySelector('div').classList.add('scale-95');
-        modal.querySelector('div').classList.remove('scale-100');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    }
-
-    function initPreviewModal() {
-      const modal = document.getElementById('converts-modal');
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-          toggleConvertsModal();
-        }
-      });
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && !modal.classList.contains('pointer-events-none')) {
-          toggleConvertsModal();
-        }
-      });
-    }
-  </script>
-  
-
-  <script>
     lucide.createIcons();
-    initPreviewModal();
+    (function () {
+      var modal = document.getElementById('mh-notes');
+      var btn = document.getElementById('mh-notes-btn');
+      function setOpen(open) {
+        modal.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { modal.querySelector('[data-focus]').focus(); } else { btn.focus(); }
+      }
+      btn.addEventListener('click', function () { setOpen(modal.classList.contains('hidden')); });
+      modal.querySelectorAll('[data-close]').forEach(function (el) { el.addEventListener('click', function () { setOpen(false); }); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.classList.contains('hidden')) setOpen(false); });
+    })();
   </script>
 </body>
 </html>

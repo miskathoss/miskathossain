@@ -4,255 +4,206 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>MadeMind Wellness &amp; Performance | Mike Wiley Jr., LCPC</title>
+  <title>MadeMind Wellness &amp; Performance | Redesign Concept</title>
+  <meta name="description" content="Hero redesign concept for Mike Wiley Jr., LCPC by Miskat Hossain.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
           },
           colors: {
-            mademind: {
-              bg: '#080C14',
-              card: '#0F172A',
-              emerald: '#10B981',
-              cyan: '#38BDF8',
-              slate: '#94A3B8',
-              border: '#1E293B'
-            }
-          }
-        }
-      }
-    }
+            brand: {
+              bg: '#F7F4EC', surface: '#FFFFFF', ink: '#1E2116', muted: '#5A5E4C', line: '#E2DCCA',
+              accent: '#4B5236', accentInk: '#FFFFFF', accent2: '#C9973F',
+            },
+          },
+        },
+      },
+    };
   </script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <style>
+    .hl{background-image:linear-gradient(transparent 62%, #C9973F55 62%, #C9973F55 92%, transparent 92%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+    .text-balance{text-wrap:balance}
+    .glass{background:rgba(255,255,255,.78);border-color:rgba(255,255,255,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+    .float-slow{animation:float 7s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @media (prefers-reduced-motion: reduce){.float-slow{animation:none}*{scroll-behavior:auto!important}}
+  </style>
 </head>
-<body class="bg-mademind-bg text-white font-sans antialiased min-h-screen flex flex-col selection:bg-mademind-emerald selection:text-black">
-
-  
-  <!-- Designer Preview Bar -->
-  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
-    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        LIVE DEMO REDESIGN
-      </span>
-      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Mike Wiley Jr., LCPC</strong></span>
-    </div>
-    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
-      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
-        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
-        <span>Why This Converts Better</span>
-      </button>
-      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
-        <span>Miskat's Portfolio</span>
-        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+<body class="bg-brand-bg font-body text-brand-ink antialiased selection:bg-brand-accent selection:text-brand-accentInk">
+  <div id="top" class="relative min-h-screen overflow-hidden pb-40 sm:pb-28">
+    <div class="pointer-events-none absolute -left-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-brand-accent2 opacity-[0.13] blur-3xl" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 top-1/3 h-[28rem] w-[28rem] rounded-full bg-brand-accent opacity-[0.10] blur-3xl" aria-hidden="true"></div>
+    
+    
+  <header class="relative z-20">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-6 lg:px-8">
+      <a href="#top" class="flex min-w-0 items-center gap-3">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-accent text-brand-accentInk font-display text-lg font-bold">M</span>
+        <span class="min-w-0">
+          <span class="block truncate text-sm font-bold tracking-tight">MadeMind Wellness &amp; Performance</span>
+          <span class="hidden truncate text-xs text-brand-muted sm:block">Therapy · Mental Performance</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-brand-muted lg:flex" aria-label="Primary">
+        <a href="#top" class="transition-colors hover:text-brand-ink">High Achievers</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Elite Athletes</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Our Approach</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Rates &amp; FAQ</a>
+      </nav>
+      <a href="#book" class="hidden shrink-0 items-center gap-2 rounded-full border border-brand-line px-4 py-2 text-sm font-semibold transition hover:border-brand-accent hover:bg-brand-accent hover:text-brand-accentInk sm:inline-flex">
+        Free Consultation <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
       </a>
     </div>
-  </div>
-
-  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-      <div class="flex items-center gap-2.5 mb-4">
-        <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
-        <h3 class="text-lg font-bold text-white">MadeMind Wellness &amp; Performance</h3>
-      </div>
-      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
-        This custom hero redesign addresses critical conversion leaks identified on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
-      </p>
-      
-      <div class="space-y-4 mb-6">
-        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
-          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
-            <span>Current Friction Points</span>
+  </header>
+    <main>
+    <section class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 pb-12 pt-6 sm:px-6 sm:pt-10 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:pb-16 lg:pt-14">
+      <div class="min-w-0 lg:col-span-7">
+          <p class="inline-flex max-w-full items-center gap-2 rounded-2xl border sm:rounded-full border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-brand-ink backdrop-blur sm:text-[13px]">
+            <i data-lucide="map-pin" class="h-4 w-4 shrink-0 text-brand-accent2"></i>
+            <span class="min-w-0 leading-snug">Therapy &amp; mental performance · Atlanta · Chicago · Seattle</span>
+          </p>
+          <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-[3.6rem] font-bold leading-[1.06] tracking-tight text-balance">
+            You know what's wrong. <span class="hl">Get the plan to change it</span>, without years of talking in circles.
+          </h1>
+          <p class="mt-6 max-w-xl text-base leading-relaxed text-brand-muted sm:text-lg">Solution-focused therapy and mental performance coaching for high-functioning adults and elite athletes. We help you process what is blocking you, then build a clear, realistic plan to move forward.</p>
+          <div id="book" class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <a href="#book" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap bg-brand-accent px-7 py-4 text-sm font-bold text-brand-accentInk shadow-lg shadow-brand-accent/25 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-accent/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent sm:text-base">
+              <i data-lucide="calendar-check" class="h-5 w-5"></i>Book Your Free Consultation
+              <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
+            </a>
+            <a href="#top" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap border border-brand-line bg-brand-surface/60 px-6 py-4 text-sm font-semibold backdrop-blur transition duration-200 hover:border-brand-ink/40 hover:bg-brand-surface sm:text-base">
+              <i data-lucide="route" class="h-5 w-5 text-brand-accent2 transition-transform group-hover:scale-110"></i>See How Therapy Works Here
+            </a>
           </div>
-          <ul class="text-xs text-zinc-300 space-y-1 list-disc list-inside">
-            <li>Generic clinical directory styling on basic template with 403 firewall hurdles.</li><li>Does not reflect his high-caliber work with competitive athletes and ambitious founders.</li><li>Lacks clear audience routing between mental health therapy and sports psychology.</li>
+          <p class="mt-4 flex items-center gap-2 text-sm text-brand-muted"><i data-lucide="shield-check" class="h-4 w-4 text-brand-accent2"></i>Therapy for Atlanta, Chicago and Seattle. Based in Snellville, GA.</p>
+          
+          <dl class="mt-10 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-brand-line bg-brand-line">
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Why you are stuck</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">Insight</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Why you are stuck</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Clear the emotional block</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">Process</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Clear the emotional block</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">A roadmap built for you</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">Plan</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">A roadmap built for you</dd>
+            </div>
+          </dl>
+      </div>
+      <div class="min-w-0 lg:col-span-5 ">
+        
+        <div class="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none">
+          <div class="absolute -inset-5 rounded-[2.75rem] bg-gradient-to-br from-brand-accent2/30 via-transparent to-brand-accent/20 blur-2xl" aria-hidden="true"></div>
+          <div class="relative rounded-[2rem] border border-brand-line bg-brand-surface p-6 shadow-2xl shadow-black/10 sm:p-7">
+            <div class="flex items-center gap-4">
+              <img src="https://miskathossain.net/assets/mike-wiley/portrait.jpg" alt="Mike Wiley Jr., LCPC" width="320" height="400" fetchpriority="high" class="h-20 w-16 rounded-2xl object-cover" style="object-position:50% 20%">
+              <div><p class="font-bold">Mike Wiley Jr., LCPC</p><p class="text-sm text-brand-muted">Founder, MadeMind Wellness &amp; Performance</p></div>
+            </div>
+            <p class="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-brand-accent2">How therapy works here</p>
+            <ol class="mt-4 space-y-4">
+              <li class="flex gap-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-accent text-white"><i data-lucide="search" class="h-4 w-4"></i></span><div><p class="font-semibold">Name the real block</p><p class="text-sm text-brand-muted">Focus on the how, not just the why.</p></div></li>
+              <li class="flex gap-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-accent text-white"><i data-lucide="heart-handshake" class="h-4 w-4"></i></span><div><p class="font-semibold">Process what keeps you stuck</p><p class="text-sm text-brand-muted">Structured sessions, not endless talking.</p></div></li>
+              <li class="flex gap-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-accent text-white"><i data-lucide="map" class="h-4 w-4"></i></span><div><p class="font-semibold">Leave with a real plan</p><p class="text-sm text-brand-muted">A roadmap designed for you to succeed.</p></div></li>
+            </ol>
+          </div>
+          
+        <div class="glass float-slow absolute -right-3 -top-5 sm:-right-8 flex max-w-[15rem] items-center gap-3 rounded-2xl border px-4 py-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-accent text-brand-accentInk"><i data-lucide="trophy" class="h-5 w-5"></i></span>
+          <span class="min-w-0"><span class="block text-sm font-bold leading-tight">Elite athletes</span><span class="block text-xs leading-snug text-brand-muted">Mental performance coaching</span></span>
+        </div>
+        </div>
+      </div>
+    </section>
+      
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-3 border-t border-brand-line pt-6 sm:flex-row sm:items-center sm:gap-6">
+          <p class="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-brand-muted">Insurance accepted</p>
+          <ul class="flex flex-wrap gap-2">
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="badge-check" class="h-4 w-4 text-brand-accent2"></i>Aetna</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="badge-check" class="h-4 w-4 text-brand-accent2"></i>Anthem</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="badge-check" class="h-4 w-4 text-brand-accent2"></i>Cigna</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="badge-check" class="h-4 w-4 text-brand-accent2"></i>UnitedHealthcare</li>
           </ul>
         </div>
-
-        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
-          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-            <span>Implemented Redesign Enhancements</span>
-          </div>
-          <div class="text-xs text-zinc-300 space-y-2">
-            <div><strong class="text-white">High-Performance Athletic Aesthetic:</strong> Designed a dark-mode athletic conditioning UI with electric teal and neon precision accents.</div><div><strong class="text-white">Multi-Track Audience Pathways:</strong> Created distinct routing for pro athletes, business owners, and clinical therapy.</div><div><strong class="text-white">Direct Confidential Intake:</strong> Replaced directory friction with a streamlined, confidential intake calendar.</div>
-          </div>
-        </div>
       </div>
+    </main>
+  </div>
 
-      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
-        <span>Ready to implement this live?</span>
-        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
+  <!-- Designer preview bar (concept only, not part of the client hero) -->
+  <div id="mh-bar" class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-md font-['Inter',sans-serif] sm:inset-x-auto sm:bottom-6 sm:right-6 sm:mx-0 sm:max-w-none">
+    <div class="flex flex-col gap-2.5 rounded-2xl border border-white/15 bg-zinc-950/75 px-3.5 py-3 text-white shadow-2xl shadow-black/40 backdrop-blur-xl sm:flex-row sm:items-center sm:gap-4 sm:py-2 sm:pl-4 sm:pr-2">
+      <p class="flex items-center justify-center gap-2 text-xs text-white/75 sm:justify-start sm:text-[13px]">
+        <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+        <span>Redesign concept for <strong class="font-semibold text-white">Mike Wiley Jr., LCPC</strong></span>
+      </p>
+      <div class="flex gap-2">
+        <button id="mh-notes-btn" type="button" aria-expanded="false" aria-controls="mh-notes" class="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/10 px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-white/20 sm:flex-none sm:text-[13px]">
+          <i data-lucide="sparkles" class="h-4 w-4 text-emerald-300"></i>Why This Converts (Notes)
+        </button>
+        <a href="https://miskathossain.net" target="_blank" rel="noopener" class="inline-flex flex-1 items-center justify-center gap-1 rounded-xl bg-white px-3.5 py-2 text-xs font-bold text-zinc-950 transition hover:bg-emerald-300 sm:flex-none sm:text-[13px]">Claim This Design &rarr;</a>
       </div>
     </div>
   </div>
 
-  <!-- Navigation with MadeMind Crest -->
-  <header class="w-full border-b border-mademind-border bg-mademind-bg/95 backdrop-blur-md sticky top-[45px] z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3.5">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-500 flex items-center justify-center font-black text-black text-sm shadow-md">
-          MM
+  <div id="mh-notes" class="fixed inset-0 z-50 hidden font-['Inter',sans-serif]" role="dialog" aria-modal="true" aria-labelledby="mh-notes-title">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-close></div>
+    <div class="absolute inset-x-3 bottom-3 max-h-[85vh] overflow-y-auto rounded-2xl border border-white/15 bg-zinc-950/90 p-5 text-white shadow-2xl backdrop-blur-xl sm:inset-x-auto sm:bottom-24 sm:right-6 sm:w-[27rem] sm:p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald-300">Designer notes</p>
+          <h2 id="mh-notes-title" class="mt-1 text-lg font-bold">Why This Converts</h2>
         </div>
-        <div class="border-l border-zinc-800 pl-3">
-          <span class="text-sm font-extrabold tracking-tight uppercase block text-white">MADEMIND WELLNESS</span>
-          <span class="text-[11px] text-mademind-slate font-medium">Mike Wiley Jr., LCPC • Clinical Performance Coach</span>
-        </div>
+        <button type="button" data-close data-focus class="rounded-lg p-1.5 text-white/60 transition hover:bg-white/10 hover:text-white" aria-label="Close notes"><i data-lucide="x" class="h-5 w-5"></i></button>
       </div>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-mademind-slate">
-        <a href="#athletes" class="hover:text-mademind-emerald transition-colors">Elite Athletes</a>
-        <a href="#founders" class="hover:text-mademind-emerald transition-colors">Entrepreneurs</a>
-        <a href="#clinical" class="hover:text-mademind-emerald transition-colors">Clinical Therapy</a>
-        <a href="https://www.linkedin.com/in/mike-wiley-jr-lcpc-806193105/" target="_blank" class="hover:text-mademind-emerald flex items-center gap-1.5 transition-colors">
-          <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-          <span>LinkedIn</span>
-        </a>
-      </nav>
-
-      <div class="flex items-center gap-3">
-        <a href="#book" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-mademind-emerald text-black hover:bg-emerald-400 transition-all shadow-md active:scale-95">
-          <span>Book Performance Assessment</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
+      <div class="mt-4 rounded-xl border border-rose-400/20 bg-rose-500/10 p-3.5 text-[13px] leading-relaxed text-white/80">
+        <span class="font-semibold text-rose-300">Before:</span> The site has strong copy (&quot;You know what's wrong. You just can't figure out how to change it.&quot;) but it sits under an all-caps headline, the booking button is a vague &quot;Let's Build Your Plan for Change&quot; and insurance logos are buried far down the page.
       </div>
+      <ul class="mt-4 space-y-3.5">
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Their best line becomes the headline</strong>The client's own voice is promoted to H1, with the pain it removes (&quot;talking in circles&quot;) spelled out.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Process made visible</strong>A three-step card shows how therapy works here, which answers the biggest fear of high achievers: endless sessions with no plan.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Cost anxiety handled up front</strong>In-network insurers sit just below the fold, next to a plain &quot;Book Your Free Consultation&quot; button.</p>
+        </li>
+      </ul>
+      <a href="https://miskathossain.net" target="_blank" rel="noopener" class="mt-5 flex items-center justify-center gap-1 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-zinc-950 transition hover:bg-emerald-300">Claim This Design &rarr;</a>
     </div>
-  </header>
-
-  <!-- Hero Section (Reference 5..jpg - Brainly 3 Audience Columns with Portrait Card) -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-        
-        <!-- Left: Copy & Value Proposition -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left">
-          
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border border-emerald-500/30 bg-emerald-500/10 text-mademind-emerald">
-            <span class="w-2 h-2 rounded-full bg-mademind-emerald animate-pulse"></span>
-            <span class="uppercase tracking-widest text-[11px] font-bold">LICENSED CLINICAL THERAPIST &amp; MENTAL PERFORMANCE COACH</span>
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-black tracking-tight leading-[1.12] mb-6 text-white">
-            High-Performance Mental Conditioning For Elite Athletes &amp; Driven Founders.
-          </h1>
-
-          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal text-mademind-slate mb-8">
-            Combining rigorous clinical psychotherapy (LCPC) with elite athletic mindset training to conquer performance anxiety, master emotional regulation under pressure, and sustain peak output.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] bg-mademind-emerald text-black hover:bg-emerald-400">
-              <span>Schedule 1:1 Diagnostic Call</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            
-            <a href="#framework" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all bg-mademind-card hover:bg-zinc-800 text-white border border-mademind-border">
-              <i data-lucide="activity" class="w-4 h-4 text-mademind-cyan"></i>
-              <span>Explore The Performance Protocol</span>
-            </a>
-          </div>
-
-          <!-- 3 Audience Columns (Reference 5..jpg Style) -->
-          <div class="w-full pt-8 border-t border-mademind-border grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="p-4 rounded-2xl bg-mademind-card border border-mademind-border">
-              <div class="flex items-center gap-2 text-xs font-bold mb-1 text-white">
-                <i data-lucide="trophy" class="w-4 h-4 text-mademind-emerald"></i>
-                <span>Pro &amp; College Athletes</span>
-              </div>
-              <p class="text-[11px] text-mademind-slate">Pre-competition anxiety isolation &amp; flow state conditioning.</p>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-mademind-card border border-mademind-border">
-              <div class="flex items-center gap-2 text-xs font-bold mb-1 text-white">
-                <i data-lucide="trending-up" class="w-4 h-4 text-mademind-cyan"></i>
-                <span>High-Growth Founders</span>
-              </div>
-              <p class="text-[11px] text-mademind-slate">Burnout immunity, decision stamina &amp; nervous system regulation.</p>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-mademind-card border border-mademind-border">
-              <div class="flex items-center gap-2 text-xs font-bold mb-1 text-white">
-                <i data-lucide="heart-pulse" class="w-4 h-4 text-purple-400"></i>
-                <span>Clinical Psychotherapy</span>
-              </div>
-              <p class="text-[11px] text-mademind-slate">Licensed LCPC care resolving depression, trauma &amp; identity blocks.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: Reference 5..jpg Portrait Frame with Performance Badges -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none flex justify-center">
-            
-            <div class="relative w-full rounded-3xl bg-mademind-card border border-mademind-border p-6 shadow-2xl flex flex-col items-center">
-              
-              <div class="w-full flex items-center justify-between pb-4 border-b border-mademind-border mb-5">
-                <span class="text-xs font-mono font-bold tracking-wider text-mademind-emerald">MADEMIND CLINICAL</span>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-950/60 text-emerald-400 border border-emerald-800">LCPC LICENSED</span>
-              </div>
-
-              <!-- Authentic Portrait Image -->
-              <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-mademind-border shadow-2xl bg-zinc-950">
-                <img 
-                  src="/assets/mike-wiley/portrait.jpg" 
-                  alt="Mike Wiley Jr., LCPC" 
-                  class="w-full h-full object-cover object-top filter contrast-[1.03]"
-                />
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-                
-                <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-mademind-border flex items-center justify-between">
-                  <div>
-                    <div class="text-sm font-bold text-white">Mike Wiley Jr., LCPC</div>
-                    <div class="text-[11px] text-mademind-slate">Clinical Therapist &amp; Elite Mental Coach</div>
-                  </div>
-                  <div class="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-mademind-emerald">
-                    <i data-lucide="check" class="w-4 h-4"></i>
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-full mt-4 p-4 rounded-xl bg-zinc-950/80 border border-mademind-border flex items-center gap-3">
-                <i data-lucide="shield-check" class="w-5 h-5 text-mademind-emerald shrink-0"></i>
-                <div class="text-xs text-mademind-slate">
-                  <strong class="text-white">Psychology Today Verified:</strong> Confidential telehealth &amp; elite 1:1 mental coaching programs.
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </main>
-
-  <footer class="w-full border-t border-mademind-border py-6 bg-mademind-bg text-center text-xs text-mademind-slate">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>© 2026 MadeMind Wellness &amp; Performance LLC. Mike Wiley Jr., LCPC.</div>
-      <div class="text-zinc-500">Live Redesign Preview • Designed with pride by Miskat Hossain</div>
-    </div>
-  </footer>
+  </div>
 
   <script>
     lucide.createIcons();
-    function toggleNotesModal() {
-      const m = document.getElementById('notes-modal');
-      m.classList.toggle('hidden');
-    }
+    (function () {
+      var modal = document.getElementById('mh-notes');
+      var btn = document.getElementById('mh-notes-btn');
+      function setOpen(open) {
+        modal.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { modal.querySelector('[data-focus]').focus(); } else { btn.focus(); }
+      }
+      btn.addEventListener('click', function () { setOpen(modal.classList.contains('hidden')); });
+      modal.querySelectorAll('[data-close]').forEach(function (el) { el.addEventListener('click', function () { setOpen(false); }); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.classList.contains('hidden')) setOpen(false); });
+    })();
   </script>
 </body>
 </html>

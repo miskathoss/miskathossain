@@ -4,243 +4,190 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>WorldBlu | Lead With Freedom, Not Fear | Traci Fenton</title>
+  <title>WorldBlu | Traci Fenton | Redesign Concept</title>
+  <meta name="description" content="Hero redesign concept for Traci Fenton by Miskat Hossain.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"Playfair Display"', 'serif'],
+            display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
           },
           colors: {
-            freedom: {
-              bg: '#F8FAFC',
-              card: '#FFFFFF',
-              navy: '#0A192F',
-              blue: '#2563EB',
-              gold: '#D4AF37',
-              slate: '#475569',
-              border: '#E2E8F0'
-            }
-          }
-        }
-      }
-    }
+            brand: {
+              bg: '#F7FAF3', surface: '#FFFFFF', ink: '#13261A', muted: '#526256', line: '#DCE6D2',
+              accent: '#3B7A1E', accentInk: '#FFFFFF', accent2: '#8DC740',
+            },
+          },
+        },
+      },
+    };
   </script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <style>
-    .arch-portrait {
-      border-top-left-radius: 200px;
-      border-top-right-radius: 200px;
-      border-bottom-left-radius: 24px;
-      border-bottom-right-radius: 24px;
-    }
+    .hl{background-image:linear-gradient(transparent 62%, #8DC74055 62%, #8DC74055 92%, transparent 92%);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+    .text-balance{text-wrap:balance}
+    .glass{background:rgba(255,255,255,.78);border-color:rgba(255,255,255,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+    .float-slow{animation:float 7s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @media (prefers-reduced-motion: reduce){.float-slow{animation:none}*{scroll-behavior:auto!important}}
   </style>
 </head>
-<body class="bg-freedom-bg text-freedom-navy font-sans antialiased min-h-screen flex flex-col selection:bg-freedom-blue selection:text-white">
-
-  
-  <!-- Designer Preview Bar -->
-  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
-    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        LIVE DEMO REDESIGN
-      </span>
-      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Traci Fenton</strong></span>
-    </div>
-    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
-      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
-        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
-        <span>Why This Converts Better</span>
-      </button>
-      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
-        <span>Miskat's Portfolio</span>
-        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+<body class="bg-brand-bg font-body text-brand-ink antialiased selection:bg-brand-accent selection:text-brand-accentInk">
+  <div id="top" class="relative min-h-screen overflow-hidden pb-40 sm:pb-28">
+    <div class="pointer-events-none absolute -left-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-brand-accent2 opacity-[0.13] blur-3xl" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 top-1/3 h-[28rem] w-[28rem] rounded-full bg-brand-accent opacity-[0.10] blur-3xl" aria-hidden="true"></div>
+    
+    
+  <header class="relative z-20">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-6 lg:px-8">
+      <a href="#top" class="flex min-w-0 items-center gap-3">
+        <img src="https://miskathossain.net/assets/traci-fenton/logo.png" alt="WorldBlu logo" class="h-7 w-auto" width="160" height="28">
+        <span class="sr-only">
+          <span class="block truncate text-sm font-bold tracking-tight">WorldBlu</span>
+          <span class="hidden truncate text-xs text-brand-muted sm:block">Freedom at Work®</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-brand-muted lg:flex" aria-label="Primary">
+        <a href="#top" class="transition-colors hover:text-brand-ink">Freedom at Work®</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Programs</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Certification</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Book</a>
+      </nav>
+      <a href="#book" class="hidden shrink-0 items-center gap-2 rounded-full border border-brand-line px-4 py-2 text-sm font-semibold transition hover:border-brand-accent hover:bg-brand-accent hover:text-brand-accentInk sm:inline-flex">
+        Take the Scorecard <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
       </a>
     </div>
-  </div>
-
-  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-      <div class="flex items-center gap-2.5 mb-4">
-        <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
-        <h3 class="text-lg font-bold text-white">WorldBlu</h3>
+  </header>
+    <main>
+    <section class="relative z-10">
+      <div class="relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-[56%]" aria-hidden="false">
+        <img src="https://miskathossain.net/assets/traci-fenton/portrait.jpg" alt="Traci Fenton speaking on stage at a WorldBlu event" width="4660" height="3291" fetchpriority="high" class="h-72 w-full object-cover sm:h-96 lg:h-full" style="object-position:68% 30%">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/10 to-transparent lg:bg-gradient-to-r lg:from-brand-bg lg:via-brand-bg/40 lg:to-transparent"></div>
+        <div class="glass absolute bottom-6 right-6 hidden max-w-xs rounded-2xl border p-4 lg:block"><p class="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-accent">Traci Fenton</p><p class="mt-1 text-sm font-semibold">Founder &amp; CEO, WorldBlu</p><p class="mt-1 text-xs text-brand-muted">*Figure reported by WorldBlu for Freedom at Work organizations.</p></div>
       </div>
-      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
-        This custom hero redesign addresses critical conversion leaks identified on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
-      </p>
-      
-      <div class="space-y-4 mb-6">
-        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
-          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
-            <span>Current Friction Points</span>
+      <div class="relative mx-auto max-w-7xl px-5 pb-12 pt-2 sm:px-6 lg:px-8 lg:pb-20 lg:pt-16">
+        <div class="min-w-0 max-w-2xl lg:w-[52%]">
+          <p class="inline-flex max-w-full items-center gap-2 rounded-2xl border sm:rounded-full border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-brand-ink backdrop-blur sm:text-[13px]">
+            <i data-lucide="award" class="h-4 w-4 shrink-0 text-brand-accent2"></i>
+            <span class="min-w-0 leading-snug">Freedom at Work® · Teaching CEOs and teams since 1997</span>
+          </p>
+          <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-[3.6rem] font-bold leading-[1.06] tracking-tight text-balance">
+            Build a company where people <span class="hl">lead, decide and grow</span>, without the drag of fear-based hierarchy.
+          </h1>
+          <p class="mt-6 max-w-xl text-base leading-relaxed text-brand-muted sm:text-lg">Traci Fenton and WorldBlu give CEOs, founders and leadership teams a practical system for organizational democracy, stronger leaders and measurable growth.</p>
+          <div id="book" class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <a href="#book" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap bg-brand-accent px-7 py-4 text-sm font-bold text-brand-accentInk shadow-lg shadow-brand-accent/25 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-accent/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent sm:text-base">
+              <i data-lucide="calendar-check" class="h-5 w-5"></i>Book a CEO Strategy Session
+              <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
+            </a>
+            <a href="#top" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap border border-brand-line bg-brand-surface/60 px-6 py-4 text-sm font-semibold backdrop-blur transition duration-200 hover:border-brand-ink/40 hover:bg-brand-surface sm:text-base">
+              <i data-lucide="gauge" class="h-5 w-5 text-brand-accent2 transition-transform group-hover:scale-110"></i>Take the Freedom at Work Scorecard
+            </a>
           </div>
-          <ul class="text-xs text-zinc-300 space-y-1 list-disc list-inside">
-            <li>Text-dense legacy corporate layout on HubSpot with low visual engagement and scattered hierarchy.</li><li>Weak above-the-fold social proof despite advising world-class brands like WD-40 and Zappos.</li><li>No frictionless interactive self-assessment for visiting CEOs.</li>
+          <p class="mt-4 flex items-center gap-2 text-sm text-brand-muted"><i data-lucide="shield-check" class="h-4 w-4 text-brand-accent2"></i>For CEOs, founders and leadership teams.</p>
+          
+          <dl class="mt-10 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-brand-line bg-brand-line">
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Teaching Freedom at Work®</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">1997</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Teaching Freedom at Work®</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Avg. revenue growth vs. S&amp;P 500 over 3 yrs*</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">700%</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Avg. revenue growth vs. S&amp;P 500 over 3 yrs*</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Award-winning approach</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">Global</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Award-winning approach</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+      
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-3 border-t border-brand-line pt-6 sm:flex-row sm:items-center sm:gap-6">
+          <p class="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-brand-muted">Start where you are</p>
+          <ul class="flex flex-wrap gap-2">
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="gauge" class="h-4 w-4 text-brand-accent2"></i>Freedom at Work Scorecard</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="badge-check" class="h-4 w-4 text-brand-accent2"></i>Certified Freedom-Centered Org</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="flame" class="h-4 w-4 text-brand-accent2"></i>The Fearless Mindset Program</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="book-open" class="h-4 w-4 text-brand-accent2"></i>Traci's newest book</li>
           </ul>
         </div>
-
-        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
-          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-            <span>Implemented Redesign Enhancements</span>
-          </div>
-          <div class="text-xs text-zinc-300 space-y-2">
-            <div><strong class="text-white">Thinkers50 Executive Gravitas:</strong> Crafted a bespoke editorial layout in deep cobalt and gold ivory worthy of global boardroom advisory.</div><div><strong class="text-white">Tier-1 Social Proof Architecture:</strong> Showcased WD-40, Zappos, and DaVita validation prominently above the fold.</div><div><strong class="text-white">Freedom Scorecard Lead Magnet:</strong> Introduced a 1-click CEO organizational freedom diagnostic.</div>
-          </div>
-        </div>
       </div>
+    </main>
+  </div>
 
-      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
-        <span>Ready to implement this live?</span>
-        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
+  <!-- Designer preview bar (concept only, not part of the client hero) -->
+  <div id="mh-bar" class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-md font-['Inter',sans-serif] sm:inset-x-auto sm:bottom-6 sm:right-6 sm:mx-0 sm:max-w-none">
+    <div class="flex flex-col gap-2.5 rounded-2xl border border-white/15 bg-zinc-950/75 px-3.5 py-3 text-white shadow-2xl shadow-black/40 backdrop-blur-xl sm:flex-row sm:items-center sm:gap-4 sm:py-2 sm:pl-4 sm:pr-2">
+      <p class="flex items-center justify-center gap-2 text-xs text-white/75 sm:justify-start sm:text-[13px]">
+        <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+        <span>Redesign concept for <strong class="font-semibold text-white">Traci Fenton</strong></span>
+      </p>
+      <div class="flex gap-2">
+        <button id="mh-notes-btn" type="button" aria-expanded="false" aria-controls="mh-notes" class="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/10 px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-white/20 sm:flex-none sm:text-[13px]">
+          <i data-lucide="sparkles" class="h-4 w-4 text-emerald-300"></i>Why This Converts (Notes)
+        </button>
+        <a href="https://miskathossain.net" target="_blank" rel="noopener" class="inline-flex flex-1 items-center justify-center gap-1 rounded-xl bg-white px-3.5 py-2 text-xs font-bold text-zinc-950 transition hover:bg-emerald-300 sm:flex-none sm:text-[13px]">Claim This Design &rarr;</a>
       </div>
     </div>
   </div>
 
-  <!-- Navigation with Authentic Logo -->
-  <header class="w-full border-b border-freedom-border bg-white/95 backdrop-blur-md sticky top-[45px] z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3.5">
-        <img src="/assets/traci-fenton/logo.png" alt="WorldBlu Logo" class="h-10 sm:h-11 w-auto object-contain">
-        <div class="border-l border-freedom-border pl-3">
-          <span class="text-sm font-extrabold tracking-tight uppercase block text-freedom-navy">WORLDBLU</span>
-          <span class="text-[11px] text-freedom-slate font-medium">Traci Fenton • Founder &amp; CEO</span>
+  <div id="mh-notes" class="fixed inset-0 z-50 hidden font-['Inter',sans-serif]" role="dialog" aria-modal="true" aria-labelledby="mh-notes-title">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-close></div>
+    <div class="absolute inset-x-3 bottom-3 max-h-[85vh] overflow-y-auto rounded-2xl border border-white/15 bg-zinc-950/90 p-5 text-white shadow-2xl backdrop-blur-xl sm:inset-x-auto sm:bottom-24 sm:right-6 sm:w-[27rem] sm:p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald-300">Designer notes</p>
+          <h2 id="mh-notes-title" class="mt-1 text-lg font-bold">Why This Converts</h2>
         </div>
+        <button type="button" data-close data-focus class="rounded-lg p-1.5 text-white/60 transition hover:bg-white/10 hover:text-white" aria-label="Close notes"><i data-lucide="x" class="h-5 w-5"></i></button>
       </div>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-freedom-slate">
-        <a href="#freedom" class="hover:text-freedom-blue transition-colors">Freedom at Work®</a>
-        <a href="#certification" class="hover:text-freedom-blue transition-colors">Certification</a>
-        <a href="#clients" class="hover:text-freedom-blue transition-colors">Fortune 500 Clients</a>
-        <a href="https://www.linkedin.com/in/tracilfenton/" target="_blank" class="hover:text-freedom-blue flex items-center gap-1.5 transition-colors">
-          <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-          <span>LinkedIn</span>
-        </a>
-      </nav>
-
-      <div class="flex items-center gap-3">
-        <a href="#scorecard" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-freedom-navy text-white hover:bg-freedom-blue transition-all shadow-md active:scale-95">
-          <span>Take Freedom Scorecard</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
+      <div class="mt-4 rounded-xl border border-rose-400/20 bg-rose-500/10 p-3.5 text-[13px] leading-relaxed text-white/80">
+        <span class="font-semibold text-rose-300">Before:</span> The HubSpot homepage opens behind a newsletter pop-up, and the strong 700% growth claim and &quot;since 1997&quot; heritage sit several scrolls down, under text-heavy problem and benefit lists.
       </div>
+      <ul class="mt-4 space-y-3.5">
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Founder on stage, message on the left</strong>A full-bleed keynote photo of Traci gives instant authority, while the copy column stays clean and readable.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">The proof that sells, moved up</strong>The 700% growth figure (marked as WorldBlu-reported) and the 1997 heritage now sit beside the CTAs.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Two speeds of commitment</strong>CEOs ready to talk book a strategy session; the curious start with the Scorecard, so nobody leaves without a next step.</p>
+        </li>
+      </ul>
+      <a href="https://miskathossain.net" target="_blank" rel="noopener" class="mt-5 flex items-center justify-center gap-1 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-zinc-950 transition hover:bg-emerald-300">Claim This Design &rarr;</a>
     </div>
-  </header>
-
-  <!-- Hero Section (Reference 17.png - Catherine Schwebel Archway Layout) -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-        
-        <!-- Left: Copy & Value Proposition -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left">
-          
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border border-blue-200 bg-blue-50 text-freedom-blue">
-            <span class="w-2 h-2 rounded-full bg-freedom-blue"></span>
-            <span class="uppercase tracking-widest text-[11px] font-bold">THINKERS50 RADAR • AUTHOR OF FREEDOM AT WORK®</span>
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-serif font-bold tracking-tight leading-[1.15] mb-6 text-freedom-navy">
-            Helping CEOs &amp; Global Leaders Build Organizations Founded on Freedom, Not Fear.
-          </h1>
-
-          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal text-freedom-slate mb-8">
-            Transforming workplace culture across WD-40, Zappos, DaVita, and high-growth enterprises through the proven Freedom at Work® leadership model.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#scorecard" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] bg-freedom-blue text-white hover:bg-blue-700 shadow-blue-500/20">
-              <span>Free Freedom at Work® Scorecard</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            
-            <a href="#book" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all bg-white hover:bg-slate-50 text-freedom-navy border border-freedom-border">
-              <i data-lucide="book-open" class="w-4 h-4 text-freedom-blue"></i>
-              <span>Explore The Bestselling Book</span>
-            </a>
-          </div>
-
-          <!-- Fortune 500 Social Proof Row -->
-          <div class="w-full pt-8 border-t border-freedom-border">
-            <div class="text-[11px] uppercase tracking-wider text-freedom-slate font-bold mb-3">TRUSTED BY VISIONARY EXECUTIVES AT</div>
-            <div class="flex items-center gap-6 flex-wrap opacity-75 font-semibold text-sm text-freedom-slate">
-              <span>WD-40 Company</span>
-              <span>•</span>
-              <span>Zappos</span>
-              <span>•</span>
-              <span>DaVita</span>
-              <span>•</span>
-              <span>Panda Restaurant Group</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: Archway Portrait with 3 Authority Pills (Reference 17.png) -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-sm lg:max-w-none flex justify-center">
-            
-            <!-- Soft Organic Halo -->
-            <div class="absolute -top-10 -right-6 w-96 h-96 rounded-full bg-blue-100/60 blur-3xl pointer-events-none"></div>
-
-            <!-- Arch Frame with Authentic Portrait -->
-            <div class="relative w-full max-w-[380px] aspect-[3/4] overflow-hidden arch-portrait shadow-2xl border-4 border-white bg-slate-100">
-              <img 
-                src="/assets/traci-fenton/portrait.jpg" 
-                alt="Traci Fenton - Founder & CEO WorldBlu" 
-                class="w-full h-full object-cover object-top filter contrast-[1.02]"
-              />
-            </div>
-
-            <!-- Pill 1: Thinkers50 Top Left -->
-            <div class="absolute -top-3 -left-4 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-full shadow-lg border border-freedom-border flex items-center gap-2">
-              <i data-lucide="sparkles" class="w-4 h-4 text-freedom-gold"></i>
-              <span class="text-xs font-bold text-freedom-navy">Thinkers50 Radar Thinker</span>
-            </div>
-
-            <!-- Pill 2: Freedom at Work Bottom Right -->
-            <div class="absolute bottom-6 -right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-freedom-border max-w-[260px]">
-              <div class="flex items-center gap-2 mb-1">
-                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
-                <span class="text-xs font-bold text-freedom-navy">Freedom-Centered Leadership</span>
-              </div>
-              <p class="text-[11px] text-freedom-slate">Proven methodology adopted in 100+ countries globally.</p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </main>
-
-  <footer class="w-full border-t border-freedom-border py-6 bg-white text-center text-xs text-freedom-slate">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2">
-        <img src="/assets/traci-fenton/logo.png" alt="WorldBlu" class="h-6 w-auto opacity-70">
-        <span>© 2026 WorldBlu, LLC. Freedom at Work® is a registered trademark.</span>
-      </div>
-      <div class="text-zinc-500">Live Redesign Preview • Designed with pride by Miskat Hossain</div>
-    </div>
-  </footer>
+  </div>
 
   <script>
     lucide.createIcons();
-    function toggleNotesModal() {
-      const m = document.getElementById('notes-modal');
-      m.classList.toggle('hidden');
-    }
+    (function () {
+      var modal = document.getElementById('mh-notes');
+      var btn = document.getElementById('mh-notes-btn');
+      function setOpen(open) {
+        modal.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { modal.querySelector('[data-focus]').focus(); } else { btn.focus(); }
+      }
+      btn.addEventListener('click', function () { setOpen(modal.classList.contains('hidden')); });
+      modal.querySelectorAll('[data-close]').forEach(function (el) { el.addEventListener('click', function () { setOpen(false); }); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.classList.contains('hidden')) setOpen(false); });
+    })();
   </script>
 </body>
 </html>

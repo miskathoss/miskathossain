@@ -4,279 +4,211 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Paxion Cybersecurity | Autonomous AI Defense</title>
+  <title>Paxie.ai by Paxion Cybersecurity | Redesign Concept</title>
+  <meta name="description" content="Hero redesign concept for Ed Jalinske by Miskat Hossain.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
+            display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
           },
           colors: {
-            cyber: {
-              bg: '#06090E',
-              card: '#0D131F',
-              cyan: '#00F0FF',
-              emerald: '#10B981',
-              slate: '#94A3B8',
-              border: '#1E293B'
-            }
-          }
-        }
-      }
-    }
+            brand: {
+              bg: '#080C16', surface: '#0F1626', ink: '#F4F6FA', muted: '#9AA6B8', line: '#1E2A40',
+              accent: '#F5B63F', accentInk: '#111111', accent2: '#FD812D',
+            },
+          },
+        },
+      },
+    };
   </script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
   <style>
-    .glow-cyan { box-shadow: 0 0 50px -10px rgba(0, 240, 255, 0.25); }
-    .cyber-grid {
-      background-size: 40px 40px;
-      background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    }
+    .hl{background:linear-gradient(100deg, #F5B63F 0%, #FD812D 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .text-balance{text-wrap:balance}
+    .glass{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+    .float-slow{animation:float 7s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @media (prefers-reduced-motion: reduce){.float-slow{animation:none}*{scroll-behavior:auto!important}}
   </style>
 </head>
-<body class="bg-cyber-bg text-white font-sans antialiased min-h-screen flex flex-col selection:bg-cyber-cyan selection:text-black">
-
-  
-  <!-- Designer Preview Bar -->
-  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
-    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        LIVE DEMO REDESIGN
-      </span>
-      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Ed Jalinske</strong></span>
-    </div>
-    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
-      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
-        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
-        <span>Why This Converts Better</span>
-      </button>
-      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
-        <span>Miskat's Portfolio</span>
-        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+<body class="bg-brand-bg font-body text-brand-ink antialiased selection:bg-brand-accent selection:text-brand-accentInk">
+  <div id="top" class="relative min-h-screen overflow-hidden pb-40 sm:pb-28">
+    <div class="pointer-events-none absolute -left-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-brand-accent2 opacity-[0.13] blur-3xl" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 top-1/3 h-[28rem] w-[28rem] rounded-full bg-brand-accent opacity-[0.10] blur-3xl" aria-hidden="true"></div>
+    
+    
+  <header class="relative z-20">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-6 lg:px-8">
+      <a href="#top" class="flex min-w-0 items-center gap-3">
+        <img src="https://miskathossain.net/assets/ed-jalinske/logo.png" alt="Paxion Cybersecurity logo" class="h-10 w-auto" width="44" height="40">
+        <span class="min-w-0">
+          <span class="block truncate text-sm font-bold tracking-tight">Paxion Cybersecurity</span>
+          <span class="hidden truncate text-xs text-brand-muted sm:block">Paxie.ai · Madison, WI</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-brand-muted lg:flex" aria-label="Primary">
+        <a href="#top" class="transition-colors hover:text-brand-ink">Platform</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Meet Paxie</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Consulting</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Speaking</a>
+      </nav>
+      <a href="#book" class="hidden shrink-0 items-center gap-2 rounded-full border border-brand-line px-4 py-2 text-sm font-semibold transition hover:border-brand-accent hover:bg-brand-accent hover:text-brand-accentInk sm:inline-flex">
+        Request Demo <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
       </a>
     </div>
-  </div>
-
-  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-      <div class="flex items-center gap-2.5 mb-4">
-        <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
-        <h3 class="text-lg font-bold text-white">Paxion Cybersecurity, Inc.</h3>
-      </div>
-      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
-        This custom hero redesign addresses critical conversion leaks identified on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
-      </p>
-      
-      <div class="space-y-4 mb-6">
-        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
-          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
-            <span>Current Friction Points</span>
+  </header>
+    <main>
+    <section class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 pb-12 pt-6 sm:px-6 sm:pt-10 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:pb-16 lg:pt-14">
+      <div class="min-w-0 lg:col-span-7">
+          <p class="inline-flex max-w-full items-center gap-2 rounded-2xl border sm:rounded-full border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-brand-ink backdrop-blur sm:text-[13px]">
+            <i data-lucide="shield" class="h-4 w-4 shrink-0 text-brand-accent2"></i>
+            <span class="min-w-0 leading-snug">Paxie.ai 2026 Core Edition · Open to pilot customers</span>
+          </p>
+          <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-[3.3rem] font-bold leading-[1.06] tracking-tight text-balance">
+            Enterprise-grade security for lean IT teams, <span class="hl">explained in plain English</span>, without another dashboard to decode.
+          </h1>
+          <p class="mt-6 max-w-xl text-base leading-relaxed text-brand-muted sm:text-lg">Paxie.ai unifies XDR, vulnerability management, penetration testing and compliance in one AI-native platform. Ask Paxie what is happening and what to do next. No security degree required.</p>
+          <div id="book" class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <a href="#book" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap bg-brand-accent px-7 py-4 text-sm font-bold text-brand-accentInk shadow-lg shadow-brand-accent/25 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-accent/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent sm:text-base">
+              <i data-lucide="calendar-check" class="h-5 w-5"></i>Request a Pilot Demo
+              <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
+            </a>
+            <a href="#top" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap border border-brand-line bg-brand-surface/60 px-6 py-4 text-sm font-semibold backdrop-blur transition duration-200 hover:border-brand-ink/40 hover:bg-brand-surface sm:text-base">
+              <i data-lucide="play-circle" class="h-5 w-5 text-brand-accent2 transition-transform group-hover:scale-110"></i>Meet Paxie (2-min tour)
+            </a>
           </div>
-          <ul class="text-xs text-zinc-300 space-y-1 list-disc list-inside">
-            <li>Running on a slow Wix template with a generic, text-heavy hero that lacks high-tech credibility.</li><li>No interactive product demo or architectural visual proof for enterprise CISOs.</li><li>Friction-heavy generic contact form rather than a targeted threat diagnostic funnel.</li>
+          <p class="mt-4 flex items-center gap-2 text-sm text-brand-muted"><i data-lucide="cloud" class="h-4 w-4 text-brand-accent2"></i>Agentless, cloud-to-cloud deployment with read-only access to start.</p>
+          
+          <dl class="mt-10 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-brand-line bg-brand-line">
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Platform replacing disconnected tools</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">1</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Platform replacing disconnected tools</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Modules from XDR to SETA</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">6</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Modules from XDR to SETA</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Built from the ground up</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">AI-native</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Built from the ground up</dd>
+            </div>
+          </dl>
+      </div>
+      <div class="min-w-0 lg:col-span-5 ">
+        
+        <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div class="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-brand-accent/25 via-transparent to-brand-accent2/20 blur-3xl" aria-hidden="true"></div>
+          <div class="glass relative overflow-hidden rounded-3xl border">
+            <div class="flex items-center gap-2 border-b border-white/10 px-5 py-3.5">
+              <span class="h-2.5 w-2.5 rounded-full bg-rose-400/80"></span><span class="h-2.5 w-2.5 rounded-full bg-amber-300/80"></span><span class="h-2.5 w-2.5 rounded-full bg-emerald-400/80"></span>
+              <span class="ml-3 text-xs font-medium text-brand-muted">paxie.ai &middot; Security briefing</span>
+              <span class="ml-auto inline-flex items-center gap-1.5 rounded-full bg-emerald-400/10 px-2 py-0.5 text-[11px] font-semibold text-emerald-300"><span class="h-1.5 w-1.5 rounded-full bg-emerald-300"></span>Live</span>
+            </div>
+            <div class="space-y-4 p-5 text-sm">
+              <div class="ml-auto max-w-[85%] rounded-2xl rounded-br-md bg-white/10 px-4 py-3">Why did we get so many alerts overnight?</div>
+              <div class="flex gap-3">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-accent text-brand-accentInk"><i data-lucide="dog" class="h-5 w-5"></i></span>
+                <div class="rounded-2xl rounded-tl-md border border-white/10 bg-brand-bg/60 px-4 py-3 leading-relaxed">
+                  Most came from one misconfigured backup job, so they are safe to close. <strong class="text-brand-accent">Two need you today:</strong> an exposed remote-desktop port and an unpatched VPN appliance. Want the fix steps?
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2.5 pl-12">
+                <button type="button" class="rounded-xl border border-brand-accent/40 bg-brand-accent/10 px-3 py-2 text-xs font-semibold text-brand-accent transition hover:bg-brand-accent/20">Show fix steps</button>
+                <button type="button" class="rounded-xl border border-white/10 px-3 py-2 text-xs font-semibold text-brand-muted transition hover:bg-white/10">Explain the risk</button>
+              </div>
+              <p class="pl-12 text-[11px] text-brand-muted">Illustrative conversation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-3 border-t border-brand-line pt-6 sm:flex-row sm:items-center sm:gap-6">
+          <p class="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-brand-muted">One platform covers</p>
+          <ul class="flex flex-wrap gap-2">
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="radar" class="h-4 w-4 text-brand-accent2"></i>XDR</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="bug" class="h-4 w-4 text-brand-accent2"></i>Vulnerability mgmt</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="swords" class="h-4 w-4 text-brand-accent2"></i>Pen testing</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="clipboard-check" class="h-4 w-4 text-brand-accent2"></i>GRC</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="graduation-cap" class="h-4 w-4 text-brand-accent2"></i>Security training</li>
           </ul>
         </div>
-
-        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
-          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-            <span>Implemented Redesign Enhancements</span>
-          </div>
-          <div class="text-xs text-zinc-300 space-y-2">
-            <div><strong class="text-white">High-Tech Dark Mode SaaS UI:</strong> Designed a cybersecurity terminal aesthetic featuring cyan telemetry indicators and neural mesh glows.</div><div><strong class="text-white">Autonomous Threat Architecture:</strong> Showcased concrete latency metrics (&lt;45ms) and autonomous SOC isolation protocols.</div><div><strong class="text-white">Direct CISO Assessment Funnel:</strong> Elevated the call to action with a 1-click enterprise threat diagnostic audit.</div>
-          </div>
-        </div>
       </div>
+    </main>
+  </div>
 
-      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
-        <span>Ready to implement this live?</span>
-        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
+  <!-- Designer preview bar (concept only, not part of the client hero) -->
+  <div id="mh-bar" class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-md font-['Inter',sans-serif] sm:inset-x-auto sm:bottom-6 sm:right-6 sm:mx-0 sm:max-w-none">
+    <div class="flex flex-col gap-2.5 rounded-2xl border border-white/15 bg-zinc-950/75 px-3.5 py-3 text-white shadow-2xl shadow-black/40 backdrop-blur-xl sm:flex-row sm:items-center sm:gap-4 sm:py-2 sm:pl-4 sm:pr-2">
+      <p class="flex items-center justify-center gap-2 text-xs text-white/75 sm:justify-start sm:text-[13px]">
+        <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+        <span>Redesign concept for <strong class="font-semibold text-white">Ed Jalinske</strong></span>
+      </p>
+      <div class="flex gap-2">
+        <button id="mh-notes-btn" type="button" aria-expanded="false" aria-controls="mh-notes" class="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/10 px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-white/20 sm:flex-none sm:text-[13px]">
+          <i data-lucide="sparkles" class="h-4 w-4 text-emerald-300"></i>Why This Converts (Notes)
+        </button>
+        <a href="https://miskathossain.net" target="_blank" rel="noopener" class="inline-flex flex-1 items-center justify-center gap-1 rounded-xl bg-white px-3.5 py-2 text-xs font-bold text-zinc-950 transition hover:bg-emerald-300 sm:flex-none sm:text-[13px]">Claim This Design &rarr;</a>
       </div>
     </div>
   </div>
 
-  <!-- Navigation Header with Authentic Logo -->
-  <header class="w-full border-b border-cyber-border/80 bg-cyber-bg/90 backdrop-blur-md sticky top-[45px] z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3.5">
-        <img src="/assets/ed-jalinske/logo.png" alt="Paxion Cybersecurity Logo" class="h-10 sm:h-11 w-auto object-contain">
-        <div class="border-l border-zinc-800 pl-3">
-          <span class="text-sm font-extrabold tracking-tight uppercase block text-white">PAXION CYBERSECURITY</span>
-          <span class="text-[11px] text-cyber-slate font-medium">Ed Jalinske • Founder &amp; CEO</span>
+  <div id="mh-notes" class="fixed inset-0 z-50 hidden font-['Inter',sans-serif]" role="dialog" aria-modal="true" aria-labelledby="mh-notes-title">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-close></div>
+    <div class="absolute inset-x-3 bottom-3 max-h-[85vh] overflow-y-auto rounded-2xl border border-white/15 bg-zinc-950/90 p-5 text-white shadow-2xl backdrop-blur-xl sm:inset-x-auto sm:bottom-24 sm:right-6 sm:w-[27rem] sm:p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald-300">Designer notes</p>
+          <h2 id="mh-notes-title" class="mt-1 text-lg font-bold">Why This Converts</h2>
         </div>
+        <button type="button" data-close data-focus class="rounded-lg p-1.5 text-white/60 transition hover:bg-white/10 hover:text-white" aria-label="Close notes"><i data-lucide="x" class="h-5 w-5"></i></button>
       </div>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-cyber-slate">
-        <a href="#platform" class="hover:text-cyber-cyan transition-colors">AI Architecture</a>
-        <a href="#threats" class="hover:text-cyber-cyan transition-colors">Threat Defense</a>
-        <a href="#advisory" class="hover:text-cyber-cyan transition-colors">Advisory</a>
-        <a href="https://www.linkedin.com/in/edjalinske/" target="_blank" class="hover:text-cyber-cyan flex items-center gap-1.5 transition-colors">
-          <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-          <span>LinkedIn</span>
-        </a>
-      </nav>
-
-      <div class="flex items-center gap-3">
-        <a href="#inquire" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-cyber-cyan text-cyber-bg hover:bg-cyan-300 transition-all shadow-md active:scale-95">
-          <span>Book Threat Briefing</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
+      <div class="mt-4 rounded-xl border border-rose-400/20 bg-rose-500/10 p-3.5 text-[13px] leading-relaxed text-white/80">
+        <span class="font-semibold text-rose-300">Before:</span> The Wix page's only H1 is &quot;Contact us&quot;; the real value proposition sits in an H2, &quot;Request Demo&quot; appears twice with equal weight, and stock imagery does nothing to show the product.
       </div>
+      <ul class="mt-4 space-y-3.5">
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">The product is the hero</strong>A live-style Paxie conversation shows the plain-English differentiator in one glance, which says more to buyers than a stock photo.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Headline built for the actual buyer</strong>It targets lean IT teams who need enterprise coverage, and names the pain they hate: another dashboard to decode.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Pilot-first call to action</strong>&quot;Request a Pilot Demo&quot; plus the agentless, read-only deployment note lowers perceived risk for a first security conversation.</p>
+        </li>
+      </ul>
+      <a href="https://miskathossain.net" target="_blank" rel="noopener" class="mt-5 flex items-center justify-center gap-1 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-zinc-950 transition hover:bg-emerald-300">Claim This Design &rarr;</a>
     </div>
-  </header>
-
-  <!-- Hero Section (Reference 10.jpg - FocusLab Dark Cyber with Backlit Portrait) -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-14 lg:py-20 cyber-grid">
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-cyber-cyan/10 blur-[130px] rounded-full pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-        
-        <!-- Left: Copy & Value Proposition -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left">
-          
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border border-cyber-cyan/30 bg-cyber-cyan/10 text-cyber-cyan">
-            <span class="w-2 h-2 rounded-full bg-cyber-cyan animate-pulse"></span>
-            <span class="uppercase tracking-widest text-[11px] font-bold">AUTONOMOUS AI CYBERSECURITY • DEFENSE ARCHITECT</span>
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.12] mb-6 text-white">
-            Autonomous AI Cybersecurity That Predicts &amp; Neutralizes Threats Before Impact.
-          </h1>
-
-          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal text-cyber-slate mb-8">
-            Paxion&#039;s continuous AI defense architecture automates threat hunting, vulnerability isolation, and regulatory compliance across hybrid enterprise infrastructure.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#demo" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] bg-cyber-cyan text-cyber-bg hover:bg-cyan-300 glow-cyan">
-              <span>Request Threat Assessment</span>
-              <i data-lucide="shield-check" class="w-4 h-4"></i>
-            </a>
-            
-            <a href="#architecture" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all bg-cyber-card hover:bg-zinc-800 text-white border border-cyber-border">
-              <i data-lucide="cpu" class="w-4 h-4 text-cyber-cyan"></i>
-              <span>Explore AI Architecture</span>
-            </a>
-          </div>
-
-          <!-- 3-Pillar Row -->
-          <div class="w-full pt-8 border-t border-cyber-border grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="p-4 rounded-2xl bg-cyber-card/80 border border-cyber-border">
-              <div class="flex items-center gap-2 text-xs font-bold mb-1 text-white">
-                <i data-lucide="radar" class="w-4 h-4 text-cyber-cyan"></i>
-                <span>Predictive Threat Hunting</span>
-              </div>
-              <p class="text-[11px] text-cyber-slate">Neural networks analyzing anomalous endpoint telemetry in real-time.</p>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-cyber-card/80 border border-cyber-border">
-              <div class="flex items-center gap-2 text-xs font-bold mb-1 text-white">
-                <i data-lucide="zap" class="w-4 h-4 text-cyber-cyan"></i>
-                <span>Autonomous Remediation</span>
-              </div>
-              <p class="text-[11px] text-cyber-slate">Isolates and mitigates zero-day vectors with sub-second automation.</p>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-cyber-card/80 border border-cyber-border">
-              <div class="flex items-center gap-2 text-xs font-bold mb-1 text-white">
-                <i data-lucide="lock" class="w-4 h-4 text-cyber-cyan"></i>
-                <span>Quantum-Resistant Crypto</span>
-              </div>
-              <p class="text-[11px] text-cyber-slate">Future-proof cryptographic safeguarding for critical enterprise assets.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: Reference 10.jpg Backlit Portrait with Cyber Badge -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none flex justify-center">
-            
-            <!-- Glowing Ambient Backdrop -->
-            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyber-cyan to-cyber-emerald opacity-30 blur-2xl"></div>
-
-            <div class="relative w-full rounded-3xl bg-cyber-card border border-cyber-border p-6 shadow-2xl flex flex-col items-center">
-              
-              <!-- Frame Header -->
-              <div class="w-full flex items-center justify-between pb-4 border-b border-cyber-border mb-5">
-                <div class="flex items-center gap-2">
-                  <div class="w-2.5 h-2.5 rounded-full bg-cyber-cyan animate-pulse"></div>
-                  <span class="text-xs font-mono font-bold tracking-wider text-cyber-cyan">PAXION AI ENGINE</span>
-                </div>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-zinc-800 text-zinc-300">ACTIVE SHIELD</span>
-              </div>
-
-              <!-- Authentic High-Res Portrait in Backlit Frame -->
-              <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border-2 border-cyber-border shadow-inner bg-zinc-950">
-                <img 
-                  src="/assets/ed-jalinske/portrait.jpg" 
-                  alt="Ed Jalinske - Founder & CEO Paxion Cybersecurity" 
-                  class="w-full h-full object-cover object-top filter contrast-[1.05]"
-                />
-                
-                <!-- Overlay Gradient -->
-                <div class="absolute inset-0 bg-gradient-to-t from-cyber-card via-transparent to-transparent opacity-80"></div>
-                
-                <!-- Name Badge Inside Portrait Base -->
-                <div class="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-cyber-border flex items-center justify-between">
-                  <div>
-                    <div class="text-sm font-bold text-white">Edmund Jalinske</div>
-                    <div class="text-[11px] text-cyber-slate font-mono">Founder, CEO &amp; AI Tech Inventor</div>
-                  </div>
-                  <i data-lucide="award" class="w-5 h-5 text-cyber-cyan"></i>
-                </div>
-              </div>
-
-              <!-- Floating Laurel Trust Card (Reference 10.jpg) -->
-              <div class="w-full mt-4 p-4 rounded-xl bg-zinc-950/80 border border-cyber-border flex items-center gap-3.5">
-                <div class="w-10 h-10 rounded-xl bg-cyber-cyan/10 border border-cyber-cyan/30 flex items-center justify-center shrink-0">
-                  <i data-lucide="shield-alert" class="w-5 h-5 text-cyber-cyan"></i>
-                </div>
-                <div>
-                  <div class="text-xs font-bold text-white">Marquis Who's Who in America Honoree</div>
-                  <div class="text-[11px] text-cyber-slate">Published Author • Trusted C-Suite Advisor</div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </main>
-
-  <footer class="w-full border-t border-cyber-border py-6 bg-cyber-bg text-center text-xs text-cyber-slate">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2">
-        <img src="/assets/ed-jalinske/logo.png" alt="Paxion" class="h-6 w-auto opacity-70">
-        <span>© 2026 Paxion Cybersecurity, Inc. Autonomous AI Defense.</span>
-      </div>
-      <div class="text-zinc-500">Live Redesign Preview • Designed with pride by Miskat Hossain</div>
-    </div>
-  </footer>
+  </div>
 
   <script>
     lucide.createIcons();
-    function toggleNotesModal() {
-      const m = document.getElementById('notes-modal');
-      m.classList.toggle('hidden');
-    }
+    (function () {
+      var modal = document.getElementById('mh-notes');
+      var btn = document.getElementById('mh-notes-btn');
+      function setOpen(open) {
+        modal.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { modal.querySelector('[data-focus]').focus(); } else { btn.focus(); }
+      }
+      btn.addEventListener('click', function () { setOpen(modal.classList.contains('hidden')); });
+      modal.querySelectorAll('[data-close]').forEach(function (el) { el.addEventListener('click', function () { setOpen(false); }); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.classList.contains('hidden')) setOpen(false); });
+    })();
   </script>
 </body>
 </html>

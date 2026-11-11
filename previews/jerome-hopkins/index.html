@@ -4,249 +4,201 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Victor Cannon Leadership | Jerome Hopkins, CHA</title>
+  <title>Victor Cannon Leadership | Jerome Hopkins, CHA | Redesign Concept</title>
+  <meta name="description" content="Hero redesign concept for Jerome Hopkins, CHA by Miskat Hossain.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"Playfair Display"', 'serif'],
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
           },
           colors: {
-            cannon: {
-              bg: '#0C0D0E',
-              card: '#16171A',
-              gold: '#C59B27',
-              goldLight: '#E5C058',
-              slate: '#94A3B8',
-              border: '#27292E'
-            }
-          }
-        }
-      }
-    }
+            brand: {
+              bg: '#F6F3EC', surface: '#FFFFFF', ink: '#1E232A', muted: '#5B636E', line: '#E3DCCB',
+              accent: '#242A32', accentInk: '#F6E7B0', accent2: '#8A6A16',
+            },
+          },
+        },
+      },
+    };
   </script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <style>
+    .hl{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:600;color:#8A6A16}
+    .text-balance{text-wrap:balance}
+    .glass{background:rgba(255,255,255,.78);border-color:rgba(255,255,255,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+    .float-slow{animation:float 7s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @media (prefers-reduced-motion: reduce){.float-slow{animation:none}*{scroll-behavior:auto!important}}
+  </style>
 </head>
-<body class="bg-cannon-bg text-white font-sans antialiased min-h-screen flex flex-col selection:bg-cannon-gold selection:text-black">
-
-  
-  <!-- Designer Preview Bar -->
-  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
-    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        LIVE DEMO REDESIGN
-      </span>
-      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Jerome Hopkins, CHA</strong></span>
-    </div>
-    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
-      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
-        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
-        <span>Why This Converts Better</span>
-      </button>
-      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
-        <span>Miskat's Portfolio</span>
-        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+<body class="bg-brand-bg font-body text-brand-ink antialiased selection:bg-brand-accent selection:text-brand-accentInk">
+  <div id="top" class="relative min-h-screen overflow-hidden pb-40 sm:pb-28">
+    <div class="pointer-events-none absolute -left-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-brand-accent2 opacity-[0.13] blur-3xl" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 top-1/3 h-[28rem] w-[28rem] rounded-full bg-brand-accent opacity-[0.10] blur-3xl" aria-hidden="true"></div>
+    
+    
+  <header class="relative z-20">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-6 lg:px-8">
+      <a href="#top" class="flex min-w-0 items-center gap-3">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-accent text-brand-accentInk font-display text-lg font-bold">VC</span>
+        <span class="min-w-0">
+          <span class="block truncate text-sm font-bold tracking-tight">Victor Cannon Leadership</span>
+          <span class="hidden truncate text-xs text-brand-muted sm:block">Founded by Jerome Hopkins, CHA</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-brand-muted lg:flex" aria-label="Primary">
+        <a href="#top" class="transition-colors hover:text-brand-ink">Team Training</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Hotel Performance</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Coaching</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Podcast</a>
+      </nav>
+      <a href="#book" class="hidden shrink-0 items-center gap-2 rounded-full border border-brand-line px-4 py-2 text-sm font-semibold transition hover:border-brand-accent hover:bg-brand-accent hover:text-brand-accentInk sm:inline-flex">
+        Free Assessment <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
       </a>
     </div>
-  </div>
-
-  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-      <div class="flex items-center gap-2.5 mb-4">
-        <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
-        <h3 class="text-lg font-bold text-white">Victor Cannon Leadership</h3>
-      </div>
-      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
-        This custom hero redesign addresses critical conversion leaks identified on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
-      </p>
-      
-      <div class="space-y-4 mb-6">
-        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
-          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
-            <span>Current Friction Points</span>
-          </div>
-          <ul class="text-xs text-zinc-300 space-y-1 list-disc list-inside">
-            <li>Built on a standard Shopify e-commerce template, making an executive leadership consultancy feel like a retail shop.</li><li>Generic merchandise banners distracting from his high-ticket coaching expertise.</li><li>No corporate intake funnel for hotel groups and enterprise service brands.</li>
-          </ul>
-        </div>
-
-        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
-          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-            <span>Implemented Redesign Enhancements</span>
-          </div>
-          <div class="text-xs text-zinc-300 space-y-2">
-            <div><strong class="text-white">Bespoke Hospitality Advisory Aesthetic:</strong> Replaced Shopify store clutter with warm bronze and charcoal executive architecture.</div><div><strong class="text-white">CHA Credential Distinction:</strong> Elevated his prestigious Certified Hotel Administrator accreditation to immediate prominence.</div><div><strong class="text-white">Direct Corporate Engagement Path:</strong> Streamlined navigation into leadership packages and 1-click strategic booking.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
-        <span>Ready to implement this live?</span>
-        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Navigation with Victor Cannon Official Gold Crest -->
-  <header class="w-full border-b border-cannon-border bg-cannon-bg/95 backdrop-blur-md sticky top-[45px] z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3.5">
-        <img src="/assets/jerome-hopkins/logo.png" alt="Victor Cannon Gold Crest Logo" class="h-10 sm:h-12 w-auto object-contain">
-        <div class="border-l border-zinc-800 pl-3">
-          <span class="text-sm font-extrabold tracking-tight uppercase block text-white">VICTOR CANNON LEADERSHIP</span>
-          <span class="text-[11px] text-cannon-slate font-medium">Jerome Hopkins, CHA • Founder &amp; CEO</span>
-        </div>
-      </div>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-cannon-slate">
-        <a href="#advisory" class="hover:text-cannon-gold transition-colors">Executive Advisory</a>
-        <a href="#hospitality" class="hover:text-cannon-gold transition-colors">Hospitality Operations</a>
-        <a href="#7keys" class="hover:text-cannon-gold transition-colors">7 Keys System</a>
-        <a href="https://www.linkedin.com/in/jeromehopkins/" target="_blank" class="hover:text-cannon-gold flex items-center gap-1.5 transition-colors">
-          <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-          <span>LinkedIn</span>
-        </a>
-      </nav>
-
-      <div class="flex items-center gap-3">
-        <a href="#consult" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-cannon-gold text-black hover:bg-cannon-goldLight transition-all shadow-md active:scale-95">
-          <span>Book Advisory Consultation</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
-      </div>
-    </div>
   </header>
-
-  <!-- Hero Section (Reference 2.jpg - SoFi Executive Masonry Cards) -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-        
-        <!-- Left: Copy & Value Proposition -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left">
-          
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border border-cannon-gold/30 bg-cannon-gold/10 text-cannon-gold">
-            <i data-lucide="crown" class="w-3.5 h-3.5"></i>
-            <span class="uppercase tracking-widest text-[11px] font-bold">CERTIFIED HOTEL ADMINISTRATOR (CHA) • EXECUTIVE COACH</span>
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-serif font-bold tracking-tight leading-[1.15] mb-6 text-white">
-            Strengthen Executive Leadership, Operational Execution &amp; Guest Experience.
-          </h1>
-
-          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal text-cannon-slate mb-8">
-            Advising hospitality groups, corporate executives, and operational leaders on disciplined execution frameworks that elevate customer experience and operating margins.
+    <main>
+    <section class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 pb-12 pt-6 sm:px-6 sm:pt-10 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:pb-16 lg:pt-14">
+      <div class="min-w-0 lg:col-span-7">
+          <p class="inline-flex max-w-full items-center gap-2 rounded-2xl border sm:rounded-full border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-brand-ink backdrop-blur sm:text-[13px]">
+            <i data-lucide="medal" class="h-4 w-4 shrink-0 text-brand-accent2"></i>
+            <span class="min-w-0 leading-snug">Certified Hotel Administrator (CHA) · Proudly Veteran-Owned</span>
           </p>
-
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#consult" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] bg-cannon-gold text-black hover:bg-cannon-goldLight">
-              <span>Schedule Executive Consultation</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-bold leading-[1.06] tracking-tight text-balance">
+            Turn hotel and service teams into leaders who <span class="hl">execute every shift</span>, without another program that fades by next quarter.
+          </h1>
+          <p class="mt-6 max-w-xl text-base leading-relaxed text-brand-muted sm:text-lg">Victor Cannon Leadership delivers leadership training, executive coaching and hotel operating support that turns clearer thinking into consistent execution and service results.</p>
+          <div id="book" class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <a href="#book" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap bg-brand-accent px-7 py-4 text-sm font-bold text-brand-accentInk shadow-lg shadow-brand-accent/25 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-accent/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent sm:text-base">
+              <i data-lucide="clipboard-check" class="h-5 w-5"></i>Book a Complimentary Strategic Assessment
+              <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
             </a>
-            
-            <a href="#7keys" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all bg-cannon-card hover:bg-zinc-800 text-white border border-cannon-border">
-              <i data-lucide="book" class="w-4 h-4 text-cannon-gold"></i>
-              <span>Explore The 7 Keys System</span>
+            <a href="#top" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap border border-brand-line bg-brand-surface/60 px-6 py-4 text-sm font-semibold backdrop-blur transition duration-200 hover:border-brand-ink/40 hover:bg-brand-surface sm:text-base">
+              <i data-lucide="book-open" class="h-5 w-5 text-brand-accent2 transition-transform group-hover:scale-110"></i>Get the Leadership Playbook™
             </a>
           </div>
-
-          <!-- Proof Row -->
-          <div class="w-full pt-8 border-t border-cannon-border grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="p-4 rounded-2xl bg-cannon-card border border-cannon-border">
-              <div class="text-2xl font-bold text-cannon-gold mb-0.5">38%</div>
-              <div class="text-xs font-bold text-white">Avg RevPAR Turnaround</div>
-              <div class="text-[11px] text-cannon-slate">Hospitality asset lift</div>
+          <p class="mt-4 flex items-center gap-2 text-sm text-brand-muted"><i data-lucide="shield-check" class="h-4 w-4 text-brand-accent2"></i>For hotel owners, GMs, service brands and government teams.</p>
+          
+          <dl class="mt-10 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-brand-line bg-brand-line">
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Certified Hotel Administrator</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">CHA</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Certified Hotel Administrator</dd>
             </div>
-
-            <div class="p-4 rounded-2xl bg-cannon-card border border-cannon-border">
-              <div class="text-2xl font-bold text-white mb-0.5">CHA Certified</div>
-              <div class="text-xs font-bold text-white">Highest Industry Honor</div>
-              <div class="text-[11px] text-cannon-slate">American Hotel &amp; Lodging</div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Owned and led</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">Veteran</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Owned and led</dd>
             </div>
-
-            <div class="p-4 rounded-2xl bg-cannon-card border border-cannon-border">
-              <div class="text-2xl font-bold text-cannon-gold mb-0.5">7 Keys</div>
-              <div class="text-xs font-bold text-white">Complete System</div>
-              <div class="text-[11px] text-cannon-slate">Execution &amp; Mindset</div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Leadership book &amp; system</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">7 Keys</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Leadership book &amp; system</dd>
             </div>
+          </dl>
+      </div>
+      <div class="min-w-0 lg:col-span-5 ">
+        
+        <div class="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none">
+          <div class="absolute -inset-5 rounded-[2.75rem] bg-gradient-to-br from-brand-accent2/30 via-transparent to-brand-accent/25 blur-2xl" aria-hidden="true"></div>
+          <div class="group relative overflow-hidden rounded-[2rem] border border-brand-line bg-brand-surface shadow-2xl shadow-black/15" style="aspect-ratio:4/5">
+            <img src="https://miskathossain.net/assets/jerome-hopkins/portrait.jpg" alt="Jerome Hopkins, CHA, founder of Victor Cannon Leadership" width="1254" height="1254" fetchpriority="high" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]" style="object-position:50% 20%">
+            <div class="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/55 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white"><p class="text-base font-bold">Jerome Hopkins, CHA</p><p class="text-xs text-white/80">Founder, Victor Cannon Leadership</p></div>
           </div>
-
+        <div class="glass float-slow absolute -left-3 top-10 sm:-left-10 flex max-w-[15rem] items-center gap-3 rounded-2xl border px-4 py-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-accent text-brand-accentInk"><i data-lucide="headphones" class="h-5 w-5"></i></span>
+          <span class="min-w-0"><span class="block text-sm font-bold leading-tight">Leadership in the Real World</span><span class="block text-xs leading-snug text-brand-muted">Victor Cannon Leadership Podcast™</span></span>
         </div>
-
-        <!-- Right: Reference 2.jpg SoFi Executive Card with Authentic Portrait -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none flex justify-center">
-            
-            <div class="relative w-full rounded-3xl bg-cannon-card border border-cannon-border p-6 shadow-2xl flex flex-col items-center">
-              
-              <div class="w-full flex items-center justify-between pb-4 border-b border-cannon-border mb-5">
-                <span class="text-xs font-mono font-bold tracking-wider text-cannon-gold">EXECUTIVE ADVISORY</span>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-zinc-800 text-zinc-300">CERTIFIED (CHA)</span>
-              </div>
-
-              <!-- Authentic Portrait Image -->
-              <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-cannon-border shadow-2xl bg-zinc-950">
-                <img 
-                  src="/assets/jerome-hopkins/portrait.jpg" 
-                  alt="Jerome Hopkins, CHA - Victor Cannon Leadership" 
-                  class="w-full h-full object-cover object-top filter contrast-[1.03]"
-                />
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-                
-                <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-cannon-border flex items-center justify-between">
-                  <div>
-                    <div class="text-sm font-bold text-white">Jerome Hopkins, CHA</div>
-                    <div class="text-[11px] text-cannon-slate">Executive Coach • Keynote Speaker</div>
-                  </div>
-                  <img src="/assets/jerome-hopkins/logo.png" alt="Crest" class="h-7 w-auto object-contain">
-                </div>
-              </div>
-
-              <div class="w-full mt-4 p-4 rounded-xl bg-zinc-950/80 border border-cannon-border flex items-center gap-3">
-                <i data-lucide="compass" class="w-5 h-5 text-cannon-gold shrink-0"></i>
-                <div class="text-xs text-cannon-slate">
-                  <strong class="text-white">Victor Cannon Advisory:</strong> Bespoke C-Suite operating reviews &amp; leadership acceleration.
-                </div>
-              </div>
-
-            </div>
-
-          </div>
+        <div class="glass float-slow absolute -right-3 bottom-24 sm:-right-8 flex max-w-[15rem] items-center gap-3 rounded-2xl border px-4 py-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-accent text-brand-accentInk"><i data-lucide="hotel" class="h-5 w-5"></i></span>
+          <span class="min-w-0"><span class="block text-sm font-bold leading-tight">Hotel operating support</span><span class="block text-xs leading-snug text-brand-muted">From front desk to P&amp;L</span></span>
         </div>
+        </div>
+      </div>
+    </section>
+      
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <figure class="glass flex flex-col gap-4 rounded-2xl border p-5 sm:flex-row sm:items-center sm:gap-6 sm:p-6">
+          <i data-lucide="quote" class="h-8 w-8 shrink-0 text-brand-accent2"></i>
+          <blockquote class="text-base font-medium leading-relaxed sm:text-lg">&ldquo;His professionalism and ability to maintain positive working relationships made him a valued partner to our ownership team.&rdquo;</blockquote>
+          <figcaption class="shrink-0 text-sm sm:ml-auto sm:max-w-[16rem] sm:text-right">
+            <span class="block font-semibold">Patrick Roethe</span>
+            <span class="block text-brand-muted">Ownership Representative, 21 Group LLC</span>
+          </figcaption>
+        </figure>
+      </div>
+    </main>
+  </div>
 
+  <!-- Designer preview bar (concept only, not part of the client hero) -->
+  <div id="mh-bar" class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-md font-['Inter',sans-serif] sm:inset-x-auto sm:bottom-6 sm:right-6 sm:mx-0 sm:max-w-none">
+    <div class="flex flex-col gap-2.5 rounded-2xl border border-white/15 bg-zinc-950/75 px-3.5 py-3 text-white shadow-2xl shadow-black/40 backdrop-blur-xl sm:flex-row sm:items-center sm:gap-4 sm:py-2 sm:pl-4 sm:pr-2">
+      <p class="flex items-center justify-center gap-2 text-xs text-white/75 sm:justify-start sm:text-[13px]">
+        <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+        <span>Redesign concept for <strong class="font-semibold text-white">Jerome Hopkins, CHA</strong></span>
+      </p>
+      <div class="flex gap-2">
+        <button id="mh-notes-btn" type="button" aria-expanded="false" aria-controls="mh-notes" class="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/10 px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-white/20 sm:flex-none sm:text-[13px]">
+          <i data-lucide="sparkles" class="h-4 w-4 text-emerald-300"></i>Why This Converts (Notes)
+        </button>
+        <a href="https://miskathossain.net" target="_blank" rel="noopener" class="inline-flex flex-1 items-center justify-center gap-1 rounded-xl bg-white px-3.5 py-2 text-xs font-bold text-zinc-950 transition hover:bg-emerald-300 sm:flex-none sm:text-[13px]">Claim This Design &rarr;</a>
       </div>
     </div>
-  </main>
+  </div>
 
-  <footer class="w-full border-t border-cannon-border py-6 bg-cannon-bg text-center text-xs text-cannon-slate">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2">
-        <img src="/assets/jerome-hopkins/logo.png" alt="Victor Cannon" class="h-6 w-auto opacity-70">
-        <span>© 2026 Victor Cannon Leadership. All rights reserved.</span>
+  <div id="mh-notes" class="fixed inset-0 z-50 hidden font-['Inter',sans-serif]" role="dialog" aria-modal="true" aria-labelledby="mh-notes-title">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-close></div>
+    <div class="absolute inset-x-3 bottom-3 max-h-[85vh] overflow-y-auto rounded-2xl border border-white/15 bg-zinc-950/90 p-5 text-white shadow-2xl backdrop-blur-xl sm:inset-x-auto sm:bottom-24 sm:right-6 sm:w-[27rem] sm:p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald-300">Designer notes</p>
+          <h2 id="mh-notes-title" class="mt-1 text-lg font-bold">Why This Converts</h2>
+        </div>
+        <button type="button" data-close data-focus class="rounded-lg p-1.5 text-white/60 transition hover:bg-white/10 hover:text-white" aria-label="Close notes"><i data-lucide="x" class="h-5 w-5"></i></button>
       </div>
-      <div class="text-zinc-500">Live Redesign Preview • Designed with pride by Miskat Hossain</div>
+      <div class="mt-4 rounded-xl border border-rose-400/20 bg-rose-500/10 p-3.5 text-[13px] leading-relaxed text-white/80">
+        <span class="font-semibold text-rose-300">Before:</span> The Shopify theme opens with cart and country selectors, a generic &quot;Stronger leadership. A clearer next step.&quot; headline and five equal-weight route links, so the brand reads like a store before it reads like a consultancy.
+      </div>
+      <ul class="mt-4 space-y-3.5">
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Hospitality-specific promise</strong>The headline speaks directly to hotel and service operators about execution every shift, which a generic leadership line cannot do.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Credibility the buyer recognises</strong>CHA, veteran ownership and a real ownership-group endorsement sit above the fold; shop chrome is gone.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">A free assessment as the front door</strong>The complimentary strategic assessment leads, with the Leadership Playbook™ as a softer opt-in for earlier-stage buyers.</p>
+        </li>
+      </ul>
+      <a href="https://miskathossain.net" target="_blank" rel="noopener" class="mt-5 flex items-center justify-center gap-1 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-zinc-950 transition hover:bg-emerald-300">Claim This Design &rarr;</a>
     </div>
-  </footer>
+  </div>
 
   <script>
     lucide.createIcons();
-    function toggleNotesModal() {
-      const m = document.getElementById('notes-modal');
-      m.classList.toggle('hidden');
-    }
+    (function () {
+      var modal = document.getElementById('mh-notes');
+      var btn = document.getElementById('mh-notes-btn');
+      function setOpen(open) {
+        modal.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { modal.querySelector('[data-focus]').focus(); } else { btn.focus(); }
+      }
+      btn.addEventListener('click', function () { setOpen(modal.classList.contains('hidden')); });
+      modal.querySelectorAll('[data-close]').forEach(function (el) { el.addEventListener('click', function () { setOpen(false); }); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.classList.contains('hidden')) setOpen(false); });
+    })();
   </script>
 </body>
 </html>

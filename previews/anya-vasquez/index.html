@@ -4,252 +4,201 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Energy Coach Anya | Wealth Energetics &amp; Ascend Nation</title>
+  <title>Energy Coach Anya | Redesign Concept</title>
+  <meta name="description" content="Hero redesign concept for Anya Vasquez by Miskat Hossain.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            serif: ['"Playfair Display"', 'serif'],
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
           },
           colors: {
-            ascend: {
-              bg: '#FAF7F2',
-              card: '#FFFFFF',
-              charcoal: '#18181B',
-              terracotta: '#E07A5F',
-              terracottaDark: '#C76348',
-              gold: '#D4AF37',
-              slate: '#71717A',
-              border: '#E8E1D7'
-            }
-          }
-        }
-      }
-    }
+            brand: {
+              bg: '#FAF7F2', surface: '#FFFFFF', ink: '#1B2A30', muted: '#5B676C', line: '#E6DFD3',
+              accent: '#1F6F86', accentInk: '#FFFFFF', accent2: '#9A7622',
+            },
+          },
+        },
+      },
+    };
   </script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <style>
+    .hl{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:600;color:#9A7622}
+    .text-balance{text-wrap:balance}
+    .glass{background:rgba(255,255,255,.78);border-color:rgba(255,255,255,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+    .float-slow{animation:float 7s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @media (prefers-reduced-motion: reduce){.float-slow{animation:none}*{scroll-behavior:auto!important}}
+  </style>
 </head>
-<body class="bg-ascend-bg text-ascend-charcoal font-sans antialiased min-h-screen flex flex-col selection:bg-ascend-terracotta selection:text-white">
-
-  
-  <!-- Designer Preview Bar -->
-  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
-    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        LIVE DEMO REDESIGN
-      </span>
-      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Anya Vasquez</strong></span>
-    </div>
-    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
-      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
-        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
-        <span>Why This Converts Better</span>
-      </button>
-      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
-        <span>Miskat's Portfolio</span>
-        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+<body class="bg-brand-bg font-body text-brand-ink antialiased selection:bg-brand-accent selection:text-brand-accentInk">
+  <div id="top" class="relative min-h-screen overflow-hidden pb-40 sm:pb-28">
+    <div class="pointer-events-none absolute -left-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-brand-accent2 opacity-[0.13] blur-3xl" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 top-1/3 h-[28rem] w-[28rem] rounded-full bg-brand-accent opacity-[0.10] blur-3xl" aria-hidden="true"></div>
+    
+    
+  <header class="relative z-20">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-6 lg:px-8">
+      <a href="#top" class="flex min-w-0 items-center gap-3">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-accent text-brand-accentInk font-display text-lg font-bold">A</span>
+        <span class="min-w-0">
+          <span class="block truncate text-sm font-bold tracking-tight">Energy Coach Anya</span>
+          <span class="hidden truncate text-xs text-brand-muted sm:block">Practical spirituality for mompreneurs</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-brand-muted lg:flex" aria-label="Primary">
+        <a href="#top" class="transition-colors hover:text-brand-ink">Work With Me</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Destiny Blueprint</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Masterclass</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Stories</a>
+      </nav>
+      <a href="#book" class="hidden shrink-0 items-center gap-2 rounded-full border border-brand-line px-4 py-2 text-sm font-semibold transition hover:border-brand-accent hover:bg-brand-accent hover:text-brand-accentInk sm:inline-flex">
+        Work With Me <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
       </a>
     </div>
-  </div>
-
-  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-      <div class="flex items-center gap-2.5 mb-4">
-        <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
-        <h3 class="text-lg font-bold text-white">Energy Coach Anya / Ascend Nation</h3>
-      </div>
-      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
-        This custom hero redesign addresses critical conversion leaks identified on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
-      </p>
-      
-      <div class="space-y-4 mb-6">
-        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
-          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
-            <span>Current Friction Points</span>
+  </header>
+    <main>
+    <section class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 pb-12 pt-6 sm:px-6 sm:pt-10 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:pb-16 lg:pt-14">
+      <div class="min-w-0 lg:col-span-7">
+          <p class="inline-flex max-w-full items-center gap-2 rounded-2xl border sm:rounded-full border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-brand-ink backdrop-blur sm:text-[13px]">
+            <i data-lucide="sparkles" class="h-4 w-4 shrink-0 text-brand-accent2"></i>
+            <span class="min-w-0 leading-snug">Energy coach · Numerology · Practical spirituality</span>
+          </p>
+          <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-bold leading-[1.06] tracking-tight text-balance">
+            Manifest more money and love as a mompreneur, with <span class="hl">practical spirituality</span>, not quick fixes that don't last.
+          </h1>
+          <p class="mt-6 max-w-xl text-base leading-relaxed text-brand-muted sm:text-lg">Anya reads your Destiny Blueprint and teaches you to align your energy with the business, relationships and life you are building, one grounded practice at a time.</p>
+          <div id="book" class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <a href="#book" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap bg-brand-accent px-7 py-4 text-sm font-bold text-brand-accentInk shadow-lg shadow-brand-accent/25 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-accent/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent sm:text-base">
+              <i data-lucide="sparkles" class="h-5 w-5"></i>Book Your Destiny Blueprint Reading
+              <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
+            </a>
+            <a href="#top" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap border border-brand-line bg-brand-surface/60 px-6 py-4 text-sm font-semibold backdrop-blur transition duration-200 hover:border-brand-ink/40 hover:bg-brand-surface sm:text-base">
+              <i data-lucide="play-circle" class="h-5 w-5 text-brand-accent2 transition-transform group-hover:scale-110"></i>Join the Free Masterclass
+            </a>
           </div>
-          <ul class="text-xs text-zinc-300 space-y-1 list-disc list-inside">
-            <li>Cluttered funnel page with awkward headline formatting (&#039;I am Energy coach Anya -&#039;).</li><li>Lacks the visual elegance and refined luxury demanded by high-ticket female founders.</li><li>Scattered call-to-actions that fail to qualify applicants for her inner-circle mentorship.</li>
+          <p class="mt-4 flex items-center gap-2 text-sm text-brand-muted"><i data-lucide="heart" class="h-4 w-4 text-brand-accent2"></i>For ambitious mothers building a business and a life they love.</p>
+          
+          <dl class="mt-10 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-brand-line bg-brand-line">
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Destiny Blueprint reading</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">Blueprint</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Destiny Blueprint reading</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">TEA mentorship program</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">1 year</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">TEA mentorship program</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Manifesting masterclass</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">Live</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Manifesting masterclass</dd>
+            </div>
+          </dl>
+      </div>
+      <div class="min-w-0 lg:col-span-5 ">
+        
+        <div class="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none">
+          <div class="absolute -inset-5 rounded-[2.75rem] bg-gradient-to-br from-brand-accent2/30 via-transparent to-brand-accent/25 blur-2xl" aria-hidden="true"></div>
+          <div class="group relative overflow-hidden rounded-t-[12rem] rounded-b-[2rem] border border-brand-line bg-brand-surface shadow-2xl shadow-black/15" style="aspect-ratio:4/5">
+            <img src="https://miskathossain.net/assets/anya-vasquez/portrait.jpg" alt="Energy coach Anya Vasquez" width="819" height="1024" fetchpriority="high" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]" style="object-position:50% 20%">
+            <div class="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/55 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white"><p class="text-base font-bold">Anya Vasquez</p><p class="text-xs text-white/80">Energy Coach &middot; Practical Spirituality</p></div>
+          </div>
+        <div class="glass float-slow absolute -left-3 top-14 sm:-left-10 flex max-w-[15rem] items-center gap-3 rounded-2xl border px-4 py-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-accent text-brand-accentInk"><i data-lucide="stars" class="h-5 w-5"></i></span>
+          <span class="min-w-0"><span class="block text-sm font-bold leading-tight">Destiny Blueprint</span><span class="block text-xs leading-snug text-brand-muted">Your numbers, decoded</span></span>
+        </div>
+        <div class="glass float-slow absolute -right-3 bottom-24 sm:-right-8 flex max-w-[15rem] items-center gap-3 rounded-2xl border px-4 py-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-accent text-brand-accentInk"><i data-lucide="gem" class="h-5 w-5"></i></span>
+          <span class="min-w-0"><span class="block text-sm font-bold leading-tight">TEA Program</span><span class="block text-xs leading-snug text-brand-muted">1-year mentorship</span></span>
+        </div>
+        </div>
+      </div>
+    </section>
+      
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-3 border-t border-brand-line pt-6 sm:flex-row sm:items-center sm:gap-6">
+          <p class="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-brand-muted">Client stories</p>
+          <ul class="flex flex-wrap gap-2">
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="trending-up" class="h-4 w-4 text-brand-accent2"></i>High-level wealth activation</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="heart" class="h-4 w-4 text-brand-accent2"></i>From rock bottom to purpose and love</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="sun" class="h-4 w-4 text-brand-accent2"></i>Energy and clarity restored</li>
           </ul>
         </div>
-
-        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
-          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-            <span>Implemented Redesign Enhancements</span>
-          </div>
-          <div class="text-xs text-zinc-300 space-y-2">
-            <div><strong class="text-white">Luxury Editorial Aesthetic:</strong> Designed with warm champagne sand, terracotta accents, and gold serif typography inspired by high-fashion journals.</div><div><strong class="text-white">Subconscious Wealth Positioning:</strong> Shifted away from generic spirituality toward high-impact nervous system regulation and income breakthrough.</div><div><strong class="text-white">High-Ticket Application Funnel:</strong> Replaced cluttered funnel buttons with an exclusive mentorship application path.</div>
-          </div>
-        </div>
       </div>
+    </main>
+  </div>
 
-      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
-        <span>Ready to implement this live?</span>
-        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
+  <!-- Designer preview bar (concept only, not part of the client hero) -->
+  <div id="mh-bar" class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-md font-['Inter',sans-serif] sm:inset-x-auto sm:bottom-6 sm:right-6 sm:mx-0 sm:max-w-none">
+    <div class="flex flex-col gap-2.5 rounded-2xl border border-white/15 bg-zinc-950/75 px-3.5 py-3 text-white shadow-2xl shadow-black/40 backdrop-blur-xl sm:flex-row sm:items-center sm:gap-4 sm:py-2 sm:pl-4 sm:pr-2">
+      <p class="flex items-center justify-center gap-2 text-xs text-white/75 sm:justify-start sm:text-[13px]">
+        <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+        <span>Redesign concept for <strong class="font-semibold text-white">Anya Vasquez</strong></span>
+      </p>
+      <div class="flex gap-2">
+        <button id="mh-notes-btn" type="button" aria-expanded="false" aria-controls="mh-notes" class="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/10 px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-white/20 sm:flex-none sm:text-[13px]">
+          <i data-lucide="sparkles" class="h-4 w-4 text-emerald-300"></i>Why This Converts (Notes)
+        </button>
+        <a href="https://miskathossain.net" target="_blank" rel="noopener" class="inline-flex flex-1 items-center justify-center gap-1 rounded-xl bg-white px-3.5 py-2 text-xs font-bold text-zinc-950 transition hover:bg-emerald-300 sm:flex-none sm:text-[13px]">Claim This Design &rarr;</a>
       </div>
     </div>
   </div>
 
-  <!-- Navigation -->
-  <header class="w-full border-b border-ascend-border bg-white/95 backdrop-blur-md sticky top-[45px] z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3.5">
-        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-500 to-rose-600 flex items-center justify-center font-serif text-white font-bold text-lg shadow-md">
-          AV
+  <div id="mh-notes" class="fixed inset-0 z-50 hidden font-['Inter',sans-serif]" role="dialog" aria-modal="true" aria-labelledby="mh-notes-title">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-close></div>
+    <div class="absolute inset-x-3 bottom-3 max-h-[85vh] overflow-y-auto rounded-2xl border border-white/15 bg-zinc-950/90 p-5 text-white shadow-2xl backdrop-blur-xl sm:inset-x-auto sm:bottom-24 sm:right-6 sm:w-[27rem] sm:p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald-300">Designer notes</p>
+          <h2 id="mh-notes-title" class="mt-1 text-lg font-bold">Why This Converts</h2>
         </div>
-        <div class="border-l border-ascend-border pl-3">
-          <span class="text-sm font-extrabold tracking-tight uppercase block text-ascend-charcoal">ENERGY COACH ANYA</span>
-          <span class="text-[11px] text-ascend-slate font-medium">Anya Vasquez • Co-Founder, Ascend Nation</span>
-        </div>
+        <button type="button" data-close data-focus class="rounded-lg p-1.5 text-white/60 transition hover:bg-white/10 hover:text-white" aria-label="Close notes"><i data-lucide="x" class="h-5 w-5"></i></button>
       </div>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ascend-slate">
-        <a href="#ascend" class="hover:text-ascend-terracotta transition-colors">Ascend Nation</a>
-        <a href="#energetics" class="hover:text-ascend-terracotta transition-colors">Wealth Energetics</a>
-        <a href="#masterclass" class="hover:text-ascend-terracotta transition-colors">Free Masterclass</a>
-        <a href="https://www.linkedin.com/in/energycoachanya/" target="_blank" class="hover:text-ascend-terracotta flex items-center gap-1.5 transition-colors">
-          <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-          <span>LinkedIn</span>
-        </a>
-      </nav>
-
-      <div class="flex items-center gap-3">
-        <a href="#apply" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-ascend-terracotta text-white hover:bg-ascend-terracottaDark transition-all shadow-md active:scale-95">
-          <span>Apply For Mentorship</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
+      <div class="mt-4 rounded-xl border border-rose-400/20 bg-rose-500/10 p-3.5 text-[13px] leading-relaxed text-white/80">
+        <span class="font-semibold text-rose-300">Before:</span> The hero headline breaks awkwardly (&quot;I am Energy coach Anya -&quot;), the promise is buried in a long H2, and &quot;Let's connect&quot; is the only action with no clear offer behind it.
       </div>
+      <ul class="mt-4 space-y-3.5">
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">A finished, outcome-led sentence</strong>The H1 states who it is for (mompreneurs), what changes (money and love) and the contrast she already uses (no quick fixes).</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">A named, specific first offer</strong>&quot;Book Your Destiny Blueprint Reading&quot; replaces &quot;Let's connect&quot;, giving visitors a concrete, high-intent next step.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Warm luxury, higher contrast</strong>Her teal is deepened and paired with soft gold on ivory, so the brand feels premium while CTAs stay highly legible.</p>
+        </li>
+      </ul>
+      <a href="https://miskathossain.net" target="_blank" rel="noopener" class="mt-5 flex items-center justify-center gap-1 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-zinc-950 transition hover:bg-emerald-300">Claim This Design &rarr;</a>
     </div>
-  </header>
-
-  <!-- Hero Section (Reference 20.png - Terracotta Wealth Energetics Editorial) -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-        
-        <!-- Left: Copy & Value Proposition -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left">
-          
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border border-orange-200 bg-orange-100/60 text-ascend-terracotta">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-ascend-gold"></i>
-            <span class="uppercase tracking-widest text-[11px] font-bold">CO-FOUNDER, ASCEND NATION • WEALTH MANIFESTATION STRATEGIST</span>
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-serif font-bold tracking-tight leading-[1.15] mb-6 text-ascend-charcoal">
-            Break Your Income Ceiling with Radical Energetic Alignment &amp; Purpose.
-          </h1>
-
-          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal text-ascend-slate mb-8">
-            Guiding ambitious entrepreneurs and female founders to release subconscious wealth blocks, regulate their nervous system for high-ticket expansion, and manifest 7-figure freedom with ease.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#apply" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] bg-ascend-terracotta text-white hover:bg-ascend-terracottaDark">
-              <span>Apply For Alignment Mentorship</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            
-            <a href="#masterclass" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all bg-white hover:bg-slate-50 text-ascend-charcoal border border-ascend-border">
-              <i data-lucide="play" class="w-4 h-4 text-ascend-terracotta"></i>
-              <span>Watch Free Masterclass</span>
-            </a>
-          </div>
-
-          <!-- Proof Metrics -->
-          <div class="w-full pt-8 border-t border-ascend-border grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="p-4 rounded-2xl bg-white border border-ascend-border shadow-sm">
-              <div class="text-2xl font-serif font-bold text-ascend-terracotta mb-0.5">Ascend Nation</div>
-              <div class="text-xs font-bold text-ascend-charcoal">Co-Founder</div>
-              <div class="text-[11px] text-ascend-slate">Global spiritual community</div>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-white border border-ascend-border shadow-sm">
-              <div class="text-2xl font-serif font-bold text-ascend-charcoal mb-0.5">7-Figure Shifts</div>
-              <div class="text-xs font-bold text-ascend-charcoal">Client Breakthroughs</div>
-              <div class="text-[11px] text-ascend-slate">Subconscious recalibration</div>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-white border border-ascend-border shadow-sm">
-              <div class="text-2xl font-serif font-bold text-ascend-gold mb-0.5">37K+</div>
-              <div class="text-xs font-bold text-ascend-charcoal">Active Community</div>
-              <div class="text-[11px] text-ascend-slate">Daily alignment practice</div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: Reference 20.png Editorial Card with Authentic Portrait -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-sm lg:max-w-none flex justify-center">
-            
-            <div class="absolute -top-10 -right-6 w-96 h-96 rounded-full bg-orange-200/40 blur-3xl pointer-events-none"></div>
-
-            <div class="relative w-full rounded-3xl bg-white border border-ascend-border p-6 shadow-xl flex flex-col items-center">
-              
-              <div class="w-full flex items-center justify-between pb-4 border-b border-ascend-border mb-5">
-                <span class="text-xs font-serif font-bold tracking-wider text-ascend-terracotta">ASCEND NATION</span>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-sans font-bold bg-orange-50 text-ascend-terracotta">ENERGY COACH</span>
-              </div>
-
-              <!-- Authentic Portrait Image -->
-              <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-ascend-border shadow-inner bg-slate-100">
-                <img 
-                  src="/assets/anya-vasquez/portrait.jpg" 
-                  alt="Anya Vasquez - Energy Coach Anya" 
-                  class="w-full h-full object-cover object-top filter contrast-[1.02]"
-                />
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-ascend-charcoal/80 via-transparent to-transparent"></div>
-                
-                <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-ascend-border flex items-center justify-between">
-                  <div>
-                    <div class="text-sm font-bold text-ascend-charcoal">Anya Vasquez</div>
-                    <div class="text-[11px] text-ascend-slate">Energy Coach &amp; Co-Founder</div>
-                  </div>
-                  <i data-lucide="sparkles" class="w-5 h-5 text-ascend-gold"></i>
-                </div>
-              </div>
-
-              <div class="w-full mt-4 p-4 rounded-xl bg-orange-50/80 border border-orange-100 flex items-center gap-3">
-                <i data-lucide="zap" class="w-5 h-5 text-ascend-terracotta shrink-0"></i>
-                <div class="text-xs text-ascend-slate">
-                  <strong class="text-ascend-charcoal">Nervous System Capacity:</strong> Condition your subconscious mind and body to hold high-ticket volume with ease.
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </main>
-
-  <footer class="w-full border-t border-ascend-border py-6 bg-white text-center text-xs text-ascend-slate">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>© 2026 Ascend Nation • Energy Coach Anya. All rights reserved.</div>
-      <div class="text-zinc-500">Live Redesign Preview • Designed with pride by Miskat Hossain</div>
-    </div>
-  </footer>
+  </div>
 
   <script>
     lucide.createIcons();
-    function toggleNotesModal() {
-      const m = document.getElementById('notes-modal');
-      m.classList.toggle('hidden');
-    }
+    (function () {
+      var modal = document.getElementById('mh-notes');
+      var btn = document.getElementById('mh-notes-btn');
+      function setOpen(open) {
+        modal.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { modal.querySelector('[data-focus]').focus(); } else { btn.focus(); }
+      }
+      btn.addEventListener('click', function () { setOpen(modal.classList.contains('hidden')); });
+      modal.querySelectorAll('[data-close]').forEach(function (el) { el.addEventListener('click', function () { setOpen(false); }); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.classList.contains('hidden')) setOpen(false); });
+    })();
   </script>
 </body>
 </html>

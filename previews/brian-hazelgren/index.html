@@ -4,244 +4,205 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Sentra Core Health | Brian Hazelgren | Advanced Preventive Care Pods</title>
+  <title>Sentra Core Health | Redesign Concept</title>
+  <meta name="description" content="Hero redesign concept for Brian Hazelgren by Miskat Hossain.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Inter"', 'system-ui', 'sans-serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
           },
           colors: {
-            sentra: {
-              bg: '#061224',
-              card: '#0D2140',
-              cyan: '#38BDF8',
-              blue: '#0284C7',
-              slate: '#94A3B8',
-              border: '#1B3B68'
-            }
-          }
-        }
-      }
-    }
+            brand: {
+              bg: '#F4F8FC', surface: '#FFFFFF', ink: '#0A2540', muted: '#526377', line: '#DCE5EF',
+              accent: '#0369A1', accentInk: '#FFFFFF', accent2: '#0EA5E9',
+            },
+          },
+        },
+      },
+    };
   </script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <style>
+    .hl{background:linear-gradient(100deg, #0369A1 0%, #0EA5E9 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .text-balance{text-wrap:balance}
+    .glass{background:rgba(255,255,255,.78);border-color:rgba(255,255,255,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+    .float-slow{animation:float 7s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @media (prefers-reduced-motion: reduce){.float-slow{animation:none}*{scroll-behavior:auto!important}}
+  </style>
 </head>
-<body class="bg-sentra-bg text-white font-sans antialiased min-h-screen flex flex-col selection:bg-sentra-cyan selection:text-black">
-
-  
-  <!-- Designer Preview Bar -->
-  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
-    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        LIVE DEMO REDESIGN
-      </span>
-      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Brian Hazelgren</strong></span>
-    </div>
-    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
-      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
-        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
-        <span>Why This Converts Better</span>
-      </button>
-      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
-        <span>Miskat's Portfolio</span>
-        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+<body class="bg-brand-bg font-body text-brand-ink antialiased selection:bg-brand-accent selection:text-brand-accentInk">
+  <div id="top" class="relative min-h-screen overflow-hidden pb-40 sm:pb-28">
+    <div class="pointer-events-none absolute -left-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-brand-accent2 opacity-[0.13] blur-3xl" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 top-1/3 h-[28rem] w-[28rem] rounded-full bg-brand-accent opacity-[0.10] blur-3xl" aria-hidden="true"></div>
+    
+    
+  <header class="relative z-20">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-6 lg:px-8">
+      <a href="#top" class="flex min-w-0 items-center gap-3">
+        <img src="https://miskathossain.net/assets/brian-hazelgren/logo.png" alt="Sentra Core Health logo" class="h-10 w-auto" width="53" height="40">
+        <span class="min-w-0">
+          <span class="block truncate text-sm font-bold tracking-tight">Sentra Core Health</span>
+          <span class="hidden truncate text-xs text-brand-muted sm:block">Mobile healthcare access</span>
+        </span>
+      </a>
+      <nav class="hidden items-center gap-7 text-sm font-medium text-brand-muted lg:flex" aria-label="Primary">
+        <a href="#top" class="transition-colors hover:text-brand-ink">Employers</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">MIRA Stations</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Telehealth</a>
+        <a href="#top" class="transition-colors hover:text-brand-ink">Insights</a>
+      </nav>
+      <a href="#book" class="hidden shrink-0 items-center gap-2 rounded-full border border-brand-line px-4 py-2 text-sm font-semibold transition hover:border-brand-accent hover:bg-brand-accent hover:text-brand-accentInk sm:inline-flex">
+        Contact Us <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
       </a>
     </div>
-  </div>
-
-  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-      <div class="flex items-center gap-2.5 mb-4">
-        <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
-        <h3 class="text-lg font-bold text-white">Sentra Core Health</h3>
-      </div>
-      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
-        This custom hero redesign addresses critical conversion leaks identified on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
-      </p>
-      
-      <div class="space-y-4 mb-6">
-        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
-          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
-            <span>Current Friction Points</span>
+  </header>
+    <main>
+    <section class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 pb-12 pt-6 sm:px-6 sm:pt-10 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:pb-16 lg:pt-14">
+      <div class="min-w-0 lg:col-span-7">
+          <p class="inline-flex max-w-full items-center gap-2 rounded-2xl border sm:rounded-full border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-brand-ink backdrop-blur sm:text-[13px]">
+            <i data-lucide="activity" class="h-4 w-4 shrink-0 text-brand-accent2"></i>
+            <span class="min-w-0 leading-snug">Mobile healthcare access · MIRA Health Stations</span>
+          </p>
+          <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-[3.6rem] font-bold leading-[1.06] tracking-tight text-balance">
+            Get your workforce to care <span class="hl">in minutes, not weeks</span>, without another trip to a clinic or waiting room.
+          </h1>
+          <p class="mt-6 max-w-xl text-base leading-relaxed text-brand-muted sm:text-lg">Sentra Core Health connects employees to licensed healthcare professionals through mobile access, telehealth and on-site MIRA Health Stations, with implementation and onboarding handled for you.</p>
+          <div id="book" class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <a href="#book" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap bg-brand-accent px-7 py-4 text-sm font-bold text-brand-accentInk shadow-lg shadow-brand-accent/25 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-accent/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent sm:text-base">
+              <i data-lucide="calendar-check" class="h-5 w-5"></i>Book an Employer Demo
+              <i data-lucide="arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1"></i>
+            </a>
+            <a href="#top" class="group inline-flex items-center justify-center gap-2.5 rounded-full text-center sm:whitespace-nowrap border border-brand-line bg-brand-surface/60 px-6 py-4 text-sm font-semibold backdrop-blur transition duration-200 hover:border-brand-ink/40 hover:bg-brand-surface sm:text-base">
+              <i data-lucide="video" class="h-5 w-5 text-brand-accent2 transition-transform group-hover:scale-110"></i>Reserve a Webinar Seat
+            </a>
           </div>
-          <ul class="text-xs text-zinc-300 space-y-1 list-disc list-inside">
-            <li>Major healthcare venture running on an entry-level GoDaddy Website Builder template.</li><li>Underrepresents his remarkable career (21 published books and 30+ years in healthcare).</li><li>No interactive clinical workflow diagrams or enterprise investor-grade trust architecture.</li>
+          <p class="mt-4 flex items-center gap-2 text-sm text-brand-muted"><i data-lucide="shield-check" class="h-4 w-4 text-brand-accent2"></i>Implementation, onboarding and ongoing program support included.</p>
+          
+          <dl class="mt-10 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-brand-line bg-brand-line">
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Not weeks, to reach care</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">Minutes</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Not weeks, to reach care</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Workplace, travel, home</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">3 ways</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Workplace, travel, home</dd>
+            </div>
+            <div class="bg-brand-surface px-3 py-4 sm:px-5">
+              <dt class="sr-only">Healthcare professionals</dt>
+              <dd class="font-display text-lg font-bold leading-tight sm:text-2xl">Licensed</dd>
+              <dd class="mt-1 text-[11px] leading-snug text-brand-muted sm:text-xs">Healthcare professionals</dd>
+            </div>
+          </dl>
+      </div>
+      <div class="min-w-0 lg:col-span-5 ">
+        
+        <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div class="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-brand-accent2/30 via-transparent to-brand-accent/20 blur-3xl" aria-hidden="true"></div>
+          <div class="relative overflow-hidden rounded-[2rem] border border-brand-line bg-brand-surface shadow-2xl shadow-black/10">
+            <img src="https://miskathossain.net/assets/brian-hazelgren/hero.png" alt="Sentra Core Health mobile care access" width="1672" height="941" fetchpriority="high" class="aspect-[16/10] w-full object-cover">
+            <div class="grid grid-cols-3 divide-x divide-brand-line border-t border-brand-line text-center text-xs font-semibold">
+              <div class="px-2 py-4"><i data-lucide="building-2" class="mx-auto mb-1.5 h-5 w-5 text-brand-accent"></i>Workplace</div>
+              <div class="px-2 py-4"><i data-lucide="plane" class="mx-auto mb-1.5 h-5 w-5 text-brand-accent"></i>Traveling</div>
+              <div class="px-2 py-4"><i data-lucide="home" class="mx-auto mb-1.5 h-5 w-5 text-brand-accent"></i>At home</div>
+            </div>
+          </div>
+          <div class="glass float-slow absolute -top-6 left-3 rounded-2xl border p-3.5 sm:-left-8">
+            <div class="flex items-center gap-3"><span class="relative flex h-2.5 w-2.5"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60"></span><span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500"></span></span><p class="text-sm font-bold">Clinician connected</p></div>
+            <p class="mt-0.5 pl-5 text-xs text-brand-muted">via MIRA Link™ &middot; illustrative</p>
+          </div>
+          <div class="glass float-slow absolute -bottom-6 right-3 flex items-center gap-3 rounded-2xl border p-3.5 sm:-right-8">
+            <img src="https://miskathossain.net/assets/brian-hazelgren/portrait.jpg" alt="Brian Hazelgren" width="3325" height="3325" class="h-10 w-10 rounded-full object-cover">
+            <p class="text-xs leading-snug"><span class="font-bold">Brian Hazelgren</span><br><span class="text-brand-muted">Sentra Core Health</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-3 border-t border-brand-line pt-6 sm:flex-row sm:items-center sm:gap-6">
+          <p class="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-brand-muted">Built for</p>
+          <ul class="flex flex-wrap gap-2">
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="building-2" class="h-4 w-4 text-brand-accent2"></i>Employers</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="plane" class="h-4 w-4 text-brand-accent2"></i>Mobile workforces</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="heart-pulse" class="h-4 w-4 text-brand-accent2"></i>Senior-care communities</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-brand-line bg-brand-surface/70 px-3.5 py-1.5 text-sm font-medium"><i data-lucide="smartphone" class="h-4 w-4 text-brand-accent2"></i>At-home app</li>
           </ul>
         </div>
-
-        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
-          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-            <span>Implemented Redesign Enhancements</span>
-          </div>
-          <div class="text-xs text-zinc-300 space-y-2">
-            <div><strong class="text-white">Enterprise Healthcare Flagship:</strong> Built a crisp clinical navy and sky blue interface that immediately earns the trust of hospital executives.</div><div><strong class="text-white">21-Book Author Authority Strip:</strong> Positioned his extensive literary and entrepreneurial track record right beside his healthcare credentials.</div><div><strong class="text-white">C-Suite Advisory Calendar:</strong> Replaced GoDaddy template friction with a high-trust consultation funnel for hospital boards.</div>
-          </div>
-        </div>
       </div>
+    </main>
+  </div>
 
-      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
-        <span>Ready to implement this live?</span>
-        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
+  <!-- Designer preview bar (concept only, not part of the client hero) -->
+  <div id="mh-bar" class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-md font-['Inter',sans-serif] sm:inset-x-auto sm:bottom-6 sm:right-6 sm:mx-0 sm:max-w-none">
+    <div class="flex flex-col gap-2.5 rounded-2xl border border-white/15 bg-zinc-950/75 px-3.5 py-3 text-white shadow-2xl shadow-black/40 backdrop-blur-xl sm:flex-row sm:items-center sm:gap-4 sm:py-2 sm:pl-4 sm:pr-2">
+      <p class="flex items-center justify-center gap-2 text-xs text-white/75 sm:justify-start sm:text-[13px]">
+        <span class="relative flex h-2 w-2"><span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60"></span><span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span></span>
+        <span>Redesign concept for <strong class="font-semibold text-white">Brian Hazelgren</strong></span>
+      </p>
+      <div class="flex gap-2">
+        <button id="mh-notes-btn" type="button" aria-expanded="false" aria-controls="mh-notes" class="inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/10 px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-white/20 sm:flex-none sm:text-[13px]">
+          <i data-lucide="sparkles" class="h-4 w-4 text-emerald-300"></i>Why This Converts (Notes)
+        </button>
+        <a href="https://miskathossain.net" target="_blank" rel="noopener" class="inline-flex flex-1 items-center justify-center gap-1 rounded-xl bg-white px-3.5 py-2 text-xs font-bold text-zinc-950 transition hover:bg-emerald-300 sm:flex-none sm:text-[13px]">Claim This Design &rarr;</a>
       </div>
     </div>
   </div>
 
-  <!-- Navigation with Sentra Core Blue Logo -->
-  <header class="w-full border-b border-sentra-border bg-sentra-bg/95 backdrop-blur-md sticky top-[45px] z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3.5">
-        <img src="/assets/brian-hazelgren/logo.png" alt="Sentra Core Health Logo" class="h-9 sm:h-10 w-auto object-contain">
-        <div class="border-l border-zinc-800 pl-3">
-          <span class="text-sm font-extrabold tracking-tight uppercase block text-white">SENTRA CORE HEALTH</span>
-          <span class="text-[11px] text-sentra-slate font-medium">Brian Hazelgren • Chief Executive Officer</span>
+  <div id="mh-notes" class="fixed inset-0 z-50 hidden font-['Inter',sans-serif]" role="dialog" aria-modal="true" aria-labelledby="mh-notes-title">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-close></div>
+    <div class="absolute inset-x-3 bottom-3 max-h-[85vh] overflow-y-auto rounded-2xl border border-white/15 bg-zinc-950/90 p-5 text-white shadow-2xl backdrop-blur-xl sm:inset-x-auto sm:bottom-24 sm:right-6 sm:w-[27rem] sm:p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-emerald-300">Designer notes</p>
+          <h2 id="mh-notes-title" class="mt-1 text-lg font-bold">Why This Converts</h2>
         </div>
+        <button type="button" data-close data-focus class="rounded-lg p-1.5 text-white/60 transition hover:bg-white/10 hover:text-white" aria-label="Close notes"><i data-lucide="x" class="h-5 w-5"></i></button>
       </div>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-sentra-slate">
-        <a href="#technology" class="hover:text-sentra-cyan transition-colors">Telemedicine Pods</a>
-        <a href="#ecosystem" class="hover:text-sentra-cyan transition-colors">Corporate Ecosystem</a>
-        <a href="#leadership" class="hover:text-sentra-cyan transition-colors">Leadership</a>
-        <a href="https://www.linkedin.com/in/brianhazelgren/" target="_blank" class="hover:text-sentra-cyan flex items-center gap-1.5 transition-colors">
-          <i data-lucide="linkedin" class="w-3.5 h-3.5 text-[#0A66C2]"></i>
-          <span>LinkedIn</span>
-        </a>
-      </nav>
-
-      <div class="flex items-center gap-3">
-        <a href="#inquire" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full bg-sentra-cyan text-black hover:bg-cyan-300 transition-all shadow-md active:scale-95">
-          <span>Enterprise Health Inquiries</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-        </a>
+      <div class="mt-4 rounded-xl border border-rose-400/20 bg-rose-500/10 p-3.5 text-[13px] leading-relaxed text-white/80">
+        <span class="font-semibold text-rose-300">Before:</span> The GoDaddy hero has a good line (&quot;Access To Care In Minutes Not Weeks&quot;) but no CTA in the first screen; &quot;Contact Us&quot; sits in the nav and the webinar promo pushes the explanation down.
       </div>
+      <ul class="mt-4 space-y-3.5">
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Employer-specific promise</strong>The headline keeps their strongest phrase and adds the buyer (your workforce) and the pain (clinic trips and waiting rooms).</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Two CTAs that match buying stages</strong>Ready employers book a demo; earlier-stage HR leaders reserve a webinar seat, which they are already promoting.</p>
+        </li>
+        <li class="flex gap-3">
+          <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-emerald-300"></i>
+          <p class="text-[13px] leading-relaxed text-white/75"><strong class="block text-sm text-white">Ecosystem in one glance</strong>Workplace, travel and at-home access sit right under the hero image, so the model is understood without scrolling.</p>
+        </li>
+      </ul>
+      <a href="https://miskathossain.net" target="_blank" rel="noopener" class="mt-5 flex items-center justify-center gap-1 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-zinc-950 transition hover:bg-emerald-300">Claim This Design &rarr;</a>
     </div>
-  </header>
-
-  <!-- Hero Section (Reference 18.png - Clinical Healthcare Authority with 3-Metric Dock) -->
-  <main class="flex-1 flex flex-col justify-center relative overflow-hidden py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-        
-        <!-- Left: Copy & Value Proposition -->
-        <div class="lg:col-span-7 flex flex-col items-start text-left">
-          
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-6 border border-cyan-500/30 bg-cyan-500/10 text-sentra-cyan">
-            <span class="w-2 h-2 rounded-full bg-sentra-cyan animate-pulse"></span>
-            <span class="uppercase tracking-widest text-[11px] font-bold">AUTONOMOUS TELEMEDICINE PODS • PREVENTIVE CARE ECOSYSTEM</span>
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-black tracking-tight leading-[1.12] mb-6 text-white uppercase">
-            Deploying Autonomous Diagnostic Health Pods Across Corporate America.
-          </h1>
-
-          <p class="text-base sm:text-lg leading-relaxed max-w-xl font-normal text-sentra-slate mb-8">
-            Sentra Core Health, guided by CEO &amp; author Brian Hazelgren, brings full-spectrum vital diagnostics, remote medical consultations, and proactive preventive care directly to enterprise workforces.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-10">
-            <a href="#pod-demo" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all shadow-lg active:scale-[0.98] bg-sentra-cyan text-black hover:bg-cyan-300">
-              <i data-lucide="activity" class="w-4 h-4"></i>
-              <span>Schedule On-Site Pod Demonstration</span>
-            </a>
-            
-            <a href="#ecosystem" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full text-sm font-semibold tracking-wide transition-all bg-sentra-card hover:bg-zinc-800 text-white border border-sentra-border">
-              <i data-lucide="building-2" class="w-4 h-4 text-sentra-cyan"></i>
-              <span>Corporate Ecosystem Plan</span>
-            </a>
-          </div>
-
-          <!-- Proof Metrics (Reference 18.png Horizontal Dock) -->
-          <div class="w-full pt-8 border-t border-sentra-border grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="p-4 rounded-2xl bg-sentra-card border border-sentra-border">
-              <div class="text-2xl font-black text-sentra-cyan mb-0.5">30+ Vitals</div>
-              <div class="text-xs font-bold text-white">Full Pod Screening</div>
-              <div class="text-[11px] text-sentra-slate">Under 7 minutes per employee</div>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-sentra-card border border-sentra-border">
-              <div class="text-2xl font-black text-white mb-0.5">CEO Leadership</div>
-              <div class="text-xs font-bold text-white">Brian Hazelgren</div>
-              <div class="text-[11px] text-sentra-slate">Author &amp; healthcare pioneer</div>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-sentra-card border border-sentra-border">
-              <div class="text-2xl font-black text-sentra-blue mb-0.5">HIPAA / FDA</div>
-              <div class="text-xs font-bold text-white">Clinical Compliance</div>
-              <div class="text-[11px] text-sentra-slate">Encrypted enterprise security</div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: Reference 18.png Telemedicine Pod Hero + Brian Portrait Card -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md lg:max-w-none flex justify-center">
-            
-            <div class="relative w-full rounded-3xl bg-sentra-card border border-sentra-border p-6 shadow-2xl flex flex-col items-center">
-              
-              <div class="w-full flex items-center justify-between pb-4 border-b border-sentra-border mb-5">
-                <span class="text-xs font-mono font-bold tracking-wider text-sentra-cyan">AUTONOMOUS HEALTH POD</span>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-cyan-950/60 text-cyan-400 border border-cyan-800">CLINICAL SUITE</span>
-              </div>
-
-              <!-- Flagship Hero Image (Sentra Core Pod) -->
-              <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-sentra-border shadow-2xl bg-zinc-950 mb-4">
-                <img 
-                  src="/assets/brian-hazelgren/hero.png" 
-                  alt="Sentra Core Health Pod" 
-                  class="w-full h-full object-contain p-2"
-                />
-              </div>
-
-              <!-- Executive Profile Snippet (Brian Hazelgren Portrait) -->
-              <div class="w-full p-4 rounded-xl bg-zinc-950/80 border border-sentra-border flex items-center gap-3.5">
-                <img 
-                  src="/assets/brian-hazelgren/portrait.jpg" 
-                  alt="Brian Hazelgren" 
-                  class="w-12 h-12 rounded-xl object-cover border border-sentra-border shrink-0"
-                />
-                <div>
-                  <div class="text-xs font-bold text-white">Brian Hazelgren • Chief Executive Officer</div>
-                  <div class="text-[11px] text-sentra-slate">Author, "The Passion To Lead" • RX2Live Co-Founder</div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </main>
-
-  <footer class="w-full border-t border-sentra-border py-6 bg-sentra-bg text-center text-xs text-sentra-slate">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2">
-        <img src="/assets/brian-hazelgren/logo.png" alt="Sentra Core" class="h-6 w-auto opacity-70">
-        <span>© 2026 Sentra Core Health LLC. All rights reserved.</span>
-      </div>
-      <div class="text-zinc-500">Live Redesign Preview • Designed with pride by Miskat Hossain</div>
-    </div>
-  </footer>
+  </div>
 
   <script>
     lucide.createIcons();
-    function toggleNotesModal() {
-      const m = document.getElementById('notes-modal');
-      m.classList.toggle('hidden');
-    }
+    (function () {
+      var modal = document.getElementById('mh-notes');
+      var btn = document.getElementById('mh-notes-btn');
+      function setOpen(open) {
+        modal.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { modal.querySelector('[data-focus]').focus(); } else { btn.focus(); }
+      }
+      btn.addEventListener('click', function () { setOpen(modal.classList.contains('hidden')); });
+      modal.querySelectorAll('[data-close]').forEach(function (el) { el.addEventListener('click', function () { setOpen(false); }); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.classList.contains('hidden')) setOpen(false); });
+    })();
   </script>
 </body>
 </html>
