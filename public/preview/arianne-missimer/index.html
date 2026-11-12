@@ -3,300 +3,296 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Arianne Missimer | The Movement Paradigm - Functional Neurology & Physical Therapy</title>
+  <title>The Movement Paradigm | Heal Root Causes. Restore Lasting Whole-Body Resilience.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     ::selection {
-      background-color: #DCFCE7;
-      color: #064E3B;
+      background-color: #68B036;
+      color: #FFFFFF;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #F6FBFE;
+    }
+    .font-editorial {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .btn-brand-green {
+      background-color: #68B036;
+      box-shadow: 0 4px 14px rgba(104, 176, 54, 0.25);
+    }
+    .btn-brand-green:hover {
+      background-color: #5C9F2F;
+      box-shadow: 0 6px 20px rgba(104, 176, 54, 0.35);
     }
   </style>
 </head>
-<body class="bg-white text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-[#F6FBFE] text-[#1E293B] antialiased min-h-screen flex flex-col justify-between selection:bg-[#68B036] selection:text-white">
 
-  <!-- Top Announcement Bar -->
-  <div class="bg-slate-900 text-white text-xs py-1.5 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-white/10 text-white uppercase tracking-wider">
-          <i data-lucide="shield-check" class="w-3 h-3 text-amber-400"></i> DOCTOR OF PHYSICAL THERAPY (DPT)
-        </span>
-        <span class="text-slate-300 font-medium text-[11px] sm:text-xs">TEDX SPEAKER</span>
-      </div>
-      <div class="hidden md:flex items-center gap-3 text-[11px] text-slate-400">
-        <span>Oncology Survivor • Registered Dietitian & Functional Medicine Expert</span>
-      </div>
-    </div>
-  </div>
+  <!-- Header Navigation (Pixel-Perfect Match with Mockup) -->
+  <header class="w-full pt-4 pb-3 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Left: Logo Lockup -->
+      <a href="#" class="flex items-center group">
+        <img src="/assets/arianne-missimer/movement_paradigm_logo.png" alt="The Movement Paradigm | Integrative Health & Physical Therapy" class="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" />
+      </a>
 
-  <!-- Header Navigation -->
-  <header class="bg-white border-b border-slate-100 sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3.5">
-        <img src="/assets/arianne-missimer/logo.png" alt="The Movement Paradigm" class="h-9 w-auto object-contain" />
-        <div class="border-l border-slate-200 pl-3 hidden sm:block">
-          <span class="block text-xs font-black tracking-wider uppercase text-slate-900">The Movement Paradigm</span>
-          <span class="block text-[10px] text-slate-500 font-medium">INTEGRATIVE FUNCTIONAL NEUROLOGY & MOVEMENT THERAPY</span>
-        </div>
-      </div>
-
-      <!-- Desktop Links -->
-      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-600">
-        
-    <a href="#functionalneurology" class="hover:text-slate-900 transition-colors">Functional Neurology</a>
-  
-    <a href="#vagusnerverehab" class="hover:text-slate-900 transition-colors">Vagus Nerve Rehab</a>
-  
-    <a href="#clinicservices" class="hover:text-slate-900 transition-colors">Clinic Services</a>
-  
-    <a href="#tedxtalk" class="hover:text-slate-900 transition-colors">TEDx Talk</a>
-  
-    <a href="#intake" class="hover:text-slate-900 transition-colors">Intake</a>
-  
+      <!-- Middle: Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 lg:gap-9 text-sm font-medium text-[#334155]">
+        <a href="#services" onclick="openModal('services-modal'); return false;" class="hover:text-[#68B036] transition-colors duration-200">Services</a>
+        <a href="#about" onclick="openModal('about-modal'); return false;" class="hover:text-[#68B036] transition-colors duration-200">About</a>
+        <a href="#events" onclick="openModal('events-modal'); return false;" class="hover:text-[#68B036] transition-colors duration-200">Events</a>
+        <a href="#media" onclick="openModal('media-modal'); return false;" class="hover:text-[#68B036] transition-colors duration-200">Media</a>
+        <a href="#contact" onclick="openModal('discovery-modal'); return false;" class="hover:text-[#68B036] transition-colors duration-200">Contact</a>
       </nav>
 
-      <!-- Action CTAs -->
+      <!-- Right: Action CTAs -->
       <div class="flex items-center gap-3">
-        <a href="https://themovementparadigm.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-slate-900 px-3 py-1.5 rounded-lg border border-slate-200">
+        <a href="https://themovementparadigm.com" target="_blank" rel="noopener noreferrer" class="hidden xl:inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-[#68B036] px-3 py-1.5 rounded-full border border-slate-300 hover:border-[#68B036] transition-all">
           <span>Original Site</span>
           <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
         </a>
-        <a href="#cta" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 shadow-xs transition-all">
-          <span>Book Clinical Evaluation</span>
-          <i data-lucide="activity" class="w-3.5 h-3.5"></i>
-        </a>
+        <button onclick="openModal('discovery-modal')" class="btn-brand-green text-white font-semibold text-xs sm:text-sm px-5 sm:px-6 py-2.5 rounded-full transition-all duration-200 active:scale-95">
+          Book Discovery Call
+        </button>
       </div>
+
     </div>
   </header>
 
-  <!-- Clean High-Utility Hero Section -->
-  <main class="flex-1 py-6 lg:py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+  <!-- Hero Main Section -->
+  <main class="flex-1 flex items-center py-6 lg:py-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
-        <!-- Left Column: Copy & Interactive Diagnostic -->
-        <div class="lg:col-span-7 space-y-4">
+        <!-- Left Column: Copy & Value Proposition -->
+        <div class="lg:col-span-7 space-y-5 sm:space-y-6">
           
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-bold bg-slate-100 text-slate-800 border border-slate-200">
-            <span class="w-2 h-2 rounded-full bg-slate-900"></span>
-            <span>INTEGRATIVE FUNCTIONAL NEUROLOGY & MOVEMENT THERAPY</span>
+          <!-- Kicker (Exact Match: Green uppercase tracked sans) -->
+          <div class="text-xs sm:text-[13px] font-bold tracking-[0.16em] text-[#76A83C] uppercase">
+            HOLISTIC PHYSICAL THERAPY &amp; FUNCTIONAL MEDICINE
           </div>
 
-          <h1 class="text-3xl sm:text-4xl lg:text-[40px] font-black text-slate-900 leading-[1.12] tracking-tight">
-            Address the Root Cause of Chronic Pain & Neurological Dysfunction.
+          <!-- Editorial Display H1 -->
+          <h1 class="font-editorial text-4xl sm:text-5xl lg:text-[58px] xl:text-[62px] font-bold text-[#001527] tracking-tight leading-[1.1]">
+            Heal Root Causes.<br>
+            Restore Lasting<br>
+            Whole-Body Resilience.
           </h1>
 
-          <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl font-normal">
-            Dr. Arianne Missimer combines doctor-level physical therapy with functional neurology, gut-brain restoration, and vagus nerve rehabilitation when conventional treatments plateau.
+          <!-- Value Proposition Body -->
+          <p class="text-base sm:text-lg text-[#464E51] leading-relaxed max-w-xl font-normal">
+            An integrative approach combining holistic physical therapy, functional medicine, and nervous system regulation to resolve chronic pain and restore your energy.
           </p>
 
-          <!-- Bespoke Interactive Widget -->
+          <!-- Action Buttons Row -->
+          <div class="pt-2 flex flex-wrap items-center gap-5 sm:gap-6">
+            <button onclick="openModal('discovery-modal')" class="btn-brand-green text-white font-semibold text-sm sm:text-base px-8 py-3.5 rounded-full transition-all duration-200 active:scale-98">
+              Book Your Discovery Call
+            </button>
+            <button onclick="openModal('pillars-modal')" class="inline-flex items-center gap-1.5 text-sm sm:text-base font-bold text-[#001527] hover:text-[#68B036] transition-colors duration-200">
+              <span>Explore Our 3 Pillars</span>
+              <span class="text-lg">→</span>
+            </button>
+          </div>
+
+          <!-- Reassurance Footer -->
+          <div class="text-xs sm:text-sm text-[#748287] font-medium tracking-wide pt-1">
+            1-on-1 Root-Cause Assessment • In-Person &amp; Virtual Care
+          </div>
+
+        </div>
+
+        <!-- Right Column: Treatment Photo with Frosted Glass Badge Overlay -->
+        <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
           
-      <div class="p-4 sm:p-5 rounded-2xl bg-emerald-50/50 border border-emerald-200/80 space-y-3">
-        <div class="flex items-center justify-between">
-          <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-800 block">60-Second Root Cause Triage</span>
-            <span class="text-xs sm:text-sm font-bold text-slate-900">Select your persistent physical symptom:</span>
-          </div>
-          <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[11px] font-bold">Clinical Algorithm</span>
-        </div>
-        <div class="grid grid-cols-3 gap-2">
-          <button onclick="setSymptom('nerve', 'Vagus Nerve Dysfunction: Brain fog, digestive paralysis, and chronic autonomic dysregulation.')" class="symp-btn active p-2.5 rounded-xl border-2 border-emerald-800 bg-white text-left transition-all">
-            <span class="block text-xs font-bold text-slate-900">Vagus & Brain Fog</span>
-            <span class="block text-[10px] text-emerald-700 font-semibold">Autonomic Rehab</span>
-          </button>
-          <button onclick="setSymptom('pain', 'Chronic Pain & Joint Plateau: Unresolved neuro-muscular compensation patterns.')" class="symp-btn p-2.5 rounded-xl border border-slate-200 hover:border-emerald-300 bg-white text-left transition-all">
-            <span class="block text-xs font-bold text-slate-900">Chronic Pain</span>
-            <span class="block text-[10px] text-slate-500 font-semibold">Neural Movement</span>
-          </button>
-          <button onclick="setSymptom('gut', 'Gut-Brain Axis: Inflammation driving systemic fatigue and food sensitivities.')" class="symp-btn p-2.5 rounded-xl border border-slate-200 hover:border-emerald-300 bg-white text-left transition-all">
-            <span class="block text-xs font-bold text-slate-900">Gut-Brain Axis</span>
-            <span class="block text-[10px] text-slate-500 font-semibold">Integrative Health</span>
-          </button>
-        </div>
-        <div class="p-3 rounded-xl bg-white border border-emerald-200 text-xs text-slate-700 flex items-start gap-2.5">
-          <i data-lucide="check-circle" class="w-4 h-4 text-emerald-700 flex-shrink-0 mt-0.5"></i>
-          <div>
-            <span id="symp-desc" class="text-slate-700 font-medium">Vagus Nerve Dysfunction: Brain fog, digestive paralysis, and chronic autonomic dysregulation. Recommended: Comprehensive Neural-Metabolic Exam.</span>
-          </div>
-        </div>
-      </div>
-    
-
-          <!-- Metric Strip -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
-            
-    <div class="p-3 rounded-xl bg-white border border-slate-200">
-      <div class="text-xl sm:text-2xl font-black text-slate-900">DPT</div>
-      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">Physical Therapy Doctor</div>
-    </div>
-  
-    <div class="p-3 rounded-xl bg-white border border-slate-200">
-      <div class="text-xl sm:text-2xl font-black text-slate-900">TEDx</div>
-      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">Keynote Speaker</div>
-    </div>
-  
-    <div class="p-3 rounded-xl bg-white border border-slate-200">
-      <div class="text-xl sm:text-2xl font-black text-slate-900">100%</div>
-      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">Root Cause Focus</div>
-    </div>
-  
-    <div class="p-3 rounded-xl bg-white border border-slate-200">
-      <div class="text-xl sm:text-2xl font-black text-slate-900">In-Clinic</div>
-      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">& Virtual Telehealth</div>
-    </div>
-  
+          <!-- Treatment Photo Container with Rounded Corners & Soft Ambient Shadow -->
+          <div class="relative w-full max-w-[480px] sm:max-w-[530px] rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,21,39,0.12)] border border-slate-200/50 bg-white">
+            <img src="/assets/arianne-missimer/treatment_photo_composite.jpg" alt="Dr. Arianne Missimer & Team • Integrative Mind-Body Care" class="w-full h-auto object-cover block transition-transform duration-700 hover:scale-[1.02]" />
           </div>
 
-        </div>
-
-        <!-- Right Column: Visual Photographic Showcase & Intake Form -->
-        <div class="lg:col-span-5 space-y-3">
-          <div class="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-lg">
-            
-            <!-- Real Photo Frame -->
-            <div class="relative rounded-xl overflow-hidden border border-slate-200 bg-slate-100 group aspect-[4/3] sm:aspect-[16/10]">
-              <img src="/assets/arianne-missimer/arianne-portrait.png" alt="Dr Arianne Missimer" class="w-full h-full object-cover object-center block transition-transform duration-500 group-hover:scale-102" onerror="this.src='/assets/placeholder.jpg'" />
-              
-              <!-- Bottom Image Tag -->
-              <div class="absolute bottom-2.5 left-2.5 bg-slate-900/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1.5 shadow">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-400"></i>
-                <span>Dr. Arianne Missimer • DPT, MS, RD, CSCS</span>
-              </div>
-            </div>
-
-            <!-- Trust Badges Strip -->
-            <div class="flex items-center justify-between py-2 px-3 rounded-xl bg-slate-50 border border-slate-200/80 my-3 text-xs text-slate-600">
-              <span class="font-bold text-slate-900 flex items-center gap-1.5">
-                <i data-lucide="award" class="w-3.5 h-3.5 text-slate-700"></i> DPT Doctor of PT
-              </span>
-              <span>•</span>
-              <span>TEDx Speaker</span>
-              <span>•</span>
-              <span>Oncology Survivor</span>
-            </div>
-
-            <!-- Direct Intake Gateway -->
-            <div class="space-y-2.5" id="cta">
-              <div class="flex items-center justify-between text-xs">
-                <span class="font-bold text-slate-900 uppercase tracking-wider text-[11px]">Direct Consultation Request</span>
-                <span class="text-slate-500 font-medium text-[10px]">Strictly Confidential</span>
-              </div>
-
-              <div class="grid grid-cols-2 gap-2">
-                <input type="text" placeholder="Full Name" class="col-span-2 px-3 py-2 rounded-lg border border-slate-300 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-slate-900" />
-                <input type="email" placeholder="Email Address" class="px-3 py-2 rounded-lg border border-slate-300 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-slate-900" />
-                <input type="tel" placeholder="Phone Number" class="px-3 py-2 rounded-lg border border-slate-300 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-slate-900" />
-              </div>
-
-              <button class="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider bg-slate-900 hover:bg-slate-800 text-white shadow-xs transition-all flex items-center justify-center gap-2">
-                <i data-lucide="activity" class="w-3.5 h-3.5"></i>
-                <span>Book Clinical Evaluation</span>
-              </button>
-
-              <div class="flex items-center justify-center gap-1.5 text-[10px] text-slate-500">
-                <i data-lucide="lock" class="w-3 h-3 text-slate-400"></i>
-                <span>Direct advisory callback • Never shared with third parties</span>
-              </div>
-            </div>
-
-          </div>
         </div>
 
       </div>
     </div>
   </main>
 
-  <!-- Bottom Preview Bar & Audit Modal -->
-  <div id="designer-preview-bar" class="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 w-auto max-w-[95vw] bg-slate-900 text-white px-3.5 py-2 rounded-full shadow-2xl border border-slate-700 flex items-center gap-3 text-xs">
-    <div class="flex items-center gap-2">
-      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-      <span class="font-bold text-slate-100">Bespoke Hero Redesign</span>
-      <span class="text-slate-300 hidden sm:inline">• Dr Arianne Missimer</span>
+  <!-- Bottom Press / As Featured On Strip (Full-Width Grounded Bar) -->
+  <footer class="w-full border-t border-slate-200/50 py-4 sm:py-5 bg-[#F3F8F7]/60">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-center">
+      <img src="/assets/arianne-missimer/press_logos_strip.png" alt="As Featured On: ABC, CBS, FOX, NBC" class="h-9 sm:h-11 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity" />
     </div>
-    <div class="h-3.5 w-px bg-slate-700 hidden sm:block"></div>
-    <div class="flex items-center gap-2">
-      <button onclick="document.getElementById('notes-modal').classList.remove('hidden')" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors flex items-center gap-1.5 border border-slate-700">
-        <i data-lucide="clipboard-list" class="w-3.5 h-3.5"></i>
-        <span>Site Audit &amp; Notes</span>
+  </footer>
+
+  <!-- Interactive Modal: Book Discovery Call -->
+  <div id="discovery-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white border border-slate-200 rounded-3xl max-w-lg w-full p-6 sm:p-8 text-left shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
+      <button onclick="closeModal('discovery-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 p-1 rounded-full hover:bg-slate-100 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
       </button>
-      <a href="https://themovementparadigm.com" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors flex items-center gap-1.5 border border-slate-700">
-        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-        <span>Current Site</span>
-      </a>
+
+      <div class="space-y-2">
+        <span class="text-xs font-bold text-[#68B036] uppercase tracking-widest block">Confidential Clinical Consultation</span>
+        <h3 class="text-2xl font-editorial font-bold text-[#001527]">Schedule Your Discovery Call</h3>
+        <p class="text-sm text-slate-600">Connect directly with Dr. Arianne Missimer's clinical team to identify the root cause of your chronic symptoms.</p>
+      </div>
+
+      <form onsubmit="event.preventDefault(); alert('Thank you! Your discovery call request has been received. Our clinical intake coordinator will reach out within 24 business hours.'); closeModal('discovery-modal');" class="mt-6 space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name</label>
+          <input type="text" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#68B036] focus:border-transparent transition-all" />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
+            <input type="email" required placeholder="sarah@example.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#68B036] focus:border-transparent transition-all" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number</label>
+            <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#68B036] focus:border-transparent transition-all" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Care Format Preference</label>
+          <select class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-[#68B036] focus:border-transparent transition-all">
+            <option>Virtual Telehealth Intake (Global &amp; Nationwide)</option>
+            <option>In-Person Clinical Care (Downingtown / West Chester Clinic)</option>
+            <option>Hybrid (In-Person Assessment + Virtual Follow-ups)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Primary Challenge You Would Like Addressed</label>
+          <textarea rows="2" placeholder="e.g. Chronic neck & back pain, persistent brain fog, gut issues, or vagus nerve dysregulation..." class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#68B036] focus:border-transparent transition-all"></textarea>
+        </div>
+        <button type="submit" class="w-full btn-brand-green text-white font-semibold text-sm py-3.5 rounded-xl transition-all duration-200 active:scale-98">
+          Request Discovery Call
+        </button>
+      </form>
     </div>
   </div>
 
-  <!-- Audit Notes Modal -->
-  <div id="notes-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 text-slate-900">
-      <div class="flex items-center justify-between pb-4 border-b border-slate-200">
-        <div>
-          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Lead Conversion Audit</span>
-          <h2 class="text-xl font-bold text-slate-900 mt-1">Why This Redesign Converts for Dr Arianne Missimer</h2>
+  <!-- Interactive Modal: Explore 3 Pillars -->
+  <div id="pillars-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white border border-slate-200 rounded-3xl max-w-2xl w-full p-6 sm:p-8 text-left shadow-2xl relative animate-in fade-in zoom-in-95 duration-200 max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal('pillars-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 p-1 rounded-full hover:bg-slate-100 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="space-y-2 mb-6">
+        <span class="text-xs font-bold text-[#68B036] uppercase tracking-widest block">The Movement Paradigm Methodology</span>
+        <h3 class="text-2xl font-editorial font-bold text-[#001527]">Our 3 Integrated Healing Pillars</h3>
+        <p class="text-sm text-slate-600">Why treating symptoms in isolation fails, and how our triad approach restores systemic vitality.</p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="p-5 rounded-2xl bg-emerald-50/60 border border-emerald-100 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-[#68B036] text-white flex items-center justify-center font-bold flex-shrink-0">1</div>
+          <div>
+            <h4 class="font-bold text-[#001527] text-base">Holistic Physical Therapy &amp; Biomechanics</h4>
+            <p class="text-sm text-slate-600 mt-1">Doctor-level movement therapy, joint mobilization, myofascial release, and progressive functional retraining to restore pain-free biomechanics.</p>
+          </div>
         </div>
-        <button onclick="document.getElementById('notes-modal').classList.add('hidden')" class="p-2 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-slate-700">
-          <i data-lucide="x" class="w-5 h-5"></i>
+
+        <div class="p-5 rounded-2xl bg-teal-50/60 border border-teal-100 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center font-bold flex-shrink-0">2</div>
+          <div>
+            <h4 class="font-bold text-[#001527] text-base">Functional Medicine &amp; Gut-Brain Axis</h4>
+            <p class="text-sm text-slate-600 mt-1">Specialized laboratory analysis of systemic inflammation, hormonal balance, gut microbiome permeability, and nutritional deficiencies that fuel chronic pain.</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-sky-50/60 border border-sky-100 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center font-bold flex-shrink-0">3</div>
+          <div>
+            <h4 class="font-bold text-[#001527] text-base">Functional Neurology &amp; Vagus Nerve Regulation</h4>
+            <p class="text-sm text-slate-600 mt-1">Targeted sensory, vestibular, oculomotor, and autonomic exercises that shift your nervous system out of chronic fight-or-flight into restorative healing.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 flex justify-end">
+        <button onclick="closeModal('pillars-modal'); openModal('discovery-modal');" class="btn-brand-green text-white font-semibold text-sm px-6 py-3 rounded-full transition-all duration-200">
+          Book Your 3-Pillar Assessment
         </button>
       </div>
+    </div>
+  </div>
 
-      <div class="mt-6 space-y-5 text-sm text-slate-700">
-        <div>
-          <h3 class="font-bold text-slate-900 flex items-center gap-2">
-            <span class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs font-bold">1</span>
-            Current Site Problem:
-          </h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">
-            Current site has a cluttered 9-item menu and competing CTAs that dilute her functional neurology authority and overwhelm pain patients.
-          </p>
-        </div>
+  <!-- Interactive Modal: Services -->
+  <div id="services-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white border border-slate-200 rounded-3xl max-w-lg w-full p-6 sm:p-8 text-left shadow-2xl relative">
+      <button onclick="closeModal('services-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <h3 class="text-2xl font-editorial font-bold text-[#001527] mb-3">Clinical Care Programs</h3>
+      <ul class="space-y-3 text-sm text-slate-600">
+        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#68B036]"></i> One-on-One Physical Therapy &amp; Movement Screen</li>
+        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#68B036]"></i> Vagus Nerve Reset &amp; Nervous System Retraining</li>
+        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#68B036]"></i> Functional Medicine Testing &amp; Oncology Recovery</li>
+        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-[#68B036]"></i> Virtual Telehealth Concierge Programs</li>
+      </ul>
+      <button onclick="closeModal('services-modal'); openModal('discovery-modal');" class="w-full mt-6 btn-brand-green text-white font-semibold text-sm py-3 rounded-xl">
+        Inquire About Programs
+      </button>
+    </div>
+  </div>
 
-        <div>
-          <h3 class="font-bold text-slate-900 flex items-center gap-2">
-            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">2</span>
-            Our Solution:
-          </h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">
-            Clean clinical wellness hero with an interactive 60-second root cause assessment and clear pathways to in-clinic and virtual care.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="font-bold text-slate-900 flex items-center gap-2">
-            <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-bold">3</span>
-            Brand Fidelity &amp; Viewport Precision:
-          </h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">
-            Engineered on a spotless canvas with exact 8pt grid whitespace, zero AI gradient slop, authentic photographic assets, and responsive 1440×900 viewport lock.
-          </p>
-        </div>
-      </div>
-
-      <div class="mt-8 pt-4 border-t border-slate-200 flex justify-end">
-        <button onclick="document.getElementById('notes-modal').classList.add('hidden')" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-colors">
-          Close Audit Notes
-        </button>
-      </div>
+  <!-- Interactive Modal: About -->
+  <div id="about-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white border border-slate-200 rounded-3xl max-w-lg w-full p-6 sm:p-8 text-left shadow-2xl relative">
+      <button onclick="closeModal('about-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <h3 class="text-2xl font-editorial font-bold text-[#001527] mb-2">About Dr. Arianne Missimer</h3>
+      <p class="text-xs font-semibold text-[#68B036] uppercase tracking-wider mb-4">DPT, RD, CSCS • Oncology Survivor • TEDx Speaker</p>
+      <p class="text-sm text-slate-600 leading-relaxed mb-4">
+        Dr. Arianne Missimer is an award-winning Doctor of Physical Therapy, Registered Dietitian, and human movement specialist. After overcoming Stage 3 cancer, she committed her life to uncovering the root drivers of systemic inflammation, nervous system trauma, and neuromuscular dysfunction.
+      </p>
+      <button onclick="closeModal('about-modal'); openModal('discovery-modal');" class="w-full btn-brand-green text-white font-semibold text-sm py-3 rounded-xl">
+        Work With Dr. Arianne
+      </button>
     </div>
   </div>
 
   <script>
     lucide.createIcons();
-    
-      function setSymptom(key, desc) {
-        document.querySelectorAll('.symp-btn').forEach(b => {
-          b.className = 'symp-btn p-2.5 rounded-xl border border-slate-200 hover:border-emerald-300 bg-white text-left transition-all';
-          b.querySelector('span:last-child').className = 'block text-[10px] text-slate-500 font-semibold';
-        });
-        event.currentTarget.className = 'symp-btn active p-2.5 rounded-xl border-2 border-emerald-800 bg-white text-left transition-all';
-        event.currentTarget.querySelector('span:last-child').className = 'block text-[10px] text-emerald-700 font-semibold';
-        document.getElementById('symp-desc').textContent = desc;
+
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
       }
-    
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('[id$="-modal"]').forEach(m => m.classList.add('hidden'));
+        document.body.style.overflow = '';
+      }
+    });
+
+    document.querySelectorAll('[id$="-modal"]').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      });
+    });
   </script>
 </body>
 </html>
