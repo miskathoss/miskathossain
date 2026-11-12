@@ -6,45 +6,45 @@
   <title>She's Got Clients | Scale to $10K+ Months Working Half the Hours</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     ::selection {
-      background-color: #C2887B;
+      background-color: #BA8679;
       color: #FFFFFF;
     }
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #F8F4F1;
+      background-color: #F9F5F2;
     }
     .font-editorial {
       font-family: 'Playfair Display', Georgia, serif;
     }
     .bg-badge-terracotta {
-      background-color: #C2887B;
+      background-color: #BA8679;
     }
     .btn-dark-pill {
-      background-color: #23161F;
+      background-color: #23171F;
     }
     .btn-dark-pill:hover {
-      background-color: #382432;
+      background-color: #382633;
     }
   </style>
 </head>
-<body class="bg-[#F8F4F1] text-[#281D23] antialiased min-h-screen flex flex-col justify-between selection:bg-[#C2887B] selection:text-white">
+<body class="bg-[#F9F5F2] text-[#281D23] antialiased min-h-screen flex flex-col justify-between selection:bg-[#BA8679] selection:text-white overflow-x-hidden">
 
   <!-- Header Navigation (Exact Mockup Match) -->
-  <header class="w-full pt-4 pb-3 px-6 lg:px-12">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
+  <header class="w-full pt-4 sm:pt-5 pb-3 px-4 sm:px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
       
-      <!-- Left: Logo Lockup -->
-      <a href="#" class="flex items-center group">
-        <img src="/assets/christine-gallagher/shes_got_clients_logo.png" alt="She's Got Clients" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+      <!-- Left: Logo Lockup (Crisp Vector Typography) -->
+      <a href="#" class="flex items-center group shrink">
+        <img src="/assets/christine-gallagher/shes_got_clients_logo.png" alt="She's Got Clients" class="h-7 sm:h-9 md:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" />
       </a>
 
       <!-- Middle: Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-7 lg:gap-9 text-sm font-medium text-[#524C4E]">
+      <nav class="hidden md:flex items-center gap-7 lg:gap-9 text-sm font-medium text-[#4A3E43]">
         <a href="#about" onclick="openModal('about-modal'); return false;" class="hover:text-[#281D23] transition-colors duration-200">About</a>
         <a href="#results" onclick="openModal('case-studies-modal'); return false;" class="hover:text-[#281D23] transition-colors duration-200">Results</a>
         <a href="#podcast" onclick="openModal('podcast-modal'); return false;" class="hover:text-[#281D23] transition-colors duration-200">Podcast</a>
@@ -52,13 +52,9 @@
         <a href="#blog" onclick="openModal('case-studies-modal'); return false;" class="hover:text-[#281D23] transition-colors duration-200">Blog</a>
       </nav>
 
-      <!-- Right: Action CTAs -->
-      <div class="flex items-center gap-3">
-        <a href="https://shesgotclients.com" target="_blank" rel="noopener noreferrer" class="hidden xl:inline-flex items-center gap-1.5 text-xs text-[#7D7678] hover:text-[#281D23] px-3 py-1.5 rounded-full border border-[#DED7D2] hover:border-[#281D23] transition-all">
-          <span>Original Site</span>
-          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-        </a>
-        <button onclick="openModal('call-modal')" class="btn-dark-pill text-white font-medium text-xs sm:text-sm px-5 sm:px-6 py-2.5 rounded-full transition-all duration-200 active:scale-95 shadow-sm">
+      <!-- Right: Action CTA Button -->
+      <div class="flex items-center gap-3 shrink-0">
+        <button onclick="openModal('call-modal')" class="btn-dark-pill text-white font-medium text-xs sm:text-sm px-4 sm:px-6 py-2 sm:py-2.5 rounded-full transition-all duration-200 active:scale-95 shadow-sm whitespace-nowrap">
           Book a Call
         </button>
       </div>
@@ -68,36 +64,36 @@
 
   <!-- Hero Main Section -->
   <main class="flex-1 flex items-center py-6 lg:py-8">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
         
         <!-- Left Column: Copy & Value Proposition -->
-        <div class="lg:col-span-7 space-y-5 sm:space-y-6">
+        <div class="lg:col-span-7 space-y-4 sm:space-y-6">
           
           <!-- Kicker (Exact Match: Terracotta rounded badge with uppercase tracking) -->
           <div>
-            <span class="inline-block bg-badge-terracotta text-white text-[11px] sm:text-xs font-bold tracking-[0.12em] px-3.5 py-1.5 rounded-lg uppercase shadow-xs">
+            <span class="inline-block bg-badge-terracotta text-white text-[10px] sm:text-xs font-bold tracking-[0.14em] px-3.5 py-1.5 rounded-md uppercase">
               FOR SPIRITUAL COACHES &amp; PRACTITIONERS
             </span>
           </div>
 
           <!-- Editorial Display H1 -->
-          <h1 class="font-editorial text-4xl sm:text-5xl lg:text-[58px] xl:text-[62px] font-bold text-[#281D23] tracking-tight leading-[1.12]">
+          <h1 class="font-editorial text-3xl sm:text-5xl lg:text-[54px] xl:text-[58px] font-bold text-[#281D23] tracking-tight leading-[1.14]">
             Scale to $10K+ Months<br>
             Working Half the Hours
           </h1>
 
           <!-- Value Proposition Body -->
-          <p class="text-base sm:text-lg text-[#524C4E] leading-relaxed max-w-xl font-normal">
+          <p class="text-sm sm:text-lg text-[#564B50] leading-relaxed max-w-xl font-normal">
             A simplified client-acquisition system and intentional energy strategy that helps heart-centered experts replace hustle with predictable, high-ticket revenue.
           </p>
 
           <!-- Action Buttons Row -->
-          <div class="pt-2 flex flex-wrap items-center gap-5 sm:gap-6">
-            <button onclick="openModal('blueprint-modal')" class="btn-dark-pill text-white font-medium text-sm sm:text-base px-8 py-3.5 rounded-full transition-all duration-200 active:scale-98 shadow-md">
+          <div class="pt-2 flex flex-col sm:flex-row sm:items-center items-start gap-4 sm:gap-6">
+            <button onclick="openModal('blueprint-modal')" class="btn-dark-pill text-white font-medium text-xs sm:text-base px-6 sm:px-8 py-3 sm:py-3.5 rounded-full transition-all duration-200 active:scale-98 shadow-md">
               Get the Free Client Blueprint
             </button>
-            <button onclick="openModal('case-studies-modal')" class="inline-flex items-center gap-1.5 text-sm sm:text-base font-semibold text-[#8E756E] hover:text-[#281D23] transition-colors duration-200">
+            <button onclick="openModal('case-studies-modal')" class="inline-flex items-center gap-2 text-xs sm:text-base font-semibold text-[#8E756E] hover:text-[#281D23] transition-colors duration-200">
               <span>Watch Client Case Studies</span>
               <span class="text-lg">→</span>
             </button>
@@ -113,9 +109,22 @@
         <!-- Right Column: Lifestyle Portrait with Floating Frosted Glass Card -->
         <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
           
-          <!-- Portrait Composite Container -->
-          <div class="relative w-full max-w-[460px] sm:max-w-[500px]">
-            <img src="/assets/christine-gallagher/christine_hero_composite.png" alt="Christine Gallagher • 5-Figure+ Monthly Systems • Simplified Marketing" class="w-full h-auto object-contain block transition-transform duration-700 hover:scale-[1.02]" />
+          <!-- Portrait + Frosted Glass Card Container -->
+          <div class="relative w-full max-w-[341px] sm:max-w-[375px]">
+            
+            <!-- Rounded Portrait Frame -->
+            <div class="rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-[0_20px_50px_rgba(40,29,35,0.12)] border border-[#EAE3DE]/60 bg-[#FAF4F0]">
+              <img src="/assets/christine-gallagher/christine_portrait_full.jpg" alt="Christine Gallagher • Scale to $10K+ Months" class="w-full h-auto object-cover block transition-transform duration-700 hover:scale-[1.02]" />
+            </div>
+
+            <!-- Authentic Frosted Glass Badge Overlay (Floating left-overhang exactly matching mockup) -->
+            <div class="absolute bottom-[20px] sm:bottom-[30px] left-3 sm:-left-[38px] max-w-[calc(100%-24px)] sm:w-[278px] bg-white/85 backdrop-blur-md border border-white/90 rounded-[18px] sm:rounded-[20px] px-4 sm:px-5 py-3 sm:py-4 shadow-[0_12px_36px_rgba(40,29,35,0.12)] z-10 select-none">
+              <div class="font-editorial text-[15px] sm:text-[18px] text-[#281D23] font-normal tracking-tight leading-snug whitespace-nowrap">5-Figure+ Monthly Systems</div>
+              <div class="font-editorial text-[15px] sm:text-[18px] text-[#281D23] font-normal tracking-tight leading-snug whitespace-nowrap mt-1">
+                • Simplified Marketing
+              </div>
+            </div>
+
           </div>
 
         </div>
@@ -124,10 +133,10 @@
     </div>
   </main>
 
-  <!-- Bottom Press / As Seen On Strip (Full-Width Grounded Bar) -->
-  <footer class="w-full border-t border-[#EAE3DE] py-4 sm:py-5 bg-[#F6F1ED]/60">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-center">
-      <img src="/assets/christine-gallagher/press_logos_strip.png" alt="As seen on: Newsday, BlogHer, SocialMedia Today, SocialMedia Examiner, Huffington Post" class="h-9 sm:h-11 md:h-12 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity" />
+  <!-- Bottom Press / As Seen On Strip (Seamless floating bar matching mockup) -->
+  <footer class="w-full pb-6 pt-3 px-4 bg-transparent">
+    <div class="max-w-7xl mx-auto flex items-center justify-center">
+      <img src="/assets/christine-gallagher/press_logos_strip.png" alt="As seen on: Newsday, BlogHer, SocialMedia Today, SocialMedia Examiner, Huffington Post" class="h-6 sm:h-8 md:h-9 max-w-full w-auto object-contain transition-opacity" />
     </div>
   </footer>
 
@@ -139,23 +148,23 @@
       </button>
 
       <div class="space-y-2">
-        <span class="text-xs font-bold text-[#C2887B] uppercase tracking-widest block">Instant Digital Access</span>
+        <span class="text-xs font-bold text-[#BA8679] uppercase tracking-widest block">Instant Digital Access</span>
         <h3 class="text-2xl font-editorial font-bold text-[#281D23]">Download The 10K Client Blueprint</h3>
-        <p class="text-sm text-[#524C4E]">The exact 4-part framework heart-centered practitioners use to enroll high-ticket dream clients consistently without burnout.</p>
+        <p class="text-sm text-[#564B50]">The exact 4-part framework heart-centered practitioners use to enroll high-ticket dream clients consistently without burnout.</p>
       </div>
 
       <form onsubmit="event.preventDefault(); alert('Success! The Free 10K Client Blueprint and 12-minute video training have been sent to your inbox.'); closeModal('blueprint-modal');" class="mt-6 space-y-4">
         <div>
           <label class="block text-xs font-semibold text-stone-700 mb-1">Your First &amp; Last Name</label>
-          <input type="text" required placeholder="e.g. Maya Lin" class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#C2887B] focus:border-transparent transition-all" />
+          <input type="text" required placeholder="e.g. Maya Lin" class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#BA8679] focus:border-transparent transition-all" />
         </div>
         <div>
           <label class="block text-xs font-semibold text-stone-700 mb-1">Best Email Address</label>
-          <input type="email" required placeholder="maya@yourdomain.com" class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#C2887B] focus:border-transparent transition-all" />
+          <input type="email" required placeholder="maya@yourdomain.com" class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#BA8679] focus:border-transparent transition-all" />
         </div>
         <div>
           <label class="block text-xs font-semibold text-stone-700 mb-1">Your Practice / Coaching Focus</label>
-          <select class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-700 text-sm focus:outline-none focus:ring-2 focus:ring-[#C2887B] focus:border-transparent transition-all">
+          <select class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-700 text-sm focus:outline-none focus:ring-2 focus:ring-[#BA8679] focus:border-transparent transition-all">
             <option>Spiritual / Intuitive Coaching</option>
             <option>Holistic Wellness &amp; Energy Healing</option>
             <option>Executive Leadership &amp; Mindset</option>
@@ -164,7 +173,7 @@
         </div>
         <div>
           <label class="block text-xs font-semibold text-stone-700 mb-1">Current Monthly Revenue Range</label>
-          <select class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-700 text-sm focus:outline-none focus:ring-2 focus:ring-[#C2887B] focus:border-transparent transition-all">
+          <select class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-700 text-sm focus:outline-none focus:ring-2 focus:ring-[#BA8679] focus:border-transparent transition-all">
             <option>Under $3,000 / month</option>
             <option>$3,000 - $8,000 / month</option>
             <option>$8,000 - $15,000 / month</option>
@@ -186,29 +195,29 @@
       </button>
 
       <div class="space-y-2">
-        <span class="text-xs font-bold text-[#C2887B] uppercase tracking-widest block">1:1 Strategy Evaluation</span>
+        <span class="text-xs font-bold text-[#BA8679] uppercase tracking-widest block">1:1 Strategy Evaluation</span>
         <h3 class="text-2xl font-editorial font-bold text-[#281D23]">Apply for a Scale-to-$10K Call</h3>
-        <p class="text-sm text-[#524C4E]">Speak with Christine Gallagher to evaluate your high-ticket offer structure and streamline your client pipeline.</p>
+        <p class="text-sm text-[#564B50]">Speak with Christine Gallagher to evaluate your high-ticket offer structure and streamline your client pipeline.</p>
       </div>
 
       <form onsubmit="event.preventDefault(); alert('Application received! Christine’s advisory calendar will open to confirm your session.'); closeModal('call-modal');" class="mt-6 space-y-4">
         <div>
           <label class="block text-xs font-semibold text-stone-700 mb-1">Full Name</label>
-          <input type="text" required placeholder="e.g. Christine Ross" class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#C2887B] focus:border-transparent transition-all" />
+          <input type="text" required placeholder="e.g. Christine Ross" class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#BA8679] focus:border-transparent transition-all" />
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
             <label class="block text-xs font-semibold text-stone-700 mb-1">Work Email</label>
-            <input type="email" required placeholder="christine@domain.com" class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#C2887B] focus:border-transparent transition-all" />
+            <input type="email" required placeholder="christine@domain.com" class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#BA8679] focus:border-transparent transition-all" />
           </div>
           <div>
             <label class="block text-xs font-semibold text-stone-700 mb-1">Phone Number</label>
-            <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#C2887B] focus:border-transparent transition-all" />
+            <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 rounded-xl bg-white border border-[#DED7D2] text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#BA8679] focus:border-transparent transition-all" />
           </div>
         </div>
         <div>
           <label class="block text-xs font-semibold text-stone-700 mb-1">Your Primary Goal for the Next 90 Days</label>
-          <textarea rows="2" placeholder="e.g. Launching a $3K-$5K high-ticket package, replacing launch stress with steady enrollment..." class="w-full px-4 py-2.5 rounded-xl bg-white border border-[#DED7D2] text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#C2887B] focus:border-transparent transition-all"></textarea>
+          <textarea rows="2" placeholder="e.g. Launching a $3K-$5K high-ticket package, replacing launch stress with steady enrollment..." class="w-full px-4 py-2.5 rounded-xl bg-white border border-[#DED7D2] text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#BA8679] focus:border-transparent transition-all"></textarea>
         </div>
         <button type="submit" class="w-full btn-dark-pill text-white font-medium text-sm py-3.5 rounded-xl transition-all duration-200 active:scale-98">
           Submit Call Application
@@ -225,26 +234,26 @@
       </button>
 
       <div class="space-y-2 mb-6">
-        <span class="text-xs font-bold text-[#C2887B] uppercase tracking-widest block">Proven Client Results</span>
+        <span class="text-xs font-bold text-[#BA8679] uppercase tracking-widest block">Proven Client Results</span>
         <h3 class="text-2xl font-editorial font-bold text-[#281D23]">Client Breakthroughs &amp; Transformations</h3>
-        <p class="text-sm text-[#524C4E]">Real results from heart-centered coaches who simplified their marketing and multiplied revenue.</p>
+        <p class="text-sm text-[#564B50]">Real results from heart-centered coaches who simplified their marketing and multiplied revenue.</p>
       </div>
 
       <div class="space-y-4">
         <div class="p-5 rounded-2xl bg-white border border-[#EAE3DE] flex items-start gap-4 shadow-xs">
-          <div class="w-12 h-12 rounded-full bg-[#FAF0EC] text-[#C2887B] flex items-center justify-center font-bold text-lg flex-shrink-0">$35K</div>
+          <div class="w-12 h-12 rounded-full bg-[#FAF0EC] text-[#BA8679] flex items-center justify-center font-bold text-lg flex-shrink-0">$35K</div>
           <div>
             <h4 class="font-bold text-[#281D23] text-base">From $4K to $35,000 in 60 Days</h4>
-            <p class="text-sm text-[#524C4E] mt-1">"Christine helped me drop three complicated low-ticket funnels and package my transformational work into one premium advisory experience. I signed 7 dream clients in 8 weeks."</p>
+            <p class="text-sm text-[#564B50] mt-1">"Christine helped me drop three complicated low-ticket funnels and package my transformational work into one premium advisory experience. I signed 7 dream clients in 8 weeks."</p>
             <span class="text-xs font-semibold text-[#8E756E] block mt-2">— Elena R., Somatic Executive Coach</span>
           </div>
         </div>
 
         <div class="p-5 rounded-2xl bg-white border border-[#EAE3DE] flex items-start gap-4 shadow-xs">
-          <div class="w-12 h-12 rounded-full bg-[#FAF0EC] text-[#C2887B] flex items-center justify-center font-bold text-lg flex-shrink-0">20h</div>
+          <div class="w-12 h-12 rounded-full bg-[#FAF0EC] text-[#BA8679] flex items-center justify-center font-bold text-lg flex-shrink-0">20h</div>
           <div>
             <h4 class="font-bold text-[#281D23] text-base">Halved Client Hours While Doubling Monthly Cash</h4>
-            <p class="text-sm text-[#524C4E] mt-1">"I used to work 55 hours a week chasing 1-off sessions. We created a high-ticket retainer system and now I work 20 hours a week with full weekends off."</p>
+            <p class="text-sm text-[#564B50] mt-1">"I used to work 55 hours a week chasing 1-off sessions. We created a high-ticket retainer system and now I work 20 hours a week with full weekends off."</p>
             <span class="text-xs font-semibold text-[#8E756E] block mt-2">— Rachel S., Integrative Energy Practitioner</span>
           </div>
         </div>
@@ -265,8 +274,8 @@
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
       <h3 class="text-2xl font-editorial font-bold text-[#281D23] mb-2">About Christine Gallagher</h3>
-      <p class="text-xs font-semibold text-[#C2887B] uppercase tracking-wider mb-4">Founder, She's Got Clients • 17+ Years Mentoring Industry Leaders</p>
-      <p class="text-sm text-[#524C4E] leading-relaxed mb-4">
+      <p class="text-xs font-semibold text-[#BA8679] uppercase tracking-wider mb-4">Founder, She's Got Clients • 17+ Years Mentoring Industry Leaders</p>
+      <p class="text-sm text-[#564B50] leading-relaxed mb-4">
         Christine Gallagher is a renowned business mentor, speaker, and author who has helped thousands of coaches, therapists, and holistic practitioners build six- and seven-figure practices without working endless hours. Featured on Newsday, BlogHer, and SocialMedia Examiner.
       </p>
       <button onclick="closeModal('about-modal'); openModal('call-modal');" class="w-full btn-dark-pill text-white font-medium text-sm py-3 rounded-xl">

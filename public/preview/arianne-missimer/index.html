@@ -16,7 +16,7 @@
     }
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #F6FBFE;
+      background-color: #F5F9F8;
     }
     .font-editorial {
       font-family: 'Playfair Display', Georgia, serif;
@@ -31,15 +31,15 @@
     }
   </style>
 </head>
-<body class="bg-[#F6FBFE] text-[#1E293B] antialiased min-h-screen flex flex-col justify-between selection:bg-[#68B036] selection:text-white">
+<body class="bg-[#F5F9F8] text-[#1E293B] antialiased min-h-screen flex flex-col justify-between selection:bg-[#68B036] selection:text-white overflow-x-hidden">
 
   <!-- Header Navigation (Pixel-Perfect Match with Mockup) -->
-  <header class="w-full pt-4 pb-3 px-6 lg:px-12">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
+  <header class="w-full pt-4 sm:pt-5 pb-3 px-4 sm:px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
       
       <!-- Left: Logo Lockup -->
-      <a href="#" class="flex items-center group">
-        <img src="/assets/arianne-missimer/movement_paradigm_logo.png" alt="The Movement Paradigm | Integrative Health & Physical Therapy" class="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" />
+      <a href="#" class="flex items-center group shrink">
+        <img src="/assets/arianne-missimer/movement_paradigm_logo.png" alt="The Movement Paradigm | Integrative Health & Physical Therapy" class="h-6 sm:h-9 md:h-10 max-w-[190px] sm:max-w-none w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" />
       </a>
 
       <!-- Middle: Desktop Navigation Links -->
@@ -51,14 +51,11 @@
         <a href="#contact" onclick="openModal('discovery-modal'); return false;" class="hover:text-[#68B036] transition-colors duration-200">Contact</a>
       </nav>
 
-      <!-- Right: Action CTAs -->
-      <div class="flex items-center gap-3">
-        <a href="https://themovementparadigm.com" target="_blank" rel="noopener noreferrer" class="hidden xl:inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-[#68B036] px-3 py-1.5 rounded-full border border-slate-300 hover:border-[#68B036] transition-all">
-          <span>Original Site</span>
-          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-        </a>
-        <button onclick="openModal('discovery-modal')" class="btn-brand-green text-white font-semibold text-xs sm:text-sm px-5 sm:px-6 py-2.5 rounded-full transition-all duration-200 active:scale-95">
-          Book Discovery Call
+      <!-- Right: Action CTA -->
+      <div class="flex items-center gap-3 shrink-0">
+        <button onclick="openModal('discovery-modal')" class="btn-brand-green text-white font-semibold text-xs sm:text-sm px-3.5 sm:px-6 py-2 sm:py-2.5 rounded-full transition-all duration-200 active:scale-95 whitespace-nowrap">
+          <span class="inline sm:hidden">Book Call</span>
+          <span class="hidden sm:inline">Book Discovery Call</span>
         </button>
       </div>
 
@@ -67,35 +64,35 @@
 
   <!-- Hero Main Section -->
   <main class="flex-1 flex items-center py-6 lg:py-8">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         
         <!-- Left Column: Copy & Value Proposition -->
-        <div class="lg:col-span-7 space-y-5 sm:space-y-6">
+        <div class="lg:col-span-7 space-y-4 sm:space-y-6">
           
           <!-- Kicker (Exact Match: Green uppercase tracked sans) -->
-          <div class="text-xs sm:text-[13px] font-bold tracking-[0.16em] text-[#76A83C] uppercase">
+          <div class="text-[11px] sm:text-[13px] font-bold tracking-[0.14em] sm:tracking-[0.16em] text-[#76A83C] uppercase">
             HOLISTIC PHYSICAL THERAPY &amp; FUNCTIONAL MEDICINE
           </div>
 
           <!-- Editorial Display H1 -->
-          <h1 class="font-editorial text-4xl sm:text-5xl lg:text-[58px] xl:text-[62px] font-bold text-[#001527] tracking-tight leading-[1.1]">
+          <h1 class="font-editorial text-3xl sm:text-5xl lg:text-[56px] xl:text-[60px] font-bold text-[#001527] tracking-tight leading-[1.12]">
             Heal Root Causes.<br>
             Restore Lasting<br>
             Whole-Body Resilience.
           </h1>
 
           <!-- Value Proposition Body -->
-          <p class="text-base sm:text-lg text-[#464E51] leading-relaxed max-w-xl font-normal">
+          <p class="text-sm sm:text-lg text-[#464E51] leading-relaxed max-w-xl font-normal">
             An integrative approach combining holistic physical therapy, functional medicine, and nervous system regulation to resolve chronic pain and restore your energy.
           </p>
 
           <!-- Action Buttons Row -->
-          <div class="pt-2 flex flex-wrap items-center gap-5 sm:gap-6">
-            <button onclick="openModal('discovery-modal')" class="btn-brand-green text-white font-semibold text-sm sm:text-base px-8 py-3.5 rounded-full transition-all duration-200 active:scale-98">
+          <div class="pt-2 flex flex-col sm:flex-row sm:items-center items-start gap-4 sm:gap-6">
+            <button onclick="openModal('discovery-modal')" class="btn-brand-green text-white font-semibold text-xs sm:text-base px-6 sm:px-8 py-3 sm:py-3.5 rounded-full transition-all duration-200 active:scale-98">
               Book Your Discovery Call
             </button>
-            <button onclick="openModal('pillars-modal')" class="inline-flex items-center gap-1.5 text-sm sm:text-base font-bold text-[#001527] hover:text-[#68B036] transition-colors duration-200">
+            <button onclick="openModal('pillars-modal')" class="inline-flex items-center gap-2 text-xs sm:text-base font-bold text-[#001527] hover:text-[#68B036] transition-colors duration-200">
               <span>Explore Our 3 Pillars</span>
               <span class="text-lg">→</span>
             </button>
@@ -112,8 +109,8 @@
         <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
           
           <!-- Treatment Photo Container with Rounded Corners & Soft Ambient Shadow -->
-          <div class="relative w-full max-w-[480px] sm:max-w-[530px] rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,21,39,0.12)] border border-slate-200/50 bg-white">
-            <img src="/assets/arianne-missimer/treatment_photo_composite.jpg" alt="Dr. Arianne Missimer & Team • Integrative Mind-Body Care" class="w-full h-auto object-cover block transition-transform duration-700 hover:scale-[1.02]" />
+          <div class="relative w-full max-w-[420px] sm:max-w-[500px] rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(0,21,39,0.10)] bg-white">
+            <img src="/assets/arianne-missimer/treatment_photo_composite.jpg" alt="Dr. Ariana DeMers & Team • Integrative Mind-Body Care" class="w-full h-auto object-cover block transition-transform duration-700 hover:scale-[1.02]" />
           </div>
 
         </div>
@@ -122,10 +119,10 @@
     </div>
   </main>
 
-  <!-- Bottom Press / As Featured On Strip (Full-Width Grounded Bar) -->
-  <footer class="w-full border-t border-slate-200/50 py-4 sm:py-5 bg-[#F3F8F7]/60">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-center">
-      <img src="/assets/arianne-missimer/press_logos_strip.png" alt="As Featured On: ABC, CBS, FOX, NBC" class="h-9 sm:h-11 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity" />
+  <!-- Bottom Press / As Featured On Strip (Seamless floating bar matching mockup) -->
+  <footer class="w-full pb-6 pt-3 px-4 bg-transparent">
+    <div class="max-w-7xl mx-auto flex items-center justify-center">
+      <img src="/assets/arianne-missimer/press_logos_strip.png" alt="As Featured On: ABC, CBS, FOX, NBC" class="h-6 sm:h-8 md:h-9 max-w-full w-auto object-contain transition-opacity" />
     </div>
   </footer>
 
