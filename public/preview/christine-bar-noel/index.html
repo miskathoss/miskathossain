@@ -3,300 +3,257 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Christine Bar-Noel | Ms. Galaxy UK, Keynote Speaker & Emotional Resilience Author</title>
+  <title>Christine Bar Noël | Build Sustainable Success Without the Burnout</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     ::selection {
-      background-color: #F5D0FE;
-      color: #701A75;
+      background-color: #2E1238;
+      color: #FFFFFF;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #FAF4F2;
+    }
+    .font-editorial {
+      font-family: 'Playfair Display', Georgia, serif;
     }
   </style>
 </head>
-<body class="bg-white text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-[#FAF4F2] text-stone-800 antialiased min-h-screen flex flex-col justify-between selection:bg-[#2E1238] selection:text-white">
 
-  <!-- Top Announcement Bar -->
-  <div class="bg-slate-900 text-white text-xs py-1.5 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-white/10 text-white uppercase tracking-wider">
-          <i data-lucide="shield-check" class="w-3 h-3 text-amber-400"></i> MS. GALAXY UK TITLEHOLDER
-        </span>
-        <span class="text-slate-300 font-medium text-[11px] sm:text-xs">BESTSELLING AUTHOR ON RESILIENCE</span>
-      </div>
-      <div class="hidden md:flex items-center gap-3 text-[11px] text-slate-400">
-        <span>Featured on International Broadcasts • Keynote Speaker for Global Corporate Summits</span>
-      </div>
-    </div>
-  </div>
+  <!-- Header Navigation (Matches Editorial Structure) -->
+  <header class="w-full pt-4 pb-3 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      
+      <!-- Top Row: Logo & Work With Me Button -->
+      <div class="w-full flex items-center justify-between">
+        <!-- Spacer for visual symmetry on desktop -->
+        <div class="w-28 hidden sm:block"></div>
 
-  <!-- Header Navigation -->
-  <header class="bg-white border-b border-slate-100 sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3.5">
-        <img src="/assets/christine-bar-noel/logo.png" alt="Christine Bar-Noel" class="h-10 w-auto object-contain" />
-        <div class="border-l border-slate-200 pl-3 hidden sm:block">
-          <span class="block text-xs font-black tracking-wider uppercase text-slate-900">Christine Bar-Noel</span>
-          <span class="block text-[10px] text-slate-500 font-medium">INTERNATIONAL KEYNOTE SPEAKER & EMOTIONAL RESILIENCE COACH</span>
+        <!-- Centered Script Logo -->
+        <a href="#" class="font-editorial italic font-bold text-3xl sm:text-4xl text-[#2E1238] tracking-tight hover:opacity-90 transition-opacity">
+          Christine Bar Noël
+        </a>
+
+        <!-- Right Action Button -->
+        <div class="flex items-center gap-3">
+          <a href="https://christinebarnoel.com" target="_blank" rel="noopener noreferrer" class="hidden xl:inline-flex items-center gap-1.5 text-xs text-stone-500 hover:text-[#2E1238] px-3 py-1.5 rounded-full border border-stone-300 hover:border-[#2E1238] transition-all">
+            <span>Original Site</span>
+            <i data-lucide="external-link" class="w-3 h-3"></i>
+          </a>
+          <button onclick="openModal('work-modal')" class="bg-[#2E1238] hover:bg-[#3E1A4B] text-white font-medium text-xs sm:text-sm px-6 py-2.5 rounded-full transition-all duration-200 active:scale-95 shadow-sm">
+            Work With Me
+          </button>
         </div>
       </div>
 
-      <!-- Desktop Links -->
-      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-600">
-        
-    <a href="#keynotes" class="hover:text-slate-900 transition-colors">Keynotes</a>
-  
-    <a href="#resiliencemethod" class="hover:text-slate-900 transition-colors">Resilience Method</a>
-  
-    <a href="#author" class="hover:text-slate-900 transition-colors">Author</a>
-  
-    <a href="#podcast" class="hover:text-slate-900 transition-colors">Podcast</a>
-  
-    <a href="#speakerkit" class="hover:text-slate-900 transition-colors">Speaker Kit</a>
-  
+      <!-- Navigation Links Row -->
+      <nav class="flex items-center justify-center gap-7 sm:gap-9 text-xs sm:text-sm font-medium text-stone-700 mt-4 tracking-wide">
+        <a href="#meet-christine" onclick="openModal('bio-modal'); return false;" class="hover:text-[#2E1238] transition-colors">Meet Christine</a>
+        <a href="#podcast" onclick="openModal('podcast-modal'); return false;" class="hover:text-[#2E1238] transition-colors">Podcast</a>
+        <a href="#wellness" onclick="openModal('guide-modal'); return false;" class="hover:text-[#2E1238] transition-colors">Wellness</a>
+        <a href="#speaking" onclick="openModal('work-modal'); return false;" class="hover:text-[#2E1238] transition-colors">Speaking</a>
+        <a href="#contact" onclick="openModal('work-modal'); return false;" class="hover:text-[#2E1238] transition-colors">Contact</a>
       </nav>
 
-      <!-- Action CTAs -->
-      <div class="flex items-center gap-3">
-        <a href="https://christinebarnoel.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-slate-900 px-3 py-1.5 rounded-lg border border-slate-200">
-          <span>Original Site</span>
-          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-        </a>
-        <a href="#cta" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 shadow-xs transition-all">
-          <span>Book Corporate Keynote</span>
-          <i data-lucide="mic" class="w-3.5 h-3.5"></i>
-        </a>
-      </div>
     </div>
   </header>
 
-  <!-- Clean High-Utility Hero Section -->
-  <main class="flex-1 py-6 lg:py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+  <!-- Hero Main Section -->
+  <main class="flex-1 flex items-center py-6 lg:py-10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         
-        <!-- Left Column: Copy & Interactive Diagnostic -->
-        <div class="lg:col-span-7 space-y-4">
+        <!-- Left Column: Copy & Value Proposition -->
+        <div class="lg:col-span-7 space-y-5">
           
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-bold bg-slate-100 text-slate-800 border border-slate-200">
-            <span class="w-2 h-2 rounded-full bg-slate-900"></span>
-            <span>INTERNATIONAL KEYNOTE SPEAKER & EMOTIONAL RESILIENCE COACH</span>
+          <!-- Kicker (Clean uppercase typography, zero cookie-cutter boxes) -->
+          <div class="text-xs font-semibold tracking-[0.2em] text-[#8A4C62] uppercase">
+            FOR HIGH-ACHIEVING WOMEN &amp; FOUNDERS
           </div>
 
-          <h1 class="text-3xl sm:text-4xl lg:text-[40px] font-black text-slate-900 leading-[1.12] tracking-tight">
-            Unbreakable Resilience: Turn Life's Hardest Chapters Into Stage Authority.
+          <!-- Editorial Headline -->
+          <h1 class="font-editorial text-4xl sm:text-5xl lg:text-[56px] font-bold text-[#2E1238] tracking-tight leading-[1.12]">
+            Build Sustainable<br>
+            Success Without<br>
+            the Burnout
           </h1>
 
-          <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl font-normal">
-            From surviving life-altering adversity to holding the Ms. Galaxy UK crown, Christine Bar-Noel delivers unforgettable corporate keynotes that empower organizations to transform struggle into sovereign strength.
+          <!-- Value Proposition Body -->
+          <p class="text-base sm:text-lg text-stone-600 leading-relaxed max-w-xl font-normal">
+            Actionable systems, athletic wellness, and mindset coaching from a World Champion Ballroom Dancer and Podcast Host to help you design a life you love.
           </p>
 
-          <!-- Bespoke Interactive Widget -->
+          <!-- Action Buttons -->
+          <div class="pt-2 flex flex-wrap items-center gap-5">
+            <button onclick="openModal('guide-modal')" class="bg-[#2E1238] hover:bg-[#3E1A4B] text-white font-medium text-sm px-7 py-3.5 rounded-full transition-all duration-200 active:scale-98 shadow-md">
+              Get the Free Balance Guide
+            </button>
+            <button onclick="openModal('podcast-modal')" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2E1238] hover:text-[#4A205A] transition-colors">
+              <span>Listen to the Podcast</span>
+              <span class="text-base">→</span>
+            </button>
+          </div>
+
+          <!-- Reassurance Footer -->
+          <div class="text-xs text-stone-500 font-normal tracking-wide pt-1">
+            Free Back-to-Balance eBook • Instant digital access
+          </div>
+
+        </div>
+
+        <!-- Right Column: Lifestyle Portrait with Frosted Glass Badge -->
+        <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
           
-      <div class="p-4 sm:p-5 rounded-2xl bg-fuchsia-50/50 border border-fuchsia-200/80 space-y-3">
-        <div class="flex items-center justify-between">
-          <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-fuchsia-800 block">Keynote Topic Selector</span>
-            <span class="text-xs sm:text-sm font-bold text-slate-900">Select an event theme for speaker availability & rider:</span>
-          </div>
-          <span class="px-2 py-0.5 rounded bg-fuchsia-100 text-fuchsia-800 text-[11px] font-bold">2026 Calendar Open</span>
-        </div>
-        <div class="grid grid-cols-3 gap-2">
-          <button onclick="setTopic('resilience', 'The Resilience Blueprint: Equipping teams with the mental fortitude to navigate high-stakes corporate pivots.')" class="topic-btn active p-2.5 rounded-xl border-2 border-fuchsia-800 bg-white text-left transition-all">
-            <span class="block text-xs font-bold text-slate-900">Corporate Resilience</span>
-            <span class="block text-[10px] text-fuchsia-700 font-semibold">Leadership Peak</span>
-          </button>
-          <button onclick="setTopic('women', 'Unapologetic Sovereignty: Breaking glass ceilings and emotional conditioning for female executives.')" class="topic-btn p-2.5 rounded-xl border border-slate-200 hover:border-fuchsia-300 bg-white text-left transition-all">
-            <span class="block text-xs font-bold text-slate-900">Women in Leadership</span>
-            <span class="block text-[10px] text-slate-500 font-semibold">Executive Courage</span>
-          </button>
-          <button onclick="setTopic('adversity', 'Turning Scars to Stars: Moving from victim consciousness to unstoppable personal mastery.')" class="topic-btn p-2.5 rounded-xl border border-slate-200 hover:border-fuchsia-300 bg-white text-left transition-all">
-            <span class="block text-xs font-bold text-slate-900">Adversity Mastery</span>
-            <span class="block text-[10px] text-slate-500 font-semibold">Inspirational Keynote</span>
-          </button>
-        </div>
-        <div class="p-3 rounded-xl bg-white border border-fuchsia-200 text-xs text-slate-700 flex items-start gap-2.5">
-          <i data-lucide="check-circle" class="w-4 h-4 text-fuchsia-700 flex-shrink-0 mt-0.5"></i>
-          <div>
-            <span id="topic-desc" class="text-slate-700 font-medium">The Resilience Blueprint: Equipping teams with the mental fortitude to navigate high-stakes corporate pivots.</span>
-          </div>
-        </div>
-      </div>
-    
-
-          <!-- Metric Strip -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
-            
-    <div class="p-3 rounded-xl bg-white border border-slate-200">
-      <div class="text-xl sm:text-2xl font-black text-slate-900">Ms Galaxy</div>
-      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">UK Titleholder</div>
-    </div>
-  
-    <div class="p-3 rounded-xl bg-white border border-slate-200">
-      <div class="text-xl sm:text-2xl font-black text-slate-900">Author</div>
-      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">Bestselling Book</div>
-    </div>
-  
-    <div class="p-3 rounded-xl bg-white border border-slate-200">
-      <div class="text-xl sm:text-2xl font-black text-slate-900">Global</div>
-      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">Keynote Speaker</div>
-    </div>
-  
-    <div class="p-3 rounded-xl bg-white border border-slate-200">
-      <div class="text-xl sm:text-2xl font-black text-slate-900">100+</div>
-      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">Events Keynoted</div>
-    </div>
-  
+          <!-- Main Portrait Container -->
+          <div class="relative w-full max-w-[370px] sm:max-w-[390px] rounded-3xl overflow-hidden shadow-2xl bg-[#F0E6E4]">
+            <img src="/assets/christine-bar-noel/christine_bn_hero_composite.jpg" alt="Christine Bar Noël - World Champion Ballroom Dancer & Host of The Recovering Perfectionist" class="w-full h-auto object-cover block transition-transform duration-700 hover:scale-102" />
           </div>
 
-        </div>
-
-        <!-- Right Column: Visual Photographic Showcase & Intake Form -->
-        <div class="lg:col-span-5 space-y-3">
-          <div class="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-lg">
-            
-            <!-- Real Photo Frame -->
-            <div class="relative rounded-xl overflow-hidden border border-slate-200 bg-slate-100 group aspect-[4/3] sm:aspect-[16/10]">
-              <img src="/assets/christine-bar-noel/podcast-artwork.jpg" alt="Christine Bar-Noel" class="w-full h-full object-cover object-center block transition-transform duration-500 group-hover:scale-102" onerror="this.src='/assets/placeholder.jpg'" />
-              
-              <!-- Bottom Image Tag -->
-              <div class="absolute bottom-2.5 left-2.5 bg-slate-900/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1.5 shadow">
-                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-400"></i>
-                <span>Official Keynote & Podcast • Christine Bar-Noel</span>
-              </div>
-            </div>
-
-            <!-- Trust Badges Strip -->
-            <div class="flex items-center justify-between py-2 px-3 rounded-xl bg-slate-50 border border-slate-200/80 my-3 text-xs text-slate-600">
-              <span class="font-bold text-slate-900 flex items-center gap-1.5">
-                <i data-lucide="award" class="w-3.5 h-3.5 text-slate-700"></i> Ms. Galaxy UK
-              </span>
-              <span>•</span>
-              <span>Bestselling Author</span>
-              <span>•</span>
-              <span>Global Keynote Speaker</span>
-            </div>
-
-            <!-- Direct Intake Gateway -->
-            <div class="space-y-2.5" id="cta">
-              <div class="flex items-center justify-between text-xs">
-                <span class="font-bold text-slate-900 uppercase tracking-wider text-[11px]">Direct Consultation Request</span>
-                <span class="text-slate-500 font-medium text-[10px]">Strictly Confidential</span>
-              </div>
-
-              <div class="grid grid-cols-2 gap-2">
-                <input type="text" placeholder="Full Name" class="col-span-2 px-3 py-2 rounded-lg border border-slate-300 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-slate-900" />
-                <input type="email" placeholder="Email Address" class="px-3 py-2 rounded-lg border border-slate-300 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-slate-900" />
-                <input type="tel" placeholder="Phone Number" class="px-3 py-2 rounded-lg border border-slate-300 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-slate-900" />
-              </div>
-
-              <button class="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider bg-slate-900 hover:bg-slate-800 text-white shadow-xs transition-all flex items-center justify-center gap-2">
-                <i data-lucide="mic" class="w-3.5 h-3.5"></i>
-                <span>Book Corporate Keynote</span>
-              </button>
-
-              <div class="flex items-center justify-center gap-1.5 text-[10px] text-slate-500">
-                <i data-lucide="lock" class="w-3 h-3 text-slate-400"></i>
-                <span>Direct advisory callback • Never shared with third parties</span>
-              </div>
-            </div>
-
-          </div>
         </div>
 
       </div>
     </div>
   </main>
 
-  <!-- Bottom Preview Bar & Audit Modal -->
-  <div id="designer-preview-bar" class="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 w-auto max-w-[95vw] bg-slate-900 text-white px-3.5 py-2 rounded-full shadow-2xl border border-slate-700 flex items-center gap-3 text-xs">
-    <div class="flex items-center gap-2">
-      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-      <span class="font-bold text-slate-100">Bespoke Hero Redesign</span>
-      <span class="text-slate-300 hidden sm:inline">• Christine Bar-Noel</span>
+  <!-- Bottom Ticker Strip (Matches Exact Mockup) -->
+  <footer class="w-full bg-[#2E1238] text-white py-3.5 px-6">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-[11px] sm:text-xs font-bold tracking-[0.18em] uppercase text-center text-white/95">
+      <span>MEDIA PERSONALITY</span>
+      <span class="text-white/60">✦</span>
+      <span>PODCAST HOST</span>
+      <span class="text-white/60">✦</span>
+      <span>SUSTAINABLE SUCCESS COACH</span>
+      <span class="text-white/60">✦</span>
+      <span>WORLD CHAMPION BALLROOM DANCER</span>
+      <span class="text-white/60">✦</span>
+      <span>ENTREPRENEUR</span>
     </div>
-    <div class="h-3.5 w-px bg-slate-700 hidden sm:block"></div>
-    <div class="flex items-center gap-2">
-      <button onclick="document.getElementById('notes-modal').classList.remove('hidden')" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors flex items-center gap-1.5 border border-slate-700">
-        <i data-lucide="clipboard-list" class="w-3.5 h-3.5"></i>
-        <span>Site Audit &amp; Notes</span>
+  </footer>
+
+  <!-- Modal: Free Balance Guide -->
+  <div id="guide-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-[#FAF4F2] border border-[#2E1238]/20 rounded-3xl max-w-lg w-full p-6 sm:p-8 text-left shadow-2xl relative">
+      <button onclick="closeModal('guide-modal')" class="absolute top-5 right-5 text-stone-500 hover:text-[#2E1238] p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
       </button>
-      <a href="https://christinebarnoel.com" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors flex items-center gap-1.5 border border-slate-700">
-        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-        <span>Current Site</span>
-      </a>
+
+      <div class="space-y-2">
+        <span class="text-xs font-semibold text-[#8A4C62] uppercase tracking-widest block">Instant Digital Access</span>
+        <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-[#2E1238]">Download The Back-to-Balance Guide</h3>
+        <p class="text-sm text-stone-600">The 5 daily somatic resets and boundary systems Christine used to maintain peak performance without emotional exhaustion.</p>
+      </div>
+
+      <form onsubmit="event.preventDefault(); alert('Guide sent! Check your inbox for instant download.'); closeModal('guide-modal');" class="mt-6 space-y-4">
+        <div>
+          <label class="block text-xs font-medium text-stone-700 mb-1">First Name</label>
+          <input type="text" required placeholder="Christine" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-[#2E1238]" />
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-stone-700 mb-1">Email Address</label>
+          <input type="email" required placeholder="you@domain.com" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-[#2E1238]" />
+        </div>
+
+        <button type="submit" class="w-full bg-[#2E1238] hover:bg-[#3E1A4B] text-white font-medium text-sm py-3.5 rounded-full transition-all duration-200 mt-2 shadow-md">
+          Send Me the Free Guide
+        </button>
+        <p class="text-[11px] text-stone-500 text-center mt-2">Zero spam. Unsubscribe anytime in 1 click.</p>
+      </form>
     </div>
   </div>
 
-  <!-- Audit Notes Modal -->
-  <div id="notes-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 text-slate-900">
-      <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+  <!-- Modal: Podcast Preview -->
+  <div id="podcast-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-[#FAF4F2] border border-[#2E1238]/20 rounded-3xl max-w-lg w-full p-6 sm:p-8 text-left shadow-2xl relative">
+      <button onclick="closeModal('podcast-modal')" class="absolute top-5 right-5 text-stone-500 hover:text-[#2E1238] p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <span class="text-xs font-semibold text-[#8A4C62] uppercase tracking-widest block">Featured Podcast</span>
+      <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-[#2E1238] mt-1">The Recovering Perfectionist</h3>
+      <p class="text-sm text-stone-600 mt-2">Hosted by Christine Bar Noël. Honest conversations on ambition, perfectionism recovery, dance discipline, and building a life of joy and presence.</p>
+
+      <div class="mt-6 space-y-3">
+        <a href="https://podcasts.apple.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-2xl bg-white border border-stone-200 hover:border-[#2E1238] transition-all group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#2E1238] text-white flex items-center justify-center font-bold">
+              <i data-lucide="podcast" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="block text-sm font-bold text-[#2E1238] group-hover:underline">Listen on Apple Podcasts</span>
+              <span class="block text-xs text-stone-500">Weekly episodes &amp; guest interviews</span>
+            </div>
+          </div>
+          <i data-lucide="external-link" class="w-4 h-4 text-stone-400 group-hover:text-[#2E1238]"></i>
+        </a>
+
+        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-2xl bg-white border border-stone-200 hover:border-[#2E1238] transition-all group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#1DB954] text-white flex items-center justify-center font-bold">
+              <i data-lucide="play" class="w-5 h-5 fill-white"></i>
+            </div>
+            <div>
+              <span class="block text-sm font-bold text-[#2E1238] group-hover:underline">Listen on Spotify</span>
+              <span class="block text-xs text-stone-500">Stream all 100+ episodes free</span>
+            </div>
+          </div>
+          <i data-lucide="external-link" class="w-4 h-4 text-stone-400 group-hover:text-[#2E1238]"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Work With Me / Keynote & Coaching Inquiry -->
+  <div id="work-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-[#FAF4F2] border border-[#2E1238]/20 rounded-3xl max-w-lg w-full p-6 sm:p-8 text-left shadow-2xl relative">
+      <button onclick="closeModal('work-modal')" class="absolute top-5 right-5 text-stone-500 hover:text-[#2E1238] p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <span class="text-xs font-semibold text-[#8A4C62] uppercase tracking-widest block">Keynotes &amp; Coaching</span>
+      <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-[#2E1238] mt-1">Work With Christine</h3>
+      <p class="text-sm text-stone-600 mt-2">For keynote speaking engagements, corporate wellness workshops, and 1-on-1 executive mindset advisory.</p>
+
+      <form onsubmit="event.preventDefault(); alert('Inquiry received. Christine\'s management will reach out within 48 hours.'); closeModal('work-modal');" class="mt-6 space-y-4">
         <div>
-          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Lead Conversion Audit</span>
-          <h2 class="text-xl font-bold text-slate-900 mt-1">Why This Redesign Converts for Christine Bar-Noel</h2>
+          <label class="block text-xs font-medium text-stone-700 mb-1">Your Name</label>
+          <input type="text" required placeholder="Your full name" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-[#2E1238]" />
         </div>
-        <button onclick="document.getElementById('notes-modal').classList.add('hidden')" class="p-2 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-slate-700">
-          <i data-lucide="x" class="w-5 h-5"></i>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-medium text-stone-700 mb-1">Email</label>
+            <input type="email" required placeholder="you@company.com" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-[#2E1238]" />
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-stone-700 mb-1">Inquiry Type</label>
+            <select class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 text-stone-800 text-sm focus:outline-none focus:border-[#2E1238]">
+              <option>Keynote Speaking</option>
+              <option>Corporate Dance &amp; Wellness</option>
+              <option>1-on-1 Mindset Coaching</option>
+              <option>Podcast Sponsorship / Media</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full bg-[#2E1238] hover:bg-[#3E1A4B] text-white font-medium text-sm py-3.5 rounded-full transition-all duration-200 mt-2 shadow-md">
+          Submit Partnership Inquiry
         </button>
-      </div>
-
-      <div class="mt-6 space-y-5 text-sm text-slate-700">
-        <div>
-          <h3 class="font-bold text-slate-900 flex items-center gap-2">
-            <span class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs font-bold">1</span>
-            Current Site Problem:
-          </h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">
-            Current web presence is scattered across disconnected landing pages with no unified keynote showreel or streamlined event organizer intake.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="font-bold text-slate-900 flex items-center gap-2">
-            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">2</span>
-            Our Solution:
-          </h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">
-            Consolidated her brand into a high-fashion speaker hero with topic selection, speaker kit downloads, and official Ms. Galaxy UK credentials.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="font-bold text-slate-900 flex items-center gap-2">
-            <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-bold">3</span>
-            Brand Fidelity &amp; Viewport Precision:
-          </h3>
-          <p class="mt-1 text-slate-600 leading-relaxed">
-            Engineered on a spotless canvas with exact 8pt grid whitespace, zero AI gradient slop, authentic photographic assets, and responsive 1440×900 viewport lock.
-          </p>
-        </div>
-      </div>
-
-      <div class="mt-8 pt-4 border-t border-slate-200 flex justify-end">
-        <button onclick="document.getElementById('notes-modal').classList.add('hidden')" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-colors">
-          Close Audit Notes
-        </button>
-      </div>
+      </form>
     </div>
   </div>
 
   <script>
     lucide.createIcons();
-    
-      function setTopic(key, desc) {
-        document.querySelectorAll('.topic-btn').forEach(b => {
-          b.className = 'topic-btn p-2.5 rounded-xl border border-slate-200 hover:border-fuchsia-300 bg-white text-left transition-all';
-          b.querySelector('span:last-child').className = 'block text-[10px] text-slate-500 font-semibold';
-        });
-        event.currentTarget.className = 'topic-btn active p-2.5 rounded-xl border-2 border-fuchsia-800 bg-white text-left transition-all';
-        event.currentTarget.querySelector('span:last-child').className = 'block text-[10px] text-fuchsia-700 font-semibold';
-        document.getElementById('topic-desc').textContent = desc;
-      }
-    
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
   </script>
 </body>
 </html>
