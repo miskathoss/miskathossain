@@ -3,168 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Mohita Shrivastava | The Cognitome Program - Clinical Neuroscience &amp; Cognitive Optimization</title>
+  <title>Dr. Mohita Shrivastava | The Cognitome Program - Clinical Neuroscience & Brain Health</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            mono: ['"Space Grotesk"', 'sans-serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif']
-          },
-          colors: {
-            synapse: {
-              dark: '#080C16',
-              card: '#10172A',
-              cyan: '#06B6D4',
-              cyanGlow: '#22D3EE',
-              violet: '#8B5CF6',
-              purple: '#A855F7'
-            }
-          }
-        }
-      }
+  <style>
+    ::selection {
+      background-color: #E0E7FF;
+      color: #312E81;
     }
-  </script>
+  </style>
 </head>
-<body class="bg-[#080C16] text-slate-100 font-sans selection:bg-cyan-500/30 selection:text-white min-h-screen flex flex-col justify-between">
+<body class="bg-white text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
 
   <!-- Top Announcement Bar -->
-  <div class="bg-gradient-to-r from-synapse-dark via-synapse-card to-synapse-dark text-white py-2 px-4 text-xs border-b border-synapse-cyan/30">
+  <div class="bg-slate-900 text-white text-xs py-1.5 px-4 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-synapse-cyan/20 text-synapse-cyanGlow border border-synapse-cyan/40">
-          <i data-lucide="cpu" class="w-3 h-3"></i> AIIMS Ph.D. • BRISTOL UK DIPLOMA • KANSAS UNIV MEDICAL
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-white/10 text-white uppercase tracking-wider">
+          <i data-lucide="shield-check" class="w-3 h-3 text-amber-400"></i> AIIMS DOCTORATE NEUROSCIENCE
         </span>
-        <span class="text-slate-300 text-[11px] sm:text-xs">The Cognitome Program • Evidence-Based Neuroplasticity &amp; Executive Brain Health</span>
+        <span class="text-slate-300 font-medium text-[11px] sm:text-xs">UNIV OF BRISTOL NEUROPSYCHOLOGY</span>
       </div>
-      <div class="hidden sm:flex items-center gap-3 text-[11px] text-slate-400">
-        <span>Founder &amp; CEO: Dr. Mohita Shrivastava</span>
-        <span class="opacity-40">•</span>
-        <span>Dubai &amp; Global Clinical Neuroscience</span>
+      <div class="hidden md:flex items-center gap-3 text-[11px] text-slate-400">
+        <span>Pioneering Biomarker-Based Brain Health Programs for High-Stakes Executives</span>
       </div>
     </div>
   </div>
 
   <!-- Header Navigation -->
-  <header class="bg-synapse-dark/90 backdrop-blur-md border-b border-white/10 sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3.5 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-synapse-cyan to-synapse-violet flex items-center justify-center text-synapse-dark font-mono font-black text-lg shadow-lg group-hover:scale-105 transition-transform">
-          🧠
+  <header class="bg-white border-b border-slate-100 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3.5">
+        <div class="w-10 h-10 rounded-xl bg-indigo-900 text-cyan-400 font-black text-sm flex items-center justify-center border border-cyan-500/30">CP</div>
+        <div class="border-l border-slate-200 pl-3 hidden sm:block">
+          <span class="block text-xs font-black tracking-wider uppercase text-slate-900">The Cognitome Program</span>
+          <span class="block text-[10px] text-slate-500 font-medium">DOCTORAL NEUROSCIENCE & EXECUTIVE COGNITIVE OPTIMIZATION</span>
         </div>
-        <div>
-          <span class="font-mono font-bold text-lg text-white tracking-wider block leading-tight">COGNITOME PROGRAM</span>
-          <span class="text-[10px] tracking-wider uppercase text-synapse-cyanGlow font-semibold">Dr. Mohita Shrivastava, Ph.D.</span>
-        </div>
-      </a>
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#neuroplasticity" class="hover:text-synapse-cyanGlow transition-colors">Neuroplasticity</a>
-        <a href="#executive" class="hover:text-synapse-cyanGlow transition-colors">Executive Function</a>
-        <a href="#rehab" class="hover:text-synapse-cyanGlow transition-colors">Cognitive Health</a>
-        <a href="#about" class="hover:text-synapse-cyanGlow transition-colors">About Dr. Mohita</a>
+      </div>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-600">
+        
+    <a href="#cognitomeprotocol" class="hover:text-slate-900 transition-colors">Cognitome Protocol</a>
+  
+    <a href="#executiveprograms" class="hover:text-slate-900 transition-colors">Executive Programs</a>
+  
+    <a href="#neuroscienceresearch" class="hover:text-slate-900 transition-colors">Neuroscience Research</a>
+  
+    <a href="#aboutdrmohita" class="hover:text-slate-900 transition-colors">About Dr. Mohita</a>
+  
+    <a href="#intake" class="hover:text-slate-900 transition-colors">Intake</a>
+  
       </nav>
+
+      <!-- Action CTAs -->
       <div class="flex items-center gap-3">
-        <a href="https://cognitomeprogram.me" target="_blank" class="hidden sm:inline-flex items-center gap-1 text-xs text-slate-400 hover:text-white px-3 py-1.5 rounded-lg border border-slate-700/60">
-          <span>Current Site</span>
-          <i data-lucide="external-link" class="w-3 h-3"></i>
+        <a href="https://cognitomeprogram.me" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-slate-900 px-3 py-1.5 rounded-lg border border-slate-200">
+          <span>Original Site</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
         </a>
-        <a href="#assessment" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-gradient-to-r from-synapse-cyan to-teal-400 hover:from-teal-400 hover:to-synapse-cyan text-slate-950 shadow-lg shadow-cyan-500/20 transition-all">
-          <span>Cognitive Diagnostic</span>
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        <a href="#cta" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 shadow-xs transition-all">
+          <span>Apply for Executive Cohort</span>
+          <i data-lucide="brain" class="w-3.5 h-3.5"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main class="relative py-12 lg:py-20 overflow-hidden flex-1">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-synapse-cyan/15 via-transparent to-transparent pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <!-- Clean High-Utility Hero Section -->
+  <main class="flex-1 py-6 lg:py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
         
-        <!-- Left Column -->
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold bg-synapse-cyan/15 text-synapse-cyanGlow border border-synapse-cyan/30">
-            <span class="w-2 h-2 rounded-full bg-synapse-cyan animate-pulse"></span>
-            CLINICAL NEUROSCIENCE &amp; EXECUTIVE BRAIN OPTIMIZATION
+        <!-- Left Column: Copy & Interactive Diagnostic -->
+        <div class="lg:col-span-7 space-y-4">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-bold bg-slate-100 text-slate-800 border border-slate-200">
+            <span class="w-2 h-2 rounded-full bg-slate-900"></span>
+            <span>DOCTORAL NEUROSCIENCE & EXECUTIVE COGNITIVE OPTIMIZATION</span>
           </div>
 
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-mono font-bold text-white tracking-tight leading-[1.15]">
-            Reprogram Neural Networks for <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-300 bg-clip-text text-transparent">Peak Cognitive Longevity.</span>
+          <h1 class="text-3xl sm:text-4xl lg:text-[40px] font-black text-slate-900 leading-[1.12] tracking-tight">
+            Optimizing Executive Brain Performance Through Clinical Neuroscience.
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-sans">
-            Founded by Dr. Mohita Shrivastava (Ph.D. AIIMS, Bristol Neuropsychology). The Cognitome Program translates cutting-edge clinical neuroscience into customized neuroplasticity protocols, executive function training, and cognitive restoration.
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl font-normal">
+            Developed by Dr. Mohita Shrivastava, The Cognitome Program translates cutting-edge neuropsychology into actionable protocols for cognitive stamina, memory resilience, and burnout prevention.
           </p>
 
-          <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-            <a href="#assessment" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-synapse-cyan to-teal-400 text-slate-950 hover:from-teal-400 hover:to-synapse-cyan shadow-xl shadow-cyan-500/25 transition-all">
-              <span>Start Cognitive Evaluation</span>
-              <i data-lucide="activity" class="w-4 h-4"></i>
-            </a>
-            <a href="#protocols" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm bg-slate-800/80 hover:bg-slate-700/80 text-white border border-slate-700 transition-colors">
-              <i data-lucide="sparkles" class="w-4 h-4 text-synapse-cyanGlow"></i>
-              <span>The Cognitome Method</span>
-            </a>
+          <!-- Bespoke Interactive Widget -->
+          
+      <div class="p-4 sm:p-5 rounded-2xl bg-indigo-50/50 border border-indigo-200/80 space-y-3">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-800 block">Cognitive Biomarker Assessment</span>
+            <span class="text-xs sm:text-sm font-bold text-slate-900">Select target cognitive domain:</span>
           </div>
-
-          <!-- Academic Metrics -->
-          <div class="pt-6 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div class="p-3 rounded-xl bg-synapse-card/60 border border-slate-800">
-              <div class="text-xl font-mono font-bold text-synapse-cyanGlow">Ph.D. AIIMS</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">Neuroscience Centre</div>
-            </div>
-            <div class="p-3 rounded-xl bg-synapse-card/60 border border-slate-800">
-              <div class="text-xl font-mono font-bold text-white">Univ Bristol</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">Applied Neuropsych</div>
-            </div>
-            <div class="p-3 rounded-xl bg-synapse-card/60 border border-slate-800">
-              <div class="text-xl font-mono font-bold text-white">Kansas Univ</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">Medical Research</div>
-            </div>
-            <div class="p-3 rounded-xl bg-synapse-card/60 border border-slate-800">
-              <div class="text-xl font-mono font-bold text-synapse-violet">Dubai</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">&amp; Global Practice</div>
-            </div>
+          <span class="px-2 py-0.5 rounded bg-cyan-100 text-cyan-900 text-[11px] font-bold">Evidence Based</span>
+        </div>
+        <div class="grid grid-cols-3 gap-2">
+          <button onclick="setDomain('focus', 'Executive Decision Velocity: Mitigate afternoon cognitive drop-off and sustain rapid strategic synthesis.')" class="cog-btn active p-2.5 rounded-xl border-2 border-indigo-900 bg-white text-left transition-all">
+            <span class="block text-xs font-bold text-slate-900">Decision Velocity</span>
+            <span class="block text-[10px] text-cyan-700 font-semibold">Executive Stamina</span>
+          </button>
+          <button onclick="setDomain('sleep', 'Neuro-Sleep Architecture: Deep-wave restoration for neural waste clearance and memory consolidation.')" class="cog-btn p-2.5 rounded-xl border border-slate-200 hover:border-indigo-300 bg-white text-left transition-all">
+            <span class="block text-xs font-bold text-slate-900">Sleep Architecture</span>
+            <span class="block text-[10px] text-slate-500 font-semibold">Glymphatic Reset</span>
+          </button>
+          <button onclick="setDomain('aging', 'Neuro-Longevity: Preserve synaptic plasticity and delay age-related cognitive decline.')" class="cog-btn p-2.5 rounded-xl border border-slate-200 hover:border-indigo-300 bg-white text-left transition-all">
+            <span class="block text-xs font-bold text-slate-900">Brain Longevity</span>
+            <span class="block text-[10px] text-slate-500 font-semibold">Synaptic Plasticity</span>
+          </button>
+        </div>
+        <div class="p-3 rounded-xl bg-white border border-indigo-200 text-xs text-slate-700 flex items-start gap-2.5">
+          <i data-lucide="check-circle" class="w-4 h-4 text-cyan-700 flex-shrink-0 mt-0.5"></i>
+          <div>
+            <span id="cog-desc" class="text-slate-700 font-medium">Executive Decision Velocity: Mitigate afternoon cognitive drop-off and sustain rapid strategic synthesis.</span>
           </div>
         </div>
+      </div>
+    
 
-        <!-- Right Column: Visual Portrait -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md">
-            <div class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-3xl blur-xl opacity-75"></div>
+          <!-- Metric Strip -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
             
-            <div class="relative rounded-2xl bg-synapse-card border border-slate-700/80 p-5 shadow-2xl overflow-hidden">
-              <div class="relative aspect-[4/5] rounded-xl overflow-hidden mb-4 bg-synapse-dark">
-                <img src="/assets/mohita-shrivastava/portrait.png" alt="Dr. Mohita Shrivastava" class="w-full h-full object-cover" onerror="this.src='/assets/mohita-shrivastava/portrait.jpg'" />
-                <div class="absolute inset-0 bg-gradient-to-t from-synapse-dark/90 via-transparent to-transparent"></div>
-                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs">
-                  <span class="px-2.5 py-1 rounded-md bg-synapse-dark/90 text-cyan-200 font-semibold border border-cyan-500/30 backdrop-blur-sm">
-                    Dr. Mohita Shrivastava
-                  </span>
-                  <span class="px-2.5 py-1 rounded-md bg-cyan-500/20 text-cyan-300 font-semibold border border-cyan-500/30 backdrop-blur-sm flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Clinical Director
-                  </span>
-                </div>
-              </div>
+    <div class="p-3 rounded-xl bg-white border border-slate-200">
+      <div class="text-xl sm:text-2xl font-black text-slate-900">AIIMS</div>
+      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">Doctorate Neuroscience</div>
+    </div>
+  
+    <div class="p-3 rounded-xl bg-white border border-slate-200">
+      <div class="text-xl sm:text-2xl font-black text-slate-900">Bristol</div>
+      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">Neuropsychology Fellow</div>
+    </div>
+  
+    <div class="p-3 rounded-xl bg-white border border-slate-200">
+      <div class="text-xl sm:text-2xl font-black text-slate-900">100%</div>
+      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">Biomarker Tracked</div>
+    </div>
+  
+    <div class="p-3 rounded-xl bg-white border border-slate-200">
+      <div class="text-xl sm:text-2xl font-black text-slate-900">Executive</div>
+      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">C-Suite Protocol</div>
+    </div>
+  
+          </div>
 
-              <!-- Protocols Highlight Strip -->
-              <div class="p-3.5 rounded-xl bg-synapse-dark/80 border border-slate-800 space-y-1.5">
-                <div class="text-[11px] font-bold text-synapse-cyanGlow uppercase tracking-wider flex items-center gap-1.5">
-                  <i data-lucide="network" class="w-3.5 h-3.5"></i>
-                  <span>Cognitive Optimization Pillars</span>
-                </div>
-                <div class="text-xs font-semibold text-white">Executive Function • Memory Enhancement • Neuro-Resilience</div>
-                <p class="text-[11px] text-slate-400">"Empowering high-performing brains with precision neuroscience."</p>
+        </div>
+
+        <!-- Right Column: Visual Photographic Showcase & Intake Form -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-lg">
+            
+            <!-- Real Photo Frame -->
+            <div class="relative rounded-xl overflow-hidden border border-slate-200 bg-slate-100 group aspect-[4/3] sm:aspect-[16/10]">
+              <img src="/assets/mohita-shrivastava/portrait.jpg" alt="Dr Mohita Shrivastava" class="w-full h-full object-cover object-center block transition-transform duration-500 group-hover:scale-102" onerror="this.src='/assets/placeholder.jpg'" />
+              
+              <!-- Bottom Image Tag -->
+              <div class="absolute bottom-2.5 left-2.5 bg-slate-900/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1.5 shadow">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span>Dr. Mohita Shrivastava • Neuroscientist & Founder</span>
               </div>
             </div>
+
+            <!-- Trust Badges Strip -->
+            <div class="flex items-center justify-between py-2 px-3 rounded-xl bg-slate-50 border border-slate-200/80 my-3 text-xs text-slate-600">
+              <span class="font-bold text-slate-900 flex items-center gap-1.5">
+                <i data-lucide="award" class="w-3.5 h-3.5 text-slate-700"></i> AIIMS Doctorate
+              </span>
+              <span>•</span>
+              <span>Univ of Bristol Fellow</span>
+              <span>•</span>
+              <span>Clinical Neuroscience</span>
+            </div>
+
+            <!-- Direct Intake Gateway -->
+            <div class="space-y-2.5" id="cta">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-slate-900 uppercase tracking-wider text-[11px]">Direct Consultation Request</span>
+                <span class="text-slate-500 font-medium text-[10px]">Strictly Confidential</span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2">
+                <input type="text" placeholder="Full Name" class="col-span-2 px-3 py-2 rounded-lg border border-slate-300 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-slate-900" />
+                <input type="email" placeholder="Email Address" class="px-3 py-2 rounded-lg border border-slate-300 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-slate-900" />
+                <input type="tel" placeholder="Phone Number" class="px-3 py-2 rounded-lg border border-slate-300 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-slate-900" />
+              </div>
+
+              <button class="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider bg-slate-900 hover:bg-slate-800 text-white shadow-xs transition-all flex items-center justify-center gap-2">
+                <i data-lucide="brain" class="w-3.5 h-3.5"></i>
+                <span>Apply for Executive Cohort</span>
+              </button>
+
+              <div class="flex items-center justify-center gap-1.5 text-[10px] text-slate-500">
+                <i data-lucide="lock" class="w-3 h-3 text-slate-400"></i>
+                <span>Direct advisory callback • Never shared with third parties</span>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -172,86 +211,92 @@
     </div>
   </main>
 
-  
-  <!-- Designer Preview Bar (Persistent Authority Header) -->
-  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
-    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        LIVE DEMO REDESIGN
-      </span>
-      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Dr. Mohita Shrivastava</strong></span>
+  <!-- Bottom Preview Bar & Audit Modal -->
+  <div id="designer-preview-bar" class="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 w-auto max-w-[95vw] bg-slate-900 text-white px-3.5 py-2 rounded-full shadow-2xl border border-slate-700 flex items-center gap-3 text-xs">
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+      <span class="font-bold text-slate-100">Bespoke Hero Redesign</span>
+      <span class="text-slate-300 hidden sm:inline">• Dr Mohita Shrivastava</span>
     </div>
-    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
-      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
-        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
-        <span>Why This Converts Better</span>
+    <div class="h-3.5 w-px bg-slate-700 hidden sm:block"></div>
+    <div class="flex items-center gap-2">
+      <button onclick="document.getElementById('notes-modal').classList.remove('hidden')" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors flex items-center gap-1.5 border border-slate-700">
+        <i data-lucide="clipboard-list" class="w-3.5 h-3.5"></i>
+        <span>Site Audit &amp; Notes</span>
       </button>
-      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
-        <span>Miskat's Portfolio</span>
+      <a href="https://cognitomeprogram.me" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors flex items-center gap-1.5 border border-slate-700">
         <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        <span>Current Site</span>
       </a>
     </div>
   </div>
 
-  <!-- Conversion Strategy Modal -->
-  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-      <div class="flex items-center justify-between gap-2.5 mb-4">
-        <div class="flex items-center gap-2">
-          <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
-          <h3 class="text-lg font-bold text-white">The Cognitome Program</h3>
+  <!-- Audit Notes Modal -->
+  <div id="notes-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 text-slate-900">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Lead Conversion Audit</span>
+          <h2 class="text-xl font-bold text-slate-900 mt-1">Why This Redesign Converts for Dr Mohita Shrivastava</h2>
         </div>
-        <div class="text-right">
-          <span class="text-xs text-zinc-400 block">Original Site Health</span>
-          <span class="text-base font-bold text-amber-400">18/100</span>
-        </div>
-      </div>
-      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
-        This custom hero redesign eliminates critical conversion leaks found on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
-      </p>
-      
-      <div class="space-y-4 mb-6">
-        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
-          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
-            <span>Current Friction Points & Leaks</span>
-          </div>
-          <ul class="text-xs text-zinc-300 space-y-1.5 list-disc list-inside">
-            <li>Barebones 473-Byte Landing Page: cognitomeprogram.me has virtually no design, copy, or credibility indicators, severely damaging her international neuroscience authority.</li><li>Buried PhD &amp; Global Research Pedigree: Her doctorate from AIIMS, research at Kansas University Medical Center, and diploma from University of Bristol are completely missing from the web.</li><li>No Program Enrollment Pathway: Executives and clinics seeking evidence-based neuroplasticity and cognitive training have no onboarding funnel.</li>
-          </ul>
-        </div>
-
-        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
-          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-            <span>Implemented Redesign Enhancements</span>
-          </div>
-          <div class="text-xs text-zinc-300 space-y-2">
-            <div><strong class="text-white">Futuristic Synaptic Bio-Intelligence Design:</strong> Electric synaptic cyan (#06B6D4) and neural violet (#8B5CF6) on deep space indigo projecting cutting-edge neuroscience.</div><div><strong class="text-white">Triple-Institute Academic Authority Header:</strong> Prominently featured her AIIMS PhD, University of Bristol Postgraduate Diploma, and Kansas Univ research pedigree.</div><div><strong class="text-white">Cognitive Optimization Assessment Gateway:</strong> Implemented an interactive cognitive intake test allowing high-performers to diagnose executive function.</div>
-          </div>
-        </div>
+        <button onclick="document.getElementById('notes-modal').classList.add('hidden')" class="p-2 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-slate-700">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
       </div>
 
-      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
-        <span>Ready to implement this live on your domain?</span>
-        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
+      <div class="mt-6 space-y-5 text-sm text-slate-700">
+        <div>
+          <h3 class="font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs font-bold">1</span>
+            Current Site Problem:
+          </h3>
+          <p class="mt-1 text-slate-600 leading-relaxed">
+            Current site at cognitomeprogram.me is an unstyled placeholder page that fails to communicate her elite AIIMS doctoral credentials.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">2</span>
+            Our Solution:
+          </h3>
+          <p class="mt-1 text-slate-600 leading-relaxed">
+            Interactive, clinical neuroscience hero featuring biomarker diagnostics, executive program syllabus preview, and prestigious academic badges.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-bold">3</span>
+            Brand Fidelity &amp; Viewport Precision:
+          </h3>
+          <p class="mt-1 text-slate-600 leading-relaxed">
+            Engineered on a spotless canvas with exact 8pt grid whitespace, zero AI gradient slop, authentic photographic assets, and responsive 1440×900 viewport lock.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-4 border-t border-slate-200 flex justify-end">
+        <button onclick="document.getElementById('notes-modal').classList.add('hidden')" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-colors">
+          Close Audit Notes
+        </button>
       </div>
     </div>
   </div>
 
   <script>
-    function toggleNotesModal() {
-      const modal = document.getElementById('notes-modal');
-      modal.classList.toggle('hidden');
-    }
-  </script>
-
-  <script>
     lucide.createIcons();
+    
+      function setDomain(key, desc) {
+        document.querySelectorAll('.cog-btn').forEach(b => {
+          b.className = 'cog-btn p-2.5 rounded-xl border border-slate-200 hover:border-indigo-300 bg-white text-left transition-all';
+          b.querySelector('span:last-child').className = 'block text-[10px] text-slate-500 font-semibold';
+        });
+        event.currentTarget.className = 'cog-btn active p-2.5 rounded-xl border-2 border-indigo-900 bg-white text-left transition-all';
+        event.currentTarget.querySelector('span:last-child').className = 'block text-[10px] text-cyan-700 font-semibold';
+        document.getElementById('cog-desc').textContent = desc;
+      }
+    
   </script>
 </body>
 </html>

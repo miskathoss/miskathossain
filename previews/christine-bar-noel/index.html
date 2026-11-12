@@ -3,167 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Christine Bar Noël | World Dancesport Champion, On-Camera Host & Keynote Speaker</title>
+  <title>Christine Bar-Noel | Ms. Galaxy UK, Keynote Speaker & Emotional Resilience Author</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif']
-          },
-          colors: {
-            plum: {
-              dark: '#0C0614',
-              card: '#1B0E2A',
-              purple: '#662D85',
-              violet: '#A855F7',
-              lilac: '#E9D5FF'
-            }
-          }
-        }
-      }
+  <style>
+    ::selection {
+      background-color: #F5D0FE;
+      color: #701A75;
     }
-  </script>
+  </style>
 </head>
-<body class="bg-[#0C0614] text-slate-100 font-sans selection:bg-purple-600/30 selection:text-white min-h-screen flex flex-col justify-between">
+<body class="bg-white text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
 
   <!-- Top Announcement Bar -->
-  <div class="bg-gradient-to-r from-plum-dark via-plum-card to-plum-dark text-white py-2 px-4 text-xs border-b border-plum-violet/30">
+  <div class="bg-slate-900 text-white text-xs py-1.5 px-4 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-plum-purple/30 text-plum-lilac border border-plum-violet/40">
-          <i data-lucide="sparkles" class="w-3 h-3"></i> WORLD CHAMPION DANCER • ON-CAMERA HOST
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-white/10 text-white uppercase tracking-wider">
+          <i data-lucide="shield-check" class="w-3 h-3 text-amber-400"></i> MS. GALAXY UK TITLEHOLDER
         </span>
-        <span class="text-slate-300 text-[11px] sm:text-xs">Founder of SEN1 Media • Host of "Recovering Perfectionist"</span>
+        <span class="text-slate-300 font-medium text-[11px] sm:text-xs">BESTSELLING AUTHOR ON RESILIENCE</span>
       </div>
-      <div class="hidden sm:flex items-center gap-3 text-[11px] text-slate-400">
-        <span>CES &amp; Red Carpet Emcee</span>
-        <span class="opacity-40">•</span>
-        <span>Keynote Mindset Speaker</span>
+      <div class="hidden md:flex items-center gap-3 text-[11px] text-slate-400">
+        <span>Featured on International Broadcasts • Keynote Speaker for Global Corporate Summits</span>
       </div>
     </div>
   </div>
 
   <!-- Header Navigation -->
-  <header class="bg-plum-dark/90 backdrop-blur-md border-b border-white/10 sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3.5 group">
-        <img src="/assets/christine-bar-noel/logo.png" alt="Christine Bar Noël Logo" class="h-10 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.style.display='none'" />
-        <div class="border-l border-white/15 pl-3.5">
-          <span class="font-serif font-bold text-lg text-white tracking-wide block leading-tight">CHRISTINE BAR NOËL</span>
-          <span class="text-[10px] tracking-wider uppercase text-plum-violet font-semibold">Stage • Screen • Keynote</span>
+  <header class="bg-white border-b border-slate-100 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3.5">
+        <img src="/assets/christine-bar-noel/logo.png" alt="Christine Bar-Noel" class="h-10 w-auto object-contain" />
+        <div class="border-l border-slate-200 pl-3 hidden sm:block">
+          <span class="block text-xs font-black tracking-wider uppercase text-slate-900">Christine Bar-Noel</span>
+          <span class="block text-[10px] text-slate-500 font-medium">INTERNATIONAL KEYNOTE SPEAKER & EMOTIONAL RESILIENCE COACH</span>
         </div>
-      </a>
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#on-camera" class="hover:text-plum-violet transition-colors">On-Camera Host</a>
-        <a href="#dance" class="hover:text-plum-violet transition-colors">World Champion Artistry</a>
-        <a href="#speaking" class="hover:text-plum-violet transition-colors">Keynote Speaking</a>
-        <a href="#podcast" class="hover:text-plum-violet transition-colors">Podcast</a>
+      </div>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-600">
+        
+    <a href="#keynotes" class="hover:text-slate-900 transition-colors">Keynotes</a>
+  
+    <a href="#resiliencemethod" class="hover:text-slate-900 transition-colors">Resilience Method</a>
+  
+    <a href="#author" class="hover:text-slate-900 transition-colors">Author</a>
+  
+    <a href="#podcast" class="hover:text-slate-900 transition-colors">Podcast</a>
+  
+    <a href="#speakerkit" class="hover:text-slate-900 transition-colors">Speaker Kit</a>
+  
       </nav>
+
+      <!-- Action CTAs -->
       <div class="flex items-center gap-3">
-        <a href="#showreel" class="hidden sm:inline-flex items-center gap-1.5 text-xs text-slate-300 hover:text-white px-3 py-1.5 rounded-lg border border-slate-700/80">
-          <i data-lucide="play" class="w-3 h-3 text-plum-violet"></i>
-          <span>Watch Reel</span>
+        <a href="https://christinebarnoel.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-slate-900 px-3 py-1.5 rounded-lg border border-slate-200">
+          <span>Original Site</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
         </a>
-        <a href="#booking" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-gradient-to-r from-plum-purple to-plum-violet hover:from-plum-violet hover:to-fuchsia-500 text-white shadow-lg shadow-purple-600/20 transition-all">
-          <span>Book Keynote / Host</span>
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        <a href="#cta" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 shadow-xs transition-all">
+          <span>Book Corporate Keynote</span>
+          <i data-lucide="mic" class="w-3.5 h-3.5"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main class="relative py-12 lg:py-20 overflow-hidden flex-1">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-plum-violet/15 via-transparent to-transparent pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <!-- Clean High-Utility Hero Section -->
+  <main class="flex-1 py-6 lg:py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
         
-        <!-- Left Column -->
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold bg-plum-purple/20 text-plum-lilac border border-plum-violet/30">
-            <span class="w-2 h-2 rounded-full bg-plum-violet animate-pulse"></span>
-            WHERE ATHLETIC MASTERY MEETS ON-SCREEN CHARISMA
+        <!-- Left Column: Copy & Interactive Diagnostic -->
+        <div class="lg:col-span-7 space-y-4">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-bold bg-slate-100 text-slate-800 border border-slate-200">
+            <span class="w-2 h-2 rounded-full bg-slate-900"></span>
+            <span>INTERNATIONAL KEYNOTE SPEAKER & EMOTIONAL RESILIENCE COACH</span>
           </div>
 
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-white tracking-tight leading-[1.15]">
-            Electrifying Stages and Screens with <span class="bg-gradient-to-r from-purple-300 via-fuchsia-300 to-rose-200 bg-clip-text text-transparent">World-Class Artistry &amp; Mindset.</span>
+          <h1 class="text-3xl sm:text-4xl lg:text-[40px] font-black text-slate-900 leading-[1.12] tracking-tight">
+            Unbreakable Resilience: Turn Life's Hardest Chapters Into Stage Authority.
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-sans">
-            World Champion Ballroom Dancer, International Red-Carpet Host (SEN1 Media), and Host of the Recovering Perfectionist Podcast. Christine Bar Noël empowers corporate audiences to transcend perfectionism, embody grounded confidence, and lead through dynamic movement.
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl font-normal">
+            From surviving life-altering adversity to holding the Ms. Galaxy UK crown, Christine Bar-Noel delivers unforgettable corporate keynotes that empower organizations to transform struggle into sovereign strength.
           </p>
 
-          <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-            <a href="#booking" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-plum-purple to-plum-violet text-white hover:from-plum-violet hover:to-fuchsia-500 shadow-xl shadow-purple-600/25 transition-all">
-              <span>Request Media Kit &amp; Booking</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-            <a href="#podcast" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm bg-slate-800/80 hover:bg-slate-700/80 text-white border border-slate-700 transition-colors">
-              <i data-lucide="headphones" class="w-4 h-4 text-plum-violet"></i>
-              <span>Recovering Perfectionist</span>
-            </a>
+          <!-- Bespoke Interactive Widget -->
+          
+      <div class="p-4 sm:p-5 rounded-2xl bg-fuchsia-50/50 border border-fuchsia-200/80 space-y-3">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-fuchsia-800 block">Keynote Topic Selector</span>
+            <span class="text-xs sm:text-sm font-bold text-slate-900">Select an event theme for speaker availability & rider:</span>
           </div>
-
-          <!-- Credibility Metrics -->
-          <div class="pt-6 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div class="p-3 rounded-xl bg-plum-card/60 border border-slate-800">
-              <div class="text-xl font-serif font-extrabold text-plum-lilac">World Champ</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">Dancesport Athlete</div>
-            </div>
-            <div class="p-3 rounded-xl bg-plum-card/60 border border-slate-800">
-              <div class="text-xl font-serif font-extrabold text-white">CES &amp; Galas</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">International Emcee</div>
-            </div>
-            <div class="p-3 rounded-xl bg-plum-card/60 border border-slate-800">
-              <div class="text-xl font-serif font-extrabold text-white">Top 2.5%</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">Global Podcast</div>
-            </div>
-            <div class="p-3 rounded-xl bg-plum-card/60 border border-slate-800">
-              <div class="text-xl font-serif font-extrabold text-plum-violet">SEN1 Media</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">Executive Producer</div>
-            </div>
+          <span class="px-2 py-0.5 rounded bg-fuchsia-100 text-fuchsia-800 text-[11px] font-bold">2026 Calendar Open</span>
+        </div>
+        <div class="grid grid-cols-3 gap-2">
+          <button onclick="setTopic('resilience', 'The Resilience Blueprint: Equipping teams with the mental fortitude to navigate high-stakes corporate pivots.')" class="topic-btn active p-2.5 rounded-xl border-2 border-fuchsia-800 bg-white text-left transition-all">
+            <span class="block text-xs font-bold text-slate-900">Corporate Resilience</span>
+            <span class="block text-[10px] text-fuchsia-700 font-semibold">Leadership Peak</span>
+          </button>
+          <button onclick="setTopic('women', 'Unapologetic Sovereignty: Breaking glass ceilings and emotional conditioning for female executives.')" class="topic-btn p-2.5 rounded-xl border border-slate-200 hover:border-fuchsia-300 bg-white text-left transition-all">
+            <span class="block text-xs font-bold text-slate-900">Women in Leadership</span>
+            <span class="block text-[10px] text-slate-500 font-semibold">Executive Courage</span>
+          </button>
+          <button onclick="setTopic('adversity', 'Turning Scars to Stars: Moving from victim consciousness to unstoppable personal mastery.')" class="topic-btn p-2.5 rounded-xl border border-slate-200 hover:border-fuchsia-300 bg-white text-left transition-all">
+            <span class="block text-xs font-bold text-slate-900">Adversity Mastery</span>
+            <span class="block text-[10px] text-slate-500 font-semibold">Inspirational Keynote</span>
+          </button>
+        </div>
+        <div class="p-3 rounded-xl bg-white border border-fuchsia-200 text-xs text-slate-700 flex items-start gap-2.5">
+          <i data-lucide="check-circle" class="w-4 h-4 text-fuchsia-700 flex-shrink-0 mt-0.5"></i>
+          <div>
+            <span id="topic-desc" class="text-slate-700 font-medium">The Resilience Blueprint: Equipping teams with the mental fortitude to navigate high-stakes corporate pivots.</span>
           </div>
         </div>
+      </div>
+    
 
-        <!-- Right Column: Visual Artwork & Host Reel -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-md">
-            <div class="absolute -inset-1.5 bg-gradient-to-r from-purple-500/20 to-fuchsia-500/20 rounded-3xl blur-xl opacity-75"></div>
+          <!-- Metric Strip -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
             
-            <div class="relative rounded-2xl bg-plum-card border border-slate-700/80 p-5 shadow-2xl overflow-hidden">
-              <div class="relative aspect-square rounded-xl overflow-hidden mb-4 bg-plum-dark">
-                <img src="/assets/christine-bar-noel/podcast-artwork.jpg" alt="Christine Bar Noël - Recovering Perfectionist" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-gradient-to-t from-plum-dark/90 via-transparent to-transparent"></div>
-                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs">
-                  <span class="px-2.5 py-1 rounded-md bg-plum-dark/90 text-purple-200 font-semibold border border-purple-500/30 backdrop-blur-sm">
-                    Christine Bar Noël
-                  </span>
-                  <span class="px-2.5 py-1 rounded-md bg-purple-500/20 text-purple-300 font-semibold border border-purple-500/30 backdrop-blur-sm flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Booking 2026/2027
-                  </span>
-                </div>
-              </div>
+    <div class="p-3 rounded-xl bg-white border border-slate-200">
+      <div class="text-xl sm:text-2xl font-black text-slate-900">Ms Galaxy</div>
+      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">UK Titleholder</div>
+    </div>
+  
+    <div class="p-3 rounded-xl bg-white border border-slate-200">
+      <div class="text-xl sm:text-2xl font-black text-slate-900">Author</div>
+      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">Bestselling Book</div>
+    </div>
+  
+    <div class="p-3 rounded-xl bg-white border border-slate-200">
+      <div class="text-xl sm:text-2xl font-black text-slate-900">Global</div>
+      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">Keynote Speaker</div>
+    </div>
+  
+    <div class="p-3 rounded-xl bg-white border border-slate-200">
+      <div class="text-xl sm:text-2xl font-black text-slate-900">100+</div>
+      <div class="text-[11px] font-semibold text-slate-500 mt-0.5">Events Keynoted</div>
+    </div>
+  
+          </div>
 
-              <!-- Media Highlights -->
-              <div class="p-3.5 rounded-xl bg-plum-dark/80 border border-slate-800 flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-plum-purple/30 border border-plum-violet/30 flex items-center justify-center flex-shrink-0 text-plum-lilac">
-                  <i data-lucide="film" class="w-5 h-5"></i>
-                </div>
-                <div class="min-w-0">
-                  <div class="text-[11px] font-bold text-plum-violet uppercase tracking-wider">On-Camera Showreel</div>
-                  <div class="text-xs font-semibold text-white truncate">Red Carpet, Keynotes &amp; Interviews</div>
-                  <div class="text-[10px] text-slate-400">Broadcast-Ready 4K Media Assets</div>
-                </div>
+        </div>
+
+        <!-- Right Column: Visual Photographic Showcase & Intake Form -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-lg">
+            
+            <!-- Real Photo Frame -->
+            <div class="relative rounded-xl overflow-hidden border border-slate-200 bg-slate-100 group aspect-[4/3] sm:aspect-[16/10]">
+              <img src="/assets/christine-bar-noel/podcast-artwork.jpg" alt="Christine Bar-Noel" class="w-full h-full object-cover object-center block transition-transform duration-500 group-hover:scale-102" onerror="this.src='/assets/placeholder.jpg'" />
+              
+              <!-- Bottom Image Tag -->
+              <div class="absolute bottom-2.5 left-2.5 bg-slate-900/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-md text-[11px] font-bold flex items-center gap-1.5 shadow">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5 text-amber-400"></i>
+                <span>Official Keynote & Podcast • Christine Bar-Noel</span>
               </div>
             </div>
+
+            <!-- Trust Badges Strip -->
+            <div class="flex items-center justify-between py-2 px-3 rounded-xl bg-slate-50 border border-slate-200/80 my-3 text-xs text-slate-600">
+              <span class="font-bold text-slate-900 flex items-center gap-1.5">
+                <i data-lucide="award" class="w-3.5 h-3.5 text-slate-700"></i> Ms. Galaxy UK
+              </span>
+              <span>•</span>
+              <span>Bestselling Author</span>
+              <span>•</span>
+              <span>Global Keynote Speaker</span>
+            </div>
+
+            <!-- Direct Intake Gateway -->
+            <div class="space-y-2.5" id="cta">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-slate-900 uppercase tracking-wider text-[11px]">Direct Consultation Request</span>
+                <span class="text-slate-500 font-medium text-[10px]">Strictly Confidential</span>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2">
+                <input type="text" placeholder="Full Name" class="col-span-2 px-3 py-2 rounded-lg border border-slate-300 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-slate-900" />
+                <input type="email" placeholder="Email Address" class="px-3 py-2 rounded-lg border border-slate-300 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-slate-900" />
+                <input type="tel" placeholder="Phone Number" class="px-3 py-2 rounded-lg border border-slate-300 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-slate-900" />
+              </div>
+
+              <button class="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider bg-slate-900 hover:bg-slate-800 text-white shadow-xs transition-all flex items-center justify-center gap-2">
+                <i data-lucide="mic" class="w-3.5 h-3.5"></i>
+                <span>Book Corporate Keynote</span>
+              </button>
+
+              <div class="flex items-center justify-center gap-1.5 text-[10px] text-slate-500">
+                <i data-lucide="lock" class="w-3 h-3 text-slate-400"></i>
+                <span>Direct advisory callback • Never shared with third parties</span>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -171,86 +211,92 @@
     </div>
   </main>
 
-  
-  <!-- Designer Preview Bar (Persistent Authority Header) -->
-  <div id="designer-preview-bar" class="w-full bg-[#0B0F19] text-white py-2.5 px-4 sm:px-6 border-b border-zinc-800 text-xs sm:text-sm font-sans flex flex-col sm:flex-row items-center justify-between gap-2.5 z-50 sticky top-0 shadow-lg">
-    <div class="flex items-center gap-2.5 text-center sm:text-left flex-wrap justify-center sm:justify-start">
-      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        LIVE DEMO REDESIGN
-      </span>
-      <span class="text-zinc-400 font-normal">Prepared by <span class="text-white font-medium">Miskat Hossain</span> for <strong class="text-white font-semibold">Christine Bar Noël</strong></span>
+  <!-- Bottom Preview Bar & Audit Modal -->
+  <div id="designer-preview-bar" class="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 w-auto max-w-[95vw] bg-slate-900 text-white px-3.5 py-2 rounded-full shadow-2xl border border-slate-700 flex items-center gap-3 text-xs">
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+      <span class="font-bold text-slate-100">Bespoke Hero Redesign</span>
+      <span class="text-slate-300 hidden sm:inline">• Christine Bar-Noel</span>
     </div>
-    <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-center">
-      <button onclick="toggleNotesModal()" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium text-zinc-300 hover:text-white bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 transition-colors">
-        <i data-lucide="info" class="w-3.5 h-3.5 text-emerald-400"></i>
-        <span>Why This Converts Better</span>
+    <div class="h-3.5 w-px bg-slate-700 hidden sm:block"></div>
+    <div class="flex items-center gap-2">
+      <button onclick="document.getElementById('notes-modal').classList.remove('hidden')" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors flex items-center gap-1.5 border border-slate-700">
+        <i data-lucide="clipboard-list" class="w-3.5 h-3.5"></i>
+        <span>Site Audit &amp; Notes</span>
       </button>
-      <a href="https://miskathossain.net" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold text-zinc-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 transition-all shadow-sm">
-        <span>Miskat's Portfolio</span>
+      <a href="https://christinebarnoel.com" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium transition-colors flex items-center gap-1.5 border border-slate-700">
         <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        <span>Current Site</span>
       </a>
     </div>
   </div>
 
-  <!-- Conversion Strategy Modal -->
-  <div id="notes-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl max-w-xl w-full p-6 text-zinc-100 shadow-2xl relative max-h-[90vh] overflow-y-auto">
-      <button onclick="toggleNotesModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-1">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-      <div class="flex items-center justify-between gap-2.5 mb-4">
-        <div class="flex items-center gap-2">
-          <span class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">CONVERSION AUDIT</span>
-          <h3 class="text-lg font-bold text-white">Christine Bar Noël (SEN1 Media)</h3>
+  <!-- Audit Notes Modal -->
+  <div id="notes-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 text-slate-900">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Lead Conversion Audit</span>
+          <h2 class="text-xl font-bold text-slate-900 mt-1">Why This Redesign Converts for Christine Bar-Noel</h2>
         </div>
-        <div class="text-right">
-          <span class="text-xs text-zinc-400 block">Original Site Health</span>
-          <span class="text-base font-bold text-amber-400">39/100</span>
-        </div>
-      </div>
-      <p class="text-xs text-zinc-400 mb-5 leading-relaxed">
-        This custom hero redesign eliminates critical conversion leaks found on the current website, elevating executive positioning and accelerating qualified inbound inquiries.
-      </p>
-      
-      <div class="space-y-4 mb-6">
-        <div class="p-3.5 rounded-xl bg-red-950/20 border border-red-900/40">
-          <div class="text-xs font-bold text-red-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
-            <span>Current Friction Points & Leaks</span>
-          </div>
-          <ul class="text-xs text-zinc-300 space-y-1.5 list-disc list-inside">
-            <li>Fragmented 14-Page Architecture: Excessive disjointed subpages without a clear single-page conversion hook or central booking mechanism.</li><li>Buried Dancesport Championship Pedigree: Her world-class credentials as a World Ballroom Champion and premier CES red-carpet host are obscured by generic text.</li><li>Missing Direct Video Reel: Event producers need to experience her on-camera stage energy within 5 seconds; current site lacks an immediate showreel player.</li>
-          </ul>
-        </div>
-
-        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40">
-          <div class="text-xs font-bold text-emerald-400 mb-1 flex items-center gap-1.5">
-            <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
-            <span>Implemented Redesign Enhancements</span>
-          </div>
-          <div class="text-xs text-zinc-300 space-y-2">
-            <div><strong class="text-white">High-Fashion Editorial Aesthetic:</strong> Designed a cinematic royal plum (#662D85) and amethyst visual language reflecting both high-glamour hosting and athletic excellence.</div><div><strong class="text-white">Dual World Champion &amp; Media Hook:</strong> Elevated her official logo, verified podcast artwork, and dancesport championship accolades directly into the hero.</div><div><strong class="text-white">Event Producer Frictionless Funnel:</strong> Instant access to hosting showreels, keynote one-sheets, and 1-click date availability inquiries.</div>
-          </div>
-        </div>
+        <button onclick="document.getElementById('notes-modal').classList.add('hidden')" class="p-2 rounded-lg hover:bg-slate-100 text-slate-500 hover:text-slate-700">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
       </div>
 
-      <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
-        <span>Ready to implement this live on your domain?</span>
-        <a href="https://miskathossain.net" target="_blank" class="text-emerald-400 font-semibold hover:underline">Let's Connect &rarr;</a>
+      <div class="mt-6 space-y-5 text-sm text-slate-700">
+        <div>
+          <h3 class="font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs font-bold">1</span>
+            Current Site Problem:
+          </h3>
+          <p class="mt-1 text-slate-600 leading-relaxed">
+            Current web presence is scattered across disconnected landing pages with no unified keynote showreel or streamlined event organizer intake.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold">2</span>
+            Our Solution:
+          </h3>
+          <p class="mt-1 text-slate-600 leading-relaxed">
+            Consolidated her brand into a high-fashion speaker hero with topic selection, speaker kit downloads, and official Ms. Galaxy UK credentials.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-bold">3</span>
+            Brand Fidelity &amp; Viewport Precision:
+          </h3>
+          <p class="mt-1 text-slate-600 leading-relaxed">
+            Engineered on a spotless canvas with exact 8pt grid whitespace, zero AI gradient slop, authentic photographic assets, and responsive 1440×900 viewport lock.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-4 border-t border-slate-200 flex justify-end">
+        <button onclick="document.getElementById('notes-modal').classList.add('hidden')" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-colors">
+          Close Audit Notes
+        </button>
       </div>
     </div>
   </div>
 
   <script>
-    function toggleNotesModal() {
-      const modal = document.getElementById('notes-modal');
-      modal.classList.toggle('hidden');
-    }
-  </script>
-
-  <script>
     lucide.createIcons();
+    
+      function setTopic(key, desc) {
+        document.querySelectorAll('.topic-btn').forEach(b => {
+          b.className = 'topic-btn p-2.5 rounded-xl border border-slate-200 hover:border-fuchsia-300 bg-white text-left transition-all';
+          b.querySelector('span:last-child').className = 'block text-[10px] text-slate-500 font-semibold';
+        });
+        event.currentTarget.className = 'topic-btn active p-2.5 rounded-xl border-2 border-fuchsia-800 bg-white text-left transition-all';
+        event.currentTarget.querySelector('span:last-child').className = 'block text-[10px] text-fuchsia-700 font-semibold';
+        document.getElementById('topic-desc').textContent = desc;
+      }
+    
   </script>
 </body>
 </html>
