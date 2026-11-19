@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Sell With One Percent | Sheida Samimi, Full-Service Listing for 1%</title>
+<meta name="description" content="Sell your Mississauga, Oakville or Toronto home with Sheida Samimi: full-service MLS® listing for a 1% listing commission. Get your free home evaluation.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Sell With One Percent: redesign preview for Sheida Samimi">
+<meta property="og:description" content="Full-service MLS® listing for a 1% listing commission. Redesign concept and site audit by Miskat Hossain.">
+<meta property="og:image" content="https://miskathossain.net/preview/sheida-samimi/hero-preview.png">
+<meta name="theme-color" content="#F7F3EC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F7F3EC;
+    --cream-deep: #EFE7D8;
+    --white: #FFFFFF;
+    --ink: #161614;
+    --ink-soft: #3D3B36;
+    --muted: #686458;
+    --gold: #A98637;
+    --gold-deep: #7B5F22;
+    --brand-gold: #DDBA2F;
+    --hairline: #DDD4C3;
+    --night-line: #34332F;
+    --on-night: #F7F3EC;
+    --on-night-soft: #CFC9BB;
+    --danger: #A3261B;
+    --serif: "Playfair Display", Georgia, serif;
+    --sans: "Inter", system-ui, -apple-system, sans-serif;
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scrollbar-color: #B9AF9C var(--cream); }
+  body {
+    margin: 0; background: var(--cream); color: var(--ink);
+    font: 400 17px/1.6 var(--sans);
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  ::selection { background: var(--brand-gold); color: var(--ink); }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: var(--cream); }
+  ::-webkit-scrollbar-thumb { background: #C4BAA6; border: 3px solid var(--cream); border-radius: 10px; }
+  :focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 3px; border-radius: 4px; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; text-underline-offset: 0.2em; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 600; text-wrap: balance; }
+  h1 em, h2 em { font-style: italic; color: var(--gold); font-weight: 600; }
+  .num { font-variant-numeric: lining-nums tabular-nums; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px); }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: sticky; top: 0; z-index: 30;
+    background: rgba(247, 243, 236, 0.86);
+    backdrop-filter: blur(16px) saturate(150%); -webkit-backdrop-filter: blur(16px) saturate(150%);
+    border-bottom: 1px solid transparent; transition: border-color 200ms ease;
+  }
+  .site-header.scrolled { border-bottom-color: var(--hairline); }
+  .nav { display: flex; align-items: center; gap: 20px; min-height: 76px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+  .mark {
+    width: 44px; height: 44px; flex: none; background: var(--ink); color: var(--brand-gold);
+    display: grid; place-items: center; font: italic 700 19px var(--serif);
+  }
+  .wordmark { font: 600 19px/1.15 var(--serif); letter-spacing: 0.005em; white-space: nowrap; }
+  .wordmark small { display: block; font: 500 12px/1.4 var(--sans); letter-spacing: 0.02em; color: var(--muted); margin-top: 2px; }
+  .links { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+  .links a { text-decoration: none; font-size: 15px; font-weight: 500; color: var(--ink-soft); padding: 10px 12px; border-radius: 999px; transition: color 160ms ease; }
+  .links a:hover { color: var(--gold-deep); }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 52px; padding: 14px 28px; border-radius: 999px; border: 0; cursor: pointer;
+    font: 600 16px/1 var(--sans); text-decoration: none; white-space: nowrap;
+    transition: background-color 180ms ease, color 180ms ease, transform 120ms ease-out;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-dark { background: var(--ink); color: var(--cream); }
+  .btn-dark:hover { background: #2C2A26; }
+  .btn-dark svg { color: var(--brand-gold); }
+  .links a.phone-pill, .links a.phone-pill:hover { color: var(--cream); }
+  .phone-pill { min-height: 44px; padding: 10px 20px; font-size: 15px; margin-left: 8px; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: clamp(36px, 6vh, 64px) 0 clamp(56px, 8vh, 88px); }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(36px, 5vw, 72px); align-items: center; }
+  h1 { font-size: clamp(44px, 5.4vw, 74px); line-height: 1.04; letter-spacing: -0.015em; margin: 0 0 24px; }
+  .hero-sub { font-size: clamp(17px, 1.4vw, 19px); color: var(--ink-soft); max-width: 33em; margin: 0 0 34px; }
+  .hero-ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 30px; margin-bottom: 40px; }
+  .link-under {
+    font-weight: 600; font-size: 16px; color: var(--ink);
+    text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 7px;
+    padding: 10px 2px; min-height: 44px; display: inline-flex; align-items: center; transition: color 160ms ease;
+  }
+  .link-under:hover { color: var(--gold-deep); }
+  .proof { display: flex; gap: 18px; align-items: flex-start; max-width: 34em; padding-top: 22px; border-top: 1px solid var(--hairline); font-size: 16px; color: var(--ink-soft); }
+  .proof-figure { font: italic 600 30px/1 var(--serif); color: var(--gold-deep); flex: none; padding-top: 2px; }
+  .proof strong { color: var(--ink); font-weight: 600; }
+  .proof .fine { display: block; font-size: 13.5px; color: var(--muted); margin-top: 4px; }
+
+  .portrait-panel { justify-self: end; width: 100%; max-width: 440px; border-radius: 20px; overflow: hidden; background: var(--cream-deep); box-shadow: 0 30px 60px -36px rgba(22, 22, 20, 0.45); }
+  .portrait-panel img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 6%; }
+  .portrait-strip { background: var(--ink); color: var(--cream); display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 20px; }
+  .portrait-strip .who { font-weight: 600; font-size: 15px; line-height: 1.3; }
+  .portrait-strip .who small { display: block; font-weight: 400; font-size: 13px; color: var(--on-night-soft); }
+  .portrait-strip .pct { font: italic 700 26px/1 var(--serif); color: var(--brand-gold); white-space: nowrap; }
+  .portrait-strip .pct span { font: 600 11px/1.2 var(--sans); color: var(--on-night-soft); display: block; text-align: right; font-style: normal; letter-spacing: 0.04em; }
+
+  /* ---------- Sections ---------- */
+  section { padding: clamp(64px, 9vw, 104px) 0; scroll-margin-top: 76px; }
+  .band { background: var(--white); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+  .section-head { max-width: 720px; margin-bottom: 48px; }
+  .section-head h2 { font-size: clamp(34px, 3.9vw, 48px); line-height: 1.12; margin: 0 0 14px; }
+  .section-head p { color: var(--ink-soft); margin: 0; font-size: 17.5px; }
+
+  /* Calculator */
+  .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 6vw, 72px); align-items: start; }
+  .calc-label { font-size: 15px; font-weight: 600; color: var(--ink-soft); margin: 0 0 4px; }
+  .calc-price { font: 600 clamp(42px, 4.6vw, 58px)/1.1 var(--serif); margin: 0 0 18px; }
+  input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 44px; background: transparent; cursor: pointer; margin: 0; }
+  input[type="range"]::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: linear-gradient(90deg, var(--gold) var(--fill, 23%), var(--hairline) var(--fill, 23%)); }
+  input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 28px; height: 28px; margin-top: -12px; border-radius: 50%; background: var(--gold); border: 3px solid var(--white); box-shadow: 0 2px 8px rgba(22,22,20,0.3); transition: transform 120ms ease-out; }
+  input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.12); }
+  input[type="range"]::-moz-range-track { height: 4px; border-radius: 2px; background: var(--hairline); }
+  input[type="range"]::-moz-range-progress { height: 4px; border-radius: 2px; background: var(--gold); }
+  input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: var(--gold); border: 3px solid var(--white); box-shadow: 0 2px 8px rgba(22,22,20,0.3); }
+  input[type="range"]:focus-visible { outline: none; }
+  input[type="range"]:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 5px rgba(169,134,55,0.35); }
+  .range-ends { display: flex; justify-content: space-between; font-size: 14px; color: var(--muted); }
+  .compare { margin-top: 28px; }
+  .compare-label { font-size: 15px; font-weight: 600; color: var(--ink-soft); margin: 0 0 10px; }
+  .seg { display: inline-grid; grid-template-columns: repeat(3, auto); gap: 4px; padding: 4px; border: 1px solid var(--hairline); border-radius: 999px; background: var(--cream); }
+  .seg button { font: 600 15px var(--sans); border: 0; background: transparent; color: var(--ink-soft); padding: 10px 20px; min-height: 40px; border-radius: 999px; cursor: pointer; transition: background-color 180ms ease, color 180ms ease, transform 120ms ease-out; }
+  .seg button:hover { color: var(--ink); }
+  .seg button:active { transform: scale(0.95); }
+  .seg button[aria-checked="true"] { background: var(--ink); color: var(--cream); }
+  .calc-note { font-size: 14px; color: var(--muted); margin: 24px 0 0; max-width: 32em; }
+  .calc-rows { border-top: 1px solid var(--hairline); }
+  .calc-row { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--hairline); }
+  .calc-row .lbl { font-size: 16px; color: var(--ink-soft); }
+  .calc-row .lbl small { display: block; font-size: 14px; color: var(--muted); }
+  .calc-row .val { font: 600 30px/1.1 var(--serif); white-space: nowrap; }
+  .calc-row.keep { border-bottom: 0; padding-top: 26px; }
+  .calc-row.keep .lbl { font-weight: 600; color: var(--ink); font-size: 18px; }
+  .calc-row.keep .val { color: var(--gold-deep); font-size: clamp(38px, 4vw, 48px); }
+
+  /* Steps */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(28px, 4vw, 48px); }
+  .step { border-top: 2px solid var(--ink); padding-top: 24px; }
+  .step h3 { display: flex; align-items: baseline; gap: 14px; }
+  .step .n { font: italic 600 44px/0.9 var(--serif); color: var(--gold-deep); flex: none; min-width: 0.7em; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  .keep-together { white-space: nowrap; }
+  .hero-mini { display: none; }
+  .step h3 { font-size: 23px; line-height: 1.25; margin: 10px 0; }
+  .step p { color: var(--ink-soft); margin: 0; font-size: 16px; }
+
+  /* Included */
+  .included-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(36px, 6vw, 72px); align-items: start; }
+  .checklist { list-style: none; margin: 0; padding: 0; }
+  .checklist li { display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid var(--hairline); font-size: 17px; }
+  .checklist li:first-child { padding-top: 4px; }
+  .check { flex: none; width: 28px; height: 28px; margin-top: 1px; border-radius: 50%; background: var(--ink); display: grid; place-items: center; }
+  .check svg { width: 13px; height: 13px; }
+  .checklist strong { font-weight: 600; }
+  .checklist span { color: var(--ink-soft); }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: clamp(36px, 6vw, 72px); align-items: start; }
+  .about-photo { border-radius: 20px; overflow: hidden; background: var(--cream-deep); width: 220px; max-width: 100%; }
+  .about-photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 0%; }
+  .about-body h2 { font-size: clamp(32px, 3.6vw, 44px); line-height: 1.15; margin: 0 0 8px; }
+  .about-role { font-size: 15px; color: var(--muted); margin: 0 0 24px; }
+  .about-body p { color: var(--ink-soft); font-size: 17.5px; margin: 0 0 18px; max-width: 38em; }
+  .about-body p strong { color: var(--ink); font-weight: 600; }
+  .facts { display: flex; flex-wrap: wrap; gap: 16px 48px; margin: 30px 0 34px; padding: 22px 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+  .facts .f { font: 600 28px/1.1 var(--serif); display: block; }
+  .facts .t { font-size: 14px; color: var(--muted); }
+  .areas h3 { font: 600 17px var(--sans); margin: 0 0 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--hairline); background: var(--white); border-radius: 999px; padding: 10px 18px; min-height: 44px; font-size: 15px; font-weight: 500; color: var(--ink-soft); text-decoration: none; transition: border-color 160ms ease, color 160ms ease, transform 120ms ease-out; }
+  .chip:hover { border-color: var(--gold); color: var(--ink); }
+  .chip:active { transform: scale(0.97); }
+  .chip svg { color: var(--gold-deep); }
+  .areas-note { font-size: 14px; color: var(--muted); margin: 14px 0 0; }
+  .social { display: flex; gap: 10px; margin-top: 28px; }
+  .social a { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid var(--hairline); border-radius: 50%; background: var(--white); color: var(--ink-soft); transition: color 160ms ease, border-color 160ms ease; }
+  .social a:hover { color: var(--ink); border-color: var(--gold); }
+
+  /* Contact */
+  .contact { background: var(--ink); color: var(--on-night); }
+  .contact ::selection { background: var(--brand-gold); color: var(--ink); }
+  .contact :focus-visible { outline-color: var(--brand-gold); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 6vw, 72px); align-items: start; }
+  .contact h2 { font-size: clamp(36px, 4vw, 52px); line-height: 1.1; margin: 0 0 18px; }
+  .contact h2 em { color: var(--brand-gold); }
+  .contact .lede { color: var(--on-night-soft); font-size: 17.5px; margin: 0 0 32px; max-width: 30em; }
+  .contact-phone { background: var(--brand-gold); color: var(--ink); font-size: 18px; font-weight: 700; min-height: 56px; padding: 16px 30px; }
+  .contact-phone:hover { background: #E8C84A; }
+  .contact-details { margin-top: 36px; font-size: 15.5px; color: var(--on-night-soft); line-height: 1.85; }
+  .contact-details strong { color: var(--on-night); font-weight: 600; }
+  .contact-details a { color: var(--brand-gold); text-decoration: none; }
+  .contact-details a:hover { text-decoration: underline; }
+  form.eval { display: grid; gap: 16px; background: #1E1E1B; border: 1px solid var(--night-line); border-radius: 20px; padding: clamp(20px, 3vw, 32px); }
+  .field label { display: block; font-size: 14px; font-weight: 600; color: var(--on-night); margin-bottom: 7px; }
+  .field label .opt { font-weight: 400; color: #A7A192; }
+  .field input, .field textarea {
+    width: 100%; min-height: 50px; padding: 13px 16px; border-radius: 12px;
+    background: #262622; border: 1px solid #45443E; color: var(--on-night);
+    font: 400 16px var(--sans); caret-color: var(--brand-gold); transition: border-color 160ms ease, box-shadow 160ms ease;
+  }
+  .field input::placeholder, .field textarea::placeholder { color: #A39D8F; }
+  .field input:focus, .field textarea:focus { outline: none; border-color: var(--brand-gold); box-shadow: 0 0 0 3px rgba(221,186,47,0.25); }
+  .field textarea { min-height: 104px; resize: vertical; }
+  .field.invalid input { border-color: #E07A6E; }
+  .field .err { display: none; font-size: 13.5px; color: #F2A097; margin-top: 6px; }
+  .field.invalid .err { display: block; }
+  .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  form.eval .btn { background: var(--cream); color: var(--ink); margin-top: 4px; }
+  form.eval .btn:hover { background: var(--brand-gold); }
+  .form-note { font-size: 14px; color: var(--on-night-soft); margin: 0; min-height: 1.4em; }
+
+  footer.site-footer { background: var(--ink); color: var(--on-night-soft); border-top: 1px solid var(--night-line); padding: 28px 0 104px; font-size: 14px; }
+  .footer-inner { display: flex; flex-wrap: wrap; gap: 10px 32px; justify-content: space-between; }
+  .site-footer p { margin: 0; max-width: 62em; }
+  .site-footer .who { color: var(--on-night); font-weight: 600; }
+  .credit p { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--night-line); max-width: none; }
+  .credit a { color: var(--brand-gold); text-decoration: none; font-weight: 600; }
+  .credit a:hover { text-decoration: underline; }
+
+  /* ---------- Preview dock + audit sheet ---------- */
+  .dock {
+    position: fixed; right: 16px; bottom: 16px; z-index: 40;
+    display: flex; align-items: center; gap: 12px; padding: 6px 6px 6px 18px;
+    background: rgba(255,255,255,0.88); backdrop-filter: blur(20px) saturate(170%); -webkit-backdrop-filter: blur(20px) saturate(170%);
+    border: 1px solid rgba(22,22,20,0.12); border-radius: 999px; box-shadow: 0 12px 32px -14px rgba(22,22,20,0.4);
+    font-size: 14px;
+  }
+  .dock-text { color: var(--ink-soft); white-space: nowrap; }
+  .dock-text strong { color: var(--ink); font-weight: 600; }
+  .dock .btn { min-height: 40px; padding: 10px 18px; font-size: 14px; }
+  .scrim { position: fixed; inset: 0; z-index: 50; background: rgba(22,22,20,0.4); opacity: 0; pointer-events: none; transition: opacity 320ms var(--ease-out); }
+  .scrim.open { opacity: 1; pointer-events: auto; }
+  .audit {
+    position: fixed; top: 0; right: 0; bottom: 0; z-index: 60; width: min(560px, 100%);
+    background: var(--cream); display: flex; flex-direction: column;
+    transform: translateX(104%); transition: transform 440ms var(--ease-out);
+    box-shadow: -30px 0 60px -30px rgba(22,22,20,0.45);
+  }
+  .audit.open { transform: translateX(0); }
+  .audit[hidden] { display: none; }
+  .audit-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 24px 26px 20px; border-bottom: 1px solid var(--hairline); }
+  .audit-head h2 { font-size: 28px; line-height: 1.15; margin: 0 0 6px; }
+  .audit-head p { margin: 0; font-size: 15px; color: var(--ink-soft); }
+  .icon-btn { width: 44px; height: 44px; flex: none; display: grid; place-items: center; border: 1px solid var(--hairline); border-radius: 50%; background: var(--white); cursor: pointer; color: var(--ink); transition: border-color 160ms ease, transform 120ms ease-out; }
+  .icon-btn:hover { border-color: var(--gold); }
+  .icon-btn:active { transform: scale(0.94); }
+  .audit-body { overflow-y: auto; padding: 4px 26px 36px; overscroll-behavior: contain; }
+  .audit-group { margin-top: 24px; }
+  .audit-group h3 { display: flex; align-items: center; gap: 10px; font: 600 15px var(--sans); margin: 0 0 2px; }
+  .sev { width: 10px; height: 10px; border-radius: 50%; }
+  .sev.crit { background: var(--danger); }
+  .sev.major { background: var(--gold); }
+  .sev.minor { background: transparent; border: 2px solid var(--muted); }
+  .finding { padding: 14px 0; border-bottom: 1px solid var(--hairline); }
+  .finding h4 { margin: 0 0 4px; font: 600 16px/1.35 var(--sans); }
+  .finding p { margin: 0; font-size: 15px; color: var(--ink-soft); line-height: 1.55; }
+  .finding .fix { margin-top: 8px; color: var(--ink); }
+  .finding .fix b { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; background: var(--ink); color: var(--brand-gold); border-radius: 999px; padding: 3px 9px; margin-right: 8px; }
+  .audit-foot { margin-top: 24px; font-size: 13.5px; color: var(--muted); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1080px) {
+    .links a.hide-md { display: none; }
+  }
+  @media (max-width: 900px) {
+    .links a:not(.phone-pill) { display: none; }
+    .hero-grid, .calc-grid, .included-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; gap: 32px; }
+    .portrait-panel { justify-self: start; max-width: 460px; }
+    .calc-row .val { font-size: 26px; }
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .nav { min-height: 64px; gap: 12px; }
+    .wordmark { font-size: 17px; }
+    .wordmark small { display: none; }
+    .phone-pill { padding: 10px 14px; margin-left: 0; }
+    .phone-pill span { display: none; }
+    h1 { font-size: 42px; margin-bottom: 20px; }
+    .hero-mini { display: flex; align-items: center; gap: 14px; margin: 0 0 22px; }
+    .hero-mini img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; object-position: 50% 30%; flex: none; border: 2px solid var(--cream); outline: 1px solid var(--gold); }
+    .hero-mini .mini-name { font-weight: 600; font-size: 16px; line-height: 1.3; }
+    .hero-mini .mini-role { font-size: 13.5px; color: var(--muted); line-height: 1.4; }
+    .hero-ctas .btn { width: 100%; }
+    .row-2 { grid-template-columns: 1fr; }
+    .seg { display: grid; width: 100%; }
+    .dock { left: 12px; right: 12px; bottom: 12px; justify-content: space-between; }
+    .dock-text .long { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: 1ms !important; }
+    .audit { transform: none; opacity: 0; visibility: hidden; transition: opacity 200ms ease, visibility 0s linear 200ms !important; }
+    .audit.open { opacity: 1; visibility: visible; transition: opacity 200ms ease !important; }
+  }
+  @media (prefers-reduced-transparency: reduce) {
+    .site-header, .dock { background: var(--cream); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Sell With One Percent, home">
+      <span class="mark" aria-hidden="true">1%</span>
+      <span class="wordmark">Sell With One Percent<small>Sheida Samimi · HomeLife Classic Realty Inc., Brokerage</small></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#savings">Savings</a>
+      <a href="#how" class="hide-md">How it works</a>
+      <a href="#included">What's included</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-dark phone-pill" href="tel:+14168266002" aria-label="Call Sheida at 416-826-6002">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>416-826-6002</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Sell for <em>1%.</em><br>Keep more of <em class="keep-together">your equity.</em></h1>
+        <div class="hero-mini">
+          <img src="/assets/sheida-samimi/sheida-samimi-headshot.jpg" alt="Sheida Samimi" width="220" height="220">
+          <div>
+            <div class="mini-name">Sheida Samimi</div>
+            <div class="mini-role">Sales Representative · 10+ years<br>HomeLife Classic Realty Inc., Brokerage</div>
+          </div>
+        </div>
+        <p class="hero-sub">Sheida Samimi helps homeowners in Mississauga, Oakville and Toronto sell with a full-service MLS® listing, strategic marketing and certified negotiation, for a 1% listing commission.*</p>
+        <div class="hero-ctas">
+          <a class="btn btn-dark" href="#contact">Get my free home evaluation</a>
+          <a class="link-under" href="#savings">See how much you keep</a>
+        </div>
+        <div class="proof">
+          <span class="proof-figure num" aria-hidden="true">$15k</span>
+          <div>
+            <strong>On a $1,000,000 home,</strong> a 1% listing fee is $10,000. That's <strong>$15,000 more in your pocket</strong> than a 2.5% listing fee.
+            <span class="fine">Example only. *Terms and conditions apply.</span>
+          </div>
+        </div>
+      </div>
+      <figure class="portrait-panel" style="margin:0">
+        <img src="/assets/sheida-samimi/sheida-samimi-portrait.jpg" alt="Sheida Samimi, smiling, in a light grey suit" width="360" height="554" fetchpriority="high">
+        <figcaption class="portrait-strip">
+          <span class="who">Sheida Samimi<small>Sales Representative · 10+ years</small></span>
+          <span class="pct">1%<span>FULL SERVICE</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Savings calculator -->
+  <section class="band" id="savings" aria-labelledby="savings-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="savings-title">What does 1% <em>actually save you?</em></h2>
+        <p>Set your home's value and compare a 1% listing commission with the rate you'd otherwise pay.</p>
+      </div>
+      <div class="calc-grid">
+        <div>
+          <p class="calc-label" id="priceLabel">Your home's value</p>
+          <p class="calc-price num" id="calcPrice" aria-hidden="true">$1,000,000</p>
+          <input type="range" id="priceRange" min="400000" max="3000000" step="10000" value="1000000" aria-labelledby="priceLabel" aria-valuetext="$1,000,000">
+          <div class="range-ends num"><span>$400K</span><span>$3M</span></div>
+          <div class="compare">
+            <p class="compare-label" id="cmpLabel">Compare with a listing fee of</p>
+            <div class="seg" role="radiogroup" aria-labelledby="cmpLabel">
+              <button type="button" role="radio" aria-checked="false" data-rate="0.02">2%</button>
+              <button type="button" role="radio" aria-checked="true" data-rate="0.025">2.5%</button>
+              <button type="button" role="radio" aria-checked="false" data-rate="0.03">3%</button>
+            </div>
+          </div>
+          <p class="calc-note">Example only. Compares the listing-side fee; buyer brokerage commission and HST are separate. Commissions are negotiable and terms and conditions apply.</p>
+        </div>
+        <div class="calc-rows" aria-live="polite">
+          <div class="calc-row"><div class="lbl">Listing fee at 1%<small>With Sheida Samimi</small></div><div class="val num" id="feeOne">$10,000</div></div>
+          <div class="calc-row"><div class="lbl" id="cmpRowLbl">Listing fee at 2.5%<small>The rate you're comparing</small></div><div class="val num" id="feeCmp">$25,000</div></div>
+          <div class="calc-row keep"><div class="lbl">You keep</div><div class="val num" id="feeKeep">$15,000</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="how-title">Selling, in <em>three steps</em></h2>
+        <p>A full-service process from first conversation to closing day, at a 1% listing commission.</p>
+      </div>
+      <ol class="steps" style="list-style:none;margin:0;padding:0">
+        <li class="step">
+          <h3><span class="n" aria-hidden="true">1</span><span class="sr-only">Step 1: </span>Free home evaluation and pricing plan</h3>
+          <p>Find out what your home is worth today, with a pricing strategy built on over a decade of local market experience. No obligation.</p>
+        </li>
+        <li class="step">
+          <h3><span class="n" aria-hidden="true">2</span><span class="sr-only">Step 2: </span>MLS® listing and strategic marketing</h3>
+          <p>Your home goes on the MLS® System with a marketing plan built around your property and the buyers most likely to want it.</p>
+        </li>
+        <li class="step">
+          <h3><span class="n" aria-hidden="true">3</span><span class="sr-only">Step 3: </span>Negotiation and closing</h3>
+          <p>Certified negotiation skills protect your price at the offer table, and the 1% listing fee means more of your equity stays with you.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- What's included -->
+  <section class="band" id="included" aria-labelledby="inc-title">
+    <div class="wrap included-grid">
+      <div class="section-head" style="margin-bottom:0">
+        <h2 id="inc-title">Full service, <em>for less</em></h2>
+        <p>A lower commission shouldn't mean a lesser service. At 1% you get the complete selling package, without overpaying on commission.</p>
+      </div>
+      <ul class="checklist">
+        <li><span class="check"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6.5L4.8 9L10 3" stroke="#DDBA2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>Full MLS® listing.</strong> <span>Your home in front of buyers and their agents across the GTA.</span></div></li>
+        <li><span class="check"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6.5L4.8 9L10 3" stroke="#DDBA2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>Strategic marketing.</strong> <span>A plan built around your property, from listing day to sold.</span></div></li>
+        <li><span class="check"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6.5L4.8 9L10 3" stroke="#DDBA2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>Pricing strategy.</strong> <span>Market expertise from 10+ years of real estate, applied to your list price.</span></div></li>
+        <li><span class="check"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6.5L4.8 9L10 3" stroke="#DDBA2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>Certified negotiation.</strong> <span>Working to protect your equity on every offer.</span></div></li>
+        <li><span class="check"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6.5L4.8 9L10 3" stroke="#DDBA2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>Personal service.</strong> <span>Professional, personalized guidance until closing day.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="wrap about-grid">
+      <div class="about-photo">
+        <img src="/assets/sheida-samimi/sheida-samimi-headshot.jpg" alt="Sheida Bandeh Samimi, smiling" width="220" height="220" loading="lazy">
+      </div>
+      <div class="about-body">
+        <h2 id="about-title">Meet <em>Sheida Samimi</em></h2>
+        <p class="about-role">Sheida Bandeh Samimi, Sales Representative · HomeLife Classic Realty Inc., Brokerage</p>
+        <p>With <strong>over 10 years of real estate experience</strong> and a track record of award-winning results, Sheida combines market expertise, strategic marketing and certified negotiation skills to help sellers achieve the best possible outcome.</p>
+        <p>Her mission is simple: <strong>full service without overpaying on commission.</strong> Professional, personalized service for a 1% listing commission,* so you keep more of what you've built.</p>
+        <div class="areas" id="areas">
+          <h3>Browse homes for sale</h3>
+          <div class="chips">
+            <a class="chip" href="https://sellwithonepercent.ca/sp/InteractiveMap?bymap=0&amp;source=criteria-search&amp;s_r=sale&amp;tarea=05&amp;tmunici=05.03&amp;proptype=all&amp;orderby=price&amp;orderdir=desc&amp;action=bycity"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Mississauga</a>
+            <a class="chip" href="https://sellwithonepercent.ca/sp/InteractiveMap?bymap=0&amp;source=criteria-search&amp;s_r=sale&amp;tarea=06&amp;tmunici=06.04&amp;proptype=all&amp;orderby=price&amp;orderdir=desc&amp;action=bycity"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Oakville</a>
+            <a class="chip" href="https://sellwithonepercent.ca/sp/InteractiveMap?bymap=0&amp;source=criteria-search&amp;s_r=sale&amp;tarea=01&amp;proptype=all&amp;orderby=price&amp;orderdir=desc&amp;action=bycity"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Toronto</a>
+            <a class="chip" href="https://sellwithonepercent.ca/singlepage/LandingPage-Access-Sold-Listings">See sold prices</a>
+          </div>
+        </div>
+        <div class="social" aria-label="Sheida on social media">
+          <a href="https://www.facebook.com/Sheidasamimirealty" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/sellwithonepercent" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://t.me/Houseincanada" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 3 2 10.5l7 2.5 2.5 7.5L15 16l5 4z"/><path d="m9 13 9-7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 id="contact-title">Ready to sell <em>for 1%?</em></h2>
+        <p class="lede">Start with a free, no-obligation home evaluation. Find out what your home is worth and how much more you could keep.</p>
+        <a class="btn contact-phone" href="tel:+14168266002">Call 416-826-6002</a>
+        <div class="contact-details">
+          <p style="margin:0"><strong>Sheida Bandeh Samimi</strong>, Sales Representative<br>
+          HomeLife Classic Realty Inc., Brokerage<br>
+          1600 Steeles Ave W #36, Concord, Ontario L4K 4M2<br>
+          Office: <a href="tel:+16474798477">647-479-8477</a> · Email: <a href="mailto:samimisheida@gmail.com">samimisheida@gmail.com</a></p>
+        </div>
+      </div>
+      <form class="eval" id="evalForm" novalidate>
+        <div class="row-2">
+          <div class="field"><label for="fName">Your name</label><input id="fName" name="name" type="text" autocomplete="name" placeholder="Full name" required><p class="err">Add your name.</p></div>
+          <div class="field"><label for="fPhone">Phone</label><input id="fPhone" name="phone" type="tel" autocomplete="tel" placeholder="416-000-0000" required><p class="err">Add a phone number Sheida can reach you at.</p></div>
+        </div>
+        <div class="field"><label for="fAddress">Property address</label><input id="fAddress" name="address" type="text" autocomplete="street-address" placeholder="Street, city" required><p class="err">Add the address of the home you're selling.</p></div>
+        <div class="field"><label for="fMsg">Message <span class="opt">(optional)</span></label><textarea id="fMsg" name="message" placeholder="Tell Sheida a little about your home and your timeline"></textarea></div>
+        <button class="btn" type="submit">Request my free evaluation</button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p><span class="who">Sheida Bandeh Samimi</span>, Sales Representative, HomeLife Classic Realty Inc., Brokerage. Independently owned and operated. *Listing commission examples are for illustration; commissions are negotiable and terms and conditions apply. Not intended to solicit sellers or buyers currently under contract.</p>
+    <p>© 2026 sellwithonepercent.ca</p>
+  </div>
+  <div class="wrap credit">
+    <p>Website redesign by <a href="https://miskathossain.net" target="_blank" rel="noopener">Miskat Hossain · miskathossain.net</a></p>
+  </div>
+</footer>
+
+<!-- Designer preview dock -->
+<div class="dock" role="complementary" aria-label="Redesign preview">
+  <span class="dock-text"><strong>Redesign preview</strong><span class="long"> for Sheida Samimi · by <a href="https://miskathossain.net" target="_blank" rel="noopener">Miskat Hossain</a></span></span>
+  <button class="btn btn-dark" type="button" id="openAudit" aria-controls="audit" aria-expanded="false">Site audit</button>
+</div>
+<div class="scrim" id="scrim"></div>
+<aside class="audit" id="audit" role="dialog" aria-modal="true" aria-labelledby="audit-title" hidden>
+  <div class="audit-head">
+    <div>
+      <h2 id="audit-title">Site audit: <em>sellwithonepercent.ca</em></h2>
+      <p>What's holding the current home page back, and what this redesign changes.</p>
+    </div>
+    <button class="icon-btn" type="button" id="closeAudit" aria-label="Close site audit">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="audit-body">
+    <div class="audit-group">
+      <h3><span class="sev crit" aria-hidden="true"></span>Critical</h3>
+      <div class="finding"><h4>Two different brokerages on one page</h4><p>The logo and contact details say HomeLife Classic Realty; the hero banner, browser title and Google description say Sutton Group-Admiral Realty (and Newmarket). Visitors can't tell who they'd be signing with, and Ontario advertising rules expect the brokerage name to be clear.</p><p class="fix"><b>Fix</b>One brokerage name everywhere: header, about, contact and footer.</p></div>
+      <div class="finding"><h4>Name misspelled in the hero banner</h4><p>The banner image reads "SHEIDA SAMIIMI". It's the first thing visitors see, and it can't be corrected without re-exporting the image.</p><p class="fix"><b>Fix</b>All text is live HTML, spelled correctly and editable in seconds.</p></div>
+      <div class="finding"><h4>The 1% offer disappears on phones</h4><p>At 375px wide the banner doesn't render. The first screen on mobile is an empty "Featured Listings" heading, so the main selling point never appears.</p><p class="fix"><b>Fix</b>"Sell for 1%. Keep more of your equity." is the H1 on every screen size, with Sheida's photo and the evaluation button on the first screen.</p></div>
+    </div>
+    <div class="audit-group">
+      <h3><span class="sev major" aria-hidden="true"></span>Major</h3>
+      <div class="finding"><h4>Featured Listings renders empty</h4><p>The section sits right under the hero on desktop and mobile with no listings in it, which reads as a broken site.</p><p class="fix"><b>Fix</b>Replaced with a live savings calculator; listing searches move to the About section as direct links.</p></div>
+      <div class="finding"><h4>No H1, headline baked into an image</h4><p>Search engines and screen readers can't read the offer. The title and meta description target Newmarket, not Mississauga, Oakville or Toronto.</p><p class="fix"><b>Fix</b>Real H1, semantic sections, and a title and description written for her three markets.</p></div>
+      <div class="finding"><h4>Slow first load</h4><p>In our test the page took about 19 seconds to finish loading, with 49 requests and about 1.1 MB (single run; results vary by connection).</p><p class="fix"><b>Fix</b>One lightweight page: no jQuery bundles, CAPTCHA images or translate widget on first load.</p></div>
+      <div class="finding"><h4>"1%*" with no terms in sight</h4><p>The asterisk never leads anywhere on the home page, which invites doubt about the offer.</p><p class="fix"><b>Fix</b>Plain-language terms beside the calculator, under the hero example and in the footer.</p></div>
+      <div class="finding"><h4>Menu of roughly 50 links</h4><p>Seller guides, buyer guides, alerts and searches compete equally, so the seller path gets lost.</p><p class="fix"><b>Fix</b>Five clear destinations, with selling first.</p></div>
+    </div>
+    <div class="audit-group">
+      <h3><span class="sev minor" aria-hidden="true"></span>Minor</h3>
+      <div class="finding"><h4>Accessibility gaps</h4><p>9 images have no alt text, 14 tap targets are under 32px tall, and the evaluation inputs have no visible labels.</p><p class="fix"><b>Fix</b>Labelled fields with inline errors, 44px targets, alt text, visible focus rings and reduced-motion support.</p></div>
+      <div class="finding"><h4>Floating agent card covers content</h4><p>The vertical photo tab overlaps the page on desktop and covers the portrait on mobile.</p><p class="fix"><b>Fix</b>Sheida's portrait leads the hero instead.</p></div>
+      <div class="finding"><h4>Dated signals</h4><p>The footer reads "©2008", and the portrait is low resolution for modern screens.</p><p class="fix"><b>Fix</b>Current footer. A high-resolution portrait from Sheida would sharpen the hero further.</p></div>
+    </div>
+    <p class="audit-foot">Audit run on the live home page at 1440×900 and 375×812. Calculator figures are illustrative.</p>
+  </div>
+</aside>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const fmt = n => '$' + Math.round(n).toLocaleString('en-CA');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const header = document.querySelector('.site-header');
+  const onScroll = () => header.classList.toggle('scrolled', scrollY > 8);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // ---- Savings calculator: values ease toward their targets from wherever they are (interruptible) ----
+  const range = $('priceRange'), segBtns = [...document.querySelectorAll('.seg button')];
+  const target = { price: +range.value, rate: 0.025 }, shown = { ...target };
+  let raf = 0, last = 0;
+  function paint() {
+    $('calcPrice').textContent = fmt(shown.price);
+    $('feeOne').textContent = fmt(shown.price * 0.01);
+    $('feeCmp').textContent = fmt(shown.price * shown.rate);
+    $('feeKeep').textContent = fmt(shown.price * (shown.rate - 0.01));
+  }
+  function tick(t) {
+    const dt = Math.min(0.05, (t - (last || t)) / 1000); last = t;
+    const k = 1 - Math.exp(-dt / 0.08);
+    shown.price += (target.price - shown.price) * k;
+    shown.rate += (target.rate - shown.rate) * k;
+    const done = Math.abs(target.price - shown.price) < 40 && Math.abs(target.rate - shown.rate) < 0.00002;
+    if (done) Object.assign(shown, target);
+    paint();
+    raf = done ? 0 : requestAnimationFrame(tick);
+  }
+  function update() {
+    range.style.setProperty('--fill', ((target.price - range.min) / (range.max - range.min) * 100) + '%');
+    range.setAttribute('aria-valuetext', fmt(target.price));
+    $('cmpRowLbl').firstChild.textContent = 'Listing fee at ' + (target.rate * 100) + '%';
+    if (reduce) { Object.assign(shown, target); paint(); return; }
+    if (!raf) { last = 0; raf = requestAnimationFrame(tick); }
+  }
+  range.addEventListener('input', () => { target.price = +range.value; update(); });
+  function select(i, focus) {
+    segBtns.forEach((b, j) => { b.setAttribute('aria-checked', String(i === j)); b.tabIndex = i === j ? 0 : -1; });
+    if (focus) segBtns[i].focus();
+    target.rate = +segBtns[i].dataset.rate; update();
+  }
+  segBtns.forEach((b, i) => {
+    b.addEventListener('click', () => select(i));
+    b.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); select((i + 1) % segBtns.length, true); }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); select((i + segBtns.length - 1) % segBtns.length, true); }
+    });
+  });
+  select(1); paint();
+
+  // ---- Evaluation form: inline validation, then hand off to email ----
+  const form = $('evalForm'), note = $('formNote');
+  const req = ['fName', 'fPhone', 'fAddress'];
+  req.forEach(id => $(id).addEventListener('input', () => $(id).closest('.field').classList.remove('invalid')));
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const bad = req.filter(id => !$(id).value.trim());
+    req.forEach(id => {
+      const f = $(id).closest('.field'), isBad = bad.includes(id);
+      f.classList.toggle('invalid', isBad);
+      $(id).setAttribute('aria-invalid', String(isBad));
+    });
+    if (bad.length) { $(bad[0]).focus(); note.textContent = ''; return; }
+    const v = id => $(id).value.trim();
+    const subject = encodeURIComponent('Free home evaluation request: ' + v('fAddress'));
+    const body = encodeURIComponent('Name: ' + v('fName') + '\nPhone: ' + v('fPhone') + '\nProperty address: ' + v('fAddress') + '\n\n' + v('fMsg'));
+    location.href = 'mailto:samimisheida@gmail.com?subject=' + subject + '&body=' + body;
+    note.textContent = 'Opening your email app to send your request to Sheida. Prefer to talk? Call 416-826-6002.';
+  });
+
+  // ---- Audit sheet: slides in from the dock's edge and leaves the same way ----
+  const audit = $('audit'), scrim = $('scrim'), openBtn = $('openAudit'), closeBtn = $('closeAudit');
+  function openAudit() {
+    audit.hidden = false;
+    requestAnimationFrame(() => { audit.classList.add('open'); scrim.classList.add('open'); });
+    openBtn.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden';
+    setTimeout(() => closeBtn.focus(), 60);
+  }
+  function closeAudit() {
+    audit.classList.remove('open'); scrim.classList.remove('open');
+    openBtn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
+    setTimeout(() => { if (!audit.classList.contains('open')) audit.hidden = true; }, reduce ? 220 : 460);
+    openBtn.focus();
+  }
+  openBtn.addEventListener('click', openAudit);
+  closeBtn.addEventListener('click', closeAudit);
+  scrim.addEventListener('click', closeAudit);
+  addEventListener('keydown', e => {
+    if (!audit.classList.contains('open')) return;
+    if (e.key === 'Escape') closeAudit();
+    if (e.key === 'Tab') {
+      const f = [...audit.querySelectorAll('button, a[href]')];
+      if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+      else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+    }
+  });
+})();
+</script>
+</body>
+</html>
