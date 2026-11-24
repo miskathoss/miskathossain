@@ -8,6 +8,12 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  async rewrites() {
+    return [
+      // static demo portfolio living in public/demodesign/
+      { source: "/demodesign", destination: "/demodesign/index.html" },
+    ];
+  },
   async headers() {
     return [
       {

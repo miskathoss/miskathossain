@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Miskat Hossain · Brand & Web Strategist (demo)</title>
+  <meta name="description" content="Demo portfolio for Miskat Hossain, brand & web strategist for coaches and mentors." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#121110" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="/demodesign/assets/me-card.webp" />
+  <link rel="stylesheet" href="/demodesign/style.css" />
+</head>
+<body>
+  <!-- Loader: timecode counter -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <span class="loader__rec"><i></i>REC</span>
+    <span class="loader__tc" id="loaderTc">00:00:00:00</span>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <a class="nav__name" href="#top" data-c="navName">miskat hossain</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a class="nav__cta" href="#contact">Let’s talk</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__inner wrap">
+        <p class="badge"><i></i><span data-c="status"></span></p>
+        <h1 class="hero__name" data-c="heroName"></h1>
+        <p class="hero__tagline" data-c="tagline"></p>
+        <div class="hero__actions">
+          <a class="btn btn--light" href="#work">See my work</a>
+          <a class="btn btn--ghost" href="#contact">Start a project</a>
+        </div>
+        <ul class="tools" id="tools" aria-label="Tools"></ul>
+      </div>
+
+      <!-- Effect 1: hanging ID card (the strap hangs from the top of the screen) -->
+      <div class="stage" id="stage">
+        <svg class="lanyard" aria-hidden="true">
+          <path id="strapPath" class="lanyard__strap" d="" />
+          <text class="lanyard__text"><textPath href="#strapPath" id="strapText"></textPath></text>
+        </svg>
+        <div class="card" id="card" role="img" aria-label="ID card of Miskat Hossain. You can drag it.">
+          <div class="card__inner">
+            <div class="card__clip" aria-hidden="true"><span></span></div>
+            <div class="card__slot" aria-hidden="true"></div>
+            <div class="card__head"><span>CREW PASS</span><span class="card__rec"><i></i>REC</span></div>
+            <div class="card__photo">
+              <img id="cardPhoto" src="/demodesign/assets/me-card.webp" alt="" draggable="false" />
+              <span class="card__corner tl"></span><span class="card__corner tr"></span>
+              <span class="card__corner bl"></span><span class="card__corner br"></span>
+            </div>
+            <div class="card__role" id="cardRole"></div>
+            <div class="card__name" id="cardName"></div>
+            <div class="card__foot" aria-hidden="true"><span class="card__code" id="cardCode"></span><span class="card__bars"></span></div>
+            <div class="card__holo" aria-hidden="true"></div>
+          </div>
+        </div>
+        <p class="hint" id="hint">Grab the card ↑</p>
+      </div>
+    </section>
+
+    <!-- Skills strip -->
+    <div class="strip" aria-label="Skills">
+      <div class="strip__track" id="strip"></div>
+    </div>
+
+    <!-- 01 Work -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <p class="label">01 — Selected work</p>
+            <h2 class="h2">Brands and sites built<br />to be trusted.</h2>
+          </div>
+          <div class="rail__arrows">
+            <button class="arrow" type="button" id="railPrev" aria-label="Previous project">←</button>
+            <button class="arrow" type="button" id="railNext" aria-label="Next project">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="rail" id="rail" tabindex="0" aria-label="Projects"></div>
+    </section>
+
+    <!-- 02 Process -->
+    <section class="section process" id="process">
+      <div class="wrap">
+        <p class="label">02 — Process</p>
+        <h2 class="h2">How a brand<br />comes together.</h2>
+        <div class="timeline" id="timeline" aria-hidden="true">
+          <div class="timeline__ruler" id="ruler"></div>
+          <div class="timeline__tracks" id="tracks"></div>
+          <div class="timeline__playhead" id="playhead"><span></span></div>
+        </div>
+        <ol class="steps" id="steps"></ol>
+      </div>
+    </section>
+
+    <!-- 03 About -->
+    <section class="section" id="about">
+      <div class="wrap about">
+        <div class="reveal" id="reveal">
+          <div class="reveal__frame" id="revealFrame">
+            <img id="revealNormal" src="/demodesign/assets/me-front.webp" alt="Portrait of Miskat Hossain" draggable="false" loading="lazy" />
+            <div class="reveal__hero" id="revealLayer"><img id="revealHero" src="/demodesign/assets/me-mask.webp" alt="" draggable="false" loading="lazy" /></div>
+            <span class="reveal__ring" id="revealRing"></span>
+          </div>
+          <p class="caption">Hover the photo</p>
+        </div>
+        <div class="about__text">
+          <p class="label">03 — About</p>
+          <h2 class="h2" data-c="aboutTitle"></h2>
+          <div class="about__bio" id="bio"></div>
+          <ul class="pills" id="strengths"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Contact -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="contact">
+          <p class="label label--dark">04 — Contact</p>
+          <h2 class="contact__title" data-c="contactTitle"></h2>
+          <div class="contact__rows">
+            <div class="row">
+              <span class="row__k">Email</span>
+              <a class="row__v" id="emailLink"></a>
+              <button class="copy" type="button" id="copyEmail">Copy</button>
+            </div>
+            <div class="row">
+              <span class="row__k">Call</span>
+              <a class="row__v" id="callLink" target="_blank" rel="noopener">Book a strategy call</a>
+              <span class="row__arrow" aria-hidden="true">↗</span>
+            </div>
+          </div>
+          <ul class="socials" id="socials"></ul>
+        </div>
+        <footer class="foot">
+          <span>© <span id="year"></span> Miskat Hossain</span>
+          <span>Demo design · <a href="/">miskathossain.net</a></span>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- Effect 4: cursor follower -->
+  <div class="cursor" id="cursor" aria-hidden="true"><div class="cursor__halo"></div><div class="cursor__ring"></div><div class="cursor__dot"></div></div>
+
+  <!-- Effect 3: 3D "let's collab" goo button. Venom Button by exteestudio (MIT), see /demodesign/collab/LICENSE -->
+  <iframe class="venom-frame" id="venomFrame" title="Let's collab button" aria-hidden="true" tabindex="-1"></iframe>
+  <a class="venom-hit" id="venomHit" href="#contact">let’s collab</a>
+
+  <script src="/demodesign/script.js" defer></script>
+</body>
+</html>
