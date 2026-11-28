@@ -30,6 +30,21 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
+    id: "cristi-trudgeon",
+    name: "Cristi Trudgeon",
+    avatar: "/testimonials/cristi-trudgeon-avatar.png",
+    screenshot: "/testimonials/cristi-trudgeon.png",
+    role: "CEO & Transformational Coach",
+    company: "NeuroNuance Inc.",
+    fullTitle:
+      "CEO, NeuroNuance Inc. | Transformational Coach | Certified NeuroChangeSolutions Consultant (NCSC)",
+    relationship: "Cristi was Miskat’s client",
+    date: "November 27, 2026",
+    tag: "Website Redesign",
+    quote:
+      "He was an absolute pleasure to work with throughout the entire redesign of my website. His patience, willingness to listen, and genuine investment in helping me communicate my mission made the entire process such a positive experience. His creative instincts were spot on, and his ability to translate my vision into a website that authentically reflects who I am and what my business represents was truly impressive. I couldn’t be happier with the finished result!",
+  },
+  {
     id: "kip-ioane",
     name: "Kip Ioane",
     avatar: "/testimonials/kip-ioane-avatar.png",
