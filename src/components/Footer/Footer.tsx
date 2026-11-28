@@ -41,17 +41,6 @@ export function Footer() {
                 <span>Web Designer</span>
                 <span className="text-rose">Visual Thinker</span>
               </div>
-
-              <div className="mt-6">
-                <Link
-                  href="/pricing"
-                  data-cursor-text="PRICING"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-rose hover:bg-rose/90 text-white text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase transition-all duration-300 shadow-[0_4px_20px_rgba(224,40,79,0.35)] hover:shadow-[0_6px_28px_rgba(224,40,79,0.5)] active:scale-[0.98]"
-                >
-                  <span>See price plan</span>
-                  <ArrowUpRight className="w-4 h-4" />
-                </Link>
-              </div>
             </div>
           </div>
 
@@ -73,9 +62,6 @@ export function Footer() {
               <a href="#process" className="hover:text-rose transition-colors">
                 Process
               </a>
-              <Link href="/pricing" className="hover:text-rose transition-colors">
-                Pricing
-              </Link>
               <a href="#contact" className="hover:text-rose transition-colors">
                 Let&apos;s Talk
               </a>
@@ -126,14 +112,6 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-5 sm:gap-6">
-            <Link
-              href="/pricing"
-              className="group inline-flex items-center gap-1.5 text-cream/70 hover:text-rose transition-colors font-medium tracking-wider uppercase text-xs"
-            >
-              <span>See price plan</span>
-              <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
-
             <button
               onClick={scrollToTop}
               aria-label="Back to top"

@@ -67,9 +67,24 @@ export default function CaseStudyPage({ params }: Props) {
             {project.title}
           </h1>
 
-          <p className="text-xl sm:text-2xl font-light text-rose/90 max-w-3xl leading-relaxed mb-12">
+          <p className="text-xl sm:text-2xl font-light text-rose/90 max-w-3xl leading-relaxed mb-8">
             &ldquo;{project.tagline}&rdquo;
           </p>
+
+          {project.liveUrl && (
+            <div className="mb-10">
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cursor-text="LIVE"
+                className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-rose hover:bg-rose/90 text-white text-xs font-semibold tracking-[0.16em] uppercase transition-all duration-300 shadow-[0_4px_20px_rgba(224,40,79,0.35)]"
+              >
+                <span>Visit Live Website</span>
+                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+            </div>
+          )}
 
           {/* Project Metadata Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 border-t border-white/[0.08] pt-8 mb-16 text-xs uppercase tracking-wider">

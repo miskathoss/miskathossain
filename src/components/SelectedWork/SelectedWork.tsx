@@ -96,9 +96,11 @@ export function SelectedWork() {
           </div>
         </div>
 
-        {/* Scene-Based Projects Presentation (Top 5 Featured) */}
+        {/* Scene-Based Projects Presentation (Featured on Landing Page) */}
         <div className="space-y-16 sm:space-y-24">
-          {projects.slice(0, 5).map((project, idx) => (
+          {projects
+            .filter((project) => project.featured !== false)
+            .map((project, idx) => (
             <article
               key={project.id}
               className="project-scene relative flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 border-b border-white/[0.08] pb-16 sm:pb-24 last:border-b-0"
